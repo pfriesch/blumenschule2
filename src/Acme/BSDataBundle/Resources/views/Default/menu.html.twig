@@ -1,0 +1,50 @@
+<nav class="navbar navbar-default" role="navigation">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">{{ title }}</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse navbar-ex1-collapse">
+        <ul class="nav navbar-nav">
+
+
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Aufträge <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                    <!-- <li><a href="{{ path('BSOrder_search') }}">Suche</a></li> -->
+                    <li><a href="{{ path('BSOrder_state',{ 'state': 5.5 })  }}">Sammelpack</a></li>
+                    <li><a href="{{ path('BSOrder_state_open',{ 'state': 4 }) }}">Offene</a></li>
+                    <!-- <li><a href="{{ path('BSOrder_packet') }}">Versand</a></li> -->
+                    <li><a href="http://shop2.blumenschule.de/plenty/ui/admin.html">Plenty Admin</a></li>
+                    <li><a href="{{ path('BSCheckout_home', { 'cashbox_id': 1 } )}}" >Kasse Laden</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Daten <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                    <li><a href="{{ path('BSData_product_lable') }}">Etiketten</a></li>
+                    <li><a href="{{ path('BSData_plant', { 'page': 1 }) }}">Pflanzen</a></li>
+                    <li><a href="{{ path('BSData_product', { 'page': 1 }) }}">Waren</a></li>
+                    <li><a href="{{ path('BSData_stock') }}">Lager</a></li>
+
+                    <li><a href="{{ path('BSCheckout_history', { 'cashbox_id': 1,'date':'now' } )}}" >Kassen History</a></li>
+                </ul>
+            </li>
+            {% for key,link in links %}
+                <li ><a id='' href="{{ link }}">{{ key }}</a></li>
+            {% endfor %}
+
+
+        </ul>
+
+
+    </div>
+    <!-- /.navbar-collapse -->
+</nav>

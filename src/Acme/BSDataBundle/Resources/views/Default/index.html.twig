@@ -1,0 +1,74 @@
+{% extends '::baseBS.html.twig' %}
+{% block title %} INTERN - Hauptmenu {% endblock %}
+
+{% block body %}
+
+
+    <nav class="navbar navbar-default" role="navigation">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Hauptmenü</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+
+
+
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Aufträge <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <!-- <li><a href="{{ path('BSOrder_search') }}">Suche</a></li> -->
+                        <li><a href="{{ path('BSOrder_state',{ 'state': 5.5 })  }}">Sammelpack</a></li>
+                        <li><a href="{{ path('BSOrder_state_open',{ 'state': 4 }) }}">Offene</a></li>
+                        <!-- <li><a href="{{ path('BSOrder_packet') }}">Versand</a></li> -->
+                        <li><a href="{{ path('BSCheckout_home', { 'cashbox_id': 1 } )}}" >Kasse Laden</a></li>
+                        <li><a href="http://shop2.blumenschule.de/plenty/ui/admin.html">Plenty Admin</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Daten <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="{{ path('BSData_product_lable') }}">Etiketten</a></li>
+                        <li><a href="{{ path('BSData_plant', { 'page': 1 }) }}">Pflanzen</a></li>
+                        <li><a href="{{ path('BSData_product', { 'page': 1 }) }}">Waren</a></li>
+                        <li><a href="{{ path('BSData_stock') }}">Lager</a></li>
+
+                        <li><a href="{{ path('BSCheckout_history', { 'cashbox_id': 1,'date':'now' } )}}" >Kassen History</a></li>
+                    </ul>
+                </li>
+
+
+
+            </ul>
+
+
+        </div>
+        <!-- /.navbar-collapse -->
+    </nav>
+
+
+<div class="row">
+
+
+    <div class="jumbotron">
+        <div class="container">
+            <h1>Schnellzugriff</h1>
+            <p><a class="btn btn-default btn-lg" href="{{ path('BSCheckout_home', { 'cashbox_id': 1 } )}}" >Kasse Laden</a>
+             <a class="btn btn-default btn-lg" href="{{ path('BSOrder_state',{ 'state': 5.5 })  }}">Sammelpack</a>
+            <a class="btn btn-default btn-lg" href="{{ path('BSData_product_lable') }}">Etiketten</a>
+            </p>
+        </div>
+    </div>
+
+</div>
+
+
+{% endblock %}

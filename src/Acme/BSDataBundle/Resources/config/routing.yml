@@ -1,0 +1,226 @@
+BSData_mainmenu:
+        pattern:  /
+        defaults: { _controller: BSDataBundle:Default:index }
+
+
+BSData_menu:
+     pattern:  /data
+     defaults: { _controller: BSDataBundle:Default:data }
+
+
+BSData_customer_serach:
+     pattern:  /customer/search/{string}
+     defaults: { _controller: BSDataBundle:Default:customerSearch }
+
+
+
+BSData_paymentmethods_show:
+        pattern:  /data/paymentmethods/show/{id}
+        defaults: { _controller: BSDataBundle:PaymentMethods:show }
+
+BSData_paymentmethods_edit:
+        pattern:  /data/paymentmethods/edit/{id}
+        defaults: { _controller: BSDataBundle:PaymentMethods:edit }
+
+BSData_paymentmethods_new:
+        pattern:  /data/paymentmethods/new
+        defaults: { _controller: BSDataBundle:PaymentMethods:new }
+
+BSData_paymentmethods_create:
+        pattern:  /data/paymentmethods/create
+        defaults: { _controller: BSDataBundle:PaymentMethods:create }
+
+BSData_paymentmethods_delete:
+        pattern:  /data/paymentmethods/delete/{id}
+        defaults: { _controller: BSDataBundle:PaymentMethods:delete }
+
+BSData_paymentmethods_update:
+        pattern:  /data/paymentmethods/update/{id}
+        defaults: { _controller: BSDataBundle:PaymentMethods:update }
+
+BSData_paymentmethods:
+    pattern:  /data/paymentmethods/{page}
+    defaults: { _controller: BSDataBundle:PaymentMethods:index,page: 1 }
+
+
+
+
+
+
+
+
+
+
+
+BSData_product_show:
+        pattern:  /data/product/show/{id}
+        defaults: { _controller: BSDataBundle:Product:show }
+
+BSData_product_edit:
+        pattern:  /data/product/edit/{id}
+        defaults: { _controller: BSDataBundle:Product:edit }
+
+BSData_product_new:
+        pattern:  /data/product/new
+        defaults: { _controller: BSDataBundle:Product:new }
+
+BSData_product_create:
+        pattern:  /data/product/create
+        defaults: { _controller: BSDataBundle:Product:create }
+
+BSData_product_delete:
+        pattern:  /data/product/delete/{id}
+        defaults: { _controller: BSDataBundle:Product:delete }
+
+BSData_product_update:
+        pattern:  /data/product/update/{id}
+        defaults: { _controller: BSDataBundle:Product:update }
+
+
+BSData_product_by_code:
+        pattern:  /data/product/code/{code}
+        defaults: { _controller: BSDataBundle:Product:code }
+
+
+BSData_product_search_code:
+        pattern:  /data/product/search/code/{search}/{page}
+        defaults: { _controller: BSDataBundle:Product:searchCode,page: 1 }
+BSData_product_search_name:
+        pattern:  /data/product/search/name/{search}/{page}
+        defaults: { _controller: BSDataBundle:Product:searchName,page: 1 }
+BSData_product_search_latein:
+        pattern:  /data/product/search/latein/{search}/{page}
+        defaults: { _controller: BSDataBundle:Product:searchLatein,page: 1 }
+
+BSData_product_search_jason:
+        pattern:  /data/product/sjson/{search}
+        defaults: { _controller: BSDataBundle:Product:search }
+
+BSData_product_lable:
+        pattern:  /data/product/lable
+        defaults: { _controller: BSDataBundle:Product:lable }
+
+BSData_product_lable_print:
+        pattern:  /data/product/lable/print
+        defaults: { _controller: BSDataBundle:Product:printLable }
+
+BSData_product_print:
+        pattern:  /data/product/print
+        defaults: { _controller: BSDataBundle:Product:print }
+
+BSData_product_printA6:
+        pattern:  /data/product/printA6
+        defaults: { _controller: BSDataBundle:Product:printA6 }
+
+BSData_product_sync:
+        pattern:  /data/product/sync/{code}
+        defaults: { _controller: BSDataBundle:Product:sync }
+
+BSData_product_stock:
+        pattern:  /data/product/{id}/stock
+        defaults: { _controller: BSDataBundle:Product:stock }
+
+
+
+BSData_product:
+    pattern:  /data/product/{page}
+    defaults: { _controller: BSDataBundle:Product:index,page: 1 }
+
+
+
+
+
+
+
+
+
+BSData_stock_show:
+        pattern:  /data/stock/show/{id}
+        defaults: { _controller: BSDataBundle:Stock:show }
+
+BSData_stock_edit:
+        pattern:  /data/stock/edit/{id}
+        defaults: { _controller: BSDataBundle:Stock:edit }
+
+BSData_stock_new:
+        pattern:  /data/stock/new
+        defaults: { _controller: BSDataBundle:Stock:new }
+
+BSData_stock_create:
+        pattern:  /data/stock/create
+        defaults: { _controller: BSDataBundle:Stock:create }
+
+BSData_stock_delete:
+        pattern:  /data/stock/delete/{id}
+        defaults: { _controller: BSDataBundle:Stock:delete }
+
+BSData_stock_update:
+        pattern:  /data/stock/update/{id}
+        defaults: { _controller: BSDataBundle:Stock:update }
+
+BSData_stock:
+    pattern:  /data/stock/{page}
+    defaults: { _controller: BSDataBundle:Stock:index,page: 1 }
+
+
+
+BSData_plant_show:
+        pattern:  /data/plant/show/{id}
+        defaults: { _controller: BSDataBundle:Plant:show }
+
+BSData_plant_edit:
+        pattern:  /data/plant/edit/{id}
+        defaults: { _controller: BSDataBundle:Plant:edit }
+
+BSData_plant_new:
+        pattern:  /data/plant/new
+        defaults: { _controller: BSDataBundle:Plant:new }
+
+BSData_plant_create:
+        pattern:  /data/plant/create
+        defaults: { _controller: BSDataBundle:Plant:create }
+
+BSData_plant_delete:
+        pattern:  /data/plant/delete/{id}
+        defaults: { _controller: BSDataBundle:Plant:delete }
+
+BSData_plant_update:
+        pattern:  /data/plant/update/{id}
+        defaults: { _controller: BSDataBundle:Plant:update }
+
+
+BSData_plant_autotext:
+        pattern:  /data/plant/search/autotext/{type}/{search}
+        defaults: { _controller: BSDataBundle:Plant:searchAutotext}
+
+
+BSData_plant_search_code:
+        pattern:  /data/plant/search/code/{search}/{page}
+        defaults: { _controller: BSDataBundle:Plant:searchCode,page: 1 }
+BSData_plant_search_name:
+        pattern:  /data/plant/search/name/{search}/{page}
+        defaults: { _controller: BSDataBundle:Plant:searchName,page: 1 }
+BSData_plant_search_latein:
+        pattern:  /data/plant/search/latein/{search}/{page}
+        defaults: { _controller: BSDataBundle:Plant:searchLatein,page: 1 }
+
+BSData_plant_crateProduct:
+        pattern:  /data/plant/crateProduct/{id}
+        defaults: { _controller: BSDataBundle:Plant:crateProduct }
+
+BSData_plant:
+    pattern:  /data/plant/{page}
+    defaults: { _controller: BSDataBundle:Plant:index,page: 1 }
+
+
+
+
+BSInventory:
+    resource: "@BSDataBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+
+
+
+
