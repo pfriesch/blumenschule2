@@ -4,6 +4,13 @@ $(document).ready(function(){
     $('.loading').hide();
 
 
+    $('a.reset').click(function(event){
+        event.preventDefault();
+        $('input').val('');
+        $('textarea').val('');
+
+    });
+
     $( "#search" ).autocomplete({
         source: function( request, response ) {
             $.ajax({

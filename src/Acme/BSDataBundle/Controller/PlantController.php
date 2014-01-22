@@ -33,10 +33,36 @@ class PlantController extends Controller
         $pagination = $paginator->paginate(
             $query,
             $page,
-            10
+            50
         );
         return array('pagination' => $pagination);
 
+    }
+
+    /**
+     * Finds and displays a Plant by Article_No.
+     *
+     * @Route("/sname/{$search}", name="BSData_plant_search_name")
+     * @Template()
+     */
+    public function searchNameAction($search)
+    {
+
+        $em = $this->getDoctrine()->getManager();
+        $qb = $em->createQueryBuilder();
+        $qb->add('select', 'p')
+            ->add('from', 'BSDataBundle:Plant p')
+            ->add('where',
+                $qb->expr()->like('p.name', '?1')
+            )->setParameter('1', '%'.$search.'%' );
+        $paginator = $this->get('knp_paginator');
+        $pagination = $paginator->paginate(
+            $qb->getQuery(),
+            $this->get('request')->query->get('page', 1)/*page number*/,
+            10/*limit per page*/
+        );
+        return $this->render('BSDataBundle:Plant:index.html.twig', array(
+            'pagination'=>$pagination  ));
     }
 
     /**
@@ -179,16 +205,16 @@ class PlantController extends Controller
      * Deletes a Plant entity.
      *
      * @Route("/{id}/delete", name="BSData_plant_delete")
-     * @Method("post")
+
      */
     public function deleteAction($id)
     {
-        $form = $this->createDeleteForm($id);
+        //$form = $this->createDeleteForm($id);
         $request = $this->getRequest();
 
-        $form->bind($request);
+       // $form->bind($request);
 
-        if ($form->isValid()) {
+       // if ($form->isValid()) {
             $em = $this->getDoctrine()->getManager();
             $entity = $em->getRepository('BSDataBundle:Plant')->find($id);
 
@@ -198,7 +224,7 @@ class PlantController extends Controller
 
             $em->remove($entity);
             $em->flush();
-        }
+       // }
 
         return $this->redirect($this->generateUrl('BSData_plant'));
     }
@@ -210,6 +236,7 @@ class PlantController extends Controller
             ->getForm()
         ;
     }
+
 
 
     /**
@@ -234,10 +261,12 @@ class PlantController extends Controller
         return $this->redirect($this->generateUrl('BSData_plant'));
 
     }
+
+
     /**
      * Finds and displays a Plant by Article_No.
      *
-     * @Route("/{id}/show", name="BSData_plant_search_code")
+     * @Route("/search/code/{$search}", name="BSData_plant_search_code")
      * @Template()
      */
     public function searchCodeAction($page,$search)
@@ -264,7 +293,7 @@ class PlantController extends Controller
     /**
      * Finds and displays a Plant by Article_No.
      *
-     * @Route("/{id}/show", name="BSData_plant_autotext")
+     * @Route("/autotext/{$search}", name="BSData_plant_autotext")
      * @Template()
      */
     public function searchAutotextAction($type,$search)
@@ -295,36 +324,12 @@ class PlantController extends Controller
 
 
 
-    /**
-     * Finds and displays a Plant by Article_No.
-     *
-     * @Route("/{id}/show", name="BSData_plant_search_name")
-     * @Template()
-     */
-    public function searchNameAction($page,$search)
-    {
 
-        $em = $this->getDoctrine()->getManager();
-        $qb = $em->createQueryBuilder();
-        $qb->add('select', 'p')
-            ->add('from', 'BSDataBundle:Plant p')
-            ->add('where',
-                $qb->expr()->like('p.name', '?1')
-            )->setParameter('1', '%'.$search.'%' );
-        $paginator = $this->get('knp_paginator');
-        $pagination = $paginator->paginate(
-            $qb->getQuery(),
-            $page,//$this->get('request')->query->get('page', 1)/*page number*/,
-            10/*limit per page*/
-        );
-        return $this->render('BSDataBundle:Plant:index.html.twig', array(
-            'pagination'=>$pagination  ));
-    }
 
     /**
      * Finds and displays a Plant by Article_No.
      *
-     * @Route("/{id}/show", name="BSData_plant_search_latein")
+     * @Route("/search/latein/{$search}", name="BSData_plant_search_latein")
      * @Template()
      */
     public function searchLateinAction($page,$search)

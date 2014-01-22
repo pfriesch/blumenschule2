@@ -43,7 +43,7 @@
             <ul class="nav navbar-nav">
 
                 <li ><a id='lableA6'href="">DinA6</a></li>
-                <li ><a href="#">Reset</a></li>
+                <li ><a class="reset" href="#">Reset</a></li>
                 <li class=""><a href="{{ path('BSData_mainmenu') }}">zurück</a></li>
 
             </ul>
@@ -60,7 +60,7 @@
 
     <div class="row">
 
-
+        <form  class="form-horizontal LableForm" role="form"  action="{{ path('BSData_product_lable_print') }}" method="post">
 
         <div class="col-md-6">
 
@@ -68,11 +68,11 @@
             <div class="form-group">
                 <label for="name">Suche</label>
                 <input class="form-control" type="text" id="search" name="search">
-                <a class="btn btn-default" href="#">Reset</a>
+                <a  class="reset btn btn-default" href="{{ path('BSData_product_lable') }}">Reset</a>
             </div>
 
 
-            <form  class="form-horizontal LableForm" role="form"  action="{{ path('BSData_product_lable_print') }}" method="post">
+
 
 
                 <div class="form-group">
@@ -98,8 +98,8 @@
 
                     <label for="articleid" class="col-lg-2 control-label" >ArtikelID </label>
                     <div class="col-lg-10">
-                    <input class="form-control" type="text" id="articleid" name="labelform[articleid]">
-                        <span class="help-block">Achtung ID nicht unbedacht vergeben!</span>
+                    <input class="form-control" type="text" id="articleid" name="labelform[articleid]" readonly >
+
                     </div>
                 </div>
                 <div class="form-group printA6">
@@ -126,21 +126,24 @@
 
 
                 </div>
-                <div class="form-group">
-                    <div class="col-lg-10">
-                        <button class=" btn  btn-default btn-sm printLable" type="submit">Etikett erstellen</button>
-                        <button class=" btn  btn-default btn-sm printA6" id="addDinA6">zu DinA6 hinzufügen</button>
-                    </div>
-                </div>
 
-            </form>
+
+
 
 
         </div>
         <div class="col-md-2 col-md-offset-2">
             <img src="/images/200px.jpg" class="article_pic img-thumbnail">
-
+            <div class="form-group">
+                <div class="col-lg-10">
+                    <button class=" btn  btn-default btn-sm printLable" type="submit">Etikett erstellen</button>
+                    <button class=" btn  btn-default btn-sm printA6" id="addDinA6">zu DinA6 hinzufügen</button>
+                </div>
+            </div>
         </div>
+
+
+        </form>
     </div>
     <div class="row">
         <div class="col-md-8 pdf-print printLable LableOutput">

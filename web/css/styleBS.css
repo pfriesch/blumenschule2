@@ -106,3 +106,7 @@ div.auto_code{
     float: left;
     padding-left: 20px;
 }
+
+.form-group{
+    margin-bottom: 0;
+}
