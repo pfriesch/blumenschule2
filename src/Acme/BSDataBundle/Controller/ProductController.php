@@ -420,6 +420,89 @@ class ProductController extends Controller
 
     }
 
+
+    /**
+     * Lists all Product entities.
+     *
+     * @Route("/all/{page}/{search}", name="product_all")
+     * @Template()
+     */
+    public function productAllAction($search = null,$page = 1)
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        //$entities = $em->getRepository('PlentyMarketsOrderBundle:Product')->findAll();
+
+
+
+        $paginator = $this->get('knp_paginator');
+        $pagination = $paginator->paginate(
+            $this->plantAndProductSearch($search),
+            $page, //$this->get('request')->query->get('page', 1)/*page number*/,
+            $this->limit/*limit per page*/
+        );
+
+        // parameters to template
+        return compact('pagination');
+    }
+
+
+    private function plantAndProductSearch($search){
+        $em = $this->getDoctrine()->getManager();
+
+        $rsm = new ResultSetMapping();
+        $rsm->addEntityResult('BSDataBundle:Product', 'p');
+        $rsm->addFieldResult('p', 'id', 'id');
+        $rsm->addFieldResult('p', 'article_id', 'article_id');
+        $rsm->addFieldResult('p', 'article_no', 'article_no');
+        $rsm->addFieldResult('p', 'EAN', 'EAN');
+        $rsm->addFieldResult('p', 'name', 'name');
+        $rsm->addFieldResult('p', 'name2', 'name2');
+        $rsm->addFieldResult('p', 'd', 'label_text');
+        $rsm->addFieldResult('p', 'd2', 'description_short');
+        $rsm->addFieldResult('p', 'picurl', 'picurl');
+        $query = $em->createNativeQuery('
+            SELECT
+             a.id id,
+             null article_id,
+              a.code article_no,
+              null EAN,
+              a.name name,
+              a.latein name2,
+              a.instructions d,
+              a.labeltext d2,
+              null picurl
+            FROM Plant a
+            where
+                a.name like "%' . $search . '%" or
+                a.code like "' . $search . '%" or
+                a.latein like "' . $search . '%"
+            Union
+            SELECT
+              null id,
+              b.article_id article_id,
+              b.article_no article_no,
+              b.EAN ,
+              b.name name,
+              b.name2 name2,
+              b.description d,
+              b.description_short d2,
+              b.picurl picurl
+            FROM  Product b
+            where
+                b.name like "%' . $search . '%" or
+                b.article_no like "' . $search . '%" or
+                b.name2 like "' . $search . '%"
+            order by name
+                ', $rsm);
+
+        return  $query->getArrayResult();
+    }
+
+
+
+
+
     public function searchAction($search)
     {
         $em = $this->getDoctrine()->getManager();

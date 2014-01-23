@@ -48,7 +48,7 @@
                     <th>
                         <div class="form-group">
                         <label class="control-label" for="search_name" >{{  knp_pagination_sortable(pagination,'Name', 'a.name')|raw }} </label><br>
-                        <input type="text" id="search_name" class="search_name form-control" value="" size="20" >
+                        <input type="text" id="search_name" class="search_name form-control" data-url="{{ path('BSData_plant_search_name', { 'search': 'minze' }) }}" value="" size="20" >
                         </div>
                     </th>
 
@@ -106,7 +106,7 @@
                             </button>
                             <ul class="dropdown-menu" role="menu">
                                 <li>  <a  href="{{ path('BSData_plant_edit', { 'id': entity.id }) }}">Bearbeiten</a></li>
-                                <li> <a  href="{{ path('BSData_plant_crateProduct', { 'id': entity.id }) }}">Produkt erstellen</a></li>
+                                {# <li> <a  href="{{ path('BSData_plant_crateProduct', { 'id': entity.id }) }}">Produkt erstellen</a></li> #}
                                 <li>  <a href="{{ path('BSData_plant_delete', { 'id': entity.id }) }}" > Löschen</a>
                             </ul>
                         </div>

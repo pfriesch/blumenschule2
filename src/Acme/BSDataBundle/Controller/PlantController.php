@@ -2,6 +2,7 @@
 
 namespace Acme\BSDataBundle\Controller;
 
+use Doctrine\ORM\Query\ResultSetMapping;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
@@ -42,7 +43,7 @@ class PlantController extends Controller
     /**
      * Finds and displays a Plant by Article_No.
      *
-     * @Route("/sname/{$search}", name="BSData_plant_search_name")
+     * @Route("/search/name/{search}", name="BSData_plant_search_name")
      * @Template()
      */
     public function searchNameAction($search)
@@ -64,6 +65,106 @@ class PlantController extends Controller
         return $this->render('BSDataBundle:Plant:index.html.twig', array(
             'pagination'=>$pagination  ));
     }
+
+    /**
+     * Finds and displays a Plant by Article_No.
+     *
+     * @Route("/search/code/{search}", name="BSData_plant_search_code")
+     * @Template()
+     */
+    public function searchCodeAction($search)
+    {
+
+        $em = $this->getDoctrine()->getManager();
+        $qb = $em->createQueryBuilder();
+        $qb->add('select', 'p')
+            ->add('from', 'BSDataBundle:Plant p')
+            ->add('where',
+                $qb->expr()->like('p.code', '?1')
+            )->setParameter('1', $search.'%');
+
+
+        $paginator = $this->get('knp_paginator');
+        $pagination = $paginator->paginate(
+            $qb->getQuery(),
+            $this->get('request')->query->get('page', 1)/*page number*/,
+            10/*limit per page*/
+        );
+        return $this->render('BSDataBundle:Plant:index.html.twig', array(
+            'pagination'=>$pagination  ));
+    }
+    /**
+     * Finds and displays a Plant by Article_No.
+     *
+     * @Route("/autotext/{search}", name="BSData_plant_autotext")
+     * @Template()
+     */
+    public function searchAutotextAction($type,$search)
+    {
+        $type = str_replace('[','',$type);
+        $type = str_replace(']','',$type);
+
+        $em = $this->getDoctrine()->getManager();
+        $qb = $em->createQueryBuilder();
+        $qb->add('select', 'p.'.$type.' term')
+            ->add('from', 'BSDataBundle:Plant p')
+            ->add('where',
+                $qb->expr()->like('p.'.$type, "'%".$search."%'")
+            )
+            ->addGroupBy('p.'.$type)
+        ;
+
+
+        $SQL = $qb->getQuery()->getSQL();
+        $results = $qb->getQuery()->getArrayResult();
+
+        $response = new Response( json_encode($results));
+
+        $response->headers->set('Content-Type', 'application/json');
+
+        return $response;
+    }
+
+
+
+
+
+    /**
+     * Finds and displays a Plant by Article_No.
+     *
+     * @Route("/search/latein/{search}", name="BSData_plant_search_latein")
+     * @Template()
+     */
+    public function searchLateinAction($search)
+    {
+
+
+        $em = $this->getDoctrine()->getManager();
+        $qb = $em->createQueryBuilder();
+        $qb->add('select', 'p')
+            ->add('from', 'BSDataBundle:Plant p')
+            ->add('where',
+                $qb->expr()->like('p.latein', '?1')
+            )->setParameter('1', $search.'%' );
+
+
+
+
+
+        $paginator = $this->get('knp_paginator');
+        $pagination = $paginator->paginate(
+            $qb->getQuery(),
+            $this->get('request')->query->get('page', 1)/*page number*/,
+            10/*limit per page*/
+        );
+        return $this->render('BSDataBundle:Plant:index.html.twig', array(
+            'pagination'=>$pagination  ));
+    }
+
+
+
+
+
 
     /**
      * Finds and displays a Plant entity.
@@ -261,107 +362,6 @@ class PlantController extends Controller
         return $this->redirect($this->generateUrl('BSData_plant'));
 
     }
-
-
-    /**
-     * Finds and displays a Plant by Article_No.
-     *
-     * @Route("/search/code/{$search}", name="BSData_plant_search_code")
-     * @Template()
-     */
-    public function searchCodeAction($page,$search)
-    {
-
-        $em = $this->getDoctrine()->getManager();
-        $qb = $em->createQueryBuilder();
-        $qb->add('select', 'p')
-            ->add('from', 'BSDataBundle:Plant p')
-            ->add('where',
-                $qb->expr()->like('p.code', '?1')
-            )->setParameter('1', $search.'%');
-
-
-        $paginator = $this->get('knp_paginator');
-        $pagination = $paginator->paginate(
-            $qb->getQuery(),
-            $page,//$this->get('request')->query->get('page', 1)/*page number*/,
-            10/*limit per page*/
-        );
-        return $this->render('BSDataBundle:Plant:index.html.twig', array(
-            'pagination'=>$pagination  ));
-    }
-    /**
-     * Finds and displays a Plant by Article_No.
-     *
-     * @Route("/autotext/{$search}", name="BSData_plant_autotext")
-     * @Template()
-     */
-    public function searchAutotextAction($type,$search)
-    {
-        $type = str_replace('[','',$type);
-        $type = str_replace(']','',$type);
-
-        $em = $this->getDoctrine()->getManager();
-        $qb = $em->createQueryBuilder();
-        $qb->add('select', 'p.'.$type.' term')
-            ->add('from', 'BSDataBundle:Plant p')
-            ->add('where',
-                $qb->expr()->like('p.'.$type, "'%".$search."%'")
-            )
-            ->addGroupBy('p.'.$type)
-        ;
-
-
-        $SQL = $qb->getQuery()->getSQL();
-        $results = $qb->getQuery()->getArrayResult();
-
-        $response = new Response( json_encode($results));
-
-        $response->headers->set('Content-Type', 'application/json');
-
-        return $response;
-    }
-
-
-
-
-
-    /**
-     * Finds and displays a Plant by Article_No.
-     *
-     * @Route("/search/latein/{$search}", name="BSData_plant_search_latein")
-     * @Template()
-     */
-    public function searchLateinAction($page,$search)
-    {
-
-
-        $em = $this->getDoctrine()->getManager();
-        $qb = $em->createQueryBuilder();
-        $qb->add('select', 'p')
-            ->add('from', 'BSDataBundle:Plant p')
-            ->add('where',
-                $qb->expr()->like('p.latein', '?1')
-            )->setParameter('1', $search.'%' );
-
-
-
-
-
-        $paginator = $this->get('knp_paginator');
-        $pagination = $paginator->paginate(
-            $qb->getQuery(),
-            $page,//$this->get('request')->query->get('page', 1)/*page number*/,
-            10/*limit per page*/
-        );
-        return $this->render('BSDataBundle:Plant:index.html.twig', array(
-            'pagination'=>$pagination  ));
-    }
-
-
-
-
-
 
 
 }

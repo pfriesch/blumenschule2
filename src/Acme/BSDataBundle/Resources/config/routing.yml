@@ -164,53 +164,53 @@ BSData_stock:
 
 
 
-BSData_plant_show:
-        pattern:  /data/plant/show/{id}
-        defaults: { _controller: BSDataBundle:Plant:show }
+#BSData_plant_show:
+#        pattern:  /data/plant/show/{id}
+#        defaults: { _controller: BSDataBundle:Plant:show }
+#
+#BSData_plant_edit:
+#        pattern:  /data/plant/edit/{id}
+#        defaults: { _controller: BSDataBundle:Plant:edit }
+#
+#BSData_plant_new:
+#        pattern:  /data/plant/new
+#        defaults: { _controller: BSDataBundle:Plant:new }
+#
+#BSData_plant_create:
+#        pattern:  /data/plant/create
+#        defaults: { _controller: BSDataBundle:Plant:create }
+#
+#BSData_plant_delete:
+#        pattern:  /data/plant/delete/{id}
+#        defaults: { _controller: BSDataBundle:Plant:delete }
+#
+#BSData_plant_update:
+#        pattern:  /data/plant/update/{id}
+#        defaults: { _controller: BSDataBundle:Plant:update }
+#
+#
+#BSData_plant_autotext:
+#        pattern:  /data/plant/search/autotext/{type}/{search}
+#        defaults: { _controller: BSDataBundle:Plant:searchAutotext}
+#
+#
+#BSData_plant_search_code:
+#        pattern:  /data/plant/search/code/{search}/{page}
+#        defaults: { _controller: BSDataBundle:Plant:searchCode,page: 1 }
+#BSData_plant_search_name:
+#          pattern:  /data/plant/search/name/{search}/{page}
+#        defaults: { _controller: BSDataBundle:Plant:searchName,page: 1 }
+#BSData_plant_search_latein:
+#        pattern:  /data/plant/search/latein/{search}/{page}
+#        defaults: { _controller: BSDataBundle:Plant:searchLatein,page: 1 }
 
-BSData_plant_edit:
-        pattern:  /data/plant/edit/{id}
-        defaults: { _controller: BSDataBundle:Plant:edit }
+#BSData_plant_crateProduct:
+#        pattern:  /data/plant/crateProduct/{id}
+#        defaults: { _controller: BSDataBundle:Plant:crateProduct }#
 
-BSData_plant_new:
-        pattern:  /data/plant/new
-        defaults: { _controller: BSDataBundle:Plant:new }
-
-BSData_plant_create:
-        pattern:  /data/plant/create
-        defaults: { _controller: BSDataBundle:Plant:create }
-
-BSData_plant_delete:
-        pattern:  /data/plant/delete/{id}
-        defaults: { _controller: BSDataBundle:Plant:delete }
-
-BSData_plant_update:
-        pattern:  /data/plant/update/{id}
-        defaults: { _controller: BSDataBundle:Plant:update }
-
-
-BSData_plant_autotext:
-        pattern:  /data/plant/search/autotext/{type}/{search}
-        defaults: { _controller: BSDataBundle:Plant:searchAutotext}
-
-
-BSData_plant_search_code:
-        pattern:  /data/plant/search/code/{search}/{page}
-        defaults: { _controller: BSDataBundle:Plant:searchCode,page: 1 }
-BSData_plant_search_name:
-        pattern:  /data/plant/search/name/{search}/{page}
-        defaults: { _controller: BSDataBundle:Plant:searchName,page: 1 }
-BSData_plant_search_latein:
-        pattern:  /data/plant/search/latein/{search}/{page}
-        defaults: { _controller: BSDataBundle:Plant:searchLatein,page: 1 }
-
-BSData_plant_crateProduct:
-        pattern:  /data/plant/crateProduct/{id}
-        defaults: { _controller: BSDataBundle:Plant:crateProduct }
-
-BSData_plant:
-    pattern:  /data/plant/{page}
-    defaults: { _controller: BSDataBundle:Plant:index,page: 1 }
+#BSData_plant:
+#    pattern:  /data/plant/{page}
+#    defaults: { _controller: BSDataBundle:Plant:index,page: 1 }
 
 
 
