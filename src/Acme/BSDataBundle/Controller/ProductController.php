@@ -424,10 +424,10 @@ class ProductController extends Controller
     /**
      * Lists all Product entities.
      *
-     * @Route("/all/{page}/{search}", name="product_all")
+     * @Route("/all/{search}", name="product_all")
      * @Template()
      */
-    public function productAllAction($search = null,$page = 1)
+    public function productAllAction($search = null)
     {
         $em = $this->getDoctrine()->getManager();
 
@@ -438,7 +438,7 @@ class ProductController extends Controller
         $paginator = $this->get('knp_paginator');
         $pagination = $paginator->paginate(
             $this->plantAndProductSearch($search),
-            $page, //$this->get('request')->query->get('page', 1)/*page number*/,
+            $this->get('request')->query->get('page', 1)/*page number*/,
             $this->limit/*limit per page*/
         );
 
