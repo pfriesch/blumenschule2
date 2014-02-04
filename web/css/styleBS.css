@@ -28,6 +28,8 @@ body{
 
 .ui-menu-item a div{
     display: inline-block;
+    font-size: 12px;
+
 
 }
 .ui-autocomplete-loading {
@@ -49,7 +51,7 @@ div.auto_no{
     width: 50px;
 }
 div.auto_name{
-    width: 300px;
+    width: 350px;
 }
 div.auto_name2{
     width: 300px;

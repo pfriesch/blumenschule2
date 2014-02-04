@@ -791,7 +791,7 @@ class ProductController extends Controller
         //( 	code,	 	type,		x = '', 	y = '',	w = '',	h = '',xres = '',style = '',align = '')
 
         $pdf->write1DBarcode($entity->getArticleId(), 'EAN8', 1, 8, 30, 10, 0.5, $style, 'T');
-        $pdf->Text(2, 17, $entity->getArticleNo().' '.$entity->getArticleId(), false, false, true, 0, 1);
+        $pdf->Text(2, 17, $entity->getArticleNo().' - '.$entity->getArticleId(), false, false, true, 0, 1);
         $pdf->SetFont('helvetica', '', 7);
         $strings = $this->split_words($entity->getDescriptionShort());
         $line = 0;

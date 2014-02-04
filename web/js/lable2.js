@@ -34,7 +34,13 @@ $(document).ready(function(){
             });
         },
         minLength: 2,
-        select: selected
+
+        select: selected,
+        open: function(event, ui) {
+            $(this).autocomplete("widget").css({
+                "width": 900
+            })
+            }
     })  .data( "ui-autocomplete" )._renderItem = function( ul, item ) {
         //console.log(item);
         return $( "<li>" )
