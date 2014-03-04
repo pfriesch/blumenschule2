@@ -98,10 +98,10 @@
                     <td colspan="3">
                         <div>
 
-                            <a href="{{ path('BSOrder_getInvoice',{'orderID':order.head.getOrderID}) }}">Rechung</a>
+                           {# <a href="{{ path('BSOrder_getInvoice',{'orderID':order.head.getOrderID}) }}">Rechung</a>#}
 
                             <a class="order_items_view " href="javascript:none;"> Details</a>
-                            <table class="order_items">
+                            <table class="order_items" style="display: none;">
                                 {% for item in order.items %}
                                 <tr>
                                     <td>

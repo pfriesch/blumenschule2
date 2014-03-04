@@ -11,7 +11,7 @@ $(document).ready(function(){
 
     });
 
-    $( "#search" ).autocomplete({
+    $( "#search").focus().autocomplete({
         source: function( request, response ) {
             $.ajax({
                 url: "/data/product/sjson/"+request.term,

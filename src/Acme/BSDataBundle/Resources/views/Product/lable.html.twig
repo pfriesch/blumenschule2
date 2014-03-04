@@ -136,8 +136,10 @@
             <img src="/images/200px.jpg" class="article_pic img-thumbnail">
             <div class="form-group">
                 <div class="col-lg-10">
-                    <button class=" btn  btn-default btn-sm printLable" type="submit">Etikett erstellen</button>
-                    <button class=" btn  btn-default btn-sm printA6" id="addDinA6">zu DinA6 hinzufügen</button>
+                    <label class="printLable" for="amount" > Anzahl</label>
+                    <input class="form-control printLable" type="text" id="amount" name="labelform[amount]" placeholder="Anzahl" value="1">
+                    <button class=" btn btn-success btn-default  printLable" type="submit">Etikett erstellen</button>
+                    <button class=" btn btn-success btn-default  printA6" id="addDinA6">zu DinA6 hinzufügen</button>
                 </div>
             </div>
         </div>

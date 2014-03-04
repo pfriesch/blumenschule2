@@ -385,6 +385,8 @@ class ProductController extends Controller
         $request = $this->getRequest();
 
         $form = $request->request->get('labelform');
+
+        $anzahl = $form['amount'];
         $entity = new Product();
         $entity->setArticleId($form['articleid']);
         $entity->setArticleNo($form['articlecode']);
@@ -405,7 +407,10 @@ class ProductController extends Controller
         $pdf->setCellPaddings(1, 1, 1, 1);
         $pdf->setCellMargins(1, 1, 1, 1);
 
-        $pdf = $this->buildLable($pdf, $entity);
+        for($i = 0;$i < $anzahl;$i++){
+            $pdf = $this->buildLable($pdf, $entity);
+        }
+
 
 
         //$pdfUrl = "print/".$entity->getArticleNo().".pdf";
