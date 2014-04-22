@@ -645,119 +645,123 @@ class ProductController extends Controller
 
         $data = $this->get('request')->request->get('A6Lable');
 
+        return $this->render('BSDataBundle:Product:printA6.html.twig', array(
 
-        $pdf = $this->get('white_october.tcpdf')->create();
+            'data'=> $data
+        ));
+
+      //  $pdf = $this->get('white_october.tcpdf')->create();
         /*$pdf->init(array(
             'Creator' => 'Blumenschule Schongau',
             'Author' => 'Florian Engler',
             'Title' => $entity->getArticleNo(),
             'Subject' => $entity->getName(),
         ));*/
-        $pdf->SetAutoPageBreak(false, 0);
-        $pdf->setPrintHeader(false);
-        $pdf->setPrintFooter(false);
-        $pdf->setCellPaddings(1, 1, 1, 1);
-        $pdf->setCellMargins(15, 5, 1, 1);
-
-        $pdf->AddPage('L');
-
-        $style = array(
-            'position' => '',
-            'align' => 'L',
-            'stretch' => false,
-            'fitwidth' => false,
-            'cellfitalign' => '',
-            'border' => false,
-            'hpadding' => '0',
-            'vpadding' => '0',
-            'fgcolor' => array(0, 0, 0),
-            'bgcolor' => false, //array(255,255,255),
-            'text' => true,
-            'font' => 'helvetica',
-            'fontsize' => 8,
-            'stretchtext' => 0
-        );
-
-//       $html ='<style>
-//            table.rotate td{
-//                -moz-transform:rotate(90deg); /* Firefox 3.6 Firefox 4 */
-//                -webkit-transform:rotate(90deg); /* Safari */
-//                -o-transform:rotate(90deg); /* Opera */
-//                -ms-transform:rotate(90deg); /* IE9 */
-//                transform:rotate(90deg); /* W3C */
-//                width: 9cm;
-//                height: 13cm;
+//        $pdf->SetAutoPageBreak(false, 0);
+//        $pdf->setPrintHeader(false);
+//        $pdf->setPrintFooter(false);
+//        $pdf->setCellPaddings(1, 1, 1, 1);
+//        $pdf->setCellMargins(15, 5, 1, 1);
+//
+//        $pdf->AddPage('L');
+//
+//        $style = array(
+//            'position' => '',
+//            'align' => 'L',
+//            'stretch' => false,
+//            'fitwidth' => false,
+//            'cellfitalign' => '',
+//            'border' => false,
+//            'hpadding' => '0',
+//            'vpadding' => '0',
+//            'fgcolor' => array(0, 0, 0),
+//            'bgcolor' => false, //array(255,255,255),
+//            'text' => true,
+//            'font' => 'helvetica',
+//            'fontsize' => 8,
+//            'stretchtext' => 0
+//        );
+//
+////       $html ='<style>
+////            table.rotate td{
+////                -moz-transform:rotate(90deg); /* Firefox 3.6 Firefox 4 */
+////                -webkit-transform:rotate(90deg); /* Safari */
+////                -o-transform:rotate(90deg); /* Opera */
+////                -ms-transform:rotate(90deg); /* IE9 */
+////                transform:rotate(90deg); /* W3C */
+////                width: 9cm;
+////                height: 13cm;
+////            }
+////
+////
+////            </style>';
+//
+//
+//        $index = 0;
+//        $pos_x = 0;
+//        $pos_y = 0;
+//        foreach ($data as $entity) {
+//
+//            if ($index == 1) {
+//                $pos_x += 150;
+//            }
+//            if ($index == 2) {
+//                $pos_x = 0;
+//                $pos_y += 100;
+//            }
+//            if ($index == 3) {
+//
+//                $pos_x += 150;
 //            }
 //
+//            $pdf->SetFont('helvetica', 'B', 16);
 //
-//            </style>';
-
-
-        $index = 0;
-        $pos_x = 0;
-        $pos_y = 0;
-        foreach ($data as $entity) {
-
-            if ($index == 1) {
-                $pos_x += 150;
-            }
-            if ($index == 2) {
-                $pos_x = 0;
-                $pos_y += 100;
-            }
-            if ($index == 3) {
-
-                $pos_x += 150;
-            }
-
-            $pdf->SetFont('helvetica', 'B', 16);
-
-            // Image($file, $x='', $y='', $w=0, $h=0, $type='', $link='', $align='', $resize=false, $dpi=300, $palign='', $ismask=false, $imgmask=false, $border=0, $fitbox=false, $hidden=false, $fitonpage=false)
-            if (strlen($entity['picurl']) > 5) $pdf->Image($entity['picurl'], $x = $pos_x + 5, $y = $pos_y + 5, $w = 40, $h = 40, $type = '', $link = '', $align = '', $resize = true, $dpi = 300, $palign = '', $ismask = false, $imgmask = false, $border = 0, $fitbox = false, $hidden = false, $fitonpage = false);
-            //Cell($w, $h=0, $txt='', $border=0, $ln=0, $align='', $fill=0, $link='', $stretch=0, $ignore_min_height=false, $calign='T', $valign='M')
-            //$pdf->Cell(2, 6, $entity->getName(),1,1);
-
-            //$pdf->MultiCell(55, 5,  $entity['name'] , 1, 'L', 1, 0, '', '', true);
-            $pdf->Text($pos_x + 30, $pos_y, $entity['name'], false, false, true, 0, 1, "L");
-            $pdf->SetFont('helvetica', 'B', 10);
-            //$pdf->Cell(2, 6, $entity->getName2(),1,1);
-            //$pdf->Write(1,$entity->getName(),'',false,'L',1);
-
-            $pdf->Text($pos_x + 30, $pos_y + 5, '' . $entity['name2'], false, false, true, 0, 1, "L");
-
-            //( 	code,	 	type,		x = '', 	y = '',	w = '',	h = '',xres = '',style = '',align = '')
-
-            $pdf->Text($pos_x + 30, $pos_y + 10, $entity['articlecode'], false, false, true, 0, 1);
-            //$pdf->write1DBarcode( $entity->getArticleNo(), 'C128', 0, 8, 30, 15, 0.4, $style, 'T');
-            $pdf->SetFont('helvetica', '', 10);
-
-            $strings = $this->split_words($entity['description']);
-            $line = 0;
-            foreach ($strings as $s) {
-                $pdf->Text($pos_x + 30, $pos_y + 15 + $line, $s, false, false, true, 0, 1);
-                $line += 4;
-            }
-            $index++;
-
-
-        }
-        //    $html .= '</body></html>';
-
-
-        //$response = new Response($html);
-        //return $response;
-
-
-        // $pdf->writeHTML($html, true, false, true, false, '');
-
-
-        $date = date('U');
-        $pdf->Output("print/" . $date . "_A6.pdf", 'F');
-
-        return $this->render('BSDataBundle:Product:print.html.twig', array(
-            'urlPDF' => "/print/" . $date . "_A6.pdf",
-            'back' => $this->getRequest()->server->get('HTTP_REFERER')
-        ));
+//            // Image($file, $x='', $y='', $w=0, $h=0, $type='', $link='', $align='', $resize=false, $dpi=300, $palign='', $ismask=false, $imgmask=false, $border=0, $fitbox=false, $hidden=false, $fitonpage=false)
+//            if (strlen($entity['picurl']) > 5) $pdf->Image($entity['picurl'], $x = $pos_x + 5, $y = $pos_y + 5, $w = 40, $h = 40, $type = '', $link = '', $align = '', $resize = true, $dpi = 300, $palign = '', $ismask = false, $imgmask = false, $border = 0, $fitbox = false, $hidden = false, $fitonpage = false);
+//            //Cell($w, $h=0, $txt='', $border=0, $ln=0, $align='', $fill=0, $link='', $stretch=0, $ignore_min_height=false, $calign='T', $valign='M')
+//            //$pdf->Cell(2, 6, $entity->getName(),1,1);
+//
+//            //$pdf->MultiCell(55, 5,  $entity['name'] , 1, 'L', 1, 0, '', '', true);
+//            $pdf->Text($pos_x + 30, $pos_y, $entity['name'], false, false, true, 0, 1, "L");
+//            $pdf->SetFont('helvetica', 'B', 10);
+//            //$pdf->Cell(2, 6, $entity->getName2(),1,1);
+//            //$pdf->Write(1,$entity->getName(),'',false,'L',1);
+//
+//            $pdf->Text($pos_x + 30, $pos_y + 5, '' . $entity['name2'], false, false, true, 0, 1, "L");
+//
+//            //( 	code,	 	type,		x = '', 	y = '',	w = '',	h = '',xres = '',style = '',align = '')
+//
+//            $pdf->Text($pos_x + 30, $pos_y + 10, $entity['articlecode'], false, false, true, 0, 1);
+//            //$pdf->write1DBarcode( $entity->getArticleNo(), 'C128', 0, 8, 30, 15, 0.4, $style, 'T');
+//            $pdf->SetFont('helvetica', '', 10);
+//
+//            $strings = $this->split_words($entity['description']);
+//            $line = 0;
+//            foreach ($strings as $s) {
+//                $pdf->Text($pos_x + 30, $pos_y + 15 + $line, $s, false, false, true, 0, 1);
+//                $line += 4;
+//            }
+//            $index++;
+//
+//
+//        }
+//        //    $html .= '</body></html>';
+//
+//
+//        //$response = new Response($html);
+//        //return $response;
+//
+//
+//        // $pdf->writeHTML($html, true, false, true, false, '');
+//
+//
+//        $date = date('U');
+//        $pdf->Output("print/" . $date . "_A6.pdf", 'F');
+//
+//        return $this->render('BSDataBundle:Product:print.html.twig', array(
+//            'urlPDF' => "/print/" . $date . "_A6.pdf",
+//            'back' => $this->getRequest()->server->get('HTTP_REFERER')
+//        ));
 
     }
 

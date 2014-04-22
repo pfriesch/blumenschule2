@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <style type="text/css">
+        body
+        {
+            height: 210mm;
+            width: 297mm;
+            size:297mm 210mm;
+            margin-top:0.5cm;
+            margin-bottom:0.5cm;
+            margin-left:0.5cm;
+            margin-right:0.5cm;
+            font-family: "Times New Roman", Times, serif;
+
+        }
+        h1,h2{
+            text-align: right;
+            min-height: 10mm;
+            margin: 0;
+            padding: 0;
+        }
+        .header2{
+            font-weight: lighter;
+            font-style: italic;
+        }
+        .block{
+            float: left;
+            display: inline-block;
+            height: 48%;
+            width: 48%;
+            padding: 1mm;
+            margin: 1mm;
+            overflow: hidden;
+            border: 1px solid darkgray;
+
+
+        }
+        img{
+            width: 65mm;
+            float: left;
+            padding-right: 2mm;
+            padding-bottom: 2mm;
+        }
+
+    </style>
+
+
+</head>
+<body>
+
+{% for content in data %}
+<div class="block">
+    {% if content.picurl %}<img src="{{ content.picurl }}">{% endif %}
+    <h1>{{ content.name }}</h1>
+    <h2><span class="header2"> {{ content.name2 }}</span> {{ content.articlecode }}</h2>
+    <p>{{ content.description }}</p>
+</div>
+
+
+{% endfor %}
+
+
+</body>
+</html>
