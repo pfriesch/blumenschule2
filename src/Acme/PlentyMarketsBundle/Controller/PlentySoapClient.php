@@ -494,14 +494,18 @@ class PlentySoapClient extends \SoapClient
      * Mit diesem Call können mehere Artikel aus dem Shop abgerufen werden
      *
      */
-    public function doGetItemsBase($lastUpdate, $output = null)
+    public function doGetItemsBase($lastUpdate, $output = null,$ItemNo = null)
 
     {
         $products = array();
         $oResponse = null;
         $page = 0;
         // um die Suche einzuschränken
-        //$options['ItemNo'] = "srt%";
+        if($ItemNo){
+			$options['ItemID'] = $ItemNo;
+		}
+
+
         //  $options['ItemID'] = "4874";
 
         $options['LastUpdate'] = $lastUpdate;
@@ -655,7 +659,13 @@ class PlentySoapClient extends \SoapClient
                                 break;
                             }
                         }
-                        if ($sync) {
+						if(!$p){
+							$this->doGetItemsBase(null,null, $id[0]);
+							$p = $ReproProduct->findOneBy(array('article_id' => $id[0]));
+						}
+
+
+                        if ($sync ) {
                             $bundle = new ProductBundle();
                             $bundle->setProduct($product);
                             $bundle->setQuantity($bi->Quantity);
