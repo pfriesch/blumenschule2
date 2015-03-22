@@ -822,13 +822,21 @@ class PlentySoapClient extends \SoapClient
     {
         $page = 1;
         $oResponse = null;
-        $options['Page'] = null;
-        $options['OrderType'] = $OrderType;
-        $options['OrderStatus'] = doubleval($state);
-        $options['MultishopID'] = 0;
+       // $options['Page'] = null;
         $options['OrderID'] = null;
-        $options['LastUpdateFrom'] = $LastUpdate;
-        $options['LastUpdateTill'] = date('U');
+        $options['OrderType'] = null;
+        $options['OrderStatus'] = doubleval($state);
+        $options['OrderStatusFrom'] =  true;//doubleval($state);
+        $options['OrderStatusTo'] = true;//doubleval($state);
+        $options['StoreID'] = 0;
+
+        $options['ExternalOrderID'] = null;
+       // $options['MultishopID'] = 0;
+	//	$dateB = new DateTime();
+	//	$dateA = $dateB->sub(\DateInterval::createFromDateString('90 days'));
+
+        $options['LastUpdateFrom'] = 0;
+        $options['LastUpdateTill'] = null;
         $options['GetOrderDeliveryAddress'] = true;
         $options['GetOrderCustomerAddress'] = true;
 
@@ -839,7 +847,7 @@ class PlentySoapClient extends \SoapClient
         try {
             $oResponse = $this->__soapCall('SearchOrders', array($options));
         } catch (\SoapFault $sf) {
-            print_r("Es kam zu einem Fehler beim Call GetAuthentificationToken<br>");
+            print_r("Es kam zu einem Fehler beim Call SearchOrders <br>");
             print_r($sf->getMessage());
         }
         if (isset($oResponse->Success) and $oResponse->Orders != null) {
@@ -853,7 +861,7 @@ class PlentySoapClient extends \SoapClient
             try {
                 $oResponse = $this->__soapCall('SearchOrders', array($options));
             } catch (\SoapFault $sf) {
-                print_r("Es kam zu einem Fehler beim Call GetAuthentificationToken<br>");
+                print_r("Es kam zu einem Fehler beim Call SearchOrders<br>");
                 print_r($sf->getMessage());
             }
             if (isset($oResponse->Success) and $oResponse->Orders != null) {
@@ -951,7 +959,9 @@ class PlentySoapClient extends \SoapClient
             $order->setEstimatedTimeOfShipment($AOorder->OrderHead->EstimatedTimeOfShipment);
             // $opm = $em->getRepository('BSDataBundle:PaymentMethods')->find($AOorder->OrderHead->MethodOfPaymentID);
             // $order->setPaymentMethods($opm);
-            $order->setInvoiceNumber($AOorder->OrderHead->InvoiceNumber);
+           	if(isset($AOorder->OrderHead->InvoiceNumber)){
+				$order->setInvoiceNumber($AOorder->OrderHead->InvoiceNumber);
+			}
 
 
             if (isset($AOorder->OrderDeliveryAddress->Street)) {
@@ -987,7 +997,7 @@ class PlentySoapClient extends \SoapClient
             //$em->flush();
             return $order;
         } catch (\Exception $e) {
-            throw  new \Exception('Some failure in Order :' . $AOorder->OrderHead->OrderID);
+            throw  new \Exception('Some failure in Order :' . $AOorder->OrderHead->OrderID .'<br>'.$e->getMessage());
         }
     }
 
