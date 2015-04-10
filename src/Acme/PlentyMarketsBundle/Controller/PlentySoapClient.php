@@ -501,12 +501,14 @@ class PlentySoapClient extends \SoapClient
         $oResponse = null;
         $page = 0;
         // um die Suche einzuschränken
+
+		//$options['ItemID'] = "4739";
         if($ItemNo){
 			$options['ItemID'] = $ItemNo;
 		}
 
 
-        //  $options['ItemID'] = "4874";
+        //
 
         $options['LastUpdate'] = $lastUpdate;
 
@@ -541,8 +543,9 @@ class PlentySoapClient extends \SoapClient
             // $output = array_merge($output, $oResponse->ItemsBase->item);
             $products = $oResponse->ItemsBase->item;
             if (isset($oResponse->Pages)) $page = $oResponse->Pages;
-        }
 
+        }
+		//if($output and $page) $output->writeln($page);
         for ($i = 1; $i < $page; $i++) {
 
             $options['Page'] = $i;
@@ -555,6 +558,7 @@ class PlentySoapClient extends \SoapClient
             if (isset($oResponse->Success) and $oResponse->ItemsBase != null) {
                 $products = array_merge($products, $oResponse->ItemsBase->item);
                 //$this->syncArticle( $oResponse->ItemsBase->item,$output);
+				//if($output) $output->write('.');
             }
 
         }
@@ -580,7 +584,7 @@ class PlentySoapClient extends \SoapClient
                 $newProduct = false;
                 // $id = explode("-",  $item->SKU);
                 $product = $ReproProduct->findOneBy(array('article_id' => $item->ItemID));
-                //if($output) $output->writeln('ID: '.$item->ItemID);
+               // if($output) $output->writeln('ID: '.$item->ItemID);
                 if (!$product) {
                     $product = new Product();
                     $newProduct = true;
@@ -681,7 +685,7 @@ class PlentySoapClient extends \SoapClient
                 }
 
                 $em->persist($product);
-                $em->flush();
+
                 $products[] = $product;
                 $this->doGetItemsImages($product);
 
@@ -692,11 +696,11 @@ class PlentySoapClient extends \SoapClient
                 }
 
             }
-            $outputstring = sprintf("%10s | %6s | %10s | %30s", date("d m y", $product->getLastupdate()), $product->getArticleId(), $product->getArticleNo(), $product->getName());
-            //if($output) $output->writeln($outputstring);
+           // $outputstring = sprintf("%10s | %6s | %10s | %30s", date("d m y", $product->getLastupdate()), $product->getArticleId(), $product->getArticleNo(), $product->getName());
+           // if($output) $output->writeln($outputstring);
 
         }
-
+		$em->flush();
         return $products;
     }
 
@@ -746,10 +750,10 @@ class PlentySoapClient extends \SoapClient
             $itemarray = $oResponse->ItemsImages->item;
             if (isset($itemarray[0])) {
 
-                $product->setPicurl($itemarray[0]->Images->item[0]->ImageURL);
+                $product->setPicurl($itemarray[0]->ImageURL);
                 $em->persist($product);
                 $em->flush();
-                return $itemarray[0]->Images->item[0]->ImageURL;
+                return $itemarray[0]->ImageURL;
             }
 
 
