@@ -502,7 +502,7 @@ class PlentySoapClient extends \SoapClient
         $page = 0;
         // um die Suche einzuschränken
 
-		$options['ItemID'] = "55";
+		//$options['ItemID'] = "55";
         if($ItemNo){
 			$options['ItemID'] = $ItemNo;
 		}
