@@ -502,7 +502,7 @@ class PlentySoapClient extends \SoapClient
         $page = 0;
         // um die Suche einzuschränken
 
-		//$options['ItemID'] = "4739";
+		//$options['ItemID'] = "11";
         if($ItemNo){
 			$options['ItemID'] = $ItemNo;
 		}
@@ -741,7 +741,7 @@ class PlentySoapClient extends \SoapClient
         try {
             $oResponse = $this->__soapCall('GetItemsImages', array($options));
         } catch (\SoapFault $sf) {
-            print_r("Es kam zu einem Fehler beim Call GetAuthentificationToken<br>");
+            print_r("Es gab einen Fehler bei GetItemsImages<br>");
             print_r($sf->getMessage());
         }
         if (isset($oResponse->Success) and $oResponse->ItemsImages) {
