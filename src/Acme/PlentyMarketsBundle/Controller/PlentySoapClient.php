@@ -502,7 +502,7 @@ class PlentySoapClient extends \SoapClient
         $page = 0;
         // um die Suche einzuschränken
 
-		//$options['ItemID'] = "11";
+		$options['ItemID'] = "55";
         if($ItemNo){
 			$options['ItemID'] = $ItemNo;
 		}
@@ -740,28 +740,46 @@ class PlentySoapClient extends \SoapClient
 
         try {
             $oResponse = $this->__soapCall('GetItemsImages', array($options));
-
+		} catch (\SoapFault $sf) {
+			print_r("Es gab einen Fehler bei GetItemsImages<br>");
+			print_r($sf->getMessage());
+		}
 			if (isset($oResponse->Success) and $oResponse->ItemsImages) {
 				// $output = array_merge($output, $oResponse->ItemsBase->item);
 
 				$itemarray = $oResponse->ItemsImages->item;
 				if (isset($itemarray[0])) {
 
-					$product->setPicurl($itemarray[0]->ImageURL);
+					if(isset($itemarray[0]->ImageURL)){
+						$product->setPicurl($itemarray[0]->ImageURL);
+					}else{
+						$product->setPicurl($itemarray[0]->Images->item[0]->ImageURL);
+					}
+
+
+
 					$em->persist($product);
 					$em->flush();
-					return $itemarray[0]->ImageURL;
+					return $itemarray[0]->Images->item[0]->ImageURL;
+
+
+
 				}
+
+				$itemarray = $oResponse->ItemsImages->item;
+				if (isset($itemarray[0])) {
+
+
+				}
+
+
 
 
 				if (isset($oResponse->Pages)) $page = $oResponse->Pages;
 
 				return $oResponse;
 			}
-		} catch (\SoapFault $sf) {
-			print_r("Es gab einen Fehler bei GetItemsImages<br>");
-			print_r($sf->getMessage());
-		}
+
         return null;
 
 
