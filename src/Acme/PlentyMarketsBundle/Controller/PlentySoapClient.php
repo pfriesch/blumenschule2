@@ -740,28 +740,30 @@ class PlentySoapClient extends \SoapClient
 
         try {
             $oResponse = $this->__soapCall('GetItemsImages', array($options));
-        } catch (\SoapFault $sf) {
-            print_r("Es gab einen Fehler bei GetItemsImages<br>");
-            print_r($sf->getMessage());
-        }
-        if (isset($oResponse->Success) and $oResponse->ItemsImages) {
-            // $output = array_merge($output, $oResponse->ItemsBase->item);
 
-            $itemarray = $oResponse->ItemsImages->item;
-            if (isset($itemarray[0])) {
+			if (isset($oResponse->Success) and $oResponse->ItemsImages) {
+				// $output = array_merge($output, $oResponse->ItemsBase->item);
 
-                $product->setPicurl($itemarray[0]->ImageURL);
-                $em->persist($product);
-                $em->flush();
-                return $itemarray[0]->ImageURL;
-            }
+				$itemarray = $oResponse->ItemsImages->item;
+				if (isset($itemarray[0])) {
+
+					$product->setPicurl($itemarray[0]->ImageURL);
+					$em->persist($product);
+					$em->flush();
+					return $itemarray[0]->ImageURL;
+				}
 
 
-            if (isset($oResponse->Pages)) $page = $oResponse->Pages;
+				if (isset($oResponse->Pages)) $page = $oResponse->Pages;
 
-            return $oResponse;
-        }
-
+				return $oResponse;
+			}
+		} catch (\SoapFault $sf) {
+			print_r("Es gab einen Fehler bei GetItemsImages<br>");
+			print_r($sf->getMessage());
+		}catch (\Exception $e) {
+			print_r($e->getMessage());
+		}
         return null;
 
 
