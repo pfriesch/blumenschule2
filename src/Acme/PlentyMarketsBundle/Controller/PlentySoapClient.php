@@ -692,7 +692,7 @@ class PlentySoapClient extends \SoapClient
             } catch (\Exception $e) {
                 if ($output) {
                     $output->writeln('Fehler beim Anlegen von ' . $item->ItemID);
-                    $output->writeln($e);
+                    $output->writeln($e->getMessage());
                 }
 
             }
@@ -761,8 +761,6 @@ class PlentySoapClient extends \SoapClient
 		} catch (\SoapFault $sf) {
 			print_r("Es gab einen Fehler bei GetItemsImages<br>");
 			print_r($sf->getMessage());
-		}catch (\Exception $e) {
-			print_r($e->getMessage());
 		}
         return null;
 
