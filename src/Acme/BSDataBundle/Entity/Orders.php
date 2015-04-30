@@ -25,7 +25,7 @@ class Orders
     /**
      * @var string $Street
      *
-     * @ORM\Column(name="Street", type="string", length=255)
+     * @ORM\Column(name="Street", type="string", length=255, nullable=true )
      */
     private $Street;
 
