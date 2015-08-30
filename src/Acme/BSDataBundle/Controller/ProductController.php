@@ -429,6 +429,7 @@ class ProductController extends Controller
 
         //$pdfUrl = "print/".$entity->getArticleNo().".pdf";
         $pdfUrl = "print/lable.pdf";
+        unlink(__DIR__."/../../../../web/".$pdfUrl);
         $pdf->Output(__DIR__."/../../../../web/".$pdfUrl, 'F');
         $result = array('pdfurl' => '/' . $pdfUrl);
 
