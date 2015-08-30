@@ -89,7 +89,7 @@ class StockkeepingController extends Controller
         $date = new \DateTime('now');
         $em = $this->getDoctrine()->getManager();
         foreach($query->getResult() as $unit){
-            //$unit->setExported($date);
+            $unit->setExported($date);
             $em->persist($unit);
         }
         $em->flush();
