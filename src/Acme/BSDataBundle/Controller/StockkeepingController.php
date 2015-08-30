@@ -7,18 +7,18 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
-use Acme\BSDataBundle\Entity\stockkeeping;
-use Acme\BSDataBundle\Form\stockkeepingType;
+use Acme\BSDataBundle\Entity\Stockkeeping;
+use Acme\BSDataBundle\Form\StockkeepingType;
 
 /**
- * stockkeeping controller.
+ * Stockkeeping controller.
  *
  * @Route("/data/stockkeepting")
  */
 class StockkeepingController extends Controller
 {
     /**
-     * Lists all stockkeeping entities.
+     * Lists all Stockkeeping entities.
      *
      * @Route("/", name="data_stockkeepting")
      * @Method("GET")
@@ -28,7 +28,7 @@ class StockkeepingController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
 
-        $entities = $em->getRepository('BSDataBundle:stockkeeping')->findAll();
+        $entities = $em->getRepository('BSDataBundle:Stockkeeping')->findAll();
 
         return array(
             'entities' => $entities,
@@ -36,7 +36,7 @@ class StockkeepingController extends Controller
     }
 
     /**
-     * Lists all stockkeeping entities.
+     * Lists all Stockkeeping entities.
      *
      * @Route("/summary", name="data_stockkeepting_summary")
      * @Method("GET")
@@ -62,7 +62,7 @@ class StockkeepingController extends Controller
 
 
     /**
-     * Lists all stockkeeping entities.
+     * Lists all Stockkeeping entities.
      *
      * @Route("/export", name="data_stockkeepting_export")
      * @Method("GET")
@@ -95,7 +95,7 @@ class StockkeepingController extends Controller
         $em->flush();
 
 
-        $response = $this->render('BSDataBundle:stockkeeping:export.txt.twig',array('entities' => $entities));
+        $response = $this->render('BSDataBundle:Stockkeeping:export.txt.twig',array('entities' => $entities));
         $response->headers->set('Content-Type', 'text/csv');
         $response->headers->set('Content-Disposition', 'attachment; filename="export.csv"');
         return $response;
@@ -106,16 +106,16 @@ class StockkeepingController extends Controller
 
 
     /**
-     * Creates a new stockkeeping entity.
+     * Creates a new Stockkeeping entity.
      *
      * @Route("/", name="data_stockkeepting_create")
      * @Method("POST")
-     * @Template("BSDataBundle:stockkeeping:new.html.twig")
+     * @Template("BSDataBundle:Stockkeeping:new.html.twig")
      */
     public function createAction(Request $request)
     {
-        $entity  = new stockkeeping();
-        $form = $this->createForm(new stockkeepingType(), $entity);
+        $entity  = new Stockkeeping();
+        $form = $this->createForm(new StockkeepingType(), $entity);
         $form->bind($request);
 
         if ($form->isValid()) {
@@ -133,7 +133,7 @@ class StockkeepingController extends Controller
     }
 
     /**
-     * Displays a form to create a new stockkeeping entity.
+     * Displays a form to create a new Stockkeeping entity.
      *
      * @Route("/new", name="data_stockkeepting_new")
      * @Method("GET")
@@ -141,8 +141,8 @@ class StockkeepingController extends Controller
      */
     public function newAction()
     {
-        $entity = new stockkeeping();
-        $form   = $this->createForm(new stockkeepingType(), $entity);
+        $entity = new Stockkeeping();
+        $form   = $this->createForm(new StockkeepingType(), $entity);
 
         return array(
             'entity' => $entity,
@@ -151,7 +151,7 @@ class StockkeepingController extends Controller
     }
 
     /**
-     * Finds and displays a stockkeeping entity.
+     * Finds and displays a Stockkeeping entity.
      *
      * @Route("/{id}", name="data_stockkeepting_show")
      * @Method("GET")
@@ -161,10 +161,10 @@ class StockkeepingController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
 
-        $entity = $em->getRepository('BSDataBundle:stockkeeping')->find($id);
+        $entity = $em->getRepository('BSDataBundle:Stockkeeping')->find($id);
 
         if (!$entity) {
-            throw $this->createNotFoundException('Unable to find stockkeeping entity.');
+            throw $this->createNotFoundException('Unable to find Stockkeeping entity.');
         }
 
         $deleteForm = $this->createDeleteForm($id);
@@ -176,7 +176,7 @@ class StockkeepingController extends Controller
     }
 
     /**
-     * Displays a form to edit an existing stockkeeping entity.
+     * Displays a form to edit an existing Stockkeeping entity.
      *
      * @Route("/{id}/edit", name="data_stockkeepting_edit")
      * @Method("GET")
@@ -186,13 +186,13 @@ class StockkeepingController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
 
-        $entity = $em->getRepository('BSDataBundle:stockkeeping')->find($id);
+        $entity = $em->getRepository('BSDataBundle:Stockkeeping')->find($id);
 
         if (!$entity) {
-            throw $this->createNotFoundException('Unable to find stockkeeping entity.');
+            throw $this->createNotFoundException('Unable to find Stockkeeping entity.');
         }
 
-        $editForm = $this->createForm(new stockkeepingType(), $entity);
+        $editForm = $this->createForm(new StockkeepingType(), $entity);
         $deleteForm = $this->createDeleteForm($id);
 
         return array(
@@ -203,24 +203,24 @@ class StockkeepingController extends Controller
     }
 
     /**
-     * Edits an existing stockkeeping entity.
+     * Edits an existing Stockkeeping entity.
      *
      * @Route("/{id}", name="data_stockkeepting_update")
      * @Method("PUT")
-     * @Template("BSDataBundle:stockkeeping:edit.html.twig")
+     * @Template("BSDataBundle:Stockkeeping:edit.html.twig")
      */
     public function updateAction(Request $request, $id)
     {
         $em = $this->getDoctrine()->getManager();
 
-        $entity = $em->getRepository('BSDataBundle:stockkeeping')->find($id);
+        $entity = $em->getRepository('BSDataBundle:Stockkeeping')->find($id);
 
         if (!$entity) {
-            throw $this->createNotFoundException('Unable to find stockkeeping entity.');
+            throw $this->createNotFoundException('Unable to find Stockkeeping entity.');
         }
 
         $deleteForm = $this->createDeleteForm($id);
-        $editForm = $this->createForm(new stockkeepingType(), $entity);
+        $editForm = $this->createForm(new StockkeepingType(), $entity);
         $editForm->bind($request);
 
         if ($editForm->isValid()) {
@@ -238,7 +238,7 @@ class StockkeepingController extends Controller
     }
 
     /**
-     * Deletes a stockkeeping entity.
+     * Deletes a Stockkeeping entity.
      *
      * @Route("/{id}", name="data_stockkeepting_delete")
      * @Method("DELETE")
@@ -250,10 +250,10 @@ class StockkeepingController extends Controller
 
         if ($form->isValid()) {
             $em = $this->getDoctrine()->getManager();
-            $entity = $em->getRepository('BSDataBundle:stockkeeping')->find($id);
+            $entity = $em->getRepository('BSDataBundle:Stockkeeping')->find($id);
 
             if (!$entity) {
-                throw $this->createNotFoundException('Unable to find stockkeeping entity.');
+                throw $this->createNotFoundException('Unable to find Stockkeeping entity.');
             }
 
             $em->remove($entity);
@@ -264,7 +264,7 @@ class StockkeepingController extends Controller
     }
 
     /**
-     * Creates a form to delete a stockkeeping entity by id.
+     * Creates a form to delete a Stockkeeping entity by id.
      *
      * @param mixed $id The entity id
      *
