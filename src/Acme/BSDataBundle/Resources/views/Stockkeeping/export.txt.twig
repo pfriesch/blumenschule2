@@ -1,0 +1,4 @@
+quantiy;id;name
+{% for entity in entities %}
+{{ entity.Quantity }};{{ entity.articleId }};"{{ entity.articleName }}"
+{% endfor %}
