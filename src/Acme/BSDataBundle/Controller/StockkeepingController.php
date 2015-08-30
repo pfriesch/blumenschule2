@@ -28,7 +28,15 @@ class StockkeepingController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
 
-        $entities = $em->getRepository('BSDataBundle:Stockkeeping')->findAll();
+        $repository = $this->getDoctrine()
+            ->getRepository('BSDataBundle:Stockkeeping');
+        $query = $repository->createQueryBuilder('s')
+            ->where('s.exported is null')
+            ->getQuery();
+
+        $entities = $query->getResult();
+
+
 
         return array(
             'entities' => $entities,
