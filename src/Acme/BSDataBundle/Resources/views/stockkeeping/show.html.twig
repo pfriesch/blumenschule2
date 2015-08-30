@@ -1,0 +1,50 @@
+{% extends '::baseBS.html.twig' %}
+
+{% block body -%}
+    <h1>stockkeeping</h1>
+
+    <table class="record_properties">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ entity.id }}</td>
+            </tr>
+            <tr>
+                <th>Quantity</th>
+                <td>{{ entity.quantity }}</td>
+            </tr>
+            <tr>
+                <th>Articleid</th>
+                <td>{{ entity.articleId }}</td>
+            </tr>
+            <tr>
+                <th>Printed</th>
+                <td>{{ entity.printed|date('Y-m-d H:i:s') }}</td>
+            </tr>
+            <tr>
+                <th>Exported</th>
+                <td>{{ entity.exported|date('Y-m-d H:i:s') }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+        <ul class="record_actions">
+    <li>
+        <a href="{{ path('data_stockkeepting') }}">
+            Back to the list
+        </a>
+    </li>
+    <li>
+        <a href="{{ path('data_stockkeepting_edit', { 'id': entity.id }) }}">
+            Edit
+        </a>
+    </li>
+    <li>
+        <form action="{{ path('data_stockkeepting_delete', { 'id': entity.id }) }}" method="post">
+            <input type="hidden" name="_method" value="DELETE" />
+            {{ form_widget(delete_form) }}
+            <button type="submit">Delete</button>
+        </form>
+    </li>
+</ul>
+{% endblock %}

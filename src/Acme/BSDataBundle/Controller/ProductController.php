@@ -2,6 +2,7 @@
 
 namespace Acme\BSDataBundle\Controller;
 
+use Acme\BSDataBundle\Entity\Stockkeeping;
 use Acme\PlentyMarketsBundle\Controller\PlentySoapClient;
 use Doctrine\ORM\Query\ResultSetMapping;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
@@ -413,9 +414,22 @@ class ProductController extends Controller
 
 
 
+        $unit =  new Stockkeeping();
+
+        $unit->setArticleId($entity->getArticleId());
+        $unit->setArticleName($entity->getName());
+        $unit->setQuantity(intval($anzahl));
+        $unit->setPrinted(new \Datetime('now'));
+
+        $em = $this->getDoctrine()->getManager();
+        $em->persist($unit);
+        $em->flush();
+
+
+
         //$pdfUrl = "print/".$entity->getArticleNo().".pdf";
         $pdfUrl = "print/lable.pdf";
-        $pdf->Output($pdfUrl, 'F');
+        $pdf->Output(__DIR__."/../../../../web/".$pdfUrl, 'F');
         $result = array('pdfurl' => '/' . $pdfUrl);
 
         $response = new Response(json_encode($result));
