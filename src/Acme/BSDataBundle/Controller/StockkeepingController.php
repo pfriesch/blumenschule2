@@ -38,6 +38,7 @@ class StockkeepingController extends Controller
 
 
 
+
         return array(
             'entities' => $entities,
         );
@@ -53,8 +54,9 @@ class StockkeepingController extends Controller
     public function summaryAction()
     {
         $sql = "
-        SELECT sum(s.Quantity) quantity,s.articleId,s.articleName FROM Stockkeeping s
-        group by s.articleId
+        SELECT sum(s.Quantity) quantity,max(s.articleId) articleId,s.articleCode,s.articleName FROM Stockkeeping s
+        group by s.articleCode
+
         ";
 
         $stmt = $this->getDoctrine()->getManager()->getConnection()->prepare($sql);
@@ -78,9 +80,9 @@ class StockkeepingController extends Controller
      */
     public function exportAction()
     {
-        $sql = "SELECT sum(s.Quantity) Quantity,s.articleId,s.articleName FROM blumenschule2.Stockkeeping s
-                where s.exported is null
-                group by s.articleId
+        $sql = "
+              SELECT sum(s.Quantity) quantity,max(s.articleId) articleId,s.articleCode,s.articleName FROM Stockkeeping s
+              group by s.articleCode
         ";
 
         $stmt = $this->getDoctrine()->getManager()->getConnection()->prepare($sql);

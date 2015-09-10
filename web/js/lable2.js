@@ -50,6 +50,7 @@ $(document).ready(function(){
 
 
 
+
     $('form.LableForm').submit(function(event){
         event.preventDefault();
 
@@ -165,14 +166,33 @@ var countChars = function(){
     else  $('#available').css( "color", "green" );
 
 };
+var searchString = "";
+var searchParam = function(){
+
+	$( "#search").autocomplete( "search",searchString  );
+}
 
 var selected = function( event, ui ) {
 
     // Aktueller Datenstamm auf Plenty holen
 
-    $('.row').fadeTo('fast',0.4)
-    $('.loading').show();
+
     var data = ui.item.data;
+
+
+    if(data.article_id == null ){
+        var r = confirm('Der Ausgewählte Pflanze hat keine Artikel ID!\n\n "OK" um ohne ID weiterzumachen\n "Abbrechen" um neu zu suchen ');
+        if (r == false) {
+			$( "#search").focus();
+			searchString = new String(data.article_no );
+			window.setTimeout(searchParam(),1000);
+            return false;
+        }
+    }
+	$('.row').fadeTo('fast',0.4)
+	$('.loading').show();
+
+
     if(data.article_id){
         $.getJSON('/data/product/sync/'+data.article_no).done(function(data){
             $('#name ').val(data.name);

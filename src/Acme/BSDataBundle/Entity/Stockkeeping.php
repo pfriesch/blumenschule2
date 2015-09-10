@@ -38,6 +38,13 @@ class Stockkeeping
     /**
      * @var string
      *
+     * @ORM\Column(name="articleCode", type="string", length=10)
+     */
+    private $articleCode;
+
+    /**
+     * @var string
+     *
      * @ORM\Column(name="articleName", type="string", length=255)
      */
     private $articleName;
@@ -171,6 +178,20 @@ class Stockkeeping
      */
     public function setArticleName($articleName) {
         $this->articleName = $articleName;
+    }
+
+    /**
+     * @return string
+     */
+    public function getArticleCode() {
+        return $this->articleCode;
+    }
+
+    /**
+     * @param string $articleCode
+     */
+    public function setArticleCode($articleCode) {
+        $this->articleCode = $articleCode;
     }
 
 
