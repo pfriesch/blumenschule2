@@ -417,6 +417,7 @@ class ProductController extends Controller
         $unit =  new Stockkeeping();
 
         $unit->setArticleId($entity->getArticleId());
+        $unit->setArticleCode($entity->getArticleNo());
         $unit->setArticleName($entity->getName());
         $unit->setQuantity(intval($anzahl));
         $unit->setPrinted(new \Datetime('now'));

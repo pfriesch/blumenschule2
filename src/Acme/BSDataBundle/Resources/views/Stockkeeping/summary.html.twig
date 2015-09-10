@@ -38,6 +38,7 @@
 
                 <th>Quantity</th>
                 <th>Article ID</th>
+                <th>Article Code</th>
                 <th>Name</th>
 
             </tr>
@@ -48,6 +49,7 @@
                 {#<td><a href="{{ path('data_stockkeepting_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>#}
                 <td>{{ entity.quantity }}</td>
                 <td>{{ entity.articleId }}</td>
+                <td>{{ entity.articleCode }}</td>
                 <td>{{ entity.articleName }}</td>
                 {#<td>{% if entity.printed %}{{ entity.printed|date('d.m.Y H:i') }}{% endif %}</td>#}
                 {#<td>{% if entity.exported %}{{ entity.exported|date('Y-m-d H:i:s') }}{% endif %}</td>#}
