@@ -355,6 +355,8 @@ class cashboxController extends Controller
         $Baskets = $em->getRepository('BSCheckoutBundle:checkout')->getHistory($id,$date);
 
         $summary = array();
+        $summary2 = array();
+
         $article = array();
 
         foreach($Baskets as $basket){
@@ -363,17 +365,32 @@ class cashboxController extends Controller
 
             foreach($basket->getCheckoutItems() as $item){
                 //$item = new checkoutItem();
-                if(isset( $summary[$item->getVAT()]) ){
-                    $summary[$item->getVAT()] +=$item->getPrice() * $item->getQuantity() ;
-                }else{
-                    $summary[$item->getVAT()] = $item->getPrice() * $item->getQuantity() ;
-                }
 
+                if($item->getArticleId() === 4852 OR $item->getArticleId() === 4851){
+                    if(isset( $summary2[$item->getVAT()]) ){
+                        $summary2[$item->getVAT()] +=$item->getPrice() * $item->getQuantity() ;
+
+                    }else{
+                        $summary2[$item->getVAT()] = $item->getPrice() * $item->getQuantity() ;
+                    }
+                }else{
+                    if(isset( $summary[$item->getVAT()]) ){
+                        $summary[$item->getVAT()] +=$item->getPrice() * $item->getQuantity() ;
+
+                    }else{
+                        $summary[$item->getVAT()] = $item->getPrice() * $item->getQuantity() ;
+                    }
+
+
+
+                }
                 if(isset( $article[$item->getArticleCode()])){
+
                     $article[$item->getArticleCode()] +=  $item->getQuantity();
                 }else{
                     $article[$item->getArticleCode()] =  $item->getQuantity();
                 }
+
 
             }
 
@@ -444,6 +461,48 @@ class cashboxController extends Controller
             $pdf->ln(5);
 
 
+        $pdf->Cell(60,20,'Kassenabschluss Räucherwerk '.date("d.m.Y", mktime(0, 0, 0, date('m',$d), date('d',$d), date('Y',$d))),0,1);
+
+
+        $pdf->SetFont('helvetica', 'B', 12);
+
+        //$pdf->Cell(40,15 , "Umsatz nach Zahlungsart",0,1);
+        //$pdf->Cell(40,15 , "Umsatz",0,1);
+
+
+        $paymentMethods = array(
+            0 => 'Bar',
+            1 => 'EC',
+            11 => 'Bar',
+            99 => 'Gesamt'
+        );
+        ksort($summary2);
+        $pdf->SetLineWidth(0.3);
+
+
+        $pdf->SetFont('helvetica', '', 10);
+        $pdf->cell(20,3,'Mwst','', 0, 'L');
+        $pdf->cell(30,3,'Netto','', 0, 'L');
+        $pdf->cell(30,3,'Steuer','', 0, 'L');
+        $pdf->cell(30,3,'Brutto','', 0, 'L');
+        $pdf->Ln();
+        $gesamt = 0;
+        $pdf->SetFont('helvetica', '', 10);
+        foreach($summary2 as $VAT=>$sum){
+            $pdf->cell(20,4,$VAT."%",'',0);
+            $pdf->cell(30,4, number_format($sum * (100 - $VAT)/100 , 2, ',', ' ')." €",'',0);
+            $pdf->cell(30,4, number_format($sum * ($VAT/100), 2, ',', ' ')." €",'',0);
+            $pdf->cell(30,4, number_format($sum, 2, ',', ' ')." €",'',0);
+            $gesamt += $sum;
+            $pdf->Ln();
+        }
+        $pdf->SetFont('helvetica', 'B', 10);
+        $pdf->cell(50,4," ",'',0);
+        $pdf->cell(30,4,"Gesamt ",'',0);
+        $pdf->cell(30,4, number_format($gesamt, 2, ',', ' ')." €",'',0);
+
+
+        $pdf->ln(5);
 
 
 
@@ -456,7 +515,7 @@ class cashboxController extends Controller
 
 
 
-        $pdf->Output("print/".$pdfname.".pdf", 'F');
+        $pdf->Output(__DIR__."/../../../../web/print/".$pdfname.".pdf", 'F');
 
         return $this->render('BSCheckoutBundle:cashbox:print.html.twig', array(
             'urlPDF'=> "/print/".$pdfname.".pdf",
