@@ -49,16 +49,11 @@ var itemFocus = '.itemprice:last';
 // Artikel Tabelle aus JSON daten Bauen
 var buildtable = function buildTable(data) {
 
-
-
-
-
-
     var index = 1;
     $.each(data, function (key, val) {
 
         var existitem = $('.co_items td input.iteminput[data-id='+ val['id']+']');
-        if(existitem){
+        if(existitem.length > 0){
             var row = $(existitem).parents('tr');
             $(row).find('.itemprice').val(parseFloat(val['price']).toFixed(2));
             $(row).find('.iteminput').val(val['quantity']);
@@ -248,20 +243,17 @@ var init = function () {
             addQuery('/cashbox/' + id + '/checkout/' + id_checkout + '/add', { name: item.html(), code: code, quantity: quantity});
 
         }
-        if (event.keyCode == 13) {
-            // Bei ENTER
-            event.preventDefault();
-            var button = $('.input_buttons div:first');
-            var quantity = $('.inputkeyboard').val();
-            if (quantity.length == 0) quantity = 1;
-            itemFocus = '.itemprice:last';
-            // $.post('/cashbox/'+id+'/checkout/'+id_checkout+'/add',{ code: button.data('code'),quantity: quantity},buildtable);
-            addQuery('/cashbox/' + id + '/checkout/' + id_checkout + '/add', { name: button.html(), code: button.data('code'), quantity: quantity});
+        //if (event.keyCode == 13) {
+        //    // Bei ENTER
+        //    event.preventDefault();
+        //    var button = $('.input_buttons div:first');
+        //    var quantity = $('.inputkeyboard').val();
+        //    if (quantity.length == 0) quantity = 1;
+        //    itemFocus = '.itemprice:last';
+        //    // $.post('/cashbox/'+id+'/checkout/'+id_checkout+'/add',{ code: button.data('code'),quantity: quantity},buildtable);
+        //    addQuery('/cashbox/' + id + '/checkout/' + id_checkout + '/add', { name: button.html(), code: button.data('code'), quantity: quantity});}
 
-
-        }
-
-    }).focus();
+    });
 
 
     // Eingabefeld Tasten aktionen
@@ -298,7 +290,7 @@ var init = function () {
             //$.post('/cashbox/'+id+'/checkout/'+id_checkout+'/add',{ code: code},buildtable);
             return false;
         }
-        /*
+
          if( event.keyCode == 13 ){
 
          // Bei ENTER
@@ -306,12 +298,12 @@ var init = function () {
          var quantity = $('.inputkeyboard').val();
          if(quantity.length == 0) quantity = 1;
          itemFocus = '.itemprice:last';
-         $.post('/cashbox/'+id+'/checkout/'+id_checkout+'/add',{ code: button.data('code'),quantity: quantity},buildtable);
-
+         //$.post('/cashbox/'+id+'/checkout/'+id_checkout+'/add',{ code: button.data('code'),quantity: quantity},buildtable);
+             addQuery('/cashbox/' + id + '/checkout/' + id_checkout + '/add', { code: button.data('code'),quantity: quantity});
          return false;
          }
 
-         */
+
     }).focus();
 
     // Abrechnung

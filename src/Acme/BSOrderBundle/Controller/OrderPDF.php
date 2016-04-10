@@ -55,7 +55,7 @@ class OrderPDF extends \FPDF
         //$this->EAN13(160,18,$Order->getOrderID(),10);
         $this->Ln(13);
         $this->Cell(150,10,'',0,0,'r');
-        $this->Cell(40,10,'Packetnummer',1,0,'r');
+        $this->Cell(40,10,'Paketnummer',1,0,'r');
         $this->SetFont('Arial','B',16);
         $this->Text(10,40,"INFO:");
 
