@@ -704,9 +704,9 @@ class OrderController extends Controller
             $repository = $this->getDoctrine()->getRepository('BSDataBundle:Orders');
             $oOrder =  $repository->findOneBy(array('OrderID' => $rOrder));
             $oOrder->setPicklist($PickListName);
-            $em = $this->getDoctrine()->getEntityManager();
+            //$em = $this->getDoctrine()->getEntityManager();
             $em->persist($oOrder);
-            $em->flush();
+            //$em->flush();
             $aSortPicklistHeader[] = $oOrder;
             //Betsellinformattionen holen aus localer Datenbank
             $repository = $this->getDoctrine()->getRepository('BSDataBundle:OrdersInfo');
@@ -716,8 +716,8 @@ class OrderController extends Controller
             $mark = $oOrder->getMarking1ID();
             if($mark == 2 || $mark == 4 || $mark == 7 ){
                 $pdf->OrderHeader($oOrder,$aOrderInfo,"KEIN ERSATZ");
-                $ersatz = false;
-            }if($mark == 2 || $mark == 4 || $mark == 7 ){
+           //     $ersatz = false;
+           //  }if($mark == 2 || $mark == 4 || $mark == 7 ){
                 $pdf->OrderHeaderOptional("KEIN ERSATZ");
                 $ersatz = false;
             }
@@ -859,7 +859,7 @@ class OrderController extends Controller
                     }
                 }
             }
-
+	$em->flush();
 
         //PICKLISTE
 
@@ -925,19 +925,19 @@ class OrderController extends Controller
 
 
     public function getItem($OrderItem){
-        $oPlentySoapClient	=	new PlentySoapClient($this,$this->getDoctrine());
         $em = $this->getDoctrine()->getEntityManager();
         $ArtileID = explode("-",  $OrderItem->getSKU());
         $repository = $this->getDoctrine()->getRepository('BSDataBundle:Product');
         $product = $repository->findOneBy(array('article_id' => $ArtileID[0]));
-        if(!$product) {
+       if(!$product) {
 
+        $oPlentySoapClient	=	new PlentySoapClient($this,$this->getDoctrine());
             $request = $oPlentySoapClient->doGetItemsBaseByOptions(array('ItemID'=>$ArtileID[0]));
            if(count($request) > 0){
                $product = $request[0];
            }else{
                //$OrderItem = new OrdersItem();
-               /*$product = new Product();
+               $product = new Product();
                $product->setName($OrderItem->getItemText());
                $product->setArticleNo($OrderItem->getArticleCode());
                $product->setArticleId($OrderItem->getArticleID());
@@ -945,9 +945,13 @@ class OrderController extends Controller
                $product->setSKU($OrderItem->getSKU());
                $product->setVAT($OrderItem->getVAT());
                $product->setAttributeVaueSetID(0);
-               $em->persist($product);
-               $em->flush();*/
-           }
+           //    $em->persist($product);
+           //    $em->flush();
+	}	
+	$logger = $this->get('logger');
+	$logger->error('Product not SYNCED ID '.$OrderItem->getArticleID());
+
+            
 
 
            /* if(isset($PMItem->ItemID)) {
