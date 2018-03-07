@@ -285,7 +285,7 @@ class OrderController extends Controller
          * da dieser keine Request-Parameter benötigt.
          */
         //$time = $oPlentySoapClient->doGetServerTime();
-        $orders = array();
+
         $orders = $oPlentySoapClient->doGetOrdersWithState( $state);
         // $time = $oPlentySoapClient->doGetServerTime();
 
@@ -600,7 +600,7 @@ class OrderController extends Controller
          * da dieser keine Request-Parameter benötigt.
          */
         //$time = $oPlentySoapClient->doGetServerTime();
-        $orders = array();
+
         $orders = $oPlentySoapClient->doGetOrdersWithState( $state);
         // $time = $oPlentySoapClient->doGetServerTime();
         $em = $this->getDoctrine()->getEntityManager();
@@ -626,12 +626,8 @@ class OrderController extends Controller
          */
         $oPlentySoapClient	=	new PlentySoapClient($this,$this->getDoctrine() );
 
-
         $orders = $oPlentySoapClient->doGetOrdersWithState( $state);
         // $time = $oPlentySoapClient->doGetServerTime();
-
-
-
 
         return $this->render('BSOrderBundle:Order:orders.html.twig', array(
             'orders'=>$orders , 'state'=> $state       ));

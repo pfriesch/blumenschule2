@@ -59,7 +59,7 @@ class OrdersItem
     /**
      * @var string $SKU
      *
-     * @ORM\Column(name="SKU", type="string", length=20)
+     * @ORM\Column(name="SKU", type="string", length=20,nullable= true)
      */
     private $SKU;
 

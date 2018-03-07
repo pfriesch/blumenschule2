@@ -24,7 +24,7 @@ use Acme\BSDataBundle\Entity\ProductBundle;
 use Acme\PlentyMarketsBundle\Controller\PMSOAP\PlentyFactory;
 use Acme\PlentyMarketsBundle\Controller\PMSOAP\PlentySoapRequest_AddOrders;
 use \DateTime;
-use JsonSchema\Constraints\Object;
+// use JsonSchema\Constraints\Object;
 use \SoapFault;
 use Acme\PlentyMarketsBundle\Entity\Token;
 use Acme\BSDataBundle\Entity\Product;
@@ -856,19 +856,18 @@ class PlentySoapClient extends \SoapClient
         $oResponse = null;
        // $options['Page'] = null;
         $options['OrderID'] = null;
-        $options['OrderType'] = null;
-        $options['OrderStatus'] = doubleval($state);
-        $options['OrderStatusFrom'] =  true;//doubleval($state);
-        $options['OrderStatusTo'] = true;//doubleval($state);
+        $options['OrderType'] = 'order';
+        $options['OrderStatus'] = (float) $state;
+
         $options['StoreID'] = 0;
 
-        $options['ExternalOrderID'] = null;
+  //      $options['ExternalOrderID'] = null;
        // $options['MultishopID'] = 0;
 	//	$dateB = new DateTime();
 	//	$dateA = $dateB->sub(\DateInterval::createFromDateString('90 days'));
 
-        $options['LastUpdateFrom'] = 0;
-        $options['LastUpdateTill'] = null;
+       // $options['LastUpdateFrom'] = 0;
+        ////$options['LastUpdateTill'] = null;
         $options['GetOrderDeliveryAddress'] = true;
         $options['GetOrderCustomerAddress'] = true;
 
@@ -977,18 +976,18 @@ class PlentySoapClient extends \SoapClient
         // Order HEAD
         try {
             $order->setOrderID($AOorder->OrderHead->OrderID);
-            $order->setLastUpdate($AOorder->OrderHead->LastUpdate);
+            $order->setLastUpdate($AOorder->OrderHead->LastUpdate->TimestampValue);
             $order->setCustomerID($AOorder->OrderHead->CustomerID);
             $order->setPackageNumber($AOorder->OrderHead->PackageNumber);
             $order->setTotalBrutto($AOorder->OrderHead->TotalBrutto);
             $order->setShippingCosts($AOorder->OrderHead->ShippingCosts);
             $order->setDoneTimestamp($AOorder->OrderHead->DoneTimestamp);
-            $order->setPaidTimestamp($AOorder->OrderHead->PaidTimestamp);
+            $order->setPaidTimestamp($AOorder->OrderHead->PaidTimestamp->TimestampValue);
             $order->setPaidStatus($AOorder->OrderHead->PaymentStatus);
             $order->setOrderStatus($AOorder->OrderHead->OrderStatus);
             $order->setOrderType($AOorder->OrderHead->OrderType);
             $order->setMarking1ID($AOorder->OrderHead->Marking1ID);
-            $order->setEstimatedTimeOfShipment($AOorder->OrderHead->EstimatedTimeOfShipment);
+            $order->setEstimatedTimeOfShipment($AOorder->OrderHead->EstimatedTimeOfShipment->TimestampValue);
             // $opm = $em->getRepository('BSDataBundle:PaymentMethods')->find($AOorder->OrderHead->MethodOfPaymentID);
             // $order->setPaymentMethods($opm);
            	if(isset($AOorder->OrderHead->InvoiceNumber)){
@@ -1026,7 +1025,7 @@ class PlentySoapClient extends \SoapClient
 
 
             $em->persist($order);
-            //$em->flush();
+            $em->flush();
             return $order;
         } catch (\Exception $e) {
             throw  new \Exception('Some failure in Order :' . $AOorder->OrderHead->OrderID .'<br>'.$e->getMessage());
@@ -1065,7 +1064,7 @@ class PlentySoapClient extends \SoapClient
                 //$order->addOrdersInfo($oOrdersInfo);
 
             }
-            // $em->flush();
+             $em->flush();
         }
         return $aOrderInfos;
 
@@ -1093,7 +1092,7 @@ class PlentySoapClient extends \SoapClient
 
                 if (!is_null($item->ItemNo)) {
                     $orderitem = new OrdersItem();
-                    $orderitem->setSKU($item->SKU);
+                    //$orderitem->setSKU($item->SKU);
 
 
                     //$SKU = explode("-", $item->SKU);
