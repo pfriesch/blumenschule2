@@ -611,7 +611,7 @@ class PlentySoapClient extends \SoapClient
                 if (is_null($item->AttributeValueSets)) $product->setAttributeVaueSetID(0);
                 else {
                     $sets = $item->AttributeValueSets;
-                    $product->setAttributeVaueSetID($sets[0]->AttributeValueSetID);
+                    //$product->setAttributeVaueSetID($sets[0]->AttributeValueSetID);
                 }
                 $product->setSKU($item->ItemID . "-" . $item->PriceSet->PriceID . "-" . $product->getAttributeVaueSetID());
                 $product->setEAN($item->EAN1);
