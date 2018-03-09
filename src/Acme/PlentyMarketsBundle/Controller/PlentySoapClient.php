@@ -982,7 +982,10 @@ class PlentySoapClient extends \SoapClient
             $order->setTotalBrutto($AOorder->OrderHead->TotalBrutto);
             $order->setShippingCosts($AOorder->OrderHead->ShippingCosts);
             $order->setDoneTimestamp($AOorder->OrderHead->DoneTimestamp);
-            $order->setPaidTimestamp($AOorder->OrderHead->PaidTimestamp->TimestampValue);
+            if(!empty($AOorder->OrderHead->PaidTimestamp)){
+                $order->setPaidTimestamp($AOorder->OrderHead->PaidTimestamp->TimestampValue);
+            }
+
             $order->setPaidStatus($AOorder->OrderHead->PaymentStatus);
             $order->setOrderStatus($AOorder->OrderHead->OrderStatus);
             $order->setOrderType($AOorder->OrderHead->OrderType);
@@ -1093,7 +1096,6 @@ class PlentySoapClient extends \SoapClient
                 if (!is_null($item->ItemNo)) {
                     $orderitem = new OrdersItem();
                     //$orderitem->setSKU($item->SKU);
-
 
                     //$SKU = explode("-", $item->SKU);
                     $orderitem->setArticleCode($item->ItemNo);
@@ -1308,7 +1310,7 @@ class PlentySoapClient extends \SoapClient
         $options['GetShortDescription'] = null;
         $options['GetLongDescription'] = null;
         $options['GetTechnicalData'] = null;
-        $options['Page'] = null;
+        $options['Page'] = 0;
         $options = $option + $options;
 
 

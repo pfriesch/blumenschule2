@@ -924,14 +924,14 @@ class OrderController extends Controller
         $em = $this->getDoctrine()->getEntityManager();
         $ArtileID = explode("-",  $OrderItem->getSKU());
         $repository = $this->getDoctrine()->getRepository('BSDataBundle:Product');
-        $product = $repository->findOneBy(array('article_id' => $ArtileID[0]));
+        $product = $repository->findOneBy(array('article_id' => $OrderItem->getArticleID()));
        if(!$product) {
 
-        $oPlentySoapClient	=	new PlentySoapClient($this,$this->getDoctrine());
-            $request = $oPlentySoapClient->doGetItemsBaseByOptions(array('ItemID'=>$ArtileID[0]));
-           if(count($request) > 0){
-               $product = $request[0];
-           }else{
+//        $oPlentySoapClient	=	new PlentySoapClient($this,$this->getDoctrine());
+//            $request = $oPlentySoapClient->doGetItemsBaseByOptions(array('ItemID'=>$ArtileID[0]));
+//           if(count($request) > 0){
+//               $product = $request[0];
+//           }else{
                //$OrderItem = new OrdersItem();
                $product = new Product();
                $product->setName($OrderItem->getItemText());
@@ -941,11 +941,10 @@ class OrderController extends Controller
                $product->setSKU($OrderItem->getSKU());
                $product->setVAT($OrderItem->getVAT());
                $product->setAttributeVaueSetID(0);
-           //    $em->persist($product);
-           //    $em->flush();
-	}	
-	$logger = $this->get('logger');
-	$logger->error('Product not SYNCED ID '.$OrderItem->getArticleID());
+               $em->persist($product);
+               $em->flush();
+	// }
+
 
             
 
