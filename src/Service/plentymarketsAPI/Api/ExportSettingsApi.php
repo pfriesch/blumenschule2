@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  BSApp\Service\plentymarketsAPI
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace BSApp\Service\plentymarketsAPI\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -33,16 +33,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use BSApp\Service\plentymarketsAPI\ApiException;
+use BSApp\Service\plentymarketsAPI\Configuration;
+use BSApp\Service\plentymarketsAPI\HeaderSelector;
+use BSApp\Service\plentymarketsAPI\ObjectSerializer;
 
 /**
  * ExportSettingsApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  BSApp\Service\plentymarketsAPI
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -93,7 +93,7 @@ class ExportSettingsApi
      *
      * @param  int $export_id export_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -109,7 +109,7 @@ class ExportSettingsApi
      *
      * @param  int $export_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -321,9 +321,9 @@ class ExportSettingsApi
      * @param  int $export_id export_id (required)
      * @param  int $key key (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyDataSimpleRestResponse
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse
      */
     public function restExportsExportIdFiltersKeyDelete($export_id, $key)
     {
@@ -337,13 +337,13 @@ class ExportSettingsApi
      * @param  int $export_id (required)
      * @param  int $key (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyDataSimpleRestResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function restExportsExportIdFiltersKeyDeleteWithHttpInfo($export_id, $key)
     {
-        $returnType = '\Swagger\Client\Model\PlentyDataSimpleRestResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse';
         $request = $this->restExportsExportIdFiltersKeyDeleteRequest($export_id, $key);
 
         try {
@@ -395,7 +395,7 @@ class ExportSettingsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyDataSimpleRestResponse',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -439,7 +439,7 @@ class ExportSettingsApi
      */
     public function restExportsExportIdFiltersKeyDeleteAsyncWithHttpInfo($export_id, $key)
     {
-        $returnType = '\Swagger\Client\Model\PlentyDataSimpleRestResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse';
         $request = $this->restExportsExportIdFiltersKeyDeleteRequest($export_id, $key);
 
         return $this->client
@@ -603,9 +603,9 @@ class ExportSettingsApi
      *
      * @param  int $export_id export_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesDataExchangeModelsExport
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesDataExchangeModelsExport
      */
     public function restExportsExportIdGet($export_id)
     {
@@ -620,13 +620,13 @@ class ExportSettingsApi
      *
      * @param  int $export_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesDataExchangeModelsExport, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesDataExchangeModelsExport, HTTP status code, HTTP response headers (array of strings)
      */
     public function restExportsExportIdGetWithHttpInfo($export_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesDataExchangeModelsExport';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesDataExchangeModelsExport';
         $request = $this->restExportsExportIdGetRequest($export_id);
 
         try {
@@ -678,7 +678,7 @@ class ExportSettingsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesDataExchangeModelsExport',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesDataExchangeModelsExport',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -720,7 +720,7 @@ class ExportSettingsApi
      */
     public function restExportsExportIdGetAsyncWithHttpInfo($export_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesDataExchangeModelsExport';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesDataExchangeModelsExport';
         $request = $this->restExportsExportIdGetRequest($export_id);
 
         return $this->client
@@ -870,9 +870,9 @@ class ExportSettingsApi
      * @param  int $export_id export_id (required)
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesDataExchangeModelsExport
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesDataExchangeModelsExport
      */
     public function restExportsExportIdPut($export_id, $body = null)
     {
@@ -888,13 +888,13 @@ class ExportSettingsApi
      * @param  int $export_id (required)
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesDataExchangeModelsExport, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesDataExchangeModelsExport, HTTP status code, HTTP response headers (array of strings)
      */
     public function restExportsExportIdPutWithHttpInfo($export_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesDataExchangeModelsExport';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesDataExchangeModelsExport';
         $request = $this->restExportsExportIdPutRequest($export_id, $body);
 
         try {
@@ -946,7 +946,7 @@ class ExportSettingsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesDataExchangeModelsExport',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesDataExchangeModelsExport',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -990,7 +990,7 @@ class ExportSettingsApi
      */
     public function restExportsExportIdPutAsyncWithHttpInfo($export_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesDataExchangeModelsExport';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesDataExchangeModelsExport';
         $request = $this->restExportsExportIdPutRequest($export_id, $body);
 
         return $this->client
@@ -1148,7 +1148,7 @@ class ExportSettingsApi
      * @param  int $page The page of results to search for (optional)
      * @param  int $items_per_page The number of items to list per page (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -1170,7 +1170,7 @@ class ExportSettingsApi
      * @param  int $page The page of results to search for (optional)
      * @param  int $items_per_page The number of items to list per page (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1444,9 +1444,9 @@ class ExportSettingsApi
      *
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesDataExchangeModelsExport
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesDataExchangeModelsExport
      */
     public function restExportsPost($body = null)
     {
@@ -1461,13 +1461,13 @@ class ExportSettingsApi
      *
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesDataExchangeModelsExport, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesDataExchangeModelsExport, HTTP status code, HTTP response headers (array of strings)
      */
     public function restExportsPostWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesDataExchangeModelsExport';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesDataExchangeModelsExport';
         $request = $this->restExportsPostRequest($body);
 
         try {
@@ -1519,7 +1519,7 @@ class ExportSettingsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesDataExchangeModelsExport',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesDataExchangeModelsExport',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1561,7 +1561,7 @@ class ExportSettingsApi
      */
     public function restExportsPostAsyncWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesDataExchangeModelsExport';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesDataExchangeModelsExport';
         $request = $this->restExportsPostRequest($body);
 
         return $this->client

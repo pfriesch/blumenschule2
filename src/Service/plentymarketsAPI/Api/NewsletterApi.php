@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  BSApp\Service\plentymarketsAPI
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace BSApp\Service\plentymarketsAPI\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -33,16 +33,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use BSApp\Service\plentymarketsAPI\ApiException;
+use BSApp\Service\plentymarketsAPI\Configuration;
+use BSApp\Service\plentymarketsAPI\HeaderSelector;
+use BSApp\Service\plentymarketsAPI\ObjectSerializer;
 
 /**
  * NewsletterApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  BSApp\Service\plentymarketsAPI
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -92,9 +92,9 @@ class NewsletterApi
      * Delete entries
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesAccountNewsletterModelsEntry[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountNewsletterModelsEntry[]
      */
     public function restNewslettersDelete()
     {
@@ -108,13 +108,13 @@ class NewsletterApi
      * Delete entries
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesAccountNewsletterModelsEntry[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountNewsletterModelsEntry[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restNewslettersDeleteWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountNewsletterModelsEntry[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountNewsletterModelsEntry[]';
         $request = $this->restNewslettersDeleteRequest();
 
         try {
@@ -166,7 +166,7 @@ class NewsletterApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesAccountNewsletterModelsEntry[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountNewsletterModelsEntry[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -206,7 +206,7 @@ class NewsletterApi
      */
     public function restNewslettersDeleteAsyncWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountNewsletterModelsEntry[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountNewsletterModelsEntry[]';
         $request = $this->restNewslettersDeleteRequest();
 
         return $this->client
@@ -338,9 +338,9 @@ class NewsletterApi
      *
      * @param  int $contact_id contact_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyDataSimpleRestResponse
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse
      */
     public function restNewslettersDoubleOptInContactIdPost($contact_id)
     {
@@ -353,13 +353,13 @@ class NewsletterApi
      *
      * @param  int $contact_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyDataSimpleRestResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function restNewslettersDoubleOptInContactIdPostWithHttpInfo($contact_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyDataSimpleRestResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse';
         $request = $this->restNewslettersDoubleOptInContactIdPostRequest($contact_id);
 
         try {
@@ -411,7 +411,7 @@ class NewsletterApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyDataSimpleRestResponse',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -453,7 +453,7 @@ class NewsletterApi
      */
     public function restNewslettersDoubleOptInContactIdPostAsyncWithHttpInfo($contact_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyDataSimpleRestResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse';
         $request = $this->restNewslettersDoubleOptInContactIdPostRequest($contact_id);
 
         return $this->client
@@ -602,9 +602,9 @@ class NewsletterApi
      *
      * @param  int $entry_id entry_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesAccountNewsletterModelsEntry
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountNewsletterModelsEntry
      */
     public function restNewslettersEntryIdDelete($entry_id)
     {
@@ -619,13 +619,13 @@ class NewsletterApi
      *
      * @param  int $entry_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesAccountNewsletterModelsEntry, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountNewsletterModelsEntry, HTTP status code, HTTP response headers (array of strings)
      */
     public function restNewslettersEntryIdDeleteWithHttpInfo($entry_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountNewsletterModelsEntry';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountNewsletterModelsEntry';
         $request = $this->restNewslettersEntryIdDeleteRequest($entry_id);
 
         try {
@@ -677,7 +677,7 @@ class NewsletterApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesAccountNewsletterModelsEntry',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountNewsletterModelsEntry',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -719,7 +719,7 @@ class NewsletterApi
      */
     public function restNewslettersEntryIdDeleteAsyncWithHttpInfo($entry_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountNewsletterModelsEntry';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountNewsletterModelsEntry';
         $request = $this->restNewslettersEntryIdDeleteRequest($entry_id);
 
         return $this->client
@@ -868,9 +868,9 @@ class NewsletterApi
      *
      * @param  int $entry_id The ID of the newsletter entry. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesAccountNewsletterModelsEntry
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountNewsletterModelsEntry
      */
     public function restNewslettersEntryIdGet($entry_id)
     {
@@ -885,13 +885,13 @@ class NewsletterApi
      *
      * @param  int $entry_id The ID of the newsletter entry. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesAccountNewsletterModelsEntry, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountNewsletterModelsEntry, HTTP status code, HTTP response headers (array of strings)
      */
     public function restNewslettersEntryIdGetWithHttpInfo($entry_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountNewsletterModelsEntry';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountNewsletterModelsEntry';
         $request = $this->restNewslettersEntryIdGetRequest($entry_id);
 
         try {
@@ -943,7 +943,7 @@ class NewsletterApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesAccountNewsletterModelsEntry',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountNewsletterModelsEntry',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -985,7 +985,7 @@ class NewsletterApi
      */
     public function restNewslettersEntryIdGetAsyncWithHttpInfo($entry_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountNewsletterModelsEntry';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountNewsletterModelsEntry';
         $request = $this->restNewslettersEntryIdGetRequest($entry_id);
 
         return $this->client
@@ -1137,9 +1137,9 @@ class NewsletterApi
      * @param  string $body The body of the entry (optional)
      * @param  string $kind The type of the entry. The content can be saved as plain text or in HTML format. Possible values: [&#x27;plain&#x27;, &#x27;html&#x27;]. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesAccountNewsletterModelsEntry
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountNewsletterModelsEntry
      */
     public function restNewslettersEntryIdPut($entry_id, $subject = null, $body = null, $kind = null)
     {
@@ -1157,13 +1157,13 @@ class NewsletterApi
      * @param  string $body The body of the entry (optional)
      * @param  string $kind The type of the entry. The content can be saved as plain text or in HTML format. Possible values: [&#x27;plain&#x27;, &#x27;html&#x27;]. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesAccountNewsletterModelsEntry, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountNewsletterModelsEntry, HTTP status code, HTTP response headers (array of strings)
      */
     public function restNewslettersEntryIdPutWithHttpInfo($entry_id, $subject = null, $body = null, $kind = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountNewsletterModelsEntry';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountNewsletterModelsEntry';
         $request = $this->restNewslettersEntryIdPutRequest($entry_id, $subject, $body, $kind);
 
         try {
@@ -1215,7 +1215,7 @@ class NewsletterApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesAccountNewsletterModelsEntry',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountNewsletterModelsEntry',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1263,7 +1263,7 @@ class NewsletterApi
      */
     public function restNewslettersEntryIdPutAsyncWithHttpInfo($entry_id, $subject = null, $body = null, $kind = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountNewsletterModelsEntry';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountNewsletterModelsEntry';
         $request = $this->restNewslettersEntryIdPutRequest($entry_id, $subject, $body, $kind);
 
         return $this->client
@@ -1426,9 +1426,9 @@ class NewsletterApi
      * Delete folders
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesAccountNewsletterModelsFolder[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountNewsletterModelsFolder[]
      */
     public function restNewslettersFoldersDelete()
     {
@@ -1442,13 +1442,13 @@ class NewsletterApi
      * Delete folders
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesAccountNewsletterModelsFolder[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountNewsletterModelsFolder[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restNewslettersFoldersDeleteWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountNewsletterModelsFolder[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountNewsletterModelsFolder[]';
         $request = $this->restNewslettersFoldersDeleteRequest();
 
         try {
@@ -1500,7 +1500,7 @@ class NewsletterApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesAccountNewsletterModelsFolder[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountNewsletterModelsFolder[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1540,7 +1540,7 @@ class NewsletterApi
      */
     public function restNewslettersFoldersDeleteAsyncWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountNewsletterModelsFolder[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountNewsletterModelsFolder[]';
         $request = $this->restNewslettersFoldersDeleteRequest();
 
         return $this->client
@@ -1674,9 +1674,9 @@ class NewsletterApi
      *
      * @param  int $folder_id folder_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesAccountNewsletterModelsFolder
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountNewsletterModelsFolder
      */
     public function restNewslettersFoldersFolderIdDelete($folder_id)
     {
@@ -1691,13 +1691,13 @@ class NewsletterApi
      *
      * @param  int $folder_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesAccountNewsletterModelsFolder, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountNewsletterModelsFolder, HTTP status code, HTTP response headers (array of strings)
      */
     public function restNewslettersFoldersFolderIdDeleteWithHttpInfo($folder_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountNewsletterModelsFolder';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountNewsletterModelsFolder';
         $request = $this->restNewslettersFoldersFolderIdDeleteRequest($folder_id);
 
         try {
@@ -1749,7 +1749,7 @@ class NewsletterApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesAccountNewsletterModelsFolder',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountNewsletterModelsFolder',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1791,7 +1791,7 @@ class NewsletterApi
      */
     public function restNewslettersFoldersFolderIdDeleteAsyncWithHttpInfo($folder_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountNewsletterModelsFolder';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountNewsletterModelsFolder';
         $request = $this->restNewslettersFoldersFolderIdDeleteRequest($folder_id);
 
         return $this->client
@@ -1940,9 +1940,9 @@ class NewsletterApi
      *
      * @param  int $folder_id The ID of the newsletter folder. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesAccountNewsletterModelsFolder
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountNewsletterModelsFolder
      */
     public function restNewslettersFoldersFolderIdGet($folder_id)
     {
@@ -1957,13 +1957,13 @@ class NewsletterApi
      *
      * @param  int $folder_id The ID of the newsletter folder. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesAccountNewsletterModelsFolder, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountNewsletterModelsFolder, HTTP status code, HTTP response headers (array of strings)
      */
     public function restNewslettersFoldersFolderIdGetWithHttpInfo($folder_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountNewsletterModelsFolder';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountNewsletterModelsFolder';
         $request = $this->restNewslettersFoldersFolderIdGetRequest($folder_id);
 
         try {
@@ -2015,7 +2015,7 @@ class NewsletterApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesAccountNewsletterModelsFolder',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountNewsletterModelsFolder',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2057,7 +2057,7 @@ class NewsletterApi
      */
     public function restNewslettersFoldersFolderIdGetAsyncWithHttpInfo($folder_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountNewsletterModelsFolder';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountNewsletterModelsFolder';
         $request = $this->restNewslettersFoldersFolderIdGetRequest($folder_id);
 
         return $this->client
@@ -2211,9 +2211,9 @@ class NewsletterApi
      * @param  bool $is_deletable Flag that indicates if the newsletter folder can be deleted. The folders &#x27;Customers&#x27; and &#x27;Interested parties&#x27; are available by default and cannot be deleted. (optional)
      * @param  bool $is_selectable Flag that indicates if the newsletter folder can be selected by customers in the online store. If it is allowed, the folder will be displayed in the My account area of the online store. Customers will then be able to subscribe to the newsletters that are included in this folder. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesAccountNewsletterModelsFolder
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountNewsletterModelsFolder
      */
     public function restNewslettersFoldersFolderIdPut($folder_id, $name = null, $position = null, $client_ids = null, $is_deletable = null, $is_selectable = null)
     {
@@ -2233,13 +2233,13 @@ class NewsletterApi
      * @param  bool $is_deletable Flag that indicates if the newsletter folder can be deleted. The folders &#x27;Customers&#x27; and &#x27;Interested parties&#x27; are available by default and cannot be deleted. (optional)
      * @param  bool $is_selectable Flag that indicates if the newsletter folder can be selected by customers in the online store. If it is allowed, the folder will be displayed in the My account area of the online store. Customers will then be able to subscribe to the newsletters that are included in this folder. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesAccountNewsletterModelsFolder, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountNewsletterModelsFolder, HTTP status code, HTTP response headers (array of strings)
      */
     public function restNewslettersFoldersFolderIdPutWithHttpInfo($folder_id, $name = null, $position = null, $client_ids = null, $is_deletable = null, $is_selectable = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountNewsletterModelsFolder';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountNewsletterModelsFolder';
         $request = $this->restNewslettersFoldersFolderIdPutRequest($folder_id, $name, $position, $client_ids, $is_deletable, $is_selectable);
 
         try {
@@ -2291,7 +2291,7 @@ class NewsletterApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesAccountNewsletterModelsFolder',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountNewsletterModelsFolder',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2343,7 +2343,7 @@ class NewsletterApi
      */
     public function restNewslettersFoldersFolderIdPutAsyncWithHttpInfo($folder_id, $name = null, $position = null, $client_ids = null, $is_deletable = null, $is_selectable = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountNewsletterModelsFolder';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountNewsletterModelsFolder';
         $request = $this->restNewslettersFoldersFolderIdPutRequest($folder_id, $name, $position, $client_ids, $is_deletable, $is_selectable);
 
         return $this->client
@@ -2517,9 +2517,9 @@ class NewsletterApi
      *
      * @param  int $folder_id The ID of the newsletter folder. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesAccountNewsletterModelsRecipient[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountNewsletterModelsRecipient[]
      */
     public function restNewslettersFoldersFolderIdRecipientsGet($folder_id)
     {
@@ -2534,13 +2534,13 @@ class NewsletterApi
      *
      * @param  int $folder_id The ID of the newsletter folder. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesAccountNewsletterModelsRecipient[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountNewsletterModelsRecipient[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restNewslettersFoldersFolderIdRecipientsGetWithHttpInfo($folder_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountNewsletterModelsRecipient[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountNewsletterModelsRecipient[]';
         $request = $this->restNewslettersFoldersFolderIdRecipientsGetRequest($folder_id);
 
         try {
@@ -2592,7 +2592,7 @@ class NewsletterApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesAccountNewsletterModelsRecipient[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountNewsletterModelsRecipient[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2634,7 +2634,7 @@ class NewsletterApi
      */
     public function restNewslettersFoldersFolderIdRecipientsGetAsyncWithHttpInfo($folder_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountNewsletterModelsRecipient[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountNewsletterModelsRecipient[]';
         $request = $this->restNewslettersFoldersFolderIdRecipientsGetRequest($folder_id);
 
         return $this->client
@@ -2782,9 +2782,9 @@ class NewsletterApi
      * List newsletter folders
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesAccountNewsletterModelsRecipient[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountNewsletterModelsRecipient[]
      */
     public function restNewslettersFoldersGet()
     {
@@ -2798,13 +2798,13 @@ class NewsletterApi
      * List newsletter folders
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesAccountNewsletterModelsRecipient[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountNewsletterModelsRecipient[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restNewslettersFoldersGetWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountNewsletterModelsRecipient[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountNewsletterModelsRecipient[]';
         $request = $this->restNewslettersFoldersGetRequest();
 
         try {
@@ -2856,7 +2856,7 @@ class NewsletterApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesAccountNewsletterModelsRecipient[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountNewsletterModelsRecipient[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2896,7 +2896,7 @@ class NewsletterApi
      */
     public function restNewslettersFoldersGetAsyncWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountNewsletterModelsRecipient[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountNewsletterModelsRecipient[]';
         $request = $this->restNewslettersFoldersGetRequest();
 
         return $this->client
@@ -3035,9 +3035,9 @@ class NewsletterApi
      * @param  bool $is_deletable Flag that indicates if the newsletter folder can be deleted. Default value of is deletable is 1. The folders &#x27;Customers&#x27; and &#x27;Interested parties&#x27; are available by default and cannot be deleted. (optional)
      * @param  bool $is_selectable Flag that indicates if the newsletter folder can be selected by customers in the online store. If it is allowed, the folder will be displayed in the My account area of the online store. Customers will then be able to subscribe to the newsletters that are included in this folder. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesAccountNewsletterModelsFolder
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountNewsletterModelsFolder
      */
     public function restNewslettersFoldersPost($body = null, $id = null, $name = null, $position = null, $is_deletable = null, $is_selectable = null)
     {
@@ -3057,13 +3057,13 @@ class NewsletterApi
      * @param  bool $is_deletable Flag that indicates if the newsletter folder can be deleted. Default value of is deletable is 1. The folders &#x27;Customers&#x27; and &#x27;Interested parties&#x27; are available by default and cannot be deleted. (optional)
      * @param  bool $is_selectable Flag that indicates if the newsletter folder can be selected by customers in the online store. If it is allowed, the folder will be displayed in the My account area of the online store. Customers will then be able to subscribe to the newsletters that are included in this folder. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesAccountNewsletterModelsFolder, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountNewsletterModelsFolder, HTTP status code, HTTP response headers (array of strings)
      */
     public function restNewslettersFoldersPostWithHttpInfo($body = null, $id = null, $name = null, $position = null, $is_deletable = null, $is_selectable = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountNewsletterModelsFolder';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountNewsletterModelsFolder';
         $request = $this->restNewslettersFoldersPostRequest($body, $id, $name, $position, $is_deletable, $is_selectable);
 
         try {
@@ -3115,7 +3115,7 @@ class NewsletterApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesAccountNewsletterModelsFolder',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountNewsletterModelsFolder',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3167,7 +3167,7 @@ class NewsletterApi
      */
     public function restNewslettersFoldersPostAsyncWithHttpInfo($body = null, $id = null, $name = null, $position = null, $is_deletable = null, $is_selectable = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountNewsletterModelsFolder';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountNewsletterModelsFolder';
         $request = $this->restNewslettersFoldersPostRequest($body, $id, $name, $position, $is_deletable, $is_selectable);
 
         return $this->client
@@ -3329,9 +3329,9 @@ class NewsletterApi
      * List newsletter entries
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesAccountNewsletterModelsEntry[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountNewsletterModelsEntry[]
      */
     public function restNewslettersGet()
     {
@@ -3345,13 +3345,13 @@ class NewsletterApi
      * List newsletter entries
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesAccountNewsletterModelsEntry[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountNewsletterModelsEntry[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restNewslettersGetWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountNewsletterModelsEntry[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountNewsletterModelsEntry[]';
         $request = $this->restNewslettersGetRequest();
 
         try {
@@ -3403,7 +3403,7 @@ class NewsletterApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesAccountNewsletterModelsEntry[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountNewsletterModelsEntry[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3443,7 +3443,7 @@ class NewsletterApi
      */
     public function restNewslettersGetAsyncWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountNewsletterModelsEntry[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountNewsletterModelsEntry[]';
         $request = $this->restNewslettersGetRequest();
 
         return $this->client
@@ -3582,7 +3582,7 @@ class NewsletterApi
      * @param  bool $is_confirmed Filter that restricts the search result to confirmed recipients. (optional)
      * @param  int $with Load additional relations for a Recipient. CURRENTLY NOT AVAILABLE (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -3604,7 +3604,7 @@ class NewsletterApi
      * @param  bool $is_confirmed Filter that restricts the search result to confirmed recipients. (optional)
      * @param  int $with Load additional relations for a Recipient. CURRENTLY NOT AVAILABLE (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -3881,9 +3881,9 @@ class NewsletterApi
      * @param  string $body2 The body of the newsletter entry (optional)
      * @param  string $kind The type of the entry. The content can be saved as plain text or in HTML format. Possible values: [&#x27;plain&#x27;, &#x27;html&#x27;]. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesAccountNewsletterModelsEntry
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountNewsletterModelsEntry
      */
     public function restNewslettersPost($body = null, $subject = null, $body2 = null, $kind = null)
     {
@@ -3901,13 +3901,13 @@ class NewsletterApi
      * @param  string $body2 The body of the newsletter entry (optional)
      * @param  string $kind The type of the entry. The content can be saved as plain text or in HTML format. Possible values: [&#x27;plain&#x27;, &#x27;html&#x27;]. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesAccountNewsletterModelsEntry, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountNewsletterModelsEntry, HTTP status code, HTTP response headers (array of strings)
      */
     public function restNewslettersPostWithHttpInfo($body = null, $subject = null, $body2 = null, $kind = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountNewsletterModelsEntry';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountNewsletterModelsEntry';
         $request = $this->restNewslettersPostRequest($body, $subject, $body2, $kind);
 
         try {
@@ -3959,7 +3959,7 @@ class NewsletterApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesAccountNewsletterModelsEntry',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountNewsletterModelsEntry',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4007,7 +4007,7 @@ class NewsletterApi
      */
     public function restNewslettersPostAsyncWithHttpInfo($body = null, $subject = null, $body2 = null, $kind = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountNewsletterModelsEntry';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountNewsletterModelsEntry';
         $request = $this->restNewslettersPostRequest($body, $subject, $body2, $kind);
 
         return $this->client
@@ -4159,9 +4159,9 @@ class NewsletterApi
      * Delete recipients
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesAccountNewsletterModelsRecipient[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountNewsletterModelsRecipient[]
      */
     public function restNewslettersRecipientsDelete()
     {
@@ -4175,13 +4175,13 @@ class NewsletterApi
      * Delete recipients
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesAccountNewsletterModelsRecipient[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountNewsletterModelsRecipient[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restNewslettersRecipientsDeleteWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountNewsletterModelsRecipient[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountNewsletterModelsRecipient[]';
         $request = $this->restNewslettersRecipientsDeleteRequest();
 
         try {
@@ -4233,7 +4233,7 @@ class NewsletterApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesAccountNewsletterModelsRecipient[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountNewsletterModelsRecipient[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4273,7 +4273,7 @@ class NewsletterApi
      */
     public function restNewslettersRecipientsDeleteAsyncWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountNewsletterModelsRecipient[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountNewsletterModelsRecipient[]';
         $request = $this->restNewslettersRecipientsDeleteRequest();
 
         return $this->client
@@ -4409,9 +4409,9 @@ class NewsletterApi
      * @param  int $folder_id Filter that restricts the search result to the folder ID (optional)
      * @param  int $recipient_id Filter that restricts the search result to the recipient ID (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesAccountNewsletterModelsRecipient[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountNewsletterModelsRecipient[]
      */
     public function restNewslettersRecipientsGet($email = null, $folder_id = null, $recipient_id = null)
     {
@@ -4428,13 +4428,13 @@ class NewsletterApi
      * @param  int $folder_id Filter that restricts the search result to the folder ID (optional)
      * @param  int $recipient_id Filter that restricts the search result to the recipient ID (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesAccountNewsletterModelsRecipient[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountNewsletterModelsRecipient[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restNewslettersRecipientsGetWithHttpInfo($email = null, $folder_id = null, $recipient_id = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountNewsletterModelsRecipient[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountNewsletterModelsRecipient[]';
         $request = $this->restNewslettersRecipientsGetRequest($email, $folder_id, $recipient_id);
 
         try {
@@ -4486,7 +4486,7 @@ class NewsletterApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesAccountNewsletterModelsRecipient[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountNewsletterModelsRecipient[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4532,7 +4532,7 @@ class NewsletterApi
      */
     public function restNewslettersRecipientsGetAsyncWithHttpInfo($email = null, $folder_id = null, $recipient_id = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountNewsletterModelsRecipient[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountNewsletterModelsRecipient[]';
         $request = $this->restNewslettersRecipientsGetRequest($email, $folder_id, $recipient_id);
 
         return $this->client
@@ -4688,9 +4688,9 @@ class NewsletterApi
      * @param  bool $ignore_visibility Value that indicates if the REST call considers folders without visibility. Possible value: &#x27;true&#x27;. If the value &#x27;true&#x27; is set, the folder visibility will be ignored. This means that both visible and invisible folders will be listed depending on the folder IDs entered in the REST call. (optional)
      * @param  string $ip_address The IP address from where the customer has confirmed the newsletter (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesAccountNewsletterModelsRecipient[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountNewsletterModelsRecipient[]
      */
     public function restNewslettersRecipientsPost($body = null, $email = null, $first_name = null, $last_name = null, $folder_ids = null, $is_frontend = null, $ignore_visibility = null, $ip_address = null)
     {
@@ -4712,13 +4712,13 @@ class NewsletterApi
      * @param  bool $ignore_visibility Value that indicates if the REST call considers folders without visibility. Possible value: &#x27;true&#x27;. If the value &#x27;true&#x27; is set, the folder visibility will be ignored. This means that both visible and invisible folders will be listed depending on the folder IDs entered in the REST call. (optional)
      * @param  string $ip_address The IP address from where the customer has confirmed the newsletter (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesAccountNewsletterModelsRecipient[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountNewsletterModelsRecipient[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restNewslettersRecipientsPostWithHttpInfo($body = null, $email = null, $first_name = null, $last_name = null, $folder_ids = null, $is_frontend = null, $ignore_visibility = null, $ip_address = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountNewsletterModelsRecipient[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountNewsletterModelsRecipient[]';
         $request = $this->restNewslettersRecipientsPostRequest($body, $email, $first_name, $last_name, $folder_ids, $is_frontend, $ignore_visibility, $ip_address);
 
         try {
@@ -4770,7 +4770,7 @@ class NewsletterApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesAccountNewsletterModelsRecipient[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountNewsletterModelsRecipient[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4826,7 +4826,7 @@ class NewsletterApi
      */
     public function restNewslettersRecipientsPostAsyncWithHttpInfo($body = null, $email = null, $first_name = null, $last_name = null, $folder_ids = null, $is_frontend = null, $ignore_visibility = null, $ip_address = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountNewsletterModelsRecipient[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountNewsletterModelsRecipient[]';
         $request = $this->restNewslettersRecipientsPostRequest($body, $email, $first_name, $last_name, $folder_ids, $is_frontend, $ignore_visibility, $ip_address);
 
         return $this->client
@@ -4999,9 +4999,9 @@ class NewsletterApi
      *
      * @param  int $recipient_id recipient_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesAccountNewsletterModelsRecipient
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountNewsletterModelsRecipient
      */
     public function restNewslettersRecipientsRecipientIdDelete($recipient_id)
     {
@@ -5016,13 +5016,13 @@ class NewsletterApi
      *
      * @param  int $recipient_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesAccountNewsletterModelsRecipient, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountNewsletterModelsRecipient, HTTP status code, HTTP response headers (array of strings)
      */
     public function restNewslettersRecipientsRecipientIdDeleteWithHttpInfo($recipient_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountNewsletterModelsRecipient';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountNewsletterModelsRecipient';
         $request = $this->restNewslettersRecipientsRecipientIdDeleteRequest($recipient_id);
 
         try {
@@ -5074,7 +5074,7 @@ class NewsletterApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesAccountNewsletterModelsRecipient',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountNewsletterModelsRecipient',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5116,7 +5116,7 @@ class NewsletterApi
      */
     public function restNewslettersRecipientsRecipientIdDeleteAsyncWithHttpInfo($recipient_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountNewsletterModelsRecipient';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountNewsletterModelsRecipient';
         $request = $this->restNewslettersRecipientsRecipientIdDeleteRequest($recipient_id);
 
         return $this->client
@@ -5266,9 +5266,9 @@ class NewsletterApi
      * @param  int $recipient_id recipient_id (required)
      * @param  int $recipients_id The ID of the newsletter folder. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesAccountNewsletterModelsRecipient
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountNewsletterModelsRecipient
      */
     public function restNewslettersRecipientsRecipientIdGet($recipient_id, $recipients_id = null)
     {
@@ -5284,13 +5284,13 @@ class NewsletterApi
      * @param  int $recipient_id (required)
      * @param  int $recipients_id The ID of the newsletter folder. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesAccountNewsletterModelsRecipient, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountNewsletterModelsRecipient, HTTP status code, HTTP response headers (array of strings)
      */
     public function restNewslettersRecipientsRecipientIdGetWithHttpInfo($recipient_id, $recipients_id = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountNewsletterModelsRecipient';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountNewsletterModelsRecipient';
         $request = $this->restNewslettersRecipientsRecipientIdGetRequest($recipient_id, $recipients_id);
 
         try {
@@ -5342,7 +5342,7 @@ class NewsletterApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesAccountNewsletterModelsRecipient',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountNewsletterModelsRecipient',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5386,7 +5386,7 @@ class NewsletterApi
      */
     public function restNewslettersRecipientsRecipientIdGetAsyncWithHttpInfo($recipient_id, $recipients_id = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountNewsletterModelsRecipient';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountNewsletterModelsRecipient';
         $request = $this->restNewslettersRecipientsRecipientIdGetRequest($recipient_id, $recipients_id);
 
         return $this->client
@@ -5549,9 +5549,9 @@ class NewsletterApi
      * @param  string $birthday The customer birthday as Date string (e.g. &#x27;1982-11-24&#x27;, &#x27;1982/11/24&#x27; or &#x27;24.11.1982&#x27;) (optional)
      * @param  string $gender The gender of the customer, one of the following values: &#x27;m&#x27;,&#x27;f&#x27;,&#x27;d&#x27;. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesAccountNewsletterModelsRecipient
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountNewsletterModelsRecipient
      */
     public function restNewslettersRecipientsRecipientIdPut($recipient_id, $body = null, $email = null, $first_name = null, $last_name = null, $folder_ids = null, $folder_id = null, $ip_address = null, $birthday = null, $gender = null)
     {
@@ -5575,13 +5575,13 @@ class NewsletterApi
      * @param  string $birthday The customer birthday as Date string (e.g. &#x27;1982-11-24&#x27;, &#x27;1982/11/24&#x27; or &#x27;24.11.1982&#x27;) (optional)
      * @param  string $gender The gender of the customer, one of the following values: &#x27;m&#x27;,&#x27;f&#x27;,&#x27;d&#x27;. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesAccountNewsletterModelsRecipient, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountNewsletterModelsRecipient, HTTP status code, HTTP response headers (array of strings)
      */
     public function restNewslettersRecipientsRecipientIdPutWithHttpInfo($recipient_id, $body = null, $email = null, $first_name = null, $last_name = null, $folder_ids = null, $folder_id = null, $ip_address = null, $birthday = null, $gender = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountNewsletterModelsRecipient';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountNewsletterModelsRecipient';
         $request = $this->restNewslettersRecipientsRecipientIdPutRequest($recipient_id, $body, $email, $first_name, $last_name, $folder_ids, $folder_id, $ip_address, $birthday, $gender);
 
         try {
@@ -5633,7 +5633,7 @@ class NewsletterApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesAccountNewsletterModelsRecipient',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountNewsletterModelsRecipient',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5693,7 +5693,7 @@ class NewsletterApi
      */
     public function restNewslettersRecipientsRecipientIdPutAsyncWithHttpInfo($recipient_id, $body = null, $email = null, $first_name = null, $last_name = null, $folder_ids = null, $folder_id = null, $ip_address = null, $birthday = null, $gender = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountNewsletterModelsRecipient';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountNewsletterModelsRecipient';
         $request = $this->restNewslettersRecipientsRecipientIdPutRequest($recipient_id, $body, $email, $first_name, $last_name, $folder_ids, $folder_id, $ip_address, $birthday, $gender);
 
         return $this->client

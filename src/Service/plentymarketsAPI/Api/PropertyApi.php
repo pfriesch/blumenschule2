@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  BSApp\Service\plentymarketsAPI
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace BSApp\Service\plentymarketsAPI\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -33,16 +33,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use BSApp\Service\plentymarketsAPI\ApiException;
+use BSApp\Service\plentymarketsAPI\Configuration;
+use BSApp\Service\plentymarketsAPI\HeaderSelector;
+use BSApp\Service\plentymarketsAPI\ObjectSerializer;
 
 /**
  * PropertyApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  BSApp\Service\plentymarketsAPI
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -92,9 +92,9 @@ class PropertyApi
      * List property amazons
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesPropertyModelsPropertyAmazon[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyAmazon[]
      */
     public function restPropertiesAmazonsGet()
     {
@@ -108,13 +108,13 @@ class PropertyApi
      * List property amazons
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesPropertyModelsPropertyAmazon[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyAmazon[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restPropertiesAmazonsGetWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPropertyModelsPropertyAmazon[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyAmazon[]';
         $request = $this->restPropertiesAmazonsGetRequest();
 
         try {
@@ -166,7 +166,7 @@ class PropertyApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesPropertyModelsPropertyAmazon[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyAmazon[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -206,7 +206,7 @@ class PropertyApi
      */
     public function restPropertiesAmazonsGetAsyncWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPropertyModelsPropertyAmazon[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyAmazon[]';
         $request = $this->restPropertiesAmazonsGetRequest();
 
         return $this->client
@@ -344,9 +344,9 @@ class PropertyApi
      * @param  string $field The field of the property amazon (required)
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesPropertyModelsPropertyAmazon
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyAmazon
      */
     public function restPropertiesAmazonsPost($property_id, $platform, $category, $field, $body = null)
     {
@@ -365,13 +365,13 @@ class PropertyApi
      * @param  string $field The field of the property amazon (required)
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesPropertyModelsPropertyAmazon, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyAmazon, HTTP status code, HTTP response headers (array of strings)
      */
     public function restPropertiesAmazonsPostWithHttpInfo($property_id, $platform, $category, $field, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPropertyModelsPropertyAmazon';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyAmazon';
         $request = $this->restPropertiesAmazonsPostRequest($property_id, $platform, $category, $field, $body);
 
         try {
@@ -423,7 +423,7 @@ class PropertyApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesPropertyModelsPropertyAmazon',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyAmazon',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -473,7 +473,7 @@ class PropertyApi
      */
     public function restPropertiesAmazonsPostAsyncWithHttpInfo($property_id, $platform, $category, $field, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPropertyModelsPropertyAmazon';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyAmazon';
         $request = $this->restPropertiesAmazonsPostRequest($property_id, $platform, $category, $field, $body);
 
         return $this->client
@@ -655,7 +655,7 @@ class PropertyApi
      *
      * @param  int $property_amazon_id The ID of the property amazon (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -671,7 +671,7 @@ class PropertyApi
      *
      * @param  int $property_amazon_id The ID of the property amazon (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -884,9 +884,9 @@ class PropertyApi
      *
      * @param  int $property_amazon_id The ID of the property amazon (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesPropertyModelsPropertyAmazon
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyAmazon
      */
     public function restPropertiesAmazonsPropertyAmazonIdGet($property_amazon_id)
     {
@@ -901,13 +901,13 @@ class PropertyApi
      *
      * @param  int $property_amazon_id The ID of the property amazon (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesPropertyModelsPropertyAmazon, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyAmazon, HTTP status code, HTTP response headers (array of strings)
      */
     public function restPropertiesAmazonsPropertyAmazonIdGetWithHttpInfo($property_amazon_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPropertyModelsPropertyAmazon';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyAmazon';
         $request = $this->restPropertiesAmazonsPropertyAmazonIdGetRequest($property_amazon_id);
 
         try {
@@ -959,7 +959,7 @@ class PropertyApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesPropertyModelsPropertyAmazon',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyAmazon',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1001,7 +1001,7 @@ class PropertyApi
      */
     public function restPropertiesAmazonsPropertyAmazonIdGetAsyncWithHttpInfo($property_amazon_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPropertyModelsPropertyAmazon';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyAmazon';
         $request = $this->restPropertiesAmazonsPropertyAmazonIdGetRequest($property_amazon_id);
 
         return $this->client
@@ -1149,9 +1149,9 @@ class PropertyApi
      * Update one or multiple property amazon
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesPropertyModelsPropertyAmazon
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyAmazon
      */
     public function restPropertiesAmazonsPut()
     {
@@ -1165,13 +1165,13 @@ class PropertyApi
      * Update one or multiple property amazon
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesPropertyModelsPropertyAmazon, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyAmazon, HTTP status code, HTTP response headers (array of strings)
      */
     public function restPropertiesAmazonsPutWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPropertyModelsPropertyAmazon';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyAmazon';
         $request = $this->restPropertiesAmazonsPutRequest();
 
         try {
@@ -1223,7 +1223,7 @@ class PropertyApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesPropertyModelsPropertyAmazon',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyAmazon',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1263,7 +1263,7 @@ class PropertyApi
      */
     public function restPropertiesAmazonsPutAsyncWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPropertyModelsPropertyAmazon';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyAmazon';
         $request = $this->restPropertiesAmazonsPutRequest();
 
         return $this->client
@@ -1397,7 +1397,7 @@ class PropertyApi
      *
      * @param  int $availability_id The ID of the availability (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1413,7 +1413,7 @@ class PropertyApi
      *
      * @param  int $availability_id The ID of the availability (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1626,9 +1626,9 @@ class PropertyApi
      *
      * @param  int $availability_id The ID of the property availability (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesPropertyModelsPropertyAvailability
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyAvailability
      */
     public function restPropertiesAvailabilitiesAvailabilityIdGet($availability_id)
     {
@@ -1643,13 +1643,13 @@ class PropertyApi
      *
      * @param  int $availability_id The ID of the property availability (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesPropertyModelsPropertyAvailability, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyAvailability, HTTP status code, HTTP response headers (array of strings)
      */
     public function restPropertiesAvailabilitiesAvailabilityIdGetWithHttpInfo($availability_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPropertyModelsPropertyAvailability';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyAvailability';
         $request = $this->restPropertiesAvailabilitiesAvailabilityIdGetRequest($availability_id);
 
         try {
@@ -1701,7 +1701,7 @@ class PropertyApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesPropertyModelsPropertyAvailability',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyAvailability',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1743,7 +1743,7 @@ class PropertyApi
      */
     public function restPropertiesAvailabilitiesAvailabilityIdGetAsyncWithHttpInfo($availability_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPropertyModelsPropertyAvailability';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyAvailability';
         $request = $this->restPropertiesAvailabilitiesAvailabilityIdGetRequest($availability_id);
 
         return $this->client
@@ -1892,9 +1892,9 @@ class PropertyApi
      *
      * @param  int $availability_id The ID of the availability (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesPropertyModelsPropertyAvailability
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyAvailability
      */
     public function restPropertiesAvailabilitiesAvailabilityIdPut($availability_id)
     {
@@ -1909,13 +1909,13 @@ class PropertyApi
      *
      * @param  int $availability_id The ID of the availability (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesPropertyModelsPropertyAvailability, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyAvailability, HTTP status code, HTTP response headers (array of strings)
      */
     public function restPropertiesAvailabilitiesAvailabilityIdPutWithHttpInfo($availability_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPropertyModelsPropertyAvailability';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyAvailability';
         $request = $this->restPropertiesAvailabilitiesAvailabilityIdPutRequest($availability_id);
 
         try {
@@ -1967,7 +1967,7 @@ class PropertyApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesPropertyModelsPropertyAvailability',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyAvailability',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2009,7 +2009,7 @@ class PropertyApi
      */
     public function restPropertiesAvailabilitiesAvailabilityIdPutAsyncWithHttpInfo($availability_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPropertyModelsPropertyAvailability';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyAvailability';
         $request = $this->restPropertiesAvailabilitiesAvailabilityIdPutRequest($availability_id);
 
         return $this->client
@@ -2157,9 +2157,9 @@ class PropertyApi
      * List availabilities
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesPropertyModelsPropertyAvailability[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyAvailability[]
      */
     public function restPropertiesAvailabilitiesGet()
     {
@@ -2173,13 +2173,13 @@ class PropertyApi
      * List availabilities
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesPropertyModelsPropertyAvailability[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyAvailability[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restPropertiesAvailabilitiesGetWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPropertyModelsPropertyAvailability[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyAvailability[]';
         $request = $this->restPropertiesAvailabilitiesGetRequest();
 
         try {
@@ -2231,7 +2231,7 @@ class PropertyApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesPropertyModelsPropertyAvailability[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyAvailability[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2271,7 +2271,7 @@ class PropertyApi
      */
     public function restPropertiesAvailabilitiesGetAsyncWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPropertyModelsPropertyAvailability[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyAvailability[]';
         $request = $this->restPropertiesAvailabilitiesGetRequest();
 
         return $this->client
@@ -2408,9 +2408,9 @@ class PropertyApi
      * @param  int $value The value of the availability (required)
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesPropertyModelsPropertyAvailability
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyAvailability
      */
     public function restPropertiesAvailabilitiesPost($property_id, $type, $value, $body = null)
     {
@@ -2428,13 +2428,13 @@ class PropertyApi
      * @param  int $value The value of the availability (required)
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesPropertyModelsPropertyAvailability, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyAvailability, HTTP status code, HTTP response headers (array of strings)
      */
     public function restPropertiesAvailabilitiesPostWithHttpInfo($property_id, $type, $value, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPropertyModelsPropertyAvailability';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyAvailability';
         $request = $this->restPropertiesAvailabilitiesPostRequest($property_id, $type, $value, $body);
 
         try {
@@ -2486,7 +2486,7 @@ class PropertyApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesPropertyModelsPropertyAvailability',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyAvailability',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2534,7 +2534,7 @@ class PropertyApi
      */
     public function restPropertiesAvailabilitiesPostAsyncWithHttpInfo($property_id, $type, $value, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPropertyModelsPropertyAvailability';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyAvailability';
         $request = $this->restPropertiesAvailabilitiesPostRequest($property_id, $type, $value, $body);
 
         return $this->client
@@ -2704,7 +2704,7 @@ class PropertyApi
      * Get property destinations
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return string
      */
@@ -2720,7 +2720,7 @@ class PropertyApi
      * Get property destinations
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of string, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2951,9 +2951,9 @@ class PropertyApi
      * List properties
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesPropertyModelsProperty[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsProperty[]
      */
     public function restPropertiesGet()
     {
@@ -2967,13 +2967,13 @@ class PropertyApi
      * List properties
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesPropertyModelsProperty[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsProperty[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restPropertiesGetWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPropertyModelsProperty[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsProperty[]';
         $request = $this->restPropertiesGetRequest();
 
         try {
@@ -3025,7 +3025,7 @@ class PropertyApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesPropertyModelsProperty[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsProperty[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3065,7 +3065,7 @@ class PropertyApi
      */
     public function restPropertiesGetAsyncWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPropertyModelsProperty[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsProperty[]';
         $request = $this->restPropertiesGetRequest();
 
         return $this->client
@@ -3199,9 +3199,9 @@ class PropertyApi
      *
      * @param  int $group_id The ID of the group (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesPropertyModelsPropertyGroup[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyGroup[]
      */
     public function restPropertiesGroupsGet($group_id)
     {
@@ -3216,13 +3216,13 @@ class PropertyApi
      *
      * @param  int $group_id The ID of the group (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesPropertyModelsPropertyGroup[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyGroup[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restPropertiesGroupsGetWithHttpInfo($group_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPropertyModelsPropertyGroup[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyGroup[]';
         $request = $this->restPropertiesGroupsGetRequest($group_id);
 
         try {
@@ -3274,7 +3274,7 @@ class PropertyApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesPropertyModelsPropertyGroup[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyGroup[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3316,7 +3316,7 @@ class PropertyApi
      */
     public function restPropertiesGroupsGetAsyncWithHttpInfo($group_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPropertyModelsPropertyGroup[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyGroup[]';
         $request = $this->restPropertiesGroupsGetRequest($group_id);
 
         return $this->client
@@ -3461,9 +3461,9 @@ class PropertyApi
      *
      * @param  int $group_id The ID of the group (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesPropertyModelsPropertyGroup
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyGroup
      */
     public function restPropertiesGroupsGroupIdGet($group_id)
     {
@@ -3478,13 +3478,13 @@ class PropertyApi
      *
      * @param  int $group_id The ID of the group (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesPropertyModelsPropertyGroup, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyGroup, HTTP status code, HTTP response headers (array of strings)
      */
     public function restPropertiesGroupsGroupIdGetWithHttpInfo($group_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPropertyModelsPropertyGroup';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyGroup';
         $request = $this->restPropertiesGroupsGroupIdGetRequest($group_id);
 
         try {
@@ -3536,7 +3536,7 @@ class PropertyApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesPropertyModelsPropertyGroup',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyGroup',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3578,7 +3578,7 @@ class PropertyApi
      */
     public function restPropertiesGroupsGroupIdGetAsyncWithHttpInfo($group_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPropertyModelsPropertyGroup';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyGroup';
         $request = $this->restPropertiesGroupsGroupIdGetRequest($group_id);
 
         return $this->client
@@ -3727,7 +3727,7 @@ class PropertyApi
      *
      * @param  int $group_id The ID of the group (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return string
      */
@@ -3744,7 +3744,7 @@ class PropertyApi
      *
      * @param  int $group_id The ID of the group (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of string, HTTP status code, HTTP response headers (array of strings)
      */
@@ -3994,7 +3994,7 @@ class PropertyApi
      * @param  int $group_id The ID of the group (required)
      * @param  int $property_id The ID of the property (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return string
      */
@@ -4012,7 +4012,7 @@ class PropertyApi
      * @param  int $group_id The ID of the group (required)
      * @param  int $property_id The ID of the property (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of string, HTTP status code, HTTP response headers (array of strings)
      */
@@ -4279,7 +4279,7 @@ class PropertyApi
      * @param  int $group_id The ID of the group (required)
      * @param  int $property_id The ID of the property (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return string
      */
@@ -4297,7 +4297,7 @@ class PropertyApi
      * @param  int $group_id The ID of the group (required)
      * @param  int $property_id The ID of the property (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of string, HTTP status code, HTTP response headers (array of strings)
      */
@@ -4567,9 +4567,9 @@ class PropertyApi
      * @param  int $names The names of the group. (optional)
      * @param  int $options The options of the group (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesPropertyModelsPropertyGroup
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyGroup
      */
     public function restPropertiesGroupsGroupIdPut($group_id, $body = null, $position = null, $names = null, $options = null)
     {
@@ -4588,13 +4588,13 @@ class PropertyApi
      * @param  int $names The names of the group. (optional)
      * @param  int $options The options of the group (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesPropertyModelsPropertyGroup, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyGroup, HTTP status code, HTTP response headers (array of strings)
      */
     public function restPropertiesGroupsGroupIdPutWithHttpInfo($group_id, $body = null, $position = null, $names = null, $options = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPropertyModelsPropertyGroup';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyGroup';
         $request = $this->restPropertiesGroupsGroupIdPutRequest($group_id, $body, $position, $names, $options);
 
         try {
@@ -4646,7 +4646,7 @@ class PropertyApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesPropertyModelsPropertyGroup',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyGroup',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4696,7 +4696,7 @@ class PropertyApi
      */
     public function restPropertiesGroupsGroupIdPutAsyncWithHttpInfo($group_id, $body = null, $position = null, $names = null, $options = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPropertyModelsPropertyGroup';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyGroup';
         $request = $this->restPropertiesGroupsGroupIdPutRequest($group_id, $body, $position, $names, $options);
 
         return $this->client
@@ -4863,9 +4863,9 @@ class PropertyApi
      * List group names
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesPropertyModelsPropertyGroupName[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyGroupName[]
      */
     public function restPropertiesGroupsNamesGet()
     {
@@ -4879,13 +4879,13 @@ class PropertyApi
      * List group names
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesPropertyModelsPropertyGroupName[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyGroupName[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restPropertiesGroupsNamesGetWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPropertyModelsPropertyGroupName[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyGroupName[]';
         $request = $this->restPropertiesGroupsNamesGetRequest();
 
         try {
@@ -4937,7 +4937,7 @@ class PropertyApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesPropertyModelsPropertyGroupName[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyGroupName[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4977,7 +4977,7 @@ class PropertyApi
      */
     public function restPropertiesGroupsNamesGetAsyncWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPropertyModelsPropertyGroupName[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyGroupName[]';
         $request = $this->restPropertiesGroupsNamesGetRequest();
 
         return $this->client
@@ -5111,7 +5111,7 @@ class PropertyApi
      *
      * @param  int $group_name_id The ID of the group name (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -5127,7 +5127,7 @@ class PropertyApi
      *
      * @param  int $group_name_id The ID of the group name (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -5340,9 +5340,9 @@ class PropertyApi
      *
      * @param  int $group_name_id The ID of the group name (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesPropertyModelsPropertyGroupName
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyGroupName
      */
     public function restPropertiesGroupsNamesGroupNameIdGet($group_name_id)
     {
@@ -5357,13 +5357,13 @@ class PropertyApi
      *
      * @param  int $group_name_id The ID of the group name (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesPropertyModelsPropertyGroupName, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyGroupName, HTTP status code, HTTP response headers (array of strings)
      */
     public function restPropertiesGroupsNamesGroupNameIdGetWithHttpInfo($group_name_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPropertyModelsPropertyGroupName';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyGroupName';
         $request = $this->restPropertiesGroupsNamesGroupNameIdGetRequest($group_name_id);
 
         try {
@@ -5415,7 +5415,7 @@ class PropertyApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesPropertyModelsPropertyGroupName',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyGroupName',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5457,7 +5457,7 @@ class PropertyApi
      */
     public function restPropertiesGroupsNamesGroupNameIdGetAsyncWithHttpInfo($group_name_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPropertyModelsPropertyGroupName';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyGroupName';
         $request = $this->restPropertiesGroupsNamesGroupNameIdGetRequest($group_name_id);
 
         return $this->client
@@ -5606,9 +5606,9 @@ class PropertyApi
      *
      * @param  int $group_name_id The ID of the group name (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesPropertyModelsPropertyGroupName
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyGroupName
      */
     public function restPropertiesGroupsNamesGroupNameIdPut($group_name_id)
     {
@@ -5623,13 +5623,13 @@ class PropertyApi
      *
      * @param  int $group_name_id The ID of the group name (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesPropertyModelsPropertyGroupName, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyGroupName, HTTP status code, HTTP response headers (array of strings)
      */
     public function restPropertiesGroupsNamesGroupNameIdPutWithHttpInfo($group_name_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPropertyModelsPropertyGroupName';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyGroupName';
         $request = $this->restPropertiesGroupsNamesGroupNameIdPutRequest($group_name_id);
 
         try {
@@ -5681,7 +5681,7 @@ class PropertyApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesPropertyModelsPropertyGroupName',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyGroupName',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5723,7 +5723,7 @@ class PropertyApi
      */
     public function restPropertiesGroupsNamesGroupNameIdPutAsyncWithHttpInfo($group_name_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPropertyModelsPropertyGroupName';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyGroupName';
         $request = $this->restPropertiesGroupsNamesGroupNameIdPutRequest($group_name_id);
 
         return $this->client
@@ -5875,9 +5875,9 @@ class PropertyApi
      * @param  string $name The name of the group name (required)
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesPropertyModelsPropertyGroupName
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyGroupName
      */
     public function restPropertiesGroupsNamesPost($property_id, $lang, $name, $body = null)
     {
@@ -5895,13 +5895,13 @@ class PropertyApi
      * @param  string $name The name of the group name (required)
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesPropertyModelsPropertyGroupName, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyGroupName, HTTP status code, HTTP response headers (array of strings)
      */
     public function restPropertiesGroupsNamesPostWithHttpInfo($property_id, $lang, $name, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPropertyModelsPropertyGroupName';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyGroupName';
         $request = $this->restPropertiesGroupsNamesPostRequest($property_id, $lang, $name, $body);
 
         try {
@@ -5953,7 +5953,7 @@ class PropertyApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesPropertyModelsPropertyGroupName',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyGroupName',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6001,7 +6001,7 @@ class PropertyApi
      */
     public function restPropertiesGroupsNamesPostAsyncWithHttpInfo($property_id, $lang, $name, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPropertyModelsPropertyGroupName';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyGroupName';
         $request = $this->restPropertiesGroupsNamesPostRequest($property_id, $lang, $name, $body);
 
         return $this->client
@@ -6171,9 +6171,9 @@ class PropertyApi
      * List group options
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesPropertyModelsPropertyGroupOption[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyGroupOption[]
      */
     public function restPropertiesGroupsOptionsGet()
     {
@@ -6187,13 +6187,13 @@ class PropertyApi
      * List group options
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesPropertyModelsPropertyGroupOption[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyGroupOption[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restPropertiesGroupsOptionsGetWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPropertyModelsPropertyGroupOption[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyGroupOption[]';
         $request = $this->restPropertiesGroupsOptionsGetRequest();
 
         try {
@@ -6245,7 +6245,7 @@ class PropertyApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesPropertyModelsPropertyGroupOption[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyGroupOption[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6285,7 +6285,7 @@ class PropertyApi
      */
     public function restPropertiesGroupsOptionsGetAsyncWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPropertyModelsPropertyGroupOption[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyGroupOption[]';
         $request = $this->restPropertiesGroupsOptionsGetRequest();
 
         return $this->client
@@ -6419,7 +6419,7 @@ class PropertyApi
      *
      * @param  int $group_option_id The ID of the group option (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -6435,7 +6435,7 @@ class PropertyApi
      *
      * @param  int $group_option_id The ID of the group option (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -6648,9 +6648,9 @@ class PropertyApi
      *
      * @param  int $group_option_id The ID of the group option (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesPropertyModelsPropertyGroupOption
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyGroupOption
      */
     public function restPropertiesGroupsOptionsGroupOptionIdGet($group_option_id)
     {
@@ -6665,13 +6665,13 @@ class PropertyApi
      *
      * @param  int $group_option_id The ID of the group option (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesPropertyModelsPropertyGroupOption, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyGroupOption, HTTP status code, HTTP response headers (array of strings)
      */
     public function restPropertiesGroupsOptionsGroupOptionIdGetWithHttpInfo($group_option_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPropertyModelsPropertyGroupOption';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyGroupOption';
         $request = $this->restPropertiesGroupsOptionsGroupOptionIdGetRequest($group_option_id);
 
         try {
@@ -6723,7 +6723,7 @@ class PropertyApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesPropertyModelsPropertyGroupOption',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyGroupOption',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6765,7 +6765,7 @@ class PropertyApi
      */
     public function restPropertiesGroupsOptionsGroupOptionIdGetAsyncWithHttpInfo($group_option_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPropertyModelsPropertyGroupOption';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyGroupOption';
         $request = $this->restPropertiesGroupsOptionsGroupOptionIdGetRequest($group_option_id);
 
         return $this->client
@@ -6914,9 +6914,9 @@ class PropertyApi
      *
      * @param  int $group_option_id The ID of the group option (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesPropertyModelsPropertyGroupOption
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyGroupOption
      */
     public function restPropertiesGroupsOptionsGroupOptionIdPut($group_option_id)
     {
@@ -6931,13 +6931,13 @@ class PropertyApi
      *
      * @param  int $group_option_id The ID of the group option (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesPropertyModelsPropertyGroupOption, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyGroupOption, HTTP status code, HTTP response headers (array of strings)
      */
     public function restPropertiesGroupsOptionsGroupOptionIdPutWithHttpInfo($group_option_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPropertyModelsPropertyGroupOption';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyGroupOption';
         $request = $this->restPropertiesGroupsOptionsGroupOptionIdPutRequest($group_option_id);
 
         try {
@@ -6989,7 +6989,7 @@ class PropertyApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesPropertyModelsPropertyGroupOption',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyGroupOption',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -7031,7 +7031,7 @@ class PropertyApi
      */
     public function restPropertiesGroupsOptionsGroupOptionIdPutAsyncWithHttpInfo($group_option_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPropertyModelsPropertyGroupOption';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyGroupOption';
         $request = $this->restPropertiesGroupsOptionsGroupOptionIdPutRequest($group_option_id);
 
         return $this->client
@@ -7183,9 +7183,9 @@ class PropertyApi
      * @param  string $value The value of the group name (required)
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesPropertyModelsPropertyGroupOption
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyGroupOption
      */
     public function restPropertiesGroupsOptionsPost($property_group_id, $group_option_identifier, $value, $body = null)
     {
@@ -7203,13 +7203,13 @@ class PropertyApi
      * @param  string $value The value of the group name (required)
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesPropertyModelsPropertyGroupOption, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyGroupOption, HTTP status code, HTTP response headers (array of strings)
      */
     public function restPropertiesGroupsOptionsPostWithHttpInfo($property_group_id, $group_option_identifier, $value, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPropertyModelsPropertyGroupOption';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyGroupOption';
         $request = $this->restPropertiesGroupsOptionsPostRequest($property_group_id, $group_option_identifier, $value, $body);
 
         try {
@@ -7261,7 +7261,7 @@ class PropertyApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesPropertyModelsPropertyGroupOption',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyGroupOption',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -7309,7 +7309,7 @@ class PropertyApi
      */
     public function restPropertiesGroupsOptionsPostAsyncWithHttpInfo($property_group_id, $group_option_identifier, $value, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPropertyModelsPropertyGroupOption';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyGroupOption';
         $request = $this->restPropertiesGroupsOptionsPostRequest($property_group_id, $group_option_identifier, $value, $body);
 
         return $this->client
@@ -7483,9 +7483,9 @@ class PropertyApi
      * @param  int $names The names of the group. (optional)
      * @param  int $options The options of the group (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesPropertyModelsPropertyGroup
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyGroup
      */
     public function restPropertiesGroupsPost($position, $body = null, $names = null, $options = null)
     {
@@ -7503,13 +7503,13 @@ class PropertyApi
      * @param  int $names The names of the group. (optional)
      * @param  int $options The options of the group (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesPropertyModelsPropertyGroup, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyGroup, HTTP status code, HTTP response headers (array of strings)
      */
     public function restPropertiesGroupsPostWithHttpInfo($position, $body = null, $names = null, $options = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPropertyModelsPropertyGroup';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyGroup';
         $request = $this->restPropertiesGroupsPostRequest($position, $body, $names, $options);
 
         try {
@@ -7561,7 +7561,7 @@ class PropertyApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesPropertyModelsPropertyGroup',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyGroup',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -7609,7 +7609,7 @@ class PropertyApi
      */
     public function restPropertiesGroupsPostAsyncWithHttpInfo($position, $body = null, $names = null, $options = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPropertyModelsPropertyGroup';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyGroup';
         $request = $this->restPropertiesGroupsPostRequest($position, $body, $names, $options);
 
         return $this->client
@@ -7769,7 +7769,7 @@ class PropertyApi
      * @param  int $group_id The ID of the group (required)
      * @param  int $property_id property_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -7786,7 +7786,7 @@ class PropertyApi
      * @param  int $group_id The ID of the group (required)
      * @param  int $property_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -8011,7 +8011,7 @@ class PropertyApi
      * Get surcharge types from module configuration
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -8026,7 +8026,7 @@ class PropertyApi
      * Get surcharge types from module configuration
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -8221,7 +8221,7 @@ class PropertyApi
      * Get group types from module configuration
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -8236,7 +8236,7 @@ class PropertyApi
      * Get group types from module configuration
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -8431,9 +8431,9 @@ class PropertyApi
      * List property markets
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesPropertyModelsPropertyMarket[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyMarket[]
      */
     public function restPropertiesMarketsGet()
     {
@@ -8447,13 +8447,13 @@ class PropertyApi
      * List property markets
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesPropertyModelsPropertyMarket[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyMarket[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restPropertiesMarketsGetWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPropertyModelsPropertyMarket[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyMarket[]';
         $request = $this->restPropertiesMarketsGetRequest();
 
         try {
@@ -8505,7 +8505,7 @@ class PropertyApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesPropertyModelsPropertyMarket[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyMarket[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -8545,7 +8545,7 @@ class PropertyApi
      */
     public function restPropertiesMarketsGetAsyncWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPropertyModelsPropertyMarket[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyMarket[]';
         $request = $this->restPropertiesMarketsGetRequest();
 
         return $this->client
@@ -8683,9 +8683,9 @@ class PropertyApi
      * @param  string $value The value of the property market (required)
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesPropertyModelsPropertyMarket
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyMarket
      */
     public function restPropertiesMarketsPost($property_id, $referrer_id, $referrer_sub_id, $value, $body = null)
     {
@@ -8704,13 +8704,13 @@ class PropertyApi
      * @param  string $value The value of the property market (required)
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesPropertyModelsPropertyMarket, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyMarket, HTTP status code, HTTP response headers (array of strings)
      */
     public function restPropertiesMarketsPostWithHttpInfo($property_id, $referrer_id, $referrer_sub_id, $value, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPropertyModelsPropertyMarket';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyMarket';
         $request = $this->restPropertiesMarketsPostRequest($property_id, $referrer_id, $referrer_sub_id, $value, $body);
 
         try {
@@ -8762,7 +8762,7 @@ class PropertyApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesPropertyModelsPropertyMarket',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyMarket',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -8812,7 +8812,7 @@ class PropertyApi
      */
     public function restPropertiesMarketsPostAsyncWithHttpInfo($property_id, $referrer_id, $referrer_sub_id, $value, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPropertyModelsPropertyMarket';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyMarket';
         $request = $this->restPropertiesMarketsPostRequest($property_id, $referrer_id, $referrer_sub_id, $value, $body);
 
         return $this->client
@@ -8995,7 +8995,7 @@ class PropertyApi
      * @param  int $property_market_id The ID of the property market (required)
      * @param  int $properties_market_id properties_market_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -9012,7 +9012,7 @@ class PropertyApi
      * @param  int $property_market_id The ID of the property market (required)
      * @param  int $properties_market_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -9239,9 +9239,9 @@ class PropertyApi
      * @param  int $property_market_id The ID of the property market (required)
      * @param  int $properties_market_id properties_market_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesPropertyModelsPropertyMarket
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyMarket
      */
     public function restPropertiesMarketsPropertiesMarketIdGet($property_market_id, $properties_market_id)
     {
@@ -9257,13 +9257,13 @@ class PropertyApi
      * @param  int $property_market_id The ID of the property market (required)
      * @param  int $properties_market_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesPropertyModelsPropertyMarket, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyMarket, HTTP status code, HTTP response headers (array of strings)
      */
     public function restPropertiesMarketsPropertiesMarketIdGetWithHttpInfo($property_market_id, $properties_market_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPropertyModelsPropertyMarket';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyMarket';
         $request = $this->restPropertiesMarketsPropertiesMarketIdGetRequest($property_market_id, $properties_market_id);
 
         try {
@@ -9315,7 +9315,7 @@ class PropertyApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesPropertyModelsPropertyMarket',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyMarket',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -9359,7 +9359,7 @@ class PropertyApi
      */
     public function restPropertiesMarketsPropertiesMarketIdGetAsyncWithHttpInfo($property_market_id, $properties_market_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPropertyModelsPropertyMarket';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyMarket';
         $request = $this->restPropertiesMarketsPropertiesMarketIdGetRequest($property_market_id, $properties_market_id);
 
         return $this->client
@@ -9520,9 +9520,9 @@ class PropertyApi
      * @param  int $properties_market_id properties_market_id (required)
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesPropertyModelsPropertyMarket
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyMarket
      */
     public function restPropertiesMarketsPropertiesMarketIdPut($properties_market_id, $body = null)
     {
@@ -9538,13 +9538,13 @@ class PropertyApi
      * @param  int $properties_market_id (required)
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesPropertyModelsPropertyMarket, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyMarket, HTTP status code, HTTP response headers (array of strings)
      */
     public function restPropertiesMarketsPropertiesMarketIdPutWithHttpInfo($properties_market_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPropertyModelsPropertyMarket';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyMarket';
         $request = $this->restPropertiesMarketsPropertiesMarketIdPutRequest($properties_market_id, $body);
 
         try {
@@ -9596,7 +9596,7 @@ class PropertyApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesPropertyModelsPropertyMarket',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyMarket',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -9640,7 +9640,7 @@ class PropertyApi
      */
     public function restPropertiesMarketsPropertiesMarketIdPutAsyncWithHttpInfo($properties_market_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPropertyModelsPropertyMarket';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyMarket';
         $request = $this->restPropertiesMarketsPropertiesMarketIdPutRequest($properties_market_id, $body);
 
         return $this->client
@@ -9792,9 +9792,9 @@ class PropertyApi
      * List names
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesPropertyModelsPropertyName[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyName[]
      */
     public function restPropertiesNamesGet()
     {
@@ -9808,13 +9808,13 @@ class PropertyApi
      * List names
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesPropertyModelsPropertyName[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyName[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restPropertiesNamesGetWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPropertyModelsPropertyName[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyName[]';
         $request = $this->restPropertiesNamesGetRequest();
 
         try {
@@ -9866,7 +9866,7 @@ class PropertyApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesPropertyModelsPropertyName[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyName[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -9906,7 +9906,7 @@ class PropertyApi
      */
     public function restPropertiesNamesGetAsyncWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPropertyModelsPropertyName[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyName[]';
         $request = $this->restPropertiesNamesGetRequest();
 
         return $this->client
@@ -10040,7 +10040,7 @@ class PropertyApi
      *
      * @param  int $name_id The ID of the property name (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -10056,7 +10056,7 @@ class PropertyApi
      *
      * @param  int $name_id The ID of the property name (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -10269,9 +10269,9 @@ class PropertyApi
      *
      * @param  int $name_id The ID of the property name (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesPropertyModelsPropertyName
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyName
      */
     public function restPropertiesNamesNameIdGet($name_id)
     {
@@ -10286,13 +10286,13 @@ class PropertyApi
      *
      * @param  int $name_id The ID of the property name (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesPropertyModelsPropertyName, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyName, HTTP status code, HTTP response headers (array of strings)
      */
     public function restPropertiesNamesNameIdGetWithHttpInfo($name_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPropertyModelsPropertyName';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyName';
         $request = $this->restPropertiesNamesNameIdGetRequest($name_id);
 
         try {
@@ -10344,7 +10344,7 @@ class PropertyApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesPropertyModelsPropertyName',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyName',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -10386,7 +10386,7 @@ class PropertyApi
      */
     public function restPropertiesNamesNameIdGetAsyncWithHttpInfo($name_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPropertyModelsPropertyName';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyName';
         $request = $this->restPropertiesNamesNameIdGetRequest($name_id);
 
         return $this->client
@@ -10535,9 +10535,9 @@ class PropertyApi
      *
      * @param  int $name_id The ID of the property name (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesPropertyModelsPropertyName
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyName
      */
     public function restPropertiesNamesNameIdPut($name_id)
     {
@@ -10552,13 +10552,13 @@ class PropertyApi
      *
      * @param  int $name_id The ID of the property name (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesPropertyModelsPropertyName, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyName, HTTP status code, HTTP response headers (array of strings)
      */
     public function restPropertiesNamesNameIdPutWithHttpInfo($name_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPropertyModelsPropertyName';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyName';
         $request = $this->restPropertiesNamesNameIdPutRequest($name_id);
 
         try {
@@ -10610,7 +10610,7 @@ class PropertyApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesPropertyModelsPropertyName',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyName',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -10652,7 +10652,7 @@ class PropertyApi
      */
     public function restPropertiesNamesNameIdPutAsyncWithHttpInfo($name_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPropertyModelsPropertyName';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyName';
         $request = $this->restPropertiesNamesNameIdPutRequest($name_id);
 
         return $this->client
@@ -10805,9 +10805,9 @@ class PropertyApi
      * @param  object $body body (optional)
      * @param  string $description The description of the property name (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesPropertyModelsPropertyName
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyName
      */
     public function restPropertiesNamesPost($property_id, $lang, $name, $body = null, $description = null)
     {
@@ -10826,13 +10826,13 @@ class PropertyApi
      * @param  object $body (optional)
      * @param  string $description The description of the property name (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesPropertyModelsPropertyName, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyName, HTTP status code, HTTP response headers (array of strings)
      */
     public function restPropertiesNamesPostWithHttpInfo($property_id, $lang, $name, $body = null, $description = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPropertyModelsPropertyName';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyName';
         $request = $this->restPropertiesNamesPostRequest($property_id, $lang, $name, $body, $description);
 
         try {
@@ -10884,7 +10884,7 @@ class PropertyApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesPropertyModelsPropertyName',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyName',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -10934,7 +10934,7 @@ class PropertyApi
      */
     public function restPropertiesNamesPostAsyncWithHttpInfo($property_id, $lang, $name, $body = null, $description = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPropertyModelsPropertyName';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyName';
         $request = $this->restPropertiesNamesPostRequest($property_id, $lang, $name, $body, $description);
 
         return $this->client
@@ -11109,9 +11109,9 @@ class PropertyApi
      * List property options
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesPropertyModelsPropertyOption[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyOption[]
      */
     public function restPropertiesOptionsGet()
     {
@@ -11125,13 +11125,13 @@ class PropertyApi
      * List property options
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesPropertyModelsPropertyOption[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyOption[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restPropertiesOptionsGetWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPropertyModelsPropertyOption[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyOption[]';
         $request = $this->restPropertiesOptionsGetRequest();
 
         try {
@@ -11183,7 +11183,7 @@ class PropertyApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesPropertyModelsPropertyOption[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyOption[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -11223,7 +11223,7 @@ class PropertyApi
      */
     public function restPropertiesOptionsGetAsyncWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPropertyModelsPropertyOption[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyOption[]';
         $request = $this->restPropertiesOptionsGetRequest();
 
         return $this->client
@@ -11359,9 +11359,9 @@ class PropertyApi
      * @param  string $type_option_identifier The identifier of the property option type (required)
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesPropertyModelsPropertyOption
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyOption
      */
     public function restPropertiesOptionsPost($property_id, $type_option_identifier, $body = null)
     {
@@ -11378,13 +11378,13 @@ class PropertyApi
      * @param  string $type_option_identifier The identifier of the property option type (required)
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesPropertyModelsPropertyOption, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyOption, HTTP status code, HTTP response headers (array of strings)
      */
     public function restPropertiesOptionsPostWithHttpInfo($property_id, $type_option_identifier, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPropertyModelsPropertyOption';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyOption';
         $request = $this->restPropertiesOptionsPostRequest($property_id, $type_option_identifier, $body);
 
         try {
@@ -11436,7 +11436,7 @@ class PropertyApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesPropertyModelsPropertyOption',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyOption',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -11482,7 +11482,7 @@ class PropertyApi
      */
     public function restPropertiesOptionsPostAsyncWithHttpInfo($property_id, $type_option_identifier, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPropertyModelsPropertyOption';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyOption';
         $request = $this->restPropertiesOptionsPostRequest($property_id, $type_option_identifier, $body);
 
         return $this->client
@@ -11642,7 +11642,7 @@ class PropertyApi
      *
      * @param  int $property_option_id The ID of the property option (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -11658,7 +11658,7 @@ class PropertyApi
      *
      * @param  int $property_option_id The ID of the property option (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -11871,9 +11871,9 @@ class PropertyApi
      *
      * @param  int $property_option_id The ID of the property option (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesPropertyModelsPropertyOption
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyOption
      */
     public function restPropertiesOptionsPropertyOptionIdGet($property_option_id)
     {
@@ -11888,13 +11888,13 @@ class PropertyApi
      *
      * @param  int $property_option_id The ID of the property option (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesPropertyModelsPropertyOption, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyOption, HTTP status code, HTTP response headers (array of strings)
      */
     public function restPropertiesOptionsPropertyOptionIdGetWithHttpInfo($property_option_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPropertyModelsPropertyOption';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyOption';
         $request = $this->restPropertiesOptionsPropertyOptionIdGetRequest($property_option_id);
 
         try {
@@ -11946,7 +11946,7 @@ class PropertyApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesPropertyModelsPropertyOption',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyOption',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -11988,7 +11988,7 @@ class PropertyApi
      */
     public function restPropertiesOptionsPropertyOptionIdGetAsyncWithHttpInfo($property_option_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPropertyModelsPropertyOption';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyOption';
         $request = $this->restPropertiesOptionsPropertyOptionIdGetRequest($property_option_id);
 
         return $this->client
@@ -12138,9 +12138,9 @@ class PropertyApi
      * @param  int $property_option_id The ID of the property option (required)
      * @param  int $property_option_id2 property_option_id2 (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesPropertyModelsPropertyOption
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyOption
      */
     public function restPropertiesOptionsPropertyOptionIdPut($property_option_id, $property_option_id2)
     {
@@ -12156,13 +12156,13 @@ class PropertyApi
      * @param  int $property_option_id The ID of the property option (required)
      * @param  int $property_option_id2 (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesPropertyModelsPropertyOption, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyOption, HTTP status code, HTTP response headers (array of strings)
      */
     public function restPropertiesOptionsPropertyOptionIdPutWithHttpInfo($property_option_id, $property_option_id2)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPropertyModelsPropertyOption';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyOption';
         $request = $this->restPropertiesOptionsPropertyOptionIdPutRequest($property_option_id, $property_option_id2);
 
         try {
@@ -12214,7 +12214,7 @@ class PropertyApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesPropertyModelsPropertyOption',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyOption',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -12258,7 +12258,7 @@ class PropertyApi
      */
     public function restPropertiesOptionsPropertyOptionIdPutAsyncWithHttpInfo($property_option_id, $property_option_id2)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPropertyModelsPropertyOption';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyOption';
         $request = $this->restPropertiesOptionsPropertyOptionIdPutRequest($property_option_id, $property_option_id2);
 
         return $this->client
@@ -12421,9 +12421,9 @@ class PropertyApi
      * @param  int $position The position of the property (required)
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesPropertyModelsProperty
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsProperty
      */
     public function restPropertiesPost($cast, $type_identifier, $position, $body = null)
     {
@@ -12441,13 +12441,13 @@ class PropertyApi
      * @param  int $position The position of the property (required)
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesPropertyModelsProperty, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsProperty, HTTP status code, HTTP response headers (array of strings)
      */
     public function restPropertiesPostWithHttpInfo($cast, $type_identifier, $position, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPropertyModelsProperty';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsProperty';
         $request = $this->restPropertiesPostRequest($cast, $type_identifier, $position, $body);
 
         try {
@@ -12499,7 +12499,7 @@ class PropertyApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesPropertyModelsProperty',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsProperty',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -12547,7 +12547,7 @@ class PropertyApi
      */
     public function restPropertiesPostAsyncWithHttpInfo($cast, $type_identifier, $position, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPropertyModelsProperty';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsProperty';
         $request = $this->restPropertiesPostRequest($cast, $type_identifier, $position, $body);
 
         return $this->client
@@ -12718,7 +12718,7 @@ class PropertyApi
      *
      * @param  int $property_id The ID of the property (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -12734,7 +12734,7 @@ class PropertyApi
      *
      * @param  int $property_id The ID of the property (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -12947,9 +12947,9 @@ class PropertyApi
      *
      * @param  int $property_id The ID of the property (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesPropertyModelsProperty
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsProperty
      */
     public function restPropertiesPropertyIdGet($property_id)
     {
@@ -12964,13 +12964,13 @@ class PropertyApi
      *
      * @param  int $property_id The ID of the property (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesPropertyModelsProperty, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsProperty, HTTP status code, HTTP response headers (array of strings)
      */
     public function restPropertiesPropertyIdGetWithHttpInfo($property_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPropertyModelsProperty';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsProperty';
         $request = $this->restPropertiesPropertyIdGetRequest($property_id);
 
         try {
@@ -13022,7 +13022,7 @@ class PropertyApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesPropertyModelsProperty',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsProperty',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -13064,7 +13064,7 @@ class PropertyApi
      */
     public function restPropertiesPropertyIdGetAsyncWithHttpInfo($property_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPropertyModelsProperty';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsProperty';
         $request = $this->restPropertiesPropertyIdGetRequest($property_id);
 
         return $this->client
@@ -13213,9 +13213,9 @@ class PropertyApi
      *
      * @param  int $property_id The ID of the property (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesPropertyModelsProperty
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsProperty
      */
     public function restPropertiesPropertyIdPut($property_id)
     {
@@ -13230,13 +13230,13 @@ class PropertyApi
      *
      * @param  int $property_id The ID of the property (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesPropertyModelsProperty, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsProperty, HTTP status code, HTTP response headers (array of strings)
      */
     public function restPropertiesPropertyIdPutWithHttpInfo($property_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPropertyModelsProperty';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsProperty';
         $request = $this->restPropertiesPropertyIdPutRequest($property_id);
 
         try {
@@ -13288,7 +13288,7 @@ class PropertyApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesPropertyModelsProperty',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsProperty',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -13330,7 +13330,7 @@ class PropertyApi
      */
     public function restPropertiesPropertyIdPutAsyncWithHttpInfo($property_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPropertyModelsProperty';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsProperty';
         $request = $this->restPropertiesPropertyIdPutRequest($property_id);
 
         return $this->client
@@ -13479,7 +13479,7 @@ class PropertyApi
      *
      * @param  int $relation_id The ID of the property relation (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -13495,7 +13495,7 @@ class PropertyApi
      *
      * @param  int $relation_id The ID of the property relation (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -13708,9 +13708,9 @@ class PropertyApi
      * @param  string $relation_type_identifier The parameter that decides the type of relation (optional)
      * @param  int $relation_target_id The ID of the target of the relation (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesPropertyModelsPropertyRelation[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyRelation[]
      */
     public function restPropertiesRelationsGet($page = null, $items_per_page = null, $paginate = null, $relation_type_identifier = null, $relation_target_id = null)
     {
@@ -13729,13 +13729,13 @@ class PropertyApi
      * @param  string $relation_type_identifier The parameter that decides the type of relation (optional)
      * @param  int $relation_target_id The ID of the target of the relation (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesPropertyModelsPropertyRelation[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyRelation[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restPropertiesRelationsGetWithHttpInfo($page = null, $items_per_page = null, $paginate = null, $relation_type_identifier = null, $relation_target_id = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPropertyModelsPropertyRelation[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyRelation[]';
         $request = $this->restPropertiesRelationsGetRequest($page, $items_per_page, $paginate, $relation_type_identifier, $relation_target_id);
 
         try {
@@ -13787,7 +13787,7 @@ class PropertyApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesPropertyModelsPropertyRelation[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyRelation[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -13837,7 +13837,7 @@ class PropertyApi
      */
     public function restPropertiesRelationsGetAsyncWithHttpInfo($page = null, $items_per_page = null, $paginate = null, $relation_type_identifier = null, $relation_target_id = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPropertyModelsPropertyRelation[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyRelation[]';
         $request = $this->restPropertiesRelationsGetRequest($page, $items_per_page, $paginate, $relation_type_identifier, $relation_target_id);
 
         return $this->client
@@ -13995,9 +13995,9 @@ class PropertyApi
      * List relation markups
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesPropertyModelsPropertyRelationMarkup[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyRelationMarkup[]
      */
     public function restPropertiesRelationsMarkupsGet()
     {
@@ -14011,13 +14011,13 @@ class PropertyApi
      * List relation markups
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesPropertyModelsPropertyRelationMarkup[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyRelationMarkup[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restPropertiesRelationsMarkupsGetWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPropertyModelsPropertyRelationMarkup[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyRelationMarkup[]';
         $request = $this->restPropertiesRelationsMarkupsGetRequest();
 
         try {
@@ -14069,7 +14069,7 @@ class PropertyApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesPropertyModelsPropertyRelationMarkup[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyRelationMarkup[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -14109,7 +14109,7 @@ class PropertyApi
      */
     public function restPropertiesRelationsMarkupsGetAsyncWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPropertyModelsPropertyRelationMarkup[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyRelationMarkup[]';
         $request = $this->restPropertiesRelationsMarkupsGetRequest();
 
         return $this->client
@@ -14246,9 +14246,9 @@ class PropertyApi
      * @param  BigDecimal $markup The property relation markup (required)
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesPropertyModelsPropertyRelationMarkup
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyRelationMarkup
      */
     public function restPropertiesRelationsMarkupsPost($property_relation_id, $variation_sales_price_id, $markup, $body = null)
     {
@@ -14266,13 +14266,13 @@ class PropertyApi
      * @param  BigDecimal $markup The property relation markup (required)
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesPropertyModelsPropertyRelationMarkup, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyRelationMarkup, HTTP status code, HTTP response headers (array of strings)
      */
     public function restPropertiesRelationsMarkupsPostWithHttpInfo($property_relation_id, $variation_sales_price_id, $markup, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPropertyModelsPropertyRelationMarkup';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyRelationMarkup';
         $request = $this->restPropertiesRelationsMarkupsPostRequest($property_relation_id, $variation_sales_price_id, $markup, $body);
 
         try {
@@ -14324,7 +14324,7 @@ class PropertyApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesPropertyModelsPropertyRelationMarkup',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyRelationMarkup',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -14372,7 +14372,7 @@ class PropertyApi
      */
     public function restPropertiesRelationsMarkupsPostAsyncWithHttpInfo($property_relation_id, $variation_sales_price_id, $markup, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPropertyModelsPropertyRelationMarkup';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyRelationMarkup';
         $request = $this->restPropertiesRelationsMarkupsPostRequest($property_relation_id, $variation_sales_price_id, $markup, $body);
 
         return $this->client
@@ -14543,7 +14543,7 @@ class PropertyApi
      *
      * @param  int $relation_markup_id The ID of the relation markup (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -14559,7 +14559,7 @@ class PropertyApi
      *
      * @param  int $relation_markup_id The ID of the relation markup (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -14772,9 +14772,9 @@ class PropertyApi
      *
      * @param  int $relation_markup_id The ID of the relation markup (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesPropertyModelsPropertyRelationMarkup
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyRelationMarkup
      */
     public function restPropertiesRelationsMarkupsRelationMarkupIdGet($relation_markup_id)
     {
@@ -14789,13 +14789,13 @@ class PropertyApi
      *
      * @param  int $relation_markup_id The ID of the relation markup (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesPropertyModelsPropertyRelationMarkup, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyRelationMarkup, HTTP status code, HTTP response headers (array of strings)
      */
     public function restPropertiesRelationsMarkupsRelationMarkupIdGetWithHttpInfo($relation_markup_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPropertyModelsPropertyRelationMarkup';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyRelationMarkup';
         $request = $this->restPropertiesRelationsMarkupsRelationMarkupIdGetRequest($relation_markup_id);
 
         try {
@@ -14847,7 +14847,7 @@ class PropertyApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesPropertyModelsPropertyRelationMarkup',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyRelationMarkup',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -14889,7 +14889,7 @@ class PropertyApi
      */
     public function restPropertiesRelationsMarkupsRelationMarkupIdGetAsyncWithHttpInfo($relation_markup_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPropertyModelsPropertyRelationMarkup';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyRelationMarkup';
         $request = $this->restPropertiesRelationsMarkupsRelationMarkupIdGetRequest($relation_markup_id);
 
         return $this->client
@@ -15038,9 +15038,9 @@ class PropertyApi
      *
      * @param  int $relation_markup_id The ID of the property relation markup (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesPropertyModelsPropertyRelationMarkup
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyRelationMarkup
      */
     public function restPropertiesRelationsMarkupsRelationMarkupIdPut($relation_markup_id)
     {
@@ -15055,13 +15055,13 @@ class PropertyApi
      *
      * @param  int $relation_markup_id The ID of the property relation markup (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesPropertyModelsPropertyRelationMarkup, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyRelationMarkup, HTTP status code, HTTP response headers (array of strings)
      */
     public function restPropertiesRelationsMarkupsRelationMarkupIdPutWithHttpInfo($relation_markup_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPropertyModelsPropertyRelationMarkup';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyRelationMarkup';
         $request = $this->restPropertiesRelationsMarkupsRelationMarkupIdPutRequest($relation_markup_id);
 
         try {
@@ -15113,7 +15113,7 @@ class PropertyApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesPropertyModelsPropertyRelationMarkup',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyRelationMarkup',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -15155,7 +15155,7 @@ class PropertyApi
      */
     public function restPropertiesRelationsMarkupsRelationMarkupIdPutAsyncWithHttpInfo($relation_markup_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPropertyModelsPropertyRelationMarkup';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyRelationMarkup';
         $request = $this->restPropertiesRelationsMarkupsRelationMarkupIdPutRequest($relation_markup_id);
 
         return $this->client
@@ -15308,9 +15308,9 @@ class PropertyApi
      * @param  int $selection_relation_id The ID of the property selection relation (required)
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesPropertyModelsPropertyRelation
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyRelation
      */
     public function restPropertiesRelationsPost($property_id, $relation_type_identifier, $relation_target_id, $selection_relation_id, $body = null)
     {
@@ -15329,13 +15329,13 @@ class PropertyApi
      * @param  int $selection_relation_id The ID of the property selection relation (required)
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesPropertyModelsPropertyRelation, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyRelation, HTTP status code, HTTP response headers (array of strings)
      */
     public function restPropertiesRelationsPostWithHttpInfo($property_id, $relation_type_identifier, $relation_target_id, $selection_relation_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPropertyModelsPropertyRelation';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyRelation';
         $request = $this->restPropertiesRelationsPostRequest($property_id, $relation_type_identifier, $relation_target_id, $selection_relation_id, $body);
 
         try {
@@ -15387,7 +15387,7 @@ class PropertyApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesPropertyModelsPropertyRelation',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyRelation',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -15437,7 +15437,7 @@ class PropertyApi
      */
     public function restPropertiesRelationsPostAsyncWithHttpInfo($property_id, $relation_type_identifier, $relation_target_id, $selection_relation_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPropertyModelsPropertyRelation';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyRelation';
         $request = $this->restPropertiesRelationsPostRequest($property_id, $relation_type_identifier, $relation_target_id, $selection_relation_id, $body);
 
         return $this->client
@@ -15619,9 +15619,9 @@ class PropertyApi
      *
      * @param  int $relation_id The ID of the property relation (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesPropertyModelsPropertyRelation[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyRelation[]
      */
     public function restPropertiesRelationsPut($relation_id)
     {
@@ -15636,13 +15636,13 @@ class PropertyApi
      *
      * @param  int $relation_id The ID of the property relation (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesPropertyModelsPropertyRelation[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyRelation[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restPropertiesRelationsPutWithHttpInfo($relation_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPropertyModelsPropertyRelation[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyRelation[]';
         $request = $this->restPropertiesRelationsPutRequest($relation_id);
 
         try {
@@ -15694,7 +15694,7 @@ class PropertyApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesPropertyModelsPropertyRelation[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyRelation[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -15736,7 +15736,7 @@ class PropertyApi
      */
     public function restPropertiesRelationsPutAsyncWithHttpInfo($relation_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPropertyModelsPropertyRelation[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyRelation[]';
         $request = $this->restPropertiesRelationsPutRequest($relation_id);
 
         return $this->client
@@ -15881,7 +15881,7 @@ class PropertyApi
      *
      * @param  int $relation_id The ID of the property relation (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -15897,7 +15897,7 @@ class PropertyApi
      *
      * @param  int $relation_id The ID of the property relation (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -16113,9 +16113,9 @@ class PropertyApi
      * @param  string $content The actual file content in text format (required)
      * @param  bool $delete_if_exists Condition for the check of already existing file (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\Mixed
+     * @return \BSApp\Service\plentymarketsAPI\Model\Mixed
      */
     public function restPropertiesRelationsRelationIdFilePost($relation_id, $key, $content, $delete_if_exists)
     {
@@ -16133,13 +16133,13 @@ class PropertyApi
      * @param  string $content The actual file content in text format (required)
      * @param  bool $delete_if_exists Condition for the check of already existing file (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\Mixed, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\Mixed, HTTP status code, HTTP response headers (array of strings)
      */
     public function restPropertiesRelationsRelationIdFilePostWithHttpInfo($relation_id, $key, $content, $delete_if_exists)
     {
-        $returnType = '\Swagger\Client\Model\Mixed';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\Mixed';
         $request = $this->restPropertiesRelationsRelationIdFilePostRequest($relation_id, $key, $content, $delete_if_exists);
 
         try {
@@ -16191,7 +16191,7 @@ class PropertyApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\Mixed',
+                        '\BSApp\Service\plentymarketsAPI\Model\Mixed',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -16239,7 +16239,7 @@ class PropertyApi
      */
     public function restPropertiesRelationsRelationIdFilePostAsyncWithHttpInfo($relation_id, $key, $content, $delete_if_exists)
     {
-        $returnType = '\Swagger\Client\Model\Mixed';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\Mixed';
         $request = $this->restPropertiesRelationsRelationIdFilePostRequest($relation_id, $key, $content, $delete_if_exists);
 
         return $this->client
@@ -16421,9 +16421,9 @@ class PropertyApi
      *
      * @param  int $relation_id The ID of the relation (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesPropertyModelsPropertyRelation
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyRelation
      */
     public function restPropertiesRelationsRelationIdGet($relation_id)
     {
@@ -16438,13 +16438,13 @@ class PropertyApi
      *
      * @param  int $relation_id The ID of the relation (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesPropertyModelsPropertyRelation, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyRelation, HTTP status code, HTTP response headers (array of strings)
      */
     public function restPropertiesRelationsRelationIdGetWithHttpInfo($relation_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPropertyModelsPropertyRelation';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyRelation';
         $request = $this->restPropertiesRelationsRelationIdGetRequest($relation_id);
 
         try {
@@ -16496,7 +16496,7 @@ class PropertyApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesPropertyModelsPropertyRelation',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyRelation',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -16538,7 +16538,7 @@ class PropertyApi
      */
     public function restPropertiesRelationsRelationIdGetAsyncWithHttpInfo($relation_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPropertyModelsPropertyRelation';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyRelation';
         $request = $this->restPropertiesRelationsRelationIdGetRequest($relation_id);
 
         return $this->client
@@ -16687,9 +16687,9 @@ class PropertyApi
      *
      * @param  int $relation_id The ID of the property relation (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesPropertyModelsPropertyRelation
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyRelation
      */
     public function restPropertiesRelationsRelationIdPut($relation_id)
     {
@@ -16704,13 +16704,13 @@ class PropertyApi
      *
      * @param  int $relation_id The ID of the property relation (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesPropertyModelsPropertyRelation, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyRelation, HTTP status code, HTTP response headers (array of strings)
      */
     public function restPropertiesRelationsRelationIdPutWithHttpInfo($relation_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPropertyModelsPropertyRelation';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyRelation';
         $request = $this->restPropertiesRelationsRelationIdPutRequest($relation_id);
 
         try {
@@ -16762,7 +16762,7 @@ class PropertyApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesPropertyModelsPropertyRelation',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyRelation',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -16804,7 +16804,7 @@ class PropertyApi
      */
     public function restPropertiesRelationsRelationIdPutAsyncWithHttpInfo($relation_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPropertyModelsPropertyRelation';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyRelation';
         $request = $this->restPropertiesRelationsRelationIdPutRequest($relation_id);
 
         return $this->client
@@ -16952,9 +16952,9 @@ class PropertyApi
      * List property relation values
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesPropertyModelsPropertyRelationValue[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyRelationValue[]
      */
     public function restPropertiesRelationsValuesGet()
     {
@@ -16968,13 +16968,13 @@ class PropertyApi
      * List property relation values
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesPropertyModelsPropertyRelationValue[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyRelationValue[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restPropertiesRelationsValuesGetWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPropertyModelsPropertyRelationValue[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyRelationValue[]';
         $request = $this->restPropertiesRelationsValuesGetRequest();
 
         try {
@@ -17026,7 +17026,7 @@ class PropertyApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesPropertyModelsPropertyRelationValue[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyRelationValue[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -17066,7 +17066,7 @@ class PropertyApi
      */
     public function restPropertiesRelationsValuesGetAsyncWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPropertyModelsPropertyRelationValue[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyRelationValue[]';
         $request = $this->restPropertiesRelationsValuesGetRequest();
 
         return $this->client
@@ -17203,9 +17203,9 @@ class PropertyApi
      * @param  string $value The value of the property relation (required)
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesPropertyModelsPropertyRelationValue
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyRelationValue
      */
     public function restPropertiesRelationsValuesPost($property_id, $lang, $value, $body = null)
     {
@@ -17223,13 +17223,13 @@ class PropertyApi
      * @param  string $value The value of the property relation (required)
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesPropertyModelsPropertyRelationValue, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyRelationValue, HTTP status code, HTTP response headers (array of strings)
      */
     public function restPropertiesRelationsValuesPostWithHttpInfo($property_id, $lang, $value, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPropertyModelsPropertyRelationValue';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyRelationValue';
         $request = $this->restPropertiesRelationsValuesPostRequest($property_id, $lang, $value, $body);
 
         try {
@@ -17281,7 +17281,7 @@ class PropertyApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesPropertyModelsPropertyRelationValue',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyRelationValue',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -17329,7 +17329,7 @@ class PropertyApi
      */
     public function restPropertiesRelationsValuesPostAsyncWithHttpInfo($property_id, $lang, $value, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPropertyModelsPropertyRelationValue';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyRelationValue';
         $request = $this->restPropertiesRelationsValuesPostRequest($property_id, $lang, $value, $body);
 
         return $this->client
@@ -17501,7 +17501,7 @@ class PropertyApi
      * @param  int $property_relation_value_id The ID of the property relation value (required)
      * @param  int $properties_relation_value_id properties_relation_value_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -17518,7 +17518,7 @@ class PropertyApi
      * @param  int $property_relation_value_id The ID of the property relation value (required)
      * @param  int $properties_relation_value_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -17745,9 +17745,9 @@ class PropertyApi
      * @param  int $property_relation_value_id The ID of the property relation value (required)
      * @param  int $properties_relation_value_id properties_relation_value_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesPropertyModelsPropertyRelationValue
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyRelationValue
      */
     public function restPropertiesRelationsValuesPropertiesRelationValueIdPut($property_relation_value_id, $properties_relation_value_id)
     {
@@ -17763,13 +17763,13 @@ class PropertyApi
      * @param  int $property_relation_value_id The ID of the property relation value (required)
      * @param  int $properties_relation_value_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesPropertyModelsPropertyRelationValue, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyRelationValue, HTTP status code, HTTP response headers (array of strings)
      */
     public function restPropertiesRelationsValuesPropertiesRelationValueIdPutWithHttpInfo($property_relation_value_id, $properties_relation_value_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPropertyModelsPropertyRelationValue';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyRelationValue';
         $request = $this->restPropertiesRelationsValuesPropertiesRelationValueIdPutRequest($property_relation_value_id, $properties_relation_value_id);
 
         try {
@@ -17821,7 +17821,7 @@ class PropertyApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesPropertyModelsPropertyRelationValue',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyRelationValue',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -17865,7 +17865,7 @@ class PropertyApi
      */
     public function restPropertiesRelationsValuesPropertiesRelationValueIdPutAsyncWithHttpInfo($property_relation_value_id, $properties_relation_value_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPropertyModelsPropertyRelationValue';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyRelationValue';
         $request = $this->restPropertiesRelationsValuesPropertiesRelationValueIdPutRequest($property_relation_value_id, $properties_relation_value_id);
 
         return $this->client
@@ -18024,9 +18024,9 @@ class PropertyApi
      * Update multiple property relation value
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesPropertyModelsPropertyRelationValue
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyRelationValue
      */
     public function restPropertiesRelationsValuesPut()
     {
@@ -18040,13 +18040,13 @@ class PropertyApi
      * Update multiple property relation value
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesPropertyModelsPropertyRelationValue, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyRelationValue, HTTP status code, HTTP response headers (array of strings)
      */
     public function restPropertiesRelationsValuesPutWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPropertyModelsPropertyRelationValue';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyRelationValue';
         $request = $this->restPropertiesRelationsValuesPutRequest();
 
         try {
@@ -18098,7 +18098,7 @@ class PropertyApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesPropertyModelsPropertyRelationValue',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyRelationValue',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -18138,7 +18138,7 @@ class PropertyApi
      */
     public function restPropertiesRelationsValuesPutAsyncWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPropertyModelsPropertyRelationValue';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyRelationValue';
         $request = $this->restPropertiesRelationsValuesPutRequest();
 
         return $this->client
@@ -18273,9 +18273,9 @@ class PropertyApi
      * @param  int $property_relation_id The ID of the property relation (required)
      * @param  int $relation_markup_id relation_markup_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesPropertyModelsPropertyRelationValue
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyRelationValue
      */
     public function restPropertiesRelationsValuesRelationMarkupIdGet($property_relation_id, $relation_markup_id)
     {
@@ -18291,13 +18291,13 @@ class PropertyApi
      * @param  int $property_relation_id The ID of the property relation (required)
      * @param  int $relation_markup_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesPropertyModelsPropertyRelationValue, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyRelationValue, HTTP status code, HTTP response headers (array of strings)
      */
     public function restPropertiesRelationsValuesRelationMarkupIdGetWithHttpInfo($property_relation_id, $relation_markup_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPropertyModelsPropertyRelationValue';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyRelationValue';
         $request = $this->restPropertiesRelationsValuesRelationMarkupIdGetRequest($property_relation_id, $relation_markup_id);
 
         try {
@@ -18349,7 +18349,7 @@ class PropertyApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesPropertyModelsPropertyRelationValue',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyRelationValue',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -18393,7 +18393,7 @@ class PropertyApi
      */
     public function restPropertiesRelationsValuesRelationMarkupIdGetAsyncWithHttpInfo($property_relation_id, $relation_markup_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPropertyModelsPropertyRelationValue';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyRelationValue';
         $request = $this->restPropertiesRelationsValuesRelationMarkupIdGetRequest($property_relation_id, $relation_markup_id);
 
         return $this->client
@@ -18552,9 +18552,9 @@ class PropertyApi
      * List property selections
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesPropertyModelsPropertySelection[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertySelection[]
      */
     public function restPropertiesSelectionsGet()
     {
@@ -18568,13 +18568,13 @@ class PropertyApi
      * List property selections
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesPropertyModelsPropertySelection[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertySelection[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restPropertiesSelectionsGetWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPropertyModelsPropertySelection[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertySelection[]';
         $request = $this->restPropertiesSelectionsGetRequest();
 
         try {
@@ -18626,7 +18626,7 @@ class PropertyApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesPropertyModelsPropertySelection[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertySelection[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -18666,7 +18666,7 @@ class PropertyApi
      */
     public function restPropertiesSelectionsGetAsyncWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPropertyModelsPropertySelection[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertySelection[]';
         $request = $this->restPropertiesSelectionsGetRequest();
 
         return $this->client
@@ -18802,9 +18802,9 @@ class PropertyApi
      * @param  int $position The position of the property selection (required)
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesPropertyModelsPropertySelection
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertySelection
      */
     public function restPropertiesSelectionsPost($property_id, $position, $body = null)
     {
@@ -18821,13 +18821,13 @@ class PropertyApi
      * @param  int $position The position of the property selection (required)
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesPropertyModelsPropertySelection, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertySelection, HTTP status code, HTTP response headers (array of strings)
      */
     public function restPropertiesSelectionsPostWithHttpInfo($property_id, $position, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPropertyModelsPropertySelection';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertySelection';
         $request = $this->restPropertiesSelectionsPostRequest($property_id, $position, $body);
 
         try {
@@ -18879,7 +18879,7 @@ class PropertyApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesPropertyModelsPropertySelection',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertySelection',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -18925,7 +18925,7 @@ class PropertyApi
      */
     public function restPropertiesSelectionsPostAsyncWithHttpInfo($property_id, $position, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPropertyModelsPropertySelection';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertySelection';
         $request = $this->restPropertiesSelectionsPostRequest($property_id, $position, $body);
 
         return $this->client
@@ -19085,7 +19085,7 @@ class PropertyApi
      *
      * @param  int $property_selection_id The ID of the property selection (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -19101,7 +19101,7 @@ class PropertyApi
      *
      * @param  int $property_selection_id The ID of the property selection (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -19314,9 +19314,9 @@ class PropertyApi
      *
      * @param  int $property_selection_id The ID of the property selection (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesPropertyModelsPropertySelection
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertySelection
      */
     public function restPropertiesSelectionsPropertySelectionIdGet($property_selection_id)
     {
@@ -19331,13 +19331,13 @@ class PropertyApi
      *
      * @param  int $property_selection_id The ID of the property selection (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesPropertyModelsPropertySelection, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertySelection, HTTP status code, HTTP response headers (array of strings)
      */
     public function restPropertiesSelectionsPropertySelectionIdGetWithHttpInfo($property_selection_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPropertyModelsPropertySelection';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertySelection';
         $request = $this->restPropertiesSelectionsPropertySelectionIdGetRequest($property_selection_id);
 
         try {
@@ -19389,7 +19389,7 @@ class PropertyApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesPropertyModelsPropertySelection',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertySelection',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -19431,7 +19431,7 @@ class PropertyApi
      */
     public function restPropertiesSelectionsPropertySelectionIdGetAsyncWithHttpInfo($property_selection_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPropertyModelsPropertySelection';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertySelection';
         $request = $this->restPropertiesSelectionsPropertySelectionIdGetRequest($property_selection_id);
 
         return $this->client
@@ -19581,9 +19581,9 @@ class PropertyApi
      * @param  int $property_selection_id The ID of the property selection (required)
      * @param  int $property_selection_id2 property_selection_id2 (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesPropertyModelsPropertySelection
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertySelection
      */
     public function restPropertiesSelectionsPropertySelectionIdPut($property_selection_id, $property_selection_id2)
     {
@@ -19599,13 +19599,13 @@ class PropertyApi
      * @param  int $property_selection_id The ID of the property selection (required)
      * @param  int $property_selection_id2 (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesPropertyModelsPropertySelection, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertySelection, HTTP status code, HTTP response headers (array of strings)
      */
     public function restPropertiesSelectionsPropertySelectionIdPutWithHttpInfo($property_selection_id, $property_selection_id2)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPropertyModelsPropertySelection';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertySelection';
         $request = $this->restPropertiesSelectionsPropertySelectionIdPutRequest($property_selection_id, $property_selection_id2);
 
         try {
@@ -19657,7 +19657,7 @@ class PropertyApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesPropertyModelsPropertySelection',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertySelection',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -19701,7 +19701,7 @@ class PropertyApi
      */
     public function restPropertiesSelectionsPropertySelectionIdPutAsyncWithHttpInfo($property_selection_id, $property_selection_id2)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPropertyModelsPropertySelection';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertySelection';
         $request = $this->restPropertiesSelectionsPropertySelectionIdPutRequest($property_selection_id, $property_selection_id2);
 
         return $this->client
@@ -19860,7 +19860,7 @@ class PropertyApi
      * Get system language
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return string
      */
@@ -19876,7 +19876,7 @@ class PropertyApi
      * Get system language
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of string, HTTP status code, HTTP response headers (array of strings)
      */

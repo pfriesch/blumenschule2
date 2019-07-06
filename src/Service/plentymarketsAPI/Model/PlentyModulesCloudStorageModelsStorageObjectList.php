@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  BSApp\Service\plentymarketsAPI
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace BSApp\Service\plentymarketsAPI\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \BSApp\Service\plentymarketsAPI\ObjectSerializer;
 
 /**
  * PlentyModulesCloudStorageModelsStorageObjectList Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  BSApp\Service\plentymarketsAPI
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -58,7 +58,7 @@ class PlentyModulesCloudStorageModelsStorageObjectList implements ModelInterface
     protected static $swaggerTypes = [
         'is_truncated' => 'bool',
 'next_continuation_token' => 'string',
-'objects' => '\Swagger\Client\Model\PlentyModulesCloudStorageModelsStorageObject[]',
+'objects' => '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesCloudStorageModelsStorageObject[]',
 'common_prefixes' => 'string[]'    ];
 
     /**
@@ -265,7 +265,7 @@ class PlentyModulesCloudStorageModelsStorageObjectList implements ModelInterface
     /**
      * Gets objects
      *
-     * @return \Swagger\Client\Model\PlentyModulesCloudStorageModelsStorageObject[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesCloudStorageModelsStorageObject[]
      */
     public function getObjects()
     {
@@ -275,7 +275,7 @@ class PlentyModulesCloudStorageModelsStorageObjectList implements ModelInterface
     /**
      * Sets objects
      *
-     * @param \Swagger\Client\Model\PlentyModulesCloudStorageModelsStorageObject[] $objects (List)
+     * @param \BSApp\Service\plentymarketsAPI\Model\PlentyModulesCloudStorageModelsStorageObject[] $objects (List)
      *
      * @return $this
      */

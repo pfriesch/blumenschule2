@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  BSApp\Service\plentymarketsAPI
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace BSApp\Service\plentymarketsAPI\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -33,16 +33,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use BSApp\Service\plentymarketsAPI\ApiException;
+use BSApp\Service\plentymarketsAPI\Configuration;
+use BSApp\Service\plentymarketsAPI\HeaderSelector;
+use BSApp\Service\plentymarketsAPI\ObjectSerializer;
 
 /**
  * OrderApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  BSApp\Service\plentymarketsAPI
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -96,7 +96,7 @@ class OrderApi
      * @param  int $items_per_page The number of orders to be displayed per page. The default number of orders per page is 50. (required)
      * @param  int $with Load additional relations for an order. Currently possible are:     &lt;ul&gt;     &lt;li&gt;&#x27;addresses&#x27; &#x3D; The address objects that are associated with the order.&lt;/li&gt;     &lt;li&gt;&#x27;relations&#x27; &#x3D; The order relation reference instances that are associated with the order. These instances contain information such as the the reference type, the ID of the reference and the relation itself.&lt;/li&gt;     &lt;li&gt;&#x27;comments&#x27; &#x3D; The order comments.&lt;/li&gt;     &lt;li&gt;&#x27;location&#x27; &#x3D; The accounting location of the order.&lt;/li&gt;     &lt;li&gt;&#x27;payments&#x27; &#x3D; The payments that are associated with the order.&lt;/li&gt;     &lt;li&gt;&#x27;documents&#x27; &#x3D; The documents that are associated with the order.&lt;/li&gt;     &lt;li&gt;&#x27;contactSender&#x27; &#x3D; The associated contact for the contact-sender relation.&lt;/li&gt;     &lt;li&gt;&#x27;contactReceiver&#x27; &#x3D; The associated contact for the contact-receiver relation.&lt;/li&gt;     &lt;li&gt;&#x27;warehouseSender&#x27; &#x3D; The associated warehouse for the warehouse-sender relation.&lt;/li&gt;     &lt;li&gt;&#x27;warehouseReceiver&#x27; &#x3D; The associated warehouse for the warehouse-receiver relation.&lt;/li&gt;     &lt;li&gt;&#x27;orderItems.variation&#x27; &#x3D; The variation that is associated with the order item.&lt;/li&gt;     &lt;li&gt;&#x27;orderItems.giftCardCodes&#x27; &#x3D; The gift card codes that are associated with the order item.&lt;/li&gt;     &lt;li&gt;&#x27;orderItems.transactions&#x27; &#x3D; The transactions that are associated with the order item.&lt;/li&gt;     &lt;li&gt;&#x27;orderItems.serialNumbers&#x27; &#x3D; The serial numbers that are associated with the order item.&lt;/li&gt;     &lt;li&gt;&#x27;orderItems.variationBarcodes&#x27; &#x3D; The barcodes that are associated with variation of the order item.&lt;/li&gt;     &lt;li&gt;&#x27;orderItems.comments&#x27; &#x3D; The comments that are associated with the order item.&lt;/li&gt;     &lt;li&gt;&lt;b&gt;deprecated&lt;/b&gt; &#x27;orderItems.warehouseLocations&#x27; &#x3D; The warehouse locations that are associated with the order item.&lt;/li&gt;     &lt;/ul&gt;     Example: &lt;code&gt;?with[]&#x3D;addresses&amp;with[]&#x3D;orderItems.variation&lt;/code&gt; (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -116,7 +116,7 @@ class OrderApi
      * @param  int $items_per_page The number of orders to be displayed per page. The default number of orders per page is 50. (required)
      * @param  int $with Load additional relations for an order. Currently possible are:     &lt;ul&gt;     &lt;li&gt;&#x27;addresses&#x27; &#x3D; The address objects that are associated with the order.&lt;/li&gt;     &lt;li&gt;&#x27;relations&#x27; &#x3D; The order relation reference instances that are associated with the order. These instances contain information such as the the reference type, the ID of the reference and the relation itself.&lt;/li&gt;     &lt;li&gt;&#x27;comments&#x27; &#x3D; The order comments.&lt;/li&gt;     &lt;li&gt;&#x27;location&#x27; &#x3D; The accounting location of the order.&lt;/li&gt;     &lt;li&gt;&#x27;payments&#x27; &#x3D; The payments that are associated with the order.&lt;/li&gt;     &lt;li&gt;&#x27;documents&#x27; &#x3D; The documents that are associated with the order.&lt;/li&gt;     &lt;li&gt;&#x27;contactSender&#x27; &#x3D; The associated contact for the contact-sender relation.&lt;/li&gt;     &lt;li&gt;&#x27;contactReceiver&#x27; &#x3D; The associated contact for the contact-receiver relation.&lt;/li&gt;     &lt;li&gt;&#x27;warehouseSender&#x27; &#x3D; The associated warehouse for the warehouse-sender relation.&lt;/li&gt;     &lt;li&gt;&#x27;warehouseReceiver&#x27; &#x3D; The associated warehouse for the warehouse-receiver relation.&lt;/li&gt;     &lt;li&gt;&#x27;orderItems.variation&#x27; &#x3D; The variation that is associated with the order item.&lt;/li&gt;     &lt;li&gt;&#x27;orderItems.giftCardCodes&#x27; &#x3D; The gift card codes that are associated with the order item.&lt;/li&gt;     &lt;li&gt;&#x27;orderItems.transactions&#x27; &#x3D; The transactions that are associated with the order item.&lt;/li&gt;     &lt;li&gt;&#x27;orderItems.serialNumbers&#x27; &#x3D; The serial numbers that are associated with the order item.&lt;/li&gt;     &lt;li&gt;&#x27;orderItems.variationBarcodes&#x27; &#x3D; The barcodes that are associated with variation of the order item.&lt;/li&gt;     &lt;li&gt;&#x27;orderItems.comments&#x27; &#x3D; The comments that are associated with the order item.&lt;/li&gt;     &lt;li&gt;&lt;b&gt;deprecated&lt;/b&gt; &#x27;orderItems.warehouseLocations&#x27; &#x3D; The warehouse locations that are associated with the order item.&lt;/li&gt;     &lt;/ul&gt;     Example: &lt;code&gt;?with[]&#x3D;addresses&amp;with[]&#x3D;orderItems.variation&lt;/code&gt; (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -398,9 +398,9 @@ class OrderApi
      *
      * @param  int $contact_id contact_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesOrderModelsOrder
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderModelsOrder
      */
     public function restOrdersContactsContactIdMultiOrderPost($contact_id)
     {
@@ -415,13 +415,13 @@ class OrderApi
      *
      * @param  int $contact_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesOrderModelsOrder, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderModelsOrder, HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersContactsContactIdMultiOrderPostWithHttpInfo($contact_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderModelsOrder';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderModelsOrder';
         $request = $this->restOrdersContactsContactIdMultiOrderPostRequest($contact_id);
 
         try {
@@ -473,7 +473,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesOrderModelsOrder',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderModelsOrder',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -515,7 +515,7 @@ class OrderApi
      */
     public function restOrdersContactsContactIdMultiOrderPostAsyncWithHttpInfo($contact_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderModelsOrder';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderModelsOrder';
         $request = $this->restOrdersContactsContactIdMultiOrderPostRequest($contact_id);
 
         return $this->client
@@ -665,9 +665,9 @@ class OrderApi
      * @param  int $campaign_id campaign_id (required)
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesOrderCouponCampaignCodeModelsCouponCampaignCode
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderCouponCampaignCodeModelsCouponCampaignCode
      */
     public function restOrdersCouponsCampaignsCampaignIdCodesPost($campaign_id, $body = null)
     {
@@ -683,13 +683,13 @@ class OrderApi
      * @param  int $campaign_id (required)
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesOrderCouponCampaignCodeModelsCouponCampaignCode, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderCouponCampaignCodeModelsCouponCampaignCode, HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersCouponsCampaignsCampaignIdCodesPostWithHttpInfo($campaign_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderCouponCampaignCodeModelsCouponCampaignCode';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderCouponCampaignCodeModelsCouponCampaignCode';
         $request = $this->restOrdersCouponsCampaignsCampaignIdCodesPostRequest($campaign_id, $body);
 
         try {
@@ -741,7 +741,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesOrderCouponCampaignCodeModelsCouponCampaignCode',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderCouponCampaignCodeModelsCouponCampaignCode',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -785,7 +785,7 @@ class OrderApi
      */
     public function restOrdersCouponsCampaignsCampaignIdCodesPostAsyncWithHttpInfo($campaign_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderCouponCampaignCodeModelsCouponCampaignCode';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderCouponCampaignCodeModelsCouponCampaignCode';
         $request = $this->restOrdersCouponsCampaignsCampaignIdCodesPostRequest($campaign_id, $body);
 
         return $this->client
@@ -939,9 +939,9 @@ class OrderApi
      * @param  int $code code (required)
      * @param  int $without_used Do not delete used coupons (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyDataSimpleRestResponse
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse
      */
     public function restOrdersCouponsCampaignsCodesCodeDelete($code, $without_used = null)
     {
@@ -957,13 +957,13 @@ class OrderApi
      * @param  int $code (required)
      * @param  int $without_used Do not delete used coupons (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyDataSimpleRestResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersCouponsCampaignsCodesCodeDeleteWithHttpInfo($code, $without_used = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyDataSimpleRestResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse';
         $request = $this->restOrdersCouponsCampaignsCodesCodeDeleteRequest($code, $without_used);
 
         try {
@@ -1015,7 +1015,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyDataSimpleRestResponse',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1059,7 +1059,7 @@ class OrderApi
      */
     public function restOrdersCouponsCampaignsCodesCodeDeleteAsyncWithHttpInfo($code, $without_used = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyDataSimpleRestResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse';
         $request = $this->restOrdersCouponsCampaignsCodesCodeDeleteRequest($code, $without_used);
 
         return $this->client
@@ -1214,9 +1214,9 @@ class OrderApi
      * @param  int $code code (required)
      * @param  int $is_disabled is_disabled (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyDataSimpleRestResponse
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse
      */
     public function restOrdersCouponsCampaignsCodesCodeDisabledIsDisabledPut($code, $is_disabled)
     {
@@ -1232,13 +1232,13 @@ class OrderApi
      * @param  int $code (required)
      * @param  int $is_disabled (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyDataSimpleRestResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersCouponsCampaignsCodesCodeDisabledIsDisabledPutWithHttpInfo($code, $is_disabled)
     {
-        $returnType = '\Swagger\Client\Model\PlentyDataSimpleRestResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse';
         $request = $this->restOrdersCouponsCampaignsCodesCodeDisabledIsDisabledPutRequest($code, $is_disabled);
 
         try {
@@ -1290,7 +1290,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyDataSimpleRestResponse',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1334,7 +1334,7 @@ class OrderApi
      */
     public function restOrdersCouponsCampaignsCodesCodeDisabledIsDisabledPutAsyncWithHttpInfo($code, $is_disabled)
     {
-        $returnType = '\Swagger\Client\Model\PlentyDataSimpleRestResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse';
         $request = $this->restOrdersCouponsCampaignsCodesCodeDisabledIsDisabledPutRequest($code, $is_disabled);
 
         return $this->client
@@ -1499,9 +1499,9 @@ class OrderApi
      * @param  string $code The coupon code (required)
      * @param  string $with Load additional relations for a coupon code. Currently possible are:      * &lt;ul&gt;      *   &lt;li&gt;&#x27;campaign&#x27; &#x3D; The coupon campaign to which this code belongs to.&lt;/li&gt;      * &lt;/ul&gt;      * Example: &lt;code&gt;?with&#x3D;campaign&lt;/code&gt; (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesOrderCouponCampaignCodeModelsCouponCampaignCode
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderCouponCampaignCodeModelsCouponCampaignCode
      */
     public function restOrdersCouponsCampaignsCodesCodeGet($code, $with = null)
     {
@@ -1517,13 +1517,13 @@ class OrderApi
      * @param  string $code The coupon code (required)
      * @param  string $with Load additional relations for a coupon code. Currently possible are:      * &lt;ul&gt;      *   &lt;li&gt;&#x27;campaign&#x27; &#x3D; The coupon campaign to which this code belongs to.&lt;/li&gt;      * &lt;/ul&gt;      * Example: &lt;code&gt;?with&#x3D;campaign&lt;/code&gt; (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesOrderCouponCampaignCodeModelsCouponCampaignCode, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderCouponCampaignCodeModelsCouponCampaignCode, HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersCouponsCampaignsCodesCodeGetWithHttpInfo($code, $with = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderCouponCampaignCodeModelsCouponCampaignCode';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderCouponCampaignCodeModelsCouponCampaignCode';
         $request = $this->restOrdersCouponsCampaignsCodesCodeGetRequest($code, $with);
 
         try {
@@ -1575,7 +1575,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesOrderCouponCampaignCodeModelsCouponCampaignCode',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderCouponCampaignCodeModelsCouponCampaignCode',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1619,7 +1619,7 @@ class OrderApi
      */
     public function restOrdersCouponsCampaignsCodesCodeGetAsyncWithHttpInfo($code, $with = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderCouponCampaignCodeModelsCouponCampaignCode';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderCouponCampaignCodeModelsCouponCampaignCode';
         $request = $this->restOrdersCouponsCampaignsCodesCodeGetRequest($code, $with);
 
         return $this->client
@@ -1775,7 +1775,7 @@ class OrderApi
      * @param  int $page The page to get. The default page that will be returned is page 1. (optional)
      * @param  int $items_per_page The number of coupons to be displayed per page. The default number of coupons per page is 50. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -1794,7 +1794,7 @@ class OrderApi
      * @param  int $page The page to get. The default page that will be returned is page 1. (optional)
      * @param  int $items_per_page The number of coupons to be displayed per page. The default number of coupons per page is 50. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2064,9 +2064,9 @@ class OrderApi
      * @param  int $contact_class The contact class. (optional)
      * @param  int $contact_type The contact type. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesOrderCouponCodeValidationModelsCouponCodeValidation
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderCouponCodeValidationModelsCouponCodeValidation
      */
     public function restOrdersCouponsCodesCouponPost($plenty_id, $ship_to_country, $coupon, $body = null, $call_from_scheduler = null, $tax_id_number = null, $contact_class = null, $contact_type = null)
     {
@@ -2088,13 +2088,13 @@ class OrderApi
      * @param  int $contact_class The contact class. (optional)
      * @param  int $contact_type The contact type. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesOrderCouponCodeValidationModelsCouponCodeValidation, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderCouponCodeValidationModelsCouponCodeValidation, HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersCouponsCodesCouponPostWithHttpInfo($plenty_id, $ship_to_country, $coupon, $body = null, $call_from_scheduler = null, $tax_id_number = null, $contact_class = null, $contact_type = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderCouponCodeValidationModelsCouponCodeValidation';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderCouponCodeValidationModelsCouponCodeValidation';
         $request = $this->restOrdersCouponsCodesCouponPostRequest($plenty_id, $ship_to_country, $coupon, $body, $call_from_scheduler, $tax_id_number, $contact_class, $contact_type);
 
         try {
@@ -2146,7 +2146,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesOrderCouponCodeValidationModelsCouponCodeValidation',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderCouponCodeValidationModelsCouponCodeValidation',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2202,7 +2202,7 @@ class OrderApi
      */
     public function restOrdersCouponsCodesCouponPostAsyncWithHttpInfo($plenty_id, $ship_to_country, $coupon, $body = null, $call_from_scheduler = null, $tax_id_number = null, $contact_class = null, $contact_type = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderCouponCodeValidationModelsCouponCodeValidation';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderCouponCodeValidationModelsCouponCodeValidation';
         $request = $this->restOrdersCouponsCodesCouponPostRequest($plenty_id, $ship_to_country, $coupon, $body, $call_from_scheduler, $tax_id_number, $contact_class, $contact_type);
 
         return $this->client
@@ -2404,9 +2404,9 @@ class OrderApi
      * @param  int $contact_class The contact class. (optional)
      * @param  int $contact_type The contact type. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesOrderCouponCodeValidationModelsCouponCodeValidation[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderCouponCodeValidationModelsCouponCodeValidation[]
      */
     public function restOrdersCouponsCodesPost($coupons, $plenty_id, $ship_to_country, $body = null, $call_from_scheduler = null, $tax_id_number = null, $contact_class = null, $contact_type = null)
     {
@@ -2428,13 +2428,13 @@ class OrderApi
      * @param  int $contact_class The contact class. (optional)
      * @param  int $contact_type The contact type. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesOrderCouponCodeValidationModelsCouponCodeValidation[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderCouponCodeValidationModelsCouponCodeValidation[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersCouponsCodesPostWithHttpInfo($coupons, $plenty_id, $ship_to_country, $body = null, $call_from_scheduler = null, $tax_id_number = null, $contact_class = null, $contact_type = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderCouponCodeValidationModelsCouponCodeValidation[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderCouponCodeValidationModelsCouponCodeValidation[]';
         $request = $this->restOrdersCouponsCodesPostRequest($coupons, $plenty_id, $ship_to_country, $body, $call_from_scheduler, $tax_id_number, $contact_class, $contact_type);
 
         try {
@@ -2486,7 +2486,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesOrderCouponCodeValidationModelsCouponCodeValidation[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderCouponCodeValidationModelsCouponCodeValidation[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2542,7 +2542,7 @@ class OrderApi
      */
     public function restOrdersCouponsCodesPostAsyncWithHttpInfo($coupons, $plenty_id, $ship_to_country, $body = null, $call_from_scheduler = null, $tax_id_number = null, $contact_class = null, $contact_type = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderCouponCodeValidationModelsCouponCodeValidation[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderCouponCodeValidationModelsCouponCodeValidation[]';
         $request = $this->restOrdersCouponsCodesPostRequest($coupons, $plenty_id, $ship_to_country, $body, $call_from_scheduler, $tax_id_number, $contact_class, $contact_type);
 
         return $this->client
@@ -2735,9 +2735,9 @@ class OrderApi
      * @param  int $columns The attributes to be loaded (optional)
      * @param  int $with The relations to be loaded. Valid relations are &#x27;names&#x27; or &#x27;countries&#x27;). (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesOrderCurrencyModelsCurrency
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderCurrencyModelsCurrency
      */
     public function restOrdersCurrenciesCountriesCountryIdGet($country_id, $columns = null, $with = null)
     {
@@ -2754,13 +2754,13 @@ class OrderApi
      * @param  int $columns The attributes to be loaded (optional)
      * @param  int $with The relations to be loaded. Valid relations are &#x27;names&#x27; or &#x27;countries&#x27;). (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesOrderCurrencyModelsCurrency, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderCurrencyModelsCurrency, HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersCurrenciesCountriesCountryIdGetWithHttpInfo($country_id, $columns = null, $with = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderCurrencyModelsCurrency';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderCurrencyModelsCurrency';
         $request = $this->restOrdersCurrenciesCountriesCountryIdGetRequest($country_id, $columns, $with);
 
         try {
@@ -2812,7 +2812,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesOrderCurrencyModelsCurrency',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderCurrencyModelsCurrency',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2858,7 +2858,7 @@ class OrderApi
      */
     public function restOrdersCurrenciesCountriesCountryIdGetAsyncWithHttpInfo($country_id, $columns = null, $with = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderCurrencyModelsCurrency';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderCurrencyModelsCurrency';
         $request = $this->restOrdersCurrenciesCountriesCountryIdGetRequest($country_id, $columns, $with);
 
         return $this->client
@@ -3018,9 +3018,9 @@ class OrderApi
      * @param  string $currency_iso The ISO 4217 code of the currency (required)
      * @param  int $columns The attributes to be loaded (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesOrderShippingCountriesModelsCountry[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderShippingCountriesModelsCountry[]
      */
     public function restOrdersCurrenciesCurrencyIsoCountriesGet($currency_iso, $columns = null)
     {
@@ -3036,13 +3036,13 @@ class OrderApi
      * @param  string $currency_iso The ISO 4217 code of the currency (required)
      * @param  int $columns The attributes to be loaded (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesOrderShippingCountriesModelsCountry[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderShippingCountriesModelsCountry[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersCurrenciesCurrencyIsoCountriesGetWithHttpInfo($currency_iso, $columns = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderShippingCountriesModelsCountry[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderShippingCountriesModelsCountry[]';
         $request = $this->restOrdersCurrenciesCurrencyIsoCountriesGetRequest($currency_iso, $columns);
 
         try {
@@ -3094,7 +3094,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesOrderShippingCountriesModelsCountry[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderShippingCountriesModelsCountry[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3138,7 +3138,7 @@ class OrderApi
      */
     public function restOrdersCurrenciesCurrencyIsoCountriesGetAsyncWithHttpInfo($currency_iso, $columns = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderShippingCountriesModelsCountry[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderShippingCountriesModelsCountry[]';
         $request = $this->restOrdersCurrenciesCurrencyIsoCountriesGetRequest($currency_iso, $columns);
 
         return $this->client
@@ -3292,9 +3292,9 @@ class OrderApi
      *
      * @param  int $currency_iso currency_iso (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesOrderCurrencyModelsCurrencyExchangeRate
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderCurrencyModelsCurrencyExchangeRate
      */
     public function restOrdersCurrenciesCurrencyIsoExchangeRateGet($currency_iso)
     {
@@ -3309,13 +3309,13 @@ class OrderApi
      *
      * @param  int $currency_iso (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesOrderCurrencyModelsCurrencyExchangeRate, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderCurrencyModelsCurrencyExchangeRate, HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersCurrenciesCurrencyIsoExchangeRateGetWithHttpInfo($currency_iso)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderCurrencyModelsCurrencyExchangeRate';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderCurrencyModelsCurrencyExchangeRate';
         $request = $this->restOrdersCurrenciesCurrencyIsoExchangeRateGetRequest($currency_iso);
 
         try {
@@ -3367,7 +3367,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesOrderCurrencyModelsCurrencyExchangeRate',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderCurrencyModelsCurrencyExchangeRate',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3409,7 +3409,7 @@ class OrderApi
      */
     public function restOrdersCurrenciesCurrencyIsoExchangeRateGetAsyncWithHttpInfo($currency_iso)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderCurrencyModelsCurrencyExchangeRate';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderCurrencyModelsCurrencyExchangeRate';
         $request = $this->restOrdersCurrenciesCurrencyIsoExchangeRateGetRequest($currency_iso);
 
         return $this->client
@@ -3560,9 +3560,9 @@ class OrderApi
      * @param  int $columns The attributes to be loaded (optional)
      * @param  int $with The relations to be loaded. Valid relations are &#x27;names&#x27; or &#x27;countries&#x27; (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesOrderCurrencyModelsCurrency
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderCurrencyModelsCurrency
      */
     public function restOrdersCurrenciesCurrencyIsoGet($currency_iso, $columns = null, $with = null)
     {
@@ -3579,13 +3579,13 @@ class OrderApi
      * @param  int $columns The attributes to be loaded (optional)
      * @param  int $with The relations to be loaded. Valid relations are &#x27;names&#x27; or &#x27;countries&#x27; (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesOrderCurrencyModelsCurrency, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderCurrencyModelsCurrency, HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersCurrenciesCurrencyIsoGetWithHttpInfo($currency_iso, $columns = null, $with = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderCurrencyModelsCurrency';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderCurrencyModelsCurrency';
         $request = $this->restOrdersCurrenciesCurrencyIsoGetRequest($currency_iso, $columns, $with);
 
         try {
@@ -3637,7 +3637,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesOrderCurrencyModelsCurrency',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderCurrencyModelsCurrency',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3683,7 +3683,7 @@ class OrderApi
      */
     public function restOrdersCurrenciesCurrencyIsoGetAsyncWithHttpInfo($currency_iso, $columns = null, $with = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderCurrencyModelsCurrency';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderCurrencyModelsCurrency';
         $request = $this->restOrdersCurrenciesCurrencyIsoGetRequest($currency_iso, $columns, $with);
 
         return $this->client
@@ -3843,9 +3843,9 @@ class OrderApi
      * @param  int $columns The attributes to be loaded (optional)
      * @param  int $with The relations to be loaded. Valid relations are &#x27;names&#x27; or &#x27;countries&#x27;. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesOrderCurrencyModelsCurrency[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderCurrencyModelsCurrency[]
      */
     public function restOrdersCurrenciesGet($columns = null, $with = null)
     {
@@ -3861,13 +3861,13 @@ class OrderApi
      * @param  int $columns The attributes to be loaded (optional)
      * @param  int $with The relations to be loaded. Valid relations are &#x27;names&#x27; or &#x27;countries&#x27;. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesOrderCurrencyModelsCurrency[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderCurrencyModelsCurrency[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersCurrenciesGetWithHttpInfo($columns = null, $with = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderCurrencyModelsCurrency[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderCurrencyModelsCurrency[]';
         $request = $this->restOrdersCurrenciesGetRequest($columns, $with);
 
         try {
@@ -3919,7 +3919,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesOrderCurrencyModelsCurrency[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderCurrencyModelsCurrency[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3963,7 +3963,7 @@ class OrderApi
      */
     public function restOrdersCurrenciesGetAsyncWithHttpInfo($columns = null, $with = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderCurrencyModelsCurrency[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderCurrencyModelsCurrency[]';
         $request = $this->restOrdersCurrenciesGetRequest($columns, $with);
 
         return $this->client
@@ -4106,9 +4106,9 @@ class OrderApi
      * List order date types
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\IlluminateDatabaseEloquentCollection
+     * @return \BSApp\Service\plentymarketsAPI\Model\IlluminateDatabaseEloquentCollection
      */
     public function restOrdersDatesTypesGet()
     {
@@ -4122,13 +4122,13 @@ class OrderApi
      * List order date types
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\IlluminateDatabaseEloquentCollection, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\IlluminateDatabaseEloquentCollection, HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersDatesTypesGetWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\IlluminateDatabaseEloquentCollection';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\IlluminateDatabaseEloquentCollection';
         $request = $this->restOrdersDatesTypesGetRequest();
 
         try {
@@ -4180,7 +4180,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\IlluminateDatabaseEloquentCollection',
+                        '\BSApp\Service\plentymarketsAPI\Model\IlluminateDatabaseEloquentCollection',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4220,7 +4220,7 @@ class OrderApi
      */
     public function restOrdersDatesTypesGetAsyncWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\IlluminateDatabaseEloquentCollection';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\IlluminateDatabaseEloquentCollection';
         $request = $this->restOrdersDatesTypesGetRequest();
 
         return $this->client
@@ -4354,9 +4354,9 @@ class OrderApi
      *
      * @param  int $type_id type_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesOrderDateModelsOrderDateType
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderDateModelsOrderDateType
      */
     public function restOrdersDatesTypesTypeIdGet($type_id)
     {
@@ -4371,13 +4371,13 @@ class OrderApi
      *
      * @param  int $type_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesOrderDateModelsOrderDateType, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderDateModelsOrderDateType, HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersDatesTypesTypeIdGetWithHttpInfo($type_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderDateModelsOrderDateType';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderDateModelsOrderDateType';
         $request = $this->restOrdersDatesTypesTypeIdGetRequest($type_id);
 
         try {
@@ -4429,7 +4429,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesOrderDateModelsOrderDateType',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderDateModelsOrderDateType',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4471,7 +4471,7 @@ class OrderApi
      */
     public function restOrdersDatesTypesTypeIdGetAsyncWithHttpInfo($type_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderDateModelsOrderDateType';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderDateModelsOrderDateType';
         $request = $this->restOrdersDatesTypesTypeIdGetRequest($type_id);
 
         return $this->client
@@ -4620,9 +4620,9 @@ class OrderApi
      *
      * @param  int $type_id The Id of the OrderDateType to be found (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesOrderDateModelsOrderDateTypeName[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderDateModelsOrderDateTypeName[]
      */
     public function restOrdersDatesTypesTypeIdNamesGet($type_id)
     {
@@ -4637,13 +4637,13 @@ class OrderApi
      *
      * @param  int $type_id The Id of the OrderDateType to be found (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesOrderDateModelsOrderDateTypeName[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderDateModelsOrderDateTypeName[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersDatesTypesTypeIdNamesGetWithHttpInfo($type_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderDateModelsOrderDateTypeName[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderDateModelsOrderDateTypeName[]';
         $request = $this->restOrdersDatesTypesTypeIdNamesGetRequest($type_id);
 
         try {
@@ -4695,7 +4695,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesOrderDateModelsOrderDateTypeName[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderDateModelsOrderDateTypeName[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4737,7 +4737,7 @@ class OrderApi
      */
     public function restOrdersDatesTypesTypeIdNamesGetAsyncWithHttpInfo($type_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderDateModelsOrderDateTypeName[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderDateModelsOrderDateTypeName[]';
         $request = $this->restOrdersDatesTypesTypeIdNamesGetRequest($type_id);
 
         return $this->client
@@ -4887,9 +4887,9 @@ class OrderApi
      * @param  int $type_id The ID of the order date type to be found (required)
      * @param  string $lang The language of the order date type name (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesOrderDateModelsOrderDateTypeName
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderDateModelsOrderDateTypeName
      */
     public function restOrdersDatesTypesTypeIdNamesLangGet($type_id, $lang)
     {
@@ -4905,13 +4905,13 @@ class OrderApi
      * @param  int $type_id The ID of the order date type to be found (required)
      * @param  string $lang The language of the order date type name (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesOrderDateModelsOrderDateTypeName, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderDateModelsOrderDateTypeName, HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersDatesTypesTypeIdNamesLangGetWithHttpInfo($type_id, $lang)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderDateModelsOrderDateTypeName';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderDateModelsOrderDateTypeName';
         $request = $this->restOrdersDatesTypesTypeIdNamesLangGetRequest($type_id, $lang);
 
         try {
@@ -4963,7 +4963,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesOrderDateModelsOrderDateTypeName',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderDateModelsOrderDateTypeName',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5007,7 +5007,7 @@ class OrderApi
      */
     public function restOrdersDatesTypesTypeIdNamesLangGetAsyncWithHttpInfo($type_id, $lang)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderDateModelsOrderDateTypeName';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderDateModelsOrderDateTypeName';
         $request = $this->restOrdersDatesTypesTypeIdNamesLangGetRequest($type_id, $lang);
 
         return $this->client
@@ -5176,9 +5176,9 @@ class OrderApi
      * @param  int $page The page to get. The default page that will be returned is page 1. (optional)
      * @param  int $items_per_page The number of summaries to be displayed per page. The default number of orders per page is 10. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\IlluminateSupportCollection
+     * @return \BSApp\Service\plentymarketsAPI\Model\IlluminateSupportCollection
      */
     public function restOrdersDocumentsAccountingSummaryGet($order_id = null, $document_type = null, $created_at_from = null, $created_at_to = null, $page = null, $items_per_page = null)
     {
@@ -5198,13 +5198,13 @@ class OrderApi
      * @param  int $page The page to get. The default page that will be returned is page 1. (optional)
      * @param  int $items_per_page The number of summaries to be displayed per page. The default number of orders per page is 10. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\IlluminateSupportCollection, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\IlluminateSupportCollection, HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersDocumentsAccountingSummaryGetWithHttpInfo($order_id = null, $document_type = null, $created_at_from = null, $created_at_to = null, $page = null, $items_per_page = null)
     {
-        $returnType = '\Swagger\Client\Model\IlluminateSupportCollection';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\IlluminateSupportCollection';
         $request = $this->restOrdersDocumentsAccountingSummaryGetRequest($order_id, $document_type, $created_at_from, $created_at_to, $page, $items_per_page);
 
         try {
@@ -5256,7 +5256,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\IlluminateSupportCollection',
+                        '\BSApp\Service\plentymarketsAPI\Model\IlluminateSupportCollection',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5308,7 +5308,7 @@ class OrderApi
      */
     public function restOrdersDocumentsAccountingSummaryGetAsyncWithHttpInfo($order_id = null, $document_type = null, $created_at_from = null, $created_at_to = null, $page = null, $items_per_page = null)
     {
-        $returnType = '\Swagger\Client\Model\IlluminateSupportCollection';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\IlluminateSupportCollection';
         $request = $this->restOrdersDocumentsAccountingSummaryGetRequest($order_id, $document_type, $created_at_from, $created_at_to, $page, $items_per_page);
 
         return $this->client
@@ -5506,7 +5506,7 @@ class OrderApi
      * @param  int $items_per_page The number of orders to be displayed per page. The default number of orders per page is 50. (optional)
      * @param  int $with Load additional relations for an order. Currently possible are:     &lt;ul&gt;     &lt;li&gt;&#x27;addresses&#x27; &#x3D; The address objects that are associated with the order.&lt;/li&gt;     &lt;li&gt;&#x27;relations&#x27; &#x3D; The order relation reference instances that are associated with the order. These instances contain information such as the the reference type, the ID of the reference and the relation itself.&lt;/li&gt;     &lt;li&gt;&#x27;comments&#x27; &#x3D; The order comments.&lt;/li&gt;     &lt;li&gt;&#x27;location&#x27; &#x3D; The accounting location of the order.&lt;/li&gt;     &lt;li&gt;&#x27;payments&#x27; &#x3D; The payments that are associated with the order.&lt;/li&gt;     &lt;li&gt;&#x27;documents&#x27; &#x3D; The documents that are associated with the order.&lt;/li&gt;     &lt;li&gt;&#x27;contactSender&#x27; &#x3D; The associated contact for the contact-sender relation.&lt;/li&gt;     &lt;li&gt;&#x27;contactReceiver&#x27; &#x3D; The associated contact for the contact-receiver relation.&lt;/li&gt;     &lt;li&gt;&#x27;warehouseSender&#x27; &#x3D; The associated warehouse for the warehouse-sender relation.&lt;/li&gt;     &lt;li&gt;&#x27;warehouseReceiver&#x27; &#x3D; The associated warehouse for the warehouse-receiver relation.&lt;/li&gt;     &lt;li&gt;&#x27;orderItems.variation&#x27; &#x3D; The variation that is associated with the order item.&lt;/li&gt;     &lt;li&gt;&#x27;orderItems.giftCardCodes&#x27; &#x3D; The gift card codes that are associated with the order item.&lt;/li&gt;     &lt;li&gt;&#x27;orderItems.transactions&#x27; &#x3D; The transactions that are associated with the order item.&lt;/li&gt;     &lt;li&gt;&#x27;orderItems.serialNumbers&#x27; &#x3D; The serial numbers that are associated with the order item.&lt;/li&gt;     &lt;li&gt;&#x27;orderItems.variationBarcodes&#x27; &#x3D; The barcodes that are associated with variation of the order item.&lt;/li&gt;     &lt;li&gt;&#x27;orderItems.comments&#x27; &#x3D; The comments that are associated with the order item.&lt;/li&gt;     &lt;li&gt;&#x27;originOrderReferences&#x27; &#x3D; The references to other orders, e.g. returns or credit notes, associated with this order.&lt;/li&gt;     &lt;li&gt;&lt;b&gt;deprecated&lt;/b&gt; &#x27;orderItems.warehouseLocations&#x27; &#x3D; The warehouse locations that are associated with the order item.&lt;/li&gt;     &lt;/ul&gt;     Example: &lt;code&gt;?with[]&#x3D;addresses&amp;with[]&#x3D;orderItems.variation&lt;/code&gt; (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -5557,7 +5557,7 @@ class OrderApi
      * @param  int $items_per_page The number of orders to be displayed per page. The default number of orders per page is 50. (optional)
      * @param  int $with Load additional relations for an order. Currently possible are:     &lt;ul&gt;     &lt;li&gt;&#x27;addresses&#x27; &#x3D; The address objects that are associated with the order.&lt;/li&gt;     &lt;li&gt;&#x27;relations&#x27; &#x3D; The order relation reference instances that are associated with the order. These instances contain information such as the the reference type, the ID of the reference and the relation itself.&lt;/li&gt;     &lt;li&gt;&#x27;comments&#x27; &#x3D; The order comments.&lt;/li&gt;     &lt;li&gt;&#x27;location&#x27; &#x3D; The accounting location of the order.&lt;/li&gt;     &lt;li&gt;&#x27;payments&#x27; &#x3D; The payments that are associated with the order.&lt;/li&gt;     &lt;li&gt;&#x27;documents&#x27; &#x3D; The documents that are associated with the order.&lt;/li&gt;     &lt;li&gt;&#x27;contactSender&#x27; &#x3D; The associated contact for the contact-sender relation.&lt;/li&gt;     &lt;li&gt;&#x27;contactReceiver&#x27; &#x3D; The associated contact for the contact-receiver relation.&lt;/li&gt;     &lt;li&gt;&#x27;warehouseSender&#x27; &#x3D; The associated warehouse for the warehouse-sender relation.&lt;/li&gt;     &lt;li&gt;&#x27;warehouseReceiver&#x27; &#x3D; The associated warehouse for the warehouse-receiver relation.&lt;/li&gt;     &lt;li&gt;&#x27;orderItems.variation&#x27; &#x3D; The variation that is associated with the order item.&lt;/li&gt;     &lt;li&gt;&#x27;orderItems.giftCardCodes&#x27; &#x3D; The gift card codes that are associated with the order item.&lt;/li&gt;     &lt;li&gt;&#x27;orderItems.transactions&#x27; &#x3D; The transactions that are associated with the order item.&lt;/li&gt;     &lt;li&gt;&#x27;orderItems.serialNumbers&#x27; &#x3D; The serial numbers that are associated with the order item.&lt;/li&gt;     &lt;li&gt;&#x27;orderItems.variationBarcodes&#x27; &#x3D; The barcodes that are associated with variation of the order item.&lt;/li&gt;     &lt;li&gt;&#x27;orderItems.comments&#x27; &#x3D; The comments that are associated with the order item.&lt;/li&gt;     &lt;li&gt;&#x27;originOrderReferences&#x27; &#x3D; The references to other orders, e.g. returns or credit notes, associated with this order.&lt;/li&gt;     &lt;li&gt;&lt;b&gt;deprecated&lt;/b&gt; &#x27;orderItems.warehouseLocations&#x27; &#x3D; The warehouse locations that are associated with the order item.&lt;/li&gt;     &lt;/ul&gt;     Example: &lt;code&gt;?with[]&#x3D;addresses&amp;with[]&#x3D;orderItems.variation&lt;/code&gt; (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -6034,7 +6034,7 @@ class OrderApi
      *
      * @param  int $id The ID of the order item date (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -6050,7 +6050,7 @@ class OrderApi
      *
      * @param  int $id The ID of the order item date (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -6263,9 +6263,9 @@ class OrderApi
      *
      * @param  int $id The ID of the order item date (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesOrderDateModelsOrderItemDate
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderDateModelsOrderItemDate
      */
     public function restOrdersItemsDatesIdGet($id)
     {
@@ -6280,13 +6280,13 @@ class OrderApi
      *
      * @param  int $id The ID of the order item date (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesOrderDateModelsOrderItemDate, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderDateModelsOrderItemDate, HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersItemsDatesIdGetWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderDateModelsOrderItemDate';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderDateModelsOrderItemDate';
         $request = $this->restOrdersItemsDatesIdGetRequest($id);
 
         try {
@@ -6338,7 +6338,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesOrderDateModelsOrderItemDate',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderDateModelsOrderItemDate',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6380,7 +6380,7 @@ class OrderApi
      */
     public function restOrdersItemsDatesIdGetAsyncWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderDateModelsOrderItemDate';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderDateModelsOrderItemDate';
         $request = $this->restOrdersItemsDatesIdGetRequest($id);
 
         return $this->client
@@ -6530,9 +6530,9 @@ class OrderApi
      * @param  int $id The ID of the order item date (required)
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesOrderDateModelsOrderItemDate
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderDateModelsOrderItemDate
      */
     public function restOrdersItemsDatesIdPut($id, $body = null)
     {
@@ -6548,13 +6548,13 @@ class OrderApi
      * @param  int $id The ID of the order item date (required)
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesOrderDateModelsOrderItemDate, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderDateModelsOrderItemDate, HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersItemsDatesIdPutWithHttpInfo($id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderDateModelsOrderItemDate';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderDateModelsOrderItemDate';
         $request = $this->restOrdersItemsDatesIdPutRequest($id, $body);
 
         try {
@@ -6606,7 +6606,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesOrderDateModelsOrderItemDate',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderDateModelsOrderItemDate',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6650,7 +6650,7 @@ class OrderApi
      */
     public function restOrdersItemsDatesIdPutAsyncWithHttpInfo($id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderDateModelsOrderItemDate';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderDateModelsOrderItemDate';
         $request = $this->restOrdersItemsDatesIdPutRequest($id, $body);
 
         return $this->client
@@ -6803,9 +6803,9 @@ class OrderApi
      *
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesOrderDateModelsOrderItemDate
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderDateModelsOrderItemDate
      */
     public function restOrdersItemsDatesPost($body = null)
     {
@@ -6820,13 +6820,13 @@ class OrderApi
      *
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesOrderDateModelsOrderItemDate, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderDateModelsOrderItemDate, HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersItemsDatesPostWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderDateModelsOrderItemDate';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderDateModelsOrderItemDate';
         $request = $this->restOrdersItemsDatesPostRequest($body);
 
         try {
@@ -6878,7 +6878,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesOrderDateModelsOrderItemDate',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderDateModelsOrderItemDate',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6920,7 +6920,7 @@ class OrderApi
      */
     public function restOrdersItemsDatesPostAsyncWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderDateModelsOrderItemDate';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderDateModelsOrderItemDate';
         $request = $this->restOrdersItemsDatesPostRequest($body);
 
         return $this->client
@@ -7059,9 +7059,9 @@ class OrderApi
      * @param  int $order_item_id The ID of the order item. (required)
      * @param  int $delivery_note_number The delivery note number. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesOrderBookingModelsOrderBooking
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderBookingModelsOrderBooking
      */
     public function restOrdersItemsOrderItemIdBookingPost($order_item_id, $delivery_note_number = null)
     {
@@ -7077,13 +7077,13 @@ class OrderApi
      * @param  int $order_item_id The ID of the order item. (required)
      * @param  int $delivery_note_number The delivery note number. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesOrderBookingModelsOrderBooking, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderBookingModelsOrderBooking, HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersItemsOrderItemIdBookingPostWithHttpInfo($order_item_id, $delivery_note_number = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderBookingModelsOrderBooking';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderBookingModelsOrderBooking';
         $request = $this->restOrdersItemsOrderItemIdBookingPostRequest($order_item_id, $delivery_note_number);
 
         try {
@@ -7135,7 +7135,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesOrderBookingModelsOrderBooking',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderBookingModelsOrderBooking',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -7179,7 +7179,7 @@ class OrderApi
      */
     public function restOrdersItemsOrderItemIdBookingPostAsyncWithHttpInfo($order_item_id, $delivery_note_number = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderBookingModelsOrderBooking';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderBookingModelsOrderBooking';
         $request = $this->restOrdersItemsOrderItemIdBookingPostRequest($order_item_id, $delivery_note_number);
 
         return $this->client
@@ -7333,9 +7333,9 @@ class OrderApi
      *
      * @param  int $order_item_id The order item ID of the order item date instance to be loaded (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesOrderDateModelsOrderItemDate[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderDateModelsOrderItemDate[]
      */
     public function restOrdersItemsOrderItemIdDatesGet($order_item_id)
     {
@@ -7350,13 +7350,13 @@ class OrderApi
      *
      * @param  int $order_item_id The order item ID of the order item date instance to be loaded (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesOrderDateModelsOrderItemDate[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderDateModelsOrderItemDate[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersItemsOrderItemIdDatesGetWithHttpInfo($order_item_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderDateModelsOrderItemDate[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderDateModelsOrderItemDate[]';
         $request = $this->restOrdersItemsOrderItemIdDatesGetRequest($order_item_id);
 
         try {
@@ -7408,7 +7408,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesOrderDateModelsOrderItemDate[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderDateModelsOrderItemDate[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -7450,7 +7450,7 @@ class OrderApi
      */
     public function restOrdersItemsOrderItemIdDatesGetAsyncWithHttpInfo($order_item_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderDateModelsOrderItemDate[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderDateModelsOrderItemDate[]';
         $request = $this->restOrdersItemsOrderItemIdDatesGetRequest($order_item_id);
 
         return $this->client
@@ -7600,7 +7600,7 @@ class OrderApi
      * @param  int $order_item_id The ID of the order item (required)
      * @param  int $type_id The ID of the order date (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -7617,7 +7617,7 @@ class OrderApi
      * @param  int $order_item_id The ID of the order item (required)
      * @param  int $type_id The ID of the order date (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -7848,9 +7848,9 @@ class OrderApi
      * @param  int $order_item_id The ID of the order item (required)
      * @param  int $type_id The ID of the order date type (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesOrderDateModelsOrderItemDate
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderDateModelsOrderItemDate
      */
     public function restOrdersItemsOrderItemIdDatesTypeIdGet($order_item_id, $type_id)
     {
@@ -7866,13 +7866,13 @@ class OrderApi
      * @param  int $order_item_id The ID of the order item (required)
      * @param  int $type_id The ID of the order date type (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesOrderDateModelsOrderItemDate, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderDateModelsOrderItemDate, HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersItemsOrderItemIdDatesTypeIdGetWithHttpInfo($order_item_id, $type_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderDateModelsOrderItemDate';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderDateModelsOrderItemDate';
         $request = $this->restOrdersItemsOrderItemIdDatesTypeIdGetRequest($order_item_id, $type_id);
 
         try {
@@ -7924,7 +7924,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesOrderDateModelsOrderItemDate',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderDateModelsOrderItemDate',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -7968,7 +7968,7 @@ class OrderApi
      */
     public function restOrdersItemsOrderItemIdDatesTypeIdGetAsyncWithHttpInfo($order_item_id, $type_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderDateModelsOrderItemDate';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderDateModelsOrderItemDate';
         $request = $this->restOrdersItemsOrderItemIdDatesTypeIdGetRequest($order_item_id, $type_id);
 
         return $this->client
@@ -8134,9 +8134,9 @@ class OrderApi
      * @param  int $type_id The ID of the order date type (required)
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesOrderDateModelsOrderItemDate
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderDateModelsOrderItemDate
      */
     public function restOrdersItemsOrderItemIdDatesTypeIdPost($order_item_id, $type_id, $body = null)
     {
@@ -8153,13 +8153,13 @@ class OrderApi
      * @param  int $type_id The ID of the order date type (required)
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesOrderDateModelsOrderItemDate, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderDateModelsOrderItemDate, HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersItemsOrderItemIdDatesTypeIdPostWithHttpInfo($order_item_id, $type_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderDateModelsOrderItemDate';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderDateModelsOrderItemDate';
         $request = $this->restOrdersItemsOrderItemIdDatesTypeIdPostRequest($order_item_id, $type_id, $body);
 
         try {
@@ -8211,7 +8211,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesOrderDateModelsOrderItemDate',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderDateModelsOrderItemDate',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -8257,7 +8257,7 @@ class OrderApi
      */
     public function restOrdersItemsOrderItemIdDatesTypeIdPostAsyncWithHttpInfo($order_item_id, $type_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderDateModelsOrderItemDate';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderDateModelsOrderItemDate';
         $request = $this->restOrdersItemsOrderItemIdDatesTypeIdPostRequest($order_item_id, $type_id, $body);
 
         return $this->client
@@ -8427,9 +8427,9 @@ class OrderApi
      * @param  int $type_id The ID of the order date type (required)
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesOrderDateModelsOrderItemDate
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderDateModelsOrderItemDate
      */
     public function restOrdersItemsOrderItemIdDatesTypeIdPut($order_item_id, $type_id, $body = null)
     {
@@ -8446,13 +8446,13 @@ class OrderApi
      * @param  int $type_id The ID of the order date type (required)
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesOrderDateModelsOrderItemDate, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderDateModelsOrderItemDate, HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersItemsOrderItemIdDatesTypeIdPutWithHttpInfo($order_item_id, $type_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderDateModelsOrderItemDate';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderDateModelsOrderItemDate';
         $request = $this->restOrdersItemsOrderItemIdDatesTypeIdPutRequest($order_item_id, $type_id, $body);
 
         try {
@@ -8504,7 +8504,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesOrderDateModelsOrderItemDate',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderDateModelsOrderItemDate',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -8550,7 +8550,7 @@ class OrderApi
      */
     public function restOrdersItemsOrderItemIdDatesTypeIdPutAsyncWithHttpInfo($order_item_id, $type_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderDateModelsOrderItemDate';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderDateModelsOrderItemDate';
         $request = $this->restOrdersItemsOrderItemIdDatesTypeIdPutRequest($order_item_id, $type_id, $body);
 
         return $this->client
@@ -8718,9 +8718,9 @@ class OrderApi
      *
      * @param  int $order_item_id The order item ID of the order item property instance to be loaded (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesOrderPropertyModelsOrderItemProperty[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderPropertyModelsOrderItemProperty[]
      */
     public function restOrdersItemsOrderItemIdPropertiesGet($order_item_id)
     {
@@ -8735,13 +8735,13 @@ class OrderApi
      *
      * @param  int $order_item_id The order item ID of the order item property instance to be loaded (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesOrderPropertyModelsOrderItemProperty[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderPropertyModelsOrderItemProperty[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersItemsOrderItemIdPropertiesGetWithHttpInfo($order_item_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderPropertyModelsOrderItemProperty[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderPropertyModelsOrderItemProperty[]';
         $request = $this->restOrdersItemsOrderItemIdPropertiesGetRequest($order_item_id);
 
         try {
@@ -8793,7 +8793,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesOrderPropertyModelsOrderItemProperty[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderPropertyModelsOrderItemProperty[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -8835,7 +8835,7 @@ class OrderApi
      */
     public function restOrdersItemsOrderItemIdPropertiesGetAsyncWithHttpInfo($order_item_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderPropertyModelsOrderItemProperty[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderPropertyModelsOrderItemProperty[]';
         $request = $this->restOrdersItemsOrderItemIdPropertiesGetRequest($order_item_id);
 
         return $this->client
@@ -8985,7 +8985,7 @@ class OrderApi
      * @param  int $order_item_id The order item ID of the order item property instance to be deleted (required)
      * @param  int $type_id The order property type ID of the order item property instance to be deleted (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -9002,7 +9002,7 @@ class OrderApi
      * @param  int $order_item_id The order item ID of the order item property instance to be deleted (required)
      * @param  int $type_id The order property type ID of the order item property instance to be deleted (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -9233,9 +9233,9 @@ class OrderApi
      * @param  int $order_item_id The order item ID of the order item property instance to be loaded (required)
      * @param  int $type_id The order property type ID of the order item property instance to be loaded (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesOrderPropertyModelsOrderItemProperty
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderPropertyModelsOrderItemProperty
      */
     public function restOrdersItemsOrderItemIdPropertiesTypeIdGet($order_item_id, $type_id)
     {
@@ -9251,13 +9251,13 @@ class OrderApi
      * @param  int $order_item_id The order item ID of the order item property instance to be loaded (required)
      * @param  int $type_id The order property type ID of the order item property instance to be loaded (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesOrderPropertyModelsOrderItemProperty, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderPropertyModelsOrderItemProperty, HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersItemsOrderItemIdPropertiesTypeIdGetWithHttpInfo($order_item_id, $type_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderPropertyModelsOrderItemProperty';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderPropertyModelsOrderItemProperty';
         $request = $this->restOrdersItemsOrderItemIdPropertiesTypeIdGetRequest($order_item_id, $type_id);
 
         try {
@@ -9309,7 +9309,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesOrderPropertyModelsOrderItemProperty',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderPropertyModelsOrderItemProperty',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -9353,7 +9353,7 @@ class OrderApi
      */
     public function restOrdersItemsOrderItemIdPropertiesTypeIdGetAsyncWithHttpInfo($order_item_id, $type_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderPropertyModelsOrderItemProperty';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderPropertyModelsOrderItemProperty';
         $request = $this->restOrdersItemsOrderItemIdPropertiesTypeIdGetRequest($order_item_id, $type_id);
 
         return $this->client
@@ -9519,9 +9519,9 @@ class OrderApi
      * @param  int $type_id The order property type ID of the order item property instance to be created (required)
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesOrderPropertyModelsOrderItemProperty
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderPropertyModelsOrderItemProperty
      */
     public function restOrdersItemsOrderItemIdPropertiesTypeIdPost($order_item_id, $type_id, $body = null)
     {
@@ -9538,13 +9538,13 @@ class OrderApi
      * @param  int $type_id The order property type ID of the order item property instance to be created (required)
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesOrderPropertyModelsOrderItemProperty, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderPropertyModelsOrderItemProperty, HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersItemsOrderItemIdPropertiesTypeIdPostWithHttpInfo($order_item_id, $type_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderPropertyModelsOrderItemProperty';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderPropertyModelsOrderItemProperty';
         $request = $this->restOrdersItemsOrderItemIdPropertiesTypeIdPostRequest($order_item_id, $type_id, $body);
 
         try {
@@ -9596,7 +9596,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesOrderPropertyModelsOrderItemProperty',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderPropertyModelsOrderItemProperty',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -9642,7 +9642,7 @@ class OrderApi
      */
     public function restOrdersItemsOrderItemIdPropertiesTypeIdPostAsyncWithHttpInfo($order_item_id, $type_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderPropertyModelsOrderItemProperty';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderPropertyModelsOrderItemProperty';
         $request = $this->restOrdersItemsOrderItemIdPropertiesTypeIdPostRequest($order_item_id, $type_id, $body);
 
         return $this->client
@@ -9812,9 +9812,9 @@ class OrderApi
      * @param  int $type_id The order property type ID of the order item property instance to be updated (required)
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesOrderPropertyModelsOrderItemProperty
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderPropertyModelsOrderItemProperty
      */
     public function restOrdersItemsOrderItemIdPropertiesTypeIdPut($order_item_id, $type_id, $body = null)
     {
@@ -9831,13 +9831,13 @@ class OrderApi
      * @param  int $type_id The order property type ID of the order item property instance to be updated (required)
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesOrderPropertyModelsOrderItemProperty, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderPropertyModelsOrderItemProperty, HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersItemsOrderItemIdPropertiesTypeIdPutWithHttpInfo($order_item_id, $type_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderPropertyModelsOrderItemProperty';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderPropertyModelsOrderItemProperty';
         $request = $this->restOrdersItemsOrderItemIdPropertiesTypeIdPutRequest($order_item_id, $type_id, $body);
 
         try {
@@ -9889,7 +9889,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesOrderPropertyModelsOrderItemProperty',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderPropertyModelsOrderItemProperty',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -9935,7 +9935,7 @@ class OrderApi
      */
     public function restOrdersItemsOrderItemIdPropertiesTypeIdPutAsyncWithHttpInfo($order_item_id, $type_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderPropertyModelsOrderItemProperty';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderPropertyModelsOrderItemProperty';
         $request = $this->restOrdersItemsOrderItemIdPropertiesTypeIdPutRequest($order_item_id, $type_id, $body);
 
         return $this->client
@@ -10105,9 +10105,9 @@ class OrderApi
      * @param  int $columns The properties to be loaded (optional)
      * @param  int $with Load additional relations for a transaction. Currently possible are &#x27;orderItem&#x27; and &#x27;warehouseLocation&#x27;. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\IlluminateDatabaseEloquentCollection
+     * @return \BSApp\Service\plentymarketsAPI\Model\IlluminateDatabaseEloquentCollection
      */
     public function restOrdersItemsOrderItemIdTransactionsGet($order_item_id, $columns = null, $with = null)
     {
@@ -10124,13 +10124,13 @@ class OrderApi
      * @param  int $columns The properties to be loaded (optional)
      * @param  int $with Load additional relations for a transaction. Currently possible are &#x27;orderItem&#x27; and &#x27;warehouseLocation&#x27;. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\IlluminateDatabaseEloquentCollection, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\IlluminateDatabaseEloquentCollection, HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersItemsOrderItemIdTransactionsGetWithHttpInfo($order_item_id, $columns = null, $with = null)
     {
-        $returnType = '\Swagger\Client\Model\IlluminateDatabaseEloquentCollection';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\IlluminateDatabaseEloquentCollection';
         $request = $this->restOrdersItemsOrderItemIdTransactionsGetRequest($order_item_id, $columns, $with);
 
         try {
@@ -10182,7 +10182,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\IlluminateDatabaseEloquentCollection',
+                        '\BSApp\Service\plentymarketsAPI\Model\IlluminateDatabaseEloquentCollection',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -10228,7 +10228,7 @@ class OrderApi
      */
     public function restOrdersItemsOrderItemIdTransactionsGetAsyncWithHttpInfo($order_item_id, $columns = null, $with = null)
     {
-        $returnType = '\Swagger\Client\Model\IlluminateDatabaseEloquentCollection';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\IlluminateDatabaseEloquentCollection';
         $request = $this->restOrdersItemsOrderItemIdTransactionsGetRequest($order_item_id, $columns, $with);
 
         return $this->client
@@ -10388,9 +10388,9 @@ class OrderApi
      * @param  int $order_item_id order_item_id (required)
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesOrderTransactionModelsOrderItemTransaction
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderTransactionModelsOrderItemTransaction
      */
     public function restOrdersItemsOrderItemIdTransactionsPost($order_item_id, $body = null)
     {
@@ -10406,13 +10406,13 @@ class OrderApi
      * @param  int $order_item_id (required)
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesOrderTransactionModelsOrderItemTransaction, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderTransactionModelsOrderItemTransaction, HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersItemsOrderItemIdTransactionsPostWithHttpInfo($order_item_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderTransactionModelsOrderItemTransaction';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderTransactionModelsOrderItemTransaction';
         $request = $this->restOrdersItemsOrderItemIdTransactionsPostRequest($order_item_id, $body);
 
         try {
@@ -10464,7 +10464,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesOrderTransactionModelsOrderItemTransaction',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderTransactionModelsOrderItemTransaction',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -10508,7 +10508,7 @@ class OrderApi
      */
     public function restOrdersItemsOrderItemIdTransactionsPostAsyncWithHttpInfo($order_item_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderTransactionModelsOrderItemTransaction';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderTransactionModelsOrderItemTransaction';
         $request = $this->restOrdersItemsOrderItemIdTransactionsPostRequest($order_item_id, $body);
 
         return $this->client
@@ -10661,7 +10661,7 @@ class OrderApi
      *
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -10677,7 +10677,7 @@ class OrderApi
      *
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -10879,7 +10879,7 @@ class OrderApi
      *
      * @param  int $id The ID of the order item property instance to be deleted. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -10895,7 +10895,7 @@ class OrderApi
      *
      * @param  int $id The ID of the order item property instance to be deleted. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -11108,9 +11108,9 @@ class OrderApi
      *
      * @param  int $id The ID of the order item property instance to be loaded. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesOrderPropertyModelsOrderItemProperty
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderPropertyModelsOrderItemProperty
      */
     public function restOrdersItemsPropertiesIdGet($id)
     {
@@ -11125,13 +11125,13 @@ class OrderApi
      *
      * @param  int $id The ID of the order item property instance to be loaded. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesOrderPropertyModelsOrderItemProperty, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderPropertyModelsOrderItemProperty, HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersItemsPropertiesIdGetWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderPropertyModelsOrderItemProperty';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderPropertyModelsOrderItemProperty';
         $request = $this->restOrdersItemsPropertiesIdGetRequest($id);
 
         try {
@@ -11183,7 +11183,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesOrderPropertyModelsOrderItemProperty',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderPropertyModelsOrderItemProperty',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -11225,7 +11225,7 @@ class OrderApi
      */
     public function restOrdersItemsPropertiesIdGetAsyncWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderPropertyModelsOrderItemProperty';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderPropertyModelsOrderItemProperty';
         $request = $this->restOrdersItemsPropertiesIdGetRequest($id);
 
         return $this->client
@@ -11375,9 +11375,9 @@ class OrderApi
      * @param  int $id The ID of the order item property instance to be updated. (required)
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesOrderPropertyModelsOrderItemProperty
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderPropertyModelsOrderItemProperty
      */
     public function restOrdersItemsPropertiesIdPut($id, $body = null)
     {
@@ -11393,13 +11393,13 @@ class OrderApi
      * @param  int $id The ID of the order item property instance to be updated. (required)
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesOrderPropertyModelsOrderItemProperty, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderPropertyModelsOrderItemProperty, HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersItemsPropertiesIdPutWithHttpInfo($id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderPropertyModelsOrderItemProperty';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderPropertyModelsOrderItemProperty';
         $request = $this->restOrdersItemsPropertiesIdPutRequest($id, $body);
 
         try {
@@ -11451,7 +11451,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesOrderPropertyModelsOrderItemProperty',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderPropertyModelsOrderItemProperty',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -11495,7 +11495,7 @@ class OrderApi
      */
     public function restOrdersItemsPropertiesIdPutAsyncWithHttpInfo($id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderPropertyModelsOrderItemProperty';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderPropertyModelsOrderItemProperty';
         $request = $this->restOrdersItemsPropertiesIdPutRequest($id, $body);
 
         return $this->client
@@ -11648,9 +11648,9 @@ class OrderApi
      *
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesOrderPropertyModelsOrderItemProperty
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderPropertyModelsOrderItemProperty
      */
     public function restOrdersItemsPropertiesPost($body = null)
     {
@@ -11665,13 +11665,13 @@ class OrderApi
      *
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesOrderPropertyModelsOrderItemProperty, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderPropertyModelsOrderItemProperty, HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersItemsPropertiesPostWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderPropertyModelsOrderItemProperty';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderPropertyModelsOrderItemProperty';
         $request = $this->restOrdersItemsPropertiesPostRequest($body);
 
         try {
@@ -11723,7 +11723,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesOrderPropertyModelsOrderItemProperty',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderPropertyModelsOrderItemProperty',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -11765,7 +11765,7 @@ class OrderApi
      */
     public function restOrdersItemsPropertiesPostAsyncWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderPropertyModelsOrderItemProperty';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderPropertyModelsOrderItemProperty';
         $request = $this->restOrdersItemsPropertiesPostRequest($body);
 
         return $this->client
@@ -11904,9 +11904,9 @@ class OrderApi
      * @param  string $transaction_ids The IDs of the order item transactions. (required)
      * @param  int $delivery_note_number The delivery note number. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesOrderBookingModelsOrderBooking
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderBookingModelsOrderBooking
      */
     public function restOrdersItemsTransactionsBookingPost($transaction_ids, $delivery_note_number = null)
     {
@@ -11922,13 +11922,13 @@ class OrderApi
      * @param  string $transaction_ids The IDs of the order item transactions. (required)
      * @param  int $delivery_note_number The delivery note number. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesOrderBookingModelsOrderBooking, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderBookingModelsOrderBooking, HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersItemsTransactionsBookingPostWithHttpInfo($transaction_ids, $delivery_note_number = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderBookingModelsOrderBooking';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderBookingModelsOrderBooking';
         $request = $this->restOrdersItemsTransactionsBookingPostRequest($transaction_ids, $delivery_note_number);
 
         try {
@@ -11980,7 +11980,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesOrderBookingModelsOrderBooking',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderBookingModelsOrderBooking',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -12024,7 +12024,7 @@ class OrderApi
      */
     public function restOrdersItemsTransactionsBookingPostAsyncWithHttpInfo($transaction_ids, $delivery_note_number = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderBookingModelsOrderBooking';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderBookingModelsOrderBooking';
         $request = $this->restOrdersItemsTransactionsBookingPostRequest($transaction_ids, $delivery_note_number);
 
         return $this->client
@@ -12182,7 +12182,7 @@ class OrderApi
      * @param  string $status The status of the transaction (optional)
      * @param  bool $is_booked Returns all booked transactions (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -12207,7 +12207,7 @@ class OrderApi
      * @param  string $status The status of the transaction (optional)
      * @param  bool $is_booked Returns all booked transactions (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -12502,9 +12502,9 @@ class OrderApi
      *
      * @param  int $transaction_id transaction_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse
      */
     public function restOrdersItemsTransactionsTransactionIdDelete($transaction_id)
     {
@@ -12519,13 +12519,13 @@ class OrderApi
      *
      * @param  int $transaction_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersItemsTransactionsTransactionIdDeleteWithHttpInfo($transaction_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse';
         $request = $this->restOrdersItemsTransactionsTransactionIdDeleteRequest($transaction_id);
 
         try {
@@ -12577,7 +12577,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -12619,7 +12619,7 @@ class OrderApi
      */
     public function restOrdersItemsTransactionsTransactionIdDeleteAsyncWithHttpInfo($transaction_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse';
         $request = $this->restOrdersItemsTransactionsTransactionIdDeleteRequest($transaction_id);
 
         return $this->client
@@ -12769,9 +12769,9 @@ class OrderApi
      * @param  int $transaction_id transaction_id (required)
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesOrderTransactionModelsOrderItemTransaction
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderTransactionModelsOrderItemTransaction
      */
     public function restOrdersItemsTransactionsTransactionIdPut($transaction_id, $body = null)
     {
@@ -12787,13 +12787,13 @@ class OrderApi
      * @param  int $transaction_id (required)
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesOrderTransactionModelsOrderItemTransaction, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderTransactionModelsOrderItemTransaction, HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersItemsTransactionsTransactionIdPutWithHttpInfo($transaction_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderTransactionModelsOrderItemTransaction';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderTransactionModelsOrderItemTransaction';
         $request = $this->restOrdersItemsTransactionsTransactionIdPutRequest($transaction_id, $body);
 
         try {
@@ -12845,7 +12845,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesOrderTransactionModelsOrderItemTransaction',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderTransactionModelsOrderItemTransaction',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -12889,7 +12889,7 @@ class OrderApi
      */
     public function restOrdersItemsTransactionsTransactionIdPutAsyncWithHttpInfo($transaction_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderTransactionModelsOrderItemTransaction';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderTransactionModelsOrderItemTransaction';
         $request = $this->restOrdersItemsTransactionsTransactionIdPutRequest($transaction_id, $body);
 
         return $this->client
@@ -13043,9 +13043,9 @@ class OrderApi
      * @param  int $order_id The ID of the order. (required)
      * @param  int $delivery_note_number The delivery note number. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesOrderBookingModelsOrderBooking
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderBookingModelsOrderBooking
      */
     public function restOrdersOrderIdBookingPost($order_id, $delivery_note_number = null)
     {
@@ -13061,13 +13061,13 @@ class OrderApi
      * @param  int $order_id The ID of the order. (required)
      * @param  int $delivery_note_number The delivery note number. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesOrderBookingModelsOrderBooking, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderBookingModelsOrderBooking, HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersOrderIdBookingPostWithHttpInfo($order_id, $delivery_note_number = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderBookingModelsOrderBooking';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderBookingModelsOrderBooking';
         $request = $this->restOrdersOrderIdBookingPostRequest($order_id, $delivery_note_number);
 
         try {
@@ -13119,7 +13119,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesOrderBookingModelsOrderBooking',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderBookingModelsOrderBooking',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -13163,7 +13163,7 @@ class OrderApi
      */
     public function restOrdersOrderIdBookingPostAsyncWithHttpInfo($order_id, $delivery_note_number = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderBookingModelsOrderBooking';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderBookingModelsOrderBooking';
         $request = $this->restOrdersOrderIdBookingPostRequest($order_id, $delivery_note_number);
 
         return $this->client
@@ -13318,7 +13318,7 @@ class OrderApi
      * @param  int $order_id The ID of the order to be canceled. (required)
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -13335,7 +13335,7 @@ class OrderApi
      * @param  int $order_id The ID of the order to be canceled. (required)
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -13554,9 +13554,9 @@ class OrderApi
      *
      * @param  int $order_id The ID of the order (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesOrderContactWishModelsContactWish
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderContactWishModelsContactWish
      */
     public function restOrdersOrderIdContactWishGet($order_id)
     {
@@ -13571,13 +13571,13 @@ class OrderApi
      *
      * @param  int $order_id The ID of the order (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesOrderContactWishModelsContactWish, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderContactWishModelsContactWish, HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersOrderIdContactWishGetWithHttpInfo($order_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderContactWishModelsContactWish';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderContactWishModelsContactWish';
         $request = $this->restOrdersOrderIdContactWishGetRequest($order_id);
 
         try {
@@ -13629,7 +13629,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesOrderContactWishModelsContactWish',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderContactWishModelsContactWish',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -13671,7 +13671,7 @@ class OrderApi
      */
     public function restOrdersOrderIdContactWishGetAsyncWithHttpInfo($order_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderContactWishModelsContactWish';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderContactWishModelsContactWish';
         $request = $this->restOrdersOrderIdContactWishGetRequest($order_id);
 
         return $this->client
@@ -13821,9 +13821,9 @@ class OrderApi
      * @param  int $order_id The ID of the order to redeem the coupon (required)
      * @param  string $coupon The coupon code to be redeemed (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesOrderCouponCodeValidationModelsCouponCodeValidation
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderCouponCodeValidationModelsCouponCodeValidation
      */
     public function restOrdersOrderIdCouponsCouponPost($order_id, $coupon)
     {
@@ -13839,13 +13839,13 @@ class OrderApi
      * @param  int $order_id The ID of the order to redeem the coupon (required)
      * @param  string $coupon The coupon code to be redeemed (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesOrderCouponCodeValidationModelsCouponCodeValidation, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderCouponCodeValidationModelsCouponCodeValidation, HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersOrderIdCouponsCouponPostWithHttpInfo($order_id, $coupon)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderCouponCodeValidationModelsCouponCodeValidation';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderCouponCodeValidationModelsCouponCodeValidation';
         $request = $this->restOrdersOrderIdCouponsCouponPostRequest($order_id, $coupon);
 
         try {
@@ -13897,7 +13897,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesOrderCouponCodeValidationModelsCouponCodeValidation',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderCouponCodeValidationModelsCouponCodeValidation',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -13941,7 +13941,7 @@ class OrderApi
      */
     public function restOrdersOrderIdCouponsCouponPostAsyncWithHttpInfo($order_id, $coupon)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderCouponCodeValidationModelsCouponCodeValidation';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderCouponCodeValidationModelsCouponCodeValidation';
         $request = $this->restOrdersOrderIdCouponsCouponPostRequest($order_id, $coupon);
 
         return $this->client
@@ -14105,9 +14105,9 @@ class OrderApi
      *
      * @param  int $order_id The ID of the order (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesOrderDateModelsOrderDate[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderDateModelsOrderDate[]
      */
     public function restOrdersOrderIdDatesGet($order_id)
     {
@@ -14122,13 +14122,13 @@ class OrderApi
      *
      * @param  int $order_id The ID of the order (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesOrderDateModelsOrderDate[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderDateModelsOrderDate[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersOrderIdDatesGetWithHttpInfo($order_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderDateModelsOrderDate[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderDateModelsOrderDate[]';
         $request = $this->restOrdersOrderIdDatesGetRequest($order_id);
 
         try {
@@ -14180,7 +14180,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesOrderDateModelsOrderDate[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderDateModelsOrderDate[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -14222,7 +14222,7 @@ class OrderApi
      */
     public function restOrdersOrderIdDatesGetAsyncWithHttpInfo($order_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderDateModelsOrderDate[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderDateModelsOrderDate[]';
         $request = $this->restOrdersOrderIdDatesGetRequest($order_id);
 
         return $this->client
@@ -14372,9 +14372,9 @@ class OrderApi
      * @param  int $type_id The ID of the order date type to be found (required)
      * @param  int $order_id The ID of the order (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesOrderDateModelsOrderDate
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderDateModelsOrderDate
      */
     public function restOrdersOrderIdDatesTypeIdGet($type_id, $order_id)
     {
@@ -14390,13 +14390,13 @@ class OrderApi
      * @param  int $type_id The ID of the order date type to be found (required)
      * @param  int $order_id The ID of the order (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesOrderDateModelsOrderDate, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderDateModelsOrderDate, HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersOrderIdDatesTypeIdGetWithHttpInfo($type_id, $order_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderDateModelsOrderDate';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderDateModelsOrderDate';
         $request = $this->restOrdersOrderIdDatesTypeIdGetRequest($type_id, $order_id);
 
         try {
@@ -14448,7 +14448,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesOrderDateModelsOrderDate',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderDateModelsOrderDate',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -14492,7 +14492,7 @@ class OrderApi
      */
     public function restOrdersOrderIdDatesTypeIdGetAsyncWithHttpInfo($type_id, $order_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderDateModelsOrderDate';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderDateModelsOrderDate';
         $request = $this->restOrdersOrderIdDatesTypeIdGetRequest($type_id, $order_id);
 
         return $this->client
@@ -14656,7 +14656,7 @@ class OrderApi
      *
      * @param  int $order_id The ID of the order to be deleted. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -14672,7 +14672,7 @@ class OrderApi
      *
      * @param  int $order_id The ID of the order to be deleted. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -14886,9 +14886,9 @@ class OrderApi
      * @param  int $order_id The ID of the order. (required)
      * @param  int $with Load additional relations for an order. Currently possible are:      * &lt;ul&gt;        &lt;li&gt;&#x27;addresses&#x27; &#x3D; The address objects that are associated with the order.&lt;/li&gt;        &lt;li&gt;&#x27;relations&#x27; &#x3D; The order relation reference instances that are associated with the order. These instances contain information such as the the reference type, the ID of the reference and the relation itself.&lt;/li&gt;        &lt;li&gt;&#x27;comments&#x27; &#x3D; The order comments.&lt;/li&gt;        &lt;li&gt;&#x27;location&#x27; &#x3D; The accounting location of the order.&lt;/li&gt;        &lt;li&gt;&#x27;payments&#x27; &#x3D; The payments that are associated with the order.&lt;/li&gt;        &lt;li&gt;&#x27;documents&#x27; &#x3D; The documents that are associated with the order.&lt;/li&gt;        &lt;li&gt;&#x27;contactSender&#x27; &#x3D; The associated contact for the contact-sender relation.&lt;/li&gt;        &lt;li&gt;&#x27;contactReceiver&#x27; &#x3D; The associated contact for the contact-receiver relation.&lt;/li&gt;        &lt;li&gt;&#x27;warehouseSender&#x27; &#x3D; The associated warehouse for the warehouse-sender relation.&lt;/li&gt;        &lt;li&gt;&#x27;warehouseReceiver&#x27; &#x3D; The associated warehouse for the warehouse-receiver relation.&lt;/li&gt;        &lt;li&gt;&#x27;orderItems.variation&#x27; &#x3D; The variation that is associated with the order item.&lt;/li&gt;        &lt;li&gt;&#x27;orderItems.giftCardCodes&#x27; &#x3D; The gift card codes that are associated with the order item.&lt;/li&gt;        &lt;li&gt;&#x27;orderItems.transactions&#x27; &#x3D; The transactions that are associated with the order item.&lt;/li&gt;        &lt;li&gt;&#x27;orderItems.serialNumbers&#x27; &#x3D; The serial numbers that are associated with the order item.&lt;/li&gt;        &lt;li&gt;&#x27;orderItems.variationBarcodes&#x27; &#x3D; The barcodes that are associated with variation of the order item.&lt;/li&gt;        &lt;li&gt;&#x27;orderItems.comments&#x27; &#x3D; The comments that are associated with the order item.&lt;/li&gt;        &lt;li&gt;&lt;b&gt;deprecated&lt;/b&gt; &#x27;orderItems.warehouseLocations&#x27; &#x3D; The warehouse locations that are associated with the order item.&lt;/li&gt;      &lt;/ul&gt;      Example: &lt;code&gt;?with[]&#x3D;addresses&amp;with[]&#x3D;orderItems.variation&lt;/code&gt; (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesOrderModelsOrder
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderModelsOrder
      */
     public function restOrdersOrderIdGet($order_id, $with = null)
     {
@@ -14904,13 +14904,13 @@ class OrderApi
      * @param  int $order_id The ID of the order. (required)
      * @param  int $with Load additional relations for an order. Currently possible are:      * &lt;ul&gt;        &lt;li&gt;&#x27;addresses&#x27; &#x3D; The address objects that are associated with the order.&lt;/li&gt;        &lt;li&gt;&#x27;relations&#x27; &#x3D; The order relation reference instances that are associated with the order. These instances contain information such as the the reference type, the ID of the reference and the relation itself.&lt;/li&gt;        &lt;li&gt;&#x27;comments&#x27; &#x3D; The order comments.&lt;/li&gt;        &lt;li&gt;&#x27;location&#x27; &#x3D; The accounting location of the order.&lt;/li&gt;        &lt;li&gt;&#x27;payments&#x27; &#x3D; The payments that are associated with the order.&lt;/li&gt;        &lt;li&gt;&#x27;documents&#x27; &#x3D; The documents that are associated with the order.&lt;/li&gt;        &lt;li&gt;&#x27;contactSender&#x27; &#x3D; The associated contact for the contact-sender relation.&lt;/li&gt;        &lt;li&gt;&#x27;contactReceiver&#x27; &#x3D; The associated contact for the contact-receiver relation.&lt;/li&gt;        &lt;li&gt;&#x27;warehouseSender&#x27; &#x3D; The associated warehouse for the warehouse-sender relation.&lt;/li&gt;        &lt;li&gt;&#x27;warehouseReceiver&#x27; &#x3D; The associated warehouse for the warehouse-receiver relation.&lt;/li&gt;        &lt;li&gt;&#x27;orderItems.variation&#x27; &#x3D; The variation that is associated with the order item.&lt;/li&gt;        &lt;li&gt;&#x27;orderItems.giftCardCodes&#x27; &#x3D; The gift card codes that are associated with the order item.&lt;/li&gt;        &lt;li&gt;&#x27;orderItems.transactions&#x27; &#x3D; The transactions that are associated with the order item.&lt;/li&gt;        &lt;li&gt;&#x27;orderItems.serialNumbers&#x27; &#x3D; The serial numbers that are associated with the order item.&lt;/li&gt;        &lt;li&gt;&#x27;orderItems.variationBarcodes&#x27; &#x3D; The barcodes that are associated with variation of the order item.&lt;/li&gt;        &lt;li&gt;&#x27;orderItems.comments&#x27; &#x3D; The comments that are associated with the order item.&lt;/li&gt;        &lt;li&gt;&lt;b&gt;deprecated&lt;/b&gt; &#x27;orderItems.warehouseLocations&#x27; &#x3D; The warehouse locations that are associated with the order item.&lt;/li&gt;      &lt;/ul&gt;      Example: &lt;code&gt;?with[]&#x3D;addresses&amp;with[]&#x3D;orderItems.variation&lt;/code&gt; (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesOrderModelsOrder, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderModelsOrder, HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersOrderIdGetWithHttpInfo($order_id, $with = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderModelsOrder';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderModelsOrder';
         $request = $this->restOrdersOrderIdGetRequest($order_id, $with);
 
         try {
@@ -14962,7 +14962,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesOrderModelsOrder',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderModelsOrder',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -15006,7 +15006,7 @@ class OrderApi
      */
     public function restOrdersOrderIdGetAsyncWithHttpInfo($order_id, $with = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderModelsOrder';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderModelsOrder';
         $request = $this->restOrdersOrderIdGetRequest($order_id, $with);
 
         return $this->client
@@ -15163,7 +15163,7 @@ class OrderApi
      * @param  int $items_per_page The number of order items to be displayed per page. The default number of order items per page is 50. The maximum number is 250. (optional)
      * @param  int $with Load additional relations for an order item. Currently possible are:     &lt;ul&gt;     &lt;li&gt;&#x27;variation&#x27; &#x3D; The variation that is associated with the order item.&lt;/li&gt;     &lt;li&gt;&#x27;giftCardCodes&#x27; &#x3D; The gift card codes that are associated with the order item.&lt;/li&gt;     &lt;li&gt;&#x27;transactions&#x27; &#x3D; The transactions that are associated with the order item.&lt;/li&gt;     &lt;li&gt;&#x27;serialNumbers&#x27; &#x3D; The serial numbers that are associated with the order item.&lt;/li&gt;     &lt;li&gt;&#x27;variationBarcodes&#x27; &#x3D; The barcodes that are associated with variation of the order item.&lt;/li&gt;     &lt;/ul&gt; (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -15183,7 +15183,7 @@ class OrderApi
      * @param  int $items_per_page The number of order items to be displayed per page. The default number of order items per page is 50. The maximum number is 250. (optional)
      * @param  int $with Load additional relations for an order item. Currently possible are:     &lt;ul&gt;     &lt;li&gt;&#x27;variation&#x27; &#x3D; The variation that is associated with the order item.&lt;/li&gt;     &lt;li&gt;&#x27;giftCardCodes&#x27; &#x3D; The gift card codes that are associated with the order item.&lt;/li&gt;     &lt;li&gt;&#x27;transactions&#x27; &#x3D; The transactions that are associated with the order item.&lt;/li&gt;     &lt;li&gt;&#x27;serialNumbers&#x27; &#x3D; The serial numbers that are associated with the order item.&lt;/li&gt;     &lt;li&gt;&#x27;variationBarcodes&#x27; &#x3D; The barcodes that are associated with variation of the order item.&lt;/li&gt;     &lt;/ul&gt; (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -15454,7 +15454,7 @@ class OrderApi
      * @param  int $order_id The ID of the order that the item belongs to. (required)
      * @param  int $order_item_id The ID of the order item to be deleted. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -15471,7 +15471,7 @@ class OrderApi
      * @param  int $order_id The ID of the order that the item belongs to. (required)
      * @param  int $order_item_id The ID of the order item to be deleted. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -15702,9 +15702,9 @@ class OrderApi
      * @param  int $order_id The ID of the order (required)
      * @param  int $order_item_id The ID of the order item (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesOrderSerialNumberModelsOrderSerialNumber[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderSerialNumberModelsOrderSerialNumber[]
      */
     public function restOrdersOrderIdItemsOrderItemIdSerialNumbersGet($order_id, $order_item_id)
     {
@@ -15720,13 +15720,13 @@ class OrderApi
      * @param  int $order_id The ID of the order (required)
      * @param  int $order_item_id The ID of the order item (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesOrderSerialNumberModelsOrderSerialNumber[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderSerialNumberModelsOrderSerialNumber[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersOrderIdItemsOrderItemIdSerialNumbersGetWithHttpInfo($order_id, $order_item_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderSerialNumberModelsOrderSerialNumber[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderSerialNumberModelsOrderSerialNumber[]';
         $request = $this->restOrdersOrderIdItemsOrderItemIdSerialNumbersGetRequest($order_id, $order_item_id);
 
         try {
@@ -15778,7 +15778,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesOrderSerialNumberModelsOrderSerialNumber[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderSerialNumberModelsOrderSerialNumber[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -15822,7 +15822,7 @@ class OrderApi
      */
     public function restOrdersOrderIdItemsOrderItemIdSerialNumbersGetAsyncWithHttpInfo($order_id, $order_item_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderSerialNumberModelsOrderSerialNumber[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderSerialNumberModelsOrderSerialNumber[]';
         $request = $this->restOrdersOrderIdItemsOrderItemIdSerialNumbersGetRequest($order_id, $order_item_id);
 
         return $this->client
@@ -15986,9 +15986,9 @@ class OrderApi
      *
      * @param  int $order_id The ID of the order (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesOrderSerialNumberModelsOrderSerialNumber[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderSerialNumberModelsOrderSerialNumber[]
      */
     public function restOrdersOrderIdItemsSerialNumbersGet($order_id)
     {
@@ -16003,13 +16003,13 @@ class OrderApi
      *
      * @param  int $order_id The ID of the order (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesOrderSerialNumberModelsOrderSerialNumber[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderSerialNumberModelsOrderSerialNumber[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersOrderIdItemsSerialNumbersGetWithHttpInfo($order_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderSerialNumberModelsOrderSerialNumber[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderSerialNumberModelsOrderSerialNumber[]';
         $request = $this->restOrdersOrderIdItemsSerialNumbersGetRequest($order_id);
 
         try {
@@ -16061,7 +16061,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesOrderSerialNumberModelsOrderSerialNumber[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderSerialNumberModelsOrderSerialNumber[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -16103,7 +16103,7 @@ class OrderApi
      */
     public function restOrdersOrderIdItemsSerialNumbersGetAsyncWithHttpInfo($order_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderSerialNumberModelsOrderSerialNumber[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderSerialNumberModelsOrderSerialNumber[]';
         $request = $this->restOrdersOrderIdItemsSerialNumbersGetRequest($order_id);
 
         return $this->client
@@ -16252,7 +16252,7 @@ class OrderApi
      *
      * @param  int $order_id The ID of the order (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -16268,7 +16268,7 @@ class OrderApi
      *
      * @param  int $order_id The ID of the order (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -16482,7 +16482,7 @@ class OrderApi
      * @param  int $order_id The ID of the order (required)
      * @param  string $date The date that is saved as booking date for the outgoing stock. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -16499,7 +16499,7 @@ class OrderApi
      * @param  int $order_id The ID of the order (required)
      * @param  string $date The date that is saved as booking date for the outgoing stock. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -16719,7 +16719,7 @@ class OrderApi
      *
      * @param  int $order_id The ID of the order (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return string[]
      */
@@ -16736,7 +16736,7 @@ class OrderApi
      *
      * @param  int $order_id The ID of the order (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of string[], HTTP status code, HTTP response headers (array of strings)
      */
@@ -16986,9 +16986,9 @@ class OrderApi
      * @param  int $order_id order_id (required)
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesOrderPropertyModelsOrderProperty
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderPropertyModelsOrderProperty
      */
     public function restOrdersOrderIdPropertiesPost($order_id, $body = null)
     {
@@ -17004,13 +17004,13 @@ class OrderApi
      * @param  int $order_id (required)
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesOrderPropertyModelsOrderProperty, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderPropertyModelsOrderProperty, HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersOrderIdPropertiesPostWithHttpInfo($order_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderPropertyModelsOrderProperty';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderPropertyModelsOrderProperty';
         $request = $this->restOrdersOrderIdPropertiesPostRequest($order_id, $body);
 
         try {
@@ -17062,7 +17062,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesOrderPropertyModelsOrderProperty',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderPropertyModelsOrderProperty',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -17106,7 +17106,7 @@ class OrderApi
      */
     public function restOrdersOrderIdPropertiesPostAsyncWithHttpInfo($order_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderPropertyModelsOrderProperty';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderPropertyModelsOrderProperty';
         $request = $this->restOrdersOrderIdPropertiesPostRequest($order_id, $body);
 
         return $this->client
@@ -17261,9 +17261,9 @@ class OrderApi
      * @param  int $type_id type_id (required)
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse
      */
     public function restOrdersOrderIdPropertiesTypeIdDelete($order_id, $type_id, $body = null)
     {
@@ -17280,13 +17280,13 @@ class OrderApi
      * @param  int $type_id (required)
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersOrderIdPropertiesTypeIdDeleteWithHttpInfo($order_id, $type_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse';
         $request = $this->restOrdersOrderIdPropertiesTypeIdDeleteRequest($order_id, $type_id, $body);
 
         try {
@@ -17338,7 +17338,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -17384,7 +17384,7 @@ class OrderApi
      */
     public function restOrdersOrderIdPropertiesTypeIdDeleteAsyncWithHttpInfo($order_id, $type_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse';
         $request = $this->restOrdersOrderIdPropertiesTypeIdDeleteRequest($order_id, $type_id, $body);
 
         return $this->client
@@ -17553,9 +17553,9 @@ class OrderApi
      * @param  int $order_id The ID of the order (required)
      * @param  int $type_id The property type ID (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesOrderPropertyModelsOrderProperty[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderPropertyModelsOrderProperty[]
      */
     public function restOrdersOrderIdPropertiesTypeIdGet($order_id, $type_id)
     {
@@ -17571,13 +17571,13 @@ class OrderApi
      * @param  int $order_id The ID of the order (required)
      * @param  int $type_id The property type ID (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesOrderPropertyModelsOrderProperty[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderPropertyModelsOrderProperty[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersOrderIdPropertiesTypeIdGetWithHttpInfo($order_id, $type_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderPropertyModelsOrderProperty[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderPropertyModelsOrderProperty[]';
         $request = $this->restOrdersOrderIdPropertiesTypeIdGetRequest($order_id, $type_id);
 
         try {
@@ -17629,7 +17629,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesOrderPropertyModelsOrderProperty[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderPropertyModelsOrderProperty[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -17673,7 +17673,7 @@ class OrderApi
      */
     public function restOrdersOrderIdPropertiesTypeIdGetAsyncWithHttpInfo($order_id, $type_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderPropertyModelsOrderProperty[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderPropertyModelsOrderProperty[]';
         $request = $this->restOrdersOrderIdPropertiesTypeIdGetRequest($order_id, $type_id);
 
         return $this->client
@@ -17839,9 +17839,9 @@ class OrderApi
      * @param  int $type_id type_id (required)
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesOrderPropertyModelsOrderProperty
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderPropertyModelsOrderProperty
      */
     public function restOrdersOrderIdPropertiesTypeIdPut($order_id, $type_id, $body = null)
     {
@@ -17858,13 +17858,13 @@ class OrderApi
      * @param  int $type_id (required)
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesOrderPropertyModelsOrderProperty, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderPropertyModelsOrderProperty, HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersOrderIdPropertiesTypeIdPutWithHttpInfo($order_id, $type_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderPropertyModelsOrderProperty';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderPropertyModelsOrderProperty';
         $request = $this->restOrdersOrderIdPropertiesTypeIdPutRequest($order_id, $type_id, $body);
 
         try {
@@ -17916,7 +17916,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesOrderPropertyModelsOrderProperty',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderPropertyModelsOrderProperty',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -17962,7 +17962,7 @@ class OrderApi
      */
     public function restOrdersOrderIdPropertiesTypeIdPutAsyncWithHttpInfo($order_id, $type_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderPropertyModelsOrderProperty';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderPropertyModelsOrderProperty';
         $request = $this->restOrdersOrderIdPropertiesTypeIdPutRequest($order_id, $type_id, $body);
 
         return $this->client
@@ -18131,9 +18131,9 @@ class OrderApi
      * @param  int $order_id The ID of the order (required)
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesOrderModelsOrder
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderModelsOrder
      */
     public function restOrdersOrderIdPut($order_id, $body = null)
     {
@@ -18149,13 +18149,13 @@ class OrderApi
      * @param  int $order_id The ID of the order (required)
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesOrderModelsOrder, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderModelsOrder, HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersOrderIdPutWithHttpInfo($order_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderModelsOrder';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderModelsOrder';
         $request = $this->restOrdersOrderIdPutRequest($order_id, $body);
 
         try {
@@ -18207,7 +18207,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesOrderModelsOrder',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderModelsOrder',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -18251,7 +18251,7 @@ class OrderApi
      */
     public function restOrdersOrderIdPutAsyncWithHttpInfo($order_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderModelsOrder';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderModelsOrder';
         $request = $this->restOrdersOrderIdPutRequest($order_id, $body);
 
         return $this->client
@@ -18404,7 +18404,7 @@ class OrderApi
      *
      * @param  int $order_id The ID of the order (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -18420,7 +18420,7 @@ class OrderApi
      *
      * @param  int $order_id The ID of the order (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -18635,9 +18635,9 @@ class OrderApi
      * @param  int $columns The properties to be loaded (optional)
      * @param  string $with Possible value is &#x27;labelBase64&#x27; (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesOrderShippingPackageModelsOrderShippingPackage[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderShippingPackageModelsOrderShippingPackage[]
      */
     public function restOrdersOrderIdShippingPackagesGet($order_id, $columns = null, $with = null)
     {
@@ -18654,13 +18654,13 @@ class OrderApi
      * @param  int $columns The properties to be loaded (optional)
      * @param  string $with Possible value is &#x27;labelBase64&#x27; (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesOrderShippingPackageModelsOrderShippingPackage[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderShippingPackageModelsOrderShippingPackage[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersOrderIdShippingPackagesGetWithHttpInfo($order_id, $columns = null, $with = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderShippingPackageModelsOrderShippingPackage[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderShippingPackageModelsOrderShippingPackage[]';
         $request = $this->restOrdersOrderIdShippingPackagesGetRequest($order_id, $columns, $with);
 
         try {
@@ -18712,7 +18712,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesOrderShippingPackageModelsOrderShippingPackage[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderShippingPackageModelsOrderShippingPackage[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -18758,7 +18758,7 @@ class OrderApi
      */
     public function restOrdersOrderIdShippingPackagesGetAsyncWithHttpInfo($order_id, $columns = null, $with = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderShippingPackageModelsOrderShippingPackage[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderShippingPackageModelsOrderShippingPackage[]';
         $request = $this->restOrdersOrderIdShippingPackagesGetRequest($order_id, $columns, $with);
 
         return $this->client
@@ -18915,9 +18915,9 @@ class OrderApi
      *
      * @param  int $order_id order_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesOrderShippingPackageModelsOrderShippingPackageItems
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderShippingPackageModelsOrderShippingPackageItems
      */
     public function restOrdersOrderIdShippingPackagesItemsGet($order_id)
     {
@@ -18930,13 +18930,13 @@ class OrderApi
      *
      * @param  int $order_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesOrderShippingPackageModelsOrderShippingPackageItems, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderShippingPackageModelsOrderShippingPackageItems, HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersOrderIdShippingPackagesItemsGetWithHttpInfo($order_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderShippingPackageModelsOrderShippingPackageItems';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderShippingPackageModelsOrderShippingPackageItems';
         $request = $this->restOrdersOrderIdShippingPackagesItemsGetRequest($order_id);
 
         try {
@@ -18988,7 +18988,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesOrderShippingPackageModelsOrderShippingPackageItems',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderShippingPackageModelsOrderShippingPackageItems',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -19030,7 +19030,7 @@ class OrderApi
      */
     public function restOrdersOrderIdShippingPackagesItemsGetAsyncWithHttpInfo($order_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderShippingPackageModelsOrderShippingPackageItems';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderShippingPackageModelsOrderShippingPackageItems';
         $request = $this->restOrdersOrderIdShippingPackagesItemsGetRequest($order_id);
 
         return $this->client
@@ -19180,7 +19180,7 @@ class OrderApi
      * @param  int $order_id The ID of the order (required)
      * @param  int $order_shipping_package_id The ID of the order shipping package (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -19197,7 +19197,7 @@ class OrderApi
      * @param  int $order_id The ID of the order (required)
      * @param  int $order_shipping_package_id The ID of the order shipping package (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -19429,9 +19429,9 @@ class OrderApi
      * @param  int $order_shipping_package_id The ID of the order shipping package (required)
      * @param  int $columns The properties to be loaded (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesOrderShippingPackageModelsOrderShippingPackage
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderShippingPackageModelsOrderShippingPackage
      */
     public function restOrdersOrderIdShippingPackagesOrderShippingPackageIdGet($order_id, $order_shipping_package_id, $columns = null)
     {
@@ -19448,13 +19448,13 @@ class OrderApi
      * @param  int $order_shipping_package_id The ID of the order shipping package (required)
      * @param  int $columns The properties to be loaded (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesOrderShippingPackageModelsOrderShippingPackage, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderShippingPackageModelsOrderShippingPackage, HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersOrderIdShippingPackagesOrderShippingPackageIdGetWithHttpInfo($order_id, $order_shipping_package_id, $columns = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderShippingPackageModelsOrderShippingPackage';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderShippingPackageModelsOrderShippingPackage';
         $request = $this->restOrdersOrderIdShippingPackagesOrderShippingPackageIdGetRequest($order_id, $order_shipping_package_id, $columns);
 
         try {
@@ -19506,7 +19506,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesOrderShippingPackageModelsOrderShippingPackage',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderShippingPackageModelsOrderShippingPackage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -19552,7 +19552,7 @@ class OrderApi
      */
     public function restOrdersOrderIdShippingPackagesOrderShippingPackageIdGetAsyncWithHttpInfo($order_id, $order_shipping_package_id, $columns = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderShippingPackageModelsOrderShippingPackage';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderShippingPackageModelsOrderShippingPackage';
         $request = $this->restOrdersOrderIdShippingPackagesOrderShippingPackageIdGetRequest($order_id, $order_shipping_package_id, $columns);
 
         return $this->client
@@ -19723,9 +19723,9 @@ class OrderApi
      * @param  int $order_shipping_package_id The ID of the order shipping package (required)
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesOrderShippingPackageModelsOrderShippingPackage
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderShippingPackageModelsOrderShippingPackage
      */
     public function restOrdersOrderIdShippingPackagesOrderShippingPackageIdPut($order_id, $order_shipping_package_id, $body = null)
     {
@@ -19742,13 +19742,13 @@ class OrderApi
      * @param  int $order_shipping_package_id The ID of the order shipping package (required)
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesOrderShippingPackageModelsOrderShippingPackage, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderShippingPackageModelsOrderShippingPackage, HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersOrderIdShippingPackagesOrderShippingPackageIdPutWithHttpInfo($order_id, $order_shipping_package_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderShippingPackageModelsOrderShippingPackage';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderShippingPackageModelsOrderShippingPackage';
         $request = $this->restOrdersOrderIdShippingPackagesOrderShippingPackageIdPutRequest($order_id, $order_shipping_package_id, $body);
 
         try {
@@ -19800,7 +19800,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesOrderShippingPackageModelsOrderShippingPackage',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderShippingPackageModelsOrderShippingPackage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -19846,7 +19846,7 @@ class OrderApi
      */
     public function restOrdersOrderIdShippingPackagesOrderShippingPackageIdPutAsyncWithHttpInfo($order_id, $order_shipping_package_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderShippingPackageModelsOrderShippingPackage';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderShippingPackageModelsOrderShippingPackage';
         $request = $this->restOrdersOrderIdShippingPackagesOrderShippingPackageIdPutRequest($order_id, $order_shipping_package_id, $body);
 
         return $this->client
@@ -20012,9 +20012,9 @@ class OrderApi
      *
      * @param  int $order_id order_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\Mixed[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\Mixed[]
      */
     public function restOrdersOrderIdShippingPackagesPackedItemsGet($order_id)
     {
@@ -20027,13 +20027,13 @@ class OrderApi
      *
      * @param  int $order_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\Mixed[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\Mixed[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersOrderIdShippingPackagesPackedItemsGetWithHttpInfo($order_id)
     {
-        $returnType = '\Swagger\Client\Model\Mixed[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\Mixed[]';
         $request = $this->restOrdersOrderIdShippingPackagesPackedItemsGetRequest($order_id);
 
         try {
@@ -20085,7 +20085,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\Mixed[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\Mixed[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -20127,7 +20127,7 @@ class OrderApi
      */
     public function restOrdersOrderIdShippingPackagesPackedItemsGetAsyncWithHttpInfo($order_id)
     {
-        $returnType = '\Swagger\Client\Model\Mixed[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\Mixed[]';
         $request = $this->restOrdersOrderIdShippingPackagesPackedItemsGetRequest($order_id);
 
         return $this->client
@@ -20277,9 +20277,9 @@ class OrderApi
      * @param  int $order_id The ID of the order (required)
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesOrderShippingPackageModelsOrderShippingPackage
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderShippingPackageModelsOrderShippingPackage
      */
     public function restOrdersOrderIdShippingPackagesPost($order_id, $body = null)
     {
@@ -20295,13 +20295,13 @@ class OrderApi
      * @param  int $order_id The ID of the order (required)
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesOrderShippingPackageModelsOrderShippingPackage, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderShippingPackageModelsOrderShippingPackage, HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersOrderIdShippingPackagesPostWithHttpInfo($order_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderShippingPackageModelsOrderShippingPackage';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderShippingPackageModelsOrderShippingPackage';
         $request = $this->restOrdersOrderIdShippingPackagesPostRequest($order_id, $body);
 
         try {
@@ -20353,7 +20353,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesOrderShippingPackageModelsOrderShippingPackage',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderShippingPackageModelsOrderShippingPackage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -20397,7 +20397,7 @@ class OrderApi
      */
     public function restOrdersOrderIdShippingPackagesPostAsyncWithHttpInfo($order_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderShippingPackageModelsOrderShippingPackage';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderShippingPackageModelsOrderShippingPackage';
         $request = $this->restOrdersOrderIdShippingPackagesPostRequest($order_id, $body);
 
         return $this->client
@@ -20548,9 +20548,9 @@ class OrderApi
      *
      * @param  int $order_id order_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\Mixed[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\Mixed[]
      */
     public function restOrdersOrderIdShippingPackagesUnpackedItemsGet($order_id)
     {
@@ -20563,13 +20563,13 @@ class OrderApi
      *
      * @param  int $order_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\Mixed[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\Mixed[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersOrderIdShippingPackagesUnpackedItemsGetWithHttpInfo($order_id)
     {
-        $returnType = '\Swagger\Client\Model\Mixed[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\Mixed[]';
         $request = $this->restOrdersOrderIdShippingPackagesUnpackedItemsGetRequest($order_id);
 
         try {
@@ -20621,7 +20621,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\Mixed[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\Mixed[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -20663,7 +20663,7 @@ class OrderApi
      */
     public function restOrdersOrderIdShippingPackagesUnpackedItemsGetAsyncWithHttpInfo($order_id)
     {
-        $returnType = '\Swagger\Client\Model\Mixed[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\Mixed[]';
         $request = $this->restOrdersOrderIdShippingPackagesUnpackedItemsGetRequest($order_id);
 
         return $this->client
@@ -20810,9 +20810,9 @@ class OrderApi
      *
      * @param  int $order_id order_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesOrderShippingPackageModelsOrderShippingPackageItems
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderShippingPackageModelsOrderShippingPackageItems
      */
     public function restOrdersOrderIdShippingPalletsPackagesItemsGet($order_id)
     {
@@ -20825,13 +20825,13 @@ class OrderApi
      *
      * @param  int $order_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesOrderShippingPackageModelsOrderShippingPackageItems, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderShippingPackageModelsOrderShippingPackageItems, HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersOrderIdShippingPalletsPackagesItemsGetWithHttpInfo($order_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderShippingPackageModelsOrderShippingPackageItems';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderShippingPackageModelsOrderShippingPackageItems';
         $request = $this->restOrdersOrderIdShippingPalletsPackagesItemsGetRequest($order_id);
 
         try {
@@ -20883,7 +20883,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesOrderShippingPackageModelsOrderShippingPackageItems',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderShippingPackageModelsOrderShippingPackageItems',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -20925,7 +20925,7 @@ class OrderApi
      */
     public function restOrdersOrderIdShippingPalletsPackagesItemsGetAsyncWithHttpInfo($order_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderShippingPackageModelsOrderShippingPackageItems';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderShippingPackageModelsOrderShippingPackageItems';
         $request = $this->restOrdersOrderIdShippingPalletsPackagesItemsGetRequest($order_id);
 
         return $this->client
@@ -21075,7 +21075,7 @@ class OrderApi
      * @param  int $order_id The ID of the order (required)
      * @param  int $pallet_id The ID of the pallet (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -21092,7 +21092,7 @@ class OrderApi
      * @param  int $order_id The ID of the order (required)
      * @param  int $pallet_id The ID of the pallet (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -21321,9 +21321,9 @@ class OrderApi
      * @param  int $order_id order_id (required)
      * @param  int $pallet_id pallet_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesOrderShippingPackageModelsOrderShippingPackage[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderShippingPackageModelsOrderShippingPackage[]
      */
     public function restOrdersOrderIdShippingPalletsPalletIdPackagesGet($order_id, $pallet_id)
     {
@@ -21337,13 +21337,13 @@ class OrderApi
      * @param  int $order_id (required)
      * @param  int $pallet_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesOrderShippingPackageModelsOrderShippingPackage[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderShippingPackageModelsOrderShippingPackage[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersOrderIdShippingPalletsPalletIdPackagesGetWithHttpInfo($order_id, $pallet_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderShippingPackageModelsOrderShippingPackage[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderShippingPackageModelsOrderShippingPackage[]';
         $request = $this->restOrdersOrderIdShippingPalletsPalletIdPackagesGetRequest($order_id, $pallet_id);
 
         try {
@@ -21395,7 +21395,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesOrderShippingPackageModelsOrderShippingPackage[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderShippingPackageModelsOrderShippingPackage[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -21439,7 +21439,7 @@ class OrderApi
      */
     public function restOrdersOrderIdShippingPalletsPalletIdPackagesGetAsyncWithHttpInfo($order_id, $pallet_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderShippingPackageModelsOrderShippingPackage[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderShippingPackageModelsOrderShippingPackage[]';
         $request = $this->restOrdersOrderIdShippingPalletsPalletIdPackagesGetRequest($order_id, $pallet_id);
 
         return $this->client
@@ -21604,9 +21604,9 @@ class OrderApi
      * @param  int $order_id The ID of the order (required)
      * @param  int $pallet_id The ID of the pallet (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyDataSimpleRestResponse
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse
      */
     public function restOrdersOrderIdShippingPalletsPalletIdPackagesPut($order_id, $pallet_id)
     {
@@ -21622,13 +21622,13 @@ class OrderApi
      * @param  int $order_id The ID of the order (required)
      * @param  int $pallet_id The ID of the pallet (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyDataSimpleRestResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersOrderIdShippingPalletsPalletIdPackagesPutWithHttpInfo($order_id, $pallet_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyDataSimpleRestResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse';
         $request = $this->restOrdersOrderIdShippingPalletsPalletIdPackagesPutRequest($order_id, $pallet_id);
 
         try {
@@ -21680,7 +21680,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyDataSimpleRestResponse',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -21724,7 +21724,7 @@ class OrderApi
      */
     public function restOrdersOrderIdShippingPalletsPalletIdPackagesPutAsyncWithHttpInfo($order_id, $pallet_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyDataSimpleRestResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse';
         $request = $this->restOrdersOrderIdShippingPalletsPalletIdPackagesPutRequest($order_id, $pallet_id);
 
         return $this->client
@@ -21888,9 +21888,9 @@ class OrderApi
      *
      * @param  int $order_id order_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesOrderShippingInformationModelsShippingInformation
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderShippingInformationModelsShippingInformation
      */
     public function restOrdersOrderIdShippingShippingInformationAdditionalDataPut($order_id)
     {
@@ -21905,13 +21905,13 @@ class OrderApi
      *
      * @param  int $order_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesOrderShippingInformationModelsShippingInformation, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderShippingInformationModelsShippingInformation, HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersOrderIdShippingShippingInformationAdditionalDataPutWithHttpInfo($order_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderShippingInformationModelsShippingInformation';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderShippingInformationModelsShippingInformation';
         $request = $this->restOrdersOrderIdShippingShippingInformationAdditionalDataPutRequest($order_id);
 
         try {
@@ -21963,7 +21963,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesOrderShippingInformationModelsShippingInformation',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderShippingInformationModelsShippingInformation',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -22005,7 +22005,7 @@ class OrderApi
      */
     public function restOrdersOrderIdShippingShippingInformationAdditionalDataPutAsyncWithHttpInfo($order_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderShippingInformationModelsShippingInformation';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderShippingInformationModelsShippingInformation';
         $request = $this->restOrdersOrderIdShippingShippingInformationAdditionalDataPutRequest($order_id);
 
         return $this->client
@@ -22154,9 +22154,9 @@ class OrderApi
      *
      * @param  int $order_id order_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesOrderShippingInformationModelsShippingInformation
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderShippingInformationModelsShippingInformation
      */
     public function restOrdersOrderIdShippingShippingInformationDelete($order_id)
     {
@@ -22171,13 +22171,13 @@ class OrderApi
      *
      * @param  int $order_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesOrderShippingInformationModelsShippingInformation, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderShippingInformationModelsShippingInformation, HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersOrderIdShippingShippingInformationDeleteWithHttpInfo($order_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderShippingInformationModelsShippingInformation';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderShippingInformationModelsShippingInformation';
         $request = $this->restOrdersOrderIdShippingShippingInformationDeleteRequest($order_id);
 
         try {
@@ -22229,7 +22229,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesOrderShippingInformationModelsShippingInformation',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderShippingInformationModelsShippingInformation',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -22271,7 +22271,7 @@ class OrderApi
      */
     public function restOrdersOrderIdShippingShippingInformationDeleteAsyncWithHttpInfo($order_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderShippingInformationModelsShippingInformation';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderShippingInformationModelsShippingInformation';
         $request = $this->restOrdersOrderIdShippingShippingInformationDeleteRequest($order_id);
 
         return $this->client
@@ -22420,9 +22420,9 @@ class OrderApi
      *
      * @param  int $order_id order_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesOrderShippingInformationModelsShippingInformation
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderShippingInformationModelsShippingInformation
      */
     public function restOrdersOrderIdShippingShippingInformationGet($order_id)
     {
@@ -22437,13 +22437,13 @@ class OrderApi
      *
      * @param  int $order_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesOrderShippingInformationModelsShippingInformation, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderShippingInformationModelsShippingInformation, HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersOrderIdShippingShippingInformationGetWithHttpInfo($order_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderShippingInformationModelsShippingInformation';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderShippingInformationModelsShippingInformation';
         $request = $this->restOrdersOrderIdShippingShippingInformationGetRequest($order_id);
 
         try {
@@ -22495,7 +22495,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesOrderShippingInformationModelsShippingInformation',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderShippingInformationModelsShippingInformation',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -22537,7 +22537,7 @@ class OrderApi
      */
     public function restOrdersOrderIdShippingShippingInformationGetAsyncWithHttpInfo($order_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderShippingInformationModelsShippingInformation';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderShippingInformationModelsShippingInformation';
         $request = $this->restOrdersOrderIdShippingShippingInformationGetRequest($order_id);
 
         return $this->client
@@ -22686,9 +22686,9 @@ class OrderApi
      *
      * @param  int $order_id order_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesOrderShippingInformationModelsShippingInformation
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderShippingInformationModelsShippingInformation
      */
     public function restOrdersOrderIdShippingShippingInformationStatusPut($order_id)
     {
@@ -22703,13 +22703,13 @@ class OrderApi
      *
      * @param  int $order_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesOrderShippingInformationModelsShippingInformation, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderShippingInformationModelsShippingInformation, HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersOrderIdShippingShippingInformationStatusPutWithHttpInfo($order_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderShippingInformationModelsShippingInformation';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderShippingInformationModelsShippingInformation';
         $request = $this->restOrdersOrderIdShippingShippingInformationStatusPutRequest($order_id);
 
         try {
@@ -22761,7 +22761,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesOrderShippingInformationModelsShippingInformation',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderShippingInformationModelsShippingInformation',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -22803,7 +22803,7 @@ class OrderApi
      */
     public function restOrdersOrderIdShippingShippingInformationStatusPutAsyncWithHttpInfo($order_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderShippingInformationModelsShippingInformation';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderShippingInformationModelsShippingInformation';
         $request = $this->restOrdersOrderIdShippingShippingInformationStatusPutRequest($order_id);
 
         return $this->client
@@ -22952,9 +22952,9 @@ class OrderApi
      *
      * @param  int $order_id The ID of the order (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesOrderStatusHistoryModelsStatusHistoryEntry[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderStatusHistoryModelsStatusHistoryEntry[]
      */
     public function restOrdersOrderIdStatusHistoryGet($order_id)
     {
@@ -22969,13 +22969,13 @@ class OrderApi
      *
      * @param  int $order_id The ID of the order (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesOrderStatusHistoryModelsStatusHistoryEntry[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderStatusHistoryModelsStatusHistoryEntry[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersOrderIdStatusHistoryGetWithHttpInfo($order_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderStatusHistoryModelsStatusHistoryEntry[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderStatusHistoryModelsStatusHistoryEntry[]';
         $request = $this->restOrdersOrderIdStatusHistoryGetRequest($order_id);
 
         try {
@@ -23027,7 +23027,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesOrderStatusHistoryModelsStatusHistoryEntry[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderStatusHistoryModelsStatusHistoryEntry[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -23069,7 +23069,7 @@ class OrderApi
      */
     public function restOrdersOrderIdStatusHistoryGetAsyncWithHttpInfo($order_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderStatusHistoryModelsStatusHistoryEntry[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderStatusHistoryModelsStatusHistoryEntry[]';
         $request = $this->restOrdersOrderIdStatusHistoryGetRequest($order_id);
 
         return $this->client
@@ -23219,9 +23219,9 @@ class OrderApi
      * @param  int $order_id The ID of the order (required)
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\IlluminateSupportCollection
+     * @return \BSApp\Service\plentymarketsAPI\Model\IlluminateSupportCollection
      */
     public function restOrdersOrderIdTransactionsPost($order_id, $body = null)
     {
@@ -23237,13 +23237,13 @@ class OrderApi
      * @param  int $order_id The ID of the order (required)
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\IlluminateSupportCollection, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\IlluminateSupportCollection, HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersOrderIdTransactionsPostWithHttpInfo($order_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\IlluminateSupportCollection';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\IlluminateSupportCollection';
         $request = $this->restOrdersOrderIdTransactionsPostRequest($order_id, $body);
 
         try {
@@ -23295,7 +23295,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\IlluminateSupportCollection',
+                        '\BSApp\Service\plentymarketsAPI\Model\IlluminateSupportCollection',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -23339,7 +23339,7 @@ class OrderApi
      */
     public function restOrdersOrderIdTransactionsPostAsyncWithHttpInfo($order_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\IlluminateSupportCollection';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\IlluminateSupportCollection';
         $request = $this->restOrdersOrderIdTransactionsPostRequest($order_id, $body);
 
         return $this->client
@@ -23493,9 +23493,9 @@ class OrderApi
      * @param  object $body body (optional)
      * @param  int $coupon One or multiple coupon code to be redeemed with order creation (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesOrderModelsOrder
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderModelsOrder
      */
     public function restOrdersPost($body = null, $coupon = null)
     {
@@ -23511,13 +23511,13 @@ class OrderApi
      * @param  object $body (optional)
      * @param  int $coupon One or multiple coupon code to be redeemed with order creation (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesOrderModelsOrder, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderModelsOrder, HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersPostWithHttpInfo($body = null, $coupon = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderModelsOrder';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderModelsOrder';
         $request = $this->restOrdersPostRequest($body, $coupon);
 
         try {
@@ -23569,7 +23569,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesOrderModelsOrder',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderModelsOrder',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -23613,7 +23613,7 @@ class OrderApi
      */
     public function restOrdersPostAsyncWithHttpInfo($body = null, $coupon = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderModelsOrder';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderModelsOrder';
         $request = $this->restOrdersPostRequest($body, $coupon);
 
         return $this->client
@@ -23756,9 +23756,9 @@ class OrderApi
      *
      * @param  int $id The ID of the property to be deleted. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse
      */
     public function restOrdersPropertiesIdDelete($id)
     {
@@ -23773,13 +23773,13 @@ class OrderApi
      *
      * @param  int $id The ID of the property to be deleted. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersPropertiesIdDeleteWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse';
         $request = $this->restOrdersPropertiesIdDeleteRequest($id);
 
         try {
@@ -23831,7 +23831,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -23873,7 +23873,7 @@ class OrderApi
      */
     public function restOrdersPropertiesIdDeleteAsyncWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse';
         $request = $this->restOrdersPropertiesIdDeleteRequest($id);
 
         return $this->client
@@ -24023,9 +24023,9 @@ class OrderApi
      * @param  int $id id (required)
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesOrderPropertyModelsOrderProperty
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderPropertyModelsOrderProperty
      */
     public function restOrdersPropertiesIdPut($id, $body = null)
     {
@@ -24041,13 +24041,13 @@ class OrderApi
      * @param  int $id (required)
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesOrderPropertyModelsOrderProperty, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderPropertyModelsOrderProperty, HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersPropertiesIdPutWithHttpInfo($id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderPropertyModelsOrderProperty';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderPropertyModelsOrderProperty';
         $request = $this->restOrdersPropertiesIdPutRequest($id, $body);
 
         try {
@@ -24099,7 +24099,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesOrderPropertyModelsOrderProperty',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderPropertyModelsOrderProperty',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -24143,7 +24143,7 @@ class OrderApi
      */
     public function restOrdersPropertiesIdPutAsyncWithHttpInfo($id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderPropertyModelsOrderProperty';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderPropertyModelsOrderProperty';
         $request = $this->restOrdersPropertiesIdPutRequest($id, $body);
 
         return $this->client
@@ -24296,9 +24296,9 @@ class OrderApi
      *
      * @param  int $lang Languages to be loaded with the type model. Defaults to all. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesOrderPropertyModelsOrderPropertyType[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderPropertyModelsOrderPropertyType[]
      */
     public function restOrdersPropertiesTypesGet($lang = null)
     {
@@ -24313,13 +24313,13 @@ class OrderApi
      *
      * @param  int $lang Languages to be loaded with the type model. Defaults to all. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesOrderPropertyModelsOrderPropertyType[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderPropertyModelsOrderPropertyType[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersPropertiesTypesGetWithHttpInfo($lang = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderPropertyModelsOrderPropertyType[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderPropertyModelsOrderPropertyType[]';
         $request = $this->restOrdersPropertiesTypesGetRequest($lang);
 
         try {
@@ -24371,7 +24371,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesOrderPropertyModelsOrderPropertyType[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderPropertyModelsOrderPropertyType[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -24413,7 +24413,7 @@ class OrderApi
      */
     public function restOrdersPropertiesTypesGetAsyncWithHttpInfo($lang = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderPropertyModelsOrderPropertyType[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderPropertyModelsOrderPropertyType[]';
         $request = $this->restOrdersPropertiesTypesGetRequest($lang);
 
         return $this->client
@@ -24552,9 +24552,9 @@ class OrderApi
      *
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesOrderPropertyModelsOrderPropertyType
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderPropertyModelsOrderPropertyType
      */
     public function restOrdersPropertiesTypesPost($body = null)
     {
@@ -24569,13 +24569,13 @@ class OrderApi
      *
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesOrderPropertyModelsOrderPropertyType, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderPropertyModelsOrderPropertyType, HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersPropertiesTypesPostWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderPropertyModelsOrderPropertyType';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderPropertyModelsOrderPropertyType';
         $request = $this->restOrdersPropertiesTypesPostRequest($body);
 
         try {
@@ -24627,7 +24627,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesOrderPropertyModelsOrderPropertyType',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderPropertyModelsOrderPropertyType',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -24669,7 +24669,7 @@ class OrderApi
      */
     public function restOrdersPropertiesTypesPostAsyncWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderPropertyModelsOrderPropertyType';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderPropertyModelsOrderPropertyType';
         $request = $this->restOrdersPropertiesTypesPostRequest($body);
 
         return $this->client
@@ -24807,7 +24807,7 @@ class OrderApi
      *
      * @param  int $type_id The ID of the property type (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -24823,7 +24823,7 @@ class OrderApi
      *
      * @param  int $type_id The ID of the property type (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -25037,9 +25037,9 @@ class OrderApi
      * @param  int $type_id The ID of the type. (required)
      * @param  int $lang Languages to be loaded with the type model. Defaults to all. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesOrderPropertyModelsOrderPropertyType
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderPropertyModelsOrderPropertyType
      */
     public function restOrdersPropertiesTypesTypeIdGet($type_id, $lang = null)
     {
@@ -25055,13 +25055,13 @@ class OrderApi
      * @param  int $type_id The ID of the type. (required)
      * @param  int $lang Languages to be loaded with the type model. Defaults to all. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesOrderPropertyModelsOrderPropertyType, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderPropertyModelsOrderPropertyType, HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersPropertiesTypesTypeIdGetWithHttpInfo($type_id, $lang = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderPropertyModelsOrderPropertyType';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderPropertyModelsOrderPropertyType';
         $request = $this->restOrdersPropertiesTypesTypeIdGetRequest($type_id, $lang);
 
         try {
@@ -25113,7 +25113,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesOrderPropertyModelsOrderPropertyType',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderPropertyModelsOrderPropertyType',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -25157,7 +25157,7 @@ class OrderApi
      */
     public function restOrdersPropertiesTypesTypeIdGetAsyncWithHttpInfo($type_id, $lang = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderPropertyModelsOrderPropertyType';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderPropertyModelsOrderPropertyType';
         $request = $this->restOrdersPropertiesTypesTypeIdGetRequest($type_id, $lang);
 
         return $this->client
@@ -25312,9 +25312,9 @@ class OrderApi
      * @param  int $type_id type_id (required)
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesOrderPropertyModelsOrderPropertyType
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderPropertyModelsOrderPropertyType
      */
     public function restOrdersPropertiesTypesTypeIdPut($type_id, $body = null)
     {
@@ -25330,13 +25330,13 @@ class OrderApi
      * @param  int $type_id (required)
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesOrderPropertyModelsOrderPropertyType, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderPropertyModelsOrderPropertyType, HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersPropertiesTypesTypeIdPutWithHttpInfo($type_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderPropertyModelsOrderPropertyType';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderPropertyModelsOrderPropertyType';
         $request = $this->restOrdersPropertiesTypesTypeIdPutRequest($type_id, $body);
 
         try {
@@ -25388,7 +25388,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesOrderPropertyModelsOrderPropertyType',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderPropertyModelsOrderPropertyType',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -25432,7 +25432,7 @@ class OrderApi
      */
     public function restOrdersPropertiesTypesTypeIdPutAsyncWithHttpInfo($type_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderPropertyModelsOrderPropertyType';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderPropertyModelsOrderPropertyType';
         $request = $this->restOrdersPropertiesTypesTypeIdPutRequest($type_id, $body);
 
         return $this->client
@@ -25585,9 +25585,9 @@ class OrderApi
      *
      * @param  int $columns The desired columns/attributes of the order referrer to be loaded. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesOrderReferrerModelsOrderReferrer[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderReferrerModelsOrderReferrer[]
      */
     public function restOrdersReferrersGet($columns = null)
     {
@@ -25602,13 +25602,13 @@ class OrderApi
      *
      * @param  int $columns The desired columns/attributes of the order referrer to be loaded. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesOrderReferrerModelsOrderReferrer[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderReferrerModelsOrderReferrer[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersReferrersGetWithHttpInfo($columns = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderReferrerModelsOrderReferrer[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderReferrerModelsOrderReferrer[]';
         $request = $this->restOrdersReferrersGetRequest($columns);
 
         try {
@@ -25660,7 +25660,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesOrderReferrerModelsOrderReferrer[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderReferrerModelsOrderReferrer[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -25702,7 +25702,7 @@ class OrderApi
      */
     public function restOrdersReferrersGetAsyncWithHttpInfo($columns = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderReferrerModelsOrderReferrer[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderReferrerModelsOrderReferrer[]';
         $request = $this->restOrdersReferrersGetRequest($columns);
 
         return $this->client
@@ -25842,9 +25842,9 @@ class OrderApi
      * @param  int $data The attributes of the order referrer to be created. (required)
      * @param  int $parent_referrer_id parent_referrer_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesOrderReferrerModelsOrderReferrer
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderReferrerModelsOrderReferrer
      */
     public function restOrdersReferrersParentReferrerIdPost($data, $parent_referrer_id)
     {
@@ -25860,13 +25860,13 @@ class OrderApi
      * @param  int $data The attributes of the order referrer to be created. (required)
      * @param  int $parent_referrer_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesOrderReferrerModelsOrderReferrer, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderReferrerModelsOrderReferrer, HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersReferrersParentReferrerIdPostWithHttpInfo($data, $parent_referrer_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderReferrerModelsOrderReferrer';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderReferrerModelsOrderReferrer';
         $request = $this->restOrdersReferrersParentReferrerIdPostRequest($data, $parent_referrer_id);
 
         try {
@@ -25918,7 +25918,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesOrderReferrerModelsOrderReferrer',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderReferrerModelsOrderReferrer',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -25962,7 +25962,7 @@ class OrderApi
      */
     public function restOrdersReferrersParentReferrerIdPostAsyncWithHttpInfo($data, $parent_referrer_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderReferrerModelsOrderReferrer';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderReferrerModelsOrderReferrer';
         $request = $this->restOrdersReferrersParentReferrerIdPostRequest($data, $parent_referrer_id);
 
         return $this->client
@@ -26123,9 +26123,9 @@ class OrderApi
      * @param  int $active Returns only the active shipping countries. (optional)
      * @param  int $with The relations to be loaded. Possible values are &#x27;states&#x27; and &#x27;names&#x27;. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\IlluminateSupportCollection
+     * @return \BSApp\Service\plentymarketsAPI\Model\IlluminateSupportCollection
      */
     public function restOrdersShippingCountriesGet($active = null, $with = null)
     {
@@ -26141,13 +26141,13 @@ class OrderApi
      * @param  int $active Returns only the active shipping countries. (optional)
      * @param  int $with The relations to be loaded. Possible values are &#x27;states&#x27; and &#x27;names&#x27;. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\IlluminateSupportCollection, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\IlluminateSupportCollection, HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersShippingCountriesGetWithHttpInfo($active = null, $with = null)
     {
-        $returnType = '\Swagger\Client\Model\IlluminateSupportCollection';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\IlluminateSupportCollection';
         $request = $this->restOrdersShippingCountriesGetRequest($active, $with);
 
         try {
@@ -26199,7 +26199,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\IlluminateSupportCollection',
+                        '\BSApp\Service\plentymarketsAPI\Model\IlluminateSupportCollection',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -26243,7 +26243,7 @@ class OrderApi
      */
     public function restOrdersShippingCountriesGetAsyncWithHttpInfo($active = null, $with = null)
     {
-        $returnType = '\Swagger\Client\Model\IlluminateSupportCollection';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\IlluminateSupportCollection';
         $request = $this->restOrdersShippingCountriesGetRequest($active, $with);
 
         return $this->client
@@ -26386,9 +26386,9 @@ class OrderApi
      * List shipping package types
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesOrderShippingPackageTypeModelsShippingPackageType[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderShippingPackageTypeModelsShippingPackageType[]
      */
     public function restOrdersShippingPackageTypesGet()
     {
@@ -26402,13 +26402,13 @@ class OrderApi
      * List shipping package types
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesOrderShippingPackageTypeModelsShippingPackageType[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderShippingPackageTypeModelsShippingPackageType[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersShippingPackageTypesGetWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderShippingPackageTypeModelsShippingPackageType[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderShippingPackageTypeModelsShippingPackageType[]';
         $request = $this->restOrdersShippingPackageTypesGetRequest();
 
         try {
@@ -26460,7 +26460,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesOrderShippingPackageTypeModelsShippingPackageType[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderShippingPackageTypeModelsShippingPackageType[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -26500,7 +26500,7 @@ class OrderApi
      */
     public function restOrdersShippingPackageTypesGetAsyncWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderShippingPackageTypeModelsShippingPackageType[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderShippingPackageTypeModelsShippingPackageType[]';
         $request = $this->restOrdersShippingPackageTypesGetRequest();
 
         return $this->client
@@ -26634,9 +26634,9 @@ class OrderApi
      *
      * @param  int $shipping_package_type_id shipping_package_type_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesOrderShippingPackageTypeModelsShippingPackageType
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderShippingPackageTypeModelsShippingPackageType
      */
     public function restOrdersShippingPackageTypesShippingPackageTypeIdGet($shipping_package_type_id)
     {
@@ -26651,13 +26651,13 @@ class OrderApi
      *
      * @param  int $shipping_package_type_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesOrderShippingPackageTypeModelsShippingPackageType, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderShippingPackageTypeModelsShippingPackageType, HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersShippingPackageTypesShippingPackageTypeIdGetWithHttpInfo($shipping_package_type_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderShippingPackageTypeModelsShippingPackageType';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderShippingPackageTypeModelsShippingPackageType';
         $request = $this->restOrdersShippingPackageTypesShippingPackageTypeIdGetRequest($shipping_package_type_id);
 
         try {
@@ -26709,7 +26709,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesOrderShippingPackageTypeModelsShippingPackageType',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderShippingPackageTypeModelsShippingPackageType',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -26751,7 +26751,7 @@ class OrderApi
      */
     public function restOrdersShippingPackageTypesShippingPackageTypeIdGetAsyncWithHttpInfo($shipping_package_type_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderShippingPackageTypeModelsShippingPackageType';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderShippingPackageTypeModelsShippingPackageType';
         $request = $this->restOrdersShippingPackageTypesShippingPackageTypeIdGetRequest($shipping_package_type_id);
 
         return $this->client
@@ -26898,9 +26898,9 @@ class OrderApi
      *
      * @param  int $id id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse
      */
     public function restOrdersShippingPackagesItemsIdDelete($id)
     {
@@ -26913,13 +26913,13 @@ class OrderApi
      *
      * @param  int $id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersShippingPackagesItemsIdDeleteWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse';
         $request = $this->restOrdersShippingPackagesItemsIdDeleteRequest($id);
 
         try {
@@ -26971,7 +26971,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -27013,7 +27013,7 @@ class OrderApi
      */
     public function restOrdersShippingPackagesItemsIdDeleteAsyncWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse';
         $request = $this->restOrdersShippingPackagesItemsIdDeleteRequest($id);
 
         return $this->client
@@ -27160,9 +27160,9 @@ class OrderApi
      *
      * @param  int $id id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyDataSimpleRestResponse
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse
      */
     public function restOrdersShippingPackagesItemsIdPut($id)
     {
@@ -27175,13 +27175,13 @@ class OrderApi
      *
      * @param  int $id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyDataSimpleRestResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersShippingPackagesItemsIdPutWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyDataSimpleRestResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse';
         $request = $this->restOrdersShippingPackagesItemsIdPutRequest($id);
 
         try {
@@ -27233,7 +27233,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyDataSimpleRestResponse',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -27275,7 +27275,7 @@ class OrderApi
      */
     public function restOrdersShippingPackagesItemsIdPutAsyncWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyDataSimpleRestResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse';
         $request = $this->restOrdersShippingPackagesItemsIdPutRequest($id);
 
         return $this->client
@@ -27424,9 +27424,9 @@ class OrderApi
      * @param  int $item_id item_id (required)
      * @param  int $variation_id variation_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse
      */
     public function restOrdersShippingPackagesItemsPackageIdItemIdVariationIdDelete($package_id, $item_id, $variation_id)
     {
@@ -27441,13 +27441,13 @@ class OrderApi
      * @param  int $item_id (required)
      * @param  int $variation_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersShippingPackagesItemsPackageIdItemIdVariationIdDeleteWithHttpInfo($package_id, $item_id, $variation_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse';
         $request = $this->restOrdersShippingPackagesItemsPackageIdItemIdVariationIdDeleteRequest($package_id, $item_id, $variation_id);
 
         try {
@@ -27499,7 +27499,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -27545,7 +27545,7 @@ class OrderApi
      */
     public function restOrdersShippingPackagesItemsPackageIdItemIdVariationIdDeleteAsyncWithHttpInfo($package_id, $item_id, $variation_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse';
         $request = $this->restOrdersShippingPackagesItemsPackageIdItemIdVariationIdDeleteRequest($package_id, $item_id, $variation_id);
 
         return $this->client
@@ -27724,9 +27724,9 @@ class OrderApi
      * @param  int $item_id item_id (required)
      * @param  int $variation_id variation_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyDataSimpleRestResponse
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse
      */
     public function restOrdersShippingPackagesItemsPackageIdItemIdVariationIdPut($package_id, $item_id, $variation_id)
     {
@@ -27741,13 +27741,13 @@ class OrderApi
      * @param  int $item_id (required)
      * @param  int $variation_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyDataSimpleRestResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersShippingPackagesItemsPackageIdItemIdVariationIdPutWithHttpInfo($package_id, $item_id, $variation_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyDataSimpleRestResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse';
         $request = $this->restOrdersShippingPackagesItemsPackageIdItemIdVariationIdPutRequest($package_id, $item_id, $variation_id);
 
         try {
@@ -27799,7 +27799,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyDataSimpleRestResponse',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -27845,7 +27845,7 @@ class OrderApi
      */
     public function restOrdersShippingPackagesItemsPackageIdItemIdVariationIdPutAsyncWithHttpInfo($package_id, $item_id, $variation_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyDataSimpleRestResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse';
         $request = $this->restOrdersShippingPackagesItemsPackageIdItemIdVariationIdPutRequest($package_id, $item_id, $variation_id);
 
         return $this->client
@@ -28022,9 +28022,9 @@ class OrderApi
      *
      * @param  int $package_id package_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesOrderShippingPackageModelsOrderShippingPackageItems
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderShippingPackageModelsOrderShippingPackageItems
      */
     public function restOrdersShippingPackagesPackageIdItemsGet($package_id)
     {
@@ -28037,13 +28037,13 @@ class OrderApi
      *
      * @param  int $package_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesOrderShippingPackageModelsOrderShippingPackageItems, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderShippingPackageModelsOrderShippingPackageItems, HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersShippingPackagesPackageIdItemsGetWithHttpInfo($package_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderShippingPackageModelsOrderShippingPackageItems';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderShippingPackageModelsOrderShippingPackageItems';
         $request = $this->restOrdersShippingPackagesPackageIdItemsGetRequest($package_id);
 
         try {
@@ -28095,7 +28095,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesOrderShippingPackageModelsOrderShippingPackageItems',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderShippingPackageModelsOrderShippingPackageItems',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -28137,7 +28137,7 @@ class OrderApi
      */
     public function restOrdersShippingPackagesPackageIdItemsGetAsyncWithHttpInfo($package_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderShippingPackageModelsOrderShippingPackageItems';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderShippingPackageModelsOrderShippingPackageItems';
         $request = $this->restOrdersShippingPackagesPackageIdItemsGetRequest($package_id);
 
         return $this->client
@@ -28284,9 +28284,9 @@ class OrderApi
      *
      * @param  int $package_id package_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\Mixed[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\Mixed[]
      */
     public function restOrdersShippingPackagesPackageIdItemsPost($package_id)
     {
@@ -28299,13 +28299,13 @@ class OrderApi
      *
      * @param  int $package_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\Mixed[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\Mixed[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersShippingPackagesPackageIdItemsPostWithHttpInfo($package_id)
     {
-        $returnType = '\Swagger\Client\Model\Mixed[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\Mixed[]';
         $request = $this->restOrdersShippingPackagesPackageIdItemsPostRequest($package_id);
 
         try {
@@ -28357,7 +28357,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\Mixed[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\Mixed[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -28399,7 +28399,7 @@ class OrderApi
      */
     public function restOrdersShippingPackagesPackageIdItemsPostAsyncWithHttpInfo($package_id)
     {
-        $returnType = '\Swagger\Client\Model\Mixed[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\Mixed[]';
         $request = $this->restOrdersShippingPackagesPackageIdItemsPostRequest($package_id);
 
         return $this->client
@@ -28546,9 +28546,9 @@ class OrderApi
      *
      * @param  string $order_id Filter that shows pallets from a specific order. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesOrderShippingPalletModelsOrderShippingPallet[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderShippingPalletModelsOrderShippingPallet[]
      */
     public function restOrdersShippingPalletsGet($order_id)
     {
@@ -28561,13 +28561,13 @@ class OrderApi
      *
      * @param  string $order_id Filter that shows pallets from a specific order. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesOrderShippingPalletModelsOrderShippingPallet[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderShippingPalletModelsOrderShippingPallet[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersShippingPalletsGetWithHttpInfo($order_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderShippingPalletModelsOrderShippingPallet[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderShippingPalletModelsOrderShippingPallet[]';
         $request = $this->restOrdersShippingPalletsGetRequest($order_id);
 
         try {
@@ -28619,7 +28619,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesOrderShippingPalletModelsOrderShippingPallet[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderShippingPalletModelsOrderShippingPallet[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -28661,7 +28661,7 @@ class OrderApi
      */
     public function restOrdersShippingPalletsGetAsyncWithHttpInfo($order_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderShippingPalletModelsOrderShippingPallet[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderShippingPalletModelsOrderShippingPallet[]';
         $request = $this->restOrdersShippingPalletsGetRequest($order_id);
 
         return $this->client
@@ -28805,9 +28805,9 @@ class OrderApi
      * @param  int $pallet_id pallet_id (required)
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesOrderShippingPalletModelsOrderShippingPallet
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderShippingPalletModelsOrderShippingPallet
      */
     public function restOrdersShippingPalletsPalletIdDelete($pallet_id, $body = null)
     {
@@ -28821,13 +28821,13 @@ class OrderApi
      * @param  int $pallet_id (required)
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesOrderShippingPalletModelsOrderShippingPallet, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderShippingPalletModelsOrderShippingPallet, HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersShippingPalletsPalletIdDeleteWithHttpInfo($pallet_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderShippingPalletModelsOrderShippingPallet';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderShippingPalletModelsOrderShippingPallet';
         $request = $this->restOrdersShippingPalletsPalletIdDeleteRequest($pallet_id, $body);
 
         try {
@@ -28879,7 +28879,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesOrderShippingPalletModelsOrderShippingPallet',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderShippingPalletModelsOrderShippingPallet',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -28923,7 +28923,7 @@ class OrderApi
      */
     public function restOrdersShippingPalletsPalletIdDeleteAsyncWithHttpInfo($pallet_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderShippingPalletModelsOrderShippingPallet';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderShippingPalletModelsOrderShippingPallet';
         $request = $this->restOrdersShippingPalletsPalletIdDeleteRequest($pallet_id, $body);
 
         return $this->client
@@ -29075,9 +29075,9 @@ class OrderApi
      * @param  int $pallet_id The ID of the pallet (required)
      * @param  int $pallet_id2 pallet_id2 (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesOrderShippingPalletModelsOrderShippingPallet
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderShippingPalletModelsOrderShippingPallet
      */
     public function restOrdersShippingPalletsPalletIdGet($pallet_id, $pallet_id2)
     {
@@ -29091,13 +29091,13 @@ class OrderApi
      * @param  int $pallet_id The ID of the pallet (required)
      * @param  int $pallet_id2 (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesOrderShippingPalletModelsOrderShippingPallet, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderShippingPalletModelsOrderShippingPallet, HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersShippingPalletsPalletIdGetWithHttpInfo($pallet_id, $pallet_id2)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderShippingPalletModelsOrderShippingPallet';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderShippingPalletModelsOrderShippingPallet';
         $request = $this->restOrdersShippingPalletsPalletIdGetRequest($pallet_id, $pallet_id2);
 
         try {
@@ -29149,7 +29149,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesOrderShippingPalletModelsOrderShippingPallet',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderShippingPalletModelsOrderShippingPallet',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -29193,7 +29193,7 @@ class OrderApi
      */
     public function restOrdersShippingPalletsPalletIdGetAsyncWithHttpInfo($pallet_id, $pallet_id2)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderShippingPalletModelsOrderShippingPallet';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderShippingPalletModelsOrderShippingPallet';
         $request = $this->restOrdersShippingPalletsPalletIdGetRequest($pallet_id, $pallet_id2);
 
         return $this->client
@@ -29352,9 +29352,9 @@ class OrderApi
      * @param  int $pallet_id pallet_id (required)
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesOrderShippingPalletModelsOrderShippingPallet
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderShippingPalletModelsOrderShippingPallet
      */
     public function restOrdersShippingPalletsPalletIdPut($pallet_id, $body = null)
     {
@@ -29368,13 +29368,13 @@ class OrderApi
      * @param  int $pallet_id (required)
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesOrderShippingPalletModelsOrderShippingPallet, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderShippingPalletModelsOrderShippingPallet, HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersShippingPalletsPalletIdPutWithHttpInfo($pallet_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderShippingPalletModelsOrderShippingPallet';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderShippingPalletModelsOrderShippingPallet';
         $request = $this->restOrdersShippingPalletsPalletIdPutRequest($pallet_id, $body);
 
         try {
@@ -29426,7 +29426,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesOrderShippingPalletModelsOrderShippingPallet',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderShippingPalletModelsOrderShippingPallet',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -29470,7 +29470,7 @@ class OrderApi
      */
     public function restOrdersShippingPalletsPalletIdPutAsyncWithHttpInfo($pallet_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderShippingPalletModelsOrderShippingPallet';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderShippingPalletModelsOrderShippingPallet';
         $request = $this->restOrdersShippingPalletsPalletIdPutRequest($pallet_id, $body);
 
         return $this->client
@@ -29621,9 +29621,9 @@ class OrderApi
      *
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesOrderShippingPalletModelsOrderShippingPallet
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderShippingPalletModelsOrderShippingPallet
      */
     public function restOrdersShippingPalletsPost($body = null)
     {
@@ -29636,13 +29636,13 @@ class OrderApi
      *
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesOrderShippingPalletModelsOrderShippingPallet, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderShippingPalletModelsOrderShippingPallet, HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersShippingPalletsPostWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderShippingPalletModelsOrderShippingPallet';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderShippingPalletModelsOrderShippingPallet';
         $request = $this->restOrdersShippingPalletsPostRequest($body);
 
         try {
@@ -29694,7 +29694,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesOrderShippingPalletModelsOrderShippingPallet',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderShippingPalletModelsOrderShippingPallet',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -29736,7 +29736,7 @@ class OrderApi
      */
     public function restOrdersShippingPalletsPostAsyncWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderShippingPalletModelsOrderShippingPallet';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderShippingPalletModelsOrderShippingPallet';
         $request = $this->restOrdersShippingPalletsPostRequest($body);
 
         return $this->client
@@ -29876,9 +29876,9 @@ class OrderApi
      * @param  int $parcel_service_region_id2 parcel_service_region_id2 (required)
      * @param  int $columns The properties to be loaded (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesOrderShippingParcelServiceRegionModelsParcelServiceRegion
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderShippingParcelServiceRegionModelsParcelServiceRegion
      */
     public function restOrdersShippingParcelServiceRegionsParcelServiceRegionIdGet($parcel_service_region_id, $parcel_service_region_id2, $columns = null)
     {
@@ -29895,13 +29895,13 @@ class OrderApi
      * @param  int $parcel_service_region_id2 (required)
      * @param  int $columns The properties to be loaded (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesOrderShippingParcelServiceRegionModelsParcelServiceRegion, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderShippingParcelServiceRegionModelsParcelServiceRegion, HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersShippingParcelServiceRegionsParcelServiceRegionIdGetWithHttpInfo($parcel_service_region_id, $parcel_service_region_id2, $columns = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderShippingParcelServiceRegionModelsParcelServiceRegion';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderShippingParcelServiceRegionModelsParcelServiceRegion';
         $request = $this->restOrdersShippingParcelServiceRegionsParcelServiceRegionIdGetRequest($parcel_service_region_id, $parcel_service_region_id2, $columns);
 
         try {
@@ -29953,7 +29953,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesOrderShippingParcelServiceRegionModelsParcelServiceRegion',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderShippingParcelServiceRegionModelsParcelServiceRegion',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -29999,7 +29999,7 @@ class OrderApi
      */
     public function restOrdersShippingParcelServiceRegionsParcelServiceRegionIdGetAsyncWithHttpInfo($parcel_service_region_id, $parcel_service_region_id2, $columns = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderShippingParcelServiceRegionModelsParcelServiceRegion';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderShippingParcelServiceRegionModelsParcelServiceRegion';
         $request = $this->restOrdersShippingParcelServiceRegionsParcelServiceRegionIdGetRequest($parcel_service_region_id, $parcel_service_region_id2, $columns);
 
         return $this->client
@@ -30164,9 +30164,9 @@ class OrderApi
      *
      * @param  string $language language (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\Mixed[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\Mixed[]
      */
     public function restOrdersShippingParcelsPreviewLanguageGet($language)
     {
@@ -30181,13 +30181,13 @@ class OrderApi
      *
      * @param  string $language (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\Mixed[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\Mixed[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersShippingParcelsPreviewLanguageGetWithHttpInfo($language)
     {
-        $returnType = '\Swagger\Client\Model\Mixed[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\Mixed[]';
         $request = $this->restOrdersShippingParcelsPreviewLanguageGetRequest($language);
 
         try {
@@ -30239,7 +30239,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\Mixed[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\Mixed[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -30281,7 +30281,7 @@ class OrderApi
      */
     public function restOrdersShippingParcelsPreviewLanguageGetAsyncWithHttpInfo($language)
     {
-        $returnType = '\Swagger\Client\Model\Mixed[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\Mixed[]';
         $request = $this->restOrdersShippingParcelsPreviewLanguageGetRequest($language);
 
         return $this->client
@@ -30435,9 +30435,9 @@ class OrderApi
      * @param  string $updated_at_before Filter that restricts the search result to presets that were updated before a specific date. Possible formats: yyyy-mm-dd or yyyy-mm-dd hh:mm:ss (optional)
      * @param  string $updated_at_after Filter that restricts the search result to presets that were updated after a specific date. Possible formats: yyyy-mm-dd or yyyy-mm-dd hh:mm:ss (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesOrderShippingParcelServiceModelsParcelServicePreset[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderShippingParcelServiceModelsParcelServicePreset[]
      */
     public function restOrdersShippingPresetsGet($columns = null, $parcel_service_name = null, $shipping_service_provider = null, $with = null, $updated_at_before = null, $updated_at_after = null)
     {
@@ -30457,13 +30457,13 @@ class OrderApi
      * @param  string $updated_at_before Filter that restricts the search result to presets that were updated before a specific date. Possible formats: yyyy-mm-dd or yyyy-mm-dd hh:mm:ss (optional)
      * @param  string $updated_at_after Filter that restricts the search result to presets that were updated after a specific date. Possible formats: yyyy-mm-dd or yyyy-mm-dd hh:mm:ss (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesOrderShippingParcelServiceModelsParcelServicePreset[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderShippingParcelServiceModelsParcelServicePreset[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersShippingPresetsGetWithHttpInfo($columns = null, $parcel_service_name = null, $shipping_service_provider = null, $with = null, $updated_at_before = null, $updated_at_after = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderShippingParcelServiceModelsParcelServicePreset[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderShippingParcelServiceModelsParcelServicePreset[]';
         $request = $this->restOrdersShippingPresetsGetRequest($columns, $parcel_service_name, $shipping_service_provider, $with, $updated_at_before, $updated_at_after);
 
         try {
@@ -30515,7 +30515,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesOrderShippingParcelServiceModelsParcelServicePreset[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderShippingParcelServiceModelsParcelServicePreset[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -30567,7 +30567,7 @@ class OrderApi
      */
     public function restOrdersShippingPresetsGetAsyncWithHttpInfo($columns = null, $parcel_service_name = null, $shipping_service_provider = null, $with = null, $updated_at_before = null, $updated_at_after = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderShippingParcelServiceModelsParcelServicePreset[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderShippingParcelServiceModelsParcelServicePreset[]';
         $request = $this->restOrdersShippingPresetsGetRequest($columns, $parcel_service_name, $shipping_service_provider, $with, $updated_at_before, $updated_at_after);
 
         return $this->client
@@ -30732,9 +30732,9 @@ class OrderApi
      * @param  int $preset_id The ID of the shipping profile (required)
      * @param  int $columns The attributes to be loaded in the shipping profile (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesOrderShippingParcelServiceModelsParcelServicePreset
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderShippingParcelServiceModelsParcelServicePreset
      */
     public function restOrdersShippingPresetsPresetIdGet($preset_id, $columns = null)
     {
@@ -30750,13 +30750,13 @@ class OrderApi
      * @param  int $preset_id The ID of the shipping profile (required)
      * @param  int $columns The attributes to be loaded in the shipping profile (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesOrderShippingParcelServiceModelsParcelServicePreset, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderShippingParcelServiceModelsParcelServicePreset, HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersShippingPresetsPresetIdGetWithHttpInfo($preset_id, $columns = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderShippingParcelServiceModelsParcelServicePreset';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderShippingParcelServiceModelsParcelServicePreset';
         $request = $this->restOrdersShippingPresetsPresetIdGetRequest($preset_id, $columns);
 
         try {
@@ -30808,7 +30808,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesOrderShippingParcelServiceModelsParcelServicePreset',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderShippingParcelServiceModelsParcelServicePreset',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -30852,7 +30852,7 @@ class OrderApi
      */
     public function restOrdersShippingPresetsPresetIdGetAsyncWithHttpInfo($preset_id, $columns = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderShippingParcelServiceModelsParcelServicePreset';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderShippingParcelServiceModelsParcelServicePreset';
         $request = $this->restOrdersShippingPresetsPresetIdGetRequest($preset_id, $columns);
 
         return $this->client
@@ -31008,9 +31008,9 @@ class OrderApi
      * @param  int $preset_id preset_id (required)
      * @param  int $columns The properties to be loaded (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesOrderShippingParcelServiceRegionModelsParcelServiceRegion[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderShippingParcelServiceRegionModelsParcelServiceRegion[]
      */
     public function restOrdersShippingPresetsPresetIdParcelServiceRegionsGet($parcel_service_preset_id, $preset_id, $columns = null)
     {
@@ -31027,13 +31027,13 @@ class OrderApi
      * @param  int $preset_id (required)
      * @param  int $columns The properties to be loaded (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesOrderShippingParcelServiceRegionModelsParcelServiceRegion[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderShippingParcelServiceRegionModelsParcelServiceRegion[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersShippingPresetsPresetIdParcelServiceRegionsGetWithHttpInfo($parcel_service_preset_id, $preset_id, $columns = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderShippingParcelServiceRegionModelsParcelServiceRegion[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderShippingParcelServiceRegionModelsParcelServiceRegion[]';
         $request = $this->restOrdersShippingPresetsPresetIdParcelServiceRegionsGetRequest($parcel_service_preset_id, $preset_id, $columns);
 
         try {
@@ -31085,7 +31085,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesOrderShippingParcelServiceRegionModelsParcelServiceRegion[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderShippingParcelServiceRegionModelsParcelServiceRegion[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -31131,7 +31131,7 @@ class OrderApi
      */
     public function restOrdersShippingPresetsPresetIdParcelServiceRegionsGetAsyncWithHttpInfo($parcel_service_preset_id, $preset_id, $columns = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderShippingParcelServiceRegionModelsParcelServiceRegion[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderShippingParcelServiceRegionModelsParcelServiceRegion[]';
         $request = $this->restOrdersShippingPresetsPresetIdParcelServiceRegionsGetRequest($parcel_service_preset_id, $preset_id, $columns);
 
         return $this->client
@@ -31296,9 +31296,9 @@ class OrderApi
      *
      * @param  string $language language (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\Mixed[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\Mixed[]
      */
     public function restOrdersShippingPresetsPreviewLanguageGet($language)
     {
@@ -31313,13 +31313,13 @@ class OrderApi
      *
      * @param  string $language (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\Mixed[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\Mixed[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersShippingPresetsPreviewLanguageGetWithHttpInfo($language)
     {
-        $returnType = '\Swagger\Client\Model\Mixed[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\Mixed[]';
         $request = $this->restOrdersShippingPresetsPreviewLanguageGetRequest($language);
 
         try {
@@ -31371,7 +31371,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\Mixed[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\Mixed[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -31413,7 +31413,7 @@ class OrderApi
      */
     public function restOrdersShippingPresetsPreviewLanguageGetAsyncWithHttpInfo($language)
     {
-        $returnType = '\Swagger\Client\Model\Mixed[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\Mixed[]';
         $request = $this->restOrdersShippingPresetsPreviewLanguageGetRequest($language);
 
         return $this->client
@@ -31561,7 +31561,7 @@ class OrderApi
      * @param  int $is_plugin Possible values are 1 (true), 0 (false) (optional)
      * @param  int $plugin_id The id of the plugin. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -31577,7 +31577,7 @@ class OrderApi
      * @param  int $is_plugin Possible values are 1 (true), 0 (false) (optional)
      * @param  int $plugin_id The id of the plugin. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -31822,9 +31822,9 @@ class OrderApi
      * List shipping service provider plugins
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\Mixed[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\Mixed[]
      */
     public function restOrdersShippingReturnsReturnsServiceProvidersPluginsGet()
     {
@@ -31838,13 +31838,13 @@ class OrderApi
      * List shipping service provider plugins
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\Mixed[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\Mixed[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersShippingReturnsReturnsServiceProvidersPluginsGetWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\Mixed[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\Mixed[]';
         $request = $this->restOrdersShippingReturnsReturnsServiceProvidersPluginsGetRequest();
 
         try {
@@ -31896,7 +31896,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\Mixed[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\Mixed[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -31936,7 +31936,7 @@ class OrderApi
      */
     public function restOrdersShippingReturnsReturnsServiceProvidersPluginsGetAsyncWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\Mixed[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\Mixed[]';
         $request = $this->restOrdersShippingReturnsReturnsServiceProvidersPluginsGetRequest();
 
         return $this->client
@@ -32069,9 +32069,9 @@ class OrderApi
      * @param  int $provider_id The returns service provider id. (required)
      * @param  int $provider_id2 provider_id2 (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesOrderShippingReturnsModelsReturnsServiceProvider
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderShippingReturnsModelsReturnsServiceProvider
      */
     public function restOrdersShippingReturnsReturnsServiceProvidersProviderIdGet($provider_id, $provider_id2)
     {
@@ -32085,13 +32085,13 @@ class OrderApi
      * @param  int $provider_id The returns service provider id. (required)
      * @param  int $provider_id2 (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesOrderShippingReturnsModelsReturnsServiceProvider, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderShippingReturnsModelsReturnsServiceProvider, HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersShippingReturnsReturnsServiceProvidersProviderIdGetWithHttpInfo($provider_id, $provider_id2)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderShippingReturnsModelsReturnsServiceProvider';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderShippingReturnsModelsReturnsServiceProvider';
         $request = $this->restOrdersShippingReturnsReturnsServiceProvidersProviderIdGetRequest($provider_id, $provider_id2);
 
         try {
@@ -32143,7 +32143,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesOrderShippingReturnsModelsReturnsServiceProvider',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderShippingReturnsModelsReturnsServiceProvider',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -32187,7 +32187,7 @@ class OrderApi
      */
     public function restOrdersShippingReturnsReturnsServiceProvidersProviderIdGetAsyncWithHttpInfo($provider_id, $provider_id2)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderShippingReturnsModelsReturnsServiceProvider';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderShippingReturnsModelsReturnsServiceProvider';
         $request = $this->restOrdersShippingReturnsReturnsServiceProvidersProviderIdGetRequest($provider_id, $provider_id2);
 
         return $this->client
@@ -32346,9 +32346,9 @@ class OrderApi
      * Get orders with shipping information
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\Mixed[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\Mixed[]
      */
     public function restOrdersShippingShippingInformationGet()
     {
@@ -32362,13 +32362,13 @@ class OrderApi
      * Get orders with shipping information
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\Mixed[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\Mixed[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersShippingShippingInformationGetWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\Mixed[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\Mixed[]';
         $request = $this->restOrdersShippingShippingInformationGetRequest();
 
         try {
@@ -32420,7 +32420,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\Mixed[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\Mixed[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -32460,7 +32460,7 @@ class OrderApi
      */
     public function restOrdersShippingShippingInformationGetAsyncWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\Mixed[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\Mixed[]';
         $request = $this->restOrdersShippingShippingInformationGetRequest();
 
         return $this->client
@@ -32593,9 +32593,9 @@ class OrderApi
      * Create shipping information
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesOrderShippingInformationModelsShippingInformation
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderShippingInformationModelsShippingInformation
      */
     public function restOrdersShippingShippingInformationPost()
     {
@@ -32609,13 +32609,13 @@ class OrderApi
      * Create shipping information
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesOrderShippingInformationModelsShippingInformation, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderShippingInformationModelsShippingInformation, HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersShippingShippingInformationPostWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderShippingInformationModelsShippingInformation';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderShippingInformationModelsShippingInformation';
         $request = $this->restOrdersShippingShippingInformationPostRequest();
 
         try {
@@ -32667,7 +32667,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesOrderShippingInformationModelsShippingInformation',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderShippingInformationModelsShippingInformation',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -32707,7 +32707,7 @@ class OrderApi
      */
     public function restOrdersShippingShippingInformationPostAsyncWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderShippingInformationModelsShippingInformation';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderShippingInformationModelsShippingInformation';
         $request = $this->restOrdersShippingShippingInformationPostRequest();
 
         return $this->client
@@ -32843,7 +32843,7 @@ class OrderApi
      * @param  string $updated_at_after Filter that restricts the search result to shipping providers that were updated after a specific date. Possible formats: yyyy-mm-dd or yyyy-mm-dd hh:mm:ss (optional)
      * @param  string $with The name of an relation to the shipping provider. The following parameter is available: ownShippingServiceProviders. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -32862,7 +32862,7 @@ class OrderApi
      * @param  string $updated_at_after Filter that restricts the search result to shipping providers that were updated after a specific date. Possible formats: yyyy-mm-dd or yyyy-mm-dd hh:mm:ss (optional)
      * @param  string $with The name of an relation to the shipping provider. The following parameter is available: ownShippingServiceProviders. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -33114,9 +33114,9 @@ class OrderApi
      * List shipping service provider plugins
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\Mixed[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\Mixed[]
      */
     public function restOrdersShippingShippingServiceProvidersPluginsGet()
     {
@@ -33130,13 +33130,13 @@ class OrderApi
      * List shipping service provider plugins
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\Mixed[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\Mixed[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersShippingShippingServiceProvidersPluginsGetWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\Mixed[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\Mixed[]';
         $request = $this->restOrdersShippingShippingServiceProvidersPluginsGetRequest();
 
         try {
@@ -33188,7 +33188,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\Mixed[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\Mixed[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -33228,7 +33228,7 @@ class OrderApi
      */
     public function restOrdersShippingShippingServiceProvidersPluginsGetAsyncWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\Mixed[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\Mixed[]';
         $request = $this->restOrdersShippingShippingServiceProvidersPluginsGetRequest();
 
         return $this->client
@@ -33361,9 +33361,9 @@ class OrderApi
      * Save a shipping service provider
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesOrderShippingServiceProviderModelsShippingServiceProvider
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderShippingServiceProviderModelsShippingServiceProvider
      */
     public function restOrdersShippingShippingServiceProvidersPost()
     {
@@ -33377,13 +33377,13 @@ class OrderApi
      * Save a shipping service provider
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesOrderShippingServiceProviderModelsShippingServiceProvider, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderShippingServiceProviderModelsShippingServiceProvider, HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersShippingShippingServiceProvidersPostWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderShippingServiceProviderModelsShippingServiceProvider';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderShippingServiceProviderModelsShippingServiceProvider';
         $request = $this->restOrdersShippingShippingServiceProvidersPostRequest();
 
         try {
@@ -33435,7 +33435,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesOrderShippingServiceProviderModelsShippingServiceProvider',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderShippingServiceProviderModelsShippingServiceProvider',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -33475,7 +33475,7 @@ class OrderApi
      */
     public function restOrdersShippingShippingServiceProvidersPostAsyncWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderShippingServiceProviderModelsShippingServiceProvider';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderShippingServiceProviderModelsShippingServiceProvider';
         $request = $this->restOrdersShippingShippingServiceProvidersPostRequest();
 
         return $this->client
@@ -33609,9 +33609,9 @@ class OrderApi
      *
      * @param  int $shipping_service_provider_id shipping_service_provider_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesOrderShippingServiceProviderModelsShippingServiceProvider
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderShippingServiceProviderModelsShippingServiceProvider
      */
     public function restOrdersShippingShippingServiceProvidersShippingServiceProviderIdGet($shipping_service_provider_id)
     {
@@ -33626,13 +33626,13 @@ class OrderApi
      *
      * @param  int $shipping_service_provider_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesOrderShippingServiceProviderModelsShippingServiceProvider, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderShippingServiceProviderModelsShippingServiceProvider, HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersShippingShippingServiceProvidersShippingServiceProviderIdGetWithHttpInfo($shipping_service_provider_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderShippingServiceProviderModelsShippingServiceProvider';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderShippingServiceProviderModelsShippingServiceProvider';
         $request = $this->restOrdersShippingShippingServiceProvidersShippingServiceProviderIdGetRequest($shipping_service_provider_id);
 
         try {
@@ -33684,7 +33684,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesOrderShippingServiceProviderModelsShippingServiceProvider',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderShippingServiceProviderModelsShippingServiceProvider',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -33726,7 +33726,7 @@ class OrderApi
      */
     public function restOrdersShippingShippingServiceProvidersShippingServiceProviderIdGetAsyncWithHttpInfo($shipping_service_provider_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderShippingServiceProviderModelsShippingServiceProvider';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderShippingServiceProviderModelsShippingServiceProvider';
         $request = $this->restOrdersShippingShippingServiceProvidersShippingServiceProviderIdGetRequest($shipping_service_provider_id);
 
         return $this->client
@@ -33879,7 +33879,7 @@ class OrderApi
      * @param  string $created_at_to Get entries with createdAt date before this date (optional)
      * @param  string $user_id The ID of the user (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -33900,7 +33900,7 @@ class OrderApi
      * @param  string $created_at_to Get entries with createdAt date before this date (optional)
      * @param  string $user_id The ID of the user (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -34164,9 +34164,9 @@ class OrderApi
      * Operation restOrdersStatusesAllGet
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\IlluminateDatabaseEloquentCollection
+     * @return \BSApp\Service\plentymarketsAPI\Model\IlluminateDatabaseEloquentCollection
      */
     public function restOrdersStatusesAllGet()
     {
@@ -34178,13 +34178,13 @@ class OrderApi
      * Operation restOrdersStatusesAllGetWithHttpInfo
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\IlluminateDatabaseEloquentCollection, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\IlluminateDatabaseEloquentCollection, HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersStatusesAllGetWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\IlluminateDatabaseEloquentCollection';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\IlluminateDatabaseEloquentCollection';
         $request = $this->restOrdersStatusesAllGetRequest();
 
         try {
@@ -34236,7 +34236,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\IlluminateDatabaseEloquentCollection',
+                        '\BSApp\Service\plentymarketsAPI\Model\IlluminateDatabaseEloquentCollection',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -34276,7 +34276,7 @@ class OrderApi
      */
     public function restOrdersStatusesAllGetAsyncWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\IlluminateDatabaseEloquentCollection';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\IlluminateDatabaseEloquentCollection';
         $request = $this->restOrdersStatusesAllGetRequest();
 
         return $this->client
@@ -34411,7 +34411,7 @@ class OrderApi
      * @param  BigDecimal $status_id_from Filter that restricts the search for order statuses to IDs from a defined value. (optional)
      * @param  BigDecimal $status_id_to Filter that restricts the search for order statuses to IDs to a defined value. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -34429,7 +34429,7 @@ class OrderApi
      * @param  BigDecimal $status_id_from Filter that restricts the search for order statuses to IDs from a defined value. (optional)
      * @param  BigDecimal $status_id_to Filter that restricts the search for order statuses to IDs to a defined value. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -34674,7 +34674,7 @@ class OrderApi
      * Changes various properties for a status
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -34689,7 +34689,7 @@ class OrderApi
      * Changes various properties for a status
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -34885,9 +34885,9 @@ class OrderApi
      *
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesOrderStatusModelsOrderStatus
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderStatusModelsOrderStatus
      */
     public function restOrdersStatusesPost($body = null)
     {
@@ -34902,13 +34902,13 @@ class OrderApi
      *
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesOrderStatusModelsOrderStatus, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderStatusModelsOrderStatus, HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersStatusesPostWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderStatusModelsOrderStatus';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderStatusModelsOrderStatus';
         $request = $this->restOrdersStatusesPostRequest($body);
 
         try {
@@ -34960,7 +34960,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesOrderStatusModelsOrderStatus',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderStatusModelsOrderStatus',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -35002,7 +35002,7 @@ class OrderApi
      */
     public function restOrdersStatusesPostAsyncWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderStatusModelsOrderStatus';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderStatusModelsOrderStatus';
         $request = $this->restOrdersStatusesPostRequest($body);
 
         return $this->client
@@ -35140,7 +35140,7 @@ class OrderApi
      *
      * @param  BigDecimal $status_id The ID of the status, which shall be deleted. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -35156,7 +35156,7 @@ class OrderApi
      *
      * @param  BigDecimal $status_id The ID of the status, which shall be deleted. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -35369,9 +35369,9 @@ class OrderApi
      *
      * @param  BigDecimal $status_id The ID of the order status. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesOrderStatusModelsOrderStatus
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderStatusModelsOrderStatus
      */
     public function restOrdersStatusesStatusIdGet($status_id)
     {
@@ -35386,13 +35386,13 @@ class OrderApi
      *
      * @param  BigDecimal $status_id The ID of the order status. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesOrderStatusModelsOrderStatus, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderStatusModelsOrderStatus, HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersStatusesStatusIdGetWithHttpInfo($status_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderStatusModelsOrderStatus';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderStatusModelsOrderStatus';
         $request = $this->restOrdersStatusesStatusIdGetRequest($status_id);
 
         try {
@@ -35444,7 +35444,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesOrderStatusModelsOrderStatus',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderStatusModelsOrderStatus',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -35486,7 +35486,7 @@ class OrderApi
      */
     public function restOrdersStatusesStatusIdGetAsyncWithHttpInfo($status_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderStatusModelsOrderStatus';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderStatusModelsOrderStatus';
         $request = $this->restOrdersStatusesStatusIdGetRequest($status_id);
 
         return $this->client
@@ -35636,9 +35636,9 @@ class OrderApi
      * @param  BigDecimal $status_id The ID of the status, which shall be updated. (required)
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesOrderStatusModelsOrderStatus
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderStatusModelsOrderStatus
      */
     public function restOrdersStatusesStatusIdPut($status_id, $body = null)
     {
@@ -35654,13 +35654,13 @@ class OrderApi
      * @param  BigDecimal $status_id The ID of the status, which shall be updated. (required)
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesOrderStatusModelsOrderStatus, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderStatusModelsOrderStatus, HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersStatusesStatusIdPutWithHttpInfo($status_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderStatusModelsOrderStatus';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderStatusModelsOrderStatus';
         $request = $this->restOrdersStatusesStatusIdPutRequest($status_id, $body);
 
         try {
@@ -35712,7 +35712,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesOrderStatusModelsOrderStatus',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderStatusModelsOrderStatus',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -35756,7 +35756,7 @@ class OrderApi
      */
     public function restOrdersStatusesStatusIdPutAsyncWithHttpInfo($status_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderStatusModelsOrderStatus';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderStatusModelsOrderStatus';
         $request = $this->restOrdersStatusesStatusIdPutRequest($status_id, $body);
 
         return $this->client
@@ -35910,9 +35910,9 @@ class OrderApi
      * @param  int $order_id The ID of the order. (required)
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesOrderModelsOrder
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderModelsOrder
      */
     public function restRedistributionsOrderIdPut($order_id, $body = null)
     {
@@ -35928,13 +35928,13 @@ class OrderApi
      * @param  int $order_id The ID of the order. (required)
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesOrderModelsOrder, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderModelsOrder, HTTP status code, HTTP response headers (array of strings)
      */
     public function restRedistributionsOrderIdPutWithHttpInfo($order_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderModelsOrder';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderModelsOrder';
         $request = $this->restRedistributionsOrderIdPutRequest($order_id, $body);
 
         try {
@@ -35986,7 +35986,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesOrderModelsOrder',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderModelsOrder',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -36030,7 +36030,7 @@ class OrderApi
      */
     public function restRedistributionsOrderIdPutAsyncWithHttpInfo($order_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderModelsOrder';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderModelsOrder';
         $request = $this->restRedistributionsOrderIdPutRequest($order_id, $body);
 
         return $this->client
@@ -36183,9 +36183,9 @@ class OrderApi
      *
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesOrderModelsOrder
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderModelsOrder
      */
     public function restRedistributionsPost($body = null)
     {
@@ -36200,13 +36200,13 @@ class OrderApi
      *
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesOrderModelsOrder, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderModelsOrder, HTTP status code, HTTP response headers (array of strings)
      */
     public function restRedistributionsPostWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderModelsOrder';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderModelsOrder';
         $request = $this->restRedistributionsPostRequest($body);
 
         try {
@@ -36258,7 +36258,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesOrderModelsOrder',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderModelsOrder',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -36300,7 +36300,7 @@ class OrderApi
      */
     public function restRedistributionsPostAsyncWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderModelsOrder';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderModelsOrder';
         $request = $this->restRedistributionsPostRequest($body);
 
         return $this->client
@@ -36436,9 +36436,9 @@ class OrderApi
      *
      * @param  int $order_id order_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesOrderModelsOrder
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderModelsOrder
      */
     public function restReordersOrderIdCurrencyPut($order_id)
     {
@@ -36451,13 +36451,13 @@ class OrderApi
      *
      * @param  int $order_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesOrderModelsOrder, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderModelsOrder, HTTP status code, HTTP response headers (array of strings)
      */
     public function restReordersOrderIdCurrencyPutWithHttpInfo($order_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderModelsOrder';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderModelsOrder';
         $request = $this->restReordersOrderIdCurrencyPutRequest($order_id);
 
         try {
@@ -36509,7 +36509,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesOrderModelsOrder',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderModelsOrder',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -36551,7 +36551,7 @@ class OrderApi
      */
     public function restReordersOrderIdCurrencyPutAsyncWithHttpInfo($order_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderModelsOrder';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderModelsOrder';
         $request = $this->restReordersOrderIdCurrencyPutRequest($order_id);
 
         return $this->client
@@ -36698,9 +36698,9 @@ class OrderApi
      *
      * @param  int $order_id order_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyDataSimpleRestResponse
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse
      */
     public function restReordersOrderIdDeliveryDateGet($order_id)
     {
@@ -36713,13 +36713,13 @@ class OrderApi
      *
      * @param  int $order_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyDataSimpleRestResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function restReordersOrderIdDeliveryDateGetWithHttpInfo($order_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyDataSimpleRestResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse';
         $request = $this->restReordersOrderIdDeliveryDateGetRequest($order_id);
 
         try {
@@ -36771,7 +36771,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyDataSimpleRestResponse',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -36813,7 +36813,7 @@ class OrderApi
      */
     public function restReordersOrderIdDeliveryDateGetAsyncWithHttpInfo($order_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyDataSimpleRestResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse';
         $request = $this->restReordersOrderIdDeliveryDateGetRequest($order_id);
 
         return $this->client
@@ -36963,9 +36963,9 @@ class OrderApi
      * @param  int $order_id The ID of the order. (required)
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesOrderModelsOrder
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderModelsOrder
      */
     public function restReordersOrderIdPut($order_id, $body = null)
     {
@@ -36981,13 +36981,13 @@ class OrderApi
      * @param  int $order_id The ID of the order. (required)
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesOrderModelsOrder, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderModelsOrder, HTTP status code, HTTP response headers (array of strings)
      */
     public function restReordersOrderIdPutWithHttpInfo($order_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderModelsOrder';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderModelsOrder';
         $request = $this->restReordersOrderIdPutRequest($order_id, $body);
 
         try {
@@ -37039,7 +37039,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesOrderModelsOrder',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderModelsOrder',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -37083,7 +37083,7 @@ class OrderApi
      */
     public function restReordersOrderIdPutAsyncWithHttpInfo($order_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderModelsOrder';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderModelsOrder';
         $request = $this->restReordersOrderIdPutRequest($order_id, $body);
 
         return $this->client
@@ -37236,9 +37236,9 @@ class OrderApi
      *
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesOrderModelsOrder
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderModelsOrder
      */
     public function restReordersPost($body = null)
     {
@@ -37253,13 +37253,13 @@ class OrderApi
      *
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesOrderModelsOrder, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderModelsOrder, HTTP status code, HTTP response headers (array of strings)
      */
     public function restReordersPostWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderModelsOrder';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderModelsOrder';
         $request = $this->restReordersPostRequest($body);
 
         try {
@@ -37311,7 +37311,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesOrderModelsOrder',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderModelsOrder',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -37353,7 +37353,7 @@ class OrderApi
      */
     public function restReordersPostAsyncWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderModelsOrder';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderModelsOrder';
         $request = $this->restReordersPostRequest($body);
 
         return $this->client

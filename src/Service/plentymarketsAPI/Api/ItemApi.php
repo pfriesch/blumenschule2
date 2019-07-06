@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  BSApp\Service\plentymarketsAPI
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace BSApp\Service\plentymarketsAPI\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -33,16 +33,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use BSApp\Service\plentymarketsAPI\ApiException;
+use BSApp\Service\plentymarketsAPI\Configuration;
+use BSApp\Service\plentymarketsAPI\HeaderSelector;
+use BSApp\Service\plentymarketsAPI\ObjectSerializer;
 
 /**
  * ItemApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  BSApp\Service\plentymarketsAPI
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -92,9 +92,9 @@ class ItemApi
      * List item availabilities
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemAvailabilityModelsAvailability[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemAvailabilityModelsAvailability[]
      */
     public function restAvailabilitiesGet()
     {
@@ -108,13 +108,13 @@ class ItemApi
      * List item availabilities
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemAvailabilityModelsAvailability[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemAvailabilityModelsAvailability[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restAvailabilitiesGetWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemAvailabilityModelsAvailability[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemAvailabilityModelsAvailability[]';
         $request = $this->restAvailabilitiesGetRequest();
 
         try {
@@ -166,7 +166,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemAvailabilityModelsAvailability[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemAvailabilityModelsAvailability[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -206,7 +206,7 @@ class ItemApi
      */
     public function restAvailabilitiesGetAsyncWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemAvailabilityModelsAvailability[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemAvailabilityModelsAvailability[]';
         $request = $this->restAvailabilitiesGetRequest();
 
         return $this->client
@@ -340,9 +340,9 @@ class ItemApi
      *
      * @param  int $id id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemAvailabilityModelsAvailability
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemAvailabilityModelsAvailability
      */
     public function restAvailabilitiesIdGet($id)
     {
@@ -357,13 +357,13 @@ class ItemApi
      *
      * @param  int $id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemAvailabilityModelsAvailability, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemAvailabilityModelsAvailability, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAvailabilitiesIdGetWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemAvailabilityModelsAvailability';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemAvailabilityModelsAvailability';
         $request = $this->restAvailabilitiesIdGetRequest($id);
 
         try {
@@ -415,7 +415,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemAvailabilityModelsAvailability',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemAvailabilityModelsAvailability',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -457,7 +457,7 @@ class ItemApi
      */
     public function restAvailabilitiesIdGetAsyncWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemAvailabilityModelsAvailability';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemAvailabilityModelsAvailability';
         $request = $this->restAvailabilitiesIdGetRequest($id);
 
         return $this->client
@@ -607,9 +607,9 @@ class ItemApi
      * @param  int $id id (required)
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemAvailabilityModelsAvailability
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemAvailabilityModelsAvailability
      */
     public function restAvailabilitiesIdPut($id, $body = null)
     {
@@ -625,13 +625,13 @@ class ItemApi
      * @param  int $id (required)
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemAvailabilityModelsAvailability, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemAvailabilityModelsAvailability, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAvailabilitiesIdPutWithHttpInfo($id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemAvailabilityModelsAvailability';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemAvailabilityModelsAvailability';
         $request = $this->restAvailabilitiesIdPutRequest($id, $body);
 
         try {
@@ -683,7 +683,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemAvailabilityModelsAvailability',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemAvailabilityModelsAvailability',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -727,7 +727,7 @@ class ItemApi
      */
     public function restAvailabilitiesIdPutAsyncWithHttpInfo($id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemAvailabilityModelsAvailability';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemAvailabilityModelsAvailability';
         $request = $this->restAvailabilitiesIdPutRequest($id, $body);
 
         return $this->client
@@ -879,9 +879,9 @@ class ItemApi
      * Delete item sets
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemSetModelsItemSet[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSetModelsItemSet[]
      */
     public function restItemSetsDelete()
     {
@@ -895,13 +895,13 @@ class ItemApi
      * Delete item sets
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemSetModelsItemSet[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSetModelsItemSet[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemSetsDeleteWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemSetModelsItemSet[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSetModelsItemSet[]';
         $request = $this->restItemSetsDeleteRequest();
 
         try {
@@ -953,7 +953,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemSetModelsItemSet[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSetModelsItemSet[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -993,7 +993,7 @@ class ItemApi
      */
     public function restItemSetsDeleteAsyncWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemSetModelsItemSet[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSetModelsItemSet[]';
         $request = $this->restItemSetsDeleteRequest();
 
         return $this->client
@@ -1126,9 +1126,9 @@ class ItemApi
      * List item sets
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemSetModelsItemSet[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSetModelsItemSet[]
      */
     public function restItemSetsGet()
     {
@@ -1142,13 +1142,13 @@ class ItemApi
      * List item sets
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemSetModelsItemSet[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSetModelsItemSet[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemSetsGetWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemSetModelsItemSet[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSetModelsItemSet[]';
         $request = $this->restItemSetsGetRequest();
 
         try {
@@ -1200,7 +1200,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemSetModelsItemSet[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSetModelsItemSet[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1240,7 +1240,7 @@ class ItemApi
      */
     public function restItemSetsGetAsyncWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemSetModelsItemSet[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSetModelsItemSet[]';
         $request = $this->restItemSetsGetRequest();
 
         return $this->client
@@ -1374,9 +1374,9 @@ class ItemApi
      *
      * @param  int $id id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse
      */
     public function restItemSetsIdDelete($id)
     {
@@ -1391,13 +1391,13 @@ class ItemApi
      *
      * @param  int $id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemSetsIdDeleteWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse';
         $request = $this->restItemSetsIdDeleteRequest($id);
 
         try {
@@ -1449,7 +1449,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1491,7 +1491,7 @@ class ItemApi
      */
     public function restItemSetsIdDeleteAsyncWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse';
         $request = $this->restItemSetsIdDeleteRequest($id);
 
         return $this->client
@@ -1640,9 +1640,9 @@ class ItemApi
      *
      * @param  int $id id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemSetModelsItemSet
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSetModelsItemSet
      */
     public function restItemSetsIdGet($id)
     {
@@ -1657,13 +1657,13 @@ class ItemApi
      *
      * @param  int $id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemSetModelsItemSet, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSetModelsItemSet, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemSetsIdGetWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemSetModelsItemSet';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSetModelsItemSet';
         $request = $this->restItemSetsIdGetRequest($id);
 
         try {
@@ -1715,7 +1715,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemSetModelsItemSet',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSetModelsItemSet',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1757,7 +1757,7 @@ class ItemApi
      */
     public function restItemSetsIdGetAsyncWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemSetModelsItemSet';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSetModelsItemSet';
         $request = $this->restItemSetsIdGetRequest($id);
 
         return $this->client
@@ -1906,9 +1906,9 @@ class ItemApi
      *
      * @param  int $id id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemSetModelsItemSet
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSetModelsItemSet
      */
     public function restItemSetsIdPut($id)
     {
@@ -1923,13 +1923,13 @@ class ItemApi
      *
      * @param  int $id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemSetModelsItemSet, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSetModelsItemSet, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemSetsIdPutWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemSetModelsItemSet';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSetModelsItemSet';
         $request = $this->restItemSetsIdPutRequest($id);
 
         try {
@@ -1981,7 +1981,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemSetModelsItemSet',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSetModelsItemSet',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2023,7 +2023,7 @@ class ItemApi
      */
     public function restItemSetsIdPutAsyncWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemSetModelsItemSet';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSetModelsItemSet';
         $request = $this->restItemSetsIdPutRequest($id);
 
         return $this->client
@@ -2172,9 +2172,9 @@ class ItemApi
      *
      * @param  int $params includes the item sets that have to be created (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemSetModelsItemSet
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSetModelsItemSet
      */
     public function restItemSetsPost($params = null)
     {
@@ -2189,13 +2189,13 @@ class ItemApi
      *
      * @param  int $params includes the item sets that have to be created (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemSetModelsItemSet, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSetModelsItemSet, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemSetsPostWithHttpInfo($params = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemSetModelsItemSet';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSetModelsItemSet';
         $request = $this->restItemSetsPostRequest($params);
 
         try {
@@ -2247,7 +2247,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemSetModelsItemSet',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSetModelsItemSet',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2289,7 +2289,7 @@ class ItemApi
      */
     public function restItemSetsPostAsyncWithHttpInfo($params = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemSetModelsItemSet';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSetModelsItemSet';
         $request = $this->restItemSetsPostRequest($params);
 
         return $this->client
@@ -2427,9 +2427,9 @@ class ItemApi
      * Update item sets
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemSetModelsItemSet[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSetModelsItemSet[]
      */
     public function restItemSetsPut()
     {
@@ -2443,13 +2443,13 @@ class ItemApi
      * Update item sets
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemSetModelsItemSet[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSetModelsItemSet[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemSetsPutWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemSetModelsItemSet[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSetModelsItemSet[]';
         $request = $this->restItemSetsPutRequest();
 
         try {
@@ -2501,7 +2501,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemSetModelsItemSet[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSetModelsItemSet[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2541,7 +2541,7 @@ class ItemApi
      */
     public function restItemSetsPutAsyncWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemSetModelsItemSet[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSetModelsItemSet[]';
         $request = $this->restItemSetsPutRequest();
 
         return $this->client
@@ -2675,9 +2675,9 @@ class ItemApi
      *
      * @param  int $set_id set_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemSetModelsItemSetComponent
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSetModelsItemSetComponent
      */
     public function restItemSetsSetIdComponentsDelete($set_id)
     {
@@ -2692,13 +2692,13 @@ class ItemApi
      *
      * @param  int $set_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemSetModelsItemSetComponent, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSetModelsItemSetComponent, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemSetsSetIdComponentsDeleteWithHttpInfo($set_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemSetModelsItemSetComponent';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSetModelsItemSetComponent';
         $request = $this->restItemSetsSetIdComponentsDeleteRequest($set_id);
 
         try {
@@ -2750,7 +2750,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemSetModelsItemSetComponent',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSetModelsItemSetComponent',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2792,7 +2792,7 @@ class ItemApi
      */
     public function restItemSetsSetIdComponentsDeleteAsyncWithHttpInfo($set_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemSetModelsItemSetComponent';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSetModelsItemSetComponent';
         $request = $this->restItemSetsSetIdComponentsDeleteRequest($set_id);
 
         return $this->client
@@ -2941,9 +2941,9 @@ class ItemApi
      *
      * @param  int $set_id set_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemSetModelsItemSetComponent[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSetModelsItemSetComponent[]
      */
     public function restItemSetsSetIdComponentsGet($set_id)
     {
@@ -2958,13 +2958,13 @@ class ItemApi
      *
      * @param  int $set_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemSetModelsItemSetComponent[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSetModelsItemSetComponent[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemSetsSetIdComponentsGetWithHttpInfo($set_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemSetModelsItemSetComponent[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSetModelsItemSetComponent[]';
         $request = $this->restItemSetsSetIdComponentsGetRequest($set_id);
 
         try {
@@ -3016,7 +3016,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemSetModelsItemSetComponent[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSetModelsItemSetComponent[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3058,7 +3058,7 @@ class ItemApi
      */
     public function restItemSetsSetIdComponentsGetAsyncWithHttpInfo($set_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemSetModelsItemSetComponent[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSetModelsItemSetComponent[]';
         $request = $this->restItemSetsSetIdComponentsGetRequest($set_id);
 
         return $this->client
@@ -3208,9 +3208,9 @@ class ItemApi
      * @param  int $set_id set_id (required)
      * @param  int $id id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse
      */
     public function restItemSetsSetIdComponentsIdDelete($set_id, $id)
     {
@@ -3226,13 +3226,13 @@ class ItemApi
      * @param  int $set_id (required)
      * @param  int $id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemSetsSetIdComponentsIdDeleteWithHttpInfo($set_id, $id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse';
         $request = $this->restItemSetsSetIdComponentsIdDeleteRequest($set_id, $id);
 
         try {
@@ -3284,7 +3284,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3328,7 +3328,7 @@ class ItemApi
      */
     public function restItemSetsSetIdComponentsIdDeleteAsyncWithHttpInfo($set_id, $id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse';
         $request = $this->restItemSetsSetIdComponentsIdDeleteRequest($set_id, $id);
 
         return $this->client
@@ -3493,9 +3493,9 @@ class ItemApi
      * @param  int $set_id set_id (required)
      * @param  int $id id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemSetModelsItemSetComponent
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSetModelsItemSetComponent
      */
     public function restItemSetsSetIdComponentsIdGet($set_id, $id)
     {
@@ -3511,13 +3511,13 @@ class ItemApi
      * @param  int $set_id (required)
      * @param  int $id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemSetModelsItemSetComponent, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSetModelsItemSetComponent, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemSetsSetIdComponentsIdGetWithHttpInfo($set_id, $id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemSetModelsItemSetComponent';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSetModelsItemSetComponent';
         $request = $this->restItemSetsSetIdComponentsIdGetRequest($set_id, $id);
 
         try {
@@ -3569,7 +3569,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemSetModelsItemSetComponent',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSetModelsItemSetComponent',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3613,7 +3613,7 @@ class ItemApi
      */
     public function restItemSetsSetIdComponentsIdGetAsyncWithHttpInfo($set_id, $id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemSetModelsItemSetComponent';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSetModelsItemSetComponent';
         $request = $this->restItemSetsSetIdComponentsIdGetRequest($set_id, $id);
 
         return $this->client
@@ -3778,9 +3778,9 @@ class ItemApi
      * @param  int $set_id set_id (required)
      * @param  int $id id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemSetModelsItemSetComponent
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSetModelsItemSetComponent
      */
     public function restItemSetsSetIdComponentsIdPut($set_id, $id)
     {
@@ -3796,13 +3796,13 @@ class ItemApi
      * @param  int $set_id (required)
      * @param  int $id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemSetModelsItemSetComponent, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSetModelsItemSetComponent, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemSetsSetIdComponentsIdPutWithHttpInfo($set_id, $id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemSetModelsItemSetComponent';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSetModelsItemSetComponent';
         $request = $this->restItemSetsSetIdComponentsIdPutRequest($set_id, $id);
 
         try {
@@ -3854,7 +3854,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemSetModelsItemSetComponent',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSetModelsItemSetComponent',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3898,7 +3898,7 @@ class ItemApi
      */
     public function restItemSetsSetIdComponentsIdPutAsyncWithHttpInfo($set_id, $id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemSetModelsItemSetComponent';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSetModelsItemSetComponent';
         $request = $this->restItemSetsSetIdComponentsIdPutRequest($set_id, $id);
 
         return $this->client
@@ -4062,9 +4062,9 @@ class ItemApi
      *
      * @param  int $set_id set_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemSetModelsItemSetComponent
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSetModelsItemSetComponent
      */
     public function restItemSetsSetIdComponentsPost($set_id)
     {
@@ -4079,13 +4079,13 @@ class ItemApi
      *
      * @param  int $set_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemSetModelsItemSetComponent, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSetModelsItemSetComponent, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemSetsSetIdComponentsPostWithHttpInfo($set_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemSetModelsItemSetComponent';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSetModelsItemSetComponent';
         $request = $this->restItemSetsSetIdComponentsPostRequest($set_id);
 
         try {
@@ -4137,7 +4137,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemSetModelsItemSetComponent',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSetModelsItemSetComponent',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4179,7 +4179,7 @@ class ItemApi
      */
     public function restItemSetsSetIdComponentsPostAsyncWithHttpInfo($set_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemSetModelsItemSetComponent';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSetModelsItemSetComponent';
         $request = $this->restItemSetsSetIdComponentsPostRequest($set_id);
 
         return $this->client
@@ -4328,9 +4328,9 @@ class ItemApi
      *
      * @param  int $set_id set_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemSetModelsItemSetComponent
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSetModelsItemSetComponent
      */
     public function restItemSetsSetIdComponentsPut($set_id)
     {
@@ -4345,13 +4345,13 @@ class ItemApi
      *
      * @param  int $set_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemSetModelsItemSetComponent, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSetModelsItemSetComponent, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemSetsSetIdComponentsPutWithHttpInfo($set_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemSetModelsItemSetComponent';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSetModelsItemSetComponent';
         $request = $this->restItemSetsSetIdComponentsPutRequest($set_id);
 
         try {
@@ -4403,7 +4403,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemSetModelsItemSetComponent',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSetModelsItemSetComponent',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4445,7 +4445,7 @@ class ItemApi
      */
     public function restItemSetsSetIdComponentsPutAsyncWithHttpInfo($set_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemSetModelsItemSetComponent';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSetModelsItemSetComponent';
         $request = $this->restItemSetsSetIdComponentsPutRequest($set_id);
 
         return $this->client
@@ -4594,9 +4594,9 @@ class ItemApi
      *
      * @param  int $set_id set_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemSetModelsItemSetConfig
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSetModelsItemSetConfig
      */
     public function restItemSetsSetIdConfigGet($set_id)
     {
@@ -4611,13 +4611,13 @@ class ItemApi
      *
      * @param  int $set_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemSetModelsItemSetConfig, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSetModelsItemSetConfig, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemSetsSetIdConfigGetWithHttpInfo($set_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemSetModelsItemSetConfig';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSetModelsItemSetConfig';
         $request = $this->restItemSetsSetIdConfigGetRequest($set_id);
 
         try {
@@ -4669,7 +4669,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemSetModelsItemSetConfig',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSetModelsItemSetConfig',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4711,7 +4711,7 @@ class ItemApi
      */
     public function restItemSetsSetIdConfigGetAsyncWithHttpInfo($set_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemSetModelsItemSetConfig';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSetModelsItemSetConfig';
         $request = $this->restItemSetsSetIdConfigGetRequest($set_id);
 
         return $this->client
@@ -4860,9 +4860,9 @@ class ItemApi
      *
      * @param  int $set_id set_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemSetModelsItemSetConfig
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSetModelsItemSetConfig
      */
     public function restItemSetsSetIdConfigPut($set_id)
     {
@@ -4877,13 +4877,13 @@ class ItemApi
      *
      * @param  int $set_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemSetModelsItemSetConfig, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSetModelsItemSetConfig, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemSetsSetIdConfigPutWithHttpInfo($set_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemSetModelsItemSetConfig';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSetModelsItemSetConfig';
         $request = $this->restItemSetsSetIdConfigPutRequest($set_id);
 
         try {
@@ -4935,7 +4935,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemSetModelsItemSetConfig',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSetModelsItemSetConfig',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4977,7 +4977,7 @@ class ItemApi
      */
     public function restItemSetsSetIdConfigPutAsyncWithHttpInfo($set_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemSetModelsItemSetConfig';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSetModelsItemSetConfig';
         $request = $this->restItemSetsSetIdConfigPutRequest($set_id);
 
         return $this->client
@@ -5126,9 +5126,9 @@ class ItemApi
      *
      * @param  int $value_id value_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemAttributeModelsAttributeValueName[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemAttributeModelsAttributeValueName[]
      */
     public function restItemsAttributeValuesValueIdNamesGet($value_id)
     {
@@ -5143,13 +5143,13 @@ class ItemApi
      *
      * @param  int $value_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemAttributeModelsAttributeValueName[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemAttributeModelsAttributeValueName[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsAttributeValuesValueIdNamesGetWithHttpInfo($value_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemAttributeModelsAttributeValueName[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemAttributeModelsAttributeValueName[]';
         $request = $this->restItemsAttributeValuesValueIdNamesGetRequest($value_id);
 
         try {
@@ -5201,7 +5201,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemAttributeModelsAttributeValueName[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemAttributeModelsAttributeValueName[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5243,7 +5243,7 @@ class ItemApi
      */
     public function restItemsAttributeValuesValueIdNamesGetAsyncWithHttpInfo($value_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemAttributeModelsAttributeValueName[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemAttributeModelsAttributeValueName[]';
         $request = $this->restItemsAttributeValuesValueIdNamesGetRequest($value_id);
 
         return $this->client
@@ -5393,9 +5393,9 @@ class ItemApi
      * @param  int $value_id value_id (required)
      * @param  int $lang lang (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse
      */
     public function restItemsAttributeValuesValueIdNamesLangDelete($value_id, $lang)
     {
@@ -5411,13 +5411,13 @@ class ItemApi
      * @param  int $value_id (required)
      * @param  int $lang (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsAttributeValuesValueIdNamesLangDeleteWithHttpInfo($value_id, $lang)
     {
-        $returnType = '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse';
         $request = $this->restItemsAttributeValuesValueIdNamesLangDeleteRequest($value_id, $lang);
 
         try {
@@ -5469,7 +5469,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5513,7 +5513,7 @@ class ItemApi
      */
     public function restItemsAttributeValuesValueIdNamesLangDeleteAsyncWithHttpInfo($value_id, $lang)
     {
-        $returnType = '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse';
         $request = $this->restItemsAttributeValuesValueIdNamesLangDeleteRequest($value_id, $lang);
 
         return $this->client
@@ -5678,9 +5678,9 @@ class ItemApi
      * @param  int $value_id value_id (required)
      * @param  int $lang lang (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemAttributeModelsAttributeValueName
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemAttributeModelsAttributeValueName
      */
     public function restItemsAttributeValuesValueIdNamesLangGet($value_id, $lang)
     {
@@ -5696,13 +5696,13 @@ class ItemApi
      * @param  int $value_id (required)
      * @param  int $lang (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemAttributeModelsAttributeValueName, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemAttributeModelsAttributeValueName, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsAttributeValuesValueIdNamesLangGetWithHttpInfo($value_id, $lang)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemAttributeModelsAttributeValueName';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemAttributeModelsAttributeValueName';
         $request = $this->restItemsAttributeValuesValueIdNamesLangGetRequest($value_id, $lang);
 
         try {
@@ -5754,7 +5754,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemAttributeModelsAttributeValueName',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemAttributeModelsAttributeValueName',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5798,7 +5798,7 @@ class ItemApi
      */
     public function restItemsAttributeValuesValueIdNamesLangGetAsyncWithHttpInfo($value_id, $lang)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemAttributeModelsAttributeValueName';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemAttributeModelsAttributeValueName';
         $request = $this->restItemsAttributeValuesValueIdNamesLangGetRequest($value_id, $lang);
 
         return $this->client
@@ -5964,9 +5964,9 @@ class ItemApi
      * @param  int $lang lang (required)
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemAttributeModelsAttributeValueName
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemAttributeModelsAttributeValueName
      */
     public function restItemsAttributeValuesValueIdNamesLangPut($value_id, $lang, $body = null)
     {
@@ -5983,13 +5983,13 @@ class ItemApi
      * @param  int $lang (required)
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemAttributeModelsAttributeValueName, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemAttributeModelsAttributeValueName, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsAttributeValuesValueIdNamesLangPutWithHttpInfo($value_id, $lang, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemAttributeModelsAttributeValueName';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemAttributeModelsAttributeValueName';
         $request = $this->restItemsAttributeValuesValueIdNamesLangPutRequest($value_id, $lang, $body);
 
         try {
@@ -6041,7 +6041,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemAttributeModelsAttributeValueName',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemAttributeModelsAttributeValueName',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6087,7 +6087,7 @@ class ItemApi
      */
     public function restItemsAttributeValuesValueIdNamesLangPutAsyncWithHttpInfo($value_id, $lang, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemAttributeModelsAttributeValueName';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemAttributeModelsAttributeValueName';
         $request = $this->restItemsAttributeValuesValueIdNamesLangPutRequest($value_id, $lang, $body);
 
         return $this->client
@@ -6256,9 +6256,9 @@ class ItemApi
      * @param  int $value_id value_id (required)
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemAttributeModelsAttributeValueName
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemAttributeModelsAttributeValueName
      */
     public function restItemsAttributeValuesValueIdNamesPost($value_id, $body = null)
     {
@@ -6274,13 +6274,13 @@ class ItemApi
      * @param  int $value_id (required)
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemAttributeModelsAttributeValueName, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemAttributeModelsAttributeValueName, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsAttributeValuesValueIdNamesPostWithHttpInfo($value_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemAttributeModelsAttributeValueName';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemAttributeModelsAttributeValueName';
         $request = $this->restItemsAttributeValuesValueIdNamesPostRequest($value_id, $body);
 
         try {
@@ -6332,7 +6332,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemAttributeModelsAttributeValueName',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemAttributeModelsAttributeValueName',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6376,7 +6376,7 @@ class ItemApi
      */
     public function restItemsAttributeValuesValueIdNamesPostAsyncWithHttpInfo($value_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemAttributeModelsAttributeValueName';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemAttributeModelsAttributeValueName';
         $request = $this->restItemsAttributeValuesValueIdNamesPostRequest($value_id, $body);
 
         return $this->client
@@ -6530,9 +6530,9 @@ class ItemApi
      * @param  int $attribute_id attribute_id (required)
      * @param  int $market_id market_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse
      */
     public function restItemsAttributesAttributeIdMarketsMarketIdMapsDelete($attribute_id, $market_id)
     {
@@ -6548,13 +6548,13 @@ class ItemApi
      * @param  int $attribute_id (required)
      * @param  int $market_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsAttributesAttributeIdMarketsMarketIdMapsDeleteWithHttpInfo($attribute_id, $market_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse';
         $request = $this->restItemsAttributesAttributeIdMarketsMarketIdMapsDeleteRequest($attribute_id, $market_id);
 
         try {
@@ -6606,7 +6606,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6650,7 +6650,7 @@ class ItemApi
      */
     public function restItemsAttributesAttributeIdMarketsMarketIdMapsDeleteAsyncWithHttpInfo($attribute_id, $market_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse';
         $request = $this->restItemsAttributesAttributeIdMarketsMarketIdMapsDeleteRequest($attribute_id, $market_id);
 
         return $this->client
@@ -6815,9 +6815,9 @@ class ItemApi
      * @param  int $attribute_id attribute_id (required)
      * @param  int $market_id market_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemAttributeModelsAttributeMap
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemAttributeModelsAttributeMap
      */
     public function restItemsAttributesAttributeIdMarketsMarketIdMapsGet($attribute_id, $market_id)
     {
@@ -6833,13 +6833,13 @@ class ItemApi
      * @param  int $attribute_id (required)
      * @param  int $market_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemAttributeModelsAttributeMap, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemAttributeModelsAttributeMap, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsAttributesAttributeIdMarketsMarketIdMapsGetWithHttpInfo($attribute_id, $market_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemAttributeModelsAttributeMap';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemAttributeModelsAttributeMap';
         $request = $this->restItemsAttributesAttributeIdMarketsMarketIdMapsGetRequest($attribute_id, $market_id);
 
         try {
@@ -6891,7 +6891,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemAttributeModelsAttributeMap',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemAttributeModelsAttributeMap',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6935,7 +6935,7 @@ class ItemApi
      */
     public function restItemsAttributesAttributeIdMarketsMarketIdMapsGetAsyncWithHttpInfo($attribute_id, $market_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemAttributeModelsAttributeMap';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemAttributeModelsAttributeMap';
         $request = $this->restItemsAttributesAttributeIdMarketsMarketIdMapsGetRequest($attribute_id, $market_id);
 
         return $this->client
@@ -7100,9 +7100,9 @@ class ItemApi
      * @param  int $attribute_id attribute_id (required)
      * @param  int $market_id market_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemAttributeModelsAttributeMap
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemAttributeModelsAttributeMap
      */
     public function restItemsAttributesAttributeIdMarketsMarketIdMapsPut($attribute_id, $market_id)
     {
@@ -7118,13 +7118,13 @@ class ItemApi
      * @param  int $attribute_id (required)
      * @param  int $market_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemAttributeModelsAttributeMap, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemAttributeModelsAttributeMap, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsAttributesAttributeIdMarketsMarketIdMapsPutWithHttpInfo($attribute_id, $market_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemAttributeModelsAttributeMap';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemAttributeModelsAttributeMap';
         $request = $this->restItemsAttributesAttributeIdMarketsMarketIdMapsPutRequest($attribute_id, $market_id);
 
         try {
@@ -7176,7 +7176,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemAttributeModelsAttributeMap',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemAttributeModelsAttributeMap',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -7220,7 +7220,7 @@ class ItemApi
      */
     public function restItemsAttributesAttributeIdMarketsMarketIdMapsPutAsyncWithHttpInfo($attribute_id, $market_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemAttributeModelsAttributeMap';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemAttributeModelsAttributeMap';
         $request = $this->restItemsAttributesAttributeIdMarketsMarketIdMapsPutRequest($attribute_id, $market_id);
 
         return $this->client
@@ -7384,9 +7384,9 @@ class ItemApi
      *
      * @param  int $attribute_id attribute_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemAttributeModelsAttributeName[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemAttributeModelsAttributeName[]
      */
     public function restItemsAttributesAttributeIdNamesGet($attribute_id)
     {
@@ -7401,13 +7401,13 @@ class ItemApi
      *
      * @param  int $attribute_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemAttributeModelsAttributeName[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemAttributeModelsAttributeName[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsAttributesAttributeIdNamesGetWithHttpInfo($attribute_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemAttributeModelsAttributeName[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemAttributeModelsAttributeName[]';
         $request = $this->restItemsAttributesAttributeIdNamesGetRequest($attribute_id);
 
         try {
@@ -7459,7 +7459,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemAttributeModelsAttributeName[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemAttributeModelsAttributeName[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -7501,7 +7501,7 @@ class ItemApi
      */
     public function restItemsAttributesAttributeIdNamesGetAsyncWithHttpInfo($attribute_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemAttributeModelsAttributeName[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemAttributeModelsAttributeName[]';
         $request = $this->restItemsAttributesAttributeIdNamesGetRequest($attribute_id);
 
         return $this->client
@@ -7651,9 +7651,9 @@ class ItemApi
      * @param  int $attribute_id attribute_id (required)
      * @param  int $lang lang (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse
      */
     public function restItemsAttributesAttributeIdNamesLangDelete($attribute_id, $lang)
     {
@@ -7669,13 +7669,13 @@ class ItemApi
      * @param  int $attribute_id (required)
      * @param  int $lang (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsAttributesAttributeIdNamesLangDeleteWithHttpInfo($attribute_id, $lang)
     {
-        $returnType = '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse';
         $request = $this->restItemsAttributesAttributeIdNamesLangDeleteRequest($attribute_id, $lang);
 
         try {
@@ -7727,7 +7727,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -7771,7 +7771,7 @@ class ItemApi
      */
     public function restItemsAttributesAttributeIdNamesLangDeleteAsyncWithHttpInfo($attribute_id, $lang)
     {
-        $returnType = '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse';
         $request = $this->restItemsAttributesAttributeIdNamesLangDeleteRequest($attribute_id, $lang);
 
         return $this->client
@@ -7936,9 +7936,9 @@ class ItemApi
      * @param  int $attribute_id attribute_id (required)
      * @param  int $lang lang (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemAttributeModelsAttributeName
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemAttributeModelsAttributeName
      */
     public function restItemsAttributesAttributeIdNamesLangGet($attribute_id, $lang)
     {
@@ -7954,13 +7954,13 @@ class ItemApi
      * @param  int $attribute_id (required)
      * @param  int $lang (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemAttributeModelsAttributeName, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemAttributeModelsAttributeName, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsAttributesAttributeIdNamesLangGetWithHttpInfo($attribute_id, $lang)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemAttributeModelsAttributeName';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemAttributeModelsAttributeName';
         $request = $this->restItemsAttributesAttributeIdNamesLangGetRequest($attribute_id, $lang);
 
         try {
@@ -8012,7 +8012,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemAttributeModelsAttributeName',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemAttributeModelsAttributeName',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -8056,7 +8056,7 @@ class ItemApi
      */
     public function restItemsAttributesAttributeIdNamesLangGetAsyncWithHttpInfo($attribute_id, $lang)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemAttributeModelsAttributeName';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemAttributeModelsAttributeName';
         $request = $this->restItemsAttributesAttributeIdNamesLangGetRequest($attribute_id, $lang);
 
         return $this->client
@@ -8222,9 +8222,9 @@ class ItemApi
      * @param  int $lang lang (required)
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemAttributeModelsAttributeName
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemAttributeModelsAttributeName
      */
     public function restItemsAttributesAttributeIdNamesLangPut($attribute_id, $lang, $body = null)
     {
@@ -8241,13 +8241,13 @@ class ItemApi
      * @param  int $lang (required)
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemAttributeModelsAttributeName, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemAttributeModelsAttributeName, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsAttributesAttributeIdNamesLangPutWithHttpInfo($attribute_id, $lang, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemAttributeModelsAttributeName';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemAttributeModelsAttributeName';
         $request = $this->restItemsAttributesAttributeIdNamesLangPutRequest($attribute_id, $lang, $body);
 
         try {
@@ -8299,7 +8299,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemAttributeModelsAttributeName',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemAttributeModelsAttributeName',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -8345,7 +8345,7 @@ class ItemApi
      */
     public function restItemsAttributesAttributeIdNamesLangPutAsyncWithHttpInfo($attribute_id, $lang, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemAttributeModelsAttributeName';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemAttributeModelsAttributeName';
         $request = $this->restItemsAttributesAttributeIdNamesLangPutRequest($attribute_id, $lang, $body);
 
         return $this->client
@@ -8514,9 +8514,9 @@ class ItemApi
      * @param  int $attribute_id attribute_id (required)
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemAttributeModelsAttributeName
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemAttributeModelsAttributeName
      */
     public function restItemsAttributesAttributeIdNamesPost($attribute_id, $body = null)
     {
@@ -8532,13 +8532,13 @@ class ItemApi
      * @param  int $attribute_id (required)
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemAttributeModelsAttributeName, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemAttributeModelsAttributeName, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsAttributesAttributeIdNamesPostWithHttpInfo($attribute_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemAttributeModelsAttributeName';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemAttributeModelsAttributeName';
         $request = $this->restItemsAttributesAttributeIdNamesPostRequest($attribute_id, $body);
 
         try {
@@ -8590,7 +8590,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemAttributeModelsAttributeName',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemAttributeModelsAttributeName',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -8634,7 +8634,7 @@ class ItemApi
      */
     public function restItemsAttributesAttributeIdNamesPostAsyncWithHttpInfo($attribute_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemAttributeModelsAttributeName';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemAttributeModelsAttributeName';
         $request = $this->restItemsAttributesAttributeIdNamesPostRequest($attribute_id, $body);
 
         return $this->client
@@ -8791,7 +8791,7 @@ class ItemApi
      * @param  int $page The page of results to search for (optional)
      * @param  int $items_per_page The number of items to list per page (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -8812,7 +8812,7 @@ class ItemApi
      * @param  int $page The page of results to search for (optional)
      * @param  int $items_per_page The number of items to list per page (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -9090,9 +9090,9 @@ class ItemApi
      * @param  int $attribute_id attribute_id (required)
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemAttributeModelsAttributeValueMarketName
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemAttributeModelsAttributeValueMarketName
      */
     public function restItemsAttributesAttributeIdValueMarketNamesPost($attribute_id, $body = null)
     {
@@ -9108,13 +9108,13 @@ class ItemApi
      * @param  int $attribute_id (required)
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemAttributeModelsAttributeValueMarketName, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemAttributeModelsAttributeValueMarketName, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsAttributesAttributeIdValueMarketNamesPostWithHttpInfo($attribute_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemAttributeModelsAttributeValueMarketName';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemAttributeModelsAttributeValueMarketName';
         $request = $this->restItemsAttributesAttributeIdValueMarketNamesPostRequest($attribute_id, $body);
 
         try {
@@ -9166,7 +9166,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemAttributeModelsAttributeValueMarketName',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemAttributeModelsAttributeValueMarketName',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -9210,7 +9210,7 @@ class ItemApi
      */
     public function restItemsAttributesAttributeIdValueMarketNamesPostAsyncWithHttpInfo($attribute_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemAttributeModelsAttributeValueMarketName';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemAttributeModelsAttributeValueMarketName';
         $request = $this->restItemsAttributesAttributeIdValueMarketNamesPostRequest($attribute_id, $body);
 
         return $this->client
@@ -9366,9 +9366,9 @@ class ItemApi
      * @param  int $lang lang (required)
      * @param  int $reference_type reference_type (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse
      */
     public function restItemsAttributesAttributeIdValueMarketNamesValueIdLangReferenceTypeDelete($attribute_id, $value_id, $lang, $reference_type)
     {
@@ -9386,13 +9386,13 @@ class ItemApi
      * @param  int $lang (required)
      * @param  int $reference_type (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsAttributesAttributeIdValueMarketNamesValueIdLangReferenceTypeDeleteWithHttpInfo($attribute_id, $value_id, $lang, $reference_type)
     {
-        $returnType = '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse';
         $request = $this->restItemsAttributesAttributeIdValueMarketNamesValueIdLangReferenceTypeDeleteRequest($attribute_id, $value_id, $lang, $reference_type);
 
         try {
@@ -9444,7 +9444,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -9492,7 +9492,7 @@ class ItemApi
      */
     public function restItemsAttributesAttributeIdValueMarketNamesValueIdLangReferenceTypeDeleteAsyncWithHttpInfo($attribute_id, $value_id, $lang, $reference_type)
     {
-        $returnType = '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse';
         $request = $this->restItemsAttributesAttributeIdValueMarketNamesValueIdLangReferenceTypeDeleteRequest($attribute_id, $value_id, $lang, $reference_type);
 
         return $this->client
@@ -9690,9 +9690,9 @@ class ItemApi
      * @param  int $reference_type reference_type (required)
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemAttributeModelsAttributeValueMarketName
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemAttributeModelsAttributeValueMarketName
      */
     public function restItemsAttributesAttributeIdValueMarketNamesValueIdLangReferenceTypePut($attribute_id, $value_id, $lang, $reference_type, $body = null)
     {
@@ -9711,13 +9711,13 @@ class ItemApi
      * @param  int $reference_type (required)
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemAttributeModelsAttributeValueMarketName, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemAttributeModelsAttributeValueMarketName, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsAttributesAttributeIdValueMarketNamesValueIdLangReferenceTypePutWithHttpInfo($attribute_id, $value_id, $lang, $reference_type, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemAttributeModelsAttributeValueMarketName';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemAttributeModelsAttributeValueMarketName';
         $request = $this->restItemsAttributesAttributeIdValueMarketNamesValueIdLangReferenceTypePutRequest($attribute_id, $value_id, $lang, $reference_type, $body);
 
         try {
@@ -9769,7 +9769,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemAttributeModelsAttributeValueMarketName',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemAttributeModelsAttributeValueMarketName',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -9819,7 +9819,7 @@ class ItemApi
      */
     public function restItemsAttributesAttributeIdValueMarketNamesValueIdLangReferenceTypePutAsyncWithHttpInfo($attribute_id, $value_id, $lang, $reference_type, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemAttributeModelsAttributeValueMarketName';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemAttributeModelsAttributeValueMarketName';
         $request = $this->restItemsAttributesAttributeIdValueMarketNamesValueIdLangReferenceTypePutRequest($attribute_id, $value_id, $lang, $reference_type, $body);
 
         return $this->client
@@ -10019,9 +10019,9 @@ class ItemApi
      * @param  int $attribute_value_id attribute_value_id (required)
      * @param  int $market_id market_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse
      */
     public function restItemsAttributesAttributeIdValuesAttributeValueIdMarketsMarketIdMapsDelete($attribute_id, $attribute_value_id, $market_id)
     {
@@ -10038,13 +10038,13 @@ class ItemApi
      * @param  int $attribute_value_id (required)
      * @param  int $market_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsAttributesAttributeIdValuesAttributeValueIdMarketsMarketIdMapsDeleteWithHttpInfo($attribute_id, $attribute_value_id, $market_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse';
         $request = $this->restItemsAttributesAttributeIdValuesAttributeValueIdMarketsMarketIdMapsDeleteRequest($attribute_id, $attribute_value_id, $market_id);
 
         try {
@@ -10096,7 +10096,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -10142,7 +10142,7 @@ class ItemApi
      */
     public function restItemsAttributesAttributeIdValuesAttributeValueIdMarketsMarketIdMapsDeleteAsyncWithHttpInfo($attribute_id, $attribute_value_id, $market_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse';
         $request = $this->restItemsAttributesAttributeIdValuesAttributeValueIdMarketsMarketIdMapsDeleteRequest($attribute_id, $attribute_value_id, $market_id);
 
         return $this->client
@@ -10323,9 +10323,9 @@ class ItemApi
      * @param  int $attribute_value_id attribute_value_id (required)
      * @param  int $market_id market_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemAttributeModelsAttributeValueMap
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemAttributeModelsAttributeValueMap
      */
     public function restItemsAttributesAttributeIdValuesAttributeValueIdMarketsMarketIdMapsGet($attribute_id, $attribute_value_id, $market_id)
     {
@@ -10342,13 +10342,13 @@ class ItemApi
      * @param  int $attribute_value_id (required)
      * @param  int $market_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemAttributeModelsAttributeValueMap, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemAttributeModelsAttributeValueMap, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsAttributesAttributeIdValuesAttributeValueIdMarketsMarketIdMapsGetWithHttpInfo($attribute_id, $attribute_value_id, $market_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemAttributeModelsAttributeValueMap';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemAttributeModelsAttributeValueMap';
         $request = $this->restItemsAttributesAttributeIdValuesAttributeValueIdMarketsMarketIdMapsGetRequest($attribute_id, $attribute_value_id, $market_id);
 
         try {
@@ -10400,7 +10400,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemAttributeModelsAttributeValueMap',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemAttributeModelsAttributeValueMap',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -10446,7 +10446,7 @@ class ItemApi
      */
     public function restItemsAttributesAttributeIdValuesAttributeValueIdMarketsMarketIdMapsGetAsyncWithHttpInfo($attribute_id, $attribute_value_id, $market_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemAttributeModelsAttributeValueMap';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemAttributeModelsAttributeValueMap';
         $request = $this->restItemsAttributesAttributeIdValuesAttributeValueIdMarketsMarketIdMapsGetRequest($attribute_id, $attribute_value_id, $market_id);
 
         return $this->client
@@ -10627,9 +10627,9 @@ class ItemApi
      * @param  int $attribute_value_id attribute_value_id (required)
      * @param  int $market_id market_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemAttributeModelsAttributeValueMap
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemAttributeModelsAttributeValueMap
      */
     public function restItemsAttributesAttributeIdValuesAttributeValueIdMarketsMarketIdMapsPut($attribute_id, $attribute_value_id, $market_id)
     {
@@ -10646,13 +10646,13 @@ class ItemApi
      * @param  int $attribute_value_id (required)
      * @param  int $market_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemAttributeModelsAttributeValueMap, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemAttributeModelsAttributeValueMap, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsAttributesAttributeIdValuesAttributeValueIdMarketsMarketIdMapsPutWithHttpInfo($attribute_id, $attribute_value_id, $market_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemAttributeModelsAttributeValueMap';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemAttributeModelsAttributeValueMap';
         $request = $this->restItemsAttributesAttributeIdValuesAttributeValueIdMarketsMarketIdMapsPutRequest($attribute_id, $attribute_value_id, $market_id);
 
         try {
@@ -10704,7 +10704,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemAttributeModelsAttributeValueMap',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemAttributeModelsAttributeValueMap',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -10750,7 +10750,7 @@ class ItemApi
      */
     public function restItemsAttributesAttributeIdValuesAttributeValueIdMarketsMarketIdMapsPutAsyncWithHttpInfo($attribute_id, $attribute_value_id, $market_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemAttributeModelsAttributeValueMap';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemAttributeModelsAttributeValueMap';
         $request = $this->restItemsAttributesAttributeIdValuesAttributeValueIdMarketsMarketIdMapsPutRequest($attribute_id, $attribute_value_id, $market_id);
 
         return $this->client
@@ -10931,7 +10931,7 @@ class ItemApi
      * @param  string $with Includes the specified attribute value information in the results. The following parameters are available:&lt;ul&gt;&lt;li&gt;attribute &#x3D; The attribute of the value&lt;/li&gt;&lt;li&gt;names &#x3D; The attribute value names in all languages&lt;/li&gt;&lt;li&gt;marketNames &#x3D; The market attribute value links (amazon only)&lt;/li&gt;&lt;li&gt;valueMaps &#x3D; The market attribute value links (amazon excluded)&lt;/li&gt;&lt;/ul&gt; (optional)
      * @param  string $updated_at Filter restricts the list of results to items updated after the specified date. The date can be specified as unix timestamps or in the ISO 8601 date format. The PHP function strtotime is also supported. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -10950,7 +10950,7 @@ class ItemApi
      * @param  string $with Includes the specified attribute value information in the results. The following parameters are available:&lt;ul&gt;&lt;li&gt;attribute &#x3D; The attribute of the value&lt;/li&gt;&lt;li&gt;names &#x3D; The attribute value names in all languages&lt;/li&gt;&lt;li&gt;marketNames &#x3D; The market attribute value links (amazon only)&lt;/li&gt;&lt;li&gt;valueMaps &#x3D; The market attribute value links (amazon excluded)&lt;/li&gt;&lt;/ul&gt; (optional)
      * @param  string $updated_at Filter restricts the list of results to items updated after the specified date. The date can be specified as unix timestamps or in the ISO 8601 date format. The PHP function strtotime is also supported. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -11214,9 +11214,9 @@ class ItemApi
      * @param  int $attribute_id attribute_id (required)
      * @param  int $id id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse
      */
     public function restItemsAttributesAttributeIdValuesIdDelete($attribute_id, $id)
     {
@@ -11232,13 +11232,13 @@ class ItemApi
      * @param  int $attribute_id (required)
      * @param  int $id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsAttributesAttributeIdValuesIdDeleteWithHttpInfo($attribute_id, $id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse';
         $request = $this->restItemsAttributesAttributeIdValuesIdDeleteRequest($attribute_id, $id);
 
         try {
@@ -11290,7 +11290,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -11334,7 +11334,7 @@ class ItemApi
      */
     public function restItemsAttributesAttributeIdValuesIdDeleteAsyncWithHttpInfo($attribute_id, $id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse';
         $request = $this->restItemsAttributesAttributeIdValuesIdDeleteRequest($attribute_id, $id);
 
         return $this->client
@@ -11500,9 +11500,9 @@ class ItemApi
      * @param  int $id id (required)
      * @param  string $with Includes the specified attribute value information in the results. The following parameters are available:&lt;ul&gt;&lt;li&gt;attribute &#x3D; The attribute of the value&lt;/li&gt;&lt;li&gt;names &#x3D; The attribute value names in all languages&lt;/li&gt;&lt;li&gt;marketNames &#x3D; The market attribute value links (amazon only)&lt;/li&gt;&lt;li&gt;valueMaps &#x3D; The market attribute links (amazon excluded)&lt;/li&gt;&lt;/ul&gt; (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemAttributeModelsAttributeValue
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemAttributeModelsAttributeValue
      */
     public function restItemsAttributesAttributeIdValuesIdGet($attribute_id, $id, $with = null)
     {
@@ -11519,13 +11519,13 @@ class ItemApi
      * @param  int $id (required)
      * @param  string $with Includes the specified attribute value information in the results. The following parameters are available:&lt;ul&gt;&lt;li&gt;attribute &#x3D; The attribute of the value&lt;/li&gt;&lt;li&gt;names &#x3D; The attribute value names in all languages&lt;/li&gt;&lt;li&gt;marketNames &#x3D; The market attribute value links (amazon only)&lt;/li&gt;&lt;li&gt;valueMaps &#x3D; The market attribute links (amazon excluded)&lt;/li&gt;&lt;/ul&gt; (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemAttributeModelsAttributeValue, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemAttributeModelsAttributeValue, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsAttributesAttributeIdValuesIdGetWithHttpInfo($attribute_id, $id, $with = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemAttributeModelsAttributeValue';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemAttributeModelsAttributeValue';
         $request = $this->restItemsAttributesAttributeIdValuesIdGetRequest($attribute_id, $id, $with);
 
         try {
@@ -11577,7 +11577,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemAttributeModelsAttributeValue',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemAttributeModelsAttributeValue',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -11623,7 +11623,7 @@ class ItemApi
      */
     public function restItemsAttributesAttributeIdValuesIdGetAsyncWithHttpInfo($attribute_id, $id, $with = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemAttributeModelsAttributeValue';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemAttributeModelsAttributeValue';
         $request = $this->restItemsAttributesAttributeIdValuesIdGetRequest($attribute_id, $id, $with);
 
         return $this->client
@@ -11794,9 +11794,9 @@ class ItemApi
      * @param  int $id id (required)
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemAttributeModelsAttributeValue
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemAttributeModelsAttributeValue
      */
     public function restItemsAttributesAttributeIdValuesIdPut($attribute_id, $id, $body = null)
     {
@@ -11813,13 +11813,13 @@ class ItemApi
      * @param  int $id (required)
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemAttributeModelsAttributeValue, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemAttributeModelsAttributeValue, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsAttributesAttributeIdValuesIdPutWithHttpInfo($attribute_id, $id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemAttributeModelsAttributeValue';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemAttributeModelsAttributeValue';
         $request = $this->restItemsAttributesAttributeIdValuesIdPutRequest($attribute_id, $id, $body);
 
         try {
@@ -11871,7 +11871,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemAttributeModelsAttributeValue',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemAttributeModelsAttributeValue',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -11917,7 +11917,7 @@ class ItemApi
      */
     public function restItemsAttributesAttributeIdValuesIdPutAsyncWithHttpInfo($attribute_id, $id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemAttributeModelsAttributeValue';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemAttributeModelsAttributeValue';
         $request = $this->restItemsAttributesAttributeIdValuesIdPutRequest($attribute_id, $id, $body);
 
         return $this->client
@@ -12086,9 +12086,9 @@ class ItemApi
      * @param  int $attribute_id attribute_id (required)
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemAttributeModelsAttributeValue
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemAttributeModelsAttributeValue
      */
     public function restItemsAttributesAttributeIdValuesPost($attribute_id, $body = null)
     {
@@ -12104,13 +12104,13 @@ class ItemApi
      * @param  int $attribute_id (required)
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemAttributeModelsAttributeValue, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemAttributeModelsAttributeValue, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsAttributesAttributeIdValuesPostWithHttpInfo($attribute_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemAttributeModelsAttributeValue';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemAttributeModelsAttributeValue';
         $request = $this->restItemsAttributesAttributeIdValuesPostRequest($attribute_id, $body);
 
         try {
@@ -12162,7 +12162,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemAttributeModelsAttributeValue',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemAttributeModelsAttributeValue',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -12206,7 +12206,7 @@ class ItemApi
      */
     public function restItemsAttributesAttributeIdValuesPostAsyncWithHttpInfo($attribute_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemAttributeModelsAttributeValue';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemAttributeModelsAttributeValue';
         $request = $this->restItemsAttributesAttributeIdValuesPostRequest($attribute_id, $body);
 
         return $this->client
@@ -12360,7 +12360,7 @@ class ItemApi
      * @param  string $with Includes the specified attribute information in the results. The following parameters are available: &lt;ul&gt;&lt;li&gt;names&lt;/b&gt; &#x3D; The names of the attribute&lt;/li&gt;&lt;li&gt;values&lt;/b&gt; &#x3D; The values of the attribute&lt;/li&gt;&lt;li&gt;maps&lt;/b&gt; &#x3D; The market maps of the attribute&lt;/li&gt;&lt;/ul&gt; More than one parameter should be separated by commas. (optional)
      * @param  string $updated_at Filter restricts the list of results to items updated after the specified date. The date can be specified as unix timestamps or in the ISO 8601 date format. The PHP function strtotime is also supported. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -12378,7 +12378,7 @@ class ItemApi
      * @param  string $with Includes the specified attribute information in the results. The following parameters are available: &lt;ul&gt;&lt;li&gt;names&lt;/b&gt; &#x3D; The names of the attribute&lt;/li&gt;&lt;li&gt;values&lt;/b&gt; &#x3D; The values of the attribute&lt;/li&gt;&lt;li&gt;maps&lt;/b&gt; &#x3D; The market maps of the attribute&lt;/li&gt;&lt;/ul&gt; More than one parameter should be separated by commas. (optional)
      * @param  string $updated_at Filter restricts the list of results to items updated after the specified date. The date can be specified as unix timestamps or in the ISO 8601 date format. The PHP function strtotime is also supported. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -12624,9 +12624,9 @@ class ItemApi
      *
      * @param  int $id id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse
      */
     public function restItemsAttributesIdDelete($id)
     {
@@ -12641,13 +12641,13 @@ class ItemApi
      *
      * @param  int $id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsAttributesIdDeleteWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse';
         $request = $this->restItemsAttributesIdDeleteRequest($id);
 
         try {
@@ -12699,7 +12699,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -12741,7 +12741,7 @@ class ItemApi
      */
     public function restItemsAttributesIdDeleteAsyncWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse';
         $request = $this->restItemsAttributesIdDeleteRequest($id);
 
         return $this->client
@@ -12891,9 +12891,9 @@ class ItemApi
      * @param  int $id id (required)
      * @param  string $with Includes the specified attribute information in the results. The following parameters are available: &lt;ul&gt;&lt;li&gt;names&lt;/b&gt; &#x3D; The names of the attribute&lt;/li&gt;&lt;li&gt;values&lt;/b&gt; &#x3D; The values of the attribute&lt;/li&gt;&lt;li&gt;maps&lt;/b&gt; &#x3D; The market maps of the attribute&lt;/li&gt;&lt;/ul&gt; More than one parameter should be separated by commas. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemAttributeModelsAttribute
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemAttributeModelsAttribute
      */
     public function restItemsAttributesIdGet($id, $with = null)
     {
@@ -12909,13 +12909,13 @@ class ItemApi
      * @param  int $id (required)
      * @param  string $with Includes the specified attribute information in the results. The following parameters are available: &lt;ul&gt;&lt;li&gt;names&lt;/b&gt; &#x3D; The names of the attribute&lt;/li&gt;&lt;li&gt;values&lt;/b&gt; &#x3D; The values of the attribute&lt;/li&gt;&lt;li&gt;maps&lt;/b&gt; &#x3D; The market maps of the attribute&lt;/li&gt;&lt;/ul&gt; More than one parameter should be separated by commas. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemAttributeModelsAttribute, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemAttributeModelsAttribute, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsAttributesIdGetWithHttpInfo($id, $with = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemAttributeModelsAttribute';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemAttributeModelsAttribute';
         $request = $this->restItemsAttributesIdGetRequest($id, $with);
 
         try {
@@ -12967,7 +12967,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemAttributeModelsAttribute',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemAttributeModelsAttribute',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -13011,7 +13011,7 @@ class ItemApi
      */
     public function restItemsAttributesIdGetAsyncWithHttpInfo($id, $with = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemAttributeModelsAttribute';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemAttributeModelsAttribute';
         $request = $this->restItemsAttributesIdGetRequest($id, $with);
 
         return $this->client
@@ -13166,9 +13166,9 @@ class ItemApi
      * @param  int $id id (required)
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemAttributeModelsAttribute
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemAttributeModelsAttribute
      */
     public function restItemsAttributesIdPut($id, $body = null)
     {
@@ -13184,13 +13184,13 @@ class ItemApi
      * @param  int $id (required)
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemAttributeModelsAttribute, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemAttributeModelsAttribute, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsAttributesIdPutWithHttpInfo($id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemAttributeModelsAttribute';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemAttributeModelsAttribute';
         $request = $this->restItemsAttributesIdPutRequest($id, $body);
 
         try {
@@ -13242,7 +13242,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemAttributeModelsAttribute',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemAttributeModelsAttribute',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -13286,7 +13286,7 @@ class ItemApi
      */
     public function restItemsAttributesIdPutAsyncWithHttpInfo($id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemAttributeModelsAttribute';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemAttributeModelsAttribute';
         $request = $this->restItemsAttributesIdPutRequest($id, $body);
 
         return $this->client
@@ -13438,7 +13438,7 @@ class ItemApi
      * Lists all attribute maps.
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -13454,7 +13454,7 @@ class ItemApi
      * Lists all attribute maps.
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -13686,9 +13686,9 @@ class ItemApi
      *
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemAttributeModelsAttributeMap
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemAttributeModelsAttributeMap
      */
     public function restItemsAttributesMarketsMapsPost($body = null)
     {
@@ -13703,13 +13703,13 @@ class ItemApi
      *
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemAttributeModelsAttributeMap, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemAttributeModelsAttributeMap, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsAttributesMarketsMapsPostWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemAttributeModelsAttributeMap';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemAttributeModelsAttributeMap';
         $request = $this->restItemsAttributesMarketsMapsPostRequest($body);
 
         try {
@@ -13761,7 +13761,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemAttributeModelsAttributeMap',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemAttributeModelsAttributeMap',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -13803,7 +13803,7 @@ class ItemApi
      */
     public function restItemsAttributesMarketsMapsPostAsyncWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemAttributeModelsAttributeMap';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemAttributeModelsAttributeMap';
         $request = $this->restItemsAttributesMarketsMapsPostRequest($body);
 
         return $this->client
@@ -13941,9 +13941,9 @@ class ItemApi
      *
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemAttributeModelsAttribute
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemAttributeModelsAttribute
      */
     public function restItemsAttributesPost($body = null)
     {
@@ -13958,13 +13958,13 @@ class ItemApi
      *
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemAttributeModelsAttribute, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemAttributeModelsAttribute, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsAttributesPostWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemAttributeModelsAttribute';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemAttributeModelsAttribute';
         $request = $this->restItemsAttributesPostRequest($body);
 
         try {
@@ -14016,7 +14016,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemAttributeModelsAttribute',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemAttributeModelsAttribute',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -14058,7 +14058,7 @@ class ItemApi
      */
     public function restItemsAttributesPostAsyncWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemAttributeModelsAttribute';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemAttributeModelsAttribute';
         $request = $this->restItemsAttributesPostRequest($body);
 
         return $this->client
@@ -14195,7 +14195,7 @@ class ItemApi
      * Lists all attribute value maps.
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -14211,7 +14211,7 @@ class ItemApi
      * Lists all attribute value maps.
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -14443,9 +14443,9 @@ class ItemApi
      *
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemAttributeModelsAttributeValueMap
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemAttributeModelsAttributeValueMap
      */
     public function restItemsAttributesValuesMarketsMapsPost($body = null)
     {
@@ -14460,13 +14460,13 @@ class ItemApi
      *
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemAttributeModelsAttributeValueMap, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemAttributeModelsAttributeValueMap, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsAttributesValuesMarketsMapsPostWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemAttributeModelsAttributeValueMap';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemAttributeModelsAttributeValueMap';
         $request = $this->restItemsAttributesValuesMarketsMapsPostRequest($body);
 
         try {
@@ -14518,7 +14518,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemAttributeModelsAttributeValueMap',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemAttributeModelsAttributeValueMap',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -14560,7 +14560,7 @@ class ItemApi
      */
     public function restItemsAttributesValuesMarketsMapsPostAsyncWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemAttributeModelsAttributeValueMap';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemAttributeModelsAttributeValueMap';
         $request = $this->restItemsAttributesValuesMarketsMapsPostRequest($body);
 
         return $this->client
@@ -14698,9 +14698,9 @@ class ItemApi
      *
      * @param  int $barcode_id barcode_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse
      */
     public function restItemsBarcodesBarcodeIdDelete($barcode_id)
     {
@@ -14715,13 +14715,13 @@ class ItemApi
      *
      * @param  int $barcode_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsBarcodesBarcodeIdDeleteWithHttpInfo($barcode_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse';
         $request = $this->restItemsBarcodesBarcodeIdDeleteRequest($barcode_id);
 
         try {
@@ -14773,7 +14773,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -14815,7 +14815,7 @@ class ItemApi
      */
     public function restItemsBarcodesBarcodeIdDeleteAsyncWithHttpInfo($barcode_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse';
         $request = $this->restItemsBarcodesBarcodeIdDeleteRequest($barcode_id);
 
         return $this->client
@@ -14964,9 +14964,9 @@ class ItemApi
      *
      * @param  int $barcode_id barcode_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemBarcodeModelsBarcode
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemBarcodeModelsBarcode
      */
     public function restItemsBarcodesBarcodeIdGet($barcode_id)
     {
@@ -14981,13 +14981,13 @@ class ItemApi
      *
      * @param  int $barcode_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemBarcodeModelsBarcode, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemBarcodeModelsBarcode, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsBarcodesBarcodeIdGetWithHttpInfo($barcode_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemBarcodeModelsBarcode';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemBarcodeModelsBarcode';
         $request = $this->restItemsBarcodesBarcodeIdGetRequest($barcode_id);
 
         try {
@@ -15039,7 +15039,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemBarcodeModelsBarcode',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemBarcodeModelsBarcode',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -15081,7 +15081,7 @@ class ItemApi
      */
     public function restItemsBarcodesBarcodeIdGetAsyncWithHttpInfo($barcode_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemBarcodeModelsBarcode';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemBarcodeModelsBarcode';
         $request = $this->restItemsBarcodesBarcodeIdGetRequest($barcode_id);
 
         return $this->client
@@ -15231,9 +15231,9 @@ class ItemApi
      * @param  int $barcode_id barcode_id (required)
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemBarcodeModelsBarcode
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemBarcodeModelsBarcode
      */
     public function restItemsBarcodesBarcodeIdPut($barcode_id, $body = null)
     {
@@ -15249,13 +15249,13 @@ class ItemApi
      * @param  int $barcode_id (required)
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemBarcodeModelsBarcode, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemBarcodeModelsBarcode, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsBarcodesBarcodeIdPutWithHttpInfo($barcode_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemBarcodeModelsBarcode';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemBarcodeModelsBarcode';
         $request = $this->restItemsBarcodesBarcodeIdPutRequest($barcode_id, $body);
 
         try {
@@ -15307,7 +15307,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemBarcodeModelsBarcode',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemBarcodeModelsBarcode',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -15351,7 +15351,7 @@ class ItemApi
      */
     public function restItemsBarcodesBarcodeIdPutAsyncWithHttpInfo($barcode_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemBarcodeModelsBarcode';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemBarcodeModelsBarcode';
         $request = $this->restItemsBarcodesBarcodeIdPutRequest($barcode_id, $body);
 
         return $this->client
@@ -15504,9 +15504,9 @@ class ItemApi
      *
      * @param  int $barcode_id barcode_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemBarcodeModelsBarcodeLinkReferrer
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemBarcodeModelsBarcodeLinkReferrer
      */
     public function restItemsBarcodesBarcodeIdReferrerPost($barcode_id)
     {
@@ -15521,13 +15521,13 @@ class ItemApi
      *
      * @param  int $barcode_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemBarcodeModelsBarcodeLinkReferrer, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemBarcodeModelsBarcodeLinkReferrer, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsBarcodesBarcodeIdReferrerPostWithHttpInfo($barcode_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemBarcodeModelsBarcodeLinkReferrer';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemBarcodeModelsBarcodeLinkReferrer';
         $request = $this->restItemsBarcodesBarcodeIdReferrerPostRequest($barcode_id);
 
         try {
@@ -15579,7 +15579,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemBarcodeModelsBarcodeLinkReferrer',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemBarcodeModelsBarcodeLinkReferrer',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -15621,7 +15621,7 @@ class ItemApi
      */
     public function restItemsBarcodesBarcodeIdReferrerPostAsyncWithHttpInfo($barcode_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemBarcodeModelsBarcodeLinkReferrer';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemBarcodeModelsBarcodeLinkReferrer';
         $request = $this->restItemsBarcodesBarcodeIdReferrerPostRequest($barcode_id);
 
         return $this->client
@@ -15771,9 +15771,9 @@ class ItemApi
      * @param  int $barcode_id barcode_id (required)
      * @param  int $referrer_id referrer_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse
      */
     public function restItemsBarcodesBarcodeIdReferrerReferrerIdDelete($barcode_id, $referrer_id)
     {
@@ -15789,13 +15789,13 @@ class ItemApi
      * @param  int $barcode_id (required)
      * @param  int $referrer_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsBarcodesBarcodeIdReferrerReferrerIdDeleteWithHttpInfo($barcode_id, $referrer_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse';
         $request = $this->restItemsBarcodesBarcodeIdReferrerReferrerIdDeleteRequest($barcode_id, $referrer_id);
 
         try {
@@ -15847,7 +15847,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -15891,7 +15891,7 @@ class ItemApi
      */
     public function restItemsBarcodesBarcodeIdReferrerReferrerIdDeleteAsyncWithHttpInfo($barcode_id, $referrer_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse';
         $request = $this->restItemsBarcodesBarcodeIdReferrerReferrerIdDeleteRequest($barcode_id, $referrer_id);
 
         return $this->client
@@ -16055,7 +16055,7 @@ class ItemApi
      *
      * @param  string $updated_at Filter restricts the list of results to items updated after the specified date. The date can be specified as unix timestamps or in the ISO 8601 date format. The PHP function strtotime is also supported. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -16072,7 +16072,7 @@ class ItemApi
      *
      * @param  string $updated_at Filter restricts the list of results to items updated after the specified date. The date can be specified as unix timestamps or in the ISO 8601 date format. The PHP function strtotime is also supported. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -16311,9 +16311,9 @@ class ItemApi
      *
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemBarcodeModelsBarcode
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemBarcodeModelsBarcode
      */
     public function restItemsBarcodesPost($body = null)
     {
@@ -16328,13 +16328,13 @@ class ItemApi
      *
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemBarcodeModelsBarcode, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemBarcodeModelsBarcode, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsBarcodesPostWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemBarcodeModelsBarcode';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemBarcodeModelsBarcode';
         $request = $this->restItemsBarcodesPostRequest($body);
 
         try {
@@ -16386,7 +16386,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemBarcodeModelsBarcode',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemBarcodeModelsBarcode',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -16428,7 +16428,7 @@ class ItemApi
      */
     public function restItemsBarcodesPostAsyncWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemBarcodeModelsBarcode';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemBarcodeModelsBarcode';
         $request = $this->restItemsBarcodesPostRequest($body);
 
         return $this->client
@@ -16566,9 +16566,9 @@ class ItemApi
      *
      * @param  int $referrer_id referrer_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemBarcodeModelsBarcode[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemBarcodeModelsBarcode[]
      */
     public function restItemsBarcodesReferrerReferrerIdGet($referrer_id)
     {
@@ -16583,13 +16583,13 @@ class ItemApi
      *
      * @param  int $referrer_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemBarcodeModelsBarcode[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemBarcodeModelsBarcode[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsBarcodesReferrerReferrerIdGetWithHttpInfo($referrer_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemBarcodeModelsBarcode[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemBarcodeModelsBarcode[]';
         $request = $this->restItemsBarcodesReferrerReferrerIdGetRequest($referrer_id);
 
         try {
@@ -16641,7 +16641,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemBarcodeModelsBarcode[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemBarcodeModelsBarcode[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -16683,7 +16683,7 @@ class ItemApi
      */
     public function restItemsBarcodesReferrerReferrerIdGetAsyncWithHttpInfo($referrer_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemBarcodeModelsBarcode[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemBarcodeModelsBarcode[]';
         $request = $this->restItemsBarcodesReferrerReferrerIdGetRequest($referrer_id);
 
         return $this->client
@@ -16832,9 +16832,9 @@ class ItemApi
      *
      * @param  int $type type (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemBarcodeModelsBarcode[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemBarcodeModelsBarcode[]
      */
     public function restItemsBarcodesTypeTypeGet($type)
     {
@@ -16849,13 +16849,13 @@ class ItemApi
      *
      * @param  int $type (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemBarcodeModelsBarcode[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemBarcodeModelsBarcode[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsBarcodesTypeTypeGetWithHttpInfo($type)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemBarcodeModelsBarcode[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemBarcodeModelsBarcode[]';
         $request = $this->restItemsBarcodesTypeTypeGetRequest($type);
 
         try {
@@ -16907,7 +16907,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemBarcodeModelsBarcode[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemBarcodeModelsBarcode[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -16949,7 +16949,7 @@ class ItemApi
      */
     public function restItemsBarcodesTypeTypeGetAsyncWithHttpInfo($type)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemBarcodeModelsBarcode[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemBarcodeModelsBarcode[]';
         $request = $this->restItemsBarcodesTypeTypeGetRequest($type);
 
         return $this->client
@@ -17109,7 +17109,7 @@ class ItemApi
      * @param  string $variation_updated_between Filter restricts the list of results to items with variations that were updated during the specified period. The end date (to) is optional. If no end date is specified, items with variations updated between the start date (from) and the present will be listed. The dates can be specified as unix timestamps or in the ISO 8601 date format. Start date and optional end date are separated by a comma. For example, .../items?updatedBetween&#x3D;1451606400,1456790400 will list items with variations that were updated between 2016-01-01 and 2016-03-01. .../items?updatedBetween&#x3D;1451606400 will list items with variations that were updated since 2016-01-01. The PHP function strtotime is also supported. (optional)
      * @param  string $variation_related_updated_between Filter restricts the list of results to items with variations for which related information was updated during the specified period. Related information is defined as information linked to the variation, i.e. barcodes, categories, images, markets, clients (stores), prices, suppliers, warehouses and the default category. See variationUpdatedBetween for supported formats. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -17137,7 +17137,7 @@ class ItemApi
      * @param  string $variation_updated_between Filter restricts the list of results to items with variations that were updated during the specified period. The end date (to) is optional. If no end date is specified, items with variations updated between the start date (from) and the present will be listed. The dates can be specified as unix timestamps or in the ISO 8601 date format. Start date and optional end date are separated by a comma. For example, .../items?updatedBetween&#x3D;1451606400,1456790400 will list items with variations that were updated between 2016-01-01 and 2016-03-01. .../items?updatedBetween&#x3D;1451606400 will list items with variations that were updated since 2016-01-01. The PHP function strtotime is also supported. (optional)
      * @param  string $variation_related_updated_between Filter restricts the list of results to items with variations for which related information was updated during the specified period. Related information is defined as information linked to the variation, i.e. barcodes, categories, images, markets, clients (stores), prices, suppliers, warehouses and the default category. See variationUpdatedBetween for supported formats. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -17457,9 +17457,9 @@ class ItemApi
      * @param  int $value_id The unique ID of the attribute value (optional)
      * @param  int $attribute_id The unique ID of the attribute (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\IlluminateSupportCollection
+     * @return \BSApp\Service\plentymarketsAPI\Model\IlluminateSupportCollection
      */
     public function restItemsIdImagesAttributeValueMarketsGet($id, $image_id = null, $item_id = null, $value_id = null, $attribute_id = null)
     {
@@ -17478,13 +17478,13 @@ class ItemApi
      * @param  int $value_id The unique ID of the attribute value (optional)
      * @param  int $attribute_id The unique ID of the attribute (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\IlluminateSupportCollection, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\IlluminateSupportCollection, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsIdImagesAttributeValueMarketsGetWithHttpInfo($id, $image_id = null, $item_id = null, $value_id = null, $attribute_id = null)
     {
-        $returnType = '\Swagger\Client\Model\IlluminateSupportCollection';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\IlluminateSupportCollection';
         $request = $this->restItemsIdImagesAttributeValueMarketsGetRequest($id, $image_id, $item_id, $value_id, $attribute_id);
 
         try {
@@ -17536,7 +17536,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\IlluminateSupportCollection',
+                        '\BSApp\Service\plentymarketsAPI\Model\IlluminateSupportCollection',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -17586,7 +17586,7 @@ class ItemApi
      */
     public function restItemsIdImagesAttributeValueMarketsGetAsyncWithHttpInfo($id, $image_id = null, $item_id = null, $value_id = null, $attribute_id = null)
     {
-        $returnType = '\Swagger\Client\Model\IlluminateSupportCollection';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\IlluminateSupportCollection';
         $request = $this->restItemsIdImagesAttributeValueMarketsGetRequest($id, $image_id, $item_id, $value_id, $attribute_id);
 
         return $this->client
@@ -17756,9 +17756,9 @@ class ItemApi
      * @param  int $id id (required)
      * @param  string $updated_at Filter restricts the list of results to items updated after the specified date. The date can be specified as unix timestamps or in the ISO 8601 date format. The PHP function strtotime is also supported. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemItemImageModelsItemImage[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemItemImageModelsItemImage[]
      */
     public function restItemsIdImagesGet($id, $updated_at = null)
     {
@@ -17774,13 +17774,13 @@ class ItemApi
      * @param  int $id (required)
      * @param  string $updated_at Filter restricts the list of results to items updated after the specified date. The date can be specified as unix timestamps or in the ISO 8601 date format. The PHP function strtotime is also supported. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemItemImageModelsItemImage[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemItemImageModelsItemImage[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsIdImagesGetWithHttpInfo($id, $updated_at = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemItemImageModelsItemImage[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemItemImageModelsItemImage[]';
         $request = $this->restItemsIdImagesGetRequest($id, $updated_at);
 
         try {
@@ -17832,7 +17832,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemItemImageModelsItemImage[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemItemImageModelsItemImage[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -17876,7 +17876,7 @@ class ItemApi
      */
     public function restItemsIdImagesGetAsyncWithHttpInfo($id, $updated_at = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemItemImageModelsItemImage[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemItemImageModelsItemImage[]';
         $request = $this->restItemsIdImagesGetRequest($id, $updated_at);
 
         return $this->client
@@ -18032,9 +18032,9 @@ class ItemApi
      * @param  int $image_id image_id (required)
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemAttributeModelsAttributeValueImage
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemAttributeModelsAttributeValueImage
      */
     public function restItemsIdImagesImageIdAttributeValueMarketsPost($id, $image_id, $body = null)
     {
@@ -18051,13 +18051,13 @@ class ItemApi
      * @param  int $image_id (required)
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemAttributeModelsAttributeValueImage, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemAttributeModelsAttributeValueImage, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsIdImagesImageIdAttributeValueMarketsPostWithHttpInfo($id, $image_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemAttributeModelsAttributeValueImage';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemAttributeModelsAttributeValueImage';
         $request = $this->restItemsIdImagesImageIdAttributeValueMarketsPostRequest($id, $image_id, $body);
 
         try {
@@ -18109,7 +18109,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemAttributeModelsAttributeValueImage',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemAttributeModelsAttributeValueImage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -18155,7 +18155,7 @@ class ItemApi
      */
     public function restItemsIdImagesImageIdAttributeValueMarketsPostAsyncWithHttpInfo($id, $image_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemAttributeModelsAttributeValueImage';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemAttributeModelsAttributeValueImage';
         $request = $this->restItemsIdImagesImageIdAttributeValueMarketsPostRequest($id, $image_id, $body);
 
         return $this->client
@@ -18326,7 +18326,7 @@ class ItemApi
      * @param  int $value_id The unique ID of the attribute value (required)
      * @param  int $id id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -18345,7 +18345,7 @@ class ItemApi
      * @param  int $value_id The unique ID of the attribute value (required)
      * @param  int $id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -18608,9 +18608,9 @@ class ItemApi
      * @param  int $value_id The unique ID of the value (required)
      * @param  int $id id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemAttributeModelsAttributeValueImage
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemAttributeModelsAttributeValueImage
      */
     public function restItemsIdImagesImageIdAttributeValueMarketsValueIdGet($image_id, $item_id, $value_id, $id)
     {
@@ -18628,13 +18628,13 @@ class ItemApi
      * @param  int $value_id The unique ID of the value (required)
      * @param  int $id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemAttributeModelsAttributeValueImage, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemAttributeModelsAttributeValueImage, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsIdImagesImageIdAttributeValueMarketsValueIdGetWithHttpInfo($image_id, $item_id, $value_id, $id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemAttributeModelsAttributeValueImage';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemAttributeModelsAttributeValueImage';
         $request = $this->restItemsIdImagesImageIdAttributeValueMarketsValueIdGetRequest($image_id, $item_id, $value_id, $id);
 
         try {
@@ -18686,7 +18686,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemAttributeModelsAttributeValueImage',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemAttributeModelsAttributeValueImage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -18734,7 +18734,7 @@ class ItemApi
      */
     public function restItemsIdImagesImageIdAttributeValueMarketsValueIdGetAsyncWithHttpInfo($image_id, $item_id, $value_id, $id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemAttributeModelsAttributeValueImage';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemAttributeModelsAttributeValueImage';
         $request = $this->restItemsIdImagesImageIdAttributeValueMarketsValueIdGetRequest($image_id, $item_id, $value_id, $id);
 
         return $this->client
@@ -18929,9 +18929,9 @@ class ItemApi
      * @param  int $id id (required)
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemAttributeModelsAttributeValueImage
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemAttributeModelsAttributeValueImage
      */
     public function restItemsIdImagesImageIdAttributeValueMarketsValueIdPut($item_id, $attribute_id, $image_id, $value_id, $id, $body = null)
     {
@@ -18951,13 +18951,13 @@ class ItemApi
      * @param  int $id (required)
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemAttributeModelsAttributeValueImage, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemAttributeModelsAttributeValueImage, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsIdImagesImageIdAttributeValueMarketsValueIdPutWithHttpInfo($item_id, $attribute_id, $image_id, $value_id, $id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemAttributeModelsAttributeValueImage';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemAttributeModelsAttributeValueImage';
         $request = $this->restItemsIdImagesImageIdAttributeValueMarketsValueIdPutRequest($item_id, $attribute_id, $image_id, $value_id, $id, $body);
 
         try {
@@ -19009,7 +19009,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemAttributeModelsAttributeValueImage',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemAttributeModelsAttributeValueImage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -19061,7 +19061,7 @@ class ItemApi
      */
     public function restItemsIdImagesImageIdAttributeValueMarketsValueIdPutAsyncWithHttpInfo($item_id, $attribute_id, $image_id, $value_id, $id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemAttributeModelsAttributeValueImage';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemAttributeModelsAttributeValueImage';
         $request = $this->restItemsIdImagesImageIdAttributeValueMarketsValueIdPutRequest($item_id, $attribute_id, $image_id, $value_id, $id, $body);
 
         return $this->client
@@ -19268,9 +19268,9 @@ class ItemApi
      * @param  int $image_id image_id (required)
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse
      */
     public function restItemsIdImagesImageIdAvailabilitiesDelete($id, $image_id, $body = null)
     {
@@ -19287,13 +19287,13 @@ class ItemApi
      * @param  int $image_id (required)
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsIdImagesImageIdAvailabilitiesDeleteWithHttpInfo($id, $image_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse';
         $request = $this->restItemsIdImagesImageIdAvailabilitiesDeleteRequest($id, $image_id, $body);
 
         try {
@@ -19345,7 +19345,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -19391,7 +19391,7 @@ class ItemApi
      */
     public function restItemsIdImagesImageIdAvailabilitiesDeleteAsyncWithHttpInfo($id, $image_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse';
         $request = $this->restItemsIdImagesImageIdAvailabilitiesDeleteRequest($id, $image_id, $body);
 
         return $this->client
@@ -19560,9 +19560,9 @@ class ItemApi
      * @param  int $id id (required)
      * @param  int $image_id image_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemItemImageModelsItemImageAvailability
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemItemImageModelsItemImageAvailability
      */
     public function restItemsIdImagesImageIdAvailabilitiesGet($id, $image_id)
     {
@@ -19578,13 +19578,13 @@ class ItemApi
      * @param  int $id (required)
      * @param  int $image_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemItemImageModelsItemImageAvailability, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemItemImageModelsItemImageAvailability, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsIdImagesImageIdAvailabilitiesGetWithHttpInfo($id, $image_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemItemImageModelsItemImageAvailability';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemItemImageModelsItemImageAvailability';
         $request = $this->restItemsIdImagesImageIdAvailabilitiesGetRequest($id, $image_id);
 
         try {
@@ -19636,7 +19636,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemItemImageModelsItemImageAvailability',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemItemImageModelsItemImageAvailability',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -19680,7 +19680,7 @@ class ItemApi
      */
     public function restItemsIdImagesImageIdAvailabilitiesGetAsyncWithHttpInfo($id, $image_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemItemImageModelsItemImageAvailability';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemItemImageModelsItemImageAvailability';
         $request = $this->restItemsIdImagesImageIdAvailabilitiesGetRequest($id, $image_id);
 
         return $this->client
@@ -19846,9 +19846,9 @@ class ItemApi
      * @param  int $image_id image_id (required)
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemItemImageModelsItemImageAvailability
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemItemImageModelsItemImageAvailability
      */
     public function restItemsIdImagesImageIdAvailabilitiesPost($id, $image_id, $body = null)
     {
@@ -19865,13 +19865,13 @@ class ItemApi
      * @param  int $image_id (required)
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemItemImageModelsItemImageAvailability, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemItemImageModelsItemImageAvailability, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsIdImagesImageIdAvailabilitiesPostWithHttpInfo($id, $image_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemItemImageModelsItemImageAvailability';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemItemImageModelsItemImageAvailability';
         $request = $this->restItemsIdImagesImageIdAvailabilitiesPostRequest($id, $image_id, $body);
 
         try {
@@ -19923,7 +19923,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemItemImageModelsItemImageAvailability',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemItemImageModelsItemImageAvailability',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -19969,7 +19969,7 @@ class ItemApi
      */
     public function restItemsIdImagesImageIdAvailabilitiesPostAsyncWithHttpInfo($id, $image_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemItemImageModelsItemImageAvailability';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemItemImageModelsItemImageAvailability';
         $request = $this->restItemsIdImagesImageIdAvailabilitiesPostRequest($id, $image_id, $body);
 
         return $this->client
@@ -20138,9 +20138,9 @@ class ItemApi
      * @param  int $id id (required)
      * @param  int $image_id image_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse
      */
     public function restItemsIdImagesImageIdDelete($id, $image_id)
     {
@@ -20156,13 +20156,13 @@ class ItemApi
      * @param  int $id (required)
      * @param  int $image_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsIdImagesImageIdDeleteWithHttpInfo($id, $image_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse';
         $request = $this->restItemsIdImagesImageIdDeleteRequest($id, $image_id);
 
         try {
@@ -20214,7 +20214,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -20258,7 +20258,7 @@ class ItemApi
      */
     public function restItemsIdImagesImageIdDeleteAsyncWithHttpInfo($id, $image_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse';
         $request = $this->restItemsIdImagesImageIdDeleteRequest($id, $image_id);
 
         return $this->client
@@ -20423,9 +20423,9 @@ class ItemApi
      * @param  int $id id (required)
      * @param  int $image_id image_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemItemImageModelsItemImage
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemItemImageModelsItemImage
      */
     public function restItemsIdImagesImageIdGet($id, $image_id)
     {
@@ -20441,13 +20441,13 @@ class ItemApi
      * @param  int $id (required)
      * @param  int $image_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemItemImageModelsItemImage, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemItemImageModelsItemImage, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsIdImagesImageIdGetWithHttpInfo($id, $image_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemItemImageModelsItemImage';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemItemImageModelsItemImage';
         $request = $this->restItemsIdImagesImageIdGetRequest($id, $image_id);
 
         try {
@@ -20499,7 +20499,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemItemImageModelsItemImage',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemItemImageModelsItemImage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -20543,7 +20543,7 @@ class ItemApi
      */
     public function restItemsIdImagesImageIdGetAsyncWithHttpInfo($id, $image_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemItemImageModelsItemImage';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemItemImageModelsItemImage';
         $request = $this->restItemsIdImagesImageIdGetRequest($id, $image_id);
 
         return $this->client
@@ -20708,9 +20708,9 @@ class ItemApi
      * @param  int $id id (required)
      * @param  int $image_id image_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemItemImageModelsItemImageName[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemItemImageModelsItemImageName[]
      */
     public function restItemsIdImagesImageIdNamesGet($id, $image_id)
     {
@@ -20726,13 +20726,13 @@ class ItemApi
      * @param  int $id (required)
      * @param  int $image_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemItemImageModelsItemImageName[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemItemImageModelsItemImageName[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsIdImagesImageIdNamesGetWithHttpInfo($id, $image_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemItemImageModelsItemImageName[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemItemImageModelsItemImageName[]';
         $request = $this->restItemsIdImagesImageIdNamesGetRequest($id, $image_id);
 
         try {
@@ -20784,7 +20784,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemItemImageModelsItemImageName[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemItemImageModelsItemImageName[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -20828,7 +20828,7 @@ class ItemApi
      */
     public function restItemsIdImagesImageIdNamesGetAsyncWithHttpInfo($id, $image_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemItemImageModelsItemImageName[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemItemImageModelsItemImageName[]';
         $request = $this->restItemsIdImagesImageIdNamesGetRequest($id, $image_id);
 
         return $this->client
@@ -20994,9 +20994,9 @@ class ItemApi
      * @param  int $image_id image_id (required)
      * @param  int $lang lang (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse
      */
     public function restItemsIdImagesImageIdNamesLangDelete($id, $image_id, $lang)
     {
@@ -21013,13 +21013,13 @@ class ItemApi
      * @param  int $image_id (required)
      * @param  int $lang (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsIdImagesImageIdNamesLangDeleteWithHttpInfo($id, $image_id, $lang)
     {
-        $returnType = '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse';
         $request = $this->restItemsIdImagesImageIdNamesLangDeleteRequest($id, $image_id, $lang);
 
         try {
@@ -21071,7 +21071,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -21117,7 +21117,7 @@ class ItemApi
      */
     public function restItemsIdImagesImageIdNamesLangDeleteAsyncWithHttpInfo($id, $image_id, $lang)
     {
-        $returnType = '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse';
         $request = $this->restItemsIdImagesImageIdNamesLangDeleteRequest($id, $image_id, $lang);
 
         return $this->client
@@ -21298,9 +21298,9 @@ class ItemApi
      * @param  int $image_id image_id (required)
      * @param  int $lang lang (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemItemImageModelsItemImageName
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemItemImageModelsItemImageName
      */
     public function restItemsIdImagesImageIdNamesLangGet($id, $image_id, $lang)
     {
@@ -21317,13 +21317,13 @@ class ItemApi
      * @param  int $image_id (required)
      * @param  int $lang (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemItemImageModelsItemImageName, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemItemImageModelsItemImageName, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsIdImagesImageIdNamesLangGetWithHttpInfo($id, $image_id, $lang)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemItemImageModelsItemImageName';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemItemImageModelsItemImageName';
         $request = $this->restItemsIdImagesImageIdNamesLangGetRequest($id, $image_id, $lang);
 
         try {
@@ -21375,7 +21375,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemItemImageModelsItemImageName',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemItemImageModelsItemImageName',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -21421,7 +21421,7 @@ class ItemApi
      */
     public function restItemsIdImagesImageIdNamesLangGetAsyncWithHttpInfo($id, $image_id, $lang)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemItemImageModelsItemImageName';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemItemImageModelsItemImageName';
         $request = $this->restItemsIdImagesImageIdNamesLangGetRequest($id, $image_id, $lang);
 
         return $this->client
@@ -21603,9 +21603,9 @@ class ItemApi
      * @param  int $lang lang (required)
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemItemImageModelsItemImageName
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemItemImageModelsItemImageName
      */
     public function restItemsIdImagesImageIdNamesLangPut($id, $image_id, $lang, $body = null)
     {
@@ -21623,13 +21623,13 @@ class ItemApi
      * @param  int $lang (required)
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemItemImageModelsItemImageName, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemItemImageModelsItemImageName, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsIdImagesImageIdNamesLangPutWithHttpInfo($id, $image_id, $lang, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemItemImageModelsItemImageName';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemItemImageModelsItemImageName';
         $request = $this->restItemsIdImagesImageIdNamesLangPutRequest($id, $image_id, $lang, $body);
 
         try {
@@ -21681,7 +21681,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemItemImageModelsItemImageName',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemItemImageModelsItemImageName',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -21729,7 +21729,7 @@ class ItemApi
      */
     public function restItemsIdImagesImageIdNamesLangPutAsyncWithHttpInfo($id, $image_id, $lang, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemItemImageModelsItemImageName';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemItemImageModelsItemImageName';
         $request = $this->restItemsIdImagesImageIdNamesLangPutRequest($id, $image_id, $lang, $body);
 
         return $this->client
@@ -21914,9 +21914,9 @@ class ItemApi
      * @param  int $image_id image_id (required)
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemItemImageModelsItemImageName
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemItemImageModelsItemImageName
      */
     public function restItemsIdImagesImageIdNamesPost($id, $image_id, $body = null)
     {
@@ -21933,13 +21933,13 @@ class ItemApi
      * @param  int $image_id (required)
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemItemImageModelsItemImageName, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemItemImageModelsItemImageName, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsIdImagesImageIdNamesPostWithHttpInfo($id, $image_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemItemImageModelsItemImageName';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemItemImageModelsItemImageName';
         $request = $this->restItemsIdImagesImageIdNamesPostRequest($id, $image_id, $body);
 
         try {
@@ -21991,7 +21991,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemItemImageModelsItemImageName',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemItemImageModelsItemImageName',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -22037,7 +22037,7 @@ class ItemApi
      */
     public function restItemsIdImagesImageIdNamesPostAsyncWithHttpInfo($id, $image_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemItemImageModelsItemImageName';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemItemImageModelsItemImageName';
         $request = $this->restItemsIdImagesImageIdNamesPostRequest($id, $image_id, $body);
 
         return $this->client
@@ -22207,9 +22207,9 @@ class ItemApi
      * @param  int $image_id image_id (required)
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemItemImageModelsItemImage
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemItemImageModelsItemImage
      */
     public function restItemsIdImagesImageIdPut($id, $image_id, $body = null)
     {
@@ -22226,13 +22226,13 @@ class ItemApi
      * @param  int $image_id (required)
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemItemImageModelsItemImage, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemItemImageModelsItemImage, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsIdImagesImageIdPutWithHttpInfo($id, $image_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemItemImageModelsItemImage';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemItemImageModelsItemImage';
         $request = $this->restItemsIdImagesImageIdPutRequest($id, $image_id, $body);
 
         try {
@@ -22284,7 +22284,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemItemImageModelsItemImage',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemItemImageModelsItemImage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -22330,7 +22330,7 @@ class ItemApi
      */
     public function restItemsIdImagesImageIdPutAsyncWithHttpInfo($id, $image_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemItemImageModelsItemImage';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemItemImageModelsItemImage';
         $request = $this->restItemsIdImagesImageIdPutRequest($id, $image_id, $body);
 
         return $this->client
@@ -22499,9 +22499,9 @@ class ItemApi
      * @param  int $id id (required)
      * @param  int $image_id image_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemVariationImageModelsVariationImage
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationImageModelsVariationImage
      */
     public function restItemsIdImagesImageIdVariationImagesGet($id, $image_id)
     {
@@ -22517,13 +22517,13 @@ class ItemApi
      * @param  int $id (required)
      * @param  int $image_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemVariationImageModelsVariationImage, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationImageModelsVariationImage, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsIdImagesImageIdVariationImagesGetWithHttpInfo($id, $image_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemVariationImageModelsVariationImage';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationImageModelsVariationImage';
         $request = $this->restItemsIdImagesImageIdVariationImagesGetRequest($id, $image_id);
 
         try {
@@ -22575,7 +22575,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemVariationImageModelsVariationImage',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationImageModelsVariationImage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -22619,7 +22619,7 @@ class ItemApi
      */
     public function restItemsIdImagesImageIdVariationImagesGetAsyncWithHttpInfo($id, $image_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemVariationImageModelsVariationImage';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationImageModelsVariationImage';
         $request = $this->restItemsIdImagesImageIdVariationImagesGetRequest($id, $image_id);
 
         return $this->client
@@ -22784,9 +22784,9 @@ class ItemApi
      * @param  int $id id (required)
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemItemImageModelsItemImage
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemItemImageModelsItemImage
      */
     public function restItemsIdImagesUploadPost($id, $body = null)
     {
@@ -22802,13 +22802,13 @@ class ItemApi
      * @param  int $id (required)
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemItemImageModelsItemImage, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemItemImageModelsItemImage, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsIdImagesUploadPostWithHttpInfo($id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemItemImageModelsItemImage';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemItemImageModelsItemImage';
         $request = $this->restItemsIdImagesUploadPostRequest($id, $body);
 
         try {
@@ -22860,7 +22860,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemItemImageModelsItemImage',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemItemImageModelsItemImage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -22904,7 +22904,7 @@ class ItemApi
      */
     public function restItemsIdImagesUploadPostAsyncWithHttpInfo($id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemItemImageModelsItemImage';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemItemImageModelsItemImage';
         $request = $this->restItemsIdImagesUploadPostRequest($id, $body);
 
         return $this->client
@@ -23058,9 +23058,9 @@ class ItemApi
      * @param  int $id id (required)
      * @param  int $cross_item_id cross_item_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse
      */
     public function restItemsIdItemCrossSellingCrossItemIdDelete($id, $cross_item_id)
     {
@@ -23076,13 +23076,13 @@ class ItemApi
      * @param  int $id (required)
      * @param  int $cross_item_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsIdItemCrossSellingCrossItemIdDeleteWithHttpInfo($id, $cross_item_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse';
         $request = $this->restItemsIdItemCrossSellingCrossItemIdDeleteRequest($id, $cross_item_id);
 
         try {
@@ -23134,7 +23134,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -23178,7 +23178,7 @@ class ItemApi
      */
     public function restItemsIdItemCrossSellingCrossItemIdDeleteAsyncWithHttpInfo($id, $cross_item_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse';
         $request = $this->restItemsIdItemCrossSellingCrossItemIdDeleteRequest($id, $cross_item_id);
 
         return $this->client
@@ -23342,9 +23342,9 @@ class ItemApi
      *
      * @param  int $id id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemItemCrossSellingModelsItemCrossSelling
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemItemCrossSellingModelsItemCrossSelling
      */
     public function restItemsIdItemCrossSellingGet($id)
     {
@@ -23359,13 +23359,13 @@ class ItemApi
      *
      * @param  int $id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemItemCrossSellingModelsItemCrossSelling, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemItemCrossSellingModelsItemCrossSelling, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsIdItemCrossSellingGetWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemItemCrossSellingModelsItemCrossSelling';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemItemCrossSellingModelsItemCrossSelling';
         $request = $this->restItemsIdItemCrossSellingGetRequest($id);
 
         try {
@@ -23417,7 +23417,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemItemCrossSellingModelsItemCrossSelling',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemItemCrossSellingModelsItemCrossSelling',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -23459,7 +23459,7 @@ class ItemApi
      */
     public function restItemsIdItemCrossSellingGetAsyncWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemItemCrossSellingModelsItemCrossSelling';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemItemCrossSellingModelsItemCrossSelling';
         $request = $this->restItemsIdItemCrossSellingGetRequest($id);
 
         return $this->client
@@ -23609,9 +23609,9 @@ class ItemApi
      * @param  int $id id (required)
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemItemCrossSellingModelsItemCrossSelling
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemItemCrossSellingModelsItemCrossSelling
      */
     public function restItemsIdItemCrossSellingPost($id, $body = null)
     {
@@ -23627,13 +23627,13 @@ class ItemApi
      * @param  int $id (required)
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemItemCrossSellingModelsItemCrossSelling, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemItemCrossSellingModelsItemCrossSelling, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsIdItemCrossSellingPostWithHttpInfo($id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemItemCrossSellingModelsItemCrossSelling';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemItemCrossSellingModelsItemCrossSelling';
         $request = $this->restItemsIdItemCrossSellingPostRequest($id, $body);
 
         try {
@@ -23685,7 +23685,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemItemCrossSellingModelsItemCrossSelling',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemItemCrossSellingModelsItemCrossSelling',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -23729,7 +23729,7 @@ class ItemApi
      */
     public function restItemsIdItemCrossSellingPostAsyncWithHttpInfo($id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemItemCrossSellingModelsItemCrossSelling';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemItemCrossSellingModelsItemCrossSelling';
         $request = $this->restItemsIdItemCrossSellingPostRequest($id, $body);
 
         return $this->client
@@ -23882,9 +23882,9 @@ class ItemApi
      *
      * @param  int $id id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemVariationImageModelsVariationImage
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationImageModelsVariationImage
      */
     public function restItemsIdVariationImagesGet($id)
     {
@@ -23899,13 +23899,13 @@ class ItemApi
      *
      * @param  int $id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemVariationImageModelsVariationImage, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationImageModelsVariationImage, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsIdVariationImagesGetWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemVariationImageModelsVariationImage';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationImageModelsVariationImage';
         $request = $this->restItemsIdVariationImagesGetRequest($id);
 
         try {
@@ -23957,7 +23957,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemVariationImageModelsVariationImage',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationImageModelsVariationImage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -23999,7 +23999,7 @@ class ItemApi
      */
     public function restItemsIdVariationImagesGetAsyncWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemVariationImageModelsVariationImage';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationImageModelsVariationImage';
         $request = $this->restItemsIdVariationImagesGetRequest($id);
 
         return $this->client
@@ -24149,9 +24149,9 @@ class ItemApi
      * @param  int $id id (required)
      * @param  int $variation_id variation_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemVariationDescriptionModelsVariationDescription[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationDescriptionModelsVariationDescription[]
      */
     public function restItemsIdVariationsVariationIdDescriptionsGet($id, $variation_id)
     {
@@ -24167,13 +24167,13 @@ class ItemApi
      * @param  int $id (required)
      * @param  int $variation_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemVariationDescriptionModelsVariationDescription[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationDescriptionModelsVariationDescription[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsIdVariationsVariationIdDescriptionsGetWithHttpInfo($id, $variation_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemVariationDescriptionModelsVariationDescription[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationDescriptionModelsVariationDescription[]';
         $request = $this->restItemsIdVariationsVariationIdDescriptionsGetRequest($id, $variation_id);
 
         try {
@@ -24225,7 +24225,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemVariationDescriptionModelsVariationDescription[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationDescriptionModelsVariationDescription[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -24269,7 +24269,7 @@ class ItemApi
      */
     public function restItemsIdVariationsVariationIdDescriptionsGetAsyncWithHttpInfo($id, $variation_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemVariationDescriptionModelsVariationDescription[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationDescriptionModelsVariationDescription[]';
         $request = $this->restItemsIdVariationsVariationIdDescriptionsGetRequest($id, $variation_id);
 
         return $this->client
@@ -24435,9 +24435,9 @@ class ItemApi
      * @param  int $variation_id variation_id (required)
      * @param  int $lang lang (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse
      */
     public function restItemsIdVariationsVariationIdDescriptionsLangDelete($id, $variation_id, $lang)
     {
@@ -24454,13 +24454,13 @@ class ItemApi
      * @param  int $variation_id (required)
      * @param  int $lang (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsIdVariationsVariationIdDescriptionsLangDeleteWithHttpInfo($id, $variation_id, $lang)
     {
-        $returnType = '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse';
         $request = $this->restItemsIdVariationsVariationIdDescriptionsLangDeleteRequest($id, $variation_id, $lang);
 
         try {
@@ -24512,7 +24512,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -24558,7 +24558,7 @@ class ItemApi
      */
     public function restItemsIdVariationsVariationIdDescriptionsLangDeleteAsyncWithHttpInfo($id, $variation_id, $lang)
     {
-        $returnType = '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse';
         $request = $this->restItemsIdVariationsVariationIdDescriptionsLangDeleteRequest($id, $variation_id, $lang);
 
         return $this->client
@@ -24739,9 +24739,9 @@ class ItemApi
      * @param  int $variation_id variation_id (required)
      * @param  int $lang lang (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemVariationDescriptionModelsVariationDescription
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationDescriptionModelsVariationDescription
      */
     public function restItemsIdVariationsVariationIdDescriptionsLangGet($id, $variation_id, $lang)
     {
@@ -24758,13 +24758,13 @@ class ItemApi
      * @param  int $variation_id (required)
      * @param  int $lang (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemVariationDescriptionModelsVariationDescription, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationDescriptionModelsVariationDescription, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsIdVariationsVariationIdDescriptionsLangGetWithHttpInfo($id, $variation_id, $lang)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemVariationDescriptionModelsVariationDescription';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationDescriptionModelsVariationDescription';
         $request = $this->restItemsIdVariationsVariationIdDescriptionsLangGetRequest($id, $variation_id, $lang);
 
         try {
@@ -24816,7 +24816,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemVariationDescriptionModelsVariationDescription',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationDescriptionModelsVariationDescription',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -24862,7 +24862,7 @@ class ItemApi
      */
     public function restItemsIdVariationsVariationIdDescriptionsLangGetAsyncWithHttpInfo($id, $variation_id, $lang)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemVariationDescriptionModelsVariationDescription';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationDescriptionModelsVariationDescription';
         $request = $this->restItemsIdVariationsVariationIdDescriptionsLangGetRequest($id, $variation_id, $lang);
 
         return $this->client
@@ -25044,9 +25044,9 @@ class ItemApi
      * @param  int $lang lang (required)
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemVariationDescriptionModelsVariationDescription
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationDescriptionModelsVariationDescription
      */
     public function restItemsIdVariationsVariationIdDescriptionsLangPut($id, $variation_id, $lang, $body = null)
     {
@@ -25064,13 +25064,13 @@ class ItemApi
      * @param  int $lang (required)
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemVariationDescriptionModelsVariationDescription, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationDescriptionModelsVariationDescription, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsIdVariationsVariationIdDescriptionsLangPutWithHttpInfo($id, $variation_id, $lang, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemVariationDescriptionModelsVariationDescription';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationDescriptionModelsVariationDescription';
         $request = $this->restItemsIdVariationsVariationIdDescriptionsLangPutRequest($id, $variation_id, $lang, $body);
 
         try {
@@ -25122,7 +25122,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemVariationDescriptionModelsVariationDescription',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationDescriptionModelsVariationDescription',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -25170,7 +25170,7 @@ class ItemApi
      */
     public function restItemsIdVariationsVariationIdDescriptionsLangPutAsyncWithHttpInfo($id, $variation_id, $lang, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemVariationDescriptionModelsVariationDescription';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationDescriptionModelsVariationDescription';
         $request = $this->restItemsIdVariationsVariationIdDescriptionsLangPutRequest($id, $variation_id, $lang, $body);
 
         return $this->client
@@ -25355,9 +25355,9 @@ class ItemApi
      * @param  int $variation_id variation_id (required)
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemVariationDescriptionModelsVariationDescription
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationDescriptionModelsVariationDescription
      */
     public function restItemsIdVariationsVariationIdDescriptionsPost($id, $variation_id, $body = null)
     {
@@ -25374,13 +25374,13 @@ class ItemApi
      * @param  int $variation_id (required)
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemVariationDescriptionModelsVariationDescription, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationDescriptionModelsVariationDescription, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsIdVariationsVariationIdDescriptionsPostWithHttpInfo($id, $variation_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemVariationDescriptionModelsVariationDescription';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationDescriptionModelsVariationDescription';
         $request = $this->restItemsIdVariationsVariationIdDescriptionsPostRequest($id, $variation_id, $body);
 
         try {
@@ -25432,7 +25432,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemVariationDescriptionModelsVariationDescription',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationDescriptionModelsVariationDescription',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -25478,7 +25478,7 @@ class ItemApi
      */
     public function restItemsIdVariationsVariationIdDescriptionsPostAsyncWithHttpInfo($id, $variation_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemVariationDescriptionModelsVariationDescription';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationDescriptionModelsVariationDescription';
         $request = $this->restItemsIdVariationsVariationIdDescriptionsPostRequest($id, $variation_id, $body);
 
         return $this->client
@@ -25647,9 +25647,9 @@ class ItemApi
      * @param  int $id id (required)
      * @param  int $variation_id variation_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemItemImageModelsItemImage[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemItemImageModelsItemImage[]
      */
     public function restItemsIdVariationsVariationIdImagesGet($id, $variation_id)
     {
@@ -25665,13 +25665,13 @@ class ItemApi
      * @param  int $id (required)
      * @param  int $variation_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemItemImageModelsItemImage[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemItemImageModelsItemImage[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsIdVariationsVariationIdImagesGetWithHttpInfo($id, $variation_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemItemImageModelsItemImage[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemItemImageModelsItemImage[]';
         $request = $this->restItemsIdVariationsVariationIdImagesGetRequest($id, $variation_id);
 
         try {
@@ -25723,7 +25723,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemItemImageModelsItemImage[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemItemImageModelsItemImage[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -25767,7 +25767,7 @@ class ItemApi
      */
     public function restItemsIdVariationsVariationIdImagesGetAsyncWithHttpInfo($id, $variation_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemItemImageModelsItemImage[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemItemImageModelsItemImage[]';
         $request = $this->restItemsIdVariationsVariationIdImagesGetRequest($id, $variation_id);
 
         return $this->client
@@ -25932,9 +25932,9 @@ class ItemApi
      * @param  int $id id (required)
      * @param  int $variation_id variation_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\Mixed[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\Mixed[]
      */
     public function restItemsIdVariationsVariationIdLabelsPost($id, $variation_id)
     {
@@ -25950,13 +25950,13 @@ class ItemApi
      * @param  int $id (required)
      * @param  int $variation_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\Mixed[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\Mixed[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsIdVariationsVariationIdLabelsPostWithHttpInfo($id, $variation_id)
     {
-        $returnType = '\Swagger\Client\Model\Mixed[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\Mixed[]';
         $request = $this->restItemsIdVariationsVariationIdLabelsPostRequest($id, $variation_id);
 
         try {
@@ -26008,7 +26008,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\Mixed[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\Mixed[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -26052,7 +26052,7 @@ class ItemApi
      */
     public function restItemsIdVariationsVariationIdLabelsPostAsyncWithHttpInfo($id, $variation_id)
     {
-        $returnType = '\Swagger\Client\Model\Mixed[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\Mixed[]';
         $request = $this->restItemsIdVariationsVariationIdLabelsPostRequest($id, $variation_id);
 
         return $this->client
@@ -26217,9 +26217,9 @@ class ItemApi
      * @param  int $id id (required)
      * @param  int $variation_id variation_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemVariationMarketIdentNumberModelsVariationMarketIdentNumber[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationMarketIdentNumberModelsVariationMarketIdentNumber[]
      */
     public function restItemsIdVariationsVariationIdMarketIdentNumbersGet($id, $variation_id)
     {
@@ -26235,13 +26235,13 @@ class ItemApi
      * @param  int $id (required)
      * @param  int $variation_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemVariationMarketIdentNumberModelsVariationMarketIdentNumber[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationMarketIdentNumberModelsVariationMarketIdentNumber[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsIdVariationsVariationIdMarketIdentNumbersGetWithHttpInfo($id, $variation_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemVariationMarketIdentNumberModelsVariationMarketIdentNumber[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationMarketIdentNumberModelsVariationMarketIdentNumber[]';
         $request = $this->restItemsIdVariationsVariationIdMarketIdentNumbersGetRequest($id, $variation_id);
 
         try {
@@ -26293,7 +26293,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemVariationMarketIdentNumberModelsVariationMarketIdentNumber[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationMarketIdentNumberModelsVariationMarketIdentNumber[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -26337,7 +26337,7 @@ class ItemApi
      */
     public function restItemsIdVariationsVariationIdMarketIdentNumbersGetAsyncWithHttpInfo($id, $variation_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemVariationMarketIdentNumberModelsVariationMarketIdentNumber[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationMarketIdentNumberModelsVariationMarketIdentNumber[]';
         $request = $this->restItemsIdVariationsVariationIdMarketIdentNumbersGetRequest($id, $variation_id);
 
         return $this->client
@@ -26503,9 +26503,9 @@ class ItemApi
      * @param  int $variation_id variation_id (required)
      * @param  int $market_ident_number_id market_ident_number_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse
      */
     public function restItemsIdVariationsVariationIdMarketIdentNumbersMarketIdentNumberIdDelete($id, $variation_id, $market_ident_number_id)
     {
@@ -26522,13 +26522,13 @@ class ItemApi
      * @param  int $variation_id (required)
      * @param  int $market_ident_number_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsIdVariationsVariationIdMarketIdentNumbersMarketIdentNumberIdDeleteWithHttpInfo($id, $variation_id, $market_ident_number_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse';
         $request = $this->restItemsIdVariationsVariationIdMarketIdentNumbersMarketIdentNumberIdDeleteRequest($id, $variation_id, $market_ident_number_id);
 
         try {
@@ -26580,7 +26580,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -26626,7 +26626,7 @@ class ItemApi
      */
     public function restItemsIdVariationsVariationIdMarketIdentNumbersMarketIdentNumberIdDeleteAsyncWithHttpInfo($id, $variation_id, $market_ident_number_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse';
         $request = $this->restItemsIdVariationsVariationIdMarketIdentNumbersMarketIdentNumberIdDeleteRequest($id, $variation_id, $market_ident_number_id);
 
         return $this->client
@@ -26807,9 +26807,9 @@ class ItemApi
      * @param  int $variation_id variation_id (required)
      * @param  int $market_ident_number_id market_ident_number_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemVariationMarketIdentNumberModelsVariationMarketIdentNumber
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationMarketIdentNumberModelsVariationMarketIdentNumber
      */
     public function restItemsIdVariationsVariationIdMarketIdentNumbersMarketIdentNumberIdGet($id, $variation_id, $market_ident_number_id)
     {
@@ -26826,13 +26826,13 @@ class ItemApi
      * @param  int $variation_id (required)
      * @param  int $market_ident_number_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemVariationMarketIdentNumberModelsVariationMarketIdentNumber, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationMarketIdentNumberModelsVariationMarketIdentNumber, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsIdVariationsVariationIdMarketIdentNumbersMarketIdentNumberIdGetWithHttpInfo($id, $variation_id, $market_ident_number_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemVariationMarketIdentNumberModelsVariationMarketIdentNumber';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationMarketIdentNumberModelsVariationMarketIdentNumber';
         $request = $this->restItemsIdVariationsVariationIdMarketIdentNumbersMarketIdentNumberIdGetRequest($id, $variation_id, $market_ident_number_id);
 
         try {
@@ -26884,7 +26884,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemVariationMarketIdentNumberModelsVariationMarketIdentNumber',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationMarketIdentNumberModelsVariationMarketIdentNumber',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -26930,7 +26930,7 @@ class ItemApi
      */
     public function restItemsIdVariationsVariationIdMarketIdentNumbersMarketIdentNumberIdGetAsyncWithHttpInfo($id, $variation_id, $market_ident_number_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemVariationMarketIdentNumberModelsVariationMarketIdentNumber';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationMarketIdentNumberModelsVariationMarketIdentNumber';
         $request = $this->restItemsIdVariationsVariationIdMarketIdentNumbersMarketIdentNumberIdGetRequest($id, $variation_id, $market_ident_number_id);
 
         return $this->client
@@ -27112,9 +27112,9 @@ class ItemApi
      * @param  int $market_ident_number_id market_ident_number_id (required)
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemVariationMarketIdentNumberModelsVariationMarketIdentNumber
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationMarketIdentNumberModelsVariationMarketIdentNumber
      */
     public function restItemsIdVariationsVariationIdMarketIdentNumbersMarketIdentNumberIdPut($id, $variation_id, $market_ident_number_id, $body = null)
     {
@@ -27132,13 +27132,13 @@ class ItemApi
      * @param  int $market_ident_number_id (required)
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemVariationMarketIdentNumberModelsVariationMarketIdentNumber, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationMarketIdentNumberModelsVariationMarketIdentNumber, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsIdVariationsVariationIdMarketIdentNumbersMarketIdentNumberIdPutWithHttpInfo($id, $variation_id, $market_ident_number_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemVariationMarketIdentNumberModelsVariationMarketIdentNumber';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationMarketIdentNumberModelsVariationMarketIdentNumber';
         $request = $this->restItemsIdVariationsVariationIdMarketIdentNumbersMarketIdentNumberIdPutRequest($id, $variation_id, $market_ident_number_id, $body);
 
         try {
@@ -27190,7 +27190,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemVariationMarketIdentNumberModelsVariationMarketIdentNumber',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationMarketIdentNumberModelsVariationMarketIdentNumber',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -27238,7 +27238,7 @@ class ItemApi
      */
     public function restItemsIdVariationsVariationIdMarketIdentNumbersMarketIdentNumberIdPutAsyncWithHttpInfo($id, $variation_id, $market_ident_number_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemVariationMarketIdentNumberModelsVariationMarketIdentNumber';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationMarketIdentNumberModelsVariationMarketIdentNumber';
         $request = $this->restItemsIdVariationsVariationIdMarketIdentNumbersMarketIdentNumberIdPutRequest($id, $variation_id, $market_ident_number_id, $body);
 
         return $this->client
@@ -27423,9 +27423,9 @@ class ItemApi
      * @param  int $variation_id variation_id (required)
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemVariationMarketIdentNumberModelsVariationMarketIdentNumber
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationMarketIdentNumberModelsVariationMarketIdentNumber
      */
     public function restItemsIdVariationsVariationIdMarketIdentNumbersPost($id, $variation_id, $body = null)
     {
@@ -27442,13 +27442,13 @@ class ItemApi
      * @param  int $variation_id (required)
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemVariationMarketIdentNumberModelsVariationMarketIdentNumber, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationMarketIdentNumberModelsVariationMarketIdentNumber, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsIdVariationsVariationIdMarketIdentNumbersPostWithHttpInfo($id, $variation_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemVariationMarketIdentNumberModelsVariationMarketIdentNumber';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationMarketIdentNumberModelsVariationMarketIdentNumber';
         $request = $this->restItemsIdVariationsVariationIdMarketIdentNumbersPostRequest($id, $variation_id, $body);
 
         try {
@@ -27500,7 +27500,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemVariationMarketIdentNumberModelsVariationMarketIdentNumber',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationMarketIdentNumberModelsVariationMarketIdentNumber',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -27546,7 +27546,7 @@ class ItemApi
      */
     public function restItemsIdVariationsVariationIdMarketIdentNumbersPostAsyncWithHttpInfo($id, $variation_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemVariationMarketIdentNumberModelsVariationMarketIdentNumber';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationMarketIdentNumberModelsVariationMarketIdentNumber';
         $request = $this->restItemsIdVariationsVariationIdMarketIdentNumbersPostRequest($id, $variation_id, $body);
 
         return $this->client
@@ -27717,9 +27717,9 @@ class ItemApi
      * @param  int $id id (required)
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemVariationStockModelsVariationStock[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationStockModelsVariationStock[]
      */
     public function restItemsIdVariationsVariationIdStockBookIncomingItemsPut($item_id, $variation_id, $id, $body = null)
     {
@@ -27737,13 +27737,13 @@ class ItemApi
      * @param  int $id (required)
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemVariationStockModelsVariationStock[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationStockModelsVariationStock[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsIdVariationsVariationIdStockBookIncomingItemsPutWithHttpInfo($item_id, $variation_id, $id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemVariationStockModelsVariationStock[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationStockModelsVariationStock[]';
         $request = $this->restItemsIdVariationsVariationIdStockBookIncomingItemsPutRequest($item_id, $variation_id, $id, $body);
 
         try {
@@ -27795,7 +27795,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemVariationStockModelsVariationStock[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationStockModelsVariationStock[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -27843,7 +27843,7 @@ class ItemApi
      */
     public function restItemsIdVariationsVariationIdStockBookIncomingItemsPutAsyncWithHttpInfo($item_id, $variation_id, $id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemVariationStockModelsVariationStock[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationStockModelsVariationStock[]';
         $request = $this->restItemsIdVariationsVariationIdStockBookIncomingItemsPutRequest($item_id, $variation_id, $id, $body);
 
         return $this->client
@@ -28025,9 +28025,9 @@ class ItemApi
      * @param  int $id id (required)
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemVariationStockModelsVariationStock[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationStockModelsVariationStock[]
      */
     public function restItemsIdVariationsVariationIdStockCorrectionPut($item_id, $variation_id, $id, $body = null)
     {
@@ -28045,13 +28045,13 @@ class ItemApi
      * @param  int $id (required)
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemVariationStockModelsVariationStock[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationStockModelsVariationStock[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsIdVariationsVariationIdStockCorrectionPutWithHttpInfo($item_id, $variation_id, $id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemVariationStockModelsVariationStock[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationStockModelsVariationStock[]';
         $request = $this->restItemsIdVariationsVariationIdStockCorrectionPutRequest($item_id, $variation_id, $id, $body);
 
         try {
@@ -28103,7 +28103,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemVariationStockModelsVariationStock[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationStockModelsVariationStock[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -28151,7 +28151,7 @@ class ItemApi
      */
     public function restItemsIdVariationsVariationIdStockCorrectionPutAsyncWithHttpInfo($item_id, $variation_id, $id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemVariationStockModelsVariationStock[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationStockModelsVariationStock[]';
         $request = $this->restItemsIdVariationsVariationIdStockCorrectionPutRequest($item_id, $variation_id, $id, $body);
 
         return $this->client
@@ -28333,9 +28333,9 @@ class ItemApi
      * @param  int $id id (required)
      * @param  int $columns The properties to be loaded (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemVariationStockModelsVariationStock[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationStockModelsVariationStock[]
      */
     public function restItemsIdVariationsVariationIdStockGet($item_id, $variation_id, $id, $columns = null)
     {
@@ -28353,13 +28353,13 @@ class ItemApi
      * @param  int $id (required)
      * @param  int $columns The properties to be loaded (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemVariationStockModelsVariationStock[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationStockModelsVariationStock[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsIdVariationsVariationIdStockGetWithHttpInfo($item_id, $variation_id, $id, $columns = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemVariationStockModelsVariationStock[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationStockModelsVariationStock[]';
         $request = $this->restItemsIdVariationsVariationIdStockGetRequest($item_id, $variation_id, $id, $columns);
 
         try {
@@ -28411,7 +28411,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemVariationStockModelsVariationStock[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationStockModelsVariationStock[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -28459,7 +28459,7 @@ class ItemApi
      */
     public function restItemsIdVariationsVariationIdStockGetAsyncWithHttpInfo($item_id, $variation_id, $id, $columns = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemVariationStockModelsVariationStock[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationStockModelsVariationStock[]';
         $request = $this->restItemsIdVariationsVariationIdStockGetRequest($item_id, $variation_id, $id, $columns);
 
         return $this->client
@@ -28648,7 +28648,7 @@ class ItemApi
      * @param  int $year Get entries from the archive for the given year. All movements older than 3 months are stored in the archive. (optional)
      * @param  int $columns The properties to be loaded (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -28674,7 +28674,7 @@ class ItemApi
      * @param  int $year Get entries from the archive for the given year. All movements older than 3 months are stored in the archive. (optional)
      * @param  int $columns The properties to be loaded (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -29017,7 +29017,7 @@ class ItemApi
      * @param  int $id id (required)
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -29037,7 +29037,7 @@ class ItemApi
      * @param  int $id (required)
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -29327,7 +29327,7 @@ class ItemApi
      * @param  int $id id (required)
      * @param  int $columns The properties to be loaded (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -29349,7 +29349,7 @@ class ItemApi
      * @param  int $id (required)
      * @param  int $columns The properties to be loaded (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -29663,9 +29663,9 @@ class ItemApi
      * @param  int $variation_id variation_id (required)
      * @param  int $additional_sku_id additional_sku_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse
      */
     public function restItemsIdVariationsVariationIdVariationAdditionalSkusAdditionalSkuIdDelete($id, $variation_id, $additional_sku_id)
     {
@@ -29682,13 +29682,13 @@ class ItemApi
      * @param  int $variation_id (required)
      * @param  int $additional_sku_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsIdVariationsVariationIdVariationAdditionalSkusAdditionalSkuIdDeleteWithHttpInfo($id, $variation_id, $additional_sku_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse';
         $request = $this->restItemsIdVariationsVariationIdVariationAdditionalSkusAdditionalSkuIdDeleteRequest($id, $variation_id, $additional_sku_id);
 
         try {
@@ -29740,7 +29740,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -29786,7 +29786,7 @@ class ItemApi
      */
     public function restItemsIdVariationsVariationIdVariationAdditionalSkusAdditionalSkuIdDeleteAsyncWithHttpInfo($id, $variation_id, $additional_sku_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse';
         $request = $this->restItemsIdVariationsVariationIdVariationAdditionalSkusAdditionalSkuIdDeleteRequest($id, $variation_id, $additional_sku_id);
 
         return $this->client
@@ -29967,9 +29967,9 @@ class ItemApi
      * @param  int $variation_id variation_id (required)
      * @param  int $additional_sku_id additional_sku_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemVariationAdditionalSkuModelsVariationAdditionalSku
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationAdditionalSkuModelsVariationAdditionalSku
      */
     public function restItemsIdVariationsVariationIdVariationAdditionalSkusAdditionalSkuIdGet($id, $variation_id, $additional_sku_id)
     {
@@ -29986,13 +29986,13 @@ class ItemApi
      * @param  int $variation_id (required)
      * @param  int $additional_sku_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemVariationAdditionalSkuModelsVariationAdditionalSku, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationAdditionalSkuModelsVariationAdditionalSku, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsIdVariationsVariationIdVariationAdditionalSkusAdditionalSkuIdGetWithHttpInfo($id, $variation_id, $additional_sku_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemVariationAdditionalSkuModelsVariationAdditionalSku';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationAdditionalSkuModelsVariationAdditionalSku';
         $request = $this->restItemsIdVariationsVariationIdVariationAdditionalSkusAdditionalSkuIdGetRequest($id, $variation_id, $additional_sku_id);
 
         try {
@@ -30044,7 +30044,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemVariationAdditionalSkuModelsVariationAdditionalSku',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationAdditionalSkuModelsVariationAdditionalSku',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -30090,7 +30090,7 @@ class ItemApi
      */
     public function restItemsIdVariationsVariationIdVariationAdditionalSkusAdditionalSkuIdGetAsyncWithHttpInfo($id, $variation_id, $additional_sku_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemVariationAdditionalSkuModelsVariationAdditionalSku';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationAdditionalSkuModelsVariationAdditionalSku';
         $request = $this->restItemsIdVariationsVariationIdVariationAdditionalSkusAdditionalSkuIdGetRequest($id, $variation_id, $additional_sku_id);
 
         return $this->client
@@ -30272,9 +30272,9 @@ class ItemApi
      * @param  int $additional_sku_id additional_sku_id (required)
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemVariationAdditionalSkuModelsVariationAdditionalSku
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationAdditionalSkuModelsVariationAdditionalSku
      */
     public function restItemsIdVariationsVariationIdVariationAdditionalSkusAdditionalSkuIdPut($id, $variation_id, $additional_sku_id, $body = null)
     {
@@ -30292,13 +30292,13 @@ class ItemApi
      * @param  int $additional_sku_id (required)
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemVariationAdditionalSkuModelsVariationAdditionalSku, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationAdditionalSkuModelsVariationAdditionalSku, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsIdVariationsVariationIdVariationAdditionalSkusAdditionalSkuIdPutWithHttpInfo($id, $variation_id, $additional_sku_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemVariationAdditionalSkuModelsVariationAdditionalSku';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationAdditionalSkuModelsVariationAdditionalSku';
         $request = $this->restItemsIdVariationsVariationIdVariationAdditionalSkusAdditionalSkuIdPutRequest($id, $variation_id, $additional_sku_id, $body);
 
         try {
@@ -30350,7 +30350,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemVariationAdditionalSkuModelsVariationAdditionalSku',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationAdditionalSkuModelsVariationAdditionalSku',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -30398,7 +30398,7 @@ class ItemApi
      */
     public function restItemsIdVariationsVariationIdVariationAdditionalSkusAdditionalSkuIdPutAsyncWithHttpInfo($id, $variation_id, $additional_sku_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemVariationAdditionalSkuModelsVariationAdditionalSku';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationAdditionalSkuModelsVariationAdditionalSku';
         $request = $this->restItemsIdVariationsVariationIdVariationAdditionalSkusAdditionalSkuIdPutRequest($id, $variation_id, $additional_sku_id, $body);
 
         return $this->client
@@ -30583,9 +30583,9 @@ class ItemApi
      * @param  int $variation_id variation_id (required)
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemVariationAdditionalSkuModelsVariationAdditionalSku[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationAdditionalSkuModelsVariationAdditionalSku[]
      */
     public function restItemsIdVariationsVariationIdVariationAdditionalSkusGet($id, $variation_id, $body = null)
     {
@@ -30602,13 +30602,13 @@ class ItemApi
      * @param  int $variation_id (required)
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemVariationAdditionalSkuModelsVariationAdditionalSku[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationAdditionalSkuModelsVariationAdditionalSku[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsIdVariationsVariationIdVariationAdditionalSkusGetWithHttpInfo($id, $variation_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemVariationAdditionalSkuModelsVariationAdditionalSku[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationAdditionalSkuModelsVariationAdditionalSku[]';
         $request = $this->restItemsIdVariationsVariationIdVariationAdditionalSkusGetRequest($id, $variation_id, $body);
 
         try {
@@ -30660,7 +30660,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemVariationAdditionalSkuModelsVariationAdditionalSku[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationAdditionalSkuModelsVariationAdditionalSku[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -30706,7 +30706,7 @@ class ItemApi
      */
     public function restItemsIdVariationsVariationIdVariationAdditionalSkusGetAsyncWithHttpInfo($id, $variation_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemVariationAdditionalSkuModelsVariationAdditionalSku[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationAdditionalSkuModelsVariationAdditionalSku[]';
         $request = $this->restItemsIdVariationsVariationIdVariationAdditionalSkusGetRequest($id, $variation_id, $body);
 
         return $this->client
@@ -30876,9 +30876,9 @@ class ItemApi
      * @param  int $variation_id variation_id (required)
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemVariationAdditionalSkuModelsVariationAdditionalSku
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationAdditionalSkuModelsVariationAdditionalSku
      */
     public function restItemsIdVariationsVariationIdVariationAdditionalSkusPost($id, $variation_id, $body = null)
     {
@@ -30895,13 +30895,13 @@ class ItemApi
      * @param  int $variation_id (required)
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemVariationAdditionalSkuModelsVariationAdditionalSku, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationAdditionalSkuModelsVariationAdditionalSku, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsIdVariationsVariationIdVariationAdditionalSkusPostWithHttpInfo($id, $variation_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemVariationAdditionalSkuModelsVariationAdditionalSku';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationAdditionalSkuModelsVariationAdditionalSku';
         $request = $this->restItemsIdVariationsVariationIdVariationAdditionalSkusPostRequest($id, $variation_id, $body);
 
         try {
@@ -30953,7 +30953,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemVariationAdditionalSkuModelsVariationAdditionalSku',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationAdditionalSkuModelsVariationAdditionalSku',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -30999,7 +30999,7 @@ class ItemApi
      */
     public function restItemsIdVariationsVariationIdVariationAdditionalSkusPostAsyncWithHttpInfo($id, $variation_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemVariationAdditionalSkuModelsVariationAdditionalSku';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationAdditionalSkuModelsVariationAdditionalSku';
         $request = $this->restItemsIdVariationsVariationIdVariationAdditionalSkusPostRequest($id, $variation_id, $body);
 
         return $this->client
@@ -31169,9 +31169,9 @@ class ItemApi
      * @param  int $variation_id variation_id (required)
      * @param  int $barcode_id barcode_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse
      */
     public function restItemsIdVariationsVariationIdVariationBarcodesBarcodeIdDelete($id, $variation_id, $barcode_id)
     {
@@ -31188,13 +31188,13 @@ class ItemApi
      * @param  int $variation_id (required)
      * @param  int $barcode_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsIdVariationsVariationIdVariationBarcodesBarcodeIdDeleteWithHttpInfo($id, $variation_id, $barcode_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse';
         $request = $this->restItemsIdVariationsVariationIdVariationBarcodesBarcodeIdDeleteRequest($id, $variation_id, $barcode_id);
 
         try {
@@ -31246,7 +31246,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -31292,7 +31292,7 @@ class ItemApi
      */
     public function restItemsIdVariationsVariationIdVariationBarcodesBarcodeIdDeleteAsyncWithHttpInfo($id, $variation_id, $barcode_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse';
         $request = $this->restItemsIdVariationsVariationIdVariationBarcodesBarcodeIdDeleteRequest($id, $variation_id, $barcode_id);
 
         return $this->client
@@ -31473,9 +31473,9 @@ class ItemApi
      * @param  int $variation_id variation_id (required)
      * @param  int $barcode_id barcode_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemVariationBarcodeModelsVariationBarcode
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationBarcodeModelsVariationBarcode
      */
     public function restItemsIdVariationsVariationIdVariationBarcodesBarcodeIdGet($id, $variation_id, $barcode_id)
     {
@@ -31492,13 +31492,13 @@ class ItemApi
      * @param  int $variation_id (required)
      * @param  int $barcode_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemVariationBarcodeModelsVariationBarcode, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationBarcodeModelsVariationBarcode, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsIdVariationsVariationIdVariationBarcodesBarcodeIdGetWithHttpInfo($id, $variation_id, $barcode_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemVariationBarcodeModelsVariationBarcode';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationBarcodeModelsVariationBarcode';
         $request = $this->restItemsIdVariationsVariationIdVariationBarcodesBarcodeIdGetRequest($id, $variation_id, $barcode_id);
 
         try {
@@ -31550,7 +31550,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemVariationBarcodeModelsVariationBarcode',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationBarcodeModelsVariationBarcode',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -31596,7 +31596,7 @@ class ItemApi
      */
     public function restItemsIdVariationsVariationIdVariationBarcodesBarcodeIdGetAsyncWithHttpInfo($id, $variation_id, $barcode_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemVariationBarcodeModelsVariationBarcode';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationBarcodeModelsVariationBarcode';
         $request = $this->restItemsIdVariationsVariationIdVariationBarcodesBarcodeIdGetRequest($id, $variation_id, $barcode_id);
 
         return $this->client
@@ -31778,9 +31778,9 @@ class ItemApi
      * @param  int $barcode_id barcode_id (required)
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemVariationBarcodeModelsVariationBarcode
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationBarcodeModelsVariationBarcode
      */
     public function restItemsIdVariationsVariationIdVariationBarcodesBarcodeIdPut($id, $variation_id, $barcode_id, $body = null)
     {
@@ -31798,13 +31798,13 @@ class ItemApi
      * @param  int $barcode_id (required)
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemVariationBarcodeModelsVariationBarcode, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationBarcodeModelsVariationBarcode, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsIdVariationsVariationIdVariationBarcodesBarcodeIdPutWithHttpInfo($id, $variation_id, $barcode_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemVariationBarcodeModelsVariationBarcode';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationBarcodeModelsVariationBarcode';
         $request = $this->restItemsIdVariationsVariationIdVariationBarcodesBarcodeIdPutRequest($id, $variation_id, $barcode_id, $body);
 
         try {
@@ -31856,7 +31856,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemVariationBarcodeModelsVariationBarcode',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationBarcodeModelsVariationBarcode',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -31904,7 +31904,7 @@ class ItemApi
      */
     public function restItemsIdVariationsVariationIdVariationBarcodesBarcodeIdPutAsyncWithHttpInfo($id, $variation_id, $barcode_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemVariationBarcodeModelsVariationBarcode';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationBarcodeModelsVariationBarcode';
         $request = $this->restItemsIdVariationsVariationIdVariationBarcodesBarcodeIdPutRequest($id, $variation_id, $barcode_id, $body);
 
         return $this->client
@@ -32089,9 +32089,9 @@ class ItemApi
      * @param  int $variation_id variation_id (required)
      * @param  string $with Includes the specified variation barcode information in the results. The following parameter is available: &lt;ul&gt;&lt;li&gt;barcode&lt;/li&gt;&lt;/ul&gt; (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemVariationBarcodeModelsVariationBarcode[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationBarcodeModelsVariationBarcode[]
      */
     public function restItemsIdVariationsVariationIdVariationBarcodesGet($id, $variation_id, $with = null)
     {
@@ -32108,13 +32108,13 @@ class ItemApi
      * @param  int $variation_id (required)
      * @param  string $with Includes the specified variation barcode information in the results. The following parameter is available: &lt;ul&gt;&lt;li&gt;barcode&lt;/li&gt;&lt;/ul&gt; (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemVariationBarcodeModelsVariationBarcode[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationBarcodeModelsVariationBarcode[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsIdVariationsVariationIdVariationBarcodesGetWithHttpInfo($id, $variation_id, $with = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemVariationBarcodeModelsVariationBarcode[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationBarcodeModelsVariationBarcode[]';
         $request = $this->restItemsIdVariationsVariationIdVariationBarcodesGetRequest($id, $variation_id, $with);
 
         try {
@@ -32166,7 +32166,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemVariationBarcodeModelsVariationBarcode[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationBarcodeModelsVariationBarcode[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -32212,7 +32212,7 @@ class ItemApi
      */
     public function restItemsIdVariationsVariationIdVariationBarcodesGetAsyncWithHttpInfo($id, $variation_id, $with = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemVariationBarcodeModelsVariationBarcode[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationBarcodeModelsVariationBarcode[]';
         $request = $this->restItemsIdVariationsVariationIdVariationBarcodesGetRequest($id, $variation_id, $with);
 
         return $this->client
@@ -32383,9 +32383,9 @@ class ItemApi
      * @param  int $variation_id variation_id (required)
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemVariationBarcodeModelsVariationBarcode
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationBarcodeModelsVariationBarcode
      */
     public function restItemsIdVariationsVariationIdVariationBarcodesPost($id, $variation_id, $body = null)
     {
@@ -32402,13 +32402,13 @@ class ItemApi
      * @param  int $variation_id (required)
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemVariationBarcodeModelsVariationBarcode, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationBarcodeModelsVariationBarcode, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsIdVariationsVariationIdVariationBarcodesPostWithHttpInfo($id, $variation_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemVariationBarcodeModelsVariationBarcode';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationBarcodeModelsVariationBarcode';
         $request = $this->restItemsIdVariationsVariationIdVariationBarcodesPostRequest($id, $variation_id, $body);
 
         try {
@@ -32460,7 +32460,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemVariationBarcodeModelsVariationBarcode',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationBarcodeModelsVariationBarcode',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -32506,7 +32506,7 @@ class ItemApi
      */
     public function restItemsIdVariationsVariationIdVariationBarcodesPostAsyncWithHttpInfo($id, $variation_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemVariationBarcodeModelsVariationBarcode';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationBarcodeModelsVariationBarcode';
         $request = $this->restItemsIdVariationsVariationIdVariationBarcodesPostRequest($id, $variation_id, $body);
 
         return $this->client
@@ -32676,9 +32676,9 @@ class ItemApi
      * @param  int $variation_id variation_id (required)
      * @param  int $bundle_id bundle_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse
      */
     public function restItemsIdVariationsVariationIdVariationBundlesBundleIdDelete($id, $variation_id, $bundle_id)
     {
@@ -32695,13 +32695,13 @@ class ItemApi
      * @param  int $variation_id (required)
      * @param  int $bundle_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsIdVariationsVariationIdVariationBundlesBundleIdDeleteWithHttpInfo($id, $variation_id, $bundle_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse';
         $request = $this->restItemsIdVariationsVariationIdVariationBundlesBundleIdDeleteRequest($id, $variation_id, $bundle_id);
 
         try {
@@ -32753,7 +32753,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -32799,7 +32799,7 @@ class ItemApi
      */
     public function restItemsIdVariationsVariationIdVariationBundlesBundleIdDeleteAsyncWithHttpInfo($id, $variation_id, $bundle_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse';
         $request = $this->restItemsIdVariationsVariationIdVariationBundlesBundleIdDeleteRequest($id, $variation_id, $bundle_id);
 
         return $this->client
@@ -32980,9 +32980,9 @@ class ItemApi
      * @param  int $variation_id variation_id (required)
      * @param  int $bundle_id bundle_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemVariationBundleModelsVariationBundle
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationBundleModelsVariationBundle
      */
     public function restItemsIdVariationsVariationIdVariationBundlesBundleIdGet($id, $variation_id, $bundle_id)
     {
@@ -32999,13 +32999,13 @@ class ItemApi
      * @param  int $variation_id (required)
      * @param  int $bundle_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemVariationBundleModelsVariationBundle, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationBundleModelsVariationBundle, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsIdVariationsVariationIdVariationBundlesBundleIdGetWithHttpInfo($id, $variation_id, $bundle_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemVariationBundleModelsVariationBundle';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationBundleModelsVariationBundle';
         $request = $this->restItemsIdVariationsVariationIdVariationBundlesBundleIdGetRequest($id, $variation_id, $bundle_id);
 
         try {
@@ -33057,7 +33057,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemVariationBundleModelsVariationBundle',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationBundleModelsVariationBundle',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -33103,7 +33103,7 @@ class ItemApi
      */
     public function restItemsIdVariationsVariationIdVariationBundlesBundleIdGetAsyncWithHttpInfo($id, $variation_id, $bundle_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemVariationBundleModelsVariationBundle';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationBundleModelsVariationBundle';
         $request = $this->restItemsIdVariationsVariationIdVariationBundlesBundleIdGetRequest($id, $variation_id, $bundle_id);
 
         return $this->client
@@ -33285,9 +33285,9 @@ class ItemApi
      * @param  int $bundle_id bundle_id (required)
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemVariationBundleModelsVariationBundle
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationBundleModelsVariationBundle
      */
     public function restItemsIdVariationsVariationIdVariationBundlesBundleIdPut($id, $variation_id, $bundle_id, $body = null)
     {
@@ -33305,13 +33305,13 @@ class ItemApi
      * @param  int $bundle_id (required)
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemVariationBundleModelsVariationBundle, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationBundleModelsVariationBundle, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsIdVariationsVariationIdVariationBundlesBundleIdPutWithHttpInfo($id, $variation_id, $bundle_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemVariationBundleModelsVariationBundle';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationBundleModelsVariationBundle';
         $request = $this->restItemsIdVariationsVariationIdVariationBundlesBundleIdPutRequest($id, $variation_id, $bundle_id, $body);
 
         try {
@@ -33363,7 +33363,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemVariationBundleModelsVariationBundle',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationBundleModelsVariationBundle',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -33411,7 +33411,7 @@ class ItemApi
      */
     public function restItemsIdVariationsVariationIdVariationBundlesBundleIdPutAsyncWithHttpInfo($id, $variation_id, $bundle_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemVariationBundleModelsVariationBundle';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationBundleModelsVariationBundle';
         $request = $this->restItemsIdVariationsVariationIdVariationBundlesBundleIdPutRequest($id, $variation_id, $bundle_id, $body);
 
         return $this->client
@@ -33595,9 +33595,9 @@ class ItemApi
      * @param  int $id id (required)
      * @param  int $variation_id variation_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemVariationBundleModelsVariationBundle[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationBundleModelsVariationBundle[]
      */
     public function restItemsIdVariationsVariationIdVariationBundlesGet($id, $variation_id)
     {
@@ -33613,13 +33613,13 @@ class ItemApi
      * @param  int $id (required)
      * @param  int $variation_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemVariationBundleModelsVariationBundle[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationBundleModelsVariationBundle[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsIdVariationsVariationIdVariationBundlesGetWithHttpInfo($id, $variation_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemVariationBundleModelsVariationBundle[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationBundleModelsVariationBundle[]';
         $request = $this->restItemsIdVariationsVariationIdVariationBundlesGetRequest($id, $variation_id);
 
         try {
@@ -33671,7 +33671,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemVariationBundleModelsVariationBundle[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationBundleModelsVariationBundle[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -33715,7 +33715,7 @@ class ItemApi
      */
     public function restItemsIdVariationsVariationIdVariationBundlesGetAsyncWithHttpInfo($id, $variation_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemVariationBundleModelsVariationBundle[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationBundleModelsVariationBundle[]';
         $request = $this->restItemsIdVariationsVariationIdVariationBundlesGetRequest($id, $variation_id);
 
         return $this->client
@@ -33881,9 +33881,9 @@ class ItemApi
      * @param  int $variation_id variation_id (required)
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemVariationBundleModelsVariationBundle
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationBundleModelsVariationBundle
      */
     public function restItemsIdVariationsVariationIdVariationBundlesPost($id, $variation_id, $body = null)
     {
@@ -33900,13 +33900,13 @@ class ItemApi
      * @param  int $variation_id (required)
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemVariationBundleModelsVariationBundle, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationBundleModelsVariationBundle, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsIdVariationsVariationIdVariationBundlesPostWithHttpInfo($id, $variation_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemVariationBundleModelsVariationBundle';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationBundleModelsVariationBundle';
         $request = $this->restItemsIdVariationsVariationIdVariationBundlesPostRequest($id, $variation_id, $body);
 
         try {
@@ -33958,7 +33958,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemVariationBundleModelsVariationBundle',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationBundleModelsVariationBundle',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -34004,7 +34004,7 @@ class ItemApi
      */
     public function restItemsIdVariationsVariationIdVariationBundlesPostAsyncWithHttpInfo($id, $variation_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemVariationBundleModelsVariationBundle';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationBundleModelsVariationBundle';
         $request = $this->restItemsIdVariationsVariationIdVariationBundlesPostRequest($id, $variation_id, $body);
 
         return $this->client
@@ -34174,9 +34174,9 @@ class ItemApi
      * @param  int $variation_id variation_id (required)
      * @param  int $cat_id cat_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse
      */
     public function restItemsIdVariationsVariationIdVariationCategoriesCatIdDelete($id, $variation_id, $cat_id)
     {
@@ -34193,13 +34193,13 @@ class ItemApi
      * @param  int $variation_id (required)
      * @param  int $cat_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsIdVariationsVariationIdVariationCategoriesCatIdDeleteWithHttpInfo($id, $variation_id, $cat_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse';
         $request = $this->restItemsIdVariationsVariationIdVariationCategoriesCatIdDeleteRequest($id, $variation_id, $cat_id);
 
         try {
@@ -34251,7 +34251,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -34297,7 +34297,7 @@ class ItemApi
      */
     public function restItemsIdVariationsVariationIdVariationCategoriesCatIdDeleteAsyncWithHttpInfo($id, $variation_id, $cat_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse';
         $request = $this->restItemsIdVariationsVariationIdVariationCategoriesCatIdDeleteRequest($id, $variation_id, $cat_id);
 
         return $this->client
@@ -34478,9 +34478,9 @@ class ItemApi
      * @param  int $variation_id variation_id (required)
      * @param  int $cat_id cat_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemVariationCategoryModelsVariationCategory
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationCategoryModelsVariationCategory
      */
     public function restItemsIdVariationsVariationIdVariationCategoriesCatIdGet($id, $variation_id, $cat_id)
     {
@@ -34497,13 +34497,13 @@ class ItemApi
      * @param  int $variation_id (required)
      * @param  int $cat_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemVariationCategoryModelsVariationCategory, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationCategoryModelsVariationCategory, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsIdVariationsVariationIdVariationCategoriesCatIdGetWithHttpInfo($id, $variation_id, $cat_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemVariationCategoryModelsVariationCategory';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationCategoryModelsVariationCategory';
         $request = $this->restItemsIdVariationsVariationIdVariationCategoriesCatIdGetRequest($id, $variation_id, $cat_id);
 
         try {
@@ -34555,7 +34555,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemVariationCategoryModelsVariationCategory',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationCategoryModelsVariationCategory',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -34601,7 +34601,7 @@ class ItemApi
      */
     public function restItemsIdVariationsVariationIdVariationCategoriesCatIdGetAsyncWithHttpInfo($id, $variation_id, $cat_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemVariationCategoryModelsVariationCategory';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationCategoryModelsVariationCategory';
         $request = $this->restItemsIdVariationsVariationIdVariationCategoriesCatIdGetRequest($id, $variation_id, $cat_id);
 
         return $this->client
@@ -34783,9 +34783,9 @@ class ItemApi
      * @param  int $cat_id cat_id (required)
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemVariationCategoryModelsVariationCategory
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationCategoryModelsVariationCategory
      */
     public function restItemsIdVariationsVariationIdVariationCategoriesCatIdPut($id, $variation_id, $cat_id, $body = null)
     {
@@ -34803,13 +34803,13 @@ class ItemApi
      * @param  int $cat_id (required)
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemVariationCategoryModelsVariationCategory, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationCategoryModelsVariationCategory, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsIdVariationsVariationIdVariationCategoriesCatIdPutWithHttpInfo($id, $variation_id, $cat_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemVariationCategoryModelsVariationCategory';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationCategoryModelsVariationCategory';
         $request = $this->restItemsIdVariationsVariationIdVariationCategoriesCatIdPutRequest($id, $variation_id, $cat_id, $body);
 
         try {
@@ -34861,7 +34861,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemVariationCategoryModelsVariationCategory',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationCategoryModelsVariationCategory',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -34909,7 +34909,7 @@ class ItemApi
      */
     public function restItemsIdVariationsVariationIdVariationCategoriesCatIdPutAsyncWithHttpInfo($id, $variation_id, $cat_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemVariationCategoryModelsVariationCategory';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationCategoryModelsVariationCategory';
         $request = $this->restItemsIdVariationsVariationIdVariationCategoriesCatIdPutRequest($id, $variation_id, $cat_id, $body);
 
         return $this->client
@@ -35093,9 +35093,9 @@ class ItemApi
      * @param  int $id id (required)
      * @param  int $variation_id variation_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemVariationCategoryModelsVariationCategory
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationCategoryModelsVariationCategory
      */
     public function restItemsIdVariationsVariationIdVariationCategoriesGet($id, $variation_id)
     {
@@ -35111,13 +35111,13 @@ class ItemApi
      * @param  int $id (required)
      * @param  int $variation_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemVariationCategoryModelsVariationCategory, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationCategoryModelsVariationCategory, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsIdVariationsVariationIdVariationCategoriesGetWithHttpInfo($id, $variation_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemVariationCategoryModelsVariationCategory';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationCategoryModelsVariationCategory';
         $request = $this->restItemsIdVariationsVariationIdVariationCategoriesGetRequest($id, $variation_id);
 
         try {
@@ -35169,7 +35169,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemVariationCategoryModelsVariationCategory',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationCategoryModelsVariationCategory',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -35213,7 +35213,7 @@ class ItemApi
      */
     public function restItemsIdVariationsVariationIdVariationCategoriesGetAsyncWithHttpInfo($id, $variation_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemVariationCategoryModelsVariationCategory';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationCategoryModelsVariationCategory';
         $request = $this->restItemsIdVariationsVariationIdVariationCategoriesGetRequest($id, $variation_id);
 
         return $this->client
@@ -35379,9 +35379,9 @@ class ItemApi
      * @param  int $variation_id variation_id (required)
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemVariationCategoryModelsVariationCategory
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationCategoryModelsVariationCategory
      */
     public function restItemsIdVariationsVariationIdVariationCategoriesPost($id, $variation_id, $body = null)
     {
@@ -35398,13 +35398,13 @@ class ItemApi
      * @param  int $variation_id (required)
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemVariationCategoryModelsVariationCategory, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationCategoryModelsVariationCategory, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsIdVariationsVariationIdVariationCategoriesPostWithHttpInfo($id, $variation_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemVariationCategoryModelsVariationCategory';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationCategoryModelsVariationCategory';
         $request = $this->restItemsIdVariationsVariationIdVariationCategoriesPostRequest($id, $variation_id, $body);
 
         try {
@@ -35456,7 +35456,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemVariationCategoryModelsVariationCategory',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationCategoryModelsVariationCategory',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -35502,7 +35502,7 @@ class ItemApi
      */
     public function restItemsIdVariationsVariationIdVariationCategoriesPostAsyncWithHttpInfo($id, $variation_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemVariationCategoryModelsVariationCategory';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationCategoryModelsVariationCategory';
         $request = $this->restItemsIdVariationsVariationIdVariationCategoriesPostRequest($id, $variation_id, $body);
 
         return $this->client
@@ -35671,9 +35671,9 @@ class ItemApi
      * @param  int $id id (required)
      * @param  int $variation_id variation_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemVariationClientModelsVariationClient[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationClientModelsVariationClient[]
      */
     public function restItemsIdVariationsVariationIdVariationClientsGet($id, $variation_id)
     {
@@ -35689,13 +35689,13 @@ class ItemApi
      * @param  int $id (required)
      * @param  int $variation_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemVariationClientModelsVariationClient[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationClientModelsVariationClient[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsIdVariationsVariationIdVariationClientsGetWithHttpInfo($id, $variation_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemVariationClientModelsVariationClient[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationClientModelsVariationClient[]';
         $request = $this->restItemsIdVariationsVariationIdVariationClientsGetRequest($id, $variation_id);
 
         try {
@@ -35747,7 +35747,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemVariationClientModelsVariationClient[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationClientModelsVariationClient[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -35791,7 +35791,7 @@ class ItemApi
      */
     public function restItemsIdVariationsVariationIdVariationClientsGetAsyncWithHttpInfo($id, $variation_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemVariationClientModelsVariationClient[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationClientModelsVariationClient[]';
         $request = $this->restItemsIdVariationsVariationIdVariationClientsGetRequest($id, $variation_id);
 
         return $this->client
@@ -35957,9 +35957,9 @@ class ItemApi
      * @param  int $variation_id variation_id (required)
      * @param  int $plenty_id plenty_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse
      */
     public function restItemsIdVariationsVariationIdVariationClientsPlentyIdDelete($id, $variation_id, $plenty_id)
     {
@@ -35976,13 +35976,13 @@ class ItemApi
      * @param  int $variation_id (required)
      * @param  int $plenty_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsIdVariationsVariationIdVariationClientsPlentyIdDeleteWithHttpInfo($id, $variation_id, $plenty_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse';
         $request = $this->restItemsIdVariationsVariationIdVariationClientsPlentyIdDeleteRequest($id, $variation_id, $plenty_id);
 
         try {
@@ -36034,7 +36034,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -36080,7 +36080,7 @@ class ItemApi
      */
     public function restItemsIdVariationsVariationIdVariationClientsPlentyIdDeleteAsyncWithHttpInfo($id, $variation_id, $plenty_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse';
         $request = $this->restItemsIdVariationsVariationIdVariationClientsPlentyIdDeleteRequest($id, $variation_id, $plenty_id);
 
         return $this->client
@@ -36261,9 +36261,9 @@ class ItemApi
      * @param  int $variation_id variation_id (required)
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemVariationClientModelsVariationClient
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationClientModelsVariationClient
      */
     public function restItemsIdVariationsVariationIdVariationClientsPost($id, $variation_id, $body = null)
     {
@@ -36280,13 +36280,13 @@ class ItemApi
      * @param  int $variation_id (required)
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemVariationClientModelsVariationClient, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationClientModelsVariationClient, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsIdVariationsVariationIdVariationClientsPostWithHttpInfo($id, $variation_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemVariationClientModelsVariationClient';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationClientModelsVariationClient';
         $request = $this->restItemsIdVariationsVariationIdVariationClientsPostRequest($id, $variation_id, $body);
 
         try {
@@ -36338,7 +36338,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemVariationClientModelsVariationClient',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationClientModelsVariationClient',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -36384,7 +36384,7 @@ class ItemApi
      */
     public function restItemsIdVariationsVariationIdVariationClientsPostAsyncWithHttpInfo($id, $variation_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemVariationClientModelsVariationClient';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationClientModelsVariationClient';
         $request = $this->restItemsIdVariationsVariationIdVariationClientsPostRequest($id, $variation_id, $body);
 
         return $this->client
@@ -36553,9 +36553,9 @@ class ItemApi
      * @param  int $id id (required)
      * @param  int $variation_id variation_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemVariationBundleModelsVariationBundle[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationBundleModelsVariationBundle[]
      */
     public function restItemsIdVariationsVariationIdVariationComponentBundlesGet($id, $variation_id)
     {
@@ -36571,13 +36571,13 @@ class ItemApi
      * @param  int $id (required)
      * @param  int $variation_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemVariationBundleModelsVariationBundle[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationBundleModelsVariationBundle[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsIdVariationsVariationIdVariationComponentBundlesGetWithHttpInfo($id, $variation_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemVariationBundleModelsVariationBundle[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationBundleModelsVariationBundle[]';
         $request = $this->restItemsIdVariationsVariationIdVariationComponentBundlesGetRequest($id, $variation_id);
 
         try {
@@ -36629,7 +36629,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemVariationBundleModelsVariationBundle[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationBundleModelsVariationBundle[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -36673,7 +36673,7 @@ class ItemApi
      */
     public function restItemsIdVariationsVariationIdVariationComponentBundlesGetAsyncWithHttpInfo($id, $variation_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemVariationBundleModelsVariationBundle[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationBundleModelsVariationBundle[]';
         $request = $this->restItemsIdVariationsVariationIdVariationComponentBundlesGetRequest($id, $variation_id);
 
         return $this->client
@@ -36838,9 +36838,9 @@ class ItemApi
      * @param  int $id id (required)
      * @param  int $variation_id variation_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemVariationDefaultCategoryModelsVariationDefaultCategory[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationDefaultCategoryModelsVariationDefaultCategory[]
      */
     public function restItemsIdVariationsVariationIdVariationDefaultCategoriesGet($id, $variation_id)
     {
@@ -36856,13 +36856,13 @@ class ItemApi
      * @param  int $id (required)
      * @param  int $variation_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemVariationDefaultCategoryModelsVariationDefaultCategory[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationDefaultCategoryModelsVariationDefaultCategory[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsIdVariationsVariationIdVariationDefaultCategoriesGetWithHttpInfo($id, $variation_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemVariationDefaultCategoryModelsVariationDefaultCategory[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationDefaultCategoryModelsVariationDefaultCategory[]';
         $request = $this->restItemsIdVariationsVariationIdVariationDefaultCategoriesGetRequest($id, $variation_id);
 
         try {
@@ -36914,7 +36914,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemVariationDefaultCategoryModelsVariationDefaultCategory[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationDefaultCategoryModelsVariationDefaultCategory[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -36958,7 +36958,7 @@ class ItemApi
      */
     public function restItemsIdVariationsVariationIdVariationDefaultCategoriesGetAsyncWithHttpInfo($id, $variation_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemVariationDefaultCategoryModelsVariationDefaultCategory[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationDefaultCategoryModelsVariationDefaultCategory[]';
         $request = $this->restItemsIdVariationsVariationIdVariationDefaultCategoriesGetRequest($id, $variation_id);
 
         return $this->client
@@ -37124,9 +37124,9 @@ class ItemApi
      * @param  int $variation_id variation_id (required)
      * @param  int $plenty_id plenty_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse
      */
     public function restItemsIdVariationsVariationIdVariationDefaultCategoriesPlentyIdDelete($id, $variation_id, $plenty_id)
     {
@@ -37143,13 +37143,13 @@ class ItemApi
      * @param  int $variation_id (required)
      * @param  int $plenty_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsIdVariationsVariationIdVariationDefaultCategoriesPlentyIdDeleteWithHttpInfo($id, $variation_id, $plenty_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse';
         $request = $this->restItemsIdVariationsVariationIdVariationDefaultCategoriesPlentyIdDeleteRequest($id, $variation_id, $plenty_id);
 
         try {
@@ -37201,7 +37201,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -37247,7 +37247,7 @@ class ItemApi
      */
     public function restItemsIdVariationsVariationIdVariationDefaultCategoriesPlentyIdDeleteAsyncWithHttpInfo($id, $variation_id, $plenty_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse';
         $request = $this->restItemsIdVariationsVariationIdVariationDefaultCategoriesPlentyIdDeleteRequest($id, $variation_id, $plenty_id);
 
         return $this->client
@@ -37428,9 +37428,9 @@ class ItemApi
      * @param  int $variation_id variation_id (required)
      * @param  int $plenty_id plenty_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemVariationDefaultCategoryModelsVariationDefaultCategory
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationDefaultCategoryModelsVariationDefaultCategory
      */
     public function restItemsIdVariationsVariationIdVariationDefaultCategoriesPlentyIdGet($id, $variation_id, $plenty_id)
     {
@@ -37447,13 +37447,13 @@ class ItemApi
      * @param  int $variation_id (required)
      * @param  int $plenty_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemVariationDefaultCategoryModelsVariationDefaultCategory, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationDefaultCategoryModelsVariationDefaultCategory, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsIdVariationsVariationIdVariationDefaultCategoriesPlentyIdGetWithHttpInfo($id, $variation_id, $plenty_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemVariationDefaultCategoryModelsVariationDefaultCategory';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationDefaultCategoryModelsVariationDefaultCategory';
         $request = $this->restItemsIdVariationsVariationIdVariationDefaultCategoriesPlentyIdGetRequest($id, $variation_id, $plenty_id);
 
         try {
@@ -37505,7 +37505,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemVariationDefaultCategoryModelsVariationDefaultCategory',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationDefaultCategoryModelsVariationDefaultCategory',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -37551,7 +37551,7 @@ class ItemApi
      */
     public function restItemsIdVariationsVariationIdVariationDefaultCategoriesPlentyIdGetAsyncWithHttpInfo($id, $variation_id, $plenty_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemVariationDefaultCategoryModelsVariationDefaultCategory';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationDefaultCategoryModelsVariationDefaultCategory';
         $request = $this->restItemsIdVariationsVariationIdVariationDefaultCategoriesPlentyIdGetRequest($id, $variation_id, $plenty_id);
 
         return $this->client
@@ -37731,9 +37731,9 @@ class ItemApi
      * @param  int $id id (required)
      * @param  int $variation_id variation_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemVariationDefaultCategoryModelsVariationDefaultCategory
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationDefaultCategoryModelsVariationDefaultCategory
      */
     public function restItemsIdVariationsVariationIdVariationDefaultCategoriesPost($id, $variation_id)
     {
@@ -37749,13 +37749,13 @@ class ItemApi
      * @param  int $id (required)
      * @param  int $variation_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemVariationDefaultCategoryModelsVariationDefaultCategory, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationDefaultCategoryModelsVariationDefaultCategory, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsIdVariationsVariationIdVariationDefaultCategoriesPostWithHttpInfo($id, $variation_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemVariationDefaultCategoryModelsVariationDefaultCategory';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationDefaultCategoryModelsVariationDefaultCategory';
         $request = $this->restItemsIdVariationsVariationIdVariationDefaultCategoriesPostRequest($id, $variation_id);
 
         try {
@@ -37807,7 +37807,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemVariationDefaultCategoryModelsVariationDefaultCategory',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationDefaultCategoryModelsVariationDefaultCategory',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -37851,7 +37851,7 @@ class ItemApi
      */
     public function restItemsIdVariationsVariationIdVariationDefaultCategoriesPostAsyncWithHttpInfo($id, $variation_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemVariationDefaultCategoryModelsVariationDefaultCategory';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationDefaultCategoryModelsVariationDefaultCategory';
         $request = $this->restItemsIdVariationsVariationIdVariationDefaultCategoriesPostRequest($id, $variation_id);
 
         return $this->client
@@ -38017,9 +38017,9 @@ class ItemApi
      * @param  int $variation_id variation_id (required)
      * @param  string $updated_at Filter restricts the list of results to variation images updated after the specified date. The date can be specified as unix timestamps or in the ISO 8601 date format. The PHP function strtotime is also supported. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemVariationImageModelsVariationImage
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationImageModelsVariationImage
      */
     public function restItemsIdVariationsVariationIdVariationImagesGet($id, $variation_id, $updated_at = null)
     {
@@ -38036,13 +38036,13 @@ class ItemApi
      * @param  int $variation_id (required)
      * @param  string $updated_at Filter restricts the list of results to variation images updated after the specified date. The date can be specified as unix timestamps or in the ISO 8601 date format. The PHP function strtotime is also supported. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemVariationImageModelsVariationImage, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationImageModelsVariationImage, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsIdVariationsVariationIdVariationImagesGetWithHttpInfo($id, $variation_id, $updated_at = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemVariationImageModelsVariationImage';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationImageModelsVariationImage';
         $request = $this->restItemsIdVariationsVariationIdVariationImagesGetRequest($id, $variation_id, $updated_at);
 
         try {
@@ -38094,7 +38094,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemVariationImageModelsVariationImage',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationImageModelsVariationImage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -38140,7 +38140,7 @@ class ItemApi
      */
     public function restItemsIdVariationsVariationIdVariationImagesGetAsyncWithHttpInfo($id, $variation_id, $updated_at = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemVariationImageModelsVariationImage';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationImageModelsVariationImage';
         $request = $this->restItemsIdVariationsVariationIdVariationImagesGetRequest($id, $variation_id, $updated_at);
 
         return $this->client
@@ -38311,9 +38311,9 @@ class ItemApi
      * @param  int $variation_id variation_id (required)
      * @param  int $image_id image_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse
      */
     public function restItemsIdVariationsVariationIdVariationImagesImageIdDelete($id, $variation_id, $image_id)
     {
@@ -38330,13 +38330,13 @@ class ItemApi
      * @param  int $variation_id (required)
      * @param  int $image_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsIdVariationsVariationIdVariationImagesImageIdDeleteWithHttpInfo($id, $variation_id, $image_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse';
         $request = $this->restItemsIdVariationsVariationIdVariationImagesImageIdDeleteRequest($id, $variation_id, $image_id);
 
         try {
@@ -38388,7 +38388,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -38434,7 +38434,7 @@ class ItemApi
      */
     public function restItemsIdVariationsVariationIdVariationImagesImageIdDeleteAsyncWithHttpInfo($id, $variation_id, $image_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse';
         $request = $this->restItemsIdVariationsVariationIdVariationImagesImageIdDeleteRequest($id, $variation_id, $image_id);
 
         return $this->client
@@ -38615,9 +38615,9 @@ class ItemApi
      * @param  int $variation_id variation_id (required)
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemVariationImageModelsVariationImage
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationImageModelsVariationImage
      */
     public function restItemsIdVariationsVariationIdVariationImagesPost($id, $variation_id, $body = null)
     {
@@ -38634,13 +38634,13 @@ class ItemApi
      * @param  int $variation_id (required)
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemVariationImageModelsVariationImage, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationImageModelsVariationImage, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsIdVariationsVariationIdVariationImagesPostWithHttpInfo($id, $variation_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemVariationImageModelsVariationImage';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationImageModelsVariationImage';
         $request = $this->restItemsIdVariationsVariationIdVariationImagesPostRequest($id, $variation_id, $body);
 
         try {
@@ -38692,7 +38692,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemVariationImageModelsVariationImage',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationImageModelsVariationImage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -38738,7 +38738,7 @@ class ItemApi
      */
     public function restItemsIdVariationsVariationIdVariationImagesPostAsyncWithHttpInfo($id, $variation_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemVariationImageModelsVariationImage';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationImageModelsVariationImage';
         $request = $this->restItemsIdVariationsVariationIdVariationImagesPostRequest($id, $variation_id, $body);
 
         return $this->client
@@ -38907,7 +38907,7 @@ class ItemApi
      * @param  int $id id (required)
      * @param  int $variation_id variation_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -38924,7 +38924,7 @@ class ItemApi
      * @param  int $id (required)
      * @param  int $variation_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -39155,9 +39155,9 @@ class ItemApi
      * @param  int $id id (required)
      * @param  int $variation_id variation_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemVariationMarketModelsVariationMarket[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationMarketModelsVariationMarket[]
      */
     public function restItemsIdVariationsVariationIdVariationMarketsGet($id, $variation_id)
     {
@@ -39173,13 +39173,13 @@ class ItemApi
      * @param  int $id (required)
      * @param  int $variation_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemVariationMarketModelsVariationMarket[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationMarketModelsVariationMarket[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsIdVariationsVariationIdVariationMarketsGetWithHttpInfo($id, $variation_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemVariationMarketModelsVariationMarket[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationMarketModelsVariationMarket[]';
         $request = $this->restItemsIdVariationsVariationIdVariationMarketsGetRequest($id, $variation_id);
 
         try {
@@ -39231,7 +39231,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemVariationMarketModelsVariationMarket[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationMarketModelsVariationMarket[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -39275,7 +39275,7 @@ class ItemApi
      */
     public function restItemsIdVariationsVariationIdVariationMarketsGetAsyncWithHttpInfo($id, $variation_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemVariationMarketModelsVariationMarket[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationMarketModelsVariationMarket[]';
         $request = $this->restItemsIdVariationsVariationIdVariationMarketsGetRequest($id, $variation_id);
 
         return $this->client
@@ -39441,9 +39441,9 @@ class ItemApi
      * @param  int $variation_id variation_id (required)
      * @param  int $marketplace_id marketplace_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse
      */
     public function restItemsIdVariationsVariationIdVariationMarketsMarketplaceIdDelete($id, $variation_id, $marketplace_id)
     {
@@ -39460,13 +39460,13 @@ class ItemApi
      * @param  int $variation_id (required)
      * @param  int $marketplace_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsIdVariationsVariationIdVariationMarketsMarketplaceIdDeleteWithHttpInfo($id, $variation_id, $marketplace_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse';
         $request = $this->restItemsIdVariationsVariationIdVariationMarketsMarketplaceIdDeleteRequest($id, $variation_id, $marketplace_id);
 
         try {
@@ -39518,7 +39518,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -39564,7 +39564,7 @@ class ItemApi
      */
     public function restItemsIdVariationsVariationIdVariationMarketsMarketplaceIdDeleteAsyncWithHttpInfo($id, $variation_id, $marketplace_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse';
         $request = $this->restItemsIdVariationsVariationIdVariationMarketsMarketplaceIdDeleteRequest($id, $variation_id, $marketplace_id);
 
         return $this->client
@@ -39745,9 +39745,9 @@ class ItemApi
      * @param  int $variation_id variation_id (required)
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemVariationMarketModelsVariationMarket
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationMarketModelsVariationMarket
      */
     public function restItemsIdVariationsVariationIdVariationMarketsPost($id, $variation_id, $body = null)
     {
@@ -39764,13 +39764,13 @@ class ItemApi
      * @param  int $variation_id (required)
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemVariationMarketModelsVariationMarket, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationMarketModelsVariationMarket, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsIdVariationsVariationIdVariationMarketsPostWithHttpInfo($id, $variation_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemVariationMarketModelsVariationMarket';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationMarketModelsVariationMarket';
         $request = $this->restItemsIdVariationsVariationIdVariationMarketsPostRequest($id, $variation_id, $body);
 
         try {
@@ -39822,7 +39822,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemVariationMarketModelsVariationMarket',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationMarketModelsVariationMarket',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -39868,7 +39868,7 @@ class ItemApi
      */
     public function restItemsIdVariationsVariationIdVariationMarketsPostAsyncWithHttpInfo($id, $variation_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemVariationMarketModelsVariationMarket';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationMarketModelsVariationMarket';
         $request = $this->restItemsIdVariationsVariationIdVariationMarketsPostRequest($id, $variation_id, $body);
 
         return $this->client
@@ -40037,9 +40037,9 @@ class ItemApi
      * @param  int $id id (required)
      * @param  int $variation_id variation_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse
      */
     public function restItemsIdVariationsVariationIdVariationPropertiesDelete($id, $variation_id)
     {
@@ -40055,13 +40055,13 @@ class ItemApi
      * @param  int $id (required)
      * @param  int $variation_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsIdVariationsVariationIdVariationPropertiesDeleteWithHttpInfo($id, $variation_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse';
         $request = $this->restItemsIdVariationsVariationIdVariationPropertiesDeleteRequest($id, $variation_id);
 
         try {
@@ -40113,7 +40113,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -40157,7 +40157,7 @@ class ItemApi
      */
     public function restItemsIdVariationsVariationIdVariationPropertiesDeleteAsyncWithHttpInfo($id, $variation_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse';
         $request = $this->restItemsIdVariationsVariationIdVariationPropertiesDeleteRequest($id, $variation_id);
 
         return $this->client
@@ -40322,9 +40322,9 @@ class ItemApi
      * @param  int $id id (required)
      * @param  int $variation_id variation_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemVariationPropertyModelsVariationPropertyValue[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationPropertyModelsVariationPropertyValue[]
      */
     public function restItemsIdVariationsVariationIdVariationPropertiesGet($id, $variation_id)
     {
@@ -40340,13 +40340,13 @@ class ItemApi
      * @param  int $id (required)
      * @param  int $variation_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemVariationPropertyModelsVariationPropertyValue[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationPropertyModelsVariationPropertyValue[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsIdVariationsVariationIdVariationPropertiesGetWithHttpInfo($id, $variation_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemVariationPropertyModelsVariationPropertyValue[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationPropertyModelsVariationPropertyValue[]';
         $request = $this->restItemsIdVariationsVariationIdVariationPropertiesGetRequest($id, $variation_id);
 
         try {
@@ -40398,7 +40398,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemVariationPropertyModelsVariationPropertyValue[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationPropertyModelsVariationPropertyValue[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -40442,7 +40442,7 @@ class ItemApi
      */
     public function restItemsIdVariationsVariationIdVariationPropertiesGetAsyncWithHttpInfo($id, $variation_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemVariationPropertyModelsVariationPropertyValue[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationPropertyModelsVariationPropertyValue[]';
         $request = $this->restItemsIdVariationsVariationIdVariationPropertiesGetRequest($id, $variation_id);
 
         return $this->client
@@ -40608,9 +40608,9 @@ class ItemApi
      * @param  int $variation_id variation_id (required)
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemVariationPropertyModelsVariationPropertyValue
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationPropertyModelsVariationPropertyValue
      */
     public function restItemsIdVariationsVariationIdVariationPropertiesPost($id, $variation_id, $body = null)
     {
@@ -40627,13 +40627,13 @@ class ItemApi
      * @param  int $variation_id (required)
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemVariationPropertyModelsVariationPropertyValue, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationPropertyModelsVariationPropertyValue, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsIdVariationsVariationIdVariationPropertiesPostWithHttpInfo($id, $variation_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemVariationPropertyModelsVariationPropertyValue';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationPropertyModelsVariationPropertyValue';
         $request = $this->restItemsIdVariationsVariationIdVariationPropertiesPostRequest($id, $variation_id, $body);
 
         try {
@@ -40685,7 +40685,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemVariationPropertyModelsVariationPropertyValue',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationPropertyModelsVariationPropertyValue',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -40731,7 +40731,7 @@ class ItemApi
      */
     public function restItemsIdVariationsVariationIdVariationPropertiesPostAsyncWithHttpInfo($id, $variation_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemVariationPropertyModelsVariationPropertyValue';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationPropertyModelsVariationPropertyValue';
         $request = $this->restItemsIdVariationsVariationIdVariationPropertiesPostRequest($id, $variation_id, $body);
 
         return $this->client
@@ -40901,9 +40901,9 @@ class ItemApi
      * @param  int $variation_id variation_id (required)
      * @param  int $property_id property_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse
      */
     public function restItemsIdVariationsVariationIdVariationPropertiesPropertyIdDelete($id, $variation_id, $property_id)
     {
@@ -40920,13 +40920,13 @@ class ItemApi
      * @param  int $variation_id (required)
      * @param  int $property_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsIdVariationsVariationIdVariationPropertiesPropertyIdDeleteWithHttpInfo($id, $variation_id, $property_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse';
         $request = $this->restItemsIdVariationsVariationIdVariationPropertiesPropertyIdDeleteRequest($id, $variation_id, $property_id);
 
         try {
@@ -40978,7 +40978,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -41024,7 +41024,7 @@ class ItemApi
      */
     public function restItemsIdVariationsVariationIdVariationPropertiesPropertyIdDeleteAsyncWithHttpInfo($id, $variation_id, $property_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse';
         $request = $this->restItemsIdVariationsVariationIdVariationPropertiesPropertyIdDeleteRequest($id, $variation_id, $property_id);
 
         return $this->client
@@ -41205,9 +41205,9 @@ class ItemApi
      * @param  int $variation_id variation_id (required)
      * @param  int $property_id property_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemVariationPropertyModelsVariationPropertyValue
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationPropertyModelsVariationPropertyValue
      */
     public function restItemsIdVariationsVariationIdVariationPropertiesPropertyIdGet($id, $variation_id, $property_id)
     {
@@ -41224,13 +41224,13 @@ class ItemApi
      * @param  int $variation_id (required)
      * @param  int $property_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemVariationPropertyModelsVariationPropertyValue, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationPropertyModelsVariationPropertyValue, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsIdVariationsVariationIdVariationPropertiesPropertyIdGetWithHttpInfo($id, $variation_id, $property_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemVariationPropertyModelsVariationPropertyValue';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationPropertyModelsVariationPropertyValue';
         $request = $this->restItemsIdVariationsVariationIdVariationPropertiesPropertyIdGetRequest($id, $variation_id, $property_id);
 
         try {
@@ -41282,7 +41282,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemVariationPropertyModelsVariationPropertyValue',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationPropertyModelsVariationPropertyValue',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -41328,7 +41328,7 @@ class ItemApi
      */
     public function restItemsIdVariationsVariationIdVariationPropertiesPropertyIdGetAsyncWithHttpInfo($id, $variation_id, $property_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemVariationPropertyModelsVariationPropertyValue';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationPropertyModelsVariationPropertyValue';
         $request = $this->restItemsIdVariationsVariationIdVariationPropertiesPropertyIdGetRequest($id, $variation_id, $property_id);
 
         return $this->client
@@ -41510,9 +41510,9 @@ class ItemApi
      * @param  int $property_id property_id (required)
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemVariationPropertyModelsVariationPropertyValue
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationPropertyModelsVariationPropertyValue
      */
     public function restItemsIdVariationsVariationIdVariationPropertiesPropertyIdPut($id, $variation_id, $property_id, $body = null)
     {
@@ -41530,13 +41530,13 @@ class ItemApi
      * @param  int $property_id (required)
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemVariationPropertyModelsVariationPropertyValue, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationPropertyModelsVariationPropertyValue, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsIdVariationsVariationIdVariationPropertiesPropertyIdPutWithHttpInfo($id, $variation_id, $property_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemVariationPropertyModelsVariationPropertyValue';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationPropertyModelsVariationPropertyValue';
         $request = $this->restItemsIdVariationsVariationIdVariationPropertiesPropertyIdPutRequest($id, $variation_id, $property_id, $body);
 
         try {
@@ -41588,7 +41588,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemVariationPropertyModelsVariationPropertyValue',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationPropertyModelsVariationPropertyValue',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -41636,7 +41636,7 @@ class ItemApi
      */
     public function restItemsIdVariationsVariationIdVariationPropertiesPropertyIdPutAsyncWithHttpInfo($id, $variation_id, $property_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemVariationPropertyModelsVariationPropertyValue';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationPropertyModelsVariationPropertyValue';
         $request = $this->restItemsIdVariationsVariationIdVariationPropertiesPropertyIdPutRequest($id, $variation_id, $property_id, $body);
 
         return $this->client
@@ -41820,9 +41820,9 @@ class ItemApi
      * @param  int $id id (required)
      * @param  int $variation_id variation_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse
      */
     public function restItemsIdVariationsVariationIdVariationSalesPricesDelete($id, $variation_id)
     {
@@ -41838,13 +41838,13 @@ class ItemApi
      * @param  int $id (required)
      * @param  int $variation_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsIdVariationsVariationIdVariationSalesPricesDeleteWithHttpInfo($id, $variation_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse';
         $request = $this->restItemsIdVariationsVariationIdVariationSalesPricesDeleteRequest($id, $variation_id);
 
         try {
@@ -41896,7 +41896,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -41940,7 +41940,7 @@ class ItemApi
      */
     public function restItemsIdVariationsVariationIdVariationSalesPricesDeleteAsyncWithHttpInfo($id, $variation_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse';
         $request = $this->restItemsIdVariationsVariationIdVariationSalesPricesDeleteRequest($id, $variation_id);
 
         return $this->client
@@ -42105,9 +42105,9 @@ class ItemApi
      * @param  int $id id (required)
      * @param  int $variation_id variation_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemVariationSalesPriceModelsVariationSalesPrice[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationSalesPriceModelsVariationSalesPrice[]
      */
     public function restItemsIdVariationsVariationIdVariationSalesPricesGet($id, $variation_id)
     {
@@ -42123,13 +42123,13 @@ class ItemApi
      * @param  int $id (required)
      * @param  int $variation_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemVariationSalesPriceModelsVariationSalesPrice[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationSalesPriceModelsVariationSalesPrice[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsIdVariationsVariationIdVariationSalesPricesGetWithHttpInfo($id, $variation_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemVariationSalesPriceModelsVariationSalesPrice[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationSalesPriceModelsVariationSalesPrice[]';
         $request = $this->restItemsIdVariationsVariationIdVariationSalesPricesGetRequest($id, $variation_id);
 
         try {
@@ -42181,7 +42181,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemVariationSalesPriceModelsVariationSalesPrice[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationSalesPriceModelsVariationSalesPrice[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -42225,7 +42225,7 @@ class ItemApi
      */
     public function restItemsIdVariationsVariationIdVariationSalesPricesGetAsyncWithHttpInfo($id, $variation_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemVariationSalesPriceModelsVariationSalesPrice[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationSalesPriceModelsVariationSalesPrice[]';
         $request = $this->restItemsIdVariationsVariationIdVariationSalesPricesGetRequest($id, $variation_id);
 
         return $this->client
@@ -42391,9 +42391,9 @@ class ItemApi
      * @param  int $variation_id variation_id (required)
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemVariationSalesPriceModelsVariationSalesPrice
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationSalesPriceModelsVariationSalesPrice
      */
     public function restItemsIdVariationsVariationIdVariationSalesPricesPost($id, $variation_id, $body = null)
     {
@@ -42410,13 +42410,13 @@ class ItemApi
      * @param  int $variation_id (required)
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemVariationSalesPriceModelsVariationSalesPrice, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationSalesPriceModelsVariationSalesPrice, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsIdVariationsVariationIdVariationSalesPricesPostWithHttpInfo($id, $variation_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemVariationSalesPriceModelsVariationSalesPrice';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationSalesPriceModelsVariationSalesPrice';
         $request = $this->restItemsIdVariationsVariationIdVariationSalesPricesPostRequest($id, $variation_id, $body);
 
         try {
@@ -42468,7 +42468,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemVariationSalesPriceModelsVariationSalesPrice',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationSalesPriceModelsVariationSalesPrice',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -42514,7 +42514,7 @@ class ItemApi
      */
     public function restItemsIdVariationsVariationIdVariationSalesPricesPostAsyncWithHttpInfo($id, $variation_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemVariationSalesPriceModelsVariationSalesPrice';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationSalesPriceModelsVariationSalesPrice';
         $request = $this->restItemsIdVariationsVariationIdVariationSalesPricesPostRequest($id, $variation_id, $body);
 
         return $this->client
@@ -42684,9 +42684,9 @@ class ItemApi
      * @param  int $variation_id variation_id (required)
      * @param  int $price_id price_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse
      */
     public function restItemsIdVariationsVariationIdVariationSalesPricesPriceIdDelete($id, $variation_id, $price_id)
     {
@@ -42703,13 +42703,13 @@ class ItemApi
      * @param  int $variation_id (required)
      * @param  int $price_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsIdVariationsVariationIdVariationSalesPricesPriceIdDeleteWithHttpInfo($id, $variation_id, $price_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse';
         $request = $this->restItemsIdVariationsVariationIdVariationSalesPricesPriceIdDeleteRequest($id, $variation_id, $price_id);
 
         try {
@@ -42761,7 +42761,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -42807,7 +42807,7 @@ class ItemApi
      */
     public function restItemsIdVariationsVariationIdVariationSalesPricesPriceIdDeleteAsyncWithHttpInfo($id, $variation_id, $price_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse';
         $request = $this->restItemsIdVariationsVariationIdVariationSalesPricesPriceIdDeleteRequest($id, $variation_id, $price_id);
 
         return $this->client
@@ -42988,9 +42988,9 @@ class ItemApi
      * @param  int $variation_id variation_id (required)
      * @param  int $price_id price_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemVariationSalesPriceModelsVariationSalesPrice
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationSalesPriceModelsVariationSalesPrice
      */
     public function restItemsIdVariationsVariationIdVariationSalesPricesPriceIdGet($id, $variation_id, $price_id)
     {
@@ -43007,13 +43007,13 @@ class ItemApi
      * @param  int $variation_id (required)
      * @param  int $price_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemVariationSalesPriceModelsVariationSalesPrice, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationSalesPriceModelsVariationSalesPrice, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsIdVariationsVariationIdVariationSalesPricesPriceIdGetWithHttpInfo($id, $variation_id, $price_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemVariationSalesPriceModelsVariationSalesPrice';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationSalesPriceModelsVariationSalesPrice';
         $request = $this->restItemsIdVariationsVariationIdVariationSalesPricesPriceIdGetRequest($id, $variation_id, $price_id);
 
         try {
@@ -43065,7 +43065,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemVariationSalesPriceModelsVariationSalesPrice',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationSalesPriceModelsVariationSalesPrice',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -43111,7 +43111,7 @@ class ItemApi
      */
     public function restItemsIdVariationsVariationIdVariationSalesPricesPriceIdGetAsyncWithHttpInfo($id, $variation_id, $price_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemVariationSalesPriceModelsVariationSalesPrice';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationSalesPriceModelsVariationSalesPrice';
         $request = $this->restItemsIdVariationsVariationIdVariationSalesPricesPriceIdGetRequest($id, $variation_id, $price_id);
 
         return $this->client
@@ -43293,9 +43293,9 @@ class ItemApi
      * @param  int $price_id price_id (required)
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemVariationSalesPriceModelsVariationSalesPrice
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationSalesPriceModelsVariationSalesPrice
      */
     public function restItemsIdVariationsVariationIdVariationSalesPricesPriceIdPut($id, $variation_id, $price_id, $body = null)
     {
@@ -43313,13 +43313,13 @@ class ItemApi
      * @param  int $price_id (required)
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemVariationSalesPriceModelsVariationSalesPrice, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationSalesPriceModelsVariationSalesPrice, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsIdVariationsVariationIdVariationSalesPricesPriceIdPutWithHttpInfo($id, $variation_id, $price_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemVariationSalesPriceModelsVariationSalesPrice';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationSalesPriceModelsVariationSalesPrice';
         $request = $this->restItemsIdVariationsVariationIdVariationSalesPricesPriceIdPutRequest($id, $variation_id, $price_id, $body);
 
         try {
@@ -43371,7 +43371,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemVariationSalesPriceModelsVariationSalesPrice',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationSalesPriceModelsVariationSalesPrice',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -43419,7 +43419,7 @@ class ItemApi
      */
     public function restItemsIdVariationsVariationIdVariationSalesPricesPriceIdPutAsyncWithHttpInfo($id, $variation_id, $price_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemVariationSalesPriceModelsVariationSalesPrice';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationSalesPriceModelsVariationSalesPrice';
         $request = $this->restItemsIdVariationsVariationIdVariationSalesPricesPriceIdPutRequest($id, $variation_id, $price_id, $body);
 
         return $this->client
@@ -43603,9 +43603,9 @@ class ItemApi
      * @param  int $id id (required)
      * @param  int $variation_id variation_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemVariationSkuModelsVariationSku[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationSkuModelsVariationSku[]
      */
     public function restItemsIdVariationsVariationIdVariationSkusGet($id, $variation_id)
     {
@@ -43621,13 +43621,13 @@ class ItemApi
      * @param  int $id (required)
      * @param  int $variation_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemVariationSkuModelsVariationSku[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationSkuModelsVariationSku[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsIdVariationsVariationIdVariationSkusGetWithHttpInfo($id, $variation_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemVariationSkuModelsVariationSku[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationSkuModelsVariationSku[]';
         $request = $this->restItemsIdVariationsVariationIdVariationSkusGetRequest($id, $variation_id);
 
         try {
@@ -43679,7 +43679,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemVariationSkuModelsVariationSku[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationSkuModelsVariationSku[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -43723,7 +43723,7 @@ class ItemApi
      */
     public function restItemsIdVariationsVariationIdVariationSkusGetAsyncWithHttpInfo($id, $variation_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemVariationSkuModelsVariationSku[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationSkuModelsVariationSku[]';
         $request = $this->restItemsIdVariationsVariationIdVariationSkusGetRequest($id, $variation_id);
 
         return $this->client
@@ -43889,9 +43889,9 @@ class ItemApi
      * @param  int $variation_id variation_id (required)
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemVariationSkuModelsVariationSku
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationSkuModelsVariationSku
      */
     public function restItemsIdVariationsVariationIdVariationSkusPost($id, $variation_id, $body = null)
     {
@@ -43908,13 +43908,13 @@ class ItemApi
      * @param  int $variation_id (required)
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemVariationSkuModelsVariationSku, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationSkuModelsVariationSku, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsIdVariationsVariationIdVariationSkusPostWithHttpInfo($id, $variation_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemVariationSkuModelsVariationSku';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationSkuModelsVariationSku';
         $request = $this->restItemsIdVariationsVariationIdVariationSkusPostRequest($id, $variation_id, $body);
 
         try {
@@ -43966,7 +43966,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemVariationSkuModelsVariationSku',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationSkuModelsVariationSku',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -44012,7 +44012,7 @@ class ItemApi
      */
     public function restItemsIdVariationsVariationIdVariationSkusPostAsyncWithHttpInfo($id, $variation_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemVariationSkuModelsVariationSku';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationSkuModelsVariationSku';
         $request = $this->restItemsIdVariationsVariationIdVariationSkusPostRequest($id, $variation_id, $body);
 
         return $this->client
@@ -44182,9 +44182,9 @@ class ItemApi
      * @param  int $variation_id variation_id (required)
      * @param  int $sku_id sku_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse
      */
     public function restItemsIdVariationsVariationIdVariationSkusSkuIdDelete($id, $variation_id, $sku_id)
     {
@@ -44201,13 +44201,13 @@ class ItemApi
      * @param  int $variation_id (required)
      * @param  int $sku_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsIdVariationsVariationIdVariationSkusSkuIdDeleteWithHttpInfo($id, $variation_id, $sku_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse';
         $request = $this->restItemsIdVariationsVariationIdVariationSkusSkuIdDeleteRequest($id, $variation_id, $sku_id);
 
         try {
@@ -44259,7 +44259,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -44305,7 +44305,7 @@ class ItemApi
      */
     public function restItemsIdVariationsVariationIdVariationSkusSkuIdDeleteAsyncWithHttpInfo($id, $variation_id, $sku_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse';
         $request = $this->restItemsIdVariationsVariationIdVariationSkusSkuIdDeleteRequest($id, $variation_id, $sku_id);
 
         return $this->client
@@ -44486,9 +44486,9 @@ class ItemApi
      * @param  int $variation_id variation_id (required)
      * @param  int $sku_id sku_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemVariationSkuModelsVariationSku
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationSkuModelsVariationSku
      */
     public function restItemsIdVariationsVariationIdVariationSkusSkuIdGet($id, $variation_id, $sku_id)
     {
@@ -44505,13 +44505,13 @@ class ItemApi
      * @param  int $variation_id (required)
      * @param  int $sku_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemVariationSkuModelsVariationSku, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationSkuModelsVariationSku, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsIdVariationsVariationIdVariationSkusSkuIdGetWithHttpInfo($id, $variation_id, $sku_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemVariationSkuModelsVariationSku';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationSkuModelsVariationSku';
         $request = $this->restItemsIdVariationsVariationIdVariationSkusSkuIdGetRequest($id, $variation_id, $sku_id);
 
         try {
@@ -44563,7 +44563,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemVariationSkuModelsVariationSku',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationSkuModelsVariationSku',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -44609,7 +44609,7 @@ class ItemApi
      */
     public function restItemsIdVariationsVariationIdVariationSkusSkuIdGetAsyncWithHttpInfo($id, $variation_id, $sku_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemVariationSkuModelsVariationSku';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationSkuModelsVariationSku';
         $request = $this->restItemsIdVariationsVariationIdVariationSkusSkuIdGetRequest($id, $variation_id, $sku_id);
 
         return $this->client
@@ -44791,9 +44791,9 @@ class ItemApi
      * @param  int $sku_id sku_id (required)
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemVariationSkuModelsVariationSku
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationSkuModelsVariationSku
      */
     public function restItemsIdVariationsVariationIdVariationSkusSkuIdPut($id, $variation_id, $sku_id, $body = null)
     {
@@ -44811,13 +44811,13 @@ class ItemApi
      * @param  int $sku_id (required)
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemVariationSkuModelsVariationSku, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationSkuModelsVariationSku, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsIdVariationsVariationIdVariationSkusSkuIdPutWithHttpInfo($id, $variation_id, $sku_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemVariationSkuModelsVariationSku';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationSkuModelsVariationSku';
         $request = $this->restItemsIdVariationsVariationIdVariationSkusSkuIdPutRequest($id, $variation_id, $sku_id, $body);
 
         try {
@@ -44869,7 +44869,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemVariationSkuModelsVariationSku',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationSkuModelsVariationSku',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -44917,7 +44917,7 @@ class ItemApi
      */
     public function restItemsIdVariationsVariationIdVariationSkusSkuIdPutAsyncWithHttpInfo($id, $variation_id, $sku_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemVariationSkuModelsVariationSku';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationSkuModelsVariationSku';
         $request = $this->restItemsIdVariationsVariationIdVariationSkusSkuIdPutRequest($id, $variation_id, $sku_id, $body);
 
         return $this->client
@@ -45101,9 +45101,9 @@ class ItemApi
      * @param  int $id id (required)
      * @param  int $variation_id variation_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemVariationSupplierModelsVariationSupplier[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationSupplierModelsVariationSupplier[]
      */
     public function restItemsIdVariationsVariationIdVariationSuppliersGet($id, $variation_id)
     {
@@ -45119,13 +45119,13 @@ class ItemApi
      * @param  int $id (required)
      * @param  int $variation_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemVariationSupplierModelsVariationSupplier[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationSupplierModelsVariationSupplier[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsIdVariationsVariationIdVariationSuppliersGetWithHttpInfo($id, $variation_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemVariationSupplierModelsVariationSupplier[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationSupplierModelsVariationSupplier[]';
         $request = $this->restItemsIdVariationsVariationIdVariationSuppliersGetRequest($id, $variation_id);
 
         try {
@@ -45177,7 +45177,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemVariationSupplierModelsVariationSupplier[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationSupplierModelsVariationSupplier[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -45221,7 +45221,7 @@ class ItemApi
      */
     public function restItemsIdVariationsVariationIdVariationSuppliersGetAsyncWithHttpInfo($id, $variation_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemVariationSupplierModelsVariationSupplier[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationSupplierModelsVariationSupplier[]';
         $request = $this->restItemsIdVariationsVariationIdVariationSuppliersGetRequest($id, $variation_id);
 
         return $this->client
@@ -45386,9 +45386,9 @@ class ItemApi
      * @param  int $id id (required)
      * @param  int $variation_id variation_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemVariationSupplierModelsVariationSupplier
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationSupplierModelsVariationSupplier
      */
     public function restItemsIdVariationsVariationIdVariationSuppliersPost($id, $variation_id)
     {
@@ -45404,13 +45404,13 @@ class ItemApi
      * @param  int $id (required)
      * @param  int $variation_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemVariationSupplierModelsVariationSupplier, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationSupplierModelsVariationSupplier, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsIdVariationsVariationIdVariationSuppliersPostWithHttpInfo($id, $variation_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemVariationSupplierModelsVariationSupplier';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationSupplierModelsVariationSupplier';
         $request = $this->restItemsIdVariationsVariationIdVariationSuppliersPostRequest($id, $variation_id);
 
         try {
@@ -45462,7 +45462,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemVariationSupplierModelsVariationSupplier',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationSupplierModelsVariationSupplier',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -45506,7 +45506,7 @@ class ItemApi
      */
     public function restItemsIdVariationsVariationIdVariationSuppliersPostAsyncWithHttpInfo($id, $variation_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemVariationSupplierModelsVariationSupplier';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationSupplierModelsVariationSupplier';
         $request = $this->restItemsIdVariationsVariationIdVariationSuppliersPostRequest($id, $variation_id);
 
         return $this->client
@@ -45672,9 +45672,9 @@ class ItemApi
      * @param  int $variation_id variation_id (required)
      * @param  int $variation_supplier_id variation_supplier_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse
      */
     public function restItemsIdVariationsVariationIdVariationSuppliersVariationSupplierIdDelete($id, $variation_id, $variation_supplier_id)
     {
@@ -45691,13 +45691,13 @@ class ItemApi
      * @param  int $variation_id (required)
      * @param  int $variation_supplier_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsIdVariationsVariationIdVariationSuppliersVariationSupplierIdDeleteWithHttpInfo($id, $variation_id, $variation_supplier_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse';
         $request = $this->restItemsIdVariationsVariationIdVariationSuppliersVariationSupplierIdDeleteRequest($id, $variation_id, $variation_supplier_id);
 
         try {
@@ -45749,7 +45749,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -45795,7 +45795,7 @@ class ItemApi
      */
     public function restItemsIdVariationsVariationIdVariationSuppliersVariationSupplierIdDeleteAsyncWithHttpInfo($id, $variation_id, $variation_supplier_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse';
         $request = $this->restItemsIdVariationsVariationIdVariationSuppliersVariationSupplierIdDeleteRequest($id, $variation_id, $variation_supplier_id);
 
         return $this->client
@@ -45976,9 +45976,9 @@ class ItemApi
      * @param  int $variation_id variation_id (required)
      * @param  int $variation_supplier_id variation_supplier_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemVariationSupplierModelsVariationSupplier
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationSupplierModelsVariationSupplier
      */
     public function restItemsIdVariationsVariationIdVariationSuppliersVariationSupplierIdGet($id, $variation_id, $variation_supplier_id)
     {
@@ -45995,13 +45995,13 @@ class ItemApi
      * @param  int $variation_id (required)
      * @param  int $variation_supplier_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemVariationSupplierModelsVariationSupplier, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationSupplierModelsVariationSupplier, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsIdVariationsVariationIdVariationSuppliersVariationSupplierIdGetWithHttpInfo($id, $variation_id, $variation_supplier_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemVariationSupplierModelsVariationSupplier';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationSupplierModelsVariationSupplier';
         $request = $this->restItemsIdVariationsVariationIdVariationSuppliersVariationSupplierIdGetRequest($id, $variation_id, $variation_supplier_id);
 
         try {
@@ -46053,7 +46053,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemVariationSupplierModelsVariationSupplier',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationSupplierModelsVariationSupplier',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -46099,7 +46099,7 @@ class ItemApi
      */
     public function restItemsIdVariationsVariationIdVariationSuppliersVariationSupplierIdGetAsyncWithHttpInfo($id, $variation_id, $variation_supplier_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemVariationSupplierModelsVariationSupplier';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationSupplierModelsVariationSupplier';
         $request = $this->restItemsIdVariationsVariationIdVariationSuppliersVariationSupplierIdGetRequest($id, $variation_id, $variation_supplier_id);
 
         return $this->client
@@ -46280,9 +46280,9 @@ class ItemApi
      * @param  int $variation_id variation_id (required)
      * @param  int $variation_supplier_id variation_supplier_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemVariationSupplierModelsVariationSupplier
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationSupplierModelsVariationSupplier
      */
     public function restItemsIdVariationsVariationIdVariationSuppliersVariationSupplierIdPut($id, $variation_id, $variation_supplier_id)
     {
@@ -46299,13 +46299,13 @@ class ItemApi
      * @param  int $variation_id (required)
      * @param  int $variation_supplier_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemVariationSupplierModelsVariationSupplier, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationSupplierModelsVariationSupplier, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsIdVariationsVariationIdVariationSuppliersVariationSupplierIdPutWithHttpInfo($id, $variation_id, $variation_supplier_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemVariationSupplierModelsVariationSupplier';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationSupplierModelsVariationSupplier';
         $request = $this->restItemsIdVariationsVariationIdVariationSuppliersVariationSupplierIdPutRequest($id, $variation_id, $variation_supplier_id);
 
         try {
@@ -46357,7 +46357,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemVariationSupplierModelsVariationSupplier',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationSupplierModelsVariationSupplier',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -46403,7 +46403,7 @@ class ItemApi
      */
     public function restItemsIdVariationsVariationIdVariationSuppliersVariationSupplierIdPutAsyncWithHttpInfo($id, $variation_id, $variation_supplier_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemVariationSupplierModelsVariationSupplier';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationSupplierModelsVariationSupplier';
         $request = $this->restItemsIdVariationsVariationIdVariationSuppliersVariationSupplierIdPutRequest($id, $variation_id, $variation_supplier_id);
 
         return $this->client
@@ -46583,9 +46583,9 @@ class ItemApi
      * @param  int $id id (required)
      * @param  int $variation_id variation_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemVariationWarehouseModelsVariationWarehouse[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationWarehouseModelsVariationWarehouse[]
      */
     public function restItemsIdVariationsVariationIdVariationWarehousesGet($id, $variation_id)
     {
@@ -46601,13 +46601,13 @@ class ItemApi
      * @param  int $id (required)
      * @param  int $variation_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemVariationWarehouseModelsVariationWarehouse[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationWarehouseModelsVariationWarehouse[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsIdVariationsVariationIdVariationWarehousesGetWithHttpInfo($id, $variation_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemVariationWarehouseModelsVariationWarehouse[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationWarehouseModelsVariationWarehouse[]';
         $request = $this->restItemsIdVariationsVariationIdVariationWarehousesGetRequest($id, $variation_id);
 
         try {
@@ -46659,7 +46659,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemVariationWarehouseModelsVariationWarehouse[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationWarehouseModelsVariationWarehouse[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -46703,7 +46703,7 @@ class ItemApi
      */
     public function restItemsIdVariationsVariationIdVariationWarehousesGetAsyncWithHttpInfo($id, $variation_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemVariationWarehouseModelsVariationWarehouse[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationWarehouseModelsVariationWarehouse[]';
         $request = $this->restItemsIdVariationsVariationIdVariationWarehousesGetRequest($id, $variation_id);
 
         return $this->client
@@ -46868,9 +46868,9 @@ class ItemApi
      * @param  int $id id (required)
      * @param  int $variation_id variation_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemVariationWarehouseModelsVariationWarehouse
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationWarehouseModelsVariationWarehouse
      */
     public function restItemsIdVariationsVariationIdVariationWarehousesPost($id, $variation_id)
     {
@@ -46886,13 +46886,13 @@ class ItemApi
      * @param  int $id (required)
      * @param  int $variation_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemVariationWarehouseModelsVariationWarehouse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationWarehouseModelsVariationWarehouse, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsIdVariationsVariationIdVariationWarehousesPostWithHttpInfo($id, $variation_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemVariationWarehouseModelsVariationWarehouse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationWarehouseModelsVariationWarehouse';
         $request = $this->restItemsIdVariationsVariationIdVariationWarehousesPostRequest($id, $variation_id);
 
         try {
@@ -46944,7 +46944,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemVariationWarehouseModelsVariationWarehouse',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationWarehouseModelsVariationWarehouse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -46988,7 +46988,7 @@ class ItemApi
      */
     public function restItemsIdVariationsVariationIdVariationWarehousesPostAsyncWithHttpInfo($id, $variation_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemVariationWarehouseModelsVariationWarehouse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationWarehouseModelsVariationWarehouse';
         $request = $this->restItemsIdVariationsVariationIdVariationWarehousesPostRequest($id, $variation_id);
 
         return $this->client
@@ -47154,9 +47154,9 @@ class ItemApi
      * @param  int $variation_id variation_id (required)
      * @param  int $warehouse_id warehouse_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse
      */
     public function restItemsIdVariationsVariationIdVariationWarehousesWarehouseIdDelete($id, $variation_id, $warehouse_id)
     {
@@ -47173,13 +47173,13 @@ class ItemApi
      * @param  int $variation_id (required)
      * @param  int $warehouse_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsIdVariationsVariationIdVariationWarehousesWarehouseIdDeleteWithHttpInfo($id, $variation_id, $warehouse_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse';
         $request = $this->restItemsIdVariationsVariationIdVariationWarehousesWarehouseIdDeleteRequest($id, $variation_id, $warehouse_id);
 
         try {
@@ -47231,7 +47231,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -47277,7 +47277,7 @@ class ItemApi
      */
     public function restItemsIdVariationsVariationIdVariationWarehousesWarehouseIdDeleteAsyncWithHttpInfo($id, $variation_id, $warehouse_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse';
         $request = $this->restItemsIdVariationsVariationIdVariationWarehousesWarehouseIdDeleteRequest($id, $variation_id, $warehouse_id);
 
         return $this->client
@@ -47458,9 +47458,9 @@ class ItemApi
      * @param  int $variation_id variation_id (required)
      * @param  int $warehouse_id warehouse_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemVariationWarehouseModelsVariationWarehouse
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationWarehouseModelsVariationWarehouse
      */
     public function restItemsIdVariationsVariationIdVariationWarehousesWarehouseIdGet($id, $variation_id, $warehouse_id)
     {
@@ -47477,13 +47477,13 @@ class ItemApi
      * @param  int $variation_id (required)
      * @param  int $warehouse_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemVariationWarehouseModelsVariationWarehouse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationWarehouseModelsVariationWarehouse, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsIdVariationsVariationIdVariationWarehousesWarehouseIdGetWithHttpInfo($id, $variation_id, $warehouse_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemVariationWarehouseModelsVariationWarehouse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationWarehouseModelsVariationWarehouse';
         $request = $this->restItemsIdVariationsVariationIdVariationWarehousesWarehouseIdGetRequest($id, $variation_id, $warehouse_id);
 
         try {
@@ -47535,7 +47535,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemVariationWarehouseModelsVariationWarehouse',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationWarehouseModelsVariationWarehouse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -47581,7 +47581,7 @@ class ItemApi
      */
     public function restItemsIdVariationsVariationIdVariationWarehousesWarehouseIdGetAsyncWithHttpInfo($id, $variation_id, $warehouse_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemVariationWarehouseModelsVariationWarehouse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationWarehouseModelsVariationWarehouse';
         $request = $this->restItemsIdVariationsVariationIdVariationWarehousesWarehouseIdGetRequest($id, $variation_id, $warehouse_id);
 
         return $this->client
@@ -47762,9 +47762,9 @@ class ItemApi
      * @param  int $variation_id variation_id (required)
      * @param  int $warehouse_id warehouse_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemVariationWarehouseModelsVariationWarehouse
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationWarehouseModelsVariationWarehouse
      */
     public function restItemsIdVariationsVariationIdVariationWarehousesWarehouseIdPut($id, $variation_id, $warehouse_id)
     {
@@ -47781,13 +47781,13 @@ class ItemApi
      * @param  int $variation_id (required)
      * @param  int $warehouse_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemVariationWarehouseModelsVariationWarehouse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationWarehouseModelsVariationWarehouse, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsIdVariationsVariationIdVariationWarehousesWarehouseIdPutWithHttpInfo($id, $variation_id, $warehouse_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemVariationWarehouseModelsVariationWarehouse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationWarehouseModelsVariationWarehouse';
         $request = $this->restItemsIdVariationsVariationIdVariationWarehousesWarehouseIdPutRequest($id, $variation_id, $warehouse_id);
 
         try {
@@ -47839,7 +47839,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemVariationWarehouseModelsVariationWarehouse',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationWarehouseModelsVariationWarehouse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -47885,7 +47885,7 @@ class ItemApi
      */
     public function restItemsIdVariationsVariationIdVariationWarehousesWarehouseIdPutAsyncWithHttpInfo($id, $variation_id, $warehouse_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemVariationWarehouseModelsVariationWarehouse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationWarehouseModelsVariationWarehouse';
         $request = $this->restItemsIdVariationsVariationIdVariationWarehousesWarehouseIdPutRequest($id, $variation_id, $warehouse_id);
 
         return $this->client
@@ -48064,9 +48064,9 @@ class ItemApi
      *
      * @param  int $item_id item_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse
      */
     public function restItemsItemIdDelete($item_id)
     {
@@ -48081,13 +48081,13 @@ class ItemApi
      *
      * @param  int $item_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsItemIdDeleteWithHttpInfo($item_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse';
         $request = $this->restItemsItemIdDeleteRequest($item_id);
 
         try {
@@ -48139,7 +48139,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -48181,7 +48181,7 @@ class ItemApi
      */
     public function restItemsItemIdDeleteAsyncWithHttpInfo($item_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse';
         $request = $this->restItemsItemIdDeleteRequest($item_id);
 
         return $this->client
@@ -48330,7 +48330,7 @@ class ItemApi
      *
      * @param  int $item_id item_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -48346,7 +48346,7 @@ class ItemApi
      *
      * @param  int $item_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -48560,9 +48560,9 @@ class ItemApi
      * @param  int $item_id item_id (required)
      * @param  string $lang The &lt;a href&#x3D;&#x27;https://developers.plentymarkets.com/rest-doc/introduction#countries&#x27; target&#x3D;&#x27;_blank&#x27;&gt;language&lt;/a&gt; of the variation information. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemItemModelsItem
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemItemModelsItem
      */
     public function restItemsItemIdGet($item_id, $lang = null)
     {
@@ -48578,13 +48578,13 @@ class ItemApi
      * @param  int $item_id (required)
      * @param  string $lang The &lt;a href&#x3D;&#x27;https://developers.plentymarkets.com/rest-doc/introduction#countries&#x27; target&#x3D;&#x27;_blank&#x27;&gt;language&lt;/a&gt; of the variation information. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemItemModelsItem, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemItemModelsItem, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsItemIdGetWithHttpInfo($item_id, $lang = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemItemModelsItem';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemItemModelsItem';
         $request = $this->restItemsItemIdGetRequest($item_id, $lang);
 
         try {
@@ -48636,7 +48636,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemItemModelsItem',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemItemModelsItem',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -48680,7 +48680,7 @@ class ItemApi
      */
     public function restItemsItemIdGetAsyncWithHttpInfo($item_id, $lang = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemItemModelsItem';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemItemModelsItem';
         $request = $this->restItemsItemIdGetRequest($item_id, $lang);
 
         return $this->client
@@ -48834,7 +48834,7 @@ class ItemApi
      *
      * @param  int $item_id item_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -48850,7 +48850,7 @@ class ItemApi
      *
      * @param  int $item_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -49063,9 +49063,9 @@ class ItemApi
      *
      * @param  int $item_id item_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemItemShippingProfilesModelsItemShippingProfiles[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemItemShippingProfilesModelsItemShippingProfiles[]
      */
     public function restItemsItemIdItemShippingProfilesGet($item_id)
     {
@@ -49080,13 +49080,13 @@ class ItemApi
      *
      * @param  int $item_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemItemShippingProfilesModelsItemShippingProfiles[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemItemShippingProfilesModelsItemShippingProfiles[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsItemIdItemShippingProfilesGetWithHttpInfo($item_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemItemShippingProfilesModelsItemShippingProfiles[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemItemShippingProfilesModelsItemShippingProfiles[]';
         $request = $this->restItemsItemIdItemShippingProfilesGetRequest($item_id);
 
         try {
@@ -49138,7 +49138,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemItemShippingProfilesModelsItemShippingProfiles[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemItemShippingProfilesModelsItemShippingProfiles[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -49180,7 +49180,7 @@ class ItemApi
      */
     public function restItemsItemIdItemShippingProfilesGetAsyncWithHttpInfo($item_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemItemShippingProfilesModelsItemShippingProfiles[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemItemShippingProfilesModelsItemShippingProfiles[]';
         $request = $this->restItemsItemIdItemShippingProfilesGetRequest($item_id);
 
         return $this->client
@@ -49330,9 +49330,9 @@ class ItemApi
      * @param  int $item_id item_id (required)
      * @param  int $id id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse
      */
     public function restItemsItemIdItemShippingProfilesIdDelete($item_id, $id)
     {
@@ -49348,13 +49348,13 @@ class ItemApi
      * @param  int $item_id (required)
      * @param  int $id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsItemIdItemShippingProfilesIdDeleteWithHttpInfo($item_id, $id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse';
         $request = $this->restItemsItemIdItemShippingProfilesIdDeleteRequest($item_id, $id);
 
         try {
@@ -49406,7 +49406,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -49450,7 +49450,7 @@ class ItemApi
      */
     public function restItemsItemIdItemShippingProfilesIdDeleteAsyncWithHttpInfo($item_id, $id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse';
         $request = $this->restItemsItemIdItemShippingProfilesIdDeleteRequest($item_id, $id);
 
         return $this->client
@@ -49614,9 +49614,9 @@ class ItemApi
      *
      * @param  int $item_id item_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemItemShippingProfilesModelsItemShippingProfiles
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemItemShippingProfilesModelsItemShippingProfiles
      */
     public function restItemsItemIdItemShippingProfilesPost($item_id)
     {
@@ -49631,13 +49631,13 @@ class ItemApi
      *
      * @param  int $item_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemItemShippingProfilesModelsItemShippingProfiles, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemItemShippingProfilesModelsItemShippingProfiles, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsItemIdItemShippingProfilesPostWithHttpInfo($item_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemItemShippingProfilesModelsItemShippingProfiles';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemItemShippingProfilesModelsItemShippingProfiles';
         $request = $this->restItemsItemIdItemShippingProfilesPostRequest($item_id);
 
         try {
@@ -49689,7 +49689,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemItemShippingProfilesModelsItemShippingProfiles',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemItemShippingProfilesModelsItemShippingProfiles',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -49731,7 +49731,7 @@ class ItemApi
      */
     public function restItemsItemIdItemShippingProfilesPostAsyncWithHttpInfo($item_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemItemShippingProfilesModelsItemShippingProfiles';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemItemShippingProfilesModelsItemShippingProfiles';
         $request = $this->restItemsItemIdItemShippingProfilesPostRequest($item_id);
 
         return $this->client
@@ -49881,9 +49881,9 @@ class ItemApi
      * @param  int $item_id item_id (required)
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemItemModelsItem
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemItemModelsItem
      */
     public function restItemsItemIdPut($item_id, $body = null)
     {
@@ -49899,13 +49899,13 @@ class ItemApi
      * @param  int $item_id (required)
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemItemModelsItem, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemItemModelsItem, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsItemIdPutWithHttpInfo($item_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemItemModelsItem';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemItemModelsItem';
         $request = $this->restItemsItemIdPutRequest($item_id, $body);
 
         try {
@@ -49957,7 +49957,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemItemModelsItem',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemItemModelsItem',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -50001,7 +50001,7 @@ class ItemApi
      */
     public function restItemsItemIdPutAsyncWithHttpInfo($item_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemItemModelsItem';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemItemModelsItem';
         $request = $this->restItemsItemIdPutRequest($item_id, $body);
 
         return $this->client
@@ -50169,7 +50169,7 @@ class ItemApi
      * @param  string $created_between Filter restricts the list of results to variations created during the specified period. The end date (to) is optional. If no end date is specified, variations created between the start date (from) and the present will be listed. The dates can be specified as unix timestamps or in the ISO 8601 date format. Start date and optional end date are separated by a comma. For example, .../variations?createdBetween&#x3D;1451606400,1456790400 will list variations created between 2016-01-01 and 2016-03-01. .../variations?createdBetween&#x3D;1451606400 will list variations created since 2016-01-01. The PHP function strtotime is also supported. (optional)
      * @param  string $related_updated_between Filter restricts the list of results to those variations for which related information was updated during the specified period. Related information is defined as information linked to the variation, i.e. barcodes, categories, images, markets, clients (stores), prices, suppliers, warehouses and the default category. See variationUpdatedBetween for supported formats. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -50201,7 +50201,7 @@ class ItemApi
      * @param  string $created_between Filter restricts the list of results to variations created during the specified period. The end date (to) is optional. If no end date is specified, variations created between the start date (from) and the present will be listed. The dates can be specified as unix timestamps or in the ISO 8601 date format. Start date and optional end date are separated by a comma. For example, .../variations?createdBetween&#x3D;1451606400,1456790400 will list variations created between 2016-01-01 and 2016-03-01. .../variations?createdBetween&#x3D;1451606400 will list variations created since 2016-01-01. The PHP function strtotime is also supported. (optional)
      * @param  string $related_updated_between Filter restricts the list of results to those variations for which related information was updated during the specified period. Related information is defined as information linked to the variation, i.e. barcodes, categories, images, markets, clients (stores), prices, suppliers, warehouses and the default category. See variationUpdatedBetween for supported formats. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -50556,9 +50556,9 @@ class ItemApi
      * @param  int $item_id item_id (required)
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemVariationModelsVariation
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationModelsVariation
      */
     public function restItemsItemIdVariationsPost($item_id, $body = null)
     {
@@ -50574,13 +50574,13 @@ class ItemApi
      * @param  int $item_id (required)
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemVariationModelsVariation, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationModelsVariation, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsItemIdVariationsPostWithHttpInfo($item_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemVariationModelsVariation';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationModelsVariation';
         $request = $this->restItemsItemIdVariationsPostRequest($item_id, $body);
 
         try {
@@ -50632,7 +50632,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemVariationModelsVariation',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationModelsVariation',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -50676,7 +50676,7 @@ class ItemApi
      */
     public function restItemsItemIdVariationsPostAsyncWithHttpInfo($item_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemVariationModelsVariation';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationModelsVariation';
         $request = $this->restItemsItemIdVariationsPostRequest($item_id, $body);
 
         return $this->client
@@ -50830,9 +50830,9 @@ class ItemApi
      * @param  int $item_id item_id (required)
      * @param  int $variation_id variation_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse
      */
     public function restItemsItemIdVariationsVariationIdDelete($item_id, $variation_id)
     {
@@ -50848,13 +50848,13 @@ class ItemApi
      * @param  int $item_id (required)
      * @param  int $variation_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsItemIdVariationsVariationIdDeleteWithHttpInfo($item_id, $variation_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse';
         $request = $this->restItemsItemIdVariationsVariationIdDeleteRequest($item_id, $variation_id);
 
         try {
@@ -50906,7 +50906,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -50950,7 +50950,7 @@ class ItemApi
      */
     public function restItemsItemIdVariationsVariationIdDeleteAsyncWithHttpInfo($item_id, $variation_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse';
         $request = $this->restItemsItemIdVariationsVariationIdDeleteRequest($item_id, $variation_id);
 
         return $this->client
@@ -51115,7 +51115,7 @@ class ItemApi
      * @param  int $item_id item_id (required)
      * @param  int $variation_id variation_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -51132,7 +51132,7 @@ class ItemApi
      * @param  int $item_id (required)
      * @param  int $variation_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -51364,9 +51364,9 @@ class ItemApi
      * @param  int $variation_id variation_id (required)
      * @param  string $with Includes the specified variation information in the results. The following parameters are available: &lt;ul&gt;&lt;li&gt;properties&lt;/b&gt; &#x3D; The properties linked to the variation&lt;/li&gt;&lt;li&gt;variationProperties&lt;/b&gt; &#x3D; The properties linked to the variation&lt;/li&gt;&lt;li&gt;variationBarcodes&lt;/b&gt; &#x3D; The barcode linked to the variation and the saved code&lt;/li&gt;&lt;li&gt;variationBundleComponents&lt;/b&gt; &#x3D; The bundle components of the variation and their quantities&lt;/li&gt;&lt;li&gt;variationComponentBundles&lt;/b&gt; &#x3D; The bundles that this variation is a component of&lt;/li&gt;&lt;li&gt;variationSalesPrices&lt;/b&gt; &#x3D; The sales prices linked to the variation and the saved price&lt;/li&gt;&lt;li&gt;marketItemNumbers&lt;/b&gt; &#x3D; The market ident number of the variation&lt;/li&gt;&lt;li&gt;variationCategories&lt;/b&gt; &#x3D; The categories linked to the variation&lt;/li&gt;&lt;li&gt;variationClients&lt;/b&gt; &#x3D; The clients (stores) for which the variation is activated&lt;/li&gt;&lt;li&gt;variationMarkets&lt;/b&gt; &#x3D; The markets for which the variation is activated &lt;/li&gt;&lt;li&gt;variationDefaultCategory&lt;/b&gt; &#x3D; The default category of the variation&lt;/li&gt;&lt;li&gt;variationSuppliers&lt;/b&gt; &#x3D; The supplier data associated with the variation&lt;/li&gt;&lt;li&gt;variationWarehouses&lt;/b&gt; &#x3D; The warehouse data associated with the variation&lt;/li&gt;&lt;li&gt;images&lt;/b&gt; &#x3D; The images linked to the variation&lt;/li&gt;&lt;li&gt;itemImages&lt;/b&gt; &#x3D; The images linked to the item&lt;/li&gt;&lt;li&gt;variationAttributeValues&lt;/b&gt; &#x3D; The attribute values of the variation&lt;/li&gt;&lt;li&gt;variationSkus&lt;/b&gt; &#x3D; The SKU data associated with the variation&lt;/li&gt;&lt;li&gt;variationAdditionalSkus&lt;/b&gt; &#x3D; The additional SKU data associated with the variation&lt;/li&gt;&lt;li&gt;unit&lt;/b&gt; &#x3D; The unit assigned to the variation&lt;/li&gt;&lt;li&gt;parent&lt;/b&gt; &#x3D; The main variation of the variation. Value is null if this variation is the item&#x27;s main variation.&lt;/li&gt;&lt;li&gt;item&lt;/b&gt; &#x3D; The item of the variation&lt;/li&gt;&lt;li&gt;stock&lt;/b&gt; &#x3D; The stock data of the variation&lt;/li&gt;&lt;/ul&gt; For example, specifying the parameters variationCategories and variationDefaultCategory will include the default category and all other categories the variations are linked to. More than one parameter should be separated by commas. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemVariationModelsVariation
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationModelsVariation
      */
     public function restItemsItemIdVariationsVariationIdGet($item_id, $variation_id, $with = null)
     {
@@ -51383,13 +51383,13 @@ class ItemApi
      * @param  int $variation_id (required)
      * @param  string $with Includes the specified variation information in the results. The following parameters are available: &lt;ul&gt;&lt;li&gt;properties&lt;/b&gt; &#x3D; The properties linked to the variation&lt;/li&gt;&lt;li&gt;variationProperties&lt;/b&gt; &#x3D; The properties linked to the variation&lt;/li&gt;&lt;li&gt;variationBarcodes&lt;/b&gt; &#x3D; The barcode linked to the variation and the saved code&lt;/li&gt;&lt;li&gt;variationBundleComponents&lt;/b&gt; &#x3D; The bundle components of the variation and their quantities&lt;/li&gt;&lt;li&gt;variationComponentBundles&lt;/b&gt; &#x3D; The bundles that this variation is a component of&lt;/li&gt;&lt;li&gt;variationSalesPrices&lt;/b&gt; &#x3D; The sales prices linked to the variation and the saved price&lt;/li&gt;&lt;li&gt;marketItemNumbers&lt;/b&gt; &#x3D; The market ident number of the variation&lt;/li&gt;&lt;li&gt;variationCategories&lt;/b&gt; &#x3D; The categories linked to the variation&lt;/li&gt;&lt;li&gt;variationClients&lt;/b&gt; &#x3D; The clients (stores) for which the variation is activated&lt;/li&gt;&lt;li&gt;variationMarkets&lt;/b&gt; &#x3D; The markets for which the variation is activated &lt;/li&gt;&lt;li&gt;variationDefaultCategory&lt;/b&gt; &#x3D; The default category of the variation&lt;/li&gt;&lt;li&gt;variationSuppliers&lt;/b&gt; &#x3D; The supplier data associated with the variation&lt;/li&gt;&lt;li&gt;variationWarehouses&lt;/b&gt; &#x3D; The warehouse data associated with the variation&lt;/li&gt;&lt;li&gt;images&lt;/b&gt; &#x3D; The images linked to the variation&lt;/li&gt;&lt;li&gt;itemImages&lt;/b&gt; &#x3D; The images linked to the item&lt;/li&gt;&lt;li&gt;variationAttributeValues&lt;/b&gt; &#x3D; The attribute values of the variation&lt;/li&gt;&lt;li&gt;variationSkus&lt;/b&gt; &#x3D; The SKU data associated with the variation&lt;/li&gt;&lt;li&gt;variationAdditionalSkus&lt;/b&gt; &#x3D; The additional SKU data associated with the variation&lt;/li&gt;&lt;li&gt;unit&lt;/b&gt; &#x3D; The unit assigned to the variation&lt;/li&gt;&lt;li&gt;parent&lt;/b&gt; &#x3D; The main variation of the variation. Value is null if this variation is the item&#x27;s main variation.&lt;/li&gt;&lt;li&gt;item&lt;/b&gt; &#x3D; The item of the variation&lt;/li&gt;&lt;li&gt;stock&lt;/b&gt; &#x3D; The stock data of the variation&lt;/li&gt;&lt;/ul&gt; For example, specifying the parameters variationCategories and variationDefaultCategory will include the default category and all other categories the variations are linked to. More than one parameter should be separated by commas. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemVariationModelsVariation, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationModelsVariation, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsItemIdVariationsVariationIdGetWithHttpInfo($item_id, $variation_id, $with = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemVariationModelsVariation';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationModelsVariation';
         $request = $this->restItemsItemIdVariationsVariationIdGetRequest($item_id, $variation_id, $with);
 
         try {
@@ -51441,7 +51441,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemVariationModelsVariation',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationModelsVariation',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -51487,7 +51487,7 @@ class ItemApi
      */
     public function restItemsItemIdVariationsVariationIdGetAsyncWithHttpInfo($item_id, $variation_id, $with = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemVariationModelsVariation';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationModelsVariation';
         $request = $this->restItemsItemIdVariationsVariationIdGetRequest($item_id, $variation_id, $with);
 
         return $this->client
@@ -51658,9 +51658,9 @@ class ItemApi
      * @param  int $variation_id variation_id (required)
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemVariationModelsVariation
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationModelsVariation
      */
     public function restItemsItemIdVariationsVariationIdPut($item_id, $variation_id, $body = null)
     {
@@ -51677,13 +51677,13 @@ class ItemApi
      * @param  int $variation_id (required)
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemVariationModelsVariation, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationModelsVariation, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsItemIdVariationsVariationIdPutWithHttpInfo($item_id, $variation_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemVariationModelsVariation';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationModelsVariation';
         $request = $this->restItemsItemIdVariationsVariationIdPutRequest($item_id, $variation_id, $body);
 
         try {
@@ -51735,7 +51735,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemVariationModelsVariation',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationModelsVariation',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -51781,7 +51781,7 @@ class ItemApi
      */
     public function restItemsItemIdVariationsVariationIdPutAsyncWithHttpInfo($item_id, $variation_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemVariationModelsVariation';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationModelsVariation';
         $request = $this->restItemsItemIdVariationsVariationIdPutRequest($item_id, $variation_id, $body);
 
         return $this->client
@@ -51951,9 +51951,9 @@ class ItemApi
      * @param  int $variation_id variation_id (required)
      * @param  int $property_id property_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemVariationPropertyModelsVariationPropertyValueText[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationPropertyModelsVariationPropertyValueText[]
      */
     public function restItemsItemIdVariationsVariationIdVariationPropertiesPropertyIdTextsGet($item_id, $variation_id, $property_id)
     {
@@ -51970,13 +51970,13 @@ class ItemApi
      * @param  int $variation_id (required)
      * @param  int $property_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemVariationPropertyModelsVariationPropertyValueText[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationPropertyModelsVariationPropertyValueText[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsItemIdVariationsVariationIdVariationPropertiesPropertyIdTextsGetWithHttpInfo($item_id, $variation_id, $property_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemVariationPropertyModelsVariationPropertyValueText[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationPropertyModelsVariationPropertyValueText[]';
         $request = $this->restItemsItemIdVariationsVariationIdVariationPropertiesPropertyIdTextsGetRequest($item_id, $variation_id, $property_id);
 
         try {
@@ -52028,7 +52028,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemVariationPropertyModelsVariationPropertyValueText[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationPropertyModelsVariationPropertyValueText[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -52074,7 +52074,7 @@ class ItemApi
      */
     public function restItemsItemIdVariationsVariationIdVariationPropertiesPropertyIdTextsGetAsyncWithHttpInfo($item_id, $variation_id, $property_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemVariationPropertyModelsVariationPropertyValueText[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationPropertyModelsVariationPropertyValueText[]';
         $request = $this->restItemsItemIdVariationsVariationIdVariationPropertiesPropertyIdTextsGetRequest($item_id, $variation_id, $property_id);
 
         return $this->client
@@ -52256,9 +52256,9 @@ class ItemApi
      * @param  int $property_id property_id (required)
      * @param  int $lang lang (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse
      */
     public function restItemsItemIdVariationsVariationIdVariationPropertiesPropertyIdTextsLangDelete($item_id, $variation_id, $property_id, $lang)
     {
@@ -52276,13 +52276,13 @@ class ItemApi
      * @param  int $property_id (required)
      * @param  int $lang (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsItemIdVariationsVariationIdVariationPropertiesPropertyIdTextsLangDeleteWithHttpInfo($item_id, $variation_id, $property_id, $lang)
     {
-        $returnType = '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse';
         $request = $this->restItemsItemIdVariationsVariationIdVariationPropertiesPropertyIdTextsLangDeleteRequest($item_id, $variation_id, $property_id, $lang);
 
         try {
@@ -52334,7 +52334,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -52382,7 +52382,7 @@ class ItemApi
      */
     public function restItemsItemIdVariationsVariationIdVariationPropertiesPropertyIdTextsLangDeleteAsyncWithHttpInfo($item_id, $variation_id, $property_id, $lang)
     {
-        $returnType = '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse';
         $request = $this->restItemsItemIdVariationsVariationIdVariationPropertiesPropertyIdTextsLangDeleteRequest($item_id, $variation_id, $property_id, $lang);
 
         return $this->client
@@ -52579,9 +52579,9 @@ class ItemApi
      * @param  int $property_id property_id (required)
      * @param  int $lang lang (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemVariationPropertyModelsVariationPropertyValueText
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationPropertyModelsVariationPropertyValueText
      */
     public function restItemsItemIdVariationsVariationIdVariationPropertiesPropertyIdTextsLangGet($item_id, $variation_id, $property_id, $lang)
     {
@@ -52599,13 +52599,13 @@ class ItemApi
      * @param  int $property_id (required)
      * @param  int $lang (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemVariationPropertyModelsVariationPropertyValueText, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationPropertyModelsVariationPropertyValueText, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsItemIdVariationsVariationIdVariationPropertiesPropertyIdTextsLangGetWithHttpInfo($item_id, $variation_id, $property_id, $lang)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemVariationPropertyModelsVariationPropertyValueText';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationPropertyModelsVariationPropertyValueText';
         $request = $this->restItemsItemIdVariationsVariationIdVariationPropertiesPropertyIdTextsLangGetRequest($item_id, $variation_id, $property_id, $lang);
 
         try {
@@ -52657,7 +52657,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemVariationPropertyModelsVariationPropertyValueText',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationPropertyModelsVariationPropertyValueText',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -52705,7 +52705,7 @@ class ItemApi
      */
     public function restItemsItemIdVariationsVariationIdVariationPropertiesPropertyIdTextsLangGetAsyncWithHttpInfo($item_id, $variation_id, $property_id, $lang)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemVariationPropertyModelsVariationPropertyValueText';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationPropertyModelsVariationPropertyValueText';
         $request = $this->restItemsItemIdVariationsVariationIdVariationPropertiesPropertyIdTextsLangGetRequest($item_id, $variation_id, $property_id, $lang);
 
         return $this->client
@@ -52903,9 +52903,9 @@ class ItemApi
      * @param  int $lang lang (required)
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemVariationPropertyModelsVariationPropertyValueText
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationPropertyModelsVariationPropertyValueText
      */
     public function restItemsItemIdVariationsVariationIdVariationPropertiesPropertyIdTextsLangPut($item_id, $variation_id, $property_id, $lang, $body = null)
     {
@@ -52924,13 +52924,13 @@ class ItemApi
      * @param  int $lang (required)
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemVariationPropertyModelsVariationPropertyValueText, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationPropertyModelsVariationPropertyValueText, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsItemIdVariationsVariationIdVariationPropertiesPropertyIdTextsLangPutWithHttpInfo($item_id, $variation_id, $property_id, $lang, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemVariationPropertyModelsVariationPropertyValueText';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationPropertyModelsVariationPropertyValueText';
         $request = $this->restItemsItemIdVariationsVariationIdVariationPropertiesPropertyIdTextsLangPutRequest($item_id, $variation_id, $property_id, $lang, $body);
 
         try {
@@ -52982,7 +52982,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemVariationPropertyModelsVariationPropertyValueText',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationPropertyModelsVariationPropertyValueText',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -53032,7 +53032,7 @@ class ItemApi
      */
     public function restItemsItemIdVariationsVariationIdVariationPropertiesPropertyIdTextsLangPutAsyncWithHttpInfo($item_id, $variation_id, $property_id, $lang, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemVariationPropertyModelsVariationPropertyValueText';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationPropertyModelsVariationPropertyValueText';
         $request = $this->restItemsItemIdVariationsVariationIdVariationPropertiesPropertyIdTextsLangPutRequest($item_id, $variation_id, $property_id, $lang, $body);
 
         return $this->client
@@ -53233,9 +53233,9 @@ class ItemApi
      * @param  int $property_id property_id (required)
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemVariationPropertyModelsVariationPropertyValueText
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationPropertyModelsVariationPropertyValueText
      */
     public function restItemsItemIdVariationsVariationIdVariationPropertiesPropertyIdTextsPost($item_id, $variation_id, $property_id, $body = null)
     {
@@ -53253,13 +53253,13 @@ class ItemApi
      * @param  int $property_id (required)
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemVariationPropertyModelsVariationPropertyValueText, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationPropertyModelsVariationPropertyValueText, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsItemIdVariationsVariationIdVariationPropertiesPropertyIdTextsPostWithHttpInfo($item_id, $variation_id, $property_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemVariationPropertyModelsVariationPropertyValueText';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationPropertyModelsVariationPropertyValueText';
         $request = $this->restItemsItemIdVariationsVariationIdVariationPropertiesPropertyIdTextsPostRequest($item_id, $variation_id, $property_id, $body);
 
         try {
@@ -53311,7 +53311,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemVariationPropertyModelsVariationPropertyValueText',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationPropertyModelsVariationPropertyValueText',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -53359,7 +53359,7 @@ class ItemApi
      */
     public function restItemsItemIdVariationsVariationIdVariationPropertiesPropertyIdTextsPostAsyncWithHttpInfo($item_id, $variation_id, $property_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemVariationPropertyModelsVariationPropertyValueText';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationPropertyModelsVariationPropertyValueText';
         $request = $this->restItemsItemIdVariationsVariationIdVariationPropertiesPropertyIdTextsPostRequest($item_id, $variation_id, $property_id, $body);
 
         return $this->client
@@ -53541,7 +53541,7 @@ class ItemApi
      * List all shipping profiles of all items
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -53557,7 +53557,7 @@ class ItemApi
      * List all shipping profiles of all items
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -53788,9 +53788,9 @@ class ItemApi
      * Bulk activate shipping profiles
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\IlluminateSupportCollection
+     * @return \BSApp\Service\plentymarketsAPI\Model\IlluminateSupportCollection
      */
     public function restItemsItemShippingProfilesPost()
     {
@@ -53804,13 +53804,13 @@ class ItemApi
      * Bulk activate shipping profiles
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\IlluminateSupportCollection, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\IlluminateSupportCollection, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsItemShippingProfilesPostWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\IlluminateSupportCollection';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\IlluminateSupportCollection';
         $request = $this->restItemsItemShippingProfilesPostRequest();
 
         try {
@@ -53862,7 +53862,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\IlluminateSupportCollection',
+                        '\BSApp\Service\plentymarketsAPI\Model\IlluminateSupportCollection',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -53902,7 +53902,7 @@ class ItemApi
      */
     public function restItemsItemShippingProfilesPostAsyncWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\IlluminateSupportCollection';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\IlluminateSupportCollection';
         $request = $this->restItemsItemShippingProfilesPostRequest();
 
         return $this->client
@@ -54035,9 +54035,9 @@ class ItemApi
      * List item label templates
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\Mixed[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\Mixed[]
      */
     public function restItemsLabelsGet()
     {
@@ -54051,13 +54051,13 @@ class ItemApi
      * List item label templates
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\Mixed[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\Mixed[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsLabelsGetWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\Mixed[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\Mixed[]';
         $request = $this->restItemsLabelsGetRequest();
 
         try {
@@ -54109,7 +54109,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\Mixed[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\Mixed[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -54149,7 +54149,7 @@ class ItemApi
      */
     public function restItemsLabelsGetAsyncWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\Mixed[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\Mixed[]';
         $request = $this->restItemsLabelsGetRequest();
 
         return $this->client
@@ -54284,7 +54284,7 @@ class ItemApi
      * @param  string $updated_at Filter restricts the list of results to records updated after the specified date. The date can be specified as unix timestamps or in the ISO 8601 date format. The PHP function strtotime is also supported. (optional)
      * @param  string $name Filter restricts the list of results to records with specified name. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -54302,7 +54302,7 @@ class ItemApi
      * @param  string $updated_at Filter restricts the list of results to records updated after the specified date. The date can be specified as unix timestamps or in the ISO 8601 date format. The PHP function strtotime is also supported. (optional)
      * @param  string $name Filter restricts the list of results to records with specified name. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -54548,9 +54548,9 @@ class ItemApi
      *
      * @param  int $id id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemManufacturerModelsManufacturerCommission[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemManufacturerModelsManufacturerCommission[]
      */
     public function restItemsManufacturersIdCommissionsGet($id)
     {
@@ -54565,13 +54565,13 @@ class ItemApi
      *
      * @param  int $id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemManufacturerModelsManufacturerCommission[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemManufacturerModelsManufacturerCommission[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsManufacturersIdCommissionsGetWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemManufacturerModelsManufacturerCommission[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemManufacturerModelsManufacturerCommission[]';
         $request = $this->restItemsManufacturersIdCommissionsGetRequest($id);
 
         try {
@@ -54623,7 +54623,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemManufacturerModelsManufacturerCommission[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemManufacturerModelsManufacturerCommission[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -54665,7 +54665,7 @@ class ItemApi
      */
     public function restItemsManufacturersIdCommissionsGetAsyncWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemManufacturerModelsManufacturerCommission[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemManufacturerModelsManufacturerCommission[]';
         $request = $this->restItemsManufacturersIdCommissionsGetRequest($id);
 
         return $this->client
@@ -54815,9 +54815,9 @@ class ItemApi
      * @param  int $id id (required)
      * @param  int $manufacturer_id manufacturer_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse
      */
     public function restItemsManufacturersIdCommissionsManufacturerIdDelete($id, $manufacturer_id)
     {
@@ -54833,13 +54833,13 @@ class ItemApi
      * @param  int $id (required)
      * @param  int $manufacturer_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsManufacturersIdCommissionsManufacturerIdDeleteWithHttpInfo($id, $manufacturer_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse';
         $request = $this->restItemsManufacturersIdCommissionsManufacturerIdDeleteRequest($id, $manufacturer_id);
 
         try {
@@ -54891,7 +54891,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -54935,7 +54935,7 @@ class ItemApi
      */
     public function restItemsManufacturersIdCommissionsManufacturerIdDeleteAsyncWithHttpInfo($id, $manufacturer_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse';
         $request = $this->restItemsManufacturersIdCommissionsManufacturerIdDeleteRequest($id, $manufacturer_id);
 
         return $this->client
@@ -55100,9 +55100,9 @@ class ItemApi
      * @param  int $id id (required)
      * @param  int $manufacturer_id manufacturer_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemManufacturerModelsManufacturerCommission
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemManufacturerModelsManufacturerCommission
      */
     public function restItemsManufacturersIdCommissionsManufacturerIdGet($id, $manufacturer_id)
     {
@@ -55118,13 +55118,13 @@ class ItemApi
      * @param  int $id (required)
      * @param  int $manufacturer_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemManufacturerModelsManufacturerCommission, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemManufacturerModelsManufacturerCommission, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsManufacturersIdCommissionsManufacturerIdGetWithHttpInfo($id, $manufacturer_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemManufacturerModelsManufacturerCommission';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemManufacturerModelsManufacturerCommission';
         $request = $this->restItemsManufacturersIdCommissionsManufacturerIdGetRequest($id, $manufacturer_id);
 
         try {
@@ -55176,7 +55176,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemManufacturerModelsManufacturerCommission',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemManufacturerModelsManufacturerCommission',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -55220,7 +55220,7 @@ class ItemApi
      */
     public function restItemsManufacturersIdCommissionsManufacturerIdGetAsyncWithHttpInfo($id, $manufacturer_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemManufacturerModelsManufacturerCommission';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemManufacturerModelsManufacturerCommission';
         $request = $this->restItemsManufacturersIdCommissionsManufacturerIdGetRequest($id, $manufacturer_id);
 
         return $this->client
@@ -55385,9 +55385,9 @@ class ItemApi
      * @param  int $id id (required)
      * @param  int $manufacturer_id manufacturer_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemManufacturerModelsManufacturerCommission
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemManufacturerModelsManufacturerCommission
      */
     public function restItemsManufacturersIdCommissionsManufacturerIdPut($id, $manufacturer_id)
     {
@@ -55403,13 +55403,13 @@ class ItemApi
      * @param  int $id (required)
      * @param  int $manufacturer_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemManufacturerModelsManufacturerCommission, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemManufacturerModelsManufacturerCommission, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsManufacturersIdCommissionsManufacturerIdPutWithHttpInfo($id, $manufacturer_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemManufacturerModelsManufacturerCommission';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemManufacturerModelsManufacturerCommission';
         $request = $this->restItemsManufacturersIdCommissionsManufacturerIdPutRequest($id, $manufacturer_id);
 
         try {
@@ -55461,7 +55461,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemManufacturerModelsManufacturerCommission',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemManufacturerModelsManufacturerCommission',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -55505,7 +55505,7 @@ class ItemApi
      */
     public function restItemsManufacturersIdCommissionsManufacturerIdPutAsyncWithHttpInfo($id, $manufacturer_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemManufacturerModelsManufacturerCommission';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemManufacturerModelsManufacturerCommission';
         $request = $this->restItemsManufacturersIdCommissionsManufacturerIdPutRequest($id, $manufacturer_id);
 
         return $this->client
@@ -55669,9 +55669,9 @@ class ItemApi
      *
      * @param  int $id id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemManufacturerModelsManufacturerCommission
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemManufacturerModelsManufacturerCommission
      */
     public function restItemsManufacturersIdCommissionsPost($id)
     {
@@ -55686,13 +55686,13 @@ class ItemApi
      *
      * @param  int $id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemManufacturerModelsManufacturerCommission, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemManufacturerModelsManufacturerCommission, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsManufacturersIdCommissionsPostWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemManufacturerModelsManufacturerCommission';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemManufacturerModelsManufacturerCommission';
         $request = $this->restItemsManufacturersIdCommissionsPostRequest($id);
 
         try {
@@ -55744,7 +55744,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemManufacturerModelsManufacturerCommission',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemManufacturerModelsManufacturerCommission',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -55786,7 +55786,7 @@ class ItemApi
      */
     public function restItemsManufacturersIdCommissionsPostAsyncWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemManufacturerModelsManufacturerCommission';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemManufacturerModelsManufacturerCommission';
         $request = $this->restItemsManufacturersIdCommissionsPostRequest($id);
 
         return $this->client
@@ -55935,9 +55935,9 @@ class ItemApi
      *
      * @param  int $id id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse
      */
     public function restItemsManufacturersIdDelete($id)
     {
@@ -55952,13 +55952,13 @@ class ItemApi
      *
      * @param  int $id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsManufacturersIdDeleteWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse';
         $request = $this->restItemsManufacturersIdDeleteRequest($id);
 
         try {
@@ -56010,7 +56010,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -56052,7 +56052,7 @@ class ItemApi
      */
     public function restItemsManufacturersIdDeleteAsyncWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse';
         $request = $this->restItemsManufacturersIdDeleteRequest($id);
 
         return $this->client
@@ -56201,9 +56201,9 @@ class ItemApi
      *
      * @param  int $id id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemManufacturerModelsManufacturer
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemManufacturerModelsManufacturer
      */
     public function restItemsManufacturersIdGet($id)
     {
@@ -56218,13 +56218,13 @@ class ItemApi
      *
      * @param  int $id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemManufacturerModelsManufacturer, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemManufacturerModelsManufacturer, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsManufacturersIdGetWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemManufacturerModelsManufacturer';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemManufacturerModelsManufacturer';
         $request = $this->restItemsManufacturersIdGetRequest($id);
 
         try {
@@ -56276,7 +56276,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemManufacturerModelsManufacturer',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemManufacturerModelsManufacturer',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -56318,7 +56318,7 @@ class ItemApi
      */
     public function restItemsManufacturersIdGetAsyncWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemManufacturerModelsManufacturer';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemManufacturerModelsManufacturer';
         $request = $this->restItemsManufacturersIdGetRequest($id);
 
         return $this->client
@@ -56467,9 +56467,9 @@ class ItemApi
      *
      * @param  int $id id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemManufacturerModelsManufacturer
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemManufacturerModelsManufacturer
      */
     public function restItemsManufacturersIdPut($id)
     {
@@ -56484,13 +56484,13 @@ class ItemApi
      *
      * @param  int $id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemManufacturerModelsManufacturer, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemManufacturerModelsManufacturer, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsManufacturersIdPutWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemManufacturerModelsManufacturer';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemManufacturerModelsManufacturer';
         $request = $this->restItemsManufacturersIdPutRequest($id);
 
         try {
@@ -56542,7 +56542,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemManufacturerModelsManufacturer',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemManufacturerModelsManufacturer',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -56584,7 +56584,7 @@ class ItemApi
      */
     public function restItemsManufacturersIdPutAsyncWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemManufacturerModelsManufacturer';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemManufacturerModelsManufacturer';
         $request = $this->restItemsManufacturersIdPutRequest($id);
 
         return $this->client
@@ -56732,9 +56732,9 @@ class ItemApi
      * Create a manufacturer
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemManufacturerModelsManufacturer
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemManufacturerModelsManufacturer
      */
     public function restItemsManufacturersPost()
     {
@@ -56748,13 +56748,13 @@ class ItemApi
      * Create a manufacturer
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemManufacturerModelsManufacturer, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemManufacturerModelsManufacturer, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsManufacturersPostWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemManufacturerModelsManufacturer';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemManufacturerModelsManufacturer';
         $request = $this->restItemsManufacturersPostRequest();
 
         try {
@@ -56806,7 +56806,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemManufacturerModelsManufacturer',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemManufacturerModelsManufacturer',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -56846,7 +56846,7 @@ class ItemApi
      */
     public function restItemsManufacturersPostAsyncWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemManufacturerModelsManufacturer';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemManufacturerModelsManufacturer';
         $request = $this->restItemsManufacturersPostRequest();
 
         return $this->client
@@ -56980,9 +56980,9 @@ class ItemApi
      *
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemItemModelsItem
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemItemModelsItem
      */
     public function restItemsPost($body = null)
     {
@@ -56997,13 +56997,13 @@ class ItemApi
      *
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemItemModelsItem, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemItemModelsItem, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsPostWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemItemModelsItem';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemItemModelsItem';
         $request = $this->restItemsPostRequest($body);
 
         try {
@@ -57055,7 +57055,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemItemModelsItem',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemItemModelsItem',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -57097,7 +57097,7 @@ class ItemApi
      */
     public function restItemsPostAsyncWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemItemModelsItem';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemItemModelsItem';
         $request = $this->restItemsPostRequest($body);
 
         return $this->client
@@ -57239,7 +57239,7 @@ class ItemApi
      * @param  int $page Limits the results to a specific page. The page number must be specified. (optional)
      * @param  int $items_per_page Limits the number of results listed per page to a specific number. The number of properties to be listed per page must be specified. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -57260,7 +57260,7 @@ class ItemApi
      * @param  int $page Limits the results to a specific page. The page number must be specified. (optional)
      * @param  int $items_per_page Limits the number of results listed per page to a specific number. The number of properties to be listed per page must be specified. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -57527,7 +57527,7 @@ class ItemApi
      *
      * @param  int $id id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -57543,7 +57543,7 @@ class ItemApi
      *
      * @param  int $id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -57756,9 +57756,9 @@ class ItemApi
      *
      * @param  int $id id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemPropertyModelsProperty
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemPropertyModelsProperty
      */
     public function restItemsPropertiesIdGet($id)
     {
@@ -57773,13 +57773,13 @@ class ItemApi
      *
      * @param  int $id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemPropertyModelsProperty, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemPropertyModelsProperty, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsPropertiesIdGetWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemPropertyModelsProperty';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemPropertyModelsProperty';
         $request = $this->restItemsPropertiesIdGetRequest($id);
 
         try {
@@ -57831,7 +57831,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemPropertyModelsProperty',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemPropertyModelsProperty',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -57873,7 +57873,7 @@ class ItemApi
      */
     public function restItemsPropertiesIdGetAsyncWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemPropertyModelsProperty';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemPropertyModelsProperty';
         $request = $this->restItemsPropertiesIdGetRequest($id);
 
         return $this->client
@@ -58022,9 +58022,9 @@ class ItemApi
      *
      * @param  int $id id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemPropertyModelsPropertyMarketReference[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemPropertyModelsPropertyMarketReference[]
      */
     public function restItemsPropertiesIdMarketReferencesGet($id)
     {
@@ -58039,13 +58039,13 @@ class ItemApi
      *
      * @param  int $id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemPropertyModelsPropertyMarketReference[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemPropertyModelsPropertyMarketReference[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsPropertiesIdMarketReferencesGetWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemPropertyModelsPropertyMarketReference[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemPropertyModelsPropertyMarketReference[]';
         $request = $this->restItemsPropertiesIdMarketReferencesGetRequest($id);
 
         try {
@@ -58097,7 +58097,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemPropertyModelsPropertyMarketReference[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemPropertyModelsPropertyMarketReference[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -58139,7 +58139,7 @@ class ItemApi
      */
     public function restItemsPropertiesIdMarketReferencesGetAsyncWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemPropertyModelsPropertyMarketReference[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemPropertyModelsPropertyMarketReference[]';
         $request = $this->restItemsPropertiesIdMarketReferencesGetRequest($id);
 
         return $this->client
@@ -58289,9 +58289,9 @@ class ItemApi
      * @param  int $id id (required)
      * @param  int $market_id market_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse
      */
     public function restItemsPropertiesIdMarketReferencesMarketIdDelete($id, $market_id)
     {
@@ -58307,13 +58307,13 @@ class ItemApi
      * @param  int $id (required)
      * @param  int $market_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsPropertiesIdMarketReferencesMarketIdDeleteWithHttpInfo($id, $market_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse';
         $request = $this->restItemsPropertiesIdMarketReferencesMarketIdDeleteRequest($id, $market_id);
 
         try {
@@ -58365,7 +58365,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -58409,7 +58409,7 @@ class ItemApi
      */
     public function restItemsPropertiesIdMarketReferencesMarketIdDeleteAsyncWithHttpInfo($id, $market_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse';
         $request = $this->restItemsPropertiesIdMarketReferencesMarketIdDeleteRequest($id, $market_id);
 
         return $this->client
@@ -58574,9 +58574,9 @@ class ItemApi
      * @param  int $id id (required)
      * @param  int $market_id market_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemPropertyModelsPropertyMarketReference
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemPropertyModelsPropertyMarketReference
      */
     public function restItemsPropertiesIdMarketReferencesMarketIdGet($id, $market_id)
     {
@@ -58592,13 +58592,13 @@ class ItemApi
      * @param  int $id (required)
      * @param  int $market_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemPropertyModelsPropertyMarketReference, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemPropertyModelsPropertyMarketReference, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsPropertiesIdMarketReferencesMarketIdGetWithHttpInfo($id, $market_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemPropertyModelsPropertyMarketReference';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemPropertyModelsPropertyMarketReference';
         $request = $this->restItemsPropertiesIdMarketReferencesMarketIdGetRequest($id, $market_id);
 
         try {
@@ -58650,7 +58650,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemPropertyModelsPropertyMarketReference',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemPropertyModelsPropertyMarketReference',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -58694,7 +58694,7 @@ class ItemApi
      */
     public function restItemsPropertiesIdMarketReferencesMarketIdGetAsyncWithHttpInfo($id, $market_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemPropertyModelsPropertyMarketReference';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemPropertyModelsPropertyMarketReference';
         $request = $this->restItemsPropertiesIdMarketReferencesMarketIdGetRequest($id, $market_id);
 
         return $this->client
@@ -58860,9 +58860,9 @@ class ItemApi
      * @param  int $market_id market_id (required)
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemPropertyModelsPropertyMarketReference
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemPropertyModelsPropertyMarketReference
      */
     public function restItemsPropertiesIdMarketReferencesMarketIdPut($id, $market_id, $body = null)
     {
@@ -58879,13 +58879,13 @@ class ItemApi
      * @param  int $market_id (required)
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemPropertyModelsPropertyMarketReference, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemPropertyModelsPropertyMarketReference, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsPropertiesIdMarketReferencesMarketIdPutWithHttpInfo($id, $market_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemPropertyModelsPropertyMarketReference';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemPropertyModelsPropertyMarketReference';
         $request = $this->restItemsPropertiesIdMarketReferencesMarketIdPutRequest($id, $market_id, $body);
 
         try {
@@ -58937,7 +58937,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemPropertyModelsPropertyMarketReference',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemPropertyModelsPropertyMarketReference',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -58983,7 +58983,7 @@ class ItemApi
      */
     public function restItemsPropertiesIdMarketReferencesMarketIdPutAsyncWithHttpInfo($id, $market_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemPropertyModelsPropertyMarketReference';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemPropertyModelsPropertyMarketReference';
         $request = $this->restItemsPropertiesIdMarketReferencesMarketIdPutRequest($id, $market_id, $body);
 
         return $this->client
@@ -59152,9 +59152,9 @@ class ItemApi
      * @param  int $id id (required)
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemPropertyModelsPropertyMarketReference
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemPropertyModelsPropertyMarketReference
      */
     public function restItemsPropertiesIdMarketReferencesPost($id, $body = null)
     {
@@ -59170,13 +59170,13 @@ class ItemApi
      * @param  int $id (required)
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemPropertyModelsPropertyMarketReference, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemPropertyModelsPropertyMarketReference, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsPropertiesIdMarketReferencesPostWithHttpInfo($id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemPropertyModelsPropertyMarketReference';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemPropertyModelsPropertyMarketReference';
         $request = $this->restItemsPropertiesIdMarketReferencesPostRequest($id, $body);
 
         try {
@@ -59228,7 +59228,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemPropertyModelsPropertyMarketReference',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemPropertyModelsPropertyMarketReference',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -59272,7 +59272,7 @@ class ItemApi
      */
     public function restItemsPropertiesIdMarketReferencesPostAsyncWithHttpInfo($id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemPropertyModelsPropertyMarketReference';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemPropertyModelsPropertyMarketReference';
         $request = $this->restItemsPropertiesIdMarketReferencesPostRequest($id, $body);
 
         return $this->client
@@ -59425,9 +59425,9 @@ class ItemApi
      *
      * @param  int $id id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemPropertyModelsPropertyName[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemPropertyModelsPropertyName[]
      */
     public function restItemsPropertiesIdNamesGet($id)
     {
@@ -59442,13 +59442,13 @@ class ItemApi
      *
      * @param  int $id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemPropertyModelsPropertyName[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemPropertyModelsPropertyName[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsPropertiesIdNamesGetWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemPropertyModelsPropertyName[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemPropertyModelsPropertyName[]';
         $request = $this->restItemsPropertiesIdNamesGetRequest($id);
 
         try {
@@ -59500,7 +59500,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemPropertyModelsPropertyName[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemPropertyModelsPropertyName[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -59542,7 +59542,7 @@ class ItemApi
      */
     public function restItemsPropertiesIdNamesGetAsyncWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemPropertyModelsPropertyName[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemPropertyModelsPropertyName[]';
         $request = $this->restItemsPropertiesIdNamesGetRequest($id);
 
         return $this->client
@@ -59692,7 +59692,7 @@ class ItemApi
      * @param  int $id id (required)
      * @param  int $lang lang (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -59709,7 +59709,7 @@ class ItemApi
      * @param  int $id (required)
      * @param  int $lang (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -59940,9 +59940,9 @@ class ItemApi
      * @param  int $id id (required)
      * @param  int $lang lang (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemPropertyModelsPropertyName
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemPropertyModelsPropertyName
      */
     public function restItemsPropertiesIdNamesLangGet($id, $lang)
     {
@@ -59958,13 +59958,13 @@ class ItemApi
      * @param  int $id (required)
      * @param  int $lang (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemPropertyModelsPropertyName, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemPropertyModelsPropertyName, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsPropertiesIdNamesLangGetWithHttpInfo($id, $lang)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemPropertyModelsPropertyName';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemPropertyModelsPropertyName';
         $request = $this->restItemsPropertiesIdNamesLangGetRequest($id, $lang);
 
         try {
@@ -60016,7 +60016,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemPropertyModelsPropertyName',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemPropertyModelsPropertyName',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -60060,7 +60060,7 @@ class ItemApi
      */
     public function restItemsPropertiesIdNamesLangGetAsyncWithHttpInfo($id, $lang)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemPropertyModelsPropertyName';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemPropertyModelsPropertyName';
         $request = $this->restItemsPropertiesIdNamesLangGetRequest($id, $lang);
 
         return $this->client
@@ -60226,9 +60226,9 @@ class ItemApi
      * @param  int $lang lang (required)
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemPropertyModelsPropertyName
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemPropertyModelsPropertyName
      */
     public function restItemsPropertiesIdNamesLangPut($id, $lang, $body = null)
     {
@@ -60245,13 +60245,13 @@ class ItemApi
      * @param  int $lang (required)
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemPropertyModelsPropertyName, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemPropertyModelsPropertyName, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsPropertiesIdNamesLangPutWithHttpInfo($id, $lang, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemPropertyModelsPropertyName';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemPropertyModelsPropertyName';
         $request = $this->restItemsPropertiesIdNamesLangPutRequest($id, $lang, $body);
 
         try {
@@ -60303,7 +60303,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemPropertyModelsPropertyName',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemPropertyModelsPropertyName',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -60349,7 +60349,7 @@ class ItemApi
      */
     public function restItemsPropertiesIdNamesLangPutAsyncWithHttpInfo($id, $lang, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemPropertyModelsPropertyName';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemPropertyModelsPropertyName';
         $request = $this->restItemsPropertiesIdNamesLangPutRequest($id, $lang, $body);
 
         return $this->client
@@ -60518,9 +60518,9 @@ class ItemApi
      * @param  int $id id (required)
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemPropertyModelsPropertyName
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemPropertyModelsPropertyName
      */
     public function restItemsPropertiesIdNamesPost($id, $body = null)
     {
@@ -60536,13 +60536,13 @@ class ItemApi
      * @param  int $id (required)
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemPropertyModelsPropertyName, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemPropertyModelsPropertyName, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsPropertiesIdNamesPostWithHttpInfo($id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemPropertyModelsPropertyName';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemPropertyModelsPropertyName';
         $request = $this->restItemsPropertiesIdNamesPostRequest($id, $body);
 
         try {
@@ -60594,7 +60594,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemPropertyModelsPropertyName',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemPropertyModelsPropertyName',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -60638,7 +60638,7 @@ class ItemApi
      */
     public function restItemsPropertiesIdNamesPostAsyncWithHttpInfo($id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemPropertyModelsPropertyName';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemPropertyModelsPropertyName';
         $request = $this->restItemsPropertiesIdNamesPostRequest($id, $body);
 
         return $this->client
@@ -60792,9 +60792,9 @@ class ItemApi
      * @param  int $id id (required)
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemPropertyModelsProperty
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemPropertyModelsProperty
      */
     public function restItemsPropertiesIdPut($id, $body = null)
     {
@@ -60810,13 +60810,13 @@ class ItemApi
      * @param  int $id (required)
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemPropertyModelsProperty, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemPropertyModelsProperty, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsPropertiesIdPutWithHttpInfo($id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemPropertyModelsProperty';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemPropertyModelsProperty';
         $request = $this->restItemsPropertiesIdPutRequest($id, $body);
 
         try {
@@ -60868,7 +60868,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemPropertyModelsProperty',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemPropertyModelsProperty',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -60912,7 +60912,7 @@ class ItemApi
      */
     public function restItemsPropertiesIdPutAsyncWithHttpInfo($id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemPropertyModelsProperty';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemPropertyModelsProperty';
         $request = $this->restItemsPropertiesIdPutRequest($id, $body);
 
         return $this->client
@@ -61065,9 +61065,9 @@ class ItemApi
      *
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemPropertyModelsProperty
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemPropertyModelsProperty
      */
     public function restItemsPropertiesPost($body = null)
     {
@@ -61082,13 +61082,13 @@ class ItemApi
      *
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemPropertyModelsProperty, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemPropertyModelsProperty, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsPropertiesPostWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemPropertyModelsProperty';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemPropertyModelsProperty';
         $request = $this->restItemsPropertiesPostRequest($body);
 
         try {
@@ -61140,7 +61140,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemPropertyModelsProperty',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemPropertyModelsProperty',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -61182,7 +61182,7 @@ class ItemApi
      */
     public function restItemsPropertiesPostAsyncWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemPropertyModelsProperty';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemPropertyModelsProperty';
         $request = $this->restItemsPropertiesPostRequest($body);
 
         return $this->client
@@ -61320,9 +61320,9 @@ class ItemApi
      *
      * @param  int $property_id property_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemPropertyModelsPropertySelection[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemPropertyModelsPropertySelection[]
      */
     public function restItemsPropertiesPropertyIdSelectionsGet($property_id)
     {
@@ -61337,13 +61337,13 @@ class ItemApi
      *
      * @param  int $property_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemPropertyModelsPropertySelection[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemPropertyModelsPropertySelection[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsPropertiesPropertyIdSelectionsGetWithHttpInfo($property_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemPropertyModelsPropertySelection[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemPropertyModelsPropertySelection[]';
         $request = $this->restItemsPropertiesPropertyIdSelectionsGetRequest($property_id);
 
         try {
@@ -61395,7 +61395,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemPropertyModelsPropertySelection[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemPropertyModelsPropertySelection[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -61437,7 +61437,7 @@ class ItemApi
      */
     public function restItemsPropertiesPropertyIdSelectionsGetAsyncWithHttpInfo($property_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemPropertyModelsPropertySelection[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemPropertyModelsPropertySelection[]';
         $request = $this->restItemsPropertiesPropertyIdSelectionsGetRequest($property_id);
 
         return $this->client
@@ -61587,9 +61587,9 @@ class ItemApi
      * @param  int $property_id property_id (required)
      * @param  int $id id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse
      */
     public function restItemsPropertiesPropertyIdSelectionsIdDelete($property_id, $id)
     {
@@ -61605,13 +61605,13 @@ class ItemApi
      * @param  int $property_id (required)
      * @param  int $id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsPropertiesPropertyIdSelectionsIdDeleteWithHttpInfo($property_id, $id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse';
         $request = $this->restItemsPropertiesPropertyIdSelectionsIdDeleteRequest($property_id, $id);
 
         try {
@@ -61663,7 +61663,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -61707,7 +61707,7 @@ class ItemApi
      */
     public function restItemsPropertiesPropertyIdSelectionsIdDeleteAsyncWithHttpInfo($property_id, $id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse';
         $request = $this->restItemsPropertiesPropertyIdSelectionsIdDeleteRequest($property_id, $id);
 
         return $this->client
@@ -61872,9 +61872,9 @@ class ItemApi
      * @param  int $property_id property_id (required)
      * @param  int $id id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemPropertyModelsPropertySelection[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemPropertyModelsPropertySelection[]
      */
     public function restItemsPropertiesPropertyIdSelectionsIdGet($property_id, $id)
     {
@@ -61890,13 +61890,13 @@ class ItemApi
      * @param  int $property_id (required)
      * @param  int $id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemPropertyModelsPropertySelection[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemPropertyModelsPropertySelection[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsPropertiesPropertyIdSelectionsIdGetWithHttpInfo($property_id, $id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemPropertyModelsPropertySelection[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemPropertyModelsPropertySelection[]';
         $request = $this->restItemsPropertiesPropertyIdSelectionsIdGetRequest($property_id, $id);
 
         try {
@@ -61948,7 +61948,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemPropertyModelsPropertySelection[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemPropertyModelsPropertySelection[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -61992,7 +61992,7 @@ class ItemApi
      */
     public function restItemsPropertiesPropertyIdSelectionsIdGetAsyncWithHttpInfo($property_id, $id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemPropertyModelsPropertySelection[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemPropertyModelsPropertySelection[]';
         $request = $this->restItemsPropertiesPropertyIdSelectionsIdGetRequest($property_id, $id);
 
         return $this->client
@@ -62158,9 +62158,9 @@ class ItemApi
      * @param  int $id id (required)
      * @param  int $lang lang (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse
      */
     public function restItemsPropertiesPropertyIdSelectionsIdLangDelete($property_id, $id, $lang)
     {
@@ -62177,13 +62177,13 @@ class ItemApi
      * @param  int $id (required)
      * @param  int $lang (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsPropertiesPropertyIdSelectionsIdLangDeleteWithHttpInfo($property_id, $id, $lang)
     {
-        $returnType = '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse';
         $request = $this->restItemsPropertiesPropertyIdSelectionsIdLangDeleteRequest($property_id, $id, $lang);
 
         try {
@@ -62235,7 +62235,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -62281,7 +62281,7 @@ class ItemApi
      */
     public function restItemsPropertiesPropertyIdSelectionsIdLangDeleteAsyncWithHttpInfo($property_id, $id, $lang)
     {
-        $returnType = '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse';
         $request = $this->restItemsPropertiesPropertyIdSelectionsIdLangDeleteRequest($property_id, $id, $lang);
 
         return $this->client
@@ -62462,9 +62462,9 @@ class ItemApi
      * @param  int $id id (required)
      * @param  int $lang lang (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemPropertyModelsPropertySelection
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemPropertyModelsPropertySelection
      */
     public function restItemsPropertiesPropertyIdSelectionsIdLangGet($property_id, $id, $lang)
     {
@@ -62481,13 +62481,13 @@ class ItemApi
      * @param  int $id (required)
      * @param  int $lang (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemPropertyModelsPropertySelection, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemPropertyModelsPropertySelection, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsPropertiesPropertyIdSelectionsIdLangGetWithHttpInfo($property_id, $id, $lang)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemPropertyModelsPropertySelection';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemPropertyModelsPropertySelection';
         $request = $this->restItemsPropertiesPropertyIdSelectionsIdLangGetRequest($property_id, $id, $lang);
 
         try {
@@ -62539,7 +62539,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemPropertyModelsPropertySelection',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemPropertyModelsPropertySelection',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -62585,7 +62585,7 @@ class ItemApi
      */
     public function restItemsPropertiesPropertyIdSelectionsIdLangGetAsyncWithHttpInfo($property_id, $id, $lang)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemPropertyModelsPropertySelection';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemPropertyModelsPropertySelection';
         $request = $this->restItemsPropertiesPropertyIdSelectionsIdLangGetRequest($property_id, $id, $lang);
 
         return $this->client
@@ -62767,9 +62767,9 @@ class ItemApi
      * @param  int $lang lang (required)
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemPropertyModelsPropertySelection
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemPropertyModelsPropertySelection
      */
     public function restItemsPropertiesPropertyIdSelectionsIdLangPut($property_id, $id, $lang, $body = null)
     {
@@ -62787,13 +62787,13 @@ class ItemApi
      * @param  int $lang (required)
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemPropertyModelsPropertySelection, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemPropertyModelsPropertySelection, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsPropertiesPropertyIdSelectionsIdLangPutWithHttpInfo($property_id, $id, $lang, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemPropertyModelsPropertySelection';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemPropertyModelsPropertySelection';
         $request = $this->restItemsPropertiesPropertyIdSelectionsIdLangPutRequest($property_id, $id, $lang, $body);
 
         try {
@@ -62845,7 +62845,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemPropertyModelsPropertySelection',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemPropertyModelsPropertySelection',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -62893,7 +62893,7 @@ class ItemApi
      */
     public function restItemsPropertiesPropertyIdSelectionsIdLangPutAsyncWithHttpInfo($property_id, $id, $lang, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemPropertyModelsPropertySelection';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemPropertyModelsPropertySelection';
         $request = $this->restItemsPropertiesPropertyIdSelectionsIdLangPutRequest($property_id, $id, $lang, $body);
 
         return $this->client
@@ -63078,9 +63078,9 @@ class ItemApi
      * @param  int $id id (required)
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemPropertyModelsPropertySelection
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemPropertyModelsPropertySelection
      */
     public function restItemsPropertiesPropertyIdSelectionsIdPost($property_id, $id, $body = null)
     {
@@ -63097,13 +63097,13 @@ class ItemApi
      * @param  int $id (required)
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemPropertyModelsPropertySelection, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemPropertyModelsPropertySelection, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsPropertiesPropertyIdSelectionsIdPostWithHttpInfo($property_id, $id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemPropertyModelsPropertySelection';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemPropertyModelsPropertySelection';
         $request = $this->restItemsPropertiesPropertyIdSelectionsIdPostRequest($property_id, $id, $body);
 
         try {
@@ -63155,7 +63155,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemPropertyModelsPropertySelection',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemPropertyModelsPropertySelection',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -63201,7 +63201,7 @@ class ItemApi
      */
     public function restItemsPropertiesPropertyIdSelectionsIdPostAsyncWithHttpInfo($property_id, $id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemPropertyModelsPropertySelection';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemPropertyModelsPropertySelection';
         $request = $this->restItemsPropertiesPropertyIdSelectionsIdPostRequest($property_id, $id, $body);
 
         return $this->client
@@ -63370,9 +63370,9 @@ class ItemApi
      * @param  int $property_id property_id (required)
      * @param  int $lang lang (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemPropertyModelsPropertySelection[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemPropertyModelsPropertySelection[]
      */
     public function restItemsPropertiesPropertyIdSelectionsLangGet($property_id, $lang)
     {
@@ -63388,13 +63388,13 @@ class ItemApi
      * @param  int $property_id (required)
      * @param  int $lang (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemPropertyModelsPropertySelection[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemPropertyModelsPropertySelection[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsPropertiesPropertyIdSelectionsLangGetWithHttpInfo($property_id, $lang)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemPropertyModelsPropertySelection[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemPropertyModelsPropertySelection[]';
         $request = $this->restItemsPropertiesPropertyIdSelectionsLangGetRequest($property_id, $lang);
 
         try {
@@ -63446,7 +63446,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemPropertyModelsPropertySelection[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemPropertyModelsPropertySelection[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -63490,7 +63490,7 @@ class ItemApi
      */
     public function restItemsPropertiesPropertyIdSelectionsLangGetAsyncWithHttpInfo($property_id, $lang)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemPropertyModelsPropertySelection[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemPropertyModelsPropertySelection[]';
         $request = $this->restItemsPropertiesPropertyIdSelectionsLangGetRequest($property_id, $lang);
 
         return $this->client
@@ -63655,9 +63655,9 @@ class ItemApi
      * @param  int $property_id property_id (required)
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemPropertyModelsPropertySelection
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemPropertyModelsPropertySelection
      */
     public function restItemsPropertiesPropertyIdSelectionsPost($property_id, $body = null)
     {
@@ -63673,13 +63673,13 @@ class ItemApi
      * @param  int $property_id (required)
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemPropertyModelsPropertySelection, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemPropertyModelsPropertySelection, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsPropertiesPropertyIdSelectionsPostWithHttpInfo($property_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemPropertyModelsPropertySelection';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemPropertyModelsPropertySelection';
         $request = $this->restItemsPropertiesPropertyIdSelectionsPostRequest($property_id, $body);
 
         try {
@@ -63731,7 +63731,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemPropertyModelsPropertySelection',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemPropertyModelsPropertySelection',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -63775,7 +63775,7 @@ class ItemApi
      */
     public function restItemsPropertiesPropertyIdSelectionsPostAsyncWithHttpInfo($property_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemPropertyModelsPropertySelection';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemPropertyModelsPropertySelection';
         $request = $this->restItemsPropertiesPropertyIdSelectionsPostRequest($property_id, $body);
 
         return $this->client
@@ -63928,7 +63928,7 @@ class ItemApi
      *
      * @param  string $with Includes the specified property group information in the results. The following parameters are available: &lt;ul&gt;&lt;li&gt;names&lt;/b&gt; &#x3D; The names of the property group&lt;/li&gt;&lt;li&gt;properties&lt;/b&gt; &#x3D; The properties that are assigned to the property group&lt;/li&gt;&lt;/ul&gt; More than one parameter should be separated by commas. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -63945,7 +63945,7 @@ class ItemApi
      *
      * @param  string $with Includes the specified property group information in the results. The following parameters are available: &lt;ul&gt;&lt;li&gt;names&lt;/b&gt; &#x3D; The names of the property group&lt;/li&gt;&lt;li&gt;properties&lt;/b&gt; &#x3D; The properties that are assigned to the property group&lt;/li&gt;&lt;/ul&gt; More than one parameter should be separated by commas. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -64184,9 +64184,9 @@ class ItemApi
      *
      * @param  int $id id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse
      */
     public function restItemsPropertyGroupsIdDelete($id)
     {
@@ -64201,13 +64201,13 @@ class ItemApi
      *
      * @param  int $id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsPropertyGroupsIdDeleteWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse';
         $request = $this->restItemsPropertyGroupsIdDeleteRequest($id);
 
         try {
@@ -64259,7 +64259,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -64301,7 +64301,7 @@ class ItemApi
      */
     public function restItemsPropertyGroupsIdDeleteAsyncWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse';
         $request = $this->restItemsPropertyGroupsIdDeleteRequest($id);
 
         return $this->client
@@ -64450,9 +64450,9 @@ class ItemApi
      *
      * @param  int $id id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemPropertyModelsPropertyGroup
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemPropertyModelsPropertyGroup
      */
     public function restItemsPropertyGroupsIdGet($id)
     {
@@ -64467,13 +64467,13 @@ class ItemApi
      *
      * @param  int $id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemPropertyModelsPropertyGroup, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemPropertyModelsPropertyGroup, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsPropertyGroupsIdGetWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemPropertyModelsPropertyGroup';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemPropertyModelsPropertyGroup';
         $request = $this->restItemsPropertyGroupsIdGetRequest($id);
 
         try {
@@ -64525,7 +64525,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemPropertyModelsPropertyGroup',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemPropertyModelsPropertyGroup',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -64567,7 +64567,7 @@ class ItemApi
      */
     public function restItemsPropertyGroupsIdGetAsyncWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemPropertyModelsPropertyGroup';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemPropertyModelsPropertyGroup';
         $request = $this->restItemsPropertyGroupsIdGetRequest($id);
 
         return $this->client
@@ -64716,9 +64716,9 @@ class ItemApi
      *
      * @param  int $id id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemPropertyModelsPropertyGroupName[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemPropertyModelsPropertyGroupName[]
      */
     public function restItemsPropertyGroupsIdNamesGet($id)
     {
@@ -64733,13 +64733,13 @@ class ItemApi
      *
      * @param  int $id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemPropertyModelsPropertyGroupName[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemPropertyModelsPropertyGroupName[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsPropertyGroupsIdNamesGetWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemPropertyModelsPropertyGroupName[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemPropertyModelsPropertyGroupName[]';
         $request = $this->restItemsPropertyGroupsIdNamesGetRequest($id);
 
         try {
@@ -64791,7 +64791,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemPropertyModelsPropertyGroupName[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemPropertyModelsPropertyGroupName[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -64833,7 +64833,7 @@ class ItemApi
      */
     public function restItemsPropertyGroupsIdNamesGetAsyncWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemPropertyModelsPropertyGroupName[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemPropertyModelsPropertyGroupName[]';
         $request = $this->restItemsPropertyGroupsIdNamesGetRequest($id);
 
         return $this->client
@@ -64983,9 +64983,9 @@ class ItemApi
      * @param  int $id id (required)
      * @param  int $lang lang (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse
      */
     public function restItemsPropertyGroupsIdNamesLangDelete($id, $lang)
     {
@@ -65001,13 +65001,13 @@ class ItemApi
      * @param  int $id (required)
      * @param  int $lang (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsPropertyGroupsIdNamesLangDeleteWithHttpInfo($id, $lang)
     {
-        $returnType = '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse';
         $request = $this->restItemsPropertyGroupsIdNamesLangDeleteRequest($id, $lang);
 
         try {
@@ -65059,7 +65059,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -65103,7 +65103,7 @@ class ItemApi
      */
     public function restItemsPropertyGroupsIdNamesLangDeleteAsyncWithHttpInfo($id, $lang)
     {
-        $returnType = '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse';
         $request = $this->restItemsPropertyGroupsIdNamesLangDeleteRequest($id, $lang);
 
         return $this->client
@@ -65268,9 +65268,9 @@ class ItemApi
      * @param  int $id id (required)
      * @param  int $lang lang (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemPropertyModelsPropertyGroupName
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemPropertyModelsPropertyGroupName
      */
     public function restItemsPropertyGroupsIdNamesLangGet($id, $lang)
     {
@@ -65286,13 +65286,13 @@ class ItemApi
      * @param  int $id (required)
      * @param  int $lang (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemPropertyModelsPropertyGroupName, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemPropertyModelsPropertyGroupName, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsPropertyGroupsIdNamesLangGetWithHttpInfo($id, $lang)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemPropertyModelsPropertyGroupName';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemPropertyModelsPropertyGroupName';
         $request = $this->restItemsPropertyGroupsIdNamesLangGetRequest($id, $lang);
 
         try {
@@ -65344,7 +65344,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemPropertyModelsPropertyGroupName',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemPropertyModelsPropertyGroupName',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -65388,7 +65388,7 @@ class ItemApi
      */
     public function restItemsPropertyGroupsIdNamesLangGetAsyncWithHttpInfo($id, $lang)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemPropertyModelsPropertyGroupName';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemPropertyModelsPropertyGroupName';
         $request = $this->restItemsPropertyGroupsIdNamesLangGetRequest($id, $lang);
 
         return $this->client
@@ -65554,9 +65554,9 @@ class ItemApi
      * @param  int $lang lang (required)
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemPropertyModelsPropertyGroupName
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemPropertyModelsPropertyGroupName
      */
     public function restItemsPropertyGroupsIdNamesLangPut($id, $lang, $body = null)
     {
@@ -65573,13 +65573,13 @@ class ItemApi
      * @param  int $lang (required)
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemPropertyModelsPropertyGroupName, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemPropertyModelsPropertyGroupName, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsPropertyGroupsIdNamesLangPutWithHttpInfo($id, $lang, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemPropertyModelsPropertyGroupName';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemPropertyModelsPropertyGroupName';
         $request = $this->restItemsPropertyGroupsIdNamesLangPutRequest($id, $lang, $body);
 
         try {
@@ -65631,7 +65631,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemPropertyModelsPropertyGroupName',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemPropertyModelsPropertyGroupName',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -65677,7 +65677,7 @@ class ItemApi
      */
     public function restItemsPropertyGroupsIdNamesLangPutAsyncWithHttpInfo($id, $lang, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemPropertyModelsPropertyGroupName';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemPropertyModelsPropertyGroupName';
         $request = $this->restItemsPropertyGroupsIdNamesLangPutRequest($id, $lang, $body);
 
         return $this->client
@@ -65846,9 +65846,9 @@ class ItemApi
      * @param  int $id id (required)
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemPropertyModelsPropertyGroupName
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemPropertyModelsPropertyGroupName
      */
     public function restItemsPropertyGroupsIdNamesPost($id, $body = null)
     {
@@ -65864,13 +65864,13 @@ class ItemApi
      * @param  int $id (required)
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemPropertyModelsPropertyGroupName, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemPropertyModelsPropertyGroupName, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsPropertyGroupsIdNamesPostWithHttpInfo($id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemPropertyModelsPropertyGroupName';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemPropertyModelsPropertyGroupName';
         $request = $this->restItemsPropertyGroupsIdNamesPostRequest($id, $body);
 
         try {
@@ -65922,7 +65922,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemPropertyModelsPropertyGroupName',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemPropertyModelsPropertyGroupName',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -65966,7 +65966,7 @@ class ItemApi
      */
     public function restItemsPropertyGroupsIdNamesPostAsyncWithHttpInfo($id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemPropertyModelsPropertyGroupName';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemPropertyModelsPropertyGroupName';
         $request = $this->restItemsPropertyGroupsIdNamesPostRequest($id, $body);
 
         return $this->client
@@ -66120,9 +66120,9 @@ class ItemApi
      * @param  int $id id (required)
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemPropertyModelsPropertyGroup
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemPropertyModelsPropertyGroup
      */
     public function restItemsPropertyGroupsIdPut($id, $body = null)
     {
@@ -66138,13 +66138,13 @@ class ItemApi
      * @param  int $id (required)
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemPropertyModelsPropertyGroup, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemPropertyModelsPropertyGroup, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsPropertyGroupsIdPutWithHttpInfo($id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemPropertyModelsPropertyGroup';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemPropertyModelsPropertyGroup';
         $request = $this->restItemsPropertyGroupsIdPutRequest($id, $body);
 
         try {
@@ -66196,7 +66196,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemPropertyModelsPropertyGroup',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemPropertyModelsPropertyGroup',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -66240,7 +66240,7 @@ class ItemApi
      */
     public function restItemsPropertyGroupsIdPutAsyncWithHttpInfo($id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemPropertyModelsPropertyGroup';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemPropertyModelsPropertyGroup';
         $request = $this->restItemsPropertyGroupsIdPutRequest($id, $body);
 
         return $this->client
@@ -66393,9 +66393,9 @@ class ItemApi
      *
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemPropertyModelsPropertyGroup
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemPropertyModelsPropertyGroup
      */
     public function restItemsPropertyGroupsPost($body = null)
     {
@@ -66410,13 +66410,13 @@ class ItemApi
      *
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemPropertyModelsPropertyGroup, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemPropertyModelsPropertyGroup, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsPropertyGroupsPostWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemPropertyModelsPropertyGroup';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemPropertyModelsPropertyGroup';
         $request = $this->restItemsPropertyGroupsPostRequest($body);
 
         try {
@@ -66468,7 +66468,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemPropertyModelsPropertyGroup',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemPropertyModelsPropertyGroup',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -66510,7 +66510,7 @@ class ItemApi
      */
     public function restItemsPropertyGroupsPostAsyncWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemPropertyModelsPropertyGroup';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemPropertyModelsPropertyGroup';
         $request = $this->restItemsPropertyGroupsPostRequest($body);
 
         return $this->client
@@ -66648,9 +66648,9 @@ class ItemApi
      *
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\IlluminateSupportCollection
+     * @return \BSApp\Service\plentymarketsAPI\Model\IlluminateSupportCollection
      */
     public function restItemsPut($body = null)
     {
@@ -66665,13 +66665,13 @@ class ItemApi
      *
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\IlluminateSupportCollection, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\IlluminateSupportCollection, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsPutWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\IlluminateSupportCollection';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\IlluminateSupportCollection';
         $request = $this->restItemsPutRequest($body);
 
         try {
@@ -66723,7 +66723,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\IlluminateSupportCollection',
+                        '\BSApp\Service\plentymarketsAPI\Model\IlluminateSupportCollection',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -66765,7 +66765,7 @@ class ItemApi
      */
     public function restItemsPutAsyncWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\IlluminateSupportCollection';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\IlluminateSupportCollection';
         $request = $this->restItemsPutRequest($body);
 
         return $this->client
@@ -66903,7 +66903,7 @@ class ItemApi
      *
      * @param  string $updated_at Filter restricts the list of results to items updated after the specified date. The date can be specified as unix timestamps or in the ISO 8601 date format. The PHP function strtotime is also supported. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -66920,7 +66920,7 @@ class ItemApi
      *
      * @param  string $updated_at Filter restricts the list of results to items updated after the specified date. The date can be specified as unix timestamps or in the ISO 8601 date format. The PHP function strtotime is also supported. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -67161,9 +67161,9 @@ class ItemApi
      * @param  int $account_type account_type (required)
      * @param  int $account_id account_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse
      */
     public function restItemsSalesPricesIdAccountsAccountTypeAccountIdDelete($id, $account_type, $account_id)
     {
@@ -67180,13 +67180,13 @@ class ItemApi
      * @param  int $account_type (required)
      * @param  int $account_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsSalesPricesIdAccountsAccountTypeAccountIdDeleteWithHttpInfo($id, $account_type, $account_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse';
         $request = $this->restItemsSalesPricesIdAccountsAccountTypeAccountIdDeleteRequest($id, $account_type, $account_id);
 
         try {
@@ -67238,7 +67238,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -67284,7 +67284,7 @@ class ItemApi
      */
     public function restItemsSalesPricesIdAccountsAccountTypeAccountIdDeleteAsyncWithHttpInfo($id, $account_type, $account_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse';
         $request = $this->restItemsSalesPricesIdAccountsAccountTypeAccountIdDeleteRequest($id, $account_type, $account_id);
 
         return $this->client
@@ -67463,9 +67463,9 @@ class ItemApi
      *
      * @param  int $id id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemSalesPriceModelsSalesPriceAccount[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSalesPriceModelsSalesPriceAccount[]
      */
     public function restItemsSalesPricesIdAccountsGet($id)
     {
@@ -67480,13 +67480,13 @@ class ItemApi
      *
      * @param  int $id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemSalesPriceModelsSalesPriceAccount[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSalesPriceModelsSalesPriceAccount[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsSalesPricesIdAccountsGetWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemSalesPriceModelsSalesPriceAccount[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSalesPriceModelsSalesPriceAccount[]';
         $request = $this->restItemsSalesPricesIdAccountsGetRequest($id);
 
         try {
@@ -67538,7 +67538,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemSalesPriceModelsSalesPriceAccount[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSalesPriceModelsSalesPriceAccount[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -67580,7 +67580,7 @@ class ItemApi
      */
     public function restItemsSalesPricesIdAccountsGetAsyncWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemSalesPriceModelsSalesPriceAccount[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSalesPriceModelsSalesPriceAccount[]';
         $request = $this->restItemsSalesPricesIdAccountsGetRequest($id);
 
         return $this->client
@@ -67730,9 +67730,9 @@ class ItemApi
      * @param  int $id id (required)
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemSalesPriceModelsSalesPriceAccount
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSalesPriceModelsSalesPriceAccount
      */
     public function restItemsSalesPricesIdAccountsPost($id, $body = null)
     {
@@ -67748,13 +67748,13 @@ class ItemApi
      * @param  int $id (required)
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemSalesPriceModelsSalesPriceAccount, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSalesPriceModelsSalesPriceAccount, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsSalesPricesIdAccountsPostWithHttpInfo($id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemSalesPriceModelsSalesPriceAccount';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSalesPriceModelsSalesPriceAccount';
         $request = $this->restItemsSalesPricesIdAccountsPostRequest($id, $body);
 
         try {
@@ -67806,7 +67806,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemSalesPriceModelsSalesPriceAccount',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSalesPriceModelsSalesPriceAccount',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -67850,7 +67850,7 @@ class ItemApi
      */
     public function restItemsSalesPricesIdAccountsPostAsyncWithHttpInfo($id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemSalesPriceModelsSalesPriceAccount';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSalesPriceModelsSalesPriceAccount';
         $request = $this->restItemsSalesPricesIdAccountsPostRequest($id, $body);
 
         return $this->client
@@ -68004,9 +68004,9 @@ class ItemApi
      * @param  int $id id (required)
      * @param  int $country_id country_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse
      */
     public function restItemsSalesPricesIdCountriesCountryIdDelete($id, $country_id)
     {
@@ -68022,13 +68022,13 @@ class ItemApi
      * @param  int $id (required)
      * @param  int $country_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsSalesPricesIdCountriesCountryIdDeleteWithHttpInfo($id, $country_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse';
         $request = $this->restItemsSalesPricesIdCountriesCountryIdDeleteRequest($id, $country_id);
 
         try {
@@ -68080,7 +68080,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -68124,7 +68124,7 @@ class ItemApi
      */
     public function restItemsSalesPricesIdCountriesCountryIdDeleteAsyncWithHttpInfo($id, $country_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse';
         $request = $this->restItemsSalesPricesIdCountriesCountryIdDeleteRequest($id, $country_id);
 
         return $this->client
@@ -68288,9 +68288,9 @@ class ItemApi
      *
      * @param  int $id id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemSalesPriceModelsSalesPriceCountry[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSalesPriceModelsSalesPriceCountry[]
      */
     public function restItemsSalesPricesIdCountriesGet($id)
     {
@@ -68305,13 +68305,13 @@ class ItemApi
      *
      * @param  int $id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemSalesPriceModelsSalesPriceCountry[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSalesPriceModelsSalesPriceCountry[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsSalesPricesIdCountriesGetWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemSalesPriceModelsSalesPriceCountry[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSalesPriceModelsSalesPriceCountry[]';
         $request = $this->restItemsSalesPricesIdCountriesGetRequest($id);
 
         try {
@@ -68363,7 +68363,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemSalesPriceModelsSalesPriceCountry[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSalesPriceModelsSalesPriceCountry[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -68405,7 +68405,7 @@ class ItemApi
      */
     public function restItemsSalesPricesIdCountriesGetAsyncWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemSalesPriceModelsSalesPriceCountry[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSalesPriceModelsSalesPriceCountry[]';
         $request = $this->restItemsSalesPricesIdCountriesGetRequest($id);
 
         return $this->client
@@ -68555,9 +68555,9 @@ class ItemApi
      * @param  int $id id (required)
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemSalesPriceModelsSalesPriceCountry
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSalesPriceModelsSalesPriceCountry
      */
     public function restItemsSalesPricesIdCountriesPost($id, $body = null)
     {
@@ -68573,13 +68573,13 @@ class ItemApi
      * @param  int $id (required)
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemSalesPriceModelsSalesPriceCountry, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSalesPriceModelsSalesPriceCountry, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsSalesPricesIdCountriesPostWithHttpInfo($id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemSalesPriceModelsSalesPriceCountry';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSalesPriceModelsSalesPriceCountry';
         $request = $this->restItemsSalesPricesIdCountriesPostRequest($id, $body);
 
         try {
@@ -68631,7 +68631,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemSalesPriceModelsSalesPriceCountry',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSalesPriceModelsSalesPriceCountry',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -68675,7 +68675,7 @@ class ItemApi
      */
     public function restItemsSalesPricesIdCountriesPostAsyncWithHttpInfo($id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemSalesPriceModelsSalesPriceCountry';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSalesPriceModelsSalesPriceCountry';
         $request = $this->restItemsSalesPricesIdCountriesPostRequest($id, $body);
 
         return $this->client
@@ -68829,9 +68829,9 @@ class ItemApi
      * @param  int $id id (required)
      * @param  int $currency currency (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse
      */
     public function restItemsSalesPricesIdCurrenciesCurrencyDelete($id, $currency)
     {
@@ -68847,13 +68847,13 @@ class ItemApi
      * @param  int $id (required)
      * @param  int $currency (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsSalesPricesIdCurrenciesCurrencyDeleteWithHttpInfo($id, $currency)
     {
-        $returnType = '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse';
         $request = $this->restItemsSalesPricesIdCurrenciesCurrencyDeleteRequest($id, $currency);
 
         try {
@@ -68905,7 +68905,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -68949,7 +68949,7 @@ class ItemApi
      */
     public function restItemsSalesPricesIdCurrenciesCurrencyDeleteAsyncWithHttpInfo($id, $currency)
     {
-        $returnType = '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse';
         $request = $this->restItemsSalesPricesIdCurrenciesCurrencyDeleteRequest($id, $currency);
 
         return $this->client
@@ -69113,9 +69113,9 @@ class ItemApi
      *
      * @param  int $id id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemSalesPriceModelsSalesPriceCurrency[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSalesPriceModelsSalesPriceCurrency[]
      */
     public function restItemsSalesPricesIdCurrenciesGet($id)
     {
@@ -69130,13 +69130,13 @@ class ItemApi
      *
      * @param  int $id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemSalesPriceModelsSalesPriceCurrency[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSalesPriceModelsSalesPriceCurrency[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsSalesPricesIdCurrenciesGetWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemSalesPriceModelsSalesPriceCurrency[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSalesPriceModelsSalesPriceCurrency[]';
         $request = $this->restItemsSalesPricesIdCurrenciesGetRequest($id);
 
         try {
@@ -69188,7 +69188,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemSalesPriceModelsSalesPriceCurrency[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSalesPriceModelsSalesPriceCurrency[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -69230,7 +69230,7 @@ class ItemApi
      */
     public function restItemsSalesPricesIdCurrenciesGetAsyncWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemSalesPriceModelsSalesPriceCurrency[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSalesPriceModelsSalesPriceCurrency[]';
         $request = $this->restItemsSalesPricesIdCurrenciesGetRequest($id);
 
         return $this->client
@@ -69380,9 +69380,9 @@ class ItemApi
      * @param  int $id id (required)
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemSalesPriceModelsSalesPriceCurrency
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSalesPriceModelsSalesPriceCurrency
      */
     public function restItemsSalesPricesIdCurrenciesPost($id, $body = null)
     {
@@ -69398,13 +69398,13 @@ class ItemApi
      * @param  int $id (required)
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemSalesPriceModelsSalesPriceCurrency, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSalesPriceModelsSalesPriceCurrency, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsSalesPricesIdCurrenciesPostWithHttpInfo($id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemSalesPriceModelsSalesPriceCurrency';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSalesPriceModelsSalesPriceCurrency';
         $request = $this->restItemsSalesPricesIdCurrenciesPostRequest($id, $body);
 
         try {
@@ -69456,7 +69456,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemSalesPriceModelsSalesPriceCurrency',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSalesPriceModelsSalesPriceCurrency',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -69500,7 +69500,7 @@ class ItemApi
      */
     public function restItemsSalesPricesIdCurrenciesPostAsyncWithHttpInfo($id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemSalesPriceModelsSalesPriceCurrency';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSalesPriceModelsSalesPriceCurrency';
         $request = $this->restItemsSalesPricesIdCurrenciesPostRequest($id, $body);
 
         return $this->client
@@ -69654,9 +69654,9 @@ class ItemApi
      * @param  int $id id (required)
      * @param  int $customer_class_id customer_class_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse
      */
     public function restItemsSalesPricesIdCustomerClassesCustomerClassIdDelete($id, $customer_class_id)
     {
@@ -69672,13 +69672,13 @@ class ItemApi
      * @param  int $id (required)
      * @param  int $customer_class_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsSalesPricesIdCustomerClassesCustomerClassIdDeleteWithHttpInfo($id, $customer_class_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse';
         $request = $this->restItemsSalesPricesIdCustomerClassesCustomerClassIdDeleteRequest($id, $customer_class_id);
 
         try {
@@ -69730,7 +69730,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -69774,7 +69774,7 @@ class ItemApi
      */
     public function restItemsSalesPricesIdCustomerClassesCustomerClassIdDeleteAsyncWithHttpInfo($id, $customer_class_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse';
         $request = $this->restItemsSalesPricesIdCustomerClassesCustomerClassIdDeleteRequest($id, $customer_class_id);
 
         return $this->client
@@ -69938,9 +69938,9 @@ class ItemApi
      *
      * @param  int $id id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemSalesPriceModelsSalesPriceCustomerClass[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSalesPriceModelsSalesPriceCustomerClass[]
      */
     public function restItemsSalesPricesIdCustomerClassesGet($id)
     {
@@ -69955,13 +69955,13 @@ class ItemApi
      *
      * @param  int $id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemSalesPriceModelsSalesPriceCustomerClass[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSalesPriceModelsSalesPriceCustomerClass[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsSalesPricesIdCustomerClassesGetWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemSalesPriceModelsSalesPriceCustomerClass[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSalesPriceModelsSalesPriceCustomerClass[]';
         $request = $this->restItemsSalesPricesIdCustomerClassesGetRequest($id);
 
         try {
@@ -70013,7 +70013,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemSalesPriceModelsSalesPriceCustomerClass[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSalesPriceModelsSalesPriceCustomerClass[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -70055,7 +70055,7 @@ class ItemApi
      */
     public function restItemsSalesPricesIdCustomerClassesGetAsyncWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemSalesPriceModelsSalesPriceCustomerClass[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSalesPriceModelsSalesPriceCustomerClass[]';
         $request = $this->restItemsSalesPricesIdCustomerClassesGetRequest($id);
 
         return $this->client
@@ -70205,9 +70205,9 @@ class ItemApi
      * @param  int $id id (required)
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemSalesPriceModelsSalesPriceCustomerClass
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSalesPriceModelsSalesPriceCustomerClass
      */
     public function restItemsSalesPricesIdCustomerClassesPost($id, $body = null)
     {
@@ -70223,13 +70223,13 @@ class ItemApi
      * @param  int $id (required)
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemSalesPriceModelsSalesPriceCustomerClass, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSalesPriceModelsSalesPriceCustomerClass, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsSalesPricesIdCustomerClassesPostWithHttpInfo($id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemSalesPriceModelsSalesPriceCustomerClass';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSalesPriceModelsSalesPriceCustomerClass';
         $request = $this->restItemsSalesPricesIdCustomerClassesPostRequest($id, $body);
 
         try {
@@ -70281,7 +70281,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemSalesPriceModelsSalesPriceCustomerClass',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSalesPriceModelsSalesPriceCustomerClass',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -70325,7 +70325,7 @@ class ItemApi
      */
     public function restItemsSalesPricesIdCustomerClassesPostAsyncWithHttpInfo($id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemSalesPriceModelsSalesPriceCustomerClass';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSalesPriceModelsSalesPriceCustomerClass';
         $request = $this->restItemsSalesPricesIdCustomerClassesPostRequest($id, $body);
 
         return $this->client
@@ -70478,9 +70478,9 @@ class ItemApi
      *
      * @param  int $id id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse
      */
     public function restItemsSalesPricesIdDelete($id)
     {
@@ -70495,13 +70495,13 @@ class ItemApi
      *
      * @param  int $id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsSalesPricesIdDeleteWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse';
         $request = $this->restItemsSalesPricesIdDeleteRequest($id);
 
         try {
@@ -70553,7 +70553,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -70595,7 +70595,7 @@ class ItemApi
      */
     public function restItemsSalesPricesIdDeleteAsyncWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse';
         $request = $this->restItemsSalesPricesIdDeleteRequest($id);
 
         return $this->client
@@ -70744,9 +70744,9 @@ class ItemApi
      *
      * @param  int $id id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemSalesPriceModelsSalesPrice
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSalesPriceModelsSalesPrice
      */
     public function restItemsSalesPricesIdGet($id)
     {
@@ -70761,13 +70761,13 @@ class ItemApi
      *
      * @param  int $id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemSalesPriceModelsSalesPrice, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSalesPriceModelsSalesPrice, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsSalesPricesIdGetWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemSalesPriceModelsSalesPrice';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSalesPriceModelsSalesPrice';
         $request = $this->restItemsSalesPricesIdGetRequest($id);
 
         try {
@@ -70819,7 +70819,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemSalesPriceModelsSalesPrice',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSalesPriceModelsSalesPrice',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -70861,7 +70861,7 @@ class ItemApi
      */
     public function restItemsSalesPricesIdGetAsyncWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemSalesPriceModelsSalesPrice';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSalesPriceModelsSalesPrice';
         $request = $this->restItemsSalesPricesIdGetRequest($id);
 
         return $this->client
@@ -71010,9 +71010,9 @@ class ItemApi
      *
      * @param  int $id id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemSalesPriceModelsSalesPriceName[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSalesPriceModelsSalesPriceName[]
      */
     public function restItemsSalesPricesIdNamesGet($id)
     {
@@ -71027,13 +71027,13 @@ class ItemApi
      *
      * @param  int $id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemSalesPriceModelsSalesPriceName[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSalesPriceModelsSalesPriceName[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsSalesPricesIdNamesGetWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemSalesPriceModelsSalesPriceName[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSalesPriceModelsSalesPriceName[]';
         $request = $this->restItemsSalesPricesIdNamesGetRequest($id);
 
         try {
@@ -71085,7 +71085,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemSalesPriceModelsSalesPriceName[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSalesPriceModelsSalesPriceName[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -71127,7 +71127,7 @@ class ItemApi
      */
     public function restItemsSalesPricesIdNamesGetAsyncWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemSalesPriceModelsSalesPriceName[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSalesPriceModelsSalesPriceName[]';
         $request = $this->restItemsSalesPricesIdNamesGetRequest($id);
 
         return $this->client
@@ -71277,9 +71277,9 @@ class ItemApi
      * @param  int $id id (required)
      * @param  int $lang lang (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse
      */
     public function restItemsSalesPricesIdNamesLangDelete($id, $lang)
     {
@@ -71295,13 +71295,13 @@ class ItemApi
      * @param  int $id (required)
      * @param  int $lang (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsSalesPricesIdNamesLangDeleteWithHttpInfo($id, $lang)
     {
-        $returnType = '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse';
         $request = $this->restItemsSalesPricesIdNamesLangDeleteRequest($id, $lang);
 
         try {
@@ -71353,7 +71353,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -71397,7 +71397,7 @@ class ItemApi
      */
     public function restItemsSalesPricesIdNamesLangDeleteAsyncWithHttpInfo($id, $lang)
     {
-        $returnType = '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse';
         $request = $this->restItemsSalesPricesIdNamesLangDeleteRequest($id, $lang);
 
         return $this->client
@@ -71562,9 +71562,9 @@ class ItemApi
      * @param  int $id id (required)
      * @param  int $lang lang (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemSalesPriceModelsSalesPriceName
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSalesPriceModelsSalesPriceName
      */
     public function restItemsSalesPricesIdNamesLangGet($id, $lang)
     {
@@ -71580,13 +71580,13 @@ class ItemApi
      * @param  int $id (required)
      * @param  int $lang (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemSalesPriceModelsSalesPriceName, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSalesPriceModelsSalesPriceName, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsSalesPricesIdNamesLangGetWithHttpInfo($id, $lang)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemSalesPriceModelsSalesPriceName';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSalesPriceModelsSalesPriceName';
         $request = $this->restItemsSalesPricesIdNamesLangGetRequest($id, $lang);
 
         try {
@@ -71638,7 +71638,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemSalesPriceModelsSalesPriceName',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSalesPriceModelsSalesPriceName',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -71682,7 +71682,7 @@ class ItemApi
      */
     public function restItemsSalesPricesIdNamesLangGetAsyncWithHttpInfo($id, $lang)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemSalesPriceModelsSalesPriceName';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSalesPriceModelsSalesPriceName';
         $request = $this->restItemsSalesPricesIdNamesLangGetRequest($id, $lang);
 
         return $this->client
@@ -71848,9 +71848,9 @@ class ItemApi
      * @param  int $lang lang (required)
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemSalesPriceModelsSalesPriceName
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSalesPriceModelsSalesPriceName
      */
     public function restItemsSalesPricesIdNamesLangPut($id, $lang, $body = null)
     {
@@ -71867,13 +71867,13 @@ class ItemApi
      * @param  int $lang (required)
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemSalesPriceModelsSalesPriceName, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSalesPriceModelsSalesPriceName, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsSalesPricesIdNamesLangPutWithHttpInfo($id, $lang, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemSalesPriceModelsSalesPriceName';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSalesPriceModelsSalesPriceName';
         $request = $this->restItemsSalesPricesIdNamesLangPutRequest($id, $lang, $body);
 
         try {
@@ -71925,7 +71925,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemSalesPriceModelsSalesPriceName',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSalesPriceModelsSalesPriceName',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -71971,7 +71971,7 @@ class ItemApi
      */
     public function restItemsSalesPricesIdNamesLangPutAsyncWithHttpInfo($id, $lang, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemSalesPriceModelsSalesPriceName';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSalesPriceModelsSalesPriceName';
         $request = $this->restItemsSalesPricesIdNamesLangPutRequest($id, $lang, $body);
 
         return $this->client
@@ -72140,9 +72140,9 @@ class ItemApi
      * @param  int $id id (required)
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemSalesPriceModelsSalesPriceName
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSalesPriceModelsSalesPriceName
      */
     public function restItemsSalesPricesIdNamesPost($id, $body = null)
     {
@@ -72158,13 +72158,13 @@ class ItemApi
      * @param  int $id (required)
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemSalesPriceModelsSalesPriceName, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSalesPriceModelsSalesPriceName, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsSalesPricesIdNamesPostWithHttpInfo($id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemSalesPriceModelsSalesPriceName';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSalesPriceModelsSalesPriceName';
         $request = $this->restItemsSalesPricesIdNamesPostRequest($id, $body);
 
         try {
@@ -72216,7 +72216,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemSalesPriceModelsSalesPriceName',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSalesPriceModelsSalesPriceName',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -72260,7 +72260,7 @@ class ItemApi
      */
     public function restItemsSalesPricesIdNamesPostAsyncWithHttpInfo($id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemSalesPriceModelsSalesPriceName';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSalesPriceModelsSalesPriceName';
         $request = $this->restItemsSalesPricesIdNamesPostRequest($id, $body);
 
         return $this->client
@@ -72413,9 +72413,9 @@ class ItemApi
      *
      * @param  int $id id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemSalesPriceModelsSalesPriceOnlineStore[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSalesPriceModelsSalesPriceOnlineStore[]
      */
     public function restItemsSalesPricesIdOnlineStoresGet($id)
     {
@@ -72430,13 +72430,13 @@ class ItemApi
      *
      * @param  int $id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemSalesPriceModelsSalesPriceOnlineStore[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSalesPriceModelsSalesPriceOnlineStore[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsSalesPricesIdOnlineStoresGetWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemSalesPriceModelsSalesPriceOnlineStore[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSalesPriceModelsSalesPriceOnlineStore[]';
         $request = $this->restItemsSalesPricesIdOnlineStoresGetRequest($id);
 
         try {
@@ -72488,7 +72488,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemSalesPriceModelsSalesPriceOnlineStore[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSalesPriceModelsSalesPriceOnlineStore[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -72530,7 +72530,7 @@ class ItemApi
      */
     public function restItemsSalesPricesIdOnlineStoresGetAsyncWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemSalesPriceModelsSalesPriceOnlineStore[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSalesPriceModelsSalesPriceOnlineStore[]';
         $request = $this->restItemsSalesPricesIdOnlineStoresGetRequest($id);
 
         return $this->client
@@ -72680,9 +72680,9 @@ class ItemApi
      * @param  int $id id (required)
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemSalesPriceModelsSalesPriceOnlineStore
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSalesPriceModelsSalesPriceOnlineStore
      */
     public function restItemsSalesPricesIdOnlineStoresPost($id, $body = null)
     {
@@ -72698,13 +72698,13 @@ class ItemApi
      * @param  int $id (required)
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemSalesPriceModelsSalesPriceOnlineStore, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSalesPriceModelsSalesPriceOnlineStore, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsSalesPricesIdOnlineStoresPostWithHttpInfo($id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemSalesPriceModelsSalesPriceOnlineStore';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSalesPriceModelsSalesPriceOnlineStore';
         $request = $this->restItemsSalesPricesIdOnlineStoresPostRequest($id, $body);
 
         try {
@@ -72756,7 +72756,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemSalesPriceModelsSalesPriceOnlineStore',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSalesPriceModelsSalesPriceOnlineStore',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -72800,7 +72800,7 @@ class ItemApi
      */
     public function restItemsSalesPricesIdOnlineStoresPostAsyncWithHttpInfo($id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemSalesPriceModelsSalesPriceOnlineStore';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSalesPriceModelsSalesPriceOnlineStore';
         $request = $this->restItemsSalesPricesIdOnlineStoresPostRequest($id, $body);
 
         return $this->client
@@ -72954,9 +72954,9 @@ class ItemApi
      * @param  int $id id (required)
      * @param  int $webstore_id webstore_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse
      */
     public function restItemsSalesPricesIdOnlineStoresWebstoreIdDelete($id, $webstore_id)
     {
@@ -72972,13 +72972,13 @@ class ItemApi
      * @param  int $id (required)
      * @param  int $webstore_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsSalesPricesIdOnlineStoresWebstoreIdDeleteWithHttpInfo($id, $webstore_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse';
         $request = $this->restItemsSalesPricesIdOnlineStoresWebstoreIdDeleteRequest($id, $webstore_id);
 
         try {
@@ -73030,7 +73030,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -73074,7 +73074,7 @@ class ItemApi
      */
     public function restItemsSalesPricesIdOnlineStoresWebstoreIdDeleteAsyncWithHttpInfo($id, $webstore_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse';
         $request = $this->restItemsSalesPricesIdOnlineStoresWebstoreIdDeleteRequest($id, $webstore_id);
 
         return $this->client
@@ -73239,9 +73239,9 @@ class ItemApi
      * @param  int $id id (required)
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemSalesPriceModelsSalesPrice
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSalesPriceModelsSalesPrice
      */
     public function restItemsSalesPricesIdPut($id, $body = null)
     {
@@ -73257,13 +73257,13 @@ class ItemApi
      * @param  int $id (required)
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemSalesPriceModelsSalesPrice, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSalesPriceModelsSalesPrice, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsSalesPricesIdPutWithHttpInfo($id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemSalesPriceModelsSalesPrice';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSalesPriceModelsSalesPrice';
         $request = $this->restItemsSalesPricesIdPutRequest($id, $body);
 
         try {
@@ -73315,7 +73315,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemSalesPriceModelsSalesPrice',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSalesPriceModelsSalesPrice',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -73359,7 +73359,7 @@ class ItemApi
      */
     public function restItemsSalesPricesIdPutAsyncWithHttpInfo($id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemSalesPriceModelsSalesPrice';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSalesPriceModelsSalesPrice';
         $request = $this->restItemsSalesPricesIdPutRequest($id, $body);
 
         return $this->client
@@ -73512,9 +73512,9 @@ class ItemApi
      *
      * @param  int $id id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemSalesPriceModelsSalesPriceReferrer[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSalesPriceModelsSalesPriceReferrer[]
      */
     public function restItemsSalesPricesIdReferrersGet($id)
     {
@@ -73529,13 +73529,13 @@ class ItemApi
      *
      * @param  int $id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemSalesPriceModelsSalesPriceReferrer[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSalesPriceModelsSalesPriceReferrer[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsSalesPricesIdReferrersGetWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemSalesPriceModelsSalesPriceReferrer[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSalesPriceModelsSalesPriceReferrer[]';
         $request = $this->restItemsSalesPricesIdReferrersGetRequest($id);
 
         try {
@@ -73587,7 +73587,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemSalesPriceModelsSalesPriceReferrer[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSalesPriceModelsSalesPriceReferrer[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -73629,7 +73629,7 @@ class ItemApi
      */
     public function restItemsSalesPricesIdReferrersGetAsyncWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemSalesPriceModelsSalesPriceReferrer[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSalesPriceModelsSalesPriceReferrer[]';
         $request = $this->restItemsSalesPricesIdReferrersGetRequest($id);
 
         return $this->client
@@ -73779,9 +73779,9 @@ class ItemApi
      * @param  int $id id (required)
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemSalesPriceModelsSalesPriceReferrer
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSalesPriceModelsSalesPriceReferrer
      */
     public function restItemsSalesPricesIdReferrersPost($id, $body = null)
     {
@@ -73797,13 +73797,13 @@ class ItemApi
      * @param  int $id (required)
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemSalesPriceModelsSalesPriceReferrer, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSalesPriceModelsSalesPriceReferrer, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsSalesPricesIdReferrersPostWithHttpInfo($id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemSalesPriceModelsSalesPriceReferrer';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSalesPriceModelsSalesPriceReferrer';
         $request = $this->restItemsSalesPricesIdReferrersPostRequest($id, $body);
 
         try {
@@ -73855,7 +73855,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemSalesPriceModelsSalesPriceReferrer',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSalesPriceModelsSalesPriceReferrer',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -73899,7 +73899,7 @@ class ItemApi
      */
     public function restItemsSalesPricesIdReferrersPostAsyncWithHttpInfo($id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemSalesPriceModelsSalesPriceReferrer';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSalesPriceModelsSalesPriceReferrer';
         $request = $this->restItemsSalesPricesIdReferrersPostRequest($id, $body);
 
         return $this->client
@@ -74053,9 +74053,9 @@ class ItemApi
      * @param  int $id id (required)
      * @param  int $referrer_id referrer_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse
      */
     public function restItemsSalesPricesIdReferrersReferrerIdDelete($id, $referrer_id)
     {
@@ -74071,13 +74071,13 @@ class ItemApi
      * @param  int $id (required)
      * @param  int $referrer_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsSalesPricesIdReferrersReferrerIdDeleteWithHttpInfo($id, $referrer_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse';
         $request = $this->restItemsSalesPricesIdReferrersReferrerIdDeleteRequest($id, $referrer_id);
 
         try {
@@ -74129,7 +74129,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -74173,7 +74173,7 @@ class ItemApi
      */
     public function restItemsSalesPricesIdReferrersReferrerIdDeleteAsyncWithHttpInfo($id, $referrer_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse';
         $request = $this->restItemsSalesPricesIdReferrersReferrerIdDeleteRequest($id, $referrer_id);
 
         return $this->client
@@ -74337,9 +74337,9 @@ class ItemApi
      *
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemSalesPriceModelsSalesPrice
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSalesPriceModelsSalesPrice
      */
     public function restItemsSalesPricesPost($body = null)
     {
@@ -74354,13 +74354,13 @@ class ItemApi
      *
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemSalesPriceModelsSalesPrice, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSalesPriceModelsSalesPrice, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsSalesPricesPostWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemSalesPriceModelsSalesPrice';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSalesPriceModelsSalesPrice';
         $request = $this->restItemsSalesPricesPostRequest($body);
 
         try {
@@ -74412,7 +74412,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemSalesPriceModelsSalesPrice',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSalesPriceModelsSalesPrice',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -74454,7 +74454,7 @@ class ItemApi
      */
     public function restItemsSalesPricesPostAsyncWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemSalesPriceModelsSalesPrice';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSalesPriceModelsSalesPrice';
         $request = $this->restItemsSalesPricesPostRequest($body);
 
         return $this->client
@@ -74592,7 +74592,7 @@ class ItemApi
      *
      * @param  string $updated_at Filter restricts the list of results to items updated after the specified date. The date can be specified as unix timestamps or in the ISO 8601 date format. The PHP function strtotime is also supported. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -74609,7 +74609,7 @@ class ItemApi
      *
      * @param  string $updated_at Filter restricts the list of results to items updated after the specified date. The date can be specified as unix timestamps or in the ISO 8601 date format. The PHP function strtotime is also supported. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -74848,9 +74848,9 @@ class ItemApi
      *
      * @param  int $id id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse
      */
     public function restItemsUnitsIdDelete($id)
     {
@@ -74865,13 +74865,13 @@ class ItemApi
      *
      * @param  int $id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsUnitsIdDeleteWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse';
         $request = $this->restItemsUnitsIdDeleteRequest($id);
 
         try {
@@ -74923,7 +74923,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -74965,7 +74965,7 @@ class ItemApi
      */
     public function restItemsUnitsIdDeleteAsyncWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse';
         $request = $this->restItemsUnitsIdDeleteRequest($id);
 
         return $this->client
@@ -75114,9 +75114,9 @@ class ItemApi
      *
      * @param  int $id id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemUnitModelsUnit
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemUnitModelsUnit
      */
     public function restItemsUnitsIdGet($id)
     {
@@ -75131,13 +75131,13 @@ class ItemApi
      *
      * @param  int $id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemUnitModelsUnit, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemUnitModelsUnit, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsUnitsIdGetWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemUnitModelsUnit';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemUnitModelsUnit';
         $request = $this->restItemsUnitsIdGetRequest($id);
 
         try {
@@ -75189,7 +75189,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemUnitModelsUnit',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemUnitModelsUnit',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -75231,7 +75231,7 @@ class ItemApi
      */
     public function restItemsUnitsIdGetAsyncWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemUnitModelsUnit';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemUnitModelsUnit';
         $request = $this->restItemsUnitsIdGetRequest($id);
 
         return $this->client
@@ -75380,9 +75380,9 @@ class ItemApi
      *
      * @param  int $id id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemUnitModelsUnitName[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemUnitModelsUnitName[]
      */
     public function restItemsUnitsIdNamesGet($id)
     {
@@ -75397,13 +75397,13 @@ class ItemApi
      *
      * @param  int $id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemUnitModelsUnitName[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemUnitModelsUnitName[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsUnitsIdNamesGetWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemUnitModelsUnitName[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemUnitModelsUnitName[]';
         $request = $this->restItemsUnitsIdNamesGetRequest($id);
 
         try {
@@ -75455,7 +75455,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemUnitModelsUnitName[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemUnitModelsUnitName[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -75497,7 +75497,7 @@ class ItemApi
      */
     public function restItemsUnitsIdNamesGetAsyncWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemUnitModelsUnitName[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemUnitModelsUnitName[]';
         $request = $this->restItemsUnitsIdNamesGetRequest($id);
 
         return $this->client
@@ -75647,9 +75647,9 @@ class ItemApi
      * @param  int $id id (required)
      * @param  int $lang lang (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse
      */
     public function restItemsUnitsIdNamesLangDelete($id, $lang)
     {
@@ -75665,13 +75665,13 @@ class ItemApi
      * @param  int $id (required)
      * @param  int $lang (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsUnitsIdNamesLangDeleteWithHttpInfo($id, $lang)
     {
-        $returnType = '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse';
         $request = $this->restItemsUnitsIdNamesLangDeleteRequest($id, $lang);
 
         try {
@@ -75723,7 +75723,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -75767,7 +75767,7 @@ class ItemApi
      */
     public function restItemsUnitsIdNamesLangDeleteAsyncWithHttpInfo($id, $lang)
     {
-        $returnType = '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse';
         $request = $this->restItemsUnitsIdNamesLangDeleteRequest($id, $lang);
 
         return $this->client
@@ -75932,9 +75932,9 @@ class ItemApi
      * @param  int $id id (required)
      * @param  int $lang lang (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemUnitModelsUnitName
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemUnitModelsUnitName
      */
     public function restItemsUnitsIdNamesLangGet($id, $lang)
     {
@@ -75950,13 +75950,13 @@ class ItemApi
      * @param  int $id (required)
      * @param  int $lang (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemUnitModelsUnitName, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemUnitModelsUnitName, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsUnitsIdNamesLangGetWithHttpInfo($id, $lang)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemUnitModelsUnitName';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemUnitModelsUnitName';
         $request = $this->restItemsUnitsIdNamesLangGetRequest($id, $lang);
 
         try {
@@ -76008,7 +76008,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemUnitModelsUnitName',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemUnitModelsUnitName',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -76052,7 +76052,7 @@ class ItemApi
      */
     public function restItemsUnitsIdNamesLangGetAsyncWithHttpInfo($id, $lang)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemUnitModelsUnitName';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemUnitModelsUnitName';
         $request = $this->restItemsUnitsIdNamesLangGetRequest($id, $lang);
 
         return $this->client
@@ -76217,9 +76217,9 @@ class ItemApi
      * @param  int $id id (required)
      * @param  int $lang lang (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemUnitModelsUnitName
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemUnitModelsUnitName
      */
     public function restItemsUnitsIdNamesLangPut($id, $lang)
     {
@@ -76235,13 +76235,13 @@ class ItemApi
      * @param  int $id (required)
      * @param  int $lang (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemUnitModelsUnitName, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemUnitModelsUnitName, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsUnitsIdNamesLangPutWithHttpInfo($id, $lang)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemUnitModelsUnitName';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemUnitModelsUnitName';
         $request = $this->restItemsUnitsIdNamesLangPutRequest($id, $lang);
 
         try {
@@ -76293,7 +76293,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemUnitModelsUnitName',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemUnitModelsUnitName',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -76337,7 +76337,7 @@ class ItemApi
      */
     public function restItemsUnitsIdNamesLangPutAsyncWithHttpInfo($id, $lang)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemUnitModelsUnitName';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemUnitModelsUnitName';
         $request = $this->restItemsUnitsIdNamesLangPutRequest($id, $lang);
 
         return $this->client
@@ -76501,9 +76501,9 @@ class ItemApi
      *
      * @param  int $id id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemUnitModelsUnitName
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemUnitModelsUnitName
      */
     public function restItemsUnitsIdNamesPost($id)
     {
@@ -76518,13 +76518,13 @@ class ItemApi
      *
      * @param  int $id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemUnitModelsUnitName, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemUnitModelsUnitName, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsUnitsIdNamesPostWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemUnitModelsUnitName';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemUnitModelsUnitName';
         $request = $this->restItemsUnitsIdNamesPostRequest($id);
 
         try {
@@ -76576,7 +76576,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemUnitModelsUnitName',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemUnitModelsUnitName',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -76618,7 +76618,7 @@ class ItemApi
      */
     public function restItemsUnitsIdNamesPostAsyncWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemUnitModelsUnitName';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemUnitModelsUnitName';
         $request = $this->restItemsUnitsIdNamesPostRequest($id);
 
         return $this->client
@@ -76768,9 +76768,9 @@ class ItemApi
      * @param  int $id id (required)
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemUnitModelsUnit
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemUnitModelsUnit
      */
     public function restItemsUnitsIdPut($id, $body = null)
     {
@@ -76786,13 +76786,13 @@ class ItemApi
      * @param  int $id (required)
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemUnitModelsUnit, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemUnitModelsUnit, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsUnitsIdPutWithHttpInfo($id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemUnitModelsUnit';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemUnitModelsUnit';
         $request = $this->restItemsUnitsIdPutRequest($id, $body);
 
         try {
@@ -76844,7 +76844,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemUnitModelsUnit',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemUnitModelsUnit',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -76888,7 +76888,7 @@ class ItemApi
      */
     public function restItemsUnitsIdPutAsyncWithHttpInfo($id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemUnitModelsUnit';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemUnitModelsUnit';
         $request = $this->restItemsUnitsIdPutRequest($id, $body);
 
         return $this->client
@@ -77041,9 +77041,9 @@ class ItemApi
      *
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesItemUnitModelsUnit
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemUnitModelsUnit
      */
     public function restItemsUnitsPost($body = null)
     {
@@ -77058,13 +77058,13 @@ class ItemApi
      *
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesItemUnitModelsUnit, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemUnitModelsUnit, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsUnitsPostWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemUnitModelsUnit';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemUnitModelsUnit';
         $request = $this->restItemsUnitsPostRequest($body);
 
         try {
@@ -77116,7 +77116,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesItemUnitModelsUnit',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemUnitModelsUnit',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -77158,7 +77158,7 @@ class ItemApi
      */
     public function restItemsUnitsPostAsyncWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesItemUnitModelsUnit';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemUnitModelsUnit';
         $request = $this->restItemsUnitsPostRequest($body);
 
         return $this->client
@@ -77323,7 +77323,7 @@ class ItemApi
      * @param  string $item_description Filter restricts the list of results to variations with descriptions that contain the specified string. (optional)
      * @param  string $stock_warehouse_id Filter restricts the list of results to variations which have physical stock on the given warehouse. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -77367,7 +77367,7 @@ class ItemApi
      * @param  string $item_description Filter restricts the list of results to variations with descriptions that contain the specified string. (optional)
      * @param  string $stock_warehouse_id Filter restricts the list of results to variations which have physical stock on the given warehouse. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -77795,9 +77795,9 @@ class ItemApi
      *
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\IlluminateSupportCollection
+     * @return \BSApp\Service\plentymarketsAPI\Model\IlluminateSupportCollection
      */
     public function restItemsVariationsPut($body = null)
     {
@@ -77812,13 +77812,13 @@ class ItemApi
      *
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\IlluminateSupportCollection, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\IlluminateSupportCollection, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsVariationsPutWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\IlluminateSupportCollection';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\IlluminateSupportCollection';
         $request = $this->restItemsVariationsPutRequest($body);
 
         try {
@@ -77870,7 +77870,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\IlluminateSupportCollection',
+                        '\BSApp\Service\plentymarketsAPI\Model\IlluminateSupportCollection',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -77912,7 +77912,7 @@ class ItemApi
      */
     public function restItemsVariationsPutAsyncWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\IlluminateSupportCollection';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\IlluminateSupportCollection';
         $request = $this->restItemsVariationsPutRequest($body);
 
         return $this->client
@@ -78050,9 +78050,9 @@ class ItemApi
      *
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\IlluminateSupportCollection
+     * @return \BSApp\Service\plentymarketsAPI\Model\IlluminateSupportCollection
      */
     public function restItemsVariationsVariationCategoriesPost($body = null)
     {
@@ -78067,13 +78067,13 @@ class ItemApi
      *
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\IlluminateSupportCollection, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\IlluminateSupportCollection, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsVariationsVariationCategoriesPostWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\IlluminateSupportCollection';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\IlluminateSupportCollection';
         $request = $this->restItemsVariationsVariationCategoriesPostRequest($body);
 
         try {
@@ -78125,7 +78125,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\IlluminateSupportCollection',
+                        '\BSApp\Service\plentymarketsAPI\Model\IlluminateSupportCollection',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -78167,7 +78167,7 @@ class ItemApi
      */
     public function restItemsVariationsVariationCategoriesPostAsyncWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\IlluminateSupportCollection';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\IlluminateSupportCollection';
         $request = $this->restItemsVariationsVariationCategoriesPostRequest($body);
 
         return $this->client
@@ -78305,9 +78305,9 @@ class ItemApi
      *
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\IlluminateSupportCollection
+     * @return \BSApp\Service\plentymarketsAPI\Model\IlluminateSupportCollection
      */
     public function restItemsVariationsVariationCategoriesPut($body = null)
     {
@@ -78322,13 +78322,13 @@ class ItemApi
      *
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\IlluminateSupportCollection, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\IlluminateSupportCollection, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsVariationsVariationCategoriesPutWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\IlluminateSupportCollection';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\IlluminateSupportCollection';
         $request = $this->restItemsVariationsVariationCategoriesPutRequest($body);
 
         try {
@@ -78380,7 +78380,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\IlluminateSupportCollection',
+                        '\BSApp\Service\plentymarketsAPI\Model\IlluminateSupportCollection',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -78422,7 +78422,7 @@ class ItemApi
      */
     public function restItemsVariationsVariationCategoriesPutAsyncWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\IlluminateSupportCollection';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\IlluminateSupportCollection';
         $request = $this->restItemsVariationsVariationCategoriesPutRequest($body);
 
         return $this->client
@@ -78559,7 +78559,7 @@ class ItemApi
      * List all links between variations and markets
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -78575,7 +78575,7 @@ class ItemApi
      * List all links between variations and markets
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -78807,9 +78807,9 @@ class ItemApi
      *
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\IlluminateDatabaseEloquentCollection
+     * @return \BSApp\Service\plentymarketsAPI\Model\IlluminateDatabaseEloquentCollection
      */
     public function restItemsVariationsVariationMarketsPost($body = null)
     {
@@ -78824,13 +78824,13 @@ class ItemApi
      *
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\IlluminateDatabaseEloquentCollection, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\IlluminateDatabaseEloquentCollection, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsVariationsVariationMarketsPostWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\IlluminateDatabaseEloquentCollection';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\IlluminateDatabaseEloquentCollection';
         $request = $this->restItemsVariationsVariationMarketsPostRequest($body);
 
         try {
@@ -78882,7 +78882,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\IlluminateDatabaseEloquentCollection',
+                        '\BSApp\Service\plentymarketsAPI\Model\IlluminateDatabaseEloquentCollection',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -78924,7 +78924,7 @@ class ItemApi
      */
     public function restItemsVariationsVariationMarketsPostAsyncWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\IlluminateDatabaseEloquentCollection';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\IlluminateDatabaseEloquentCollection';
         $request = $this->restItemsVariationsVariationMarketsPostRequest($body);
 
         return $this->client
@@ -79062,9 +79062,9 @@ class ItemApi
      *
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\IlluminateSupportCollection
+     * @return \BSApp\Service\plentymarketsAPI\Model\IlluminateSupportCollection
      */
     public function restItemsVariationsVariationPropertiesPost($body = null)
     {
@@ -79079,13 +79079,13 @@ class ItemApi
      *
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\IlluminateSupportCollection, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\IlluminateSupportCollection, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsVariationsVariationPropertiesPostWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\IlluminateSupportCollection';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\IlluminateSupportCollection';
         $request = $this->restItemsVariationsVariationPropertiesPostRequest($body);
 
         try {
@@ -79137,7 +79137,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\IlluminateSupportCollection',
+                        '\BSApp\Service\plentymarketsAPI\Model\IlluminateSupportCollection',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -79179,7 +79179,7 @@ class ItemApi
      */
     public function restItemsVariationsVariationPropertiesPostAsyncWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\IlluminateSupportCollection';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\IlluminateSupportCollection';
         $request = $this->restItemsVariationsVariationPropertiesPostRequest($body);
 
         return $this->client
@@ -79317,9 +79317,9 @@ class ItemApi
      *
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\IlluminateSupportCollection
+     * @return \BSApp\Service\plentymarketsAPI\Model\IlluminateSupportCollection
      */
     public function restItemsVariationsVariationPropertiesPut($body = null)
     {
@@ -79334,13 +79334,13 @@ class ItemApi
      *
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\IlluminateSupportCollection, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\IlluminateSupportCollection, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsVariationsVariationPropertiesPutWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\IlluminateSupportCollection';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\IlluminateSupportCollection';
         $request = $this->restItemsVariationsVariationPropertiesPutRequest($body);
 
         try {
@@ -79392,7 +79392,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\IlluminateSupportCollection',
+                        '\BSApp\Service\plentymarketsAPI\Model\IlluminateSupportCollection',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -79434,7 +79434,7 @@ class ItemApi
      */
     public function restItemsVariationsVariationPropertiesPutAsyncWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\IlluminateSupportCollection';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\IlluminateSupportCollection';
         $request = $this->restItemsVariationsVariationPropertiesPutRequest($body);
 
         return $this->client
@@ -79574,7 +79574,7 @@ class ItemApi
      * @param  int $sales_price_id Filter that restricts the search result to the sales price data of variations linked to a specific sales price. (optional)
      * @param  string $updated_at Filter that restricts the search result to links between variations and sales prices updated after a specific point in time. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -79593,7 +79593,7 @@ class ItemApi
      * @param  int $sales_price_id Filter that restricts the search result to the sales price data of variations linked to a specific sales price. (optional)
      * @param  string $updated_at Filter that restricts the search result to links between variations and sales prices updated after a specific point in time. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -79846,9 +79846,9 @@ class ItemApi
      *
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\IlluminateSupportCollection
+     * @return \BSApp\Service\plentymarketsAPI\Model\IlluminateSupportCollection
      */
     public function restItemsVariationsVariationSalesPricesPost($body = null)
     {
@@ -79863,13 +79863,13 @@ class ItemApi
      *
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\IlluminateSupportCollection, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\IlluminateSupportCollection, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsVariationsVariationSalesPricesPostWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\IlluminateSupportCollection';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\IlluminateSupportCollection';
         $request = $this->restItemsVariationsVariationSalesPricesPostRequest($body);
 
         try {
@@ -79921,7 +79921,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\IlluminateSupportCollection',
+                        '\BSApp\Service\plentymarketsAPI\Model\IlluminateSupportCollection',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -79963,7 +79963,7 @@ class ItemApi
      */
     public function restItemsVariationsVariationSalesPricesPostAsyncWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\IlluminateSupportCollection';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\IlluminateSupportCollection';
         $request = $this->restItemsVariationsVariationSalesPricesPostRequest($body);
 
         return $this->client
@@ -80101,9 +80101,9 @@ class ItemApi
      *
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\IlluminateSupportCollection
+     * @return \BSApp\Service\plentymarketsAPI\Model\IlluminateSupportCollection
      */
     public function restItemsVariationsVariationSalesPricesPut($body = null)
     {
@@ -80118,13 +80118,13 @@ class ItemApi
      *
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\IlluminateSupportCollection, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\IlluminateSupportCollection, HTTP status code, HTTP response headers (array of strings)
      */
     public function restItemsVariationsVariationSalesPricesPutWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\IlluminateSupportCollection';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\IlluminateSupportCollection';
         $request = $this->restItemsVariationsVariationSalesPricesPutRequest($body);
 
         try {
@@ -80176,7 +80176,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\IlluminateSupportCollection',
+                        '\BSApp\Service\plentymarketsAPI\Model\IlluminateSupportCollection',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -80218,7 +80218,7 @@ class ItemApi
      */
     public function restItemsVariationsVariationSalesPricesPutAsyncWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\IlluminateSupportCollection';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\IlluminateSupportCollection';
         $request = $this->restItemsVariationsVariationSalesPricesPutRequest($body);
 
         return $this->client

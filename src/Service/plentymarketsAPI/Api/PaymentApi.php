@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  BSApp\Service\plentymarketsAPI
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace BSApp\Service\plentymarketsAPI\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -33,16 +33,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use BSApp\Service\plentymarketsAPI\ApiException;
+use BSApp\Service\plentymarketsAPI\Configuration;
+use BSApp\Service\plentymarketsAPI\HeaderSelector;
+use BSApp\Service\plentymarketsAPI\ObjectSerializer;
 
 /**
  * PaymentApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  BSApp\Service\plentymarketsAPI
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -94,9 +94,9 @@ class PaymentApi
      * @param  int $payment_id payment_id (required)
      * @param  int $contact_id contact_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesPaymentModelsPaymentContactRelation
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentModelsPaymentContactRelation
      */
     public function restPaymentPaymentIdContactContactIdPost($payment_id, $contact_id)
     {
@@ -112,13 +112,13 @@ class PaymentApi
      * @param  int $payment_id (required)
      * @param  int $contact_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesPaymentModelsPaymentContactRelation, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentModelsPaymentContactRelation, HTTP status code, HTTP response headers (array of strings)
      */
     public function restPaymentPaymentIdContactContactIdPostWithHttpInfo($payment_id, $contact_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPaymentModelsPaymentContactRelation';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentModelsPaymentContactRelation';
         $request = $this->restPaymentPaymentIdContactContactIdPostRequest($payment_id, $contact_id);
 
         try {
@@ -170,7 +170,7 @@ class PaymentApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesPaymentModelsPaymentContactRelation',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentModelsPaymentContactRelation',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -214,7 +214,7 @@ class PaymentApi
      */
     public function restPaymentPaymentIdContactContactIdPostAsyncWithHttpInfo($payment_id, $contact_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPaymentModelsPaymentContactRelation';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentModelsPaymentContactRelation';
         $request = $this->restPaymentPaymentIdContactContactIdPostRequest($payment_id, $contact_id);
 
         return $this->client
@@ -378,7 +378,7 @@ class PaymentApi
      *
      * @param  int $payment_id payment_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -394,7 +394,7 @@ class PaymentApi
      *
      * @param  int $payment_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -607,7 +607,7 @@ class PaymentApi
      *
      * @param  int $payment_id payment_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -623,7 +623,7 @@ class PaymentApi
      *
      * @param  int $payment_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -837,9 +837,9 @@ class PaymentApi
      * @param  int $payment_id payment_id (required)
      * @param  int $order_id order_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesPaymentModelsPaymentOrderRelation
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentModelsPaymentOrderRelation
      */
     public function restPaymentPaymentIdOrderOrderIdPost($payment_id, $order_id)
     {
@@ -855,13 +855,13 @@ class PaymentApi
      * @param  int $payment_id (required)
      * @param  int $order_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesPaymentModelsPaymentOrderRelation, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentModelsPaymentOrderRelation, HTTP status code, HTTP response headers (array of strings)
      */
     public function restPaymentPaymentIdOrderOrderIdPostWithHttpInfo($payment_id, $order_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPaymentModelsPaymentOrderRelation';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentModelsPaymentOrderRelation';
         $request = $this->restPaymentPaymentIdOrderOrderIdPostRequest($payment_id, $order_id);
 
         try {
@@ -913,7 +913,7 @@ class PaymentApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesPaymentModelsPaymentOrderRelation',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentModelsPaymentOrderRelation',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -957,7 +957,7 @@ class PaymentApi
      */
     public function restPaymentPaymentIdOrderOrderIdPostAsyncWithHttpInfo($payment_id, $order_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPaymentModelsPaymentOrderRelation';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentModelsPaymentOrderRelation';
         $request = $this->restPaymentPaymentIdOrderOrderIdPostRequest($payment_id, $order_id);
 
         return $this->client
@@ -1123,9 +1123,9 @@ class PaymentApi
      * @param  int $items_per_page The number of items to list per page (optional)
      * @param  int $page The page of results to search for (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesPaymentModelsPaymentPropertyTypeName[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentModelsPaymentPropertyTypeName[]
      */
     public function restPaymentPropertiesTypesNamesLangGet($lang, $items_per_page = null, $page = null)
     {
@@ -1142,13 +1142,13 @@ class PaymentApi
      * @param  int $items_per_page The number of items to list per page (optional)
      * @param  int $page The page of results to search for (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesPaymentModelsPaymentPropertyTypeName[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentModelsPaymentPropertyTypeName[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restPaymentPropertiesTypesNamesLangGetWithHttpInfo($lang, $items_per_page = null, $page = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPaymentModelsPaymentPropertyTypeName[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentModelsPaymentPropertyTypeName[]';
         $request = $this->restPaymentPropertiesTypesNamesLangGetRequest($lang, $items_per_page, $page);
 
         try {
@@ -1200,7 +1200,7 @@ class PaymentApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesPaymentModelsPaymentPropertyTypeName[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentModelsPaymentPropertyTypeName[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1246,7 +1246,7 @@ class PaymentApi
      */
     public function restPaymentPropertiesTypesNamesLangGetAsyncWithHttpInfo($lang, $items_per_page = null, $page = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPaymentModelsPaymentPropertyTypeName[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentModelsPaymentPropertyTypeName[]';
         $request = $this->restPaymentPropertiesTypesNamesLangGetRequest($lang, $items_per_page, $page);
 
         return $this->client
@@ -1405,9 +1405,9 @@ class PaymentApi
      *
      * @param  int $name_id name_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesPaymentModelsPaymentPropertyTypeName[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentModelsPaymentPropertyTypeName[]
      */
     public function restPaymentPropertiesTypesNamesNameIdGet($name_id)
     {
@@ -1422,13 +1422,13 @@ class PaymentApi
      *
      * @param  int $name_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesPaymentModelsPaymentPropertyTypeName[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentModelsPaymentPropertyTypeName[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restPaymentPropertiesTypesNamesNameIdGetWithHttpInfo($name_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPaymentModelsPaymentPropertyTypeName[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentModelsPaymentPropertyTypeName[]';
         $request = $this->restPaymentPropertiesTypesNamesNameIdGetRequest($name_id);
 
         try {
@@ -1480,7 +1480,7 @@ class PaymentApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesPaymentModelsPaymentPropertyTypeName[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentModelsPaymentPropertyTypeName[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1522,7 +1522,7 @@ class PaymentApi
      */
     public function restPaymentPropertiesTypesNamesNameIdGetAsyncWithHttpInfo($name_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPaymentModelsPaymentPropertyTypeName[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentModelsPaymentPropertyTypeName[]';
         $request = $this->restPaymentPropertiesTypesNamesNameIdGetRequest($name_id);
 
         return $this->client
@@ -1671,9 +1671,9 @@ class PaymentApi
      *
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesPaymentModelsPaymentPropertyTypeName
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentModelsPaymentPropertyTypeName
      */
     public function restPaymentPropertiesTypesNamesPost($body = null)
     {
@@ -1688,13 +1688,13 @@ class PaymentApi
      *
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesPaymentModelsPaymentPropertyTypeName, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentModelsPaymentPropertyTypeName, HTTP status code, HTTP response headers (array of strings)
      */
     public function restPaymentPropertiesTypesNamesPostWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPaymentModelsPaymentPropertyTypeName';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentModelsPaymentPropertyTypeName';
         $request = $this->restPaymentPropertiesTypesNamesPostRequest($body);
 
         try {
@@ -1746,7 +1746,7 @@ class PaymentApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesPaymentModelsPaymentPropertyTypeName',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentModelsPaymentPropertyTypeName',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1788,7 +1788,7 @@ class PaymentApi
      */
     public function restPaymentPropertiesTypesNamesPostAsyncWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPaymentModelsPaymentPropertyTypeName';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentModelsPaymentPropertyTypeName';
         $request = $this->restPaymentPropertiesTypesNamesPostRequest($body);
 
         return $this->client
@@ -1926,9 +1926,9 @@ class PaymentApi
      *
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesPaymentModelsPaymentPropertyTypeName
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentModelsPaymentPropertyTypeName
      */
     public function restPaymentPropertiesTypesNamesPut($body = null)
     {
@@ -1943,13 +1943,13 @@ class PaymentApi
      *
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesPaymentModelsPaymentPropertyTypeName, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentModelsPaymentPropertyTypeName, HTTP status code, HTTP response headers (array of strings)
      */
     public function restPaymentPropertiesTypesNamesPutWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPaymentModelsPaymentPropertyTypeName';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentModelsPaymentPropertyTypeName';
         $request = $this->restPaymentPropertiesTypesNamesPutRequest($body);
 
         try {
@@ -2001,7 +2001,7 @@ class PaymentApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesPaymentModelsPaymentPropertyTypeName',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentModelsPaymentPropertyTypeName',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2043,7 +2043,7 @@ class PaymentApi
      */
     public function restPaymentPropertiesTypesNamesPutAsyncWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPaymentModelsPaymentPropertyTypeName';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentModelsPaymentPropertyTypeName';
         $request = $this->restPaymentPropertiesTypesNamesPutRequest($body);
 
         return $this->client
@@ -2184,9 +2184,9 @@ class PaymentApi
      * @param  int $items_per_page The number of items to list per page (optional)
      * @param  int $page The page of results to search for (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesPaymentModelsPayment[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentModelsPayment[]
      */
     public function restPaymentsEntrydateGet($start_date = null, $end_date = null, $items_per_page = null, $page = null)
     {
@@ -2204,13 +2204,13 @@ class PaymentApi
      * @param  int $items_per_page The number of items to list per page (optional)
      * @param  int $page The page of results to search for (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesPaymentModelsPayment[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentModelsPayment[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restPaymentsEntrydateGetWithHttpInfo($start_date = null, $end_date = null, $items_per_page = null, $page = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPaymentModelsPayment[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentModelsPayment[]';
         $request = $this->restPaymentsEntrydateGetRequest($start_date, $end_date, $items_per_page, $page);
 
         try {
@@ -2262,7 +2262,7 @@ class PaymentApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesPaymentModelsPayment[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentModelsPayment[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2310,7 +2310,7 @@ class PaymentApi
      */
     public function restPaymentsEntrydateGetAsyncWithHttpInfo($start_date = null, $end_date = null, $items_per_page = null, $page = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPaymentModelsPayment[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentModelsPayment[]';
         $request = $this->restPaymentsEntrydateGetRequest($start_date, $end_date, $items_per_page, $page);
 
         return $this->client
@@ -2465,9 +2465,9 @@ class PaymentApi
      * @param  int $items_per_page The number of items to list per page (optional)
      * @param  int $page The page of results to search for (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesPaymentModelsPayment[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentModelsPayment[]
      */
     public function restPaymentsGet($items_per_page = null, $page = null)
     {
@@ -2483,13 +2483,13 @@ class PaymentApi
      * @param  int $items_per_page The number of items to list per page (optional)
      * @param  int $page The page of results to search for (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesPaymentModelsPayment[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentModelsPayment[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restPaymentsGetWithHttpInfo($items_per_page = null, $page = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPaymentModelsPayment[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentModelsPayment[]';
         $request = $this->restPaymentsGetRequest($items_per_page, $page);
 
         try {
@@ -2541,7 +2541,7 @@ class PaymentApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesPaymentModelsPayment[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentModelsPayment[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2585,7 +2585,7 @@ class PaymentApi
      */
     public function restPaymentsGetAsyncWithHttpInfo($items_per_page = null, $page = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPaymentModelsPayment[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentModelsPayment[]';
         $request = $this->restPaymentsGetRequest($items_per_page, $page);
 
         return $this->client
@@ -2732,9 +2732,9 @@ class PaymentApi
      * @param  int $items_per_page The number of items to list per page (optional)
      * @param  int $page The page of results to search for (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesPaymentModelsPayment[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentModelsPayment[]
      */
     public function restPaymentsImportdateGet($start_date = null, $end_date = null, $items_per_page = null, $page = null)
     {
@@ -2752,13 +2752,13 @@ class PaymentApi
      * @param  int $items_per_page The number of items to list per page (optional)
      * @param  int $page The page of results to search for (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesPaymentModelsPayment[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentModelsPayment[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restPaymentsImportdateGetWithHttpInfo($start_date = null, $end_date = null, $items_per_page = null, $page = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPaymentModelsPayment[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentModelsPayment[]';
         $request = $this->restPaymentsImportdateGetRequest($start_date, $end_date, $items_per_page, $page);
 
         try {
@@ -2810,7 +2810,7 @@ class PaymentApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesPaymentModelsPayment[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentModelsPayment[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2858,7 +2858,7 @@ class PaymentApi
      */
     public function restPaymentsImportdateGetAsyncWithHttpInfo($start_date = null, $end_date = null, $items_per_page = null, $page = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPaymentModelsPayment[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentModelsPayment[]';
         $request = $this->restPaymentsImportdateGetRequest($start_date, $end_date, $items_per_page, $page);
 
         return $this->client
@@ -3013,9 +3013,9 @@ class PaymentApi
      * @param  int $items_per_page The number of items to list per page (optional)
      * @param  int $page The page of results to search for (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesPaymentMethodNameModelsPaymentMethodName[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentMethodNameModelsPaymentMethodName[]
      */
     public function restPaymentsMethodNamesGet($items_per_page = null, $page = null)
     {
@@ -3031,13 +3031,13 @@ class PaymentApi
      * @param  int $items_per_page The number of items to list per page (optional)
      * @param  int $page The page of results to search for (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesPaymentMethodNameModelsPaymentMethodName[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentMethodNameModelsPaymentMethodName[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restPaymentsMethodNamesGetWithHttpInfo($items_per_page = null, $page = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPaymentMethodNameModelsPaymentMethodName[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentMethodNameModelsPaymentMethodName[]';
         $request = $this->restPaymentsMethodNamesGetRequest($items_per_page, $page);
 
         try {
@@ -3089,7 +3089,7 @@ class PaymentApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesPaymentMethodNameModelsPaymentMethodName[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentMethodNameModelsPaymentMethodName[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3133,7 +3133,7 @@ class PaymentApi
      */
     public function restPaymentsMethodNamesGetAsyncWithHttpInfo($items_per_page = null, $page = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPaymentMethodNameModelsPaymentMethodName[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentMethodNameModelsPaymentMethodName[]';
         $request = $this->restPaymentsMethodNamesGetRequest($items_per_page, $page);
 
         return $this->client
@@ -3275,9 +3275,9 @@ class PaymentApi
      * @param  int $items_per_page The number of items to list per page (optional)
      * @param  int $page The page of results to search for (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesPaymentMethodNameModelsPaymentMethodName[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentMethodNameModelsPaymentMethodName[]
      */
     public function restPaymentsMethodNamesPaymentMethodIdGet($payment_method_id, $items_per_page = null, $page = null)
     {
@@ -3294,13 +3294,13 @@ class PaymentApi
      * @param  int $items_per_page The number of items to list per page (optional)
      * @param  int $page The page of results to search for (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesPaymentMethodNameModelsPaymentMethodName[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentMethodNameModelsPaymentMethodName[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restPaymentsMethodNamesPaymentMethodIdGetWithHttpInfo($payment_method_id, $items_per_page = null, $page = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPaymentMethodNameModelsPaymentMethodName[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentMethodNameModelsPaymentMethodName[]';
         $request = $this->restPaymentsMethodNamesPaymentMethodIdGetRequest($payment_method_id, $items_per_page, $page);
 
         try {
@@ -3352,7 +3352,7 @@ class PaymentApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesPaymentMethodNameModelsPaymentMethodName[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentMethodNameModelsPaymentMethodName[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3398,7 +3398,7 @@ class PaymentApi
      */
     public function restPaymentsMethodNamesPaymentMethodIdGetAsyncWithHttpInfo($payment_method_id, $items_per_page = null, $page = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPaymentMethodNameModelsPaymentMethodName[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentMethodNameModelsPaymentMethodName[]';
         $request = $this->restPaymentsMethodNamesPaymentMethodIdGetRequest($payment_method_id, $items_per_page, $page);
 
         return $this->client
@@ -3554,9 +3554,9 @@ class PaymentApi
      * @param  int $payment_method_id payment_method_id (required)
      * @param  int $lang lang (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesPaymentMethodNameModelsPaymentMethodName
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentMethodNameModelsPaymentMethodName
      */
     public function restPaymentsMethodNamesPaymentMethodIdLangGet($payment_method_id, $lang)
     {
@@ -3572,13 +3572,13 @@ class PaymentApi
      * @param  int $payment_method_id (required)
      * @param  int $lang (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesPaymentMethodNameModelsPaymentMethodName, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentMethodNameModelsPaymentMethodName, HTTP status code, HTTP response headers (array of strings)
      */
     public function restPaymentsMethodNamesPaymentMethodIdLangGetWithHttpInfo($payment_method_id, $lang)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPaymentMethodNameModelsPaymentMethodName';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentMethodNameModelsPaymentMethodName';
         $request = $this->restPaymentsMethodNamesPaymentMethodIdLangGetRequest($payment_method_id, $lang);
 
         try {
@@ -3630,7 +3630,7 @@ class PaymentApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesPaymentMethodNameModelsPaymentMethodName',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentMethodNameModelsPaymentMethodName',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3674,7 +3674,7 @@ class PaymentApi
      */
     public function restPaymentsMethodNamesPaymentMethodIdLangGetAsyncWithHttpInfo($payment_method_id, $lang)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPaymentMethodNameModelsPaymentMethodName';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentMethodNameModelsPaymentMethodName';
         $request = $this->restPaymentsMethodNamesPaymentMethodIdLangGetRequest($payment_method_id, $lang);
 
         return $this->client
@@ -3833,9 +3833,9 @@ class PaymentApi
      * Get EBICS Accounts
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\Mixed[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\Mixed[]
      */
     public function restPaymentsMethodsEbicsGet()
     {
@@ -3849,13 +3849,13 @@ class PaymentApi
      * Get EBICS Accounts
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\Mixed[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\Mixed[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restPaymentsMethodsEbicsGetWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\Mixed[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\Mixed[]';
         $request = $this->restPaymentsMethodsEbicsGetRequest();
 
         try {
@@ -3907,7 +3907,7 @@ class PaymentApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\Mixed[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\Mixed[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3947,7 +3947,7 @@ class PaymentApi
      */
     public function restPaymentsMethodsEbicsGetAsyncWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\Mixed[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\Mixed[]';
         $request = $this->restPaymentsMethodsEbicsGetRequest();
 
         return $this->client
@@ -4081,9 +4081,9 @@ class PaymentApi
      *
      * @param  string $name The name of the EBICS Account (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\Mixed[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\Mixed[]
      */
     public function restPaymentsMethodsEbicsPost($name = null)
     {
@@ -4098,13 +4098,13 @@ class PaymentApi
      *
      * @param  string $name The name of the EBICS Account (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\Mixed[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\Mixed[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restPaymentsMethodsEbicsPostWithHttpInfo($name = null)
     {
-        $returnType = '\Swagger\Client\Model\Mixed[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\Mixed[]';
         $request = $this->restPaymentsMethodsEbicsPostRequest($name);
 
         try {
@@ -4156,7 +4156,7 @@ class PaymentApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\Mixed[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\Mixed[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4198,7 +4198,7 @@ class PaymentApi
      */
     public function restPaymentsMethodsEbicsPostAsyncWithHttpInfo($name = null)
     {
-        $returnType = '\Swagger\Client\Model\Mixed[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\Mixed[]';
         $request = $this->restPaymentsMethodsEbicsPostRequest($name);
 
         return $this->client
@@ -4338,9 +4338,9 @@ class PaymentApi
      * @param  int $items_per_page The number of items to list per page (optional)
      * @param  int $page The page of results to search for (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesPaymentMethodModelsPaymentMethod[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentMethodModelsPaymentMethod[]
      */
     public function restPaymentsMethodsGet($items_per_page = null, $page = null)
     {
@@ -4356,13 +4356,13 @@ class PaymentApi
      * @param  int $items_per_page The number of items to list per page (optional)
      * @param  int $page The page of results to search for (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesPaymentMethodModelsPaymentMethod[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentMethodModelsPaymentMethod[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restPaymentsMethodsGetWithHttpInfo($items_per_page = null, $page = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPaymentMethodModelsPaymentMethod[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentMethodModelsPaymentMethod[]';
         $request = $this->restPaymentsMethodsGetRequest($items_per_page, $page);
 
         try {
@@ -4414,7 +4414,7 @@ class PaymentApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesPaymentMethodModelsPaymentMethod[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentMethodModelsPaymentMethod[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4458,7 +4458,7 @@ class PaymentApi
      */
     public function restPaymentsMethodsGetAsyncWithHttpInfo($items_per_page = null, $page = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPaymentMethodModelsPaymentMethod[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentMethodModelsPaymentMethod[]';
         $request = $this->restPaymentsMethodsGetRequest($items_per_page, $page);
 
         return $this->client
@@ -4601,7 +4601,7 @@ class PaymentApi
      * Returns the HBCI-Account count
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -4616,7 +4616,7 @@ class PaymentApi
      * Returns the HBCI-Account count
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -4814,9 +4814,9 @@ class PaymentApi
      * @param  int $items_per_page The number of items to list per page (optional)
      * @param  int $page The page of results to search for (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesPaymentModelsPayment[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentModelsPayment[]
      */
     public function restPaymentsMethodsMethodIdGet($method_id, $items_per_page = null, $page = null)
     {
@@ -4833,13 +4833,13 @@ class PaymentApi
      * @param  int $items_per_page The number of items to list per page (optional)
      * @param  int $page The page of results to search for (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesPaymentModelsPayment[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentModelsPayment[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restPaymentsMethodsMethodIdGetWithHttpInfo($method_id, $items_per_page = null, $page = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPaymentModelsPayment[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentModelsPayment[]';
         $request = $this->restPaymentsMethodsMethodIdGetRequest($method_id, $items_per_page, $page);
 
         try {
@@ -4891,7 +4891,7 @@ class PaymentApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesPaymentModelsPayment[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentModelsPayment[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4937,7 +4937,7 @@ class PaymentApi
      */
     public function restPaymentsMethodsMethodIdGetAsyncWithHttpInfo($method_id, $items_per_page = null, $page = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPaymentModelsPayment[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentModelsPayment[]';
         $request = $this->restPaymentsMethodsMethodIdGetRequest($method_id, $items_per_page, $page);
 
         return $this->client
@@ -5098,9 +5098,9 @@ class PaymentApi
      * @param  int $items_per_page The number of items to list per page (optional)
      * @param  int $page The page of results to search for (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesPaymentMethodModelsPaymentMethod[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentMethodModelsPaymentMethod[]
      */
     public function restPaymentsMethodsPluginsPluginKeyGet($plugin_key, $items_per_page = null, $page = null)
     {
@@ -5117,13 +5117,13 @@ class PaymentApi
      * @param  int $items_per_page The number of items to list per page (optional)
      * @param  int $page The page of results to search for (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesPaymentMethodModelsPaymentMethod[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentMethodModelsPaymentMethod[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restPaymentsMethodsPluginsPluginKeyGetWithHttpInfo($plugin_key, $items_per_page = null, $page = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPaymentMethodModelsPaymentMethod[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentMethodModelsPaymentMethod[]';
         $request = $this->restPaymentsMethodsPluginsPluginKeyGetRequest($plugin_key, $items_per_page, $page);
 
         try {
@@ -5175,7 +5175,7 @@ class PaymentApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesPaymentMethodModelsPaymentMethod[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentMethodModelsPaymentMethod[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5221,7 +5221,7 @@ class PaymentApi
      */
     public function restPaymentsMethodsPluginsPluginKeyGetAsyncWithHttpInfo($plugin_key, $items_per_page = null, $page = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPaymentMethodModelsPaymentMethod[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentMethodModelsPaymentMethod[]';
         $request = $this->restPaymentsMethodsPluginsPluginKeyGetRequest($plugin_key, $items_per_page, $page);
 
         return $this->client
@@ -5380,9 +5380,9 @@ class PaymentApi
      *
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesPaymentMethodModelsPaymentMethod
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentMethodModelsPaymentMethod
      */
     public function restPaymentsMethodsPost($body = null)
     {
@@ -5397,13 +5397,13 @@ class PaymentApi
      *
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesPaymentMethodModelsPaymentMethod, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentMethodModelsPaymentMethod, HTTP status code, HTTP response headers (array of strings)
      */
     public function restPaymentsMethodsPostWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPaymentMethodModelsPaymentMethod';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentMethodModelsPaymentMethod';
         $request = $this->restPaymentsMethodsPostRequest($body);
 
         try {
@@ -5455,7 +5455,7 @@ class PaymentApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesPaymentMethodModelsPaymentMethod',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentMethodModelsPaymentMethod',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5497,7 +5497,7 @@ class PaymentApi
      */
     public function restPaymentsMethodsPostAsyncWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPaymentMethodModelsPaymentMethod';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentMethodModelsPaymentMethod';
         $request = $this->restPaymentsMethodsPostRequest($body);
 
         return $this->client
@@ -5635,9 +5635,9 @@ class PaymentApi
      *
      * @param  string $language language (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\Mixed[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\Mixed[]
      */
     public function restPaymentsMethodsPreviewLanguageGet($language)
     {
@@ -5652,13 +5652,13 @@ class PaymentApi
      *
      * @param  string $language (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\Mixed[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\Mixed[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restPaymentsMethodsPreviewLanguageGetWithHttpInfo($language)
     {
-        $returnType = '\Swagger\Client\Model\Mixed[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\Mixed[]';
         $request = $this->restPaymentsMethodsPreviewLanguageGetRequest($language);
 
         try {
@@ -5710,7 +5710,7 @@ class PaymentApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\Mixed[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\Mixed[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5752,7 +5752,7 @@ class PaymentApi
      */
     public function restPaymentsMethodsPreviewLanguageGetAsyncWithHttpInfo($language)
     {
-        $returnType = '\Swagger\Client\Model\Mixed[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\Mixed[]';
         $request = $this->restPaymentsMethodsPreviewLanguageGetRequest($language);
 
         return $this->client
@@ -5901,9 +5901,9 @@ class PaymentApi
      *
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesPaymentMethodModelsPaymentMethod
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentMethodModelsPaymentMethod
      */
     public function restPaymentsMethodsPut($body = null)
     {
@@ -5918,13 +5918,13 @@ class PaymentApi
      *
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesPaymentMethodModelsPaymentMethod, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentMethodModelsPaymentMethod, HTTP status code, HTTP response headers (array of strings)
      */
     public function restPaymentsMethodsPutWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPaymentMethodModelsPaymentMethod';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentMethodModelsPaymentMethod';
         $request = $this->restPaymentsMethodsPutRequest($body);
 
         try {
@@ -5976,7 +5976,7 @@ class PaymentApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesPaymentMethodModelsPaymentMethod',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentMethodModelsPaymentMethod',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6018,7 +6018,7 @@ class PaymentApi
      */
     public function restPaymentsMethodsPutAsyncWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPaymentMethodModelsPaymentMethod';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentMethodModelsPaymentMethod';
         $request = $this->restPaymentsMethodsPutRequest($body);
 
         return $this->client
@@ -6158,9 +6158,9 @@ class PaymentApi
      * @param  int $items_per_page The number of items to list per page (optional)
      * @param  int $page The page of results to search for (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesPaymentModelsPayment[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentModelsPayment[]
      */
     public function restPaymentsOrdersOrderIdGet($order_id, $items_per_page = null, $page = null)
     {
@@ -6177,13 +6177,13 @@ class PaymentApi
      * @param  int $items_per_page The number of items to list per page (optional)
      * @param  int $page The page of results to search for (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesPaymentModelsPayment[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentModelsPayment[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restPaymentsOrdersOrderIdGetWithHttpInfo($order_id, $items_per_page = null, $page = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPaymentModelsPayment[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentModelsPayment[]';
         $request = $this->restPaymentsOrdersOrderIdGetRequest($order_id, $items_per_page, $page);
 
         try {
@@ -6235,7 +6235,7 @@ class PaymentApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesPaymentModelsPayment[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentModelsPayment[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6281,7 +6281,7 @@ class PaymentApi
      */
     public function restPaymentsOrdersOrderIdGetAsyncWithHttpInfo($order_id, $items_per_page = null, $page = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPaymentModelsPayment[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentModelsPayment[]';
         $request = $this->restPaymentsOrdersOrderIdGetRequest($order_id, $items_per_page, $page);
 
         return $this->client
@@ -6440,9 +6440,9 @@ class PaymentApi
      *
      * @param  int $payment_id payment_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesPaymentModelsPayment
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentModelsPayment
      */
     public function restPaymentsPaymentIdGet($payment_id)
     {
@@ -6457,13 +6457,13 @@ class PaymentApi
      *
      * @param  int $payment_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesPaymentModelsPayment, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentModelsPayment, HTTP status code, HTTP response headers (array of strings)
      */
     public function restPaymentsPaymentIdGetWithHttpInfo($payment_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPaymentModelsPayment';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentModelsPayment';
         $request = $this->restPaymentsPaymentIdGetRequest($payment_id);
 
         try {
@@ -6515,7 +6515,7 @@ class PaymentApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesPaymentModelsPayment',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentModelsPayment',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6557,7 +6557,7 @@ class PaymentApi
      */
     public function restPaymentsPaymentIdGetAsyncWithHttpInfo($payment_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPaymentModelsPayment';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentModelsPayment';
         $request = $this->restPaymentsPaymentIdGetRequest($payment_id);
 
         return $this->client
@@ -6708,9 +6708,9 @@ class PaymentApi
      * @param  int $items_per_page The number of items to list per page (optional)
      * @param  int $page The page of results to search for (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesPaymentModelsPaymentProperty[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentModelsPaymentProperty[]
      */
     public function restPaymentsPaymentIdPropertiesGet($payment_id, $items_per_page = null, $page = null)
     {
@@ -6727,13 +6727,13 @@ class PaymentApi
      * @param  int $items_per_page The number of items to list per page (optional)
      * @param  int $page The page of results to search for (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesPaymentModelsPaymentProperty[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentModelsPaymentProperty[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restPaymentsPaymentIdPropertiesGetWithHttpInfo($payment_id, $items_per_page = null, $page = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPaymentModelsPaymentProperty[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentModelsPaymentProperty[]';
         $request = $this->restPaymentsPaymentIdPropertiesGetRequest($payment_id, $items_per_page, $page);
 
         try {
@@ -6785,7 +6785,7 @@ class PaymentApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesPaymentModelsPaymentProperty[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentModelsPaymentProperty[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6831,7 +6831,7 @@ class PaymentApi
      */
     public function restPaymentsPaymentIdPropertiesGetAsyncWithHttpInfo($payment_id, $items_per_page = null, $page = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPaymentModelsPaymentProperty[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentModelsPaymentProperty[]';
         $request = $this->restPaymentsPaymentIdPropertiesGetRequest($payment_id, $items_per_page, $page);
 
         return $this->client
@@ -6990,9 +6990,9 @@ class PaymentApi
      *
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesPaymentModelsPayment
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentModelsPayment
      */
     public function restPaymentsPost($body = null)
     {
@@ -7007,13 +7007,13 @@ class PaymentApi
      *
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesPaymentModelsPayment, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentModelsPayment, HTTP status code, HTTP response headers (array of strings)
      */
     public function restPaymentsPostWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPaymentModelsPayment';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentModelsPayment';
         $request = $this->restPaymentsPostRequest($body);
 
         try {
@@ -7065,7 +7065,7 @@ class PaymentApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesPaymentModelsPayment',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentModelsPayment',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -7107,7 +7107,7 @@ class PaymentApi
      */
     public function restPaymentsPostAsyncWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPaymentModelsPayment';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentModelsPayment';
         $request = $this->restPaymentsPostRequest($body);
 
         return $this->client
@@ -7248,9 +7248,9 @@ class PaymentApi
      * @param  int $items_per_page The number of items to list per page (optional)
      * @param  int $page The page of results to search for (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesPaymentModelsPaymentProperty[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentModelsPaymentProperty[]
      */
     public function restPaymentsPropertiesDateGet($start_date = null, $end_date = null, $items_per_page = null, $page = null)
     {
@@ -7268,13 +7268,13 @@ class PaymentApi
      * @param  int $items_per_page The number of items to list per page (optional)
      * @param  int $page The page of results to search for (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesPaymentModelsPaymentProperty[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentModelsPaymentProperty[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restPaymentsPropertiesDateGetWithHttpInfo($start_date = null, $end_date = null, $items_per_page = null, $page = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPaymentModelsPaymentProperty[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentModelsPaymentProperty[]';
         $request = $this->restPaymentsPropertiesDateGetRequest($start_date, $end_date, $items_per_page, $page);
 
         try {
@@ -7326,7 +7326,7 @@ class PaymentApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesPaymentModelsPaymentProperty[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentModelsPaymentProperty[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -7374,7 +7374,7 @@ class PaymentApi
      */
     public function restPaymentsPropertiesDateGetAsyncWithHttpInfo($start_date = null, $end_date = null, $items_per_page = null, $page = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPaymentModelsPaymentProperty[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentModelsPaymentProperty[]';
         $request = $this->restPaymentsPropertiesDateGetRequest($start_date, $end_date, $items_per_page, $page);
 
         return $this->client
@@ -7529,9 +7529,9 @@ class PaymentApi
      * @param  int $items_per_page The number of items to list per page (optional)
      * @param  int $page The page of results to search for (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesPaymentModelsPaymentProperty[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentModelsPaymentProperty[]
      */
     public function restPaymentsPropertiesGet($items_per_page = null, $page = null)
     {
@@ -7547,13 +7547,13 @@ class PaymentApi
      * @param  int $items_per_page The number of items to list per page (optional)
      * @param  int $page The page of results to search for (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesPaymentModelsPaymentProperty[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentModelsPaymentProperty[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restPaymentsPropertiesGetWithHttpInfo($items_per_page = null, $page = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPaymentModelsPaymentProperty[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentModelsPaymentProperty[]';
         $request = $this->restPaymentsPropertiesGetRequest($items_per_page, $page);
 
         try {
@@ -7605,7 +7605,7 @@ class PaymentApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesPaymentModelsPaymentProperty[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentModelsPaymentProperty[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -7649,7 +7649,7 @@ class PaymentApi
      */
     public function restPaymentsPropertiesGetAsyncWithHttpInfo($items_per_page = null, $page = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPaymentModelsPaymentProperty[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentModelsPaymentProperty[]';
         $request = $this->restPaymentsPropertiesGetRequest($items_per_page, $page);
 
         return $this->client
@@ -7793,9 +7793,9 @@ class PaymentApi
      *
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesPaymentModelsPaymentProperty
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentModelsPaymentProperty
      */
     public function restPaymentsPropertiesPost($body = null)
     {
@@ -7810,13 +7810,13 @@ class PaymentApi
      *
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesPaymentModelsPaymentProperty, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentModelsPaymentProperty, HTTP status code, HTTP response headers (array of strings)
      */
     public function restPaymentsPropertiesPostWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPaymentModelsPaymentProperty';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentModelsPaymentProperty';
         $request = $this->restPaymentsPropertiesPostRequest($body);
 
         try {
@@ -7868,7 +7868,7 @@ class PaymentApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesPaymentModelsPaymentProperty',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentModelsPaymentProperty',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -7910,7 +7910,7 @@ class PaymentApi
      */
     public function restPaymentsPropertiesPostAsyncWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPaymentModelsPaymentProperty';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentModelsPaymentProperty';
         $request = $this->restPaymentsPropertiesPostRequest($body);
 
         return $this->client
@@ -8048,9 +8048,9 @@ class PaymentApi
      *
      * @param  int $property_id property_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesPaymentModelsPaymentProperty
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentModelsPaymentProperty
      */
     public function restPaymentsPropertiesPropertyIdGet($property_id)
     {
@@ -8065,13 +8065,13 @@ class PaymentApi
      *
      * @param  int $property_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesPaymentModelsPaymentProperty, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentModelsPaymentProperty, HTTP status code, HTTP response headers (array of strings)
      */
     public function restPaymentsPropertiesPropertyIdGetWithHttpInfo($property_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPaymentModelsPaymentProperty';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentModelsPaymentProperty';
         $request = $this->restPaymentsPropertiesPropertyIdGetRequest($property_id);
 
         try {
@@ -8123,7 +8123,7 @@ class PaymentApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesPaymentModelsPaymentProperty',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentModelsPaymentProperty',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -8165,7 +8165,7 @@ class PaymentApi
      */
     public function restPaymentsPropertiesPropertyIdGetAsyncWithHttpInfo($property_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPaymentModelsPaymentProperty';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentModelsPaymentProperty';
         $request = $this->restPaymentsPropertiesPropertyIdGetRequest($property_id);
 
         return $this->client
@@ -8314,9 +8314,9 @@ class PaymentApi
      *
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesPaymentModelsPaymentProperty
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentModelsPaymentProperty
      */
     public function restPaymentsPropertiesPut($body = null)
     {
@@ -8331,13 +8331,13 @@ class PaymentApi
      *
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesPaymentModelsPaymentProperty, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentModelsPaymentProperty, HTTP status code, HTTP response headers (array of strings)
      */
     public function restPaymentsPropertiesPutWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPaymentModelsPaymentProperty';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentModelsPaymentProperty';
         $request = $this->restPaymentsPropertiesPutRequest($body);
 
         try {
@@ -8389,7 +8389,7 @@ class PaymentApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesPaymentModelsPaymentProperty',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentModelsPaymentProperty',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -8431,7 +8431,7 @@ class PaymentApi
      */
     public function restPaymentsPropertiesPutAsyncWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPaymentModelsPaymentProperty';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentModelsPaymentProperty';
         $request = $this->restPaymentsPropertiesPutRequest($body);
 
         return $this->client
@@ -8570,9 +8570,9 @@ class PaymentApi
      * @param  int $items_per_page The number of items to list per page (optional)
      * @param  int $page The page of results to search for (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesPaymentModelsPaymentPropertyType[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentModelsPaymentPropertyType[]
      */
     public function restPaymentsPropertiesTypesGet($items_per_page = null, $page = null)
     {
@@ -8588,13 +8588,13 @@ class PaymentApi
      * @param  int $items_per_page The number of items to list per page (optional)
      * @param  int $page The page of results to search for (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesPaymentModelsPaymentPropertyType[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentModelsPaymentPropertyType[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restPaymentsPropertiesTypesGetWithHttpInfo($items_per_page = null, $page = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPaymentModelsPaymentPropertyType[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentModelsPaymentPropertyType[]';
         $request = $this->restPaymentsPropertiesTypesGetRequest($items_per_page, $page);
 
         try {
@@ -8646,7 +8646,7 @@ class PaymentApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesPaymentModelsPaymentPropertyType[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentModelsPaymentPropertyType[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -8690,7 +8690,7 @@ class PaymentApi
      */
     public function restPaymentsPropertiesTypesGetAsyncWithHttpInfo($items_per_page = null, $page = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPaymentModelsPaymentPropertyType[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentModelsPaymentPropertyType[]';
         $request = $this->restPaymentsPropertiesTypesGetRequest($items_per_page, $page);
 
         return $this->client
@@ -8834,9 +8834,9 @@ class PaymentApi
      *
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesPaymentModelsPaymentPropertyType
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentModelsPaymentPropertyType
      */
     public function restPaymentsPropertiesTypesPost($body = null)
     {
@@ -8851,13 +8851,13 @@ class PaymentApi
      *
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesPaymentModelsPaymentPropertyType, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentModelsPaymentPropertyType, HTTP status code, HTTP response headers (array of strings)
      */
     public function restPaymentsPropertiesTypesPostWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPaymentModelsPaymentPropertyType';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentModelsPaymentPropertyType';
         $request = $this->restPaymentsPropertiesTypesPostRequest($body);
 
         try {
@@ -8909,7 +8909,7 @@ class PaymentApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesPaymentModelsPaymentPropertyType',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentModelsPaymentPropertyType',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -8951,7 +8951,7 @@ class PaymentApi
      */
     public function restPaymentsPropertiesTypesPostAsyncWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPaymentModelsPaymentPropertyType';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentModelsPaymentPropertyType';
         $request = $this->restPaymentsPropertiesTypesPostRequest($body);
 
         return $this->client
@@ -9089,9 +9089,9 @@ class PaymentApi
      *
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesPaymentModelsPaymentPropertyType
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentModelsPaymentPropertyType
      */
     public function restPaymentsPropertiesTypesPut($body = null)
     {
@@ -9106,13 +9106,13 @@ class PaymentApi
      *
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesPaymentModelsPaymentPropertyType, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentModelsPaymentPropertyType, HTTP status code, HTTP response headers (array of strings)
      */
     public function restPaymentsPropertiesTypesPutWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPaymentModelsPaymentPropertyType';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentModelsPaymentPropertyType';
         $request = $this->restPaymentsPropertiesTypesPutRequest($body);
 
         try {
@@ -9164,7 +9164,7 @@ class PaymentApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesPaymentModelsPaymentPropertyType',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentModelsPaymentPropertyType',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -9206,7 +9206,7 @@ class PaymentApi
      */
     public function restPaymentsPropertiesTypesPutAsyncWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPaymentModelsPaymentPropertyType';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentModelsPaymentPropertyType';
         $request = $this->restPaymentsPropertiesTypesPutRequest($body);
 
         return $this->client
@@ -9344,9 +9344,9 @@ class PaymentApi
      *
      * @param  int $type_id type_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesPaymentModelsPaymentPropertyType[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentModelsPaymentPropertyType[]
      */
     public function restPaymentsPropertiesTypesTypeIdGet($type_id)
     {
@@ -9361,13 +9361,13 @@ class PaymentApi
      *
      * @param  int $type_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesPaymentModelsPaymentPropertyType[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentModelsPaymentPropertyType[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restPaymentsPropertiesTypesTypeIdGetWithHttpInfo($type_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPaymentModelsPaymentPropertyType[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentModelsPaymentPropertyType[]';
         $request = $this->restPaymentsPropertiesTypesTypeIdGetRequest($type_id);
 
         try {
@@ -9419,7 +9419,7 @@ class PaymentApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesPaymentModelsPaymentPropertyType[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentModelsPaymentPropertyType[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -9461,7 +9461,7 @@ class PaymentApi
      */
     public function restPaymentsPropertiesTypesTypeIdGetAsyncWithHttpInfo($type_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPaymentModelsPaymentPropertyType[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentModelsPaymentPropertyType[]';
         $request = $this->restPaymentsPropertiesTypesTypeIdGetRequest($type_id);
 
         return $this->client
@@ -9613,9 +9613,9 @@ class PaymentApi
      * @param  int $items_per_page The number of items to list per page (optional)
      * @param  int $page The page of results to search for (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesPaymentModelsPayment[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentModelsPayment[]
      */
     public function restPaymentsPropertyPropertyTypeIdPropertyValueGet($property_type_id, $property_value, $items_per_page = null, $page = null)
     {
@@ -9633,13 +9633,13 @@ class PaymentApi
      * @param  int $items_per_page The number of items to list per page (optional)
      * @param  int $page The page of results to search for (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesPaymentModelsPayment[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentModelsPayment[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restPaymentsPropertyPropertyTypeIdPropertyValueGetWithHttpInfo($property_type_id, $property_value, $items_per_page = null, $page = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPaymentModelsPayment[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentModelsPayment[]';
         $request = $this->restPaymentsPropertyPropertyTypeIdPropertyValueGetRequest($property_type_id, $property_value, $items_per_page, $page);
 
         try {
@@ -9691,7 +9691,7 @@ class PaymentApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesPaymentModelsPayment[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentModelsPayment[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -9739,7 +9739,7 @@ class PaymentApi
      */
     public function restPaymentsPropertyPropertyTypeIdPropertyValueGetAsyncWithHttpInfo($property_type_id, $property_value, $items_per_page = null, $page = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPaymentModelsPayment[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentModelsPayment[]';
         $request = $this->restPaymentsPropertyPropertyTypeIdPropertyValueGetRequest($property_type_id, $property_value, $items_per_page, $page);
 
         return $this->client
@@ -9913,9 +9913,9 @@ class PaymentApi
      *
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesPaymentModelsPayment
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentModelsPayment
      */
     public function restPaymentsPut($body = null)
     {
@@ -9930,13 +9930,13 @@ class PaymentApi
      *
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesPaymentModelsPayment, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentModelsPayment, HTTP status code, HTTP response headers (array of strings)
      */
     public function restPaymentsPutWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPaymentModelsPayment';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentModelsPayment';
         $request = $this->restPaymentsPutRequest($body);
 
         try {
@@ -9988,7 +9988,7 @@ class PaymentApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesPaymentModelsPayment',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentModelsPayment',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -10030,7 +10030,7 @@ class PaymentApi
      */
     public function restPaymentsPutAsyncWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPaymentModelsPayment';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentModelsPayment';
         $request = $this->restPaymentsPutRequest($body);
 
         return $this->client
@@ -10170,9 +10170,9 @@ class PaymentApi
      * @param  int $items_per_page The number of items to list per page (optional)
      * @param  int $page The page of results to search for (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesPaymentModelsPayment[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentModelsPayment[]
      */
     public function restPaymentsStatusStatusIdGet($status_id, $items_per_page = null, $page = null)
     {
@@ -10189,13 +10189,13 @@ class PaymentApi
      * @param  int $items_per_page The number of items to list per page (optional)
      * @param  int $page The page of results to search for (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesPaymentModelsPayment[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentModelsPayment[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restPaymentsStatusStatusIdGetWithHttpInfo($status_id, $items_per_page = null, $page = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPaymentModelsPayment[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentModelsPayment[]';
         $request = $this->restPaymentsStatusStatusIdGetRequest($status_id, $items_per_page, $page);
 
         try {
@@ -10247,7 +10247,7 @@ class PaymentApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesPaymentModelsPayment[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentModelsPayment[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -10293,7 +10293,7 @@ class PaymentApi
      */
     public function restPaymentsStatusStatusIdGetAsyncWithHttpInfo($status_id, $items_per_page = null, $page = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPaymentModelsPayment[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentModelsPayment[]';
         $request = $this->restPaymentsStatusStatusIdGetRequest($status_id, $items_per_page, $page);
 
         return $this->client
@@ -10454,9 +10454,9 @@ class PaymentApi
      * @param  int $items_per_page The number of items to list per page (optional)
      * @param  int $page The page of results to search for (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesPaymentModelsPayment[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentModelsPayment[]
      */
     public function restPaymentsTransactionsTransactionTypeIdGet($transaction_type_id, $items_per_page = null, $page = null)
     {
@@ -10473,13 +10473,13 @@ class PaymentApi
      * @param  int $items_per_page The number of items to list per page (optional)
      * @param  int $page The page of results to search for (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesPaymentModelsPayment[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentModelsPayment[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restPaymentsTransactionsTransactionTypeIdGetWithHttpInfo($transaction_type_id, $items_per_page = null, $page = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPaymentModelsPayment[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentModelsPayment[]';
         $request = $this->restPaymentsTransactionsTransactionTypeIdGetRequest($transaction_type_id, $items_per_page, $page);
 
         try {
@@ -10531,7 +10531,7 @@ class PaymentApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesPaymentModelsPayment[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentModelsPayment[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -10577,7 +10577,7 @@ class PaymentApi
      */
     public function restPaymentsTransactionsTransactionTypeIdGetAsyncWithHttpInfo($transaction_type_id, $items_per_page = null, $page = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPaymentModelsPayment[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPaymentModelsPayment[]';
         $request = $this->restPaymentsTransactionsTransactionTypeIdGetRequest($transaction_type_id, $items_per_page, $page);
 
         return $this->client

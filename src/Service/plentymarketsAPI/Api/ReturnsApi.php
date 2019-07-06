@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  BSApp\Service\plentymarketsAPI
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace BSApp\Service\plentymarketsAPI\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -33,16 +33,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use BSApp\Service\plentymarketsAPI\ApiException;
+use BSApp\Service\plentymarketsAPI\Configuration;
+use BSApp\Service\plentymarketsAPI\HeaderSelector;
+use BSApp\Service\plentymarketsAPI\ObjectSerializer;
 
 /**
  * ReturnsApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  BSApp\Service\plentymarketsAPI
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -92,9 +92,9 @@ class ReturnsApi
      * @param  int $returns_id The id of the order returns to be assigned. (required)
      * @param  int $order_id The id of the order that the order returns has to be assigned to. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesOrderShippingReturnsModelsOrderReturns
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderShippingReturnsModelsOrderReturns
      */
     public function restOrdersOrderIdShippingReturnsAssignLabelReturnsIdPut($returns_id, $order_id)
     {
@@ -108,13 +108,13 @@ class ReturnsApi
      * @param  int $returns_id The id of the order returns to be assigned. (required)
      * @param  int $order_id The id of the order that the order returns has to be assigned to. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesOrderShippingReturnsModelsOrderReturns, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderShippingReturnsModelsOrderReturns, HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersOrderIdShippingReturnsAssignLabelReturnsIdPutWithHttpInfo($returns_id, $order_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderShippingReturnsModelsOrderReturns';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderShippingReturnsModelsOrderReturns';
         $request = $this->restOrdersOrderIdShippingReturnsAssignLabelReturnsIdPutRequest($returns_id, $order_id);
 
         try {
@@ -166,7 +166,7 @@ class ReturnsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesOrderShippingReturnsModelsOrderReturns',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderShippingReturnsModelsOrderReturns',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -210,7 +210,7 @@ class ReturnsApi
      */
     public function restOrdersOrderIdShippingReturnsAssignLabelReturnsIdPutAsyncWithHttpInfo($returns_id, $order_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderShippingReturnsModelsOrderReturns';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderShippingReturnsModelsOrderReturns';
         $request = $this->restOrdersOrderIdShippingReturnsAssignLabelReturnsIdPutRequest($returns_id, $order_id);
 
         return $this->client
@@ -375,7 +375,7 @@ class ReturnsApi
      * @param  int $items_per_page The number of orders to be displayed per page. The default number of orders per page is 50. (optional)
      * @param  int $with Load additional relations for an order. Currently possible are:  &lt;ul&gt;  &lt;li&gt;&#x27;documents&#x27; &#x3D; The document objects that are associated with the order returns.&lt;/li&gt;  &lt;li&gt;&#x27;labels&#x27; &#x3D; The base64 encoded labels that are associated with the order returns.&lt;/li&gt;  &lt;/ul&gt;  Example: &lt;code&gt;?with[]&#x3D;documents&amp;with[]&#x3D;labels&lt;/code&gt; (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -393,7 +393,7 @@ class ReturnsApi
      * @param  int $items_per_page The number of orders to be displayed per page. The default number of orders per page is 50. (optional)
      * @param  int $with Load additional relations for an order. Currently possible are:  &lt;ul&gt;  &lt;li&gt;&#x27;documents&#x27; &#x3D; The document objects that are associated with the order returns.&lt;/li&gt;  &lt;li&gt;&#x27;labels&#x27; &#x3D; The base64 encoded labels that are associated with the order returns.&lt;/li&gt;  &lt;/ul&gt;  Example: &lt;code&gt;?with[]&#x3D;documents&amp;with[]&#x3D;labels&lt;/code&gt; (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -662,7 +662,7 @@ class ReturnsApi
      * @param  int $returns_id The id of the order returns to search for. (required)
      * @param  int $with Load additional relations for an order. Currently possible are:  &lt;ul&gt;  &lt;li&gt;&#x27;documents&#x27; &#x3D; The document objects that are associated with the order returns.&lt;/li&gt;  &lt;li&gt;&#x27;labels&#x27; &#x3D; The base64 encoded labels that are associated with the order returns.&lt;/li&gt;  &lt;/ul&gt;  Example: &lt;code&gt;?with[]&#x3D;documents&amp;with[]&#x3D;labels&lt;/code&gt; (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -678,7 +678,7 @@ class ReturnsApi
      * @param  int $returns_id The id of the order returns to search for. (required)
      * @param  int $with Load additional relations for an order. Currently possible are:  &lt;ul&gt;  &lt;li&gt;&#x27;documents&#x27; &#x3D; The document objects that are associated with the order returns.&lt;/li&gt;  &lt;li&gt;&#x27;labels&#x27; &#x3D; The base64 encoded labels that are associated with the order returns.&lt;/li&gt;  &lt;/ul&gt;  Example: &lt;code&gt;?with[]&#x3D;documents&amp;with[]&#x3D;labels&lt;/code&gt; (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */

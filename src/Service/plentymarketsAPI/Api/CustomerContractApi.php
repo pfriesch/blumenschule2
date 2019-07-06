@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  BSApp\Service\plentymarketsAPI
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace BSApp\Service\plentymarketsAPI\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -33,16 +33,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use BSApp\Service\plentymarketsAPI\ApiException;
+use BSApp\Service\plentymarketsAPI\Configuration;
+use BSApp\Service\plentymarketsAPI\HeaderSelector;
+use BSApp\Service\plentymarketsAPI\ObjectSerializer;
 
 /**
  * CustomerContractApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  BSApp\Service\plentymarketsAPI
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -93,9 +93,9 @@ class CustomerContractApi
      *
      * @param  int $contract_id contract_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\Mixed
+     * @return \BSApp\Service\plentymarketsAPI\Model\Mixed
      */
     public function restCustomerContractsContractIdDocumentGet($contract_id)
     {
@@ -110,13 +110,13 @@ class CustomerContractApi
      *
      * @param  int $contract_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\Mixed, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\Mixed, HTTP status code, HTTP response headers (array of strings)
      */
     public function restCustomerContractsContractIdDocumentGetWithHttpInfo($contract_id)
     {
-        $returnType = '\Swagger\Client\Model\Mixed';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\Mixed';
         $request = $this->restCustomerContractsContractIdDocumentGetRequest($contract_id);
 
         try {
@@ -168,7 +168,7 @@ class CustomerContractApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\Mixed',
+                        '\BSApp\Service\plentymarketsAPI\Model\Mixed',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -210,7 +210,7 @@ class CustomerContractApi
      */
     public function restCustomerContractsContractIdDocumentGetAsyncWithHttpInfo($contract_id)
     {
-        $returnType = '\Swagger\Client\Model\Mixed';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\Mixed';
         $request = $this->restCustomerContractsContractIdDocumentGetRequest($contract_id);
 
         return $this->client
@@ -355,9 +355,9 @@ class CustomerContractApi
      *
      * @param  string $contract_id The ID of the contract (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesCustomerContractModelsCustomerContract
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesCustomerContractModelsCustomerContract
      */
     public function restCustomerContractsContractIdGet($contract_id)
     {
@@ -372,13 +372,13 @@ class CustomerContractApi
      *
      * @param  string $contract_id The ID of the contract (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesCustomerContractModelsCustomerContract, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesCustomerContractModelsCustomerContract, HTTP status code, HTTP response headers (array of strings)
      */
     public function restCustomerContractsContractIdGetWithHttpInfo($contract_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesCustomerContractModelsCustomerContract';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesCustomerContractModelsCustomerContract';
         $request = $this->restCustomerContractsContractIdGetRequest($contract_id);
 
         try {
@@ -430,7 +430,7 @@ class CustomerContractApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesCustomerContractModelsCustomerContract',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesCustomerContractModelsCustomerContract',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -472,7 +472,7 @@ class CustomerContractApi
      */
     public function restCustomerContractsContractIdGetAsyncWithHttpInfo($contract_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesCustomerContractModelsCustomerContract';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesCustomerContractModelsCustomerContract';
         $request = $this->restCustomerContractsContractIdGetRequest($contract_id);
 
         return $this->client
@@ -617,9 +617,9 @@ class CustomerContractApi
      *
      * @param  int $contract_id contract_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\Mixed
+     * @return \BSApp\Service\plentymarketsAPI\Model\Mixed
      */
     public function restCustomerContractsContractIdSignDocumentGet($contract_id)
     {
@@ -634,13 +634,13 @@ class CustomerContractApi
      *
      * @param  int $contract_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\Mixed, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\Mixed, HTTP status code, HTTP response headers (array of strings)
      */
     public function restCustomerContractsContractIdSignDocumentGetWithHttpInfo($contract_id)
     {
-        $returnType = '\Swagger\Client\Model\Mixed';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\Mixed';
         $request = $this->restCustomerContractsContractIdSignDocumentGetRequest($contract_id);
 
         try {
@@ -692,7 +692,7 @@ class CustomerContractApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\Mixed',
+                        '\BSApp\Service\plentymarketsAPI\Model\Mixed',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -734,7 +734,7 @@ class CustomerContractApi
      */
     public function restCustomerContractsContractIdSignDocumentGetAsyncWithHttpInfo($contract_id)
     {
-        $returnType = '\Swagger\Client\Model\Mixed';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\Mixed';
         $request = $this->restCustomerContractsContractIdSignDocumentGetRequest($contract_id);
 
         return $this->client
@@ -879,9 +879,9 @@ class CustomerContractApi
      *
      * @param  string $contract_id The ID of the contract (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesCustomerContractModelsSigning
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesCustomerContractModelsSigning
      */
     public function restCustomerContractsContractIdSignGet($contract_id)
     {
@@ -896,13 +896,13 @@ class CustomerContractApi
      *
      * @param  string $contract_id The ID of the contract (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesCustomerContractModelsSigning, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesCustomerContractModelsSigning, HTTP status code, HTTP response headers (array of strings)
      */
     public function restCustomerContractsContractIdSignGetWithHttpInfo($contract_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesCustomerContractModelsSigning';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesCustomerContractModelsSigning';
         $request = $this->restCustomerContractsContractIdSignGetRequest($contract_id);
 
         try {
@@ -954,7 +954,7 @@ class CustomerContractApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesCustomerContractModelsSigning',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesCustomerContractModelsSigning',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -996,7 +996,7 @@ class CustomerContractApi
      */
     public function restCustomerContractsContractIdSignGetAsyncWithHttpInfo($contract_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesCustomerContractModelsSigning';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesCustomerContractModelsSigning';
         $request = $this->restCustomerContractsContractIdSignGetRequest($contract_id);
 
         return $this->client
@@ -1141,9 +1141,9 @@ class CustomerContractApi
      *
      * @param  string $contract_id The ID of the contract (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesCustomerContractModelsSigning
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesCustomerContractModelsSigning
      */
     public function restCustomerContractsContractIdSignPost($contract_id)
     {
@@ -1158,13 +1158,13 @@ class CustomerContractApi
      *
      * @param  string $contract_id The ID of the contract (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesCustomerContractModelsSigning, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesCustomerContractModelsSigning, HTTP status code, HTTP response headers (array of strings)
      */
     public function restCustomerContractsContractIdSignPostWithHttpInfo($contract_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesCustomerContractModelsSigning';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesCustomerContractModelsSigning';
         $request = $this->restCustomerContractsContractIdSignPostRequest($contract_id);
 
         try {
@@ -1216,7 +1216,7 @@ class CustomerContractApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesCustomerContractModelsSigning',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesCustomerContractModelsSigning',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1258,7 +1258,7 @@ class CustomerContractApi
      */
     public function restCustomerContractsContractIdSignPostAsyncWithHttpInfo($contract_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesCustomerContractModelsSigning';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesCustomerContractModelsSigning';
         $request = $this->restCustomerContractsContractIdSignPostRequest($contract_id);
 
         return $this->client
@@ -1402,9 +1402,9 @@ class CustomerContractApi
      * List contracts
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesCustomerContractModelsCustomerContract[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesCustomerContractModelsCustomerContract[]
      */
     public function restCustomerContractsGet()
     {
@@ -1418,13 +1418,13 @@ class CustomerContractApi
      * List contracts
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesCustomerContractModelsCustomerContract[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesCustomerContractModelsCustomerContract[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restCustomerContractsGetWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesCustomerContractModelsCustomerContract[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesCustomerContractModelsCustomerContract[]';
         $request = $this->restCustomerContractsGetRequest();
 
         try {
@@ -1476,7 +1476,7 @@ class CustomerContractApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesCustomerContractModelsCustomerContract[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesCustomerContractModelsCustomerContract[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1516,7 +1516,7 @@ class CustomerContractApi
      */
     public function restCustomerContractsGetAsyncWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesCustomerContractModelsCustomerContract[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesCustomerContractModelsCustomerContract[]';
         $request = $this->restCustomerContractsGetRequest();
 
         return $this->client
@@ -1645,9 +1645,9 @@ class CustomerContractApi
      * Creates a new contract
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesCustomerContractModelsCustomerContract
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesCustomerContractModelsCustomerContract
      */
     public function restCustomerContractsPost()
     {
@@ -1661,13 +1661,13 @@ class CustomerContractApi
      * Creates a new contract
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesCustomerContractModelsCustomerContract, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesCustomerContractModelsCustomerContract, HTTP status code, HTTP response headers (array of strings)
      */
     public function restCustomerContractsPostWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesCustomerContractModelsCustomerContract';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesCustomerContractModelsCustomerContract';
         $request = $this->restCustomerContractsPostRequest();
 
         try {
@@ -1719,7 +1719,7 @@ class CustomerContractApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesCustomerContractModelsCustomerContract',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesCustomerContractModelsCustomerContract',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1759,7 +1759,7 @@ class CustomerContractApi
      */
     public function restCustomerContractsPostAsyncWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesCustomerContractModelsCustomerContract';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesCustomerContractModelsCustomerContract';
         $request = $this->restCustomerContractsPostRequest();
 
         return $this->client

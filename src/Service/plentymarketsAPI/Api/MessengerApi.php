@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  BSApp\Service\plentymarketsAPI
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace BSApp\Service\plentymarketsAPI\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -33,16 +33,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use BSApp\Service\plentymarketsAPI\ApiException;
+use BSApp\Service\plentymarketsAPI\Configuration;
+use BSApp\Service\plentymarketsAPI\HeaderSelector;
+use BSApp\Service\plentymarketsAPI\ObjectSerializer;
 
 /**
  * MessengerApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  BSApp\Service\plentymarketsAPI
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -95,9 +95,9 @@ class MessengerApi
      * @param  bool $successors If set to FALSE, the messages older than the referenced message will be returned. (optional)
      * @param  int $amount The amount of messages to list (defaults to 50) (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesMessengerModelsMessage[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesMessengerModelsMessage[]
      */
     public function restMessagesGet($uuid = null, $successors = null, $amount = null)
     {
@@ -114,13 +114,13 @@ class MessengerApi
      * @param  bool $successors If set to FALSE, the messages older than the referenced message will be returned. (optional)
      * @param  int $amount The amount of messages to list (defaults to 50) (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesMessengerModelsMessage[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesMessengerModelsMessage[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restMessagesGetWithHttpInfo($uuid = null, $successors = null, $amount = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesMessengerModelsMessage[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesMessengerModelsMessage[]';
         $request = $this->restMessagesGetRequest($uuid, $successors, $amount);
 
         try {
@@ -172,7 +172,7 @@ class MessengerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesMessengerModelsMessage[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesMessengerModelsMessage[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -218,7 +218,7 @@ class MessengerApi
      */
     public function restMessagesGetAsyncWithHttpInfo($uuid = null, $successors = null, $amount = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesMessengerModelsMessage[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesMessengerModelsMessage[]';
         $request = $this->restMessagesGetRequest($uuid, $successors, $amount);
 
         return $this->client
@@ -367,9 +367,9 @@ class MessengerApi
      *
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesMessengerModelsMessage
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesMessengerModelsMessage
      */
     public function restMessagesPost($body = null)
     {
@@ -384,13 +384,13 @@ class MessengerApi
      *
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesMessengerModelsMessage, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesMessengerModelsMessage, HTTP status code, HTTP response headers (array of strings)
      */
     public function restMessagesPostWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesMessengerModelsMessage';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesMessengerModelsMessage';
         $request = $this->restMessagesPostRequest($body);
 
         try {
@@ -442,7 +442,7 @@ class MessengerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesMessengerModelsMessage',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesMessengerModelsMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -484,7 +484,7 @@ class MessengerApi
      */
     public function restMessagesPostAsyncWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesMessengerModelsMessage';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesMessengerModelsMessage';
         $request = $this->restMessagesPostRequest($body);
 
         return $this->client
@@ -622,9 +622,9 @@ class MessengerApi
      *
      * @param  int $uuid5 uuid5 (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\Mixed
+     * @return \BSApp\Service\plentymarketsAPI\Model\Mixed
      */
     public function restMessagesUuid5Delete($uuid5)
     {
@@ -639,13 +639,13 @@ class MessengerApi
      *
      * @param  int $uuid5 (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\Mixed, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\Mixed, HTTP status code, HTTP response headers (array of strings)
      */
     public function restMessagesUuid5DeleteWithHttpInfo($uuid5)
     {
-        $returnType = '\Swagger\Client\Model\Mixed';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\Mixed';
         $request = $this->restMessagesUuid5DeleteRequest($uuid5);
 
         try {
@@ -697,7 +697,7 @@ class MessengerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\Mixed',
+                        '\BSApp\Service\plentymarketsAPI\Model\Mixed',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -739,7 +739,7 @@ class MessengerApi
      */
     public function restMessagesUuid5DeleteAsyncWithHttpInfo($uuid5)
     {
-        $returnType = '\Swagger\Client\Model\Mixed';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\Mixed';
         $request = $this->restMessagesUuid5DeleteRequest($uuid5);
 
         return $this->client
@@ -890,9 +890,9 @@ class MessengerApi
      * @param  object $body body (optional)
      * @param  string $done_at Set (or unset, if &lt;tt&gt;doneAt&lt;/tt&gt; is not given) the doneAt date in the message. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesMessengerModelsMessage[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesMessengerModelsMessage[]
      */
     public function restMessagesUuid5DonePut($uuid5, $body = null, $done_at = null)
     {
@@ -909,13 +909,13 @@ class MessengerApi
      * @param  object $body (optional)
      * @param  string $done_at Set (or unset, if &lt;tt&gt;doneAt&lt;/tt&gt; is not given) the doneAt date in the message. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesMessengerModelsMessage[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesMessengerModelsMessage[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restMessagesUuid5DonePutWithHttpInfo($uuid5, $body = null, $done_at = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesMessengerModelsMessage[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesMessengerModelsMessage[]';
         $request = $this->restMessagesUuid5DonePutRequest($uuid5, $body, $done_at);
 
         try {
@@ -967,7 +967,7 @@ class MessengerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesMessengerModelsMessage[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesMessengerModelsMessage[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1013,7 +1013,7 @@ class MessengerApi
      */
     public function restMessagesUuid5DonePutAsyncWithHttpInfo($uuid5, $body = null, $done_at = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesMessengerModelsMessage[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesMessengerModelsMessage[]';
         $request = $this->restMessagesUuid5DonePutRequest($uuid5, $body, $done_at);
 
         return $this->client
@@ -1172,9 +1172,9 @@ class MessengerApi
      * @param  string $uuid The UUID5 of the message. (required)
      * @param  int $uuid5 uuid5 (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesMessengerModelsMessage[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesMessengerModelsMessage[]
      */
     public function restMessagesUuid5Get($uuid, $uuid5)
     {
@@ -1190,13 +1190,13 @@ class MessengerApi
      * @param  string $uuid The UUID5 of the message. (required)
      * @param  int $uuid5 (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesMessengerModelsMessage[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesMessengerModelsMessage[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restMessagesUuid5GetWithHttpInfo($uuid, $uuid5)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesMessengerModelsMessage[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesMessengerModelsMessage[]';
         $request = $this->restMessagesUuid5GetRequest($uuid, $uuid5);
 
         try {
@@ -1248,7 +1248,7 @@ class MessengerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesMessengerModelsMessage[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesMessengerModelsMessage[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1292,7 +1292,7 @@ class MessengerApi
      */
     public function restMessagesUuid5GetAsyncWithHttpInfo($uuid, $uuid5)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesMessengerModelsMessage[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesMessengerModelsMessage[]';
         $request = $this->restMessagesUuid5GetRequest($uuid, $uuid5);
 
         return $this->client
@@ -1452,9 +1452,9 @@ class MessengerApi
      *
      * @param  int $uuid5 uuid5 (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesMessengerModelsMessage[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesMessengerModelsMessage[]
      */
     public function restMessagesUuid5ReadByPut($uuid5)
     {
@@ -1469,13 +1469,13 @@ class MessengerApi
      *
      * @param  int $uuid5 (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesMessengerModelsMessage[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesMessengerModelsMessage[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restMessagesUuid5ReadByPutWithHttpInfo($uuid5)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesMessengerModelsMessage[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesMessengerModelsMessage[]';
         $request = $this->restMessagesUuid5ReadByPutRequest($uuid5);
 
         try {
@@ -1527,7 +1527,7 @@ class MessengerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesMessengerModelsMessage[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesMessengerModelsMessage[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1569,7 +1569,7 @@ class MessengerApi
      */
     public function restMessagesUuid5ReadByPutAsyncWithHttpInfo($uuid5)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesMessengerModelsMessage[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesMessengerModelsMessage[]';
         $request = $this->restMessagesUuid5ReadByPutRequest($uuid5);
 
         return $this->client
@@ -1719,9 +1719,9 @@ class MessengerApi
      * @param  int $uuid5 uuid5 (required)
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesMessengerModelsMessage[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesMessengerModelsMessage[]
      */
     public function restMessagesUuid5VisibilityPut($uuid5, $body = null)
     {
@@ -1737,13 +1737,13 @@ class MessengerApi
      * @param  int $uuid5 (required)
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesMessengerModelsMessage[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesMessengerModelsMessage[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restMessagesUuid5VisibilityPutWithHttpInfo($uuid5, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesMessengerModelsMessage[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesMessengerModelsMessage[]';
         $request = $this->restMessagesUuid5VisibilityPutRequest($uuid5, $body);
 
         try {
@@ -1795,7 +1795,7 @@ class MessengerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesMessengerModelsMessage[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesMessengerModelsMessage[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1839,7 +1839,7 @@ class MessengerApi
      */
     public function restMessagesUuid5VisibilityPutAsyncWithHttpInfo($uuid5, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesMessengerModelsMessage[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesMessengerModelsMessage[]';
         $request = $this->restMessagesUuid5VisibilityPutRequest($uuid5, $body);
 
         return $this->client

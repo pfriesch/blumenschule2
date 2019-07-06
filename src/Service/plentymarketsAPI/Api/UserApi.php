@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  BSApp\Service\plentymarketsAPI
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace BSApp\Service\plentymarketsAPI\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -33,16 +33,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use BSApp\Service\plentymarketsAPI\ApiException;
+use BSApp\Service\plentymarketsAPI\Configuration;
+use BSApp\Service\plentymarketsAPI\HeaderSelector;
+use BSApp\Service\plentymarketsAPI\ObjectSerializer;
 
 /**
  * UserApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  BSApp\Service\plentymarketsAPI
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -91,9 +91,9 @@ class UserApi
      *
      * @param  int $user_id The UserId (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesUserModelsUser
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesUserModelsUser
      */
     public function restBackendUserUserIdGet($user_id)
     {
@@ -106,13 +106,13 @@ class UserApi
      *
      * @param  int $user_id The UserId (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesUserModelsUser, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesUserModelsUser, HTTP status code, HTTP response headers (array of strings)
      */
     public function restBackendUserUserIdGetWithHttpInfo($user_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesUserModelsUser';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesUserModelsUser';
         $request = $this->restBackendUserUserIdGetRequest($user_id);
 
         try {
@@ -164,7 +164,7 @@ class UserApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesUserModelsUser',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesUserModelsUser',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -206,7 +206,7 @@ class UserApi
      */
     public function restBackendUserUserIdGetAsyncWithHttpInfo($user_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesUserModelsUser';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesUserModelsUser';
         $request = $this->restBackendUserUserIdGetRequest($user_id);
 
         return $this->client
@@ -352,9 +352,9 @@ class UserApi
      * Operation restBackendUsersGet
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesUserModelsUser[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesUserModelsUser[]
      */
     public function restBackendUsersGet()
     {
@@ -366,13 +366,13 @@ class UserApi
      * Operation restBackendUsersGetWithHttpInfo
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesUserModelsUser[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesUserModelsUser[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restBackendUsersGetWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesUserModelsUser[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesUserModelsUser[]';
         $request = $this->restBackendUsersGetRequest();
 
         try {
@@ -424,7 +424,7 @@ class UserApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesUserModelsUser[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesUserModelsUser[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -464,7 +464,7 @@ class UserApi
      */
     public function restBackendUsersGetAsyncWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesUserModelsUser[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesUserModelsUser[]';
         $request = $this->restBackendUsersGetRequest();
 
         return $this->client
@@ -598,9 +598,9 @@ class UserApi
      *
      * @param  string $name The name to search for (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesUserModelsUser[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesUserModelsUser[]
      */
     public function restBackendUsersSearchNameNameGet($name)
     {
@@ -615,13 +615,13 @@ class UserApi
      *
      * @param  string $name The name to search for (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesUserModelsUser[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesUserModelsUser[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restBackendUsersSearchNameNameGetWithHttpInfo($name)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesUserModelsUser[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesUserModelsUser[]';
         $request = $this->restBackendUsersSearchNameNameGetRequest($name);
 
         try {
@@ -673,7 +673,7 @@ class UserApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesUserModelsUser[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesUserModelsUser[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -715,7 +715,7 @@ class UserApi
      */
     public function restBackendUsersSearchNameNameGetAsyncWithHttpInfo($name)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesUserModelsUser[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesUserModelsUser[]';
         $request = $this->restBackendUsersSearchNameNameGetRequest($name);
 
         return $this->client
@@ -863,9 +863,9 @@ class UserApi
      * get the backend plugin set for user
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesPluginPluginSetModelsPluginSet
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPluginPluginSetModelsPluginSet
      */
     public function restUserBackendPluginsetGet()
     {
@@ -879,13 +879,13 @@ class UserApi
      * get the backend plugin set for user
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesPluginPluginSetModelsPluginSet, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPluginPluginSetModelsPluginSet, HTTP status code, HTTP response headers (array of strings)
      */
     public function restUserBackendPluginsetGetWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPluginPluginSetModelsPluginSet';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPluginPluginSetModelsPluginSet';
         $request = $this->restUserBackendPluginsetGetRequest();
 
         try {
@@ -937,7 +937,7 @@ class UserApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesPluginPluginSetModelsPluginSet',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPluginPluginSetModelsPluginSet',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -977,7 +977,7 @@ class UserApi
      */
     public function restUserBackendPluginsetGetAsyncWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPluginPluginSetModelsPluginSet';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPluginPluginSetModelsPluginSet';
         $request = $this->restUserBackendPluginsetGetRequest();
 
         return $this->client
@@ -1110,9 +1110,9 @@ class UserApi
      * set the backend plugin set for user
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyDataSimpleRestResponse
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse
      */
     public function restUserBackendPluginsetPost()
     {
@@ -1126,13 +1126,13 @@ class UserApi
      * set the backend plugin set for user
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyDataSimpleRestResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function restUserBackendPluginsetPostWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\PlentyDataSimpleRestResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse';
         $request = $this->restUserBackendPluginsetPostRequest();
 
         try {
@@ -1184,7 +1184,7 @@ class UserApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyDataSimpleRestResponse',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1224,7 +1224,7 @@ class UserApi
      */
     public function restUserBackendPluginsetPostAsyncWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\PlentyDataSimpleRestResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse';
         $request = $this->restUserBackendPluginsetPostRequest();
 
         return $this->client
@@ -1357,9 +1357,9 @@ class UserApi
      * get all User with a secret value
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\Mixed
+     * @return \BSApp\Service\plentymarketsAPI\Model\Mixed
      */
     public function restUserPinUsersGet()
     {
@@ -1373,13 +1373,13 @@ class UserApi
      * get all User with a secret value
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\Mixed, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\Mixed, HTTP status code, HTTP response headers (array of strings)
      */
     public function restUserPinUsersGetWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\Mixed';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\Mixed';
         $request = $this->restUserPinUsersGetRequest();
 
         try {
@@ -1431,7 +1431,7 @@ class UserApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\Mixed',
+                        '\BSApp\Service\plentymarketsAPI\Model\Mixed',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1471,7 +1471,7 @@ class UserApi
      */
     public function restUserPinUsersGetAsyncWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\Mixed';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\Mixed';
         $request = $this->restUserPinUsersGetRequest();
 
         return $this->client

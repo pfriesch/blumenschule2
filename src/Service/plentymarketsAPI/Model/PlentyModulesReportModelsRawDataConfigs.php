@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  BSApp\Service\plentymarketsAPI
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace BSApp\Service\plentymarketsAPI\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \BSApp\Service\plentymarketsAPI\ObjectSerializer;
 
 /**
  * PlentyModulesReportModelsRawDataConfigs Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  BSApp\Service\plentymarketsAPI
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -57,7 +57,7 @@ class PlentyModulesReportModelsRawDataConfigs implements ModelInterface, ArrayAc
       */
     protected static $swaggerTypes = [
         'plenty_id_hash' => 'string',
-'configs' => '\Swagger\Client\Model\PlentyModulesReportModelsRawDataConfig[]'    ];
+'configs' => '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesReportModelsRawDataConfig[]'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -229,7 +229,7 @@ class PlentyModulesReportModelsRawDataConfigs implements ModelInterface, ArrayAc
     /**
      * Gets configs
      *
-     * @return \Swagger\Client\Model\PlentyModulesReportModelsRawDataConfig[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesReportModelsRawDataConfig[]
      */
     public function getConfigs()
     {
@@ -239,7 +239,7 @@ class PlentyModulesReportModelsRawDataConfigs implements ModelInterface, ArrayAc
     /**
      * Sets configs
      *
-     * @param \Swagger\Client\Model\PlentyModulesReportModelsRawDataConfig[] $configs List of all saved configurations (List)
+     * @param \BSApp\Service\plentymarketsAPI\Model\PlentyModulesReportModelsRawDataConfig[] $configs List of all saved configurations (List)
      *
      * @return $this
      */

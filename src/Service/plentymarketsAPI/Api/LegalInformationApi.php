@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  BSApp\Service\plentymarketsAPI
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace BSApp\Service\plentymarketsAPI\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -33,16 +33,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use BSApp\Service\plentymarketsAPI\ApiException;
+use BSApp\Service\plentymarketsAPI\Configuration;
+use BSApp\Service\plentymarketsAPI\HeaderSelector;
+use BSApp\Service\plentymarketsAPI\ObjectSerializer;
 
 /**
  * LegalInformationApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  BSApp\Service\plentymarketsAPI
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -96,9 +96,9 @@ class LegalInformationApi
      * @param  string $lang2 The type of the legal information text. The types available are:      * &lt;ul&gt;      * &lt;li&gt;TermsConditions&lt;/li&gt;      * &lt;li&gt;CancellationRights&lt;/li&gt;      * &lt;li&gt;PrivacyPolicy&lt;/li&gt;      * &lt;li&gt;LegalDisclosure&lt;/li&gt;      * &lt;li&gt;WithdrawalForm&lt;/li&gt;      * &lt;/ul&gt; (required)
      * @param  int $type type (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesFrontendLegalInformationModelsLegalInformation
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesFrontendLegalInformationModelsLegalInformation
      */
     public function restLegalinformationPlentyIdLangTypeGet($plenty_id, $lang, $lang2, $type)
     {
@@ -116,13 +116,13 @@ class LegalInformationApi
      * @param  string $lang2 The type of the legal information text. The types available are:      * &lt;ul&gt;      * &lt;li&gt;TermsConditions&lt;/li&gt;      * &lt;li&gt;CancellationRights&lt;/li&gt;      * &lt;li&gt;PrivacyPolicy&lt;/li&gt;      * &lt;li&gt;LegalDisclosure&lt;/li&gt;      * &lt;li&gt;WithdrawalForm&lt;/li&gt;      * &lt;/ul&gt; (required)
      * @param  int $type (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesFrontendLegalInformationModelsLegalInformation, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesFrontendLegalInformationModelsLegalInformation, HTTP status code, HTTP response headers (array of strings)
      */
     public function restLegalinformationPlentyIdLangTypeGetWithHttpInfo($plenty_id, $lang, $lang2, $type)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesFrontendLegalInformationModelsLegalInformation';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesFrontendLegalInformationModelsLegalInformation';
         $request = $this->restLegalinformationPlentyIdLangTypeGetRequest($plenty_id, $lang, $lang2, $type);
 
         try {
@@ -174,7 +174,7 @@ class LegalInformationApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesFrontendLegalInformationModelsLegalInformation',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesFrontendLegalInformationModelsLegalInformation',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -222,7 +222,7 @@ class LegalInformationApi
      */
     public function restLegalinformationPlentyIdLangTypeGetAsyncWithHttpInfo($plenty_id, $lang, $lang2, $type)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesFrontendLegalInformationModelsLegalInformation';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesFrontendLegalInformationModelsLegalInformation';
         $request = $this->restLegalinformationPlentyIdLangTypeGetRequest($plenty_id, $lang, $lang2, $type);
 
         return $this->client
@@ -416,9 +416,9 @@ class LegalInformationApi
      * @param  int $type type (required)
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesFrontendLegalInformationModelsLegalInformation
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesFrontendLegalInformationModelsLegalInformation
      */
     public function restLegalinformationPlentyIdLangTypePut($lang2, $plenty_id, $lang, $type, $body = null)
     {
@@ -437,13 +437,13 @@ class LegalInformationApi
      * @param  int $type (required)
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesFrontendLegalInformationModelsLegalInformation, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesFrontendLegalInformationModelsLegalInformation, HTTP status code, HTTP response headers (array of strings)
      */
     public function restLegalinformationPlentyIdLangTypePutWithHttpInfo($lang2, $plenty_id, $lang, $type, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesFrontendLegalInformationModelsLegalInformation';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesFrontendLegalInformationModelsLegalInformation';
         $request = $this->restLegalinformationPlentyIdLangTypePutRequest($lang2, $plenty_id, $lang, $type, $body);
 
         try {
@@ -495,7 +495,7 @@ class LegalInformationApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesFrontendLegalInformationModelsLegalInformation',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesFrontendLegalInformationModelsLegalInformation',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -545,7 +545,7 @@ class LegalInformationApi
      */
     public function restLegalinformationPlentyIdLangTypePutAsyncWithHttpInfo($lang2, $plenty_id, $lang, $type, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesFrontendLegalInformationModelsLegalInformation';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesFrontendLegalInformationModelsLegalInformation';
         $request = $this->restLegalinformationPlentyIdLangTypePutRequest($lang2, $plenty_id, $lang, $type, $body);
 
         return $this->client

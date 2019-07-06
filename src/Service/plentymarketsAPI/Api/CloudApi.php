@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  BSApp\Service\plentymarketsAPI
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace BSApp\Service\plentymarketsAPI\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -33,16 +33,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use BSApp\Service\plentymarketsAPI\ApiException;
+use BSApp\Service\plentymarketsAPI\Configuration;
+use BSApp\Service\plentymarketsAPI\HeaderSelector;
+use BSApp\Service\plentymarketsAPI\ObjectSerializer;
 
 /**
  * CloudApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  BSApp\Service\plentymarketsAPI
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -93,7 +93,7 @@ class CloudApi
      *
      * @param  string $key The key of the object to delete. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return string
      */
@@ -110,7 +110,7 @@ class CloudApi
      *
      * @param  string $key The key of the object to delete. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of string, HTTP status code, HTTP response headers (array of strings)
      */
@@ -355,9 +355,9 @@ class CloudApi
      *
      * @param  string $key The key of the object to get information about. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\Mixed[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\Mixed[]
      */
     public function restStorageFrontendFileGet($key)
     {
@@ -372,13 +372,13 @@ class CloudApi
      *
      * @param  string $key The key of the object to get information about. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\Mixed[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\Mixed[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restStorageFrontendFileGetWithHttpInfo($key)
     {
-        $returnType = '\Swagger\Client\Model\Mixed[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\Mixed[]';
         $request = $this->restStorageFrontendFileGetRequest($key);
 
         try {
@@ -430,7 +430,7 @@ class CloudApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\Mixed[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\Mixed[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -472,7 +472,7 @@ class CloudApi
      */
     public function restStorageFrontendFileGetAsyncWithHttpInfo($key)
     {
-        $returnType = '\Swagger\Client\Model\Mixed[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\Mixed[]';
         $request = $this->restStorageFrontendFileGetRequest($key);
 
         return $this->client
@@ -617,9 +617,9 @@ class CloudApi
      *
      * @param  string $key The key of the object to get metadata for. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\Mixed[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\Mixed[]
      */
     public function restStorageFrontendFileMetadataGet($key)
     {
@@ -634,13 +634,13 @@ class CloudApi
      *
      * @param  string $key The key of the object to get metadata for. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\Mixed[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\Mixed[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restStorageFrontendFileMetadataGetWithHttpInfo($key)
     {
-        $returnType = '\Swagger\Client\Model\Mixed[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\Mixed[]';
         $request = $this->restStorageFrontendFileMetadataGetRequest($key);
 
         try {
@@ -692,7 +692,7 @@ class CloudApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\Mixed[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\Mixed[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -734,7 +734,7 @@ class CloudApi
      */
     public function restStorageFrontendFileMetadataGetAsyncWithHttpInfo($key)
     {
-        $returnType = '\Swagger\Client\Model\Mixed[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\Mixed[]';
         $request = $this->restStorageFrontendFileMetadataGetRequest($key);
 
         return $this->client
@@ -880,9 +880,9 @@ class CloudApi
      * @param  string $key The key of the object to update metadata for. (required)
      * @param  int $metadata The metadata to assign to storage object (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\Mixed[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\Mixed[]
      */
     public function restStorageFrontendFileMetadataPost($key, $metadata)
     {
@@ -898,13 +898,13 @@ class CloudApi
      * @param  string $key The key of the object to update metadata for. (required)
      * @param  int $metadata The metadata to assign to storage object (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\Mixed[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\Mixed[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restStorageFrontendFileMetadataPostWithHttpInfo($key, $metadata)
     {
-        $returnType = '\Swagger\Client\Model\Mixed[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\Mixed[]';
         $request = $this->restStorageFrontendFileMetadataPostRequest($key, $metadata);
 
         try {
@@ -956,7 +956,7 @@ class CloudApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\Mixed[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\Mixed[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1000,7 +1000,7 @@ class CloudApi
      */
     public function restStorageFrontendFileMetadataPostAsyncWithHttpInfo($key, $metadata)
     {
-        $returnType = '\Swagger\Client\Model\Mixed[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\Mixed[]';
         $request = $this->restStorageFrontendFileMetadataPostRequest($key, $metadata);
 
         return $this->client
@@ -1157,9 +1157,9 @@ class CloudApi
      * @param  string $key The key for the uploaded object. (required)
      * @param  int $max_age Number of seconds until the content of the file expires. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\Mixed[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\Mixed[]
      */
     public function restStorageFrontendFilePost($key, $max_age = null)
     {
@@ -1175,13 +1175,13 @@ class CloudApi
      * @param  string $key The key for the uploaded object. (required)
      * @param  int $max_age Number of seconds until the content of the file expires. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\Mixed[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\Mixed[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restStorageFrontendFilePostWithHttpInfo($key, $max_age = null)
     {
-        $returnType = '\Swagger\Client\Model\Mixed[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\Mixed[]';
         $request = $this->restStorageFrontendFilePostRequest($key, $max_age);
 
         try {
@@ -1233,7 +1233,7 @@ class CloudApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\Mixed[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\Mixed[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1277,7 +1277,7 @@ class CloudApi
      */
     public function restStorageFrontendFilePostAsyncWithHttpInfo($key, $max_age = null)
     {
-        $returnType = '\Swagger\Client\Model\Mixed[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\Mixed[]';
         $request = $this->restStorageFrontendFilePostRequest($key, $max_age);
 
         return $this->client
@@ -1427,7 +1427,7 @@ class CloudApi
      *
      * @param  int $key_list List of storage keys for the files to be deleted. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return string
      */
@@ -1444,7 +1444,7 @@ class CloudApi
      *
      * @param  int $key_list List of storage keys for the files to be deleted. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of string, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1689,9 +1689,9 @@ class CloudApi
      *
      * @param  string $continuation_token The &lt;code&gt;continuationToken&lt;/code&gt; of a previous request to continue listing objects with. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\Mixed[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\Mixed[]
      */
     public function restStorageFrontendFilesGet($continuation_token = null)
     {
@@ -1706,13 +1706,13 @@ class CloudApi
      *
      * @param  string $continuation_token The &lt;code&gt;continuationToken&lt;/code&gt; of a previous request to continue listing objects with. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\Mixed[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\Mixed[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restStorageFrontendFilesGetWithHttpInfo($continuation_token = null)
     {
-        $returnType = '\Swagger\Client\Model\Mixed[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\Mixed[]';
         $request = $this->restStorageFrontendFilesGetRequest($continuation_token);
 
         try {
@@ -1764,7 +1764,7 @@ class CloudApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\Mixed[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\Mixed[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1806,7 +1806,7 @@ class CloudApi
      */
     public function restStorageFrontendFilesGetAsyncWithHttpInfo($continuation_token = null)
     {
-        $returnType = '\Swagger\Client\Model\Mixed[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\Mixed[]';
         $request = $this->restStorageFrontendFilesGetRequest($continuation_token);
 
         return $this->client
@@ -1945,7 +1945,7 @@ class CloudApi
      *
      * @param  string $key The storage key for the frontend document to retrieve the URL for. Include the storage key in the request in a &lt;code&gt;key&lt;/code&gt; field. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return string
      */
@@ -1962,7 +1962,7 @@ class CloudApi
      *
      * @param  string $key The storage key for the frontend document to retrieve the URL for. Include the storage key in the request in a &lt;code&gt;key&lt;/code&gt; field. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of string, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2207,9 +2207,9 @@ class CloudApi
      *
      * @param  int $key_list List of storage keys for the files to be deleted. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\Bool
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyBool
      */
     public function restStorageLayoutDelete($key_list)
     {
@@ -2224,13 +2224,13 @@ class CloudApi
      *
      * @param  int $key_list List of storage keys for the files to be deleted. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\Bool, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyBool, HTTP status code, HTTP response headers (array of strings)
      */
     public function restStorageLayoutDeleteWithHttpInfo($key_list)
     {
-        $returnType = '\Swagger\Client\Model\Bool';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyBool';
         $request = $this->restStorageLayoutDeleteRequest($key_list);
 
         try {
@@ -2282,7 +2282,7 @@ class CloudApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\Bool',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyBool',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2324,7 +2324,7 @@ class CloudApi
      */
     public function restStorageLayoutDeleteAsyncWithHttpInfo($key_list)
     {
-        $returnType = '\Swagger\Client\Model\Bool';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyBool';
         $request = $this->restStorageLayoutDeleteRequest($key_list);
 
         return $this->client
@@ -2469,9 +2469,9 @@ class CloudApi
      *
      * @param  string $continuation_token Token for listing the next (up to) 1000 layout documents. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesCloudStorageModelsStorageObjectList
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesCloudStorageModelsStorageObjectList
      */
     public function restStorageLayoutListGet($continuation_token = null)
     {
@@ -2486,13 +2486,13 @@ class CloudApi
      *
      * @param  string $continuation_token Token for listing the next (up to) 1000 layout documents. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesCloudStorageModelsStorageObjectList, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesCloudStorageModelsStorageObjectList, HTTP status code, HTTP response headers (array of strings)
      */
     public function restStorageLayoutListGetWithHttpInfo($continuation_token = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesCloudStorageModelsStorageObjectList';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesCloudStorageModelsStorageObjectList';
         $request = $this->restStorageLayoutListGetRequest($continuation_token);
 
         try {
@@ -2544,7 +2544,7 @@ class CloudApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesCloudStorageModelsStorageObjectList',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesCloudStorageModelsStorageObjectList',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2586,7 +2586,7 @@ class CloudApi
      */
     public function restStorageLayoutListGetAsyncWithHttpInfo($continuation_token = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesCloudStorageModelsStorageObjectList';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesCloudStorageModelsStorageObjectList';
         $request = $this->restStorageLayoutListGetRequest($continuation_token);
 
         return $this->client
@@ -2725,7 +2725,7 @@ class CloudApi
      *
      * @param  string $key The storage key for the layout document to retrieve the URL for. Include the storage key in the request in a &lt;code&gt;key&lt;/code&gt; field. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return string
      */
@@ -2742,7 +2742,7 @@ class CloudApi
      *
      * @param  string $key The storage key for the layout document to retrieve the URL for. Include the storage key in the request in a &lt;code&gt;key&lt;/code&gt; field. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of string, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2987,9 +2987,9 @@ class CloudApi
      *
      * @param  string $key The storage key for the layout document to upload. Include the storage key (i.e. file path) in the request in a &lt;code&gt;key&lt;/code&gt; field. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesCloudStorageModelsStorageObject
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesCloudStorageModelsStorageObject
      */
     public function restStorageLayoutPost($key)
     {
@@ -3004,13 +3004,13 @@ class CloudApi
      *
      * @param  string $key The storage key for the layout document to upload. Include the storage key (i.e. file path) in the request in a &lt;code&gt;key&lt;/code&gt; field. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesCloudStorageModelsStorageObject, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesCloudStorageModelsStorageObject, HTTP status code, HTTP response headers (array of strings)
      */
     public function restStorageLayoutPostWithHttpInfo($key)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesCloudStorageModelsStorageObject';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesCloudStorageModelsStorageObject';
         $request = $this->restStorageLayoutPostRequest($key);
 
         try {
@@ -3062,7 +3062,7 @@ class CloudApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesCloudStorageModelsStorageObject',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesCloudStorageModelsStorageObject',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3104,7 +3104,7 @@ class CloudApi
      */
     public function restStorageLayoutPostAsyncWithHttpInfo($key)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesCloudStorageModelsStorageObject';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesCloudStorageModelsStorageObject';
         $request = $this->restStorageLayoutPostRequest($key);
 
         return $this->client
@@ -3249,7 +3249,7 @@ class CloudApi
      *
      * @param  string $key The storage key for the order property      *                        file to retrieve the URL for. Include the storage key in the request in a      *                        &lt;code&gt;key&lt;/code&gt; field. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return string
      */
@@ -3266,7 +3266,7 @@ class CloudApi
      *
      * @param  string $key The storage key for the order property      *                        file to retrieve the URL for. Include the storage key in the request in a      *                        &lt;code&gt;key&lt;/code&gt; field. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of string, HTTP status code, HTTP response headers (array of strings)
      */
@@ -3508,9 +3508,9 @@ class CloudApi
      * Operation restStoragePluginsInboxCommitPost
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\Mixed[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\Mixed[]
      */
     public function restStoragePluginsInboxCommitPost()
     {
@@ -3522,13 +3522,13 @@ class CloudApi
      * Operation restStoragePluginsInboxCommitPostWithHttpInfo
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\Mixed[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\Mixed[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restStoragePluginsInboxCommitPostWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\Mixed[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\Mixed[]';
         $request = $this->restStoragePluginsInboxCommitPostRequest();
 
         try {
@@ -3580,7 +3580,7 @@ class CloudApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\Mixed[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\Mixed[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3620,7 +3620,7 @@ class CloudApi
      */
     public function restStoragePluginsInboxCommitPostAsyncWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\Mixed[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\Mixed[]';
         $request = $this->restStoragePluginsInboxCommitPostRequest();
 
         return $this->client
@@ -3754,9 +3754,9 @@ class CloudApi
      *
      * @param  int $key_list List of storage keys for the files to be deleted. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyDataSimpleRestResponse
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse
      */
     public function restStoragePluginsInboxDelete($key_list)
     {
@@ -3771,13 +3771,13 @@ class CloudApi
      *
      * @param  int $key_list List of storage keys for the files to be deleted. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyDataSimpleRestResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function restStoragePluginsInboxDeleteWithHttpInfo($key_list)
     {
-        $returnType = '\Swagger\Client\Model\PlentyDataSimpleRestResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse';
         $request = $this->restStoragePluginsInboxDeleteRequest($key_list);
 
         try {
@@ -3829,7 +3829,7 @@ class CloudApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyDataSimpleRestResponse',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3871,7 +3871,7 @@ class CloudApi
      */
     public function restStoragePluginsInboxDeleteAsyncWithHttpInfo($key_list)
     {
-        $returnType = '\Swagger\Client\Model\PlentyDataSimpleRestResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse';
         $request = $this->restStoragePluginsInboxDeleteRequest($key_list);
 
         return $this->client
@@ -4016,9 +4016,9 @@ class CloudApi
      *
      * @param  string $prefix Prefix to list all files of a specific plugin folder only. The prefix also means the plugin path. The &lt;code&gt;prefix&lt;/code&gt; key with the value &lt;code&gt;PluginA/src/&lt;/code&gt; will only return files in the &lt;b&gt;src&lt;/b&gt; folder of &lt;b&gt;PluginA&lt;/b&gt;. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesCloudStorageModelsStorageObjectList
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesCloudStorageModelsStorageObjectList
      */
     public function restStoragePluginsInboxListGet($prefix = null)
     {
@@ -4033,13 +4033,13 @@ class CloudApi
      *
      * @param  string $prefix Prefix to list all files of a specific plugin folder only. The prefix also means the plugin path. The &lt;code&gt;prefix&lt;/code&gt; key with the value &lt;code&gt;PluginA/src/&lt;/code&gt; will only return files in the &lt;b&gt;src&lt;/b&gt; folder of &lt;b&gt;PluginA&lt;/b&gt;. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesCloudStorageModelsStorageObjectList, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesCloudStorageModelsStorageObjectList, HTTP status code, HTTP response headers (array of strings)
      */
     public function restStoragePluginsInboxListGetWithHttpInfo($prefix = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesCloudStorageModelsStorageObjectList';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesCloudStorageModelsStorageObjectList';
         $request = $this->restStoragePluginsInboxListGetRequest($prefix);
 
         try {
@@ -4091,7 +4091,7 @@ class CloudApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesCloudStorageModelsStorageObjectList',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesCloudStorageModelsStorageObjectList',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4133,7 +4133,7 @@ class CloudApi
      */
     public function restStoragePluginsInboxListGetAsyncWithHttpInfo($prefix = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesCloudStorageModelsStorageObjectList';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesCloudStorageModelsStorageObjectList';
         $request = $this->restStoragePluginsInboxListGetRequest($prefix);
 
         return $this->client
@@ -4272,7 +4272,7 @@ class CloudApi
      *
      * @param  string $key The storage key for the file to retrieve. Include the storage key in the request in a &lt;code&gt;key&lt;/code&gt; field. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return string
      */
@@ -4289,7 +4289,7 @@ class CloudApi
      *
      * @param  string $key The storage key for the file to retrieve. Include the storage key in the request in a &lt;code&gt;key&lt;/code&gt; field. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of string, HTTP status code, HTTP response headers (array of strings)
      */
@@ -4528,9 +4528,9 @@ class CloudApi
      *
      * @param  string $key The storage key for the file to upload. Include the storage key in the request in a &lt;code&gt;key&lt;/code&gt; field. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesCloudStorageModelsStorageObject
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesCloudStorageModelsStorageObject
      */
     public function restStoragePluginsInboxPost($key)
     {
@@ -4545,13 +4545,13 @@ class CloudApi
      *
      * @param  string $key The storage key for the file to upload. Include the storage key in the request in a &lt;code&gt;key&lt;/code&gt; field. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesCloudStorageModelsStorageObject, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesCloudStorageModelsStorageObject, HTTP status code, HTTP response headers (array of strings)
      */
     public function restStoragePluginsInboxPostWithHttpInfo($key)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesCloudStorageModelsStorageObject';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesCloudStorageModelsStorageObject';
         $request = $this->restStoragePluginsInboxPostRequest($key);
 
         try {
@@ -4603,7 +4603,7 @@ class CloudApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesCloudStorageModelsStorageObject',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesCloudStorageModelsStorageObject',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4645,7 +4645,7 @@ class CloudApi
      */
     public function restStoragePluginsInboxPostAsyncWithHttpInfo($key)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesCloudStorageModelsStorageObject';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesCloudStorageModelsStorageObject';
         $request = $this->restStoragePluginsInboxPostRequest($key);
 
         return $this->client
@@ -4789,9 +4789,9 @@ class CloudApi
      * Get the cloud metrics for this system
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesSystemStatisticModelsCloudMetricsList
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesSystemStatisticModelsCloudMetricsList
      */
     public function restSystemCloudMetricsGet()
     {
@@ -4805,13 +4805,13 @@ class CloudApi
      * Get the cloud metrics for this system
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesSystemStatisticModelsCloudMetricsList, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesSystemStatisticModelsCloudMetricsList, HTTP status code, HTTP response headers (array of strings)
      */
     public function restSystemCloudMetricsGetWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesSystemStatisticModelsCloudMetricsList';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesSystemStatisticModelsCloudMetricsList';
         $request = $this->restSystemCloudMetricsGetRequest();
 
         try {
@@ -4863,7 +4863,7 @@ class CloudApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesSystemStatisticModelsCloudMetricsList',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesSystemStatisticModelsCloudMetricsList',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4903,7 +4903,7 @@ class CloudApi
      */
     public function restSystemCloudMetricsGetAsyncWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesSystemStatisticModelsCloudMetricsList';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesSystemStatisticModelsCloudMetricsList';
         $request = $this->restSystemCloudMetricsGetRequest();
 
         return $this->client
@@ -5038,9 +5038,9 @@ class CloudApi
      * @param  int $plenty_id plenty_id (required)
      * @param  int $date date (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyDataSimpleRestResponse
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse
      */
     public function restSystemMetricsPlentyIdDateGet($plenty_id, $date)
     {
@@ -5056,13 +5056,13 @@ class CloudApi
      * @param  int $plenty_id (required)
      * @param  int $date (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyDataSimpleRestResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function restSystemMetricsPlentyIdDateGetWithHttpInfo($plenty_id, $date)
     {
-        $returnType = '\Swagger\Client\Model\PlentyDataSimpleRestResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse';
         $request = $this->restSystemMetricsPlentyIdDateGetRequest($plenty_id, $date);
 
         try {
@@ -5114,7 +5114,7 @@ class CloudApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyDataSimpleRestResponse',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5158,7 +5158,7 @@ class CloudApi
      */
     public function restSystemMetricsPlentyIdDateGetAsyncWithHttpInfo($plenty_id, $date)
     {
-        $returnType = '\Swagger\Client\Model\PlentyDataSimpleRestResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse';
         $request = $this->restSystemMetricsPlentyIdDateGetRequest($plenty_id, $date);
 
         return $this->client

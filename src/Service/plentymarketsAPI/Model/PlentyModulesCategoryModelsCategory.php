@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  BSApp\Service\plentymarketsAPI
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace BSApp\Service\plentymarketsAPI\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \BSApp\Service\plentymarketsAPI\ObjectSerializer;
 
 /**
  * PlentyModulesCategoryModelsCategory Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  BSApp\Service\plentymarketsAPI
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -64,9 +64,9 @@ class PlentyModulesCategoryModelsCategory implements ModelInterface, ArrayAccess
 'right' => 'string',
 'sitemap' => 'string',
 'updated_at' => 'string',
-'clients' => '\Swagger\Client\Model\PlentyModulesCategoryModelsCategoryClient[]',
-'details' => '\Swagger\Client\Model\PlentyModulesCategoryModelsCategoryDetails[]',
-'elmar_categories' => '\Swagger\Client\Model\PlentyModulesCategoryModelsCategoryProperty[]'    ];
+'clients' => '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesCategoryModelsCategoryClient[]',
+'details' => '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesCategoryModelsCategoryDetails[]',
+'elmar_categories' => '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesCategoryModelsCategoryProperty[]'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -451,7 +451,7 @@ class PlentyModulesCategoryModelsCategory implements ModelInterface, ArrayAccess
     /**
      * Gets clients
      *
-     * @return \Swagger\Client\Model\PlentyModulesCategoryModelsCategoryClient[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesCategoryModelsCategoryClient[]
      */
     public function getClients()
     {
@@ -461,7 +461,7 @@ class PlentyModulesCategoryModelsCategory implements ModelInterface, ArrayAccess
     /**
      * Sets clients
      *
-     * @param \Swagger\Client\Model\PlentyModulesCategoryModelsCategoryClient[] $clients Collection of the clients (stores) that belong to this category (List)
+     * @param \BSApp\Service\plentymarketsAPI\Model\PlentyModulesCategoryModelsCategoryClient[] $clients Collection of the clients (stores) that belong to this category (List)
      *
      * @return $this
      */
@@ -475,7 +475,7 @@ class PlentyModulesCategoryModelsCategory implements ModelInterface, ArrayAccess
     /**
      * Gets details
      *
-     * @return \Swagger\Client\Model\PlentyModulesCategoryModelsCategoryDetails[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesCategoryModelsCategoryDetails[]
      */
     public function getDetails()
     {
@@ -485,7 +485,7 @@ class PlentyModulesCategoryModelsCategory implements ModelInterface, ArrayAccess
     /**
      * Sets details
      *
-     * @param \Swagger\Client\Model\PlentyModulesCategoryModelsCategoryDetails[] $details Collection of the category details that belong to this category (List)
+     * @param \BSApp\Service\plentymarketsAPI\Model\PlentyModulesCategoryModelsCategoryDetails[] $details Collection of the category details that belong to this category (List)
      *
      * @return $this
      */
@@ -499,7 +499,7 @@ class PlentyModulesCategoryModelsCategory implements ModelInterface, ArrayAccess
     /**
      * Gets elmar_categories
      *
-     * @return \Swagger\Client\Model\PlentyModulesCategoryModelsCategoryProperty[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesCategoryModelsCategoryProperty[]
      */
     public function getElmarCategories()
     {
@@ -509,7 +509,7 @@ class PlentyModulesCategoryModelsCategory implements ModelInterface, ArrayAccess
     /**
      * Sets elmar_categories
      *
-     * @param \Swagger\Client\Model\PlentyModulesCategoryModelsCategoryProperty[] $elmar_categories The linked elmar (List)
+     * @param \BSApp\Service\plentymarketsAPI\Model\PlentyModulesCategoryModelsCategoryProperty[] $elmar_categories The linked elmar (List)
      *
      * @return $this
      */

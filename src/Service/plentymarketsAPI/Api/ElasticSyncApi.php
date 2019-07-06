@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  BSApp\Service\plentymarketsAPI
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace BSApp\Service\plentymarketsAPI\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -33,16 +33,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use BSApp\Service\plentymarketsAPI\ApiException;
+use BSApp\Service\plentymarketsAPI\Configuration;
+use BSApp\Service\plentymarketsAPI\HeaderSelector;
+use BSApp\Service\plentymarketsAPI\ObjectSerializer;
 
 /**
  * ElasticSyncApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  BSApp\Service\plentymarketsAPI
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -92,9 +92,9 @@ class ElasticSyncApi
      * Delete the sync log cache.
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\Mixed[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\Mixed[]
      */
     public function restElasticSyncLogCachePost()
     {
@@ -108,13 +108,13 @@ class ElasticSyncApi
      * Delete the sync log cache.
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\Mixed[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\Mixed[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restElasticSyncLogCachePostWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\Mixed[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\Mixed[]';
         $request = $this->restElasticSyncLogCachePostRequest();
 
         try {
@@ -166,7 +166,7 @@ class ElasticSyncApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\Mixed[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\Mixed[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -206,7 +206,7 @@ class ElasticSyncApi
      */
     public function restElasticSyncLogCachePostAsyncWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\Mixed[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\Mixed[]';
         $request = $this->restElasticSyncLogCachePostRequest();
 
         return $this->client
@@ -340,9 +340,9 @@ class ElasticSyncApi
      *
      * @param  int $sync_id The id of the sync (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\Mixed[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\Mixed[]
      */
     public function restElasticSyncLogCheckSyncSyncIdGet($sync_id)
     {
@@ -357,13 +357,13 @@ class ElasticSyncApi
      *
      * @param  int $sync_id The id of the sync (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\Mixed[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\Mixed[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restElasticSyncLogCheckSyncSyncIdGetWithHttpInfo($sync_id)
     {
-        $returnType = '\Swagger\Client\Model\Mixed[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\Mixed[]';
         $request = $this->restElasticSyncLogCheckSyncSyncIdGetRequest($sync_id);
 
         try {
@@ -415,7 +415,7 @@ class ElasticSyncApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\Mixed[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\Mixed[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -457,7 +457,7 @@ class ElasticSyncApi
      */
     public function restElasticSyncLogCheckSyncSyncIdGetAsyncWithHttpInfo($sync_id)
     {
-        $returnType = '\Swagger\Client\Model\Mixed[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\Mixed[]';
         $request = $this->restElasticSyncLogCheckSyncSyncIdGetRequest($sync_id);
 
         return $this->client
@@ -605,9 +605,9 @@ class ElasticSyncApi
      * Check the progress of all syncs.
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\Mixed[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\Mixed[]
      */
     public function restElasticSyncLogCheckSyncsGet()
     {
@@ -621,13 +621,13 @@ class ElasticSyncApi
      * Check the progress of all syncs.
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\Mixed[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\Mixed[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restElasticSyncLogCheckSyncsGetWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\Mixed[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\Mixed[]';
         $request = $this->restElasticSyncLogCheckSyncsGetRequest();
 
         try {
@@ -679,7 +679,7 @@ class ElasticSyncApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\Mixed[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\Mixed[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -719,7 +719,7 @@ class ElasticSyncApi
      */
     public function restElasticSyncLogCheckSyncsGetAsyncWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\Mixed[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\Mixed[]';
         $request = $this->restElasticSyncLogCheckSyncsGetRequest();
 
         return $this->client
@@ -852,9 +852,9 @@ class ElasticSyncApi
      * Get plenty ID.
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\Mixed
+     * @return \BSApp\Service\plentymarketsAPI\Model\Mixed
      */
     public function restElasticSyncLogIdGet()
     {
@@ -868,13 +868,13 @@ class ElasticSyncApi
      * Get plenty ID.
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\Mixed, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\Mixed, HTTP status code, HTTP response headers (array of strings)
      */
     public function restElasticSyncLogIdGetWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\Mixed';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\Mixed';
         $request = $this->restElasticSyncLogIdGetRequest();
 
         try {
@@ -926,7 +926,7 @@ class ElasticSyncApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\Mixed',
+                        '\BSApp\Service\plentymarketsAPI\Model\Mixed',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -966,7 +966,7 @@ class ElasticSyncApi
      */
     public function restElasticSyncLogIdGetAsyncWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\Mixed';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\Mixed';
         $request = $this->restElasticSyncLogIdGetRequest();
 
         return $this->client
@@ -1100,9 +1100,9 @@ class ElasticSyncApi
      *
      * @param  int $id id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\Mixed
+     * @return \BSApp\Service\plentymarketsAPI\Model\Mixed
      */
     public function restElasticSyncLogIdIdGet($id)
     {
@@ -1117,13 +1117,13 @@ class ElasticSyncApi
      *
      * @param  int $id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\Mixed, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\Mixed, HTTP status code, HTTP response headers (array of strings)
      */
     public function restElasticSyncLogIdIdGetWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\Mixed';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\Mixed';
         $request = $this->restElasticSyncLogIdIdGetRequest($id);
 
         try {
@@ -1175,7 +1175,7 @@ class ElasticSyncApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\Mixed',
+                        '\BSApp\Service\plentymarketsAPI\Model\Mixed',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1217,7 +1217,7 @@ class ElasticSyncApi
      */
     public function restElasticSyncLogIdIdGetAsyncWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\Mixed';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\Mixed';
         $request = $this->restElasticSyncLogIdIdGetRequest($id);
 
         return $this->client
@@ -1366,9 +1366,9 @@ class ElasticSyncApi
      *
      * @param  int $sync_id The id of the sync (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\Mixed[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\Mixed[]
      */
     public function restElasticSyncLogReportGet($sync_id)
     {
@@ -1383,13 +1383,13 @@ class ElasticSyncApi
      *
      * @param  int $sync_id The id of the sync (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\Mixed[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\Mixed[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restElasticSyncLogReportGetWithHttpInfo($sync_id)
     {
-        $returnType = '\Swagger\Client\Model\Mixed[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\Mixed[]';
         $request = $this->restElasticSyncLogReportGetRequest($sync_id);
 
         try {
@@ -1441,7 +1441,7 @@ class ElasticSyncApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\Mixed[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\Mixed[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1483,7 +1483,7 @@ class ElasticSyncApi
      */
     public function restElasticSyncLogReportGetAsyncWithHttpInfo($sync_id)
     {
-        $returnType = '\Swagger\Client\Model\Mixed[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\Mixed[]';
         $request = $this->restElasticSyncLogReportGetRequest($sync_id);
 
         return $this->client
@@ -1627,9 +1627,9 @@ class ElasticSyncApi
      * Get all logs for ElasticSync.
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\Mixed
+     * @return \BSApp\Service\plentymarketsAPI\Model\Mixed
      */
     public function restElasticSyncLogStatusGet()
     {
@@ -1643,13 +1643,13 @@ class ElasticSyncApi
      * Get all logs for ElasticSync.
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\Mixed, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\Mixed, HTTP status code, HTTP response headers (array of strings)
      */
     public function restElasticSyncLogStatusGetWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\Mixed';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\Mixed';
         $request = $this->restElasticSyncLogStatusGetRequest();
 
         try {
@@ -1701,7 +1701,7 @@ class ElasticSyncApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\Mixed',
+                        '\BSApp\Service\plentymarketsAPI\Model\Mixed',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1741,7 +1741,7 @@ class ElasticSyncApi
      */
     public function restElasticSyncLogStatusGetAsyncWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\Mixed';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\Mixed';
         $request = $this->restElasticSyncLogStatusGetRequest();
 
         return $this->client
@@ -1874,9 +1874,9 @@ class ElasticSyncApi
      * Get all mappings.
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\Mixed
+     * @return \BSApp\Service\plentymarketsAPI\Model\Mixed
      */
     public function restElasticSyncMappingAllMappingsGet()
     {
@@ -1890,13 +1890,13 @@ class ElasticSyncApi
      * Get all mappings.
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\Mixed, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\Mixed, HTTP status code, HTTP response headers (array of strings)
      */
     public function restElasticSyncMappingAllMappingsGetWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\Mixed';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\Mixed';
         $request = $this->restElasticSyncMappingAllMappingsGetRequest();
 
         try {
@@ -1948,7 +1948,7 @@ class ElasticSyncApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\Mixed',
+                        '\BSApp\Service\plentymarketsAPI\Model\Mixed',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1988,7 +1988,7 @@ class ElasticSyncApi
      */
     public function restElasticSyncMappingAllMappingsGetAsyncWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\Mixed';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\Mixed';
         $request = $this->restElasticSyncMappingAllMappingsGetRequest();
 
         return $this->client
@@ -2122,9 +2122,9 @@ class ElasticSyncApi
      *
      * @param  int $sync_id The sync ID of the mapping (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\Mixed[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\Mixed[]
      */
     public function restElasticSyncMappingEntitySyncIdGet($sync_id)
     {
@@ -2139,13 +2139,13 @@ class ElasticSyncApi
      *
      * @param  int $sync_id The sync ID of the mapping (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\Mixed[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\Mixed[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restElasticSyncMappingEntitySyncIdGetWithHttpInfo($sync_id)
     {
-        $returnType = '\Swagger\Client\Model\Mixed[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\Mixed[]';
         $request = $this->restElasticSyncMappingEntitySyncIdGetRequest($sync_id);
 
         try {
@@ -2197,7 +2197,7 @@ class ElasticSyncApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\Mixed[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\Mixed[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2239,7 +2239,7 @@ class ElasticSyncApi
      */
     public function restElasticSyncMappingEntitySyncIdGetAsyncWithHttpInfo($sync_id)
     {
-        $returnType = '\Swagger\Client\Model\Mixed[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\Mixed[]';
         $request = $this->restElasticSyncMappingEntitySyncIdGetRequest($sync_id);
 
         return $this->client
@@ -2387,9 +2387,9 @@ class ElasticSyncApi
      * Get the field value map for all sync types.
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\Mixed[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\Mixed[]
      */
     public function restElasticSyncMappingFieldFieldsGet()
     {
@@ -2403,13 +2403,13 @@ class ElasticSyncApi
      * Get the field value map for all sync types.
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\Mixed[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\Mixed[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restElasticSyncMappingFieldFieldsGetWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\Mixed[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\Mixed[]';
         $request = $this->restElasticSyncMappingFieldFieldsGetRequest();
 
         try {
@@ -2461,7 +2461,7 @@ class ElasticSyncApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\Mixed[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\Mixed[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2501,7 +2501,7 @@ class ElasticSyncApi
      */
     public function restElasticSyncMappingFieldFieldsGetAsyncWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\Mixed[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\Mixed[]';
         $request = $this->restElasticSyncMappingFieldFieldsGetRequest();
 
         return $this->client
@@ -2636,9 +2636,9 @@ class ElasticSyncApi
      * @param  string $sync_data_type The sync data type (required)
      * @param  int $sync_type sync_type (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\Mixed[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\Mixed[]
      */
     public function restElasticSyncMappingFieldsSyncTypeGet($sync_data_type, $sync_type)
     {
@@ -2654,13 +2654,13 @@ class ElasticSyncApi
      * @param  string $sync_data_type The sync data type (required)
      * @param  int $sync_type (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\Mixed[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\Mixed[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restElasticSyncMappingFieldsSyncTypeGetWithHttpInfo($sync_data_type, $sync_type)
     {
-        $returnType = '\Swagger\Client\Model\Mixed[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\Mixed[]';
         $request = $this->restElasticSyncMappingFieldsSyncTypeGetRequest($sync_data_type, $sync_type);
 
         try {
@@ -2712,7 +2712,7 @@ class ElasticSyncApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\Mixed[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\Mixed[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2756,7 +2756,7 @@ class ElasticSyncApi
      */
     public function restElasticSyncMappingFieldsSyncTypeGetAsyncWithHttpInfo($sync_data_type, $sync_type)
     {
-        $returnType = '\Swagger\Client\Model\Mixed[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\Mixed[]';
         $request = $this->restElasticSyncMappingFieldsSyncTypeGetRequest($sync_data_type, $sync_type);
 
         return $this->client
@@ -2915,9 +2915,9 @@ class ElasticSyncApi
      * List all mapping locations with pagination.
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\SymfonyComponentHttpFoundationResponse
+     * @return \BSApp\Service\plentymarketsAPI\Model\SymfonyComponentHttpFoundationResponse
      */
     public function restElasticSyncMappingListPaginationGet()
     {
@@ -2931,13 +2931,13 @@ class ElasticSyncApi
      * List all mapping locations with pagination.
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\SymfonyComponentHttpFoundationResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\SymfonyComponentHttpFoundationResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function restElasticSyncMappingListPaginationGetWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\SymfonyComponentHttpFoundationResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\SymfonyComponentHttpFoundationResponse';
         $request = $this->restElasticSyncMappingListPaginationGetRequest();
 
         try {
@@ -2989,7 +2989,7 @@ class ElasticSyncApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\SymfonyComponentHttpFoundationResponse',
+                        '\BSApp\Service\plentymarketsAPI\Model\SymfonyComponentHttpFoundationResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3029,7 +3029,7 @@ class ElasticSyncApi
      */
     public function restElasticSyncMappingListPaginationGetAsyncWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\SymfonyComponentHttpFoundationResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\SymfonyComponentHttpFoundationResponse';
         $request = $this->restElasticSyncMappingListPaginationGetRequest();
 
         return $this->client
@@ -3163,9 +3163,9 @@ class ElasticSyncApi
      *
      * @param  int $sync_type sync_type (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesElasticSyncModelsMapperMappingIdentifiersList
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesElasticSyncModelsMapperMappingIdentifiersList
      */
     public function restElasticSyncMappingListSyncTypeGet($sync_type)
     {
@@ -3180,13 +3180,13 @@ class ElasticSyncApi
      *
      * @param  int $sync_type (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesElasticSyncModelsMapperMappingIdentifiersList, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesElasticSyncModelsMapperMappingIdentifiersList, HTTP status code, HTTP response headers (array of strings)
      */
     public function restElasticSyncMappingListSyncTypeGetWithHttpInfo($sync_type)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesElasticSyncModelsMapperMappingIdentifiersList';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesElasticSyncModelsMapperMappingIdentifiersList';
         $request = $this->restElasticSyncMappingListSyncTypeGetRequest($sync_type);
 
         try {
@@ -3238,7 +3238,7 @@ class ElasticSyncApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesElasticSyncModelsMapperMappingIdentifiersList',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesElasticSyncModelsMapperMappingIdentifiersList',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3280,7 +3280,7 @@ class ElasticSyncApi
      */
     public function restElasticSyncMappingListSyncTypeGetAsyncWithHttpInfo($sync_type)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesElasticSyncModelsMapperMappingIdentifiersList';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesElasticSyncModelsMapperMappingIdentifiersList';
         $request = $this->restElasticSyncMappingListSyncTypeGetRequest($sync_type);
 
         return $this->client
@@ -3429,7 +3429,7 @@ class ElasticSyncApi
      *
      * @param  string $map_ids The ID of the mapping (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -3445,7 +3445,7 @@ class ElasticSyncApi
      *
      * @param  string $map_ids The ID of the mapping (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -3658,9 +3658,9 @@ class ElasticSyncApi
      *
      * @param  int $sync_id The sync id of the mapping (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\Mixed[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\Mixed[]
      */
     public function restElasticSyncMappingMappCsvColumnsSyncIdGet($sync_id)
     {
@@ -3675,13 +3675,13 @@ class ElasticSyncApi
      *
      * @param  int $sync_id The sync id of the mapping (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\Mixed[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\Mixed[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restElasticSyncMappingMappCsvColumnsSyncIdGetWithHttpInfo($sync_id)
     {
-        $returnType = '\Swagger\Client\Model\Mixed[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\Mixed[]';
         $request = $this->restElasticSyncMappingMappCsvColumnsSyncIdGetRequest($sync_id);
 
         try {
@@ -3733,7 +3733,7 @@ class ElasticSyncApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\Mixed[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\Mixed[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3775,7 +3775,7 @@ class ElasticSyncApi
      */
     public function restElasticSyncMappingMappCsvColumnsSyncIdGetAsyncWithHttpInfo($sync_id)
     {
-        $returnType = '\Swagger\Client\Model\Mixed[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\Mixed[]';
         $request = $this->restElasticSyncMappingMappCsvColumnsSyncIdGetRequest($sync_id);
 
         return $this->client
@@ -3923,9 +3923,9 @@ class ElasticSyncApi
      * Get the label list for mapping filtration.
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\Mixed[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\Mixed[]
      */
     public function restElasticSyncMappingMappFilterGet()
     {
@@ -3939,13 +3939,13 @@ class ElasticSyncApi
      * Get the label list for mapping filtration.
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\Mixed[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\Mixed[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restElasticSyncMappingMappFilterGetWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\Mixed[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\Mixed[]';
         $request = $this->restElasticSyncMappingMappFilterGetRequest();
 
         try {
@@ -3997,7 +3997,7 @@ class ElasticSyncApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\Mixed[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\Mixed[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4037,7 +4037,7 @@ class ElasticSyncApi
      */
     public function restElasticSyncMappingMappFilterGetAsyncWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\Mixed[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\Mixed[]';
         $request = $this->restElasticSyncMappingMappFilterGetRequest();
 
         return $this->client
@@ -4170,9 +4170,9 @@ class ElasticSyncApi
      * Get the mapping values tree.
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\Mixed[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\Mixed[]
      */
     public function restElasticSyncMappingMappTreeGet()
     {
@@ -4186,13 +4186,13 @@ class ElasticSyncApi
      * Get the mapping values tree.
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\Mixed[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\Mixed[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restElasticSyncMappingMappTreeGetWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\Mixed[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\Mixed[]';
         $request = $this->restElasticSyncMappingMappTreeGetRequest();
 
         try {
@@ -4244,7 +4244,7 @@ class ElasticSyncApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\Mixed[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\Mixed[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4284,7 +4284,7 @@ class ElasticSyncApi
      */
     public function restElasticSyncMappingMappTreeGetAsyncWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\Mixed[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\Mixed[]';
         $request = $this->restElasticSyncMappingMappTreeGetRequest();
 
         return $this->client
@@ -4419,9 +4419,9 @@ class ElasticSyncApi
      * @param  string $sync_data_type The sync data type (required)
      * @param  int $sync_type sync_type (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\Mixed[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\Mixed[]
      */
     public function restElasticSyncMappingModelSyncTypeGet($sync_data_type, $sync_type)
     {
@@ -4437,13 +4437,13 @@ class ElasticSyncApi
      * @param  string $sync_data_type The sync data type (required)
      * @param  int $sync_type (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\Mixed[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\Mixed[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restElasticSyncMappingModelSyncTypeGetWithHttpInfo($sync_data_type, $sync_type)
     {
-        $returnType = '\Swagger\Client\Model\Mixed[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\Mixed[]';
         $request = $this->restElasticSyncMappingModelSyncTypeGetRequest($sync_data_type, $sync_type);
 
         try {
@@ -4495,7 +4495,7 @@ class ElasticSyncApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\Mixed[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\Mixed[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4539,7 +4539,7 @@ class ElasticSyncApi
      */
     public function restElasticSyncMappingModelSyncTypeGetAsyncWithHttpInfo($sync_data_type, $sync_type)
     {
-        $returnType = '\Swagger\Client\Model\Mixed[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\Mixed[]';
         $request = $this->restElasticSyncMappingModelSyncTypeGetRequest($sync_data_type, $sync_type);
 
         return $this->client
@@ -4699,9 +4699,9 @@ class ElasticSyncApi
      *
      * @param  int $sync_id The id of the sync (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\Mixed[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\Mixed[]
      */
     public function restElasticSyncMappingRowSyncIdGet($sync_id)
     {
@@ -4716,13 +4716,13 @@ class ElasticSyncApi
      *
      * @param  int $sync_id The id of the sync (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\Mixed[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\Mixed[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restElasticSyncMappingRowSyncIdGetWithHttpInfo($sync_id)
     {
-        $returnType = '\Swagger\Client\Model\Mixed[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\Mixed[]';
         $request = $this->restElasticSyncMappingRowSyncIdGetRequest($sync_id);
 
         try {
@@ -4774,7 +4774,7 @@ class ElasticSyncApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\Mixed[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\Mixed[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4816,7 +4816,7 @@ class ElasticSyncApi
      */
     public function restElasticSyncMappingRowSyncIdGetAsyncWithHttpInfo($sync_id)
     {
-        $returnType = '\Swagger\Client\Model\Mixed[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\Mixed[]';
         $request = $this->restElasticSyncMappingRowSyncIdGetRequest($sync_id);
 
         return $this->client
@@ -4965,9 +4965,9 @@ class ElasticSyncApi
      *
      * @param  int $sync_id The sync ID of the mapping (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesElasticSyncModelsSyncMapping
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesElasticSyncModelsSyncMapping
      */
     public function restElasticSyncMappingSyncIdGet($sync_id)
     {
@@ -4982,13 +4982,13 @@ class ElasticSyncApi
      *
      * @param  int $sync_id The sync ID of the mapping (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesElasticSyncModelsSyncMapping, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesElasticSyncModelsSyncMapping, HTTP status code, HTTP response headers (array of strings)
      */
     public function restElasticSyncMappingSyncIdGetWithHttpInfo($sync_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesElasticSyncModelsSyncMapping';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesElasticSyncModelsSyncMapping';
         $request = $this->restElasticSyncMappingSyncIdGetRequest($sync_id);
 
         try {
@@ -5040,7 +5040,7 @@ class ElasticSyncApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesElasticSyncModelsSyncMapping',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesElasticSyncModelsSyncMapping',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5082,7 +5082,7 @@ class ElasticSyncApi
      */
     public function restElasticSyncMappingSyncIdGetAsyncWithHttpInfo($sync_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesElasticSyncModelsSyncMapping';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesElasticSyncModelsSyncMapping';
         $request = $this->restElasticSyncMappingSyncIdGetRequest($sync_id);
 
         return $this->client
@@ -5231,9 +5231,9 @@ class ElasticSyncApi
      *
      * @param  int $sync_id The sync ID of the mapping (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesElasticSyncModelsSyncMapping
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesElasticSyncModelsSyncMapping
      */
     public function restElasticSyncMappingSyncIdPost($sync_id)
     {
@@ -5248,13 +5248,13 @@ class ElasticSyncApi
      *
      * @param  int $sync_id The sync ID of the mapping (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesElasticSyncModelsSyncMapping, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesElasticSyncModelsSyncMapping, HTTP status code, HTTP response headers (array of strings)
      */
     public function restElasticSyncMappingSyncIdPostWithHttpInfo($sync_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesElasticSyncModelsSyncMapping';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesElasticSyncModelsSyncMapping';
         $request = $this->restElasticSyncMappingSyncIdPostRequest($sync_id);
 
         try {
@@ -5306,7 +5306,7 @@ class ElasticSyncApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesElasticSyncModelsSyncMapping',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesElasticSyncModelsSyncMapping',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5348,7 +5348,7 @@ class ElasticSyncApi
      */
     public function restElasticSyncMappingSyncIdPostAsyncWithHttpInfo($sync_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesElasticSyncModelsSyncMapping';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesElasticSyncModelsSyncMapping';
         $request = $this->restElasticSyncMappingSyncIdPostRequest($sync_id);
 
         return $this->client
@@ -5498,9 +5498,9 @@ class ElasticSyncApi
      * @param  string $sync_data_type The sync data type (required)
      * @param  int $sync_type sync_type (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\Mixed[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\Mixed[]
      */
     public function restElasticSyncMappingValuesSyncTypeGet($sync_data_type, $sync_type)
     {
@@ -5516,13 +5516,13 @@ class ElasticSyncApi
      * @param  string $sync_data_type The sync data type (required)
      * @param  int $sync_type (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\Mixed[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\Mixed[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restElasticSyncMappingValuesSyncTypeGetWithHttpInfo($sync_data_type, $sync_type)
     {
-        $returnType = '\Swagger\Client\Model\Mixed[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\Mixed[]';
         $request = $this->restElasticSyncMappingValuesSyncTypeGetRequest($sync_data_type, $sync_type);
 
         try {
@@ -5574,7 +5574,7 @@ class ElasticSyncApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\Mixed[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\Mixed[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5618,7 +5618,7 @@ class ElasticSyncApi
      */
     public function restElasticSyncMappingValuesSyncTypeGetAsyncWithHttpInfo($sync_data_type, $sync_type)
     {
-        $returnType = '\Swagger\Client\Model\Mixed[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\Mixed[]';
         $request = $this->restElasticSyncMappingValuesSyncTypeGetRequest($sync_data_type, $sync_type);
 
         return $this->client
@@ -5777,9 +5777,9 @@ class ElasticSyncApi
      * Get a list with variation matches.
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\Mixed[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\Mixed[]
      */
     public function restElasticSyncMappingVariationGet()
     {
@@ -5793,13 +5793,13 @@ class ElasticSyncApi
      * Get a list with variation matches.
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\Mixed[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\Mixed[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restElasticSyncMappingVariationGetWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\Mixed[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\Mixed[]';
         $request = $this->restElasticSyncMappingVariationGetRequest();
 
         try {
@@ -5851,7 +5851,7 @@ class ElasticSyncApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\Mixed[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\Mixed[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5891,7 +5891,7 @@ class ElasticSyncApi
      */
     public function restElasticSyncMappingVariationGetAsyncWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\Mixed[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\Mixed[]';
         $request = $this->restElasticSyncMappingVariationGetRequest();
 
         return $this->client
@@ -6026,7 +6026,7 @@ class ElasticSyncApi
      * @param  string $sync_ids The sync IDs (required)
      * @param  int $sync_id sync_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -6043,7 +6043,7 @@ class ElasticSyncApi
      * @param  string $sync_ids The sync IDs (required)
      * @param  int $sync_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -6268,9 +6268,9 @@ class ElasticSyncApi
      * Get list of decimals.
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\Mixed[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\Mixed[]
      */
     public function restElasticSyncSyncDecimalsGet()
     {
@@ -6284,13 +6284,13 @@ class ElasticSyncApi
      * Get list of decimals.
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\Mixed[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\Mixed[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restElasticSyncSyncDecimalsGetWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\Mixed[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\Mixed[]';
         $request = $this->restElasticSyncSyncDecimalsGetRequest();
 
         try {
@@ -6342,7 +6342,7 @@ class ElasticSyncApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\Mixed[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\Mixed[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6382,7 +6382,7 @@ class ElasticSyncApi
      */
     public function restElasticSyncSyncDecimalsGetAsyncWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\Mixed[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\Mixed[]';
         $request = $this->restElasticSyncSyncDecimalsGetRequest();
 
         return $this->client
@@ -6517,9 +6517,9 @@ class ElasticSyncApi
      * @param  int $sync_ids The ID of the sync (required)
      * @param  int $sync_id sync_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\Mixed[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\Mixed[]
      */
     public function restElasticSyncSyncExportSyncIdGet($sync_ids, $sync_id)
     {
@@ -6535,13 +6535,13 @@ class ElasticSyncApi
      * @param  int $sync_ids The ID of the sync (required)
      * @param  int $sync_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\Mixed[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\Mixed[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restElasticSyncSyncExportSyncIdGetWithHttpInfo($sync_ids, $sync_id)
     {
-        $returnType = '\Swagger\Client\Model\Mixed[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\Mixed[]';
         $request = $this->restElasticSyncSyncExportSyncIdGetRequest($sync_ids, $sync_id);
 
         try {
@@ -6593,7 +6593,7 @@ class ElasticSyncApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\Mixed[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\Mixed[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6637,7 +6637,7 @@ class ElasticSyncApi
      */
     public function restElasticSyncSyncExportSyncIdGetAsyncWithHttpInfo($sync_ids, $sync_id)
     {
-        $returnType = '\Swagger\Client\Model\Mixed[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\Mixed[]';
         $request = $this->restElasticSyncSyncExportSyncIdGetRequest($sync_ids, $sync_id);
 
         return $this->client
@@ -6796,9 +6796,9 @@ class ElasticSyncApi
      * Get list of time intervals.
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\Mixed[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\Mixed[]
      */
     public function restElasticSyncSyncIntervalsGet()
     {
@@ -6812,13 +6812,13 @@ class ElasticSyncApi
      * Get list of time intervals.
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\Mixed[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\Mixed[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restElasticSyncSyncIntervalsGetWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\Mixed[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\Mixed[]';
         $request = $this->restElasticSyncSyncIntervalsGetRequest();
 
         try {
@@ -6870,7 +6870,7 @@ class ElasticSyncApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\Mixed[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\Mixed[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6910,7 +6910,7 @@ class ElasticSyncApi
      */
     public function restElasticSyncSyncIntervalsGetAsyncWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\Mixed[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\Mixed[]';
         $request = $this->restElasticSyncSyncIntervalsGetRequest();
 
         return $this->client
@@ -7044,7 +7044,7 @@ class ElasticSyncApi
      *
      * @param  int $file The file data (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -7060,7 +7060,7 @@ class ElasticSyncApi
      *
      * @param  int $file The file data (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -7269,7 +7269,7 @@ class ElasticSyncApi
      *
      * @param  int $file The file data (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -7285,7 +7285,7 @@ class ElasticSyncApi
      *
      * @param  int $file The file data (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -7493,9 +7493,9 @@ class ElasticSyncApi
      * List all syncs.
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesElasticSyncModelsSyncSync
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesElasticSyncModelsSyncSync
      */
     public function restElasticSyncSyncListSyncsGet()
     {
@@ -7509,13 +7509,13 @@ class ElasticSyncApi
      * List all syncs.
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesElasticSyncModelsSyncSync, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesElasticSyncModelsSyncSync, HTTP status code, HTTP response headers (array of strings)
      */
     public function restElasticSyncSyncListSyncsGetWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesElasticSyncModelsSyncSync';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesElasticSyncModelsSyncSync';
         $request = $this->restElasticSyncSyncListSyncsGetRequest();
 
         try {
@@ -7567,7 +7567,7 @@ class ElasticSyncApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesElasticSyncModelsSyncSync',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesElasticSyncModelsSyncSync',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -7607,7 +7607,7 @@ class ElasticSyncApi
      */
     public function restElasticSyncSyncListSyncsGetAsyncWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesElasticSyncModelsSyncSync';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesElasticSyncModelsSyncSync';
         $request = $this->restElasticSyncSyncListSyncsGetRequest();
 
         return $this->client
@@ -7744,9 +7744,9 @@ class ElasticSyncApi
      * @param  string $source_data_type The source data type of the sync (required)
      * @param  string $source_type The source type of the sync (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesElasticSyncModelsSyncSync
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesElasticSyncModelsSyncSync
      */
     public function restElasticSyncSyncPost($name, $sync_type, $source_data_type, $source_type)
     {
@@ -7764,13 +7764,13 @@ class ElasticSyncApi
      * @param  string $source_data_type The source data type of the sync (required)
      * @param  string $source_type The source type of the sync (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesElasticSyncModelsSyncSync, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesElasticSyncModelsSyncSync, HTTP status code, HTTP response headers (array of strings)
      */
     public function restElasticSyncSyncPostWithHttpInfo($name, $sync_type, $source_data_type, $source_type)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesElasticSyncModelsSyncSync';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesElasticSyncModelsSyncSync';
         $request = $this->restElasticSyncSyncPostRequest($name, $sync_type, $source_data_type, $source_type);
 
         try {
@@ -7822,7 +7822,7 @@ class ElasticSyncApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesElasticSyncModelsSyncSync',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesElasticSyncModelsSyncSync',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -7870,7 +7870,7 @@ class ElasticSyncApi
      */
     public function restElasticSyncSyncPostAsyncWithHttpInfo($name, $sync_type, $source_data_type, $source_type)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesElasticSyncModelsSyncSync';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesElasticSyncModelsSyncSync';
         $request = $this->restElasticSyncSyncPostRequest($name, $sync_type, $source_data_type, $source_type);
 
         return $this->client
@@ -8048,9 +8048,9 @@ class ElasticSyncApi
      *
      * @param  int $sync_id The id of the sync (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\Mixed[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\Mixed[]
      */
     public function restElasticSyncSyncPreviewSyncIdGet($sync_id)
     {
@@ -8065,13 +8065,13 @@ class ElasticSyncApi
      *
      * @param  int $sync_id The id of the sync (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\Mixed[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\Mixed[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restElasticSyncSyncPreviewSyncIdGetWithHttpInfo($sync_id)
     {
-        $returnType = '\Swagger\Client\Model\Mixed[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\Mixed[]';
         $request = $this->restElasticSyncSyncPreviewSyncIdGetRequest($sync_id);
 
         try {
@@ -8123,7 +8123,7 @@ class ElasticSyncApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\Mixed[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\Mixed[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -8165,7 +8165,7 @@ class ElasticSyncApi
      */
     public function restElasticSyncSyncPreviewSyncIdGetAsyncWithHttpInfo($sync_id)
     {
-        $returnType = '\Swagger\Client\Model\Mixed[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\Mixed[]';
         $request = $this->restElasticSyncSyncPreviewSyncIdGetRequest($sync_id);
 
         return $this->client
@@ -8314,9 +8314,9 @@ class ElasticSyncApi
      *
      * @param  int $sync_id The id of the sync (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\Mixed[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\Mixed[]
      */
     public function restElasticSyncSyncPreviewValuesSyncIdGet($sync_id)
     {
@@ -8331,13 +8331,13 @@ class ElasticSyncApi
      *
      * @param  int $sync_id The id of the sync (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\Mixed[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\Mixed[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restElasticSyncSyncPreviewValuesSyncIdGetWithHttpInfo($sync_id)
     {
-        $returnType = '\Swagger\Client\Model\Mixed[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\Mixed[]';
         $request = $this->restElasticSyncSyncPreviewValuesSyncIdGetRequest($sync_id);
 
         try {
@@ -8389,7 +8389,7 @@ class ElasticSyncApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\Mixed[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\Mixed[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -8431,7 +8431,7 @@ class ElasticSyncApi
      */
     public function restElasticSyncSyncPreviewValuesSyncIdGetAsyncWithHttpInfo($sync_id)
     {
-        $returnType = '\Swagger\Client\Model\Mixed[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\Mixed[]';
         $request = $this->restElasticSyncSyncPreviewValuesSyncIdGetRequest($sync_id);
 
         return $this->client
@@ -8581,7 +8581,7 @@ class ElasticSyncApi
      * @param  int $sync_id The ID of the sync (required)
      * @param  int $testrun The test run variable (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -8598,7 +8598,7 @@ class ElasticSyncApi
      * @param  int $sync_id The ID of the sync (required)
      * @param  int $testrun The test run variable (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -8819,9 +8819,9 @@ class ElasticSyncApi
      * Get schedule times.
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\Mixed
+     * @return \BSApp\Service\plentymarketsAPI\Model\Mixed
      */
     public function restElasticSyncSyncScheduleTimesGet()
     {
@@ -8835,13 +8835,13 @@ class ElasticSyncApi
      * Get schedule times.
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\Mixed, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\Mixed, HTTP status code, HTTP response headers (array of strings)
      */
     public function restElasticSyncSyncScheduleTimesGetWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\Mixed';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\Mixed';
         $request = $this->restElasticSyncSyncScheduleTimesGetRequest();
 
         try {
@@ -8893,7 +8893,7 @@ class ElasticSyncApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\Mixed',
+                        '\BSApp\Service\plentymarketsAPI\Model\Mixed',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -8933,7 +8933,7 @@ class ElasticSyncApi
      */
     public function restElasticSyncSyncScheduleTimesGetAsyncWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\Mixed';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\Mixed';
         $request = $this->restElasticSyncSyncScheduleTimesGetRequest();
 
         return $this->client
@@ -9068,7 +9068,7 @@ class ElasticSyncApi
      * @param  string $sync_ids The ID of the sync (required)
      * @param  int $sync_id sync_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -9085,7 +9085,7 @@ class ElasticSyncApi
      * @param  string $sync_ids The ID of the sync (required)
      * @param  int $sync_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -9311,9 +9311,9 @@ class ElasticSyncApi
      *
      * @param  int $sync_id The id of the sync (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesElasticSyncModelsSyncSync
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesElasticSyncModelsSyncSync
      */
     public function restElasticSyncSyncSyncIdGet($sync_id)
     {
@@ -9328,13 +9328,13 @@ class ElasticSyncApi
      *
      * @param  int $sync_id The id of the sync (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesElasticSyncModelsSyncSync, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesElasticSyncModelsSyncSync, HTTP status code, HTTP response headers (array of strings)
      */
     public function restElasticSyncSyncSyncIdGetWithHttpInfo($sync_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesElasticSyncModelsSyncSync';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesElasticSyncModelsSyncSync';
         $request = $this->restElasticSyncSyncSyncIdGetRequest($sync_id);
 
         try {
@@ -9386,7 +9386,7 @@ class ElasticSyncApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesElasticSyncModelsSyncSync',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesElasticSyncModelsSyncSync',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -9428,7 +9428,7 @@ class ElasticSyncApi
      */
     public function restElasticSyncSyncSyncIdGetAsyncWithHttpInfo($sync_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesElasticSyncModelsSyncSync';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesElasticSyncModelsSyncSync';
         $request = $this->restElasticSyncSyncSyncIdGetRequest($sync_id);
 
         return $this->client
@@ -9577,9 +9577,9 @@ class ElasticSyncApi
      *
      * @param  int $sync_id The ID of the sync (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesElasticSyncModelsSyncSync
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesElasticSyncModelsSyncSync
      */
     public function restElasticSyncSyncSyncIdPost($sync_id)
     {
@@ -9594,13 +9594,13 @@ class ElasticSyncApi
      *
      * @param  int $sync_id The ID of the sync (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesElasticSyncModelsSyncSync, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesElasticSyncModelsSyncSync, HTTP status code, HTTP response headers (array of strings)
      */
     public function restElasticSyncSyncSyncIdPostWithHttpInfo($sync_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesElasticSyncModelsSyncSync';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesElasticSyncModelsSyncSync';
         $request = $this->restElasticSyncSyncSyncIdPostRequest($sync_id);
 
         try {
@@ -9652,7 +9652,7 @@ class ElasticSyncApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesElasticSyncModelsSyncSync',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesElasticSyncModelsSyncSync',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -9694,7 +9694,7 @@ class ElasticSyncApi
      */
     public function restElasticSyncSyncSyncIdPostAsyncWithHttpInfo($sync_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesElasticSyncModelsSyncSync';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesElasticSyncModelsSyncSync';
         $request = $this->restElasticSyncSyncSyncIdPostRequest($sync_id);
 
         return $this->client
@@ -9842,9 +9842,9 @@ class ElasticSyncApi
      * Get list of sync types.
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\Mixed[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\Mixed[]
      */
     public function restElasticSyncSyncTypesShowGet()
     {
@@ -9858,13 +9858,13 @@ class ElasticSyncApi
      * Get list of sync types.
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\Mixed[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\Mixed[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restElasticSyncSyncTypesShowGetWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\Mixed[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\Mixed[]';
         $request = $this->restElasticSyncSyncTypesShowGetRequest();
 
         try {
@@ -9916,7 +9916,7 @@ class ElasticSyncApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\Mixed[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\Mixed[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -9956,7 +9956,7 @@ class ElasticSyncApi
      */
     public function restElasticSyncSyncTypesShowGetAsyncWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\Mixed[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\Mixed[]';
         $request = $this->restElasticSyncSyncTypesShowGetRequest();
 
         return $this->client

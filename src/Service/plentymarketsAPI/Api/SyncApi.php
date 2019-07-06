@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  BSApp\Service\plentymarketsAPI
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace BSApp\Service\plentymarketsAPI\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -33,16 +33,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use BSApp\Service\plentymarketsAPI\ApiException;
+use BSApp\Service\plentymarketsAPI\Configuration;
+use BSApp\Service\plentymarketsAPI\HeaderSelector;
+use BSApp\Service\plentymarketsAPI\ObjectSerializer;
 
 /**
  * SyncApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  BSApp\Service\plentymarketsAPI
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -93,9 +93,9 @@ class SyncApi
      *
      * @param  string $key The storage key of the object to get from sync documents. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesCloudStorageModelsStorageObject
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesCloudStorageModelsStorageObject
      */
     public function restElasticSyncDocumentGet($key)
     {
@@ -110,13 +110,13 @@ class SyncApi
      *
      * @param  string $key The storage key of the object to get from sync documents. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesCloudStorageModelsStorageObject, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesCloudStorageModelsStorageObject, HTTP status code, HTTP response headers (array of strings)
      */
     public function restElasticSyncDocumentGetWithHttpInfo($key)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesCloudStorageModelsStorageObject';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesCloudStorageModelsStorageObject';
         $request = $this->restElasticSyncDocumentGetRequest($key);
 
         try {
@@ -168,7 +168,7 @@ class SyncApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesCloudStorageModelsStorageObject',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesCloudStorageModelsStorageObject',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -210,7 +210,7 @@ class SyncApi
      */
     public function restElasticSyncDocumentGetAsyncWithHttpInfo($key)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesCloudStorageModelsStorageObject';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesCloudStorageModelsStorageObject';
         $request = $this->restElasticSyncDocumentGetRequest($key);
 
         return $this->client
@@ -355,9 +355,9 @@ class SyncApi
      *
      * @param  string $key The storage key for the file to upload (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesCloudStorageModelsStorageObject
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesCloudStorageModelsStorageObject
      */
     public function restElasticSyncDocumentPost($key)
     {
@@ -372,13 +372,13 @@ class SyncApi
      *
      * @param  string $key The storage key for the file to upload (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesCloudStorageModelsStorageObject, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesCloudStorageModelsStorageObject, HTTP status code, HTTP response headers (array of strings)
      */
     public function restElasticSyncDocumentPostWithHttpInfo($key)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesCloudStorageModelsStorageObject';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesCloudStorageModelsStorageObject';
         $request = $this->restElasticSyncDocumentPostRequest($key);
 
         try {
@@ -430,7 +430,7 @@ class SyncApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesCloudStorageModelsStorageObject',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesCloudStorageModelsStorageObject',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -472,7 +472,7 @@ class SyncApi
      */
     public function restElasticSyncDocumentPostAsyncWithHttpInfo($key)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesCloudStorageModelsStorageObject';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesCloudStorageModelsStorageObject';
         $request = $this->restElasticSyncDocumentPostRequest($key);
 
         return $this->client
@@ -617,7 +617,7 @@ class SyncApi
      *
      * @param  string $key The storage key to get temporary url for (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return string
      */
@@ -634,7 +634,7 @@ class SyncApi
      *
      * @param  string $key The storage key to get temporary url for (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of string, HTTP status code, HTTP response headers (array of strings)
      */
@@ -879,9 +879,9 @@ class SyncApi
      *
      * @param  int $key_list List of storage keys to delete (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyDataSimpleRestResponse
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse
      */
     public function restElasticSyncDocumentsDelete($key_list)
     {
@@ -896,13 +896,13 @@ class SyncApi
      *
      * @param  int $key_list List of storage keys to delete (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyDataSimpleRestResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function restElasticSyncDocumentsDeleteWithHttpInfo($key_list)
     {
-        $returnType = '\Swagger\Client\Model\PlentyDataSimpleRestResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse';
         $request = $this->restElasticSyncDocumentsDeleteRequest($key_list);
 
         try {
@@ -954,7 +954,7 @@ class SyncApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyDataSimpleRestResponse',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -996,7 +996,7 @@ class SyncApi
      */
     public function restElasticSyncDocumentsDeleteAsyncWithHttpInfo($key_list)
     {
-        $returnType = '\Swagger\Client\Model\PlentyDataSimpleRestResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse';
         $request = $this->restElasticSyncDocumentsDeleteRequest($key_list);
 
         return $this->client
@@ -1141,9 +1141,9 @@ class SyncApi
      *
      * @param  string $continuation_token token from previous request to continue listing documents (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesCloudStorageModelsStorageObjectList
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesCloudStorageModelsStorageObjectList
      */
     public function restElasticSyncDocumentsGet($continuation_token = null)
     {
@@ -1158,13 +1158,13 @@ class SyncApi
      *
      * @param  string $continuation_token token from previous request to continue listing documents (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesCloudStorageModelsStorageObjectList, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesCloudStorageModelsStorageObjectList, HTTP status code, HTTP response headers (array of strings)
      */
     public function restElasticSyncDocumentsGetWithHttpInfo($continuation_token = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesCloudStorageModelsStorageObjectList';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesCloudStorageModelsStorageObjectList';
         $request = $this->restElasticSyncDocumentsGetRequest($continuation_token);
 
         try {
@@ -1216,7 +1216,7 @@ class SyncApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesCloudStorageModelsStorageObjectList',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesCloudStorageModelsStorageObjectList',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1258,7 +1258,7 @@ class SyncApi
      */
     public function restElasticSyncDocumentsGetAsyncWithHttpInfo($continuation_token = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesCloudStorageModelsStorageObjectList';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesCloudStorageModelsStorageObjectList';
         $request = $this->restElasticSyncDocumentsGetRequest($continuation_token);
 
         return $this->client

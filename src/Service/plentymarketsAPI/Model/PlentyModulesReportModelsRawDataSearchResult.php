@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  BSApp\Service\plentymarketsAPI
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace BSApp\Service\plentymarketsAPI\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \BSApp\Service\plentymarketsAPI\ObjectSerializer;
 
 /**
  * PlentyModulesReportModelsRawDataSearchResult Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  BSApp\Service\plentymarketsAPI
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -57,7 +57,7 @@ class PlentyModulesReportModelsRawDataSearchResult implements ModelInterface, Ar
       */
     protected static $swaggerTypes = [
         'after' => 'string',
-'search_result' => '\Swagger\Client\Model\PlentyModulesReportModelsRawData[]'    ];
+'search_result' => '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesReportModelsRawData[]'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -229,7 +229,7 @@ class PlentyModulesReportModelsRawDataSearchResult implements ModelInterface, Ar
     /**
      * Gets search_result
      *
-     * @return \Swagger\Client\Model\PlentyModulesReportModelsRawData[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesReportModelsRawData[]
      */
     public function getSearchResult()
     {
@@ -239,7 +239,7 @@ class PlentyModulesReportModelsRawDataSearchResult implements ModelInterface, Ar
     /**
      * Sets search_result
      *
-     * @param \Swagger\Client\Model\PlentyModulesReportModelsRawData[] $search_result The raw data search result (List)
+     * @param \BSApp\Service\plentymarketsAPI\Model\PlentyModulesReportModelsRawData[] $search_result The raw data search result (List)
      *
      * @return $this
      */

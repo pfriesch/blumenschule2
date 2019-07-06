@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  BSApp\Service\plentymarketsAPI
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace BSApp\Service\plentymarketsAPI\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -33,16 +33,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use BSApp\Service\plentymarketsAPI\ApiException;
+use BSApp\Service\plentymarketsAPI\Configuration;
+use BSApp\Service\plentymarketsAPI\HeaderSelector;
+use BSApp\Service\plentymarketsAPI\ObjectSerializer;
 
 /**
  * WizardApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  BSApp\Service\plentymarketsAPI
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -92,9 +92,9 @@ class WizardApi
      * List wizard folders
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\Mixed[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\Mixed[]
      */
     public function restWizardsFoldersGet()
     {
@@ -108,13 +108,13 @@ class WizardApi
      * List wizard folders
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\Mixed[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\Mixed[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restWizardsFoldersGetWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\Mixed[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\Mixed[]';
         $request = $this->restWizardsFoldersGetRequest();
 
         try {
@@ -166,7 +166,7 @@ class WizardApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\Mixed[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\Mixed[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -206,7 +206,7 @@ class WizardApi
      */
     public function restWizardsFoldersGetAsyncWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\Mixed[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\Mixed[]';
         $request = $this->restWizardsFoldersGetRequest();
 
         return $this->client
@@ -339,9 +339,9 @@ class WizardApi
      * List wizards
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\Mixed[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\Mixed[]
      */
     public function restWizardsGet()
     {
@@ -355,13 +355,13 @@ class WizardApi
      * List wizards
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\Mixed[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\Mixed[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restWizardsGetWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\Mixed[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\Mixed[]';
         $request = $this->restWizardsGetRequest();
 
         try {
@@ -413,7 +413,7 @@ class WizardApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\Mixed[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\Mixed[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -453,7 +453,7 @@ class WizardApi
      */
     public function restWizardsGetAsyncWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\Mixed[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\Mixed[]';
         $request = $this->restWizardsGetRequest();
 
         return $this->client
@@ -588,9 +588,9 @@ class WizardApi
      * @param  int $wizard_key wizard_key (required)
      * @param  int $action_key action_key (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyDataSimpleRestResponse
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse
      */
     public function restWizardsWizardKeyActionsActionKeyPost($wizard_key, $action_key)
     {
@@ -606,13 +606,13 @@ class WizardApi
      * @param  int $wizard_key (required)
      * @param  int $action_key (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyDataSimpleRestResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function restWizardsWizardKeyActionsActionKeyPostWithHttpInfo($wizard_key, $action_key)
     {
-        $returnType = '\Swagger\Client\Model\PlentyDataSimpleRestResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse';
         $request = $this->restWizardsWizardKeyActionsActionKeyPostRequest($wizard_key, $action_key);
 
         try {
@@ -664,7 +664,7 @@ class WizardApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyDataSimpleRestResponse',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -708,7 +708,7 @@ class WizardApi
      */
     public function restWizardsWizardKeyActionsActionKeyPostAsyncWithHttpInfo($wizard_key, $action_key)
     {
-        $returnType = '\Swagger\Client\Model\PlentyDataSimpleRestResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse';
         $request = $this->restWizardsWizardKeyActionsActionKeyPostRequest($wizard_key, $action_key);
 
         return $this->client
@@ -872,7 +872,7 @@ class WizardApi
      *
      * @param  int $wizard_key wizard_key (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -888,7 +888,7 @@ class WizardApi
      *
      * @param  int $wizard_key (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1101,9 +1101,9 @@ class WizardApi
      *
      * @param  int $wizard_key wizard_key (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\Mixed
+     * @return \BSApp\Service\plentymarketsAPI\Model\Mixed
      */
     public function restWizardsWizardKeyDataGet($wizard_key)
     {
@@ -1118,13 +1118,13 @@ class WizardApi
      *
      * @param  int $wizard_key (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\Mixed, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\Mixed, HTTP status code, HTTP response headers (array of strings)
      */
     public function restWizardsWizardKeyDataGetWithHttpInfo($wizard_key)
     {
-        $returnType = '\Swagger\Client\Model\Mixed';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\Mixed';
         $request = $this->restWizardsWizardKeyDataGetRequest($wizard_key);
 
         try {
@@ -1176,7 +1176,7 @@ class WizardApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\Mixed',
+                        '\BSApp\Service\plentymarketsAPI\Model\Mixed',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1218,7 +1218,7 @@ class WizardApi
      */
     public function restWizardsWizardKeyDataGetAsyncWithHttpInfo($wizard_key)
     {
-        $returnType = '\Swagger\Client\Model\Mixed';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\Mixed';
         $request = $this->restWizardsWizardKeyDataGetRequest($wizard_key);
 
         return $this->client
@@ -1368,7 +1368,7 @@ class WizardApi
      * @param  int $wizard_key wizard_key (required)
      * @param  int $option_id option_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1385,7 +1385,7 @@ class WizardApi
      * @param  int $wizard_key (required)
      * @param  int $option_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1616,9 +1616,9 @@ class WizardApi
      * @param  int $wizard_key wizard_key (required)
      * @param  int $option_id option_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\Mixed
+     * @return \BSApp\Service\plentymarketsAPI\Model\Mixed
      */
     public function restWizardsWizardKeyDataOptionIdGet($wizard_key, $option_id)
     {
@@ -1634,13 +1634,13 @@ class WizardApi
      * @param  int $wizard_key (required)
      * @param  int $option_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\Mixed, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\Mixed, HTTP status code, HTTP response headers (array of strings)
      */
     public function restWizardsWizardKeyDataOptionIdGetWithHttpInfo($wizard_key, $option_id)
     {
-        $returnType = '\Swagger\Client\Model\Mixed';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\Mixed';
         $request = $this->restWizardsWizardKeyDataOptionIdGetRequest($wizard_key, $option_id);
 
         try {
@@ -1692,7 +1692,7 @@ class WizardApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\Mixed',
+                        '\BSApp\Service\plentymarketsAPI\Model\Mixed',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1736,7 +1736,7 @@ class WizardApi
      */
     public function restWizardsWizardKeyDataOptionIdGetAsyncWithHttpInfo($wizard_key, $option_id)
     {
-        $returnType = '\Swagger\Client\Model\Mixed';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\Mixed';
         $request = $this->restWizardsWizardKeyDataOptionIdGetRequest($wizard_key, $option_id);
 
         return $this->client
@@ -1901,9 +1901,9 @@ class WizardApi
      * @param  int $wizard_key wizard_key (required)
      * @param  int $option_id option_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\Mixed
+     * @return \BSApp\Service\plentymarketsAPI\Model\Mixed
      */
     public function restWizardsWizardKeyDataOptionIdPost($wizard_key, $option_id)
     {
@@ -1919,13 +1919,13 @@ class WizardApi
      * @param  int $wizard_key (required)
      * @param  int $option_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\Mixed, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\Mixed, HTTP status code, HTTP response headers (array of strings)
      */
     public function restWizardsWizardKeyDataOptionIdPostWithHttpInfo($wizard_key, $option_id)
     {
-        $returnType = '\Swagger\Client\Model\Mixed';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\Mixed';
         $request = $this->restWizardsWizardKeyDataOptionIdPostRequest($wizard_key, $option_id);
 
         try {
@@ -1977,7 +1977,7 @@ class WizardApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\Mixed',
+                        '\BSApp\Service\plentymarketsAPI\Model\Mixed',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2021,7 +2021,7 @@ class WizardApi
      */
     public function restWizardsWizardKeyDataOptionIdPostAsyncWithHttpInfo($wizard_key, $option_id)
     {
-        $returnType = '\Swagger\Client\Model\Mixed';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\Mixed';
         $request = $this->restWizardsWizardKeyDataOptionIdPostRequest($wizard_key, $option_id);
 
         return $this->client
@@ -2186,9 +2186,9 @@ class WizardApi
      * @param  int $wizard_key wizard_key (required)
      * @param  int $option_id option_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\Mixed
+     * @return \BSApp\Service\plentymarketsAPI\Model\Mixed
      */
     public function restWizardsWizardKeyDataOptionIdPut($wizard_key, $option_id)
     {
@@ -2204,13 +2204,13 @@ class WizardApi
      * @param  int $wizard_key (required)
      * @param  int $option_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\Mixed, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\Mixed, HTTP status code, HTTP response headers (array of strings)
      */
     public function restWizardsWizardKeyDataOptionIdPutWithHttpInfo($wizard_key, $option_id)
     {
-        $returnType = '\Swagger\Client\Model\Mixed';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\Mixed';
         $request = $this->restWizardsWizardKeyDataOptionIdPutRequest($wizard_key, $option_id);
 
         try {
@@ -2262,7 +2262,7 @@ class WizardApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\Mixed',
+                        '\BSApp\Service\plentymarketsAPI\Model\Mixed',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2306,7 +2306,7 @@ class WizardApi
      */
     public function restWizardsWizardKeyDataOptionIdPutAsyncWithHttpInfo($wizard_key, $option_id)
     {
-        $returnType = '\Swagger\Client\Model\Mixed';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\Mixed';
         $request = $this->restWizardsWizardKeyDataOptionIdPutRequest($wizard_key, $option_id);
 
         return $this->client
@@ -2470,9 +2470,9 @@ class WizardApi
      *
      * @param  int $wizard_key wizard_key (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\Mixed
+     * @return \BSApp\Service\plentymarketsAPI\Model\Mixed
      */
     public function restWizardsWizardKeyDataPost($wizard_key)
     {
@@ -2487,13 +2487,13 @@ class WizardApi
      *
      * @param  int $wizard_key (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\Mixed, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\Mixed, HTTP status code, HTTP response headers (array of strings)
      */
     public function restWizardsWizardKeyDataPostWithHttpInfo($wizard_key)
     {
-        $returnType = '\Swagger\Client\Model\Mixed';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\Mixed';
         $request = $this->restWizardsWizardKeyDataPostRequest($wizard_key);
 
         try {
@@ -2545,7 +2545,7 @@ class WizardApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\Mixed',
+                        '\BSApp\Service\plentymarketsAPI\Model\Mixed',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2587,7 +2587,7 @@ class WizardApi
      */
     public function restWizardsWizardKeyDataPostAsyncWithHttpInfo($wizard_key)
     {
-        $returnType = '\Swagger\Client\Model\Mixed';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\Mixed';
         $request = $this->restWizardsWizardKeyDataPostRequest($wizard_key);
 
         return $this->client
@@ -2736,9 +2736,9 @@ class WizardApi
      *
      * @param  int $wizard_key wizard_key (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\Mixed
+     * @return \BSApp\Service\plentymarketsAPI\Model\Mixed
      */
     public function restWizardsWizardKeyDataPut($wizard_key)
     {
@@ -2753,13 +2753,13 @@ class WizardApi
      *
      * @param  int $wizard_key (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\Mixed, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\Mixed, HTTP status code, HTTP response headers (array of strings)
      */
     public function restWizardsWizardKeyDataPutWithHttpInfo($wizard_key)
     {
-        $returnType = '\Swagger\Client\Model\Mixed';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\Mixed';
         $request = $this->restWizardsWizardKeyDataPutRequest($wizard_key);
 
         try {
@@ -2811,7 +2811,7 @@ class WizardApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\Mixed',
+                        '\BSApp\Service\plentymarketsAPI\Model\Mixed',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2853,7 +2853,7 @@ class WizardApi
      */
     public function restWizardsWizardKeyDataPutAsyncWithHttpInfo($wizard_key)
     {
-        $returnType = '\Swagger\Client\Model\Mixed';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\Mixed';
         $request = $this->restWizardsWizardKeyDataPutRequest($wizard_key);
 
         return $this->client
@@ -3003,9 +3003,9 @@ class WizardApi
      * @param  int $wizard_key wizard_key (required)
      * @param  int $formfield_key formfield_key (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyDataSimpleRestResponse
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse
      */
     public function restWizardsWizardKeyFormfieldsFormfieldKeyPost($wizard_key, $formfield_key)
     {
@@ -3021,13 +3021,13 @@ class WizardApi
      * @param  int $wizard_key (required)
      * @param  int $formfield_key (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyDataSimpleRestResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function restWizardsWizardKeyFormfieldsFormfieldKeyPostWithHttpInfo($wizard_key, $formfield_key)
     {
-        $returnType = '\Swagger\Client\Model\PlentyDataSimpleRestResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse';
         $request = $this->restWizardsWizardKeyFormfieldsFormfieldKeyPostRequest($wizard_key, $formfield_key);
 
         try {
@@ -3079,7 +3079,7 @@ class WizardApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyDataSimpleRestResponse',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3123,7 +3123,7 @@ class WizardApi
      */
     public function restWizardsWizardKeyFormfieldsFormfieldKeyPostAsyncWithHttpInfo($wizard_key, $formfield_key)
     {
-        $returnType = '\Swagger\Client\Model\PlentyDataSimpleRestResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse';
         $request = $this->restWizardsWizardKeyFormfieldsFormfieldKeyPostRequest($wizard_key, $formfield_key);
 
         return $this->client
@@ -3287,9 +3287,9 @@ class WizardApi
      *
      * @param  int $wizard_key wizard_key (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesWizardModelsWizard
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesWizardModelsWizard
      */
     public function restWizardsWizardKeyGet($wizard_key)
     {
@@ -3304,13 +3304,13 @@ class WizardApi
      *
      * @param  int $wizard_key (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesWizardModelsWizard, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesWizardModelsWizard, HTTP status code, HTTP response headers (array of strings)
      */
     public function restWizardsWizardKeyGetWithHttpInfo($wizard_key)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesWizardModelsWizard';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesWizardModelsWizard';
         $request = $this->restWizardsWizardKeyGetRequest($wizard_key);
 
         try {
@@ -3362,7 +3362,7 @@ class WizardApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesWizardModelsWizard',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesWizardModelsWizard',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3404,7 +3404,7 @@ class WizardApi
      */
     public function restWizardsWizardKeyGetAsyncWithHttpInfo($wizard_key)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesWizardModelsWizard';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesWizardModelsWizard';
         $request = $this->restWizardsWizardKeyGetRequest($wizard_key);
 
         return $this->client
@@ -3554,9 +3554,9 @@ class WizardApi
      * @param  int $wizard_key wizard_key (required)
      * @param  int $option_id option_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyDataSimpleRestResponse
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse
      */
     public function restWizardsWizardKeySettingsOptionIdPost($wizard_key, $option_id)
     {
@@ -3572,13 +3572,13 @@ class WizardApi
      * @param  int $wizard_key (required)
      * @param  int $option_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyDataSimpleRestResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function restWizardsWizardKeySettingsOptionIdPostWithHttpInfo($wizard_key, $option_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyDataSimpleRestResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse';
         $request = $this->restWizardsWizardKeySettingsOptionIdPostRequest($wizard_key, $option_id);
 
         try {
@@ -3630,7 +3630,7 @@ class WizardApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyDataSimpleRestResponse',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3674,7 +3674,7 @@ class WizardApi
      */
     public function restWizardsWizardKeySettingsOptionIdPostAsyncWithHttpInfo($wizard_key, $option_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyDataSimpleRestResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse';
         $request = $this->restWizardsWizardKeySettingsOptionIdPostRequest($wizard_key, $option_id);
 
         return $this->client

@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  BSApp\Service\plentymarketsAPI
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace BSApp\Service\plentymarketsAPI\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -33,16 +33,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use BSApp\Service\plentymarketsAPI\ApiException;
+use BSApp\Service\plentymarketsAPI\Configuration;
+use BSApp\Service\plentymarketsAPI\HeaderSelector;
+use BSApp\Service\plentymarketsAPI\ObjectSerializer;
 
 /**
  * FeedbackApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  BSApp\Service\plentymarketsAPI
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -94,7 +94,7 @@ class FeedbackApi
      * @param  int $feedback_comment_id The ID of the feedback comment (required)
      * @param  int $comment_id comment_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -111,7 +111,7 @@ class FeedbackApi
      * @param  int $feedback_comment_id The ID of the feedback comment (required)
      * @param  int $comment_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -338,9 +338,9 @@ class FeedbackApi
      * @param  int $feedback_comment_id The ID of the feedback comment (required)
      * @param  int $comment_id comment_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesFeedbackModelsFeedbackComment
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesFeedbackModelsFeedbackComment
      */
     public function restFeedbacksCommentCommentIdGet($feedback_comment_id, $comment_id)
     {
@@ -356,13 +356,13 @@ class FeedbackApi
      * @param  int $feedback_comment_id The ID of the feedback comment (required)
      * @param  int $comment_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesFeedbackModelsFeedbackComment, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesFeedbackModelsFeedbackComment, HTTP status code, HTTP response headers (array of strings)
      */
     public function restFeedbacksCommentCommentIdGetWithHttpInfo($feedback_comment_id, $comment_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesFeedbackModelsFeedbackComment';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesFeedbackModelsFeedbackComment';
         $request = $this->restFeedbacksCommentCommentIdGetRequest($feedback_comment_id, $comment_id);
 
         try {
@@ -414,7 +414,7 @@ class FeedbackApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesFeedbackModelsFeedbackComment',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesFeedbackModelsFeedbackComment',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -458,7 +458,7 @@ class FeedbackApi
      */
     public function restFeedbacksCommentCommentIdGetAsyncWithHttpInfo($feedback_comment_id, $comment_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesFeedbackModelsFeedbackComment';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesFeedbackModelsFeedbackComment';
         $request = $this->restFeedbacksCommentCommentIdGetRequest($feedback_comment_id, $comment_id);
 
         return $this->client
@@ -620,9 +620,9 @@ class FeedbackApi
      * @param  int $comment_relation_target_type_id The type ID of the comment&#x27;s target (required)
      * @param  int $comment_relation_target_id The ID of the comment&#x27;s target (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesFeedbackModelsFeedbackComment
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesFeedbackModelsFeedbackComment
      */
     public function restFeedbacksCommentPost($message, $comment_relation_target_type_id, $comment_relation_target_id)
     {
@@ -639,13 +639,13 @@ class FeedbackApi
      * @param  int $comment_relation_target_type_id The type ID of the comment&#x27;s target (required)
      * @param  int $comment_relation_target_id The ID of the comment&#x27;s target (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesFeedbackModelsFeedbackComment, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesFeedbackModelsFeedbackComment, HTTP status code, HTTP response headers (array of strings)
      */
     public function restFeedbacksCommentPostWithHttpInfo($message, $comment_relation_target_type_id, $comment_relation_target_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesFeedbackModelsFeedbackComment';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesFeedbackModelsFeedbackComment';
         $request = $this->restFeedbacksCommentPostRequest($message, $comment_relation_target_type_id, $comment_relation_target_id);
 
         try {
@@ -697,7 +697,7 @@ class FeedbackApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesFeedbackModelsFeedbackComment',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesFeedbackModelsFeedbackComment',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -743,7 +743,7 @@ class FeedbackApi
      */
     public function restFeedbacksCommentPostAsyncWithHttpInfo($message, $comment_relation_target_type_id, $comment_relation_target_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesFeedbackModelsFeedbackComment';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesFeedbackModelsFeedbackComment';
         $request = $this->restFeedbacksCommentPostRequest($message, $comment_relation_target_type_id, $comment_relation_target_id);
 
         return $this->client
@@ -909,9 +909,9 @@ class FeedbackApi
      * List feedback comments
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesFeedbackModelsFeedbackComment[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesFeedbackModelsFeedbackComment[]
      */
     public function restFeedbacksCommentsGet()
     {
@@ -925,13 +925,13 @@ class FeedbackApi
      * List feedback comments
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesFeedbackModelsFeedbackComment[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesFeedbackModelsFeedbackComment[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restFeedbacksCommentsGetWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesFeedbackModelsFeedbackComment[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesFeedbackModelsFeedbackComment[]';
         $request = $this->restFeedbacksCommentsGetRequest();
 
         try {
@@ -983,7 +983,7 @@ class FeedbackApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesFeedbackModelsFeedbackComment[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesFeedbackModelsFeedbackComment[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1023,7 +1023,7 @@ class FeedbackApi
      */
     public function restFeedbacksCommentsGetAsyncWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesFeedbackModelsFeedbackComment[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesFeedbackModelsFeedbackComment[]';
         $request = $this->restFeedbacksCommentsGetRequest();
 
         return $this->client
@@ -1157,7 +1157,7 @@ class FeedbackApi
      *
      * @param  string $feedback_ids The list of feedback IDs, separated by commas (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1173,7 +1173,7 @@ class FeedbackApi
      *
      * @param  string $feedback_ids The list of feedback IDs, separated by commas (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1386,7 +1386,7 @@ class FeedbackApi
      *
      * @param  int $feedback_id The ID of the feedback (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1402,7 +1402,7 @@ class FeedbackApi
      *
      * @param  int $feedback_id The ID of the feedback (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1615,9 +1615,9 @@ class FeedbackApi
      *
      * @param  int $feedback_id The ID of the feedback (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesFeedbackModelsFeedback
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesFeedbackModelsFeedback
      */
     public function restFeedbacksFeedbackFeedbackIdGet($feedback_id)
     {
@@ -1632,13 +1632,13 @@ class FeedbackApi
      *
      * @param  int $feedback_id The ID of the feedback (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesFeedbackModelsFeedback, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesFeedbackModelsFeedback, HTTP status code, HTTP response headers (array of strings)
      */
     public function restFeedbacksFeedbackFeedbackIdGetWithHttpInfo($feedback_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesFeedbackModelsFeedback';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesFeedbackModelsFeedback';
         $request = $this->restFeedbacksFeedbackFeedbackIdGetRequest($feedback_id);
 
         try {
@@ -1690,7 +1690,7 @@ class FeedbackApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesFeedbackModelsFeedback',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesFeedbackModelsFeedback',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1732,7 +1732,7 @@ class FeedbackApi
      */
     public function restFeedbacksFeedbackFeedbackIdGetAsyncWithHttpInfo($feedback_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesFeedbackModelsFeedback';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesFeedbackModelsFeedback';
         $request = $this->restFeedbacksFeedbackFeedbackIdGetRequest($feedback_id);
 
         return $this->client
@@ -1881,9 +1881,9 @@ class FeedbackApi
      *
      * @param  int $feedback_id The ID of the feedback (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesFeedbackModelsFeedback
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesFeedbackModelsFeedback
      */
     public function restFeedbacksFeedbackFeedbackIdPut($feedback_id)
     {
@@ -1898,13 +1898,13 @@ class FeedbackApi
      *
      * @param  int $feedback_id The ID of the feedback (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesFeedbackModelsFeedback, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesFeedbackModelsFeedback, HTTP status code, HTTP response headers (array of strings)
      */
     public function restFeedbacksFeedbackFeedbackIdPutWithHttpInfo($feedback_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesFeedbackModelsFeedback';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesFeedbackModelsFeedback';
         $request = $this->restFeedbacksFeedbackFeedbackIdPutRequest($feedback_id);
 
         try {
@@ -1956,7 +1956,7 @@ class FeedbackApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesFeedbackModelsFeedback',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesFeedbackModelsFeedback',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1998,7 +1998,7 @@ class FeedbackApi
      */
     public function restFeedbacksFeedbackFeedbackIdPutAsyncWithHttpInfo($feedback_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesFeedbackModelsFeedback';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesFeedbackModelsFeedback';
         $request = $this->restFeedbacksFeedbackFeedbackIdPutRequest($feedback_id);
 
         return $this->client
@@ -2150,9 +2150,9 @@ class FeedbackApi
      * @param  string $feedback_relation_target_type_id The type ID of the feedback&#x27;s target (optional)
      * @param  string $feedback_relation_source_type_id The type ID of the feedback&#x27;s source (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesFeedbackModelsFeedback
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesFeedbackModelsFeedback
      */
     public function restFeedbacksFeedbackPost($title = null, $feedback_relation_target_id = null, $feedback_relation_target_type_id = null, $feedback_relation_source_type_id = null)
     {
@@ -2170,13 +2170,13 @@ class FeedbackApi
      * @param  string $feedback_relation_target_type_id The type ID of the feedback&#x27;s target (optional)
      * @param  string $feedback_relation_source_type_id The type ID of the feedback&#x27;s source (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesFeedbackModelsFeedback, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesFeedbackModelsFeedback, HTTP status code, HTTP response headers (array of strings)
      */
     public function restFeedbacksFeedbackPostWithHttpInfo($title = null, $feedback_relation_target_id = null, $feedback_relation_target_type_id = null, $feedback_relation_source_type_id = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesFeedbackModelsFeedback';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesFeedbackModelsFeedback';
         $request = $this->restFeedbacksFeedbackPostRequest($title, $feedback_relation_target_id, $feedback_relation_target_type_id, $feedback_relation_source_type_id);
 
         try {
@@ -2228,7 +2228,7 @@ class FeedbackApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesFeedbackModelsFeedback',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesFeedbackModelsFeedback',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2276,7 +2276,7 @@ class FeedbackApi
      */
     public function restFeedbacksFeedbackPostAsyncWithHttpInfo($title = null, $feedback_relation_target_id = null, $feedback_relation_target_type_id = null, $feedback_relation_source_type_id = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesFeedbackModelsFeedback';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesFeedbackModelsFeedback';
         $request = $this->restFeedbacksFeedbackPostRequest($title, $feedback_relation_target_id, $feedback_relation_target_type_id, $feedback_relation_source_type_id);
 
         return $this->client
@@ -2430,9 +2430,9 @@ class FeedbackApi
      *
      * @param  int $feedback_id The ID of the feedback (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesFeedbackModelsFeedback
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesFeedbackModelsFeedback
      */
     public function restFeedbacksFeedbackRepliesFeedbackIdGet($feedback_id)
     {
@@ -2447,13 +2447,13 @@ class FeedbackApi
      *
      * @param  int $feedback_id The ID of the feedback (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesFeedbackModelsFeedback, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesFeedbackModelsFeedback, HTTP status code, HTTP response headers (array of strings)
      */
     public function restFeedbacksFeedbackRepliesFeedbackIdGetWithHttpInfo($feedback_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesFeedbackModelsFeedback';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesFeedbackModelsFeedback';
         $request = $this->restFeedbacksFeedbackRepliesFeedbackIdGetRequest($feedback_id);
 
         try {
@@ -2505,7 +2505,7 @@ class FeedbackApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesFeedbackModelsFeedback',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesFeedbackModelsFeedback',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2547,7 +2547,7 @@ class FeedbackApi
      */
     public function restFeedbacksFeedbackRepliesFeedbackIdGetAsyncWithHttpInfo($feedback_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesFeedbackModelsFeedback';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesFeedbackModelsFeedback';
         $request = $this->restFeedbacksFeedbackRepliesFeedbackIdGetRequest($feedback_id);
 
         return $this->client
@@ -2695,9 +2695,9 @@ class FeedbackApi
      * List feedbacks
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesFeedbackModelsFeedback[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesFeedbackModelsFeedback[]
      */
     public function restFeedbacksFeedbacksGet()
     {
@@ -2711,13 +2711,13 @@ class FeedbackApi
      * List feedbacks
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesFeedbackModelsFeedback[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesFeedbackModelsFeedback[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restFeedbacksFeedbacksGetWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesFeedbackModelsFeedback[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesFeedbackModelsFeedback[]';
         $request = $this->restFeedbacksFeedbacksGetRequest();
 
         try {
@@ -2769,7 +2769,7 @@ class FeedbackApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesFeedbackModelsFeedback[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesFeedbackModelsFeedback[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2809,7 +2809,7 @@ class FeedbackApi
      */
     public function restFeedbacksFeedbacksGetAsyncWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesFeedbackModelsFeedback[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesFeedbackModelsFeedback[]';
         $request = $this->restFeedbacksFeedbacksGetRequest();
 
         return $this->client
@@ -2944,9 +2944,9 @@ class FeedbackApi
      * @param  string $feedback_ids The list of feedback IDs, separated by commas (required)
      * @param  bool $is_visible The visibility value (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesFeedbackModelsFeedback[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesFeedbackModelsFeedback[]
      */
     public function restFeedbacksFeedbacksVisibilityPut($feedback_ids, $is_visible)
     {
@@ -2962,13 +2962,13 @@ class FeedbackApi
      * @param  string $feedback_ids The list of feedback IDs, separated by commas (required)
      * @param  bool $is_visible The visibility value (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesFeedbackModelsFeedback[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesFeedbackModelsFeedback[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restFeedbacksFeedbacksVisibilityPutWithHttpInfo($feedback_ids, $is_visible)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesFeedbackModelsFeedback[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesFeedbackModelsFeedback[]';
         $request = $this->restFeedbacksFeedbacksVisibilityPutRequest($feedback_ids, $is_visible);
 
         try {
@@ -3020,7 +3020,7 @@ class FeedbackApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesFeedbackModelsFeedback[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesFeedbackModelsFeedback[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3064,7 +3064,7 @@ class FeedbackApi
      */
     public function restFeedbacksFeedbacksVisibilityPutAsyncWithHttpInfo($feedback_ids, $is_visible)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesFeedbackModelsFeedback[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesFeedbackModelsFeedback[]';
         $request = $this->restFeedbacksFeedbacksVisibilityPutRequest($feedback_ids, $is_visible);
 
         return $this->client
@@ -3219,7 +3219,7 @@ class FeedbackApi
      * Migrate legacy feedbacks
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -3234,7 +3234,7 @@ class FeedbackApi
      * Migrate legacy feedbacks
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -3432,9 +3432,9 @@ class FeedbackApi
      * @param  int $rating_relation_target_type_id The type ID of the rating&#x27;s target (required)
      * @param  int $rating_relation_target_id The ID of the rating&#x27;s target (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesFeedbackModelsFeedbackRating
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesFeedbackModelsFeedbackRating
      */
     public function restFeedbacksRatingPost($rating_value, $rating_relation_target_type_id, $rating_relation_target_id)
     {
@@ -3451,13 +3451,13 @@ class FeedbackApi
      * @param  int $rating_relation_target_type_id The type ID of the rating&#x27;s target (required)
      * @param  int $rating_relation_target_id The ID of the rating&#x27;s target (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesFeedbackModelsFeedbackRating, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesFeedbackModelsFeedbackRating, HTTP status code, HTTP response headers (array of strings)
      */
     public function restFeedbacksRatingPostWithHttpInfo($rating_value, $rating_relation_target_type_id, $rating_relation_target_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesFeedbackModelsFeedbackRating';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesFeedbackModelsFeedbackRating';
         $request = $this->restFeedbacksRatingPostRequest($rating_value, $rating_relation_target_type_id, $rating_relation_target_id);
 
         try {
@@ -3509,7 +3509,7 @@ class FeedbackApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesFeedbackModelsFeedbackRating',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesFeedbackModelsFeedbackRating',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3555,7 +3555,7 @@ class FeedbackApi
      */
     public function restFeedbacksRatingPostAsyncWithHttpInfo($rating_value, $rating_relation_target_type_id, $rating_relation_target_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesFeedbackModelsFeedbackRating';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesFeedbackModelsFeedbackRating';
         $request = $this->restFeedbacksRatingPostRequest($rating_value, $rating_relation_target_type_id, $rating_relation_target_id);
 
         return $this->client
@@ -3723,7 +3723,7 @@ class FeedbackApi
      * @param  int $feedback_rating_id The ID of the feedback rating (required)
      * @param  int $rating_id rating_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -3740,7 +3740,7 @@ class FeedbackApi
      * @param  int $feedback_rating_id The ID of the feedback rating (required)
      * @param  int $rating_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -3967,9 +3967,9 @@ class FeedbackApi
      * @param  int $feedback_rating_id The ID of the feedback rating (required)
      * @param  int $rating_id rating_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesFeedbackModelsFeedbackRating
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesFeedbackModelsFeedbackRating
      */
     public function restFeedbacksRatingRatingIdGet($feedback_rating_id, $rating_id)
     {
@@ -3985,13 +3985,13 @@ class FeedbackApi
      * @param  int $feedback_rating_id The ID of the feedback rating (required)
      * @param  int $rating_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesFeedbackModelsFeedbackRating, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesFeedbackModelsFeedbackRating, HTTP status code, HTTP response headers (array of strings)
      */
     public function restFeedbacksRatingRatingIdGetWithHttpInfo($feedback_rating_id, $rating_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesFeedbackModelsFeedbackRating';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesFeedbackModelsFeedbackRating';
         $request = $this->restFeedbacksRatingRatingIdGetRequest($feedback_rating_id, $rating_id);
 
         try {
@@ -4043,7 +4043,7 @@ class FeedbackApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesFeedbackModelsFeedbackRating',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesFeedbackModelsFeedbackRating',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4087,7 +4087,7 @@ class FeedbackApi
      */
     public function restFeedbacksRatingRatingIdGetAsyncWithHttpInfo($feedback_rating_id, $rating_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesFeedbackModelsFeedbackRating';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesFeedbackModelsFeedbackRating';
         $request = $this->restFeedbacksRatingRatingIdGetRequest($feedback_rating_id, $rating_id);
 
         return $this->client
@@ -4246,9 +4246,9 @@ class FeedbackApi
      * List feedback ratings
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesFeedbackModelsFeedbackRating[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesFeedbackModelsFeedbackRating[]
      */
     public function restFeedbacksRatingsGet()
     {
@@ -4262,13 +4262,13 @@ class FeedbackApi
      * List feedback ratings
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesFeedbackModelsFeedbackRating[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesFeedbackModelsFeedbackRating[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restFeedbacksRatingsGetWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesFeedbackModelsFeedbackRating[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesFeedbackModelsFeedbackRating[]';
         $request = $this->restFeedbacksRatingsGetRequest();
 
         try {
@@ -4320,7 +4320,7 @@ class FeedbackApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesFeedbackModelsFeedbackRating[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesFeedbackModelsFeedbackRating[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4360,7 +4360,7 @@ class FeedbackApi
      */
     public function restFeedbacksRatingsGetAsyncWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesFeedbackModelsFeedbackRating[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesFeedbackModelsFeedbackRating[]';
         $request = $this->restFeedbacksRatingsGetRequest();
 
         return $this->client

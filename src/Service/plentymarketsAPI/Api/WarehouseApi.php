@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  BSApp\Service\plentymarketsAPI
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace BSApp\Service\plentymarketsAPI\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -33,16 +33,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use BSApp\Service\plentymarketsAPI\ApiException;
+use BSApp\Service\plentymarketsAPI\Configuration;
+use BSApp\Service\plentymarketsAPI\HeaderSelector;
+use BSApp\Service\plentymarketsAPI\ObjectSerializer;
 
 /**
  * WarehouseApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  BSApp\Service\plentymarketsAPI
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -108,9 +108,9 @@ class WarehouseApi
      * @param  string $status_key The location status key of the warehouse location (required)
      * @param  int $position2 The position of the warehouse location (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesWarehouseModelsWarehouseLocationDimension
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesWarehouseModelsWarehouseLocationDimension
      */
     public function restWarehousesLayoutsPost($parent_id, $warehouse_id, $level, $name, $shortcut, $separator, $is_active_for_pickup_path, $parent_id2, $dimension_id, $position, $name2, $level_id, $label, $purpose_key, $status_key, $position2)
     {
@@ -140,13 +140,13 @@ class WarehouseApi
      * @param  string $status_key The location status key of the warehouse location (required)
      * @param  int $position2 The position of the warehouse location (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesWarehouseModelsWarehouseLocationDimension, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesWarehouseModelsWarehouseLocationDimension, HTTP status code, HTTP response headers (array of strings)
      */
     public function restWarehousesLayoutsPostWithHttpInfo($parent_id, $warehouse_id, $level, $name, $shortcut, $separator, $is_active_for_pickup_path, $parent_id2, $dimension_id, $position, $name2, $level_id, $label, $purpose_key, $status_key, $position2)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesWarehouseModelsWarehouseLocationDimension';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesWarehouseModelsWarehouseLocationDimension';
         $request = $this->restWarehousesLayoutsPostRequest($parent_id, $warehouse_id, $level, $name, $shortcut, $separator, $is_active_for_pickup_path, $parent_id2, $dimension_id, $position, $name2, $level_id, $label, $purpose_key, $status_key, $position2);
 
         try {
@@ -198,7 +198,7 @@ class WarehouseApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesWarehouseModelsWarehouseLocationDimension',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesWarehouseModelsWarehouseLocationDimension',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -270,7 +270,7 @@ class WarehouseApi
      */
     public function restWarehousesLayoutsPostAsyncWithHttpInfo($parent_id, $warehouse_id, $level, $name, $shortcut, $separator, $is_active_for_pickup_path, $parent_id2, $dimension_id, $position, $name2, $level_id, $label, $purpose_key, $status_key, $position2)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesWarehouseModelsWarehouseLocationDimension';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesWarehouseModelsWarehouseLocationDimension';
         $request = $this->restWarehousesLayoutsPostRequest($parent_id, $warehouse_id, $level, $name, $shortcut, $separator, $is_active_for_pickup_path, $parent_id2, $dimension_id, $position, $name2, $level_id, $label, $purpose_key, $status_key, $position2);
 
         return $this->client
@@ -580,9 +580,9 @@ class WarehouseApi
      *
      * @param  int $warehouse_location_id The ID of the warehouse location (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\Mixed[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\Mixed[]
      */
     public function restWarehousesLocationsAvailabilityWarehouseLocationIdGet($warehouse_location_id)
     {
@@ -597,13 +597,13 @@ class WarehouseApi
      *
      * @param  int $warehouse_location_id The ID of the warehouse location (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\Mixed[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\Mixed[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restWarehousesLocationsAvailabilityWarehouseLocationIdGetWithHttpInfo($warehouse_location_id)
     {
-        $returnType = '\Swagger\Client\Model\Mixed[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\Mixed[]';
         $request = $this->restWarehousesLocationsAvailabilityWarehouseLocationIdGetRequest($warehouse_location_id);
 
         try {
@@ -655,7 +655,7 @@ class WarehouseApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\Mixed[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\Mixed[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -697,7 +697,7 @@ class WarehouseApi
      */
     public function restWarehousesLocationsAvailabilityWarehouseLocationIdGetAsyncWithHttpInfo($warehouse_location_id)
     {
-        $returnType = '\Swagger\Client\Model\Mixed[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\Mixed[]';
         $request = $this->restWarehousesLocationsAvailabilityWarehouseLocationIdGetRequest($warehouse_location_id);
 
         return $this->client
@@ -846,7 +846,7 @@ class WarehouseApi
      *
      * @param  int $warehouse_location_ids An array containing all the ID&#x27;s for the warehouse locations that need to be deleted (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -862,7 +862,7 @@ class WarehouseApi
      *
      * @param  int $warehouse_location_ids An array containing all the ID&#x27;s for the warehouse locations that need to be deleted (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1070,7 +1070,7 @@ class WarehouseApi
      * Get warehouse location details
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return string
      */
@@ -1086,7 +1086,7 @@ class WarehouseApi
      * Get warehouse location details
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of string, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1324,9 +1324,9 @@ class WarehouseApi
      * @param  string $separator The separator of the warehouse location dimension (required)
      * @param  int $is_active_for_pickup_path Active flag for pickup path of the warehouse location dimension (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesWarehouseModelsWarehouseLocationDimension
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesWarehouseModelsWarehouseLocationDimension
      */
     public function restWarehousesLocationsDimensionsPost($parent_id, $warehouse_id, $level, $name, $shortcut, $separator, $is_active_for_pickup_path)
     {
@@ -1347,13 +1347,13 @@ class WarehouseApi
      * @param  string $separator The separator of the warehouse location dimension (required)
      * @param  int $is_active_for_pickup_path Active flag for pickup path of the warehouse location dimension (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesWarehouseModelsWarehouseLocationDimension, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesWarehouseModelsWarehouseLocationDimension, HTTP status code, HTTP response headers (array of strings)
      */
     public function restWarehousesLocationsDimensionsPostWithHttpInfo($parent_id, $warehouse_id, $level, $name, $shortcut, $separator, $is_active_for_pickup_path)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesWarehouseModelsWarehouseLocationDimension';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesWarehouseModelsWarehouseLocationDimension';
         $request = $this->restWarehousesLocationsDimensionsPostRequest($parent_id, $warehouse_id, $level, $name, $shortcut, $separator, $is_active_for_pickup_path);
 
         try {
@@ -1405,7 +1405,7 @@ class WarehouseApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesWarehouseModelsWarehouseLocationDimension',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesWarehouseModelsWarehouseLocationDimension',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1459,7 +1459,7 @@ class WarehouseApi
      */
     public function restWarehousesLocationsDimensionsPostAsyncWithHttpInfo($parent_id, $warehouse_id, $level, $name, $shortcut, $separator, $is_active_for_pickup_path)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesWarehouseModelsWarehouseLocationDimension';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesWarehouseModelsWarehouseLocationDimension';
         $request = $this->restWarehousesLocationsDimensionsPostRequest($parent_id, $warehouse_id, $level, $name, $shortcut, $separator, $is_active_for_pickup_path);
 
         return $this->client
@@ -1670,7 +1670,7 @@ class WarehouseApi
      *
      * @param  int $warehouse_location_dimension_id The ID of the warehouse location dimension (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1686,7 +1686,7 @@ class WarehouseApi
      *
      * @param  int $warehouse_location_dimension_id The ID of the warehouse location dimension (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1899,9 +1899,9 @@ class WarehouseApi
      *
      * @param  int $warehouse_location_dimension_id The ID of the warehouse location dimension (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesWarehouseModelsWarehouseLocationDimension
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesWarehouseModelsWarehouseLocationDimension
      */
     public function restWarehousesLocationsDimensionsWarehouseLocationDimensionIdGet($warehouse_location_dimension_id)
     {
@@ -1916,13 +1916,13 @@ class WarehouseApi
      *
      * @param  int $warehouse_location_dimension_id The ID of the warehouse location dimension (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesWarehouseModelsWarehouseLocationDimension, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesWarehouseModelsWarehouseLocationDimension, HTTP status code, HTTP response headers (array of strings)
      */
     public function restWarehousesLocationsDimensionsWarehouseLocationDimensionIdGetWithHttpInfo($warehouse_location_dimension_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesWarehouseModelsWarehouseLocationDimension';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesWarehouseModelsWarehouseLocationDimension';
         $request = $this->restWarehousesLocationsDimensionsWarehouseLocationDimensionIdGetRequest($warehouse_location_dimension_id);
 
         try {
@@ -1974,7 +1974,7 @@ class WarehouseApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesWarehouseModelsWarehouseLocationDimension',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesWarehouseModelsWarehouseLocationDimension',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2016,7 +2016,7 @@ class WarehouseApi
      */
     public function restWarehousesLocationsDimensionsWarehouseLocationDimensionIdGetAsyncWithHttpInfo($warehouse_location_dimension_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesWarehouseModelsWarehouseLocationDimension';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesWarehouseModelsWarehouseLocationDimension';
         $request = $this->restWarehousesLocationsDimensionsWarehouseLocationDimensionIdGetRequest($warehouse_location_dimension_id);
 
         return $this->client
@@ -2165,9 +2165,9 @@ class WarehouseApi
      *
      * @param  int $warehouse_location_dimension_id The ID of the warehouse location dimension (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesWarehouseModelsWarehouseLocationDimension
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesWarehouseModelsWarehouseLocationDimension
      */
     public function restWarehousesLocationsDimensionsWarehouseLocationDimensionIdPut($warehouse_location_dimension_id)
     {
@@ -2182,13 +2182,13 @@ class WarehouseApi
      *
      * @param  int $warehouse_location_dimension_id The ID of the warehouse location dimension (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesWarehouseModelsWarehouseLocationDimension, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesWarehouseModelsWarehouseLocationDimension, HTTP status code, HTTP response headers (array of strings)
      */
     public function restWarehousesLocationsDimensionsWarehouseLocationDimensionIdPutWithHttpInfo($warehouse_location_dimension_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesWarehouseModelsWarehouseLocationDimension';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesWarehouseModelsWarehouseLocationDimension';
         $request = $this->restWarehousesLocationsDimensionsWarehouseLocationDimensionIdPutRequest($warehouse_location_dimension_id);
 
         try {
@@ -2240,7 +2240,7 @@ class WarehouseApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesWarehouseModelsWarehouseLocationDimension',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesWarehouseModelsWarehouseLocationDimension',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2282,7 +2282,7 @@ class WarehouseApi
      */
     public function restWarehousesLocationsDimensionsWarehouseLocationDimensionIdPutAsyncWithHttpInfo($warehouse_location_dimension_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesWarehouseModelsWarehouseLocationDimension';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesWarehouseModelsWarehouseLocationDimension';
         $request = $this->restWarehousesLocationsDimensionsWarehouseLocationDimensionIdPutRequest($warehouse_location_dimension_id);
 
         return $this->client
@@ -2432,9 +2432,9 @@ class WarehouseApi
      * @param  string $purpose The purpose key value for warehouse location purposeKey field (required)
      * @param  string $status The status key value for warehouse location status field (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesWarehouseModelsWarehouseLocation[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesWarehouseModelsWarehouseLocation[]
      */
     public function restWarehousesLocationsGroupPut($purpose, $status)
     {
@@ -2450,13 +2450,13 @@ class WarehouseApi
      * @param  string $purpose The purpose key value for warehouse location purposeKey field (required)
      * @param  string $status The status key value for warehouse location status field (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesWarehouseModelsWarehouseLocation[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesWarehouseModelsWarehouseLocation[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restWarehousesLocationsGroupPutWithHttpInfo($purpose, $status)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesWarehouseModelsWarehouseLocation[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesWarehouseModelsWarehouseLocation[]';
         $request = $this->restWarehousesLocationsGroupPutRequest($purpose, $status);
 
         try {
@@ -2508,7 +2508,7 @@ class WarehouseApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesWarehouseModelsWarehouseLocation[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesWarehouseModelsWarehouseLocation[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2552,7 +2552,7 @@ class WarehouseApi
      */
     public function restWarehousesLocationsGroupPutAsyncWithHttpInfo($purpose, $status)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesWarehouseModelsWarehouseLocation[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesWarehouseModelsWarehouseLocation[]';
         $request = $this->restWarehousesLocationsGroupPutRequest($purpose, $status);
 
         return $this->client
@@ -2710,7 +2710,7 @@ class WarehouseApi
      * @param  int $target The warehouse location level ID that stands as position for the warehouse location level that needs to be moved (required)
      * @param  string $side The actual position from the left or right side of target (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -2728,7 +2728,7 @@ class WarehouseApi
      * @param  int $target The warehouse location level ID that stands as position for the warehouse location level that needs to be moved (required)
      * @param  string $side The actual position from the left or right side of target (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2966,9 +2966,9 @@ class WarehouseApi
      * @param  int $position The position of the warehouse location level (required)
      * @param  string $name The name of the warehouse location level (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesWarehouseModelsWarehouseLocationLevel
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesWarehouseModelsWarehouseLocationLevel
      */
     public function restWarehousesLocationsLevelsPost($parent_id, $dimension_id, $position, $name)
     {
@@ -2986,13 +2986,13 @@ class WarehouseApi
      * @param  int $position The position of the warehouse location level (required)
      * @param  string $name The name of the warehouse location level (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesWarehouseModelsWarehouseLocationLevel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesWarehouseModelsWarehouseLocationLevel, HTTP status code, HTTP response headers (array of strings)
      */
     public function restWarehousesLocationsLevelsPostWithHttpInfo($parent_id, $dimension_id, $position, $name)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesWarehouseModelsWarehouseLocationLevel';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesWarehouseModelsWarehouseLocationLevel';
         $request = $this->restWarehousesLocationsLevelsPostRequest($parent_id, $dimension_id, $position, $name);
 
         try {
@@ -3044,7 +3044,7 @@ class WarehouseApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesWarehouseModelsWarehouseLocationLevel',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesWarehouseModelsWarehouseLocationLevel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3092,7 +3092,7 @@ class WarehouseApi
      */
     public function restWarehousesLocationsLevelsPostAsyncWithHttpInfo($parent_id, $dimension_id, $position, $name)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesWarehouseModelsWarehouseLocationLevel';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesWarehouseModelsWarehouseLocationLevel';
         $request = $this->restWarehousesLocationsLevelsPostRequest($parent_id, $dimension_id, $position, $name);
 
         return $this->client
@@ -3270,7 +3270,7 @@ class WarehouseApi
      *
      * @param  int $warehouse_location_level_id The ID of the warehouse location level (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -3286,7 +3286,7 @@ class WarehouseApi
      *
      * @param  int $warehouse_location_level_id The ID of the warehouse location level (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -3499,9 +3499,9 @@ class WarehouseApi
      *
      * @param  int $warehouse_location_level_id The ID of the warehouse location level (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesWarehouseModelsWarehouseLocationLevel
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesWarehouseModelsWarehouseLocationLevel
      */
     public function restWarehousesLocationsLevelsWarehouseLocationLevelIdGet($warehouse_location_level_id)
     {
@@ -3516,13 +3516,13 @@ class WarehouseApi
      *
      * @param  int $warehouse_location_level_id The ID of the warehouse location level (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesWarehouseModelsWarehouseLocationLevel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesWarehouseModelsWarehouseLocationLevel, HTTP status code, HTTP response headers (array of strings)
      */
     public function restWarehousesLocationsLevelsWarehouseLocationLevelIdGetWithHttpInfo($warehouse_location_level_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesWarehouseModelsWarehouseLocationLevel';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesWarehouseModelsWarehouseLocationLevel';
         $request = $this->restWarehousesLocationsLevelsWarehouseLocationLevelIdGetRequest($warehouse_location_level_id);
 
         try {
@@ -3574,7 +3574,7 @@ class WarehouseApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesWarehouseModelsWarehouseLocationLevel',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesWarehouseModelsWarehouseLocationLevel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3616,7 +3616,7 @@ class WarehouseApi
      */
     public function restWarehousesLocationsLevelsWarehouseLocationLevelIdGetAsyncWithHttpInfo($warehouse_location_level_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesWarehouseModelsWarehouseLocationLevel';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesWarehouseModelsWarehouseLocationLevel';
         $request = $this->restWarehousesLocationsLevelsWarehouseLocationLevelIdGetRequest($warehouse_location_level_id);
 
         return $this->client
@@ -3765,9 +3765,9 @@ class WarehouseApi
      *
      * @param  int $warehouse_location_level_id The ID of the warehouse location level (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesWarehouseModelsWarehouseLocationLevel
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesWarehouseModelsWarehouseLocationLevel
      */
     public function restWarehousesLocationsLevelsWarehouseLocationLevelIdPut($warehouse_location_level_id)
     {
@@ -3782,13 +3782,13 @@ class WarehouseApi
      *
      * @param  int $warehouse_location_level_id The ID of the warehouse location level (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesWarehouseModelsWarehouseLocationLevel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesWarehouseModelsWarehouseLocationLevel, HTTP status code, HTTP response headers (array of strings)
      */
     public function restWarehousesLocationsLevelsWarehouseLocationLevelIdPutWithHttpInfo($warehouse_location_level_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesWarehouseModelsWarehouseLocationLevel';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesWarehouseModelsWarehouseLocationLevel';
         $request = $this->restWarehousesLocationsLevelsWarehouseLocationLevelIdPutRequest($warehouse_location_level_id);
 
         try {
@@ -3840,7 +3840,7 @@ class WarehouseApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesWarehouseModelsWarehouseLocationLevel',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesWarehouseModelsWarehouseLocationLevel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3882,7 +3882,7 @@ class WarehouseApi
      */
     public function restWarehousesLocationsLevelsWarehouseLocationLevelIdPutAsyncWithHttpInfo($warehouse_location_level_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesWarehouseModelsWarehouseLocationLevel';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesWarehouseModelsWarehouseLocationLevel';
         $request = $this->restWarehousesLocationsLevelsWarehouseLocationLevelIdPutRequest($warehouse_location_level_id);
 
         return $this->client
@@ -4031,9 +4031,9 @@ class WarehouseApi
      *
      * @param  int $dimensions The dimensions array that contains data for creating multiple dimensions (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesWarehouseModelsWarehouseLocationDimension[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesWarehouseModelsWarehouseLocationDimension[]
      */
     public function restWarehousesLocationsMultipleDimensionsPost($dimensions)
     {
@@ -4048,13 +4048,13 @@ class WarehouseApi
      *
      * @param  int $dimensions The dimensions array that contains data for creating multiple dimensions (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesWarehouseModelsWarehouseLocationDimension[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesWarehouseModelsWarehouseLocationDimension[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restWarehousesLocationsMultipleDimensionsPostWithHttpInfo($dimensions)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesWarehouseModelsWarehouseLocationDimension[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesWarehouseModelsWarehouseLocationDimension[]';
         $request = $this->restWarehousesLocationsMultipleDimensionsPostRequest($dimensions);
 
         try {
@@ -4106,7 +4106,7 @@ class WarehouseApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesWarehouseModelsWarehouseLocationDimension[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesWarehouseModelsWarehouseLocationDimension[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4148,7 +4148,7 @@ class WarehouseApi
      */
     public function restWarehousesLocationsMultipleDimensionsPostAsyncWithHttpInfo($dimensions)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesWarehouseModelsWarehouseLocationDimension[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesWarehouseModelsWarehouseLocationDimension[]';
         $request = $this->restWarehousesLocationsMultipleDimensionsPostRequest($dimensions);
 
         return $this->client
@@ -4295,7 +4295,7 @@ class WarehouseApi
      * @param  int $target The warehouse location ID that stands as position for the warehouse location that needs to be moved (required)
      * @param  string $side The actual position from the left or right side of target (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -4313,7 +4313,7 @@ class WarehouseApi
      * @param  int $target The warehouse location ID that stands as position for the warehouse location that needs to be moved (required)
      * @param  string $side The actual position from the left or right side of target (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -4552,9 +4552,9 @@ class WarehouseApi
      * @param  string $status_key The location status key of the warehouse location (required)
      * @param  int $position The position of the warehouse location (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesWarehouseModelsWarehouseLocation
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesWarehouseModelsWarehouseLocation
      */
     public function restWarehousesLocationsPost($level_id, $label, $purpose_key, $status_key, $position)
     {
@@ -4573,13 +4573,13 @@ class WarehouseApi
      * @param  string $status_key The location status key of the warehouse location (required)
      * @param  int $position The position of the warehouse location (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesWarehouseModelsWarehouseLocation, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesWarehouseModelsWarehouseLocation, HTTP status code, HTTP response headers (array of strings)
      */
     public function restWarehousesLocationsPostWithHttpInfo($level_id, $label, $purpose_key, $status_key, $position)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesWarehouseModelsWarehouseLocation';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesWarehouseModelsWarehouseLocation';
         $request = $this->restWarehousesLocationsPostRequest($level_id, $label, $purpose_key, $status_key, $position);
 
         try {
@@ -4631,7 +4631,7 @@ class WarehouseApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesWarehouseModelsWarehouseLocation',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesWarehouseModelsWarehouseLocation',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4681,7 +4681,7 @@ class WarehouseApi
      */
     public function restWarehousesLocationsPostAsyncWithHttpInfo($level_id, $label, $purpose_key, $status_key, $position)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesWarehouseModelsWarehouseLocation';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesWarehouseModelsWarehouseLocation';
         $request = $this->restWarehousesLocationsPostRequest($level_id, $label, $purpose_key, $status_key, $position);
 
         return $this->client
@@ -4873,9 +4873,9 @@ class WarehouseApi
      * @param  int $level_data The warehouse location level data used by the generator (required)
      * @param  int $save The save parameter that triggers the preview method or the process save method (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\Mixed
+     * @return \BSApp\Service\plentymarketsAPI\Model\Mixed
      */
     public function restWarehousesLocationsPreviewsPost($dimensions, $storage_location_data, $level_data, $save)
     {
@@ -4893,13 +4893,13 @@ class WarehouseApi
      * @param  int $level_data The warehouse location level data used by the generator (required)
      * @param  int $save The save parameter that triggers the preview method or the process save method (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\Mixed, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\Mixed, HTTP status code, HTTP response headers (array of strings)
      */
     public function restWarehousesLocationsPreviewsPostWithHttpInfo($dimensions, $storage_location_data, $level_data, $save)
     {
-        $returnType = '\Swagger\Client\Model\Mixed';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\Mixed';
         $request = $this->restWarehousesLocationsPreviewsPostRequest($dimensions, $storage_location_data, $level_data, $save);
 
         try {
@@ -4951,7 +4951,7 @@ class WarehouseApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\Mixed',
+                        '\BSApp\Service\plentymarketsAPI\Model\Mixed',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4999,7 +4999,7 @@ class WarehouseApi
      */
     public function restWarehousesLocationsPreviewsPostAsyncWithHttpInfo($dimensions, $storage_location_data, $level_data, $save)
     {
-        $returnType = '\Swagger\Client\Model\Mixed';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\Mixed';
         $request = $this->restWarehousesLocationsPreviewsPostRequest($dimensions, $storage_location_data, $level_data, $save);
 
         return $this->client
@@ -5178,7 +5178,7 @@ class WarehouseApi
      * @param  int $warehouse_location_id The ID of the warehouse (required)
      * @param  int $warehouse_location_id2 warehouse_location_id2 (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -5196,7 +5196,7 @@ class WarehouseApi
      * @param  int $warehouse_location_id The ID of the warehouse (required)
      * @param  int $warehouse_location_id2 (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -5459,9 +5459,9 @@ class WarehouseApi
      * @param  int $warehouse_id The actual warehouse ID (required)
      * @param  string $warehouse_location_ids A string with all warehouse location ID&#x27;s for which a label needs to be generated (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\Mixed
+     * @return \BSApp\Service\plentymarketsAPI\Model\Mixed
      */
     public function restWarehousesLocationsWarehouseIdLabelGet($warehouse_id, $warehouse_location_ids)
     {
@@ -5477,13 +5477,13 @@ class WarehouseApi
      * @param  int $warehouse_id The actual warehouse ID (required)
      * @param  string $warehouse_location_ids A string with all warehouse location ID&#x27;s for which a label needs to be generated (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\Mixed, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\Mixed, HTTP status code, HTTP response headers (array of strings)
      */
     public function restWarehousesLocationsWarehouseIdLabelGetWithHttpInfo($warehouse_id, $warehouse_location_ids)
     {
-        $returnType = '\Swagger\Client\Model\Mixed';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\Mixed';
         $request = $this->restWarehousesLocationsWarehouseIdLabelGetRequest($warehouse_id, $warehouse_location_ids);
 
         try {
@@ -5535,7 +5535,7 @@ class WarehouseApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\Mixed',
+                        '\BSApp\Service\plentymarketsAPI\Model\Mixed',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5579,7 +5579,7 @@ class WarehouseApi
      */
     public function restWarehousesLocationsWarehouseIdLabelGetAsyncWithHttpInfo($warehouse_id, $warehouse_location_ids)
     {
-        $returnType = '\Swagger\Client\Model\Mixed';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\Mixed';
         $request = $this->restWarehousesLocationsWarehouseIdLabelGetRequest($warehouse_id, $warehouse_location_ids);
 
         return $this->client
@@ -5739,7 +5739,7 @@ class WarehouseApi
      *
      * @param  int $warehouse_location_id The ID of the warehouse location (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -5755,7 +5755,7 @@ class WarehouseApi
      *
      * @param  int $warehouse_location_id The ID of the warehouse location (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -5968,9 +5968,9 @@ class WarehouseApi
      *
      * @param  int $warehouse_location_id The ID of the warehouse location (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesWarehouseModelsWarehouseLocation
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesWarehouseModelsWarehouseLocation
      */
     public function restWarehousesLocationsWarehouseLocationIdGet($warehouse_location_id)
     {
@@ -5985,13 +5985,13 @@ class WarehouseApi
      *
      * @param  int $warehouse_location_id The ID of the warehouse location (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesWarehouseModelsWarehouseLocation, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesWarehouseModelsWarehouseLocation, HTTP status code, HTTP response headers (array of strings)
      */
     public function restWarehousesLocationsWarehouseLocationIdGetWithHttpInfo($warehouse_location_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesWarehouseModelsWarehouseLocation';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesWarehouseModelsWarehouseLocation';
         $request = $this->restWarehousesLocationsWarehouseLocationIdGetRequest($warehouse_location_id);
 
         try {
@@ -6043,7 +6043,7 @@ class WarehouseApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesWarehouseModelsWarehouseLocation',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesWarehouseModelsWarehouseLocation',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6085,7 +6085,7 @@ class WarehouseApi
      */
     public function restWarehousesLocationsWarehouseLocationIdGetAsyncWithHttpInfo($warehouse_location_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesWarehouseModelsWarehouseLocation';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesWarehouseModelsWarehouseLocation';
         $request = $this->restWarehousesLocationsWarehouseLocationIdGetRequest($warehouse_location_id);
 
         return $this->client
@@ -6234,9 +6234,9 @@ class WarehouseApi
      *
      * @param  int $warehouse_location_id The ID of the warehouse location (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesWarehouseModelsWarehouseLocation
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesWarehouseModelsWarehouseLocation
      */
     public function restWarehousesLocationsWarehouseLocationIdPut($warehouse_location_id)
     {
@@ -6251,13 +6251,13 @@ class WarehouseApi
      *
      * @param  int $warehouse_location_id The ID of the warehouse location (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesWarehouseModelsWarehouseLocation, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesWarehouseModelsWarehouseLocation, HTTP status code, HTTP response headers (array of strings)
      */
     public function restWarehousesLocationsWarehouseLocationIdPutWithHttpInfo($warehouse_location_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesWarehouseModelsWarehouseLocation';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesWarehouseModelsWarehouseLocation';
         $request = $this->restWarehousesLocationsWarehouseLocationIdPutRequest($warehouse_location_id);
 
         try {
@@ -6309,7 +6309,7 @@ class WarehouseApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesWarehouseModelsWarehouseLocation',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesWarehouseModelsWarehouseLocation',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6351,7 +6351,7 @@ class WarehouseApi
      */
     public function restWarehousesLocationsWarehouseLocationIdPutAsyncWithHttpInfo($warehouse_location_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesWarehouseModelsWarehouseLocation';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesWarehouseModelsWarehouseLocation';
         $request = $this->restWarehousesLocationsWarehouseLocationIdPutRequest($warehouse_location_id);
 
         return $this->client
@@ -6500,9 +6500,9 @@ class WarehouseApi
      *
      * @param  int $warehouse_id The actual warehouse ID (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\Mixed
+     * @return \BSApp\Service\plentymarketsAPI\Model\Mixed
      */
     public function restWarehousesStructureWarehouseIdGet($warehouse_id)
     {
@@ -6517,13 +6517,13 @@ class WarehouseApi
      *
      * @param  int $warehouse_id The actual warehouse ID (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\Mixed, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\Mixed, HTTP status code, HTTP response headers (array of strings)
      */
     public function restWarehousesStructureWarehouseIdGetWithHttpInfo($warehouse_id)
     {
-        $returnType = '\Swagger\Client\Model\Mixed';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\Mixed';
         $request = $this->restWarehousesStructureWarehouseIdGetRequest($warehouse_id);
 
         try {
@@ -6575,7 +6575,7 @@ class WarehouseApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\Mixed',
+                        '\BSApp\Service\plentymarketsAPI\Model\Mixed',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6617,7 +6617,7 @@ class WarehouseApi
      */
     public function restWarehousesStructureWarehouseIdGetAsyncWithHttpInfo($warehouse_id)
     {
-        $returnType = '\Swagger\Client\Model\Mixed';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\Mixed';
         $request = $this->restWarehousesStructureWarehouseIdGetRequest($warehouse_id);
 
         return $this->client
@@ -6766,9 +6766,9 @@ class WarehouseApi
      *
      * @param  int $warehouse_id The actual warehouse ID (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\Mixed
+     * @return \BSApp\Service\plentymarketsAPI\Model\Mixed
      */
     public function restWarehousesStructureWarehouseIdMovingGet($warehouse_id)
     {
@@ -6783,13 +6783,13 @@ class WarehouseApi
      *
      * @param  int $warehouse_id The actual warehouse ID (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\Mixed, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\Mixed, HTTP status code, HTTP response headers (array of strings)
      */
     public function restWarehousesStructureWarehouseIdMovingGetWithHttpInfo($warehouse_id)
     {
-        $returnType = '\Swagger\Client\Model\Mixed';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\Mixed';
         $request = $this->restWarehousesStructureWarehouseIdMovingGetRequest($warehouse_id);
 
         try {
@@ -6841,7 +6841,7 @@ class WarehouseApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\Mixed',
+                        '\BSApp\Service\plentymarketsAPI\Model\Mixed',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6883,7 +6883,7 @@ class WarehouseApi
      */
     public function restWarehousesStructureWarehouseIdMovingGetAsyncWithHttpInfo($warehouse_id)
     {
-        $returnType = '\Swagger\Client\Model\Mixed';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\Mixed';
         $request = $this->restWarehousesStructureWarehouseIdMovingGetRequest($warehouse_id);
 
         return $this->client
@@ -7032,9 +7032,9 @@ class WarehouseApi
      *
      * @param  int $warehouse_id The ID of the warehouse (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesWarehouseModelsWarehouseLocationDimension
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesWarehouseModelsWarehouseLocationDimension
      */
     public function restWarehousesWarehouseIdLocationsDimensionsGet($warehouse_id)
     {
@@ -7049,13 +7049,13 @@ class WarehouseApi
      *
      * @param  int $warehouse_id The ID of the warehouse (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesWarehouseModelsWarehouseLocationDimension, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesWarehouseModelsWarehouseLocationDimension, HTTP status code, HTTP response headers (array of strings)
      */
     public function restWarehousesWarehouseIdLocationsDimensionsGetWithHttpInfo($warehouse_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesWarehouseModelsWarehouseLocationDimension';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesWarehouseModelsWarehouseLocationDimension';
         $request = $this->restWarehousesWarehouseIdLocationsDimensionsGetRequest($warehouse_id);
 
         try {
@@ -7107,7 +7107,7 @@ class WarehouseApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesWarehouseModelsWarehouseLocationDimension',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesWarehouseModelsWarehouseLocationDimension',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -7149,7 +7149,7 @@ class WarehouseApi
      */
     public function restWarehousesWarehouseIdLocationsDimensionsGetAsyncWithHttpInfo($warehouse_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesWarehouseModelsWarehouseLocationDimension';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesWarehouseModelsWarehouseLocationDimension';
         $request = $this->restWarehousesWarehouseIdLocationsDimensionsGetRequest($warehouse_id);
 
         return $this->client
@@ -7298,7 +7298,7 @@ class WarehouseApi
      *
      * @param  int $warehouse_id The ID of the warehouse (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -7315,7 +7315,7 @@ class WarehouseApi
      *
      * @param  int $warehouse_id The ID of the warehouse (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -7566,9 +7566,9 @@ class WarehouseApi
      * @param  int $level_id The ID of the warehouse location level (required)
      * @param  int $warehouse_location_level_id warehouse_location_level_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\Mixed
+     * @return \BSApp\Service\plentymarketsAPI\Model\Mixed
      */
     public function restWarehousesWarehouseIdLocationsLevelWarehouseLocationLevelIdGet($warehouse_id, $level_id, $warehouse_location_level_id)
     {
@@ -7585,13 +7585,13 @@ class WarehouseApi
      * @param  int $level_id The ID of the warehouse location level (required)
      * @param  int $warehouse_location_level_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\Mixed, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\Mixed, HTTP status code, HTTP response headers (array of strings)
      */
     public function restWarehousesWarehouseIdLocationsLevelWarehouseLocationLevelIdGetWithHttpInfo($warehouse_id, $level_id, $warehouse_location_level_id)
     {
-        $returnType = '\Swagger\Client\Model\Mixed';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\Mixed';
         $request = $this->restWarehousesWarehouseIdLocationsLevelWarehouseLocationLevelIdGetRequest($warehouse_id, $level_id, $warehouse_location_level_id);
 
         try {
@@ -7643,7 +7643,7 @@ class WarehouseApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\Mixed',
+                        '\BSApp\Service\plentymarketsAPI\Model\Mixed',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -7689,7 +7689,7 @@ class WarehouseApi
      */
     public function restWarehousesWarehouseIdLocationsLevelWarehouseLocationLevelIdGetAsyncWithHttpInfo($warehouse_id, $level_id, $warehouse_location_level_id)
     {
-        $returnType = '\Swagger\Client\Model\Mixed';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\Mixed';
         $request = $this->restWarehousesWarehouseIdLocationsLevelWarehouseLocationLevelIdGetRequest($warehouse_id, $level_id, $warehouse_location_level_id);
 
         return $this->client
@@ -7864,9 +7864,9 @@ class WarehouseApi
      *
      * @param  int $warehouse_id The ID of the warehouse (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesWarehouseModelsWarehouseLocationLevel[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesWarehouseModelsWarehouseLocationLevel[]
      */
     public function restWarehousesWarehouseIdLocationsLevelsGet($warehouse_id)
     {
@@ -7881,13 +7881,13 @@ class WarehouseApi
      *
      * @param  int $warehouse_id The ID of the warehouse (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesWarehouseModelsWarehouseLocationLevel[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesWarehouseModelsWarehouseLocationLevel[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restWarehousesWarehouseIdLocationsLevelsGetWithHttpInfo($warehouse_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesWarehouseModelsWarehouseLocationLevel[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesWarehouseModelsWarehouseLocationLevel[]';
         $request = $this->restWarehousesWarehouseIdLocationsLevelsGetRequest($warehouse_id);
 
         try {
@@ -7939,7 +7939,7 @@ class WarehouseApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesWarehouseModelsWarehouseLocationLevel[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesWarehouseModelsWarehouseLocationLevel[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -7981,7 +7981,7 @@ class WarehouseApi
      */
     public function restWarehousesWarehouseIdLocationsLevelsGetAsyncWithHttpInfo($warehouse_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesWarehouseModelsWarehouseLocationLevel[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesWarehouseModelsWarehouseLocationLevel[]';
         $request = $this->restWarehousesWarehouseIdLocationsLevelsGetRequest($warehouse_id);
 
         return $this->client

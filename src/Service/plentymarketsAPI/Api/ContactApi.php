@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  BSApp\Service\plentymarketsAPI
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace BSApp\Service\plentymarketsAPI\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -33,16 +33,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use BSApp\Service\plentymarketsAPI\ApiException;
+use BSApp\Service\plentymarketsAPI\Configuration;
+use BSApp\Service\plentymarketsAPI\HeaderSelector;
+use BSApp\Service\plentymarketsAPI\ObjectSerializer;
 
 /**
  * ContactApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  BSApp\Service\plentymarketsAPI
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -94,9 +94,9 @@ class ContactApi
      * @param  string $key The storage key of the object to get from contact documents. (required)
      * @param  int $contact_id contact_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesCloudStorageModelsStorageObject
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesCloudStorageModelsStorageObject
      */
     public function restAccountsContactsContactIdDocumentGet($key, $contact_id)
     {
@@ -112,13 +112,13 @@ class ContactApi
      * @param  string $key The storage key of the object to get from contact documents. (required)
      * @param  int $contact_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesCloudStorageModelsStorageObject, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesCloudStorageModelsStorageObject, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsContactsContactIdDocumentGetWithHttpInfo($key, $contact_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesCloudStorageModelsStorageObject';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesCloudStorageModelsStorageObject';
         $request = $this->restAccountsContactsContactIdDocumentGetRequest($key, $contact_id);
 
         try {
@@ -170,7 +170,7 @@ class ContactApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesCloudStorageModelsStorageObject',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesCloudStorageModelsStorageObject',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -214,7 +214,7 @@ class ContactApi
      */
     public function restAccountsContactsContactIdDocumentGetAsyncWithHttpInfo($key, $contact_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesCloudStorageModelsStorageObject';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesCloudStorageModelsStorageObject';
         $request = $this->restAccountsContactsContactIdDocumentGetRequest($key, $contact_id);
 
         return $this->client
@@ -375,9 +375,9 @@ class ContactApi
      * @param  string $key The storage key for the file to upload (required)
      * @param  int $contact_id contact_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesCloudStorageModelsStorageObject
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesCloudStorageModelsStorageObject
      */
     public function restAccountsContactsContactIdDocumentPost($key, $contact_id)
     {
@@ -393,13 +393,13 @@ class ContactApi
      * @param  string $key The storage key for the file to upload (required)
      * @param  int $contact_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesCloudStorageModelsStorageObject, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesCloudStorageModelsStorageObject, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsContactsContactIdDocumentPostWithHttpInfo($key, $contact_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesCloudStorageModelsStorageObject';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesCloudStorageModelsStorageObject';
         $request = $this->restAccountsContactsContactIdDocumentPostRequest($key, $contact_id);
 
         try {
@@ -451,7 +451,7 @@ class ContactApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesCloudStorageModelsStorageObject',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesCloudStorageModelsStorageObject',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -495,7 +495,7 @@ class ContactApi
      */
     public function restAccountsContactsContactIdDocumentPostAsyncWithHttpInfo($key, $contact_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesCloudStorageModelsStorageObject';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesCloudStorageModelsStorageObject';
         $request = $this->restAccountsContactsContactIdDocumentPostRequest($key, $contact_id);
 
         return $this->client
@@ -656,7 +656,7 @@ class ContactApi
      * @param  string $key The storage key to get temporary url for (required)
      * @param  int $contact_id contact_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return string
      */
@@ -674,7 +674,7 @@ class ContactApi
      * @param  string $key The storage key to get temporary url for (required)
      * @param  int $contact_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of string, HTTP status code, HTTP response headers (array of strings)
      */
@@ -937,9 +937,9 @@ class ContactApi
      * @param  int $key_list List of storage keys to delete (required)
      * @param  int $contact_id contact_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyDataSimpleRestResponse
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse
      */
     public function restAccountsContactsContactIdDocumentsDelete($key_list, $contact_id)
     {
@@ -955,13 +955,13 @@ class ContactApi
      * @param  int $key_list List of storage keys to delete (required)
      * @param  int $contact_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyDataSimpleRestResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsContactsContactIdDocumentsDeleteWithHttpInfo($key_list, $contact_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyDataSimpleRestResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse';
         $request = $this->restAccountsContactsContactIdDocumentsDeleteRequest($key_list, $contact_id);
 
         try {
@@ -1013,7 +1013,7 @@ class ContactApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyDataSimpleRestResponse',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1057,7 +1057,7 @@ class ContactApi
      */
     public function restAccountsContactsContactIdDocumentsDeleteAsyncWithHttpInfo($key_list, $contact_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyDataSimpleRestResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse';
         $request = $this->restAccountsContactsContactIdDocumentsDeleteRequest($key_list, $contact_id);
 
         return $this->client
@@ -1218,9 +1218,9 @@ class ContactApi
      * @param  int $contact_id contact_id (required)
      * @param  string $continuation_token token from previous request to continue listing documents (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesCloudStorageModelsStorageObjectList
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesCloudStorageModelsStorageObjectList
      */
     public function restAccountsContactsContactIdDocumentsGet($contact_id, $continuation_token = null)
     {
@@ -1236,13 +1236,13 @@ class ContactApi
      * @param  int $contact_id (required)
      * @param  string $continuation_token token from previous request to continue listing documents (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesCloudStorageModelsStorageObjectList, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesCloudStorageModelsStorageObjectList, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsContactsContactIdDocumentsGetWithHttpInfo($contact_id, $continuation_token = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesCloudStorageModelsStorageObjectList';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesCloudStorageModelsStorageObjectList';
         $request = $this->restAccountsContactsContactIdDocumentsGetRequest($contact_id, $continuation_token);
 
         try {
@@ -1294,7 +1294,7 @@ class ContactApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesCloudStorageModelsStorageObjectList',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesCloudStorageModelsStorageObjectList',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1338,7 +1338,7 @@ class ContactApi
      */
     public function restAccountsContactsContactIdDocumentsGetAsyncWithHttpInfo($contact_id, $continuation_token = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesCloudStorageModelsStorageObjectList';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesCloudStorageModelsStorageObjectList';
         $request = $this->restAccountsContactsContactIdDocumentsGetRequest($contact_id, $continuation_token);
 
         return $this->client

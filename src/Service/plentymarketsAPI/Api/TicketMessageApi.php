@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  BSApp\Service\plentymarketsAPI
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace BSApp\Service\plentymarketsAPI\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -33,16 +33,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use BSApp\Service\plentymarketsAPI\ApiException;
+use BSApp\Service\plentymarketsAPI\Configuration;
+use BSApp\Service\plentymarketsAPI\HeaderSelector;
+use BSApp\Service\plentymarketsAPI\ObjectSerializer;
 
 /**
  * TicketMessageApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  BSApp\Service\plentymarketsAPI
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -93,9 +93,9 @@ class TicketMessageApi
      *
      * @param  int $message_id The ID of the ticket message to be returned (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesTicketModelsTicketMessage
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesTicketModelsTicketMessage
      */
     public function restTicketsMessagesMessageIdGet($message_id)
     {
@@ -110,13 +110,13 @@ class TicketMessageApi
      *
      * @param  int $message_id The ID of the ticket message to be returned (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesTicketModelsTicketMessage, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesTicketModelsTicketMessage, HTTP status code, HTTP response headers (array of strings)
      */
     public function restTicketsMessagesMessageIdGetWithHttpInfo($message_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesTicketModelsTicketMessage';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesTicketModelsTicketMessage';
         $request = $this->restTicketsMessagesMessageIdGetRequest($message_id);
 
         try {
@@ -168,7 +168,7 @@ class TicketMessageApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesTicketModelsTicketMessage',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesTicketModelsTicketMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -210,7 +210,7 @@ class TicketMessageApi
      */
     public function restTicketsMessagesMessageIdGetAsyncWithHttpInfo($message_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesTicketModelsTicketMessage';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesTicketModelsTicketMessage';
         $request = $this->restTicketsMessagesMessageIdGetRequest($message_id);
 
         return $this->client
@@ -359,9 +359,9 @@ class TicketMessageApi
      *
      * @param  int $ticket_id The ID of the ticket containing the messages (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesTicketModelsTicketMessage[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesTicketModelsTicketMessage[]
      */
     public function restTicketsTicketIdMessagesCommentGet($ticket_id)
     {
@@ -376,13 +376,13 @@ class TicketMessageApi
      *
      * @param  int $ticket_id The ID of the ticket containing the messages (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesTicketModelsTicketMessage[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesTicketModelsTicketMessage[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restTicketsTicketIdMessagesCommentGetWithHttpInfo($ticket_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesTicketModelsTicketMessage[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesTicketModelsTicketMessage[]';
         $request = $this->restTicketsTicketIdMessagesCommentGetRequest($ticket_id);
 
         try {
@@ -434,7 +434,7 @@ class TicketMessageApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesTicketModelsTicketMessage[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesTicketModelsTicketMessage[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -476,7 +476,7 @@ class TicketMessageApi
      */
     public function restTicketsTicketIdMessagesCommentGetAsyncWithHttpInfo($ticket_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesTicketModelsTicketMessage[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesTicketModelsTicketMessage[]';
         $request = $this->restTicketsTicketIdMessagesCommentGetRequest($ticket_id);
 
         return $this->client
@@ -625,9 +625,9 @@ class TicketMessageApi
      *
      * @param  int $ticket_id The ID of the ticket containing the messages (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesTicketModelsTicketMessage[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesTicketModelsTicketMessage[]
      */
     public function restTicketsTicketIdMessagesGet($ticket_id)
     {
@@ -642,13 +642,13 @@ class TicketMessageApi
      *
      * @param  int $ticket_id The ID of the ticket containing the messages (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesTicketModelsTicketMessage[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesTicketModelsTicketMessage[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restTicketsTicketIdMessagesGetWithHttpInfo($ticket_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesTicketModelsTicketMessage[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesTicketModelsTicketMessage[]';
         $request = $this->restTicketsTicketIdMessagesGetRequest($ticket_id);
 
         try {
@@ -700,7 +700,7 @@ class TicketMessageApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesTicketModelsTicketMessage[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesTicketModelsTicketMessage[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -742,7 +742,7 @@ class TicketMessageApi
      */
     public function restTicketsTicketIdMessagesGetAsyncWithHttpInfo($ticket_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesTicketModelsTicketMessage[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesTicketModelsTicketMessage[]';
         $request = $this->restTicketsTicketIdMessagesGetRequest($ticket_id);
 
         return $this->client
@@ -891,9 +891,9 @@ class TicketMessageApi
      *
      * @param  int $ticket_id The ID of the ticket containing the messages (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesTicketModelsTicketMessage[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesTicketModelsTicketMessage[]
      */
     public function restTicketsTicketIdMessagesMessageGet($ticket_id)
     {
@@ -908,13 +908,13 @@ class TicketMessageApi
      *
      * @param  int $ticket_id The ID of the ticket containing the messages (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesTicketModelsTicketMessage[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesTicketModelsTicketMessage[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restTicketsTicketIdMessagesMessageGetWithHttpInfo($ticket_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesTicketModelsTicketMessage[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesTicketModelsTicketMessage[]';
         $request = $this->restTicketsTicketIdMessagesMessageGetRequest($ticket_id);
 
         try {
@@ -966,7 +966,7 @@ class TicketMessageApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesTicketModelsTicketMessage[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesTicketModelsTicketMessage[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1008,7 +1008,7 @@ class TicketMessageApi
      */
     public function restTicketsTicketIdMessagesMessageGetAsyncWithHttpInfo($ticket_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesTicketModelsTicketMessage[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesTicketModelsTicketMessage[]';
         $request = $this->restTicketsTicketIdMessagesMessageGetRequest($ticket_id);
 
         return $this->client

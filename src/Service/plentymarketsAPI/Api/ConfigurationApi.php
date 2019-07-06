@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  BSApp\Service\plentymarketsAPI
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace BSApp\Service\plentymarketsAPI\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -33,16 +33,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use BSApp\Service\plentymarketsAPI\ApiException;
+use BSApp\Service\plentymarketsAPI\Configuration;
+use BSApp\Service\plentymarketsAPI\HeaderSelector;
+use BSApp\Service\plentymarketsAPI\ObjectSerializer;
 
 /**
  * ConfigurationApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  BSApp\Service\plentymarketsAPI
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -92,9 +92,9 @@ class ConfigurationApi
      * @param  int $plugin_id plugin_id (required)
      * @param  int $plugin_set_id plugin_set_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyDataSimpleRestResponse
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse
      */
     public function restPluginsPluginIdPluginSetsPluginSetIdConfigurationLayoutGet($plugin_id, $plugin_set_id)
     {
@@ -108,13 +108,13 @@ class ConfigurationApi
      * @param  int $plugin_id (required)
      * @param  int $plugin_set_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyDataSimpleRestResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function restPluginsPluginIdPluginSetsPluginSetIdConfigurationLayoutGetWithHttpInfo($plugin_id, $plugin_set_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyDataSimpleRestResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse';
         $request = $this->restPluginsPluginIdPluginSetsPluginSetIdConfigurationLayoutGetRequest($plugin_id, $plugin_set_id);
 
         try {
@@ -166,7 +166,7 @@ class ConfigurationApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyDataSimpleRestResponse',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -210,7 +210,7 @@ class ConfigurationApi
      */
     public function restPluginsPluginIdPluginSetsPluginSetIdConfigurationLayoutGetAsyncWithHttpInfo($plugin_id, $plugin_set_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyDataSimpleRestResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse';
         $request = $this->restPluginsPluginIdPluginSetsPluginSetIdConfigurationLayoutGetRequest($plugin_id, $plugin_set_id);
 
         return $this->client
@@ -373,9 +373,9 @@ class ConfigurationApi
      * @param  int $plugin_id plugin_id (required)
      * @param  int $plugin_set_id plugin_set_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesPluginModelsConfiguration[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPluginModelsConfiguration[]
      */
     public function restPluginsPluginIdPluginSetsPluginSetIdConfigurationsGet($plugin_id, $plugin_set_id)
     {
@@ -389,13 +389,13 @@ class ConfigurationApi
      * @param  int $plugin_id (required)
      * @param  int $plugin_set_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesPluginModelsConfiguration[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPluginModelsConfiguration[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restPluginsPluginIdPluginSetsPluginSetIdConfigurationsGetWithHttpInfo($plugin_id, $plugin_set_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPluginModelsConfiguration[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPluginModelsConfiguration[]';
         $request = $this->restPluginsPluginIdPluginSetsPluginSetIdConfigurationsGetRequest($plugin_id, $plugin_set_id);
 
         try {
@@ -447,7 +447,7 @@ class ConfigurationApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesPluginModelsConfiguration[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPluginModelsConfiguration[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -491,7 +491,7 @@ class ConfigurationApi
      */
     public function restPluginsPluginIdPluginSetsPluginSetIdConfigurationsGetAsyncWithHttpInfo($plugin_id, $plugin_set_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPluginModelsConfiguration[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPluginModelsConfiguration[]';
         $request = $this->restPluginsPluginIdPluginSetsPluginSetIdConfigurationsGetRequest($plugin_id, $plugin_set_id);
 
         return $this->client
@@ -654,9 +654,9 @@ class ConfigurationApi
      * @param  int $plugin_id plugin_id (required)
      * @param  int $plugin_set_id plugin_set_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\Mixed
+     * @return \BSApp\Service\plentymarketsAPI\Model\Mixed
      */
     public function restPluginsPluginIdPluginSetsPluginSetIdConfigurationsPut($plugin_id, $plugin_set_id)
     {
@@ -670,13 +670,13 @@ class ConfigurationApi
      * @param  int $plugin_id (required)
      * @param  int $plugin_set_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\Mixed, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\Mixed, HTTP status code, HTTP response headers (array of strings)
      */
     public function restPluginsPluginIdPluginSetsPluginSetIdConfigurationsPutWithHttpInfo($plugin_id, $plugin_set_id)
     {
-        $returnType = '\Swagger\Client\Model\Mixed';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\Mixed';
         $request = $this->restPluginsPluginIdPluginSetsPluginSetIdConfigurationsPutRequest($plugin_id, $plugin_set_id);
 
         try {
@@ -728,7 +728,7 @@ class ConfigurationApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\Mixed',
+                        '\BSApp\Service\plentymarketsAPI\Model\Mixed',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -772,7 +772,7 @@ class ConfigurationApi
      */
     public function restPluginsPluginIdPluginSetsPluginSetIdConfigurationsPutAsyncWithHttpInfo($plugin_id, $plugin_set_id)
     {
-        $returnType = '\Swagger\Client\Model\Mixed';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\Mixed';
         $request = $this->restPluginsPluginIdPluginSetsPluginSetIdConfigurationsPutRequest($plugin_id, $plugin_set_id);
 
         return $this->client
@@ -934,9 +934,9 @@ class ConfigurationApi
      *
      * @param  int $plugin_set_id plugin_set_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyDataSimpleRestResponse
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse
      */
     public function restPluginsPluginSetsPluginSetIdConfigurationsExportGet($plugin_set_id)
     {
@@ -949,13 +949,13 @@ class ConfigurationApi
      *
      * @param  int $plugin_set_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyDataSimpleRestResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function restPluginsPluginSetsPluginSetIdConfigurationsExportGetWithHttpInfo($plugin_set_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyDataSimpleRestResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse';
         $request = $this->restPluginsPluginSetsPluginSetIdConfigurationsExportGetRequest($plugin_set_id);
 
         try {
@@ -1007,7 +1007,7 @@ class ConfigurationApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyDataSimpleRestResponse',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1049,7 +1049,7 @@ class ConfigurationApi
      */
     public function restPluginsPluginSetsPluginSetIdConfigurationsExportGetAsyncWithHttpInfo($plugin_set_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyDataSimpleRestResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse';
         $request = $this->restPluginsPluginSetsPluginSetIdConfigurationsExportGetRequest($plugin_set_id);
 
         return $this->client
@@ -1196,9 +1196,9 @@ class ConfigurationApi
      *
      * @param  int $plugin_set_id plugin_set_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyDataSimpleRestResponse
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse
      */
     public function restPluginsPluginSetsPluginSetIdConfigurationsImportPost($plugin_set_id)
     {
@@ -1211,13 +1211,13 @@ class ConfigurationApi
      *
      * @param  int $plugin_set_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyDataSimpleRestResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function restPluginsPluginSetsPluginSetIdConfigurationsImportPostWithHttpInfo($plugin_set_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyDataSimpleRestResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse';
         $request = $this->restPluginsPluginSetsPluginSetIdConfigurationsImportPostRequest($plugin_set_id);
 
         try {
@@ -1269,7 +1269,7 @@ class ConfigurationApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyDataSimpleRestResponse',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1311,7 +1311,7 @@ class ConfigurationApi
      */
     public function restPluginsPluginSetsPluginSetIdConfigurationsImportPostAsyncWithHttpInfo($plugin_set_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyDataSimpleRestResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse';
         $request = $this->restPluginsPluginSetsPluginSetIdConfigurationsImportPostRequest($plugin_set_id);
 
         return $this->client

@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  BSApp\Service\plentymarketsAPI
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace BSApp\Service\plentymarketsAPI\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -33,16 +33,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use BSApp\Service\plentymarketsAPI\ApiException;
+use BSApp\Service\plentymarketsAPI\Configuration;
+use BSApp\Service\plentymarketsAPI\HeaderSelector;
+use BSApp\Service\plentymarketsAPI\ObjectSerializer;
 
 /**
  * ContactAnonymizationApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  BSApp\Service\plentymarketsAPI
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -93,9 +93,9 @@ class ContactAnonymizationApi
      *
      * @param  int $contact_id contact_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesAccountContactModelsContact
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContact
      */
     public function restAccountsContactsContactIdAnonymizePut($contact_id)
     {
@@ -110,13 +110,13 @@ class ContactAnonymizationApi
      *
      * @param  int $contact_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesAccountContactModelsContact, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContact, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsContactsContactIdAnonymizePutWithHttpInfo($contact_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountContactModelsContact';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContact';
         $request = $this->restAccountsContactsContactIdAnonymizePutRequest($contact_id);
 
         try {
@@ -168,7 +168,7 @@ class ContactAnonymizationApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesAccountContactModelsContact',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContact',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -210,7 +210,7 @@ class ContactAnonymizationApi
      */
     public function restAccountsContactsContactIdAnonymizePutAsyncWithHttpInfo($contact_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountContactModelsContact';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContact';
         $request = $this->restAccountsContactsContactIdAnonymizePutRequest($contact_id);
 
         return $this->client

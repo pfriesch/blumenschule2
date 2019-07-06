@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  BSApp\Service\plentymarketsAPI
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace BSApp\Service\plentymarketsAPI\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -33,16 +33,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use BSApp\Service\plentymarketsAPI\ApiException;
+use BSApp\Service\plentymarketsAPI\Configuration;
+use BSApp\Service\plentymarketsAPI\HeaderSelector;
+use BSApp\Service\plentymarketsAPI\ObjectSerializer;
 
 /**
  * PluginMultilingualismApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  BSApp\Service\plentymarketsAPI
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -98,9 +98,9 @@ class PluginMultilingualismApi
      * @param  string $value The value of the translation (required)
      * @param  string $file_name The of the file (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesPluginMultilingualismModelsPluginTranslation
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPluginMultilingualismModelsPluginTranslation
      */
     public function restLanguagesTranslationsPost($plugin_set_id, $plugin_name, $language_code, $key, $value, $file_name)
     {
@@ -120,13 +120,13 @@ class PluginMultilingualismApi
      * @param  string $value The value of the translation (required)
      * @param  string $file_name The of the file (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesPluginMultilingualismModelsPluginTranslation, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPluginMultilingualismModelsPluginTranslation, HTTP status code, HTTP response headers (array of strings)
      */
     public function restLanguagesTranslationsPostWithHttpInfo($plugin_set_id, $plugin_name, $language_code, $key, $value, $file_name)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPluginMultilingualismModelsPluginTranslation';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPluginMultilingualismModelsPluginTranslation';
         $request = $this->restLanguagesTranslationsPostRequest($plugin_set_id, $plugin_name, $language_code, $key, $value, $file_name);
 
         try {
@@ -178,7 +178,7 @@ class PluginMultilingualismApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesPluginMultilingualismModelsPluginTranslation',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPluginMultilingualismModelsPluginTranslation',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -230,7 +230,7 @@ class PluginMultilingualismApi
      */
     public function restLanguagesTranslationsPostAsyncWithHttpInfo($plugin_set_id, $plugin_name, $language_code, $key, $value, $file_name)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPluginMultilingualismModelsPluginTranslation';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPluginMultilingualismModelsPluginTranslation';
         $request = $this->restLanguagesTranslationsPostRequest($plugin_set_id, $plugin_name, $language_code, $key, $value, $file_name);
 
         return $this->client
@@ -431,7 +431,7 @@ class PluginMultilingualismApi
      * @param  int $translation_id The ID of the translation (required)
      * @param  int $translation_id2 translation_id2 (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -448,7 +448,7 @@ class PluginMultilingualismApi
      * @param  int $translation_id The ID of the translation (required)
      * @param  int $translation_id2 (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -675,9 +675,9 @@ class PluginMultilingualismApi
      * @param  int $id The ID of the translation (required)
      * @param  int $translation_id translation_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesPluginMultilingualismModelsPluginTranslation
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPluginMultilingualismModelsPluginTranslation
      */
     public function restLanguagesTranslationsTranslationIdGet($id, $translation_id)
     {
@@ -693,13 +693,13 @@ class PluginMultilingualismApi
      * @param  int $id The ID of the translation (required)
      * @param  int $translation_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesPluginMultilingualismModelsPluginTranslation, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPluginMultilingualismModelsPluginTranslation, HTTP status code, HTTP response headers (array of strings)
      */
     public function restLanguagesTranslationsTranslationIdGetWithHttpInfo($id, $translation_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPluginMultilingualismModelsPluginTranslation';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPluginMultilingualismModelsPluginTranslation';
         $request = $this->restLanguagesTranslationsTranslationIdGetRequest($id, $translation_id);
 
         try {
@@ -751,7 +751,7 @@ class PluginMultilingualismApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesPluginMultilingualismModelsPluginTranslation',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPluginMultilingualismModelsPluginTranslation',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -795,7 +795,7 @@ class PluginMultilingualismApi
      */
     public function restLanguagesTranslationsTranslationIdGetAsyncWithHttpInfo($id, $translation_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPluginMultilingualismModelsPluginTranslation';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPluginMultilingualismModelsPluginTranslation';
         $request = $this->restLanguagesTranslationsTranslationIdGetRequest($id, $translation_id);
 
         return $this->client
@@ -962,9 +962,9 @@ class PluginMultilingualismApi
      * @param  string $file_name The value of the translation (required)
      * @param  int $translation_id translation_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesPluginMultilingualismModelsPluginTranslation
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPluginMultilingualismModelsPluginTranslation
      */
     public function restLanguagesTranslationsTranslationIdPut($id, $plugin_set_id, $plugin_name, $language_code, $key, $value, $file_name, $translation_id)
     {
@@ -986,13 +986,13 @@ class PluginMultilingualismApi
      * @param  string $file_name The value of the translation (required)
      * @param  int $translation_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesPluginMultilingualismModelsPluginTranslation, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPluginMultilingualismModelsPluginTranslation, HTTP status code, HTTP response headers (array of strings)
      */
     public function restLanguagesTranslationsTranslationIdPutWithHttpInfo($id, $plugin_set_id, $plugin_name, $language_code, $key, $value, $file_name, $translation_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPluginMultilingualismModelsPluginTranslation';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPluginMultilingualismModelsPluginTranslation';
         $request = $this->restLanguagesTranslationsTranslationIdPutRequest($id, $plugin_set_id, $plugin_name, $language_code, $key, $value, $file_name, $translation_id);
 
         try {
@@ -1044,7 +1044,7 @@ class PluginMultilingualismApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesPluginMultilingualismModelsPluginTranslation',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPluginMultilingualismModelsPluginTranslation',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1100,7 +1100,7 @@ class PluginMultilingualismApi
      */
     public function restLanguagesTranslationsTranslationIdPutAsyncWithHttpInfo($id, $plugin_set_id, $plugin_name, $language_code, $key, $value, $file_name, $translation_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPluginMultilingualismModelsPluginTranslation';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPluginMultilingualismModelsPluginTranslation';
         $request = $this->restLanguagesTranslationsTranslationIdPutRequest($id, $plugin_set_id, $plugin_name, $language_code, $key, $value, $file_name, $translation_id);
 
         return $this->client
@@ -1329,7 +1329,7 @@ class PluginMultilingualismApi
      * @param  int $plugin_set_id2 plugin_set_id2 (required)
      * @param  int $language_code2 language_code2 (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1348,7 +1348,7 @@ class PluginMultilingualismApi
      * @param  int $plugin_set_id2 (required)
      * @param  int $language_code2 (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */

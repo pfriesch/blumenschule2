@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  BSApp\Service\plentymarketsAPI
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace BSApp\Service\plentymarketsAPI\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -33,16 +33,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use BSApp\Service\plentymarketsAPI\ApiException;
+use BSApp\Service\plentymarketsAPI\Configuration;
+use BSApp\Service\plentymarketsAPI\HeaderSelector;
+use BSApp\Service\plentymarketsAPI\ObjectSerializer;
 
 /**
  * CommentApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  BSApp\Service\plentymarketsAPI
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -93,7 +93,7 @@ class CommentApi
      *
      * @param  int $comment_id The ID of the comment (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -109,7 +109,7 @@ class CommentApi
      *
      * @param  int $comment_id The ID of the comment (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -322,9 +322,9 @@ class CommentApi
      *
      * @param  int $comment_id The ID of the comment (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesCommentModelsComment
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesCommentModelsComment
      */
     public function restCommentsCommentIdGet($comment_id)
     {
@@ -339,13 +339,13 @@ class CommentApi
      *
      * @param  int $comment_id The ID of the comment (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesCommentModelsComment, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesCommentModelsComment, HTTP status code, HTTP response headers (array of strings)
      */
     public function restCommentsCommentIdGetWithHttpInfo($comment_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesCommentModelsComment';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesCommentModelsComment';
         $request = $this->restCommentsCommentIdGetRequest($comment_id);
 
         try {
@@ -397,7 +397,7 @@ class CommentApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesCommentModelsComment',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesCommentModelsComment',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -439,7 +439,7 @@ class CommentApi
      */
     public function restCommentsCommentIdGetAsyncWithHttpInfo($comment_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesCommentModelsComment';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesCommentModelsComment';
         $request = $this->restCommentsCommentIdGetRequest($comment_id);
 
         return $this->client
@@ -590,9 +590,9 @@ class CommentApi
      * @param  int $user_id The ID of the user the comment belongs to (optional)
      * @param  bool $is_visible_for_contact If true, the comment is visible for the associated contact. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesCommentModelsComment
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesCommentModelsComment
      */
     public function restCommentsCommentIdPut($comment_id, $reference_type, $reference_value, $user_id = null, $is_visible_for_contact = null)
     {
@@ -609,13 +609,13 @@ class CommentApi
      * @param  int $user_id The ID of the user the comment belongs to (optional)
      * @param  bool $is_visible_for_contact If true, the comment is visible for the associated contact. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesCommentModelsComment, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesCommentModelsComment, HTTP status code, HTTP response headers (array of strings)
      */
     public function restCommentsCommentIdPutWithHttpInfo($comment_id, $reference_type, $reference_value, $user_id = null, $is_visible_for_contact = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesCommentModelsComment';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesCommentModelsComment';
         $request = $this->restCommentsCommentIdPutRequest($comment_id, $reference_type, $reference_value, $user_id, $is_visible_for_contact);
 
         try {
@@ -667,7 +667,7 @@ class CommentApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesCommentModelsComment',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesCommentModelsComment',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -717,7 +717,7 @@ class CommentApi
      */
     public function restCommentsCommentIdPutAsyncWithHttpInfo($comment_id, $reference_type, $reference_value, $user_id = null, $is_visible_for_contact = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesCommentModelsComment';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesCommentModelsComment';
         $request = $this->restCommentsCommentIdPutRequest($comment_id, $reference_type, $reference_value, $user_id, $is_visible_for_contact);
 
         return $this->client
@@ -898,9 +898,9 @@ class CommentApi
      *
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesCommentModelsComment
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesCommentModelsComment
      */
     public function restCommentsPost($body = null)
     {
@@ -915,13 +915,13 @@ class CommentApi
      *
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesCommentModelsComment, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesCommentModelsComment, HTTP status code, HTTP response headers (array of strings)
      */
     public function restCommentsPostWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesCommentModelsComment';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesCommentModelsComment';
         $request = $this->restCommentsPostRequest($body);
 
         try {
@@ -973,7 +973,7 @@ class CommentApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesCommentModelsComment',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesCommentModelsComment',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1015,7 +1015,7 @@ class CommentApi
      */
     public function restCommentsPostAsyncWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesCommentModelsComment';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesCommentModelsComment';
         $request = $this->restCommentsPostRequest($body);
 
         return $this->client
@@ -1156,9 +1156,9 @@ class CommentApi
      * @param  int $user_id The ID of the user the comment belongs to (optional)
      * @param  bool $is_visible_for_contact If true, the comment is visible for the associated contact. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesCommentModelsComment[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesCommentModelsComment[]
      */
     public function restCommentsReferenceTypeReferenceValueGet($reference_type, $reference_value, $user_id = null, $is_visible_for_contact = null)
     {
@@ -1176,13 +1176,13 @@ class CommentApi
      * @param  int $user_id The ID of the user the comment belongs to (optional)
      * @param  bool $is_visible_for_contact If true, the comment is visible for the associated contact. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesCommentModelsComment[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesCommentModelsComment[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restCommentsReferenceTypeReferenceValueGetWithHttpInfo($reference_type, $reference_value, $user_id = null, $is_visible_for_contact = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesCommentModelsComment[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesCommentModelsComment[]';
         $request = $this->restCommentsReferenceTypeReferenceValueGetRequest($reference_type, $reference_value, $user_id, $is_visible_for_contact);
 
         try {
@@ -1234,7 +1234,7 @@ class CommentApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesCommentModelsComment[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesCommentModelsComment[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1282,7 +1282,7 @@ class CommentApi
      */
     public function restCommentsReferenceTypeReferenceValueGetAsyncWithHttpInfo($reference_type, $reference_value, $user_id = null, $is_visible_for_contact = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesCommentModelsComment[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesCommentModelsComment[]';
         $request = $this->restCommentsReferenceTypeReferenceValueGetRequest($reference_type, $reference_value, $user_id, $is_visible_for_contact);
 
         return $this->client

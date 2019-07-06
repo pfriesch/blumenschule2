@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  BSApp\Service\plentymarketsAPI
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace BSApp\Service\plentymarketsAPI\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \BSApp\Service\plentymarketsAPI\ObjectSerializer;
 
 /**
  * PlentyModulesOrderPropertyModelsOrderPropertyType Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  BSApp\Service\plentymarketsAPI
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -60,7 +60,7 @@ class PlentyModulesOrderPropertyModelsOrderPropertyType implements ModelInterfac
 'is_erasable' => 'bool',
 'position' => 'int',
 'cast' => 'string',
-'names' => '\Swagger\Client\Model\PlentyModulesOrderPropertyModelsOrderPropertyTypeName[]'    ];
+'names' => '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderPropertyModelsOrderPropertyTypeName[]'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -319,7 +319,7 @@ class PlentyModulesOrderPropertyModelsOrderPropertyType implements ModelInterfac
     /**
      * Gets names
      *
-     * @return \Swagger\Client\Model\PlentyModulesOrderPropertyModelsOrderPropertyTypeName[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderPropertyModelsOrderPropertyTypeName[]
      */
     public function getNames()
     {
@@ -329,7 +329,7 @@ class PlentyModulesOrderPropertyModelsOrderPropertyType implements ModelInterfac
     /**
      * Sets names
      *
-     * @param \Swagger\Client\Model\PlentyModulesOrderPropertyModelsOrderPropertyTypeName[] $names The names of the order property types. (List)
+     * @param \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderPropertyModelsOrderPropertyTypeName[] $names The names of the order property types. (List)
      *
      * @return $this
      */

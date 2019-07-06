@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  BSApp\Service\plentymarketsAPI
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace BSApp\Service\plentymarketsAPI\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -33,16 +33,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use BSApp\Service\plentymarketsAPI\ApiException;
+use BSApp\Service\plentymarketsAPI\Configuration;
+use BSApp\Service\plentymarketsAPI\HeaderSelector;
+use BSApp\Service\plentymarketsAPI\ObjectSerializer;
 
 /**
  * ReportApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  BSApp\Service\plentymarketsAPI
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -92,9 +92,9 @@ class ReportApi
      * Returns list of all saved configurations
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesReportModelsRawDataConfigs
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesReportModelsRawDataConfigs
      */
     public function restReportsRawDataConfigGet()
     {
@@ -108,13 +108,13 @@ class ReportApi
      * Returns list of all saved configurations
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesReportModelsRawDataConfigs, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesReportModelsRawDataConfigs, HTTP status code, HTTP response headers (array of strings)
      */
     public function restReportsRawDataConfigGetWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesReportModelsRawDataConfigs';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesReportModelsRawDataConfigs';
         $request = $this->restReportsRawDataConfigGetRequest();
 
         try {
@@ -166,7 +166,7 @@ class ReportApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesReportModelsRawDataConfigs',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesReportModelsRawDataConfigs',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -206,7 +206,7 @@ class ReportApi
      */
     public function restReportsRawDataConfigGetAsyncWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesReportModelsRawDataConfigs';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesReportModelsRawDataConfigs';
         $request = $this->restReportsRawDataConfigGetRequest();
 
         return $this->client
@@ -340,13 +340,13 @@ class ReportApi
      *
      * @param  int $ Resets all saved raw data configurations with given configs (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesReportModelsRawDataConfigs
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesReportModelsRawDataConfigs
      */
-    public function restReportsRawDataConfigPut($)
+    public function restReportsRawDataConfigPut($TODO_value_not_set_by_swagger)
     {
-        list($response) = $this->restReportsRawDataConfigPutWithHttpInfo($);
+        list($response) = $this->restReportsRawDataConfigPutWithHttpInfo($TODO_value_not_set_by_swagger);
         return $response;
     }
 
@@ -357,14 +357,14 @@ class ReportApi
      *
      * @param  int $ Resets all saved raw data configurations with given configs (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesReportModelsRawDataConfigs, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesReportModelsRawDataConfigs, HTTP status code, HTTP response headers (array of strings)
      */
-    public function restReportsRawDataConfigPutWithHttpInfo($)
+    public function restReportsRawDataConfigPutWithHttpInfo($TODO_value_not_set_by_swagger)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesReportModelsRawDataConfigs';
-        $request = $this->restReportsRawDataConfigPutRequest($);
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesReportModelsRawDataConfigs';
+        $request = $this->restReportsRawDataConfigPutRequest($TODO_value_not_set_by_swagger);
 
         try {
             $options = $this->createHttpClientOption();
@@ -415,7 +415,7 @@ class ReportApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesReportModelsRawDataConfigs',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesReportModelsRawDataConfigs',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -435,9 +435,9 @@ class ReportApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function restReportsRawDataConfigPutAsync($)
+    public function restReportsRawDataConfigPutAsync($TODO_value_not_set_by_swagger)
     {
-        return $this->restReportsRawDataConfigPutAsyncWithHttpInfo($)
+        return $this->restReportsRawDataConfigPutAsyncWithHttpInfo($TODO_value_not_set_by_swagger)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -455,10 +455,10 @@ class ReportApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function restReportsRawDataConfigPutAsyncWithHttpInfo($)
+    public function restReportsRawDataConfigPutAsyncWithHttpInfo($TODO_value_not_set_by_swagger)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesReportModelsRawDataConfigs';
-        $request = $this->restReportsRawDataConfigPutRequest($);
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesReportModelsRawDataConfigs';
+        $request = $this->restReportsRawDataConfigPutRequest($TODO_value_not_set_by_swagger);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -505,10 +505,10 @@ class ReportApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function restReportsRawDataConfigPutRequest($)
+    protected function restReportsRawDataConfigPutRequest($TODO_value_not_set_by_swagger)
     {
         // verify the required parameter '' is set
-        if ($ === null || (is_array($) && count($) === 0)) {
+        if ($TODO_value_not_set_by_swagger === null || (is_array($TODO_value_not_set_by_swagger) && count($TODO_value_not_set_by_swagger) === 0)) {
             throw new \InvalidArgumentException(
                 'Missing the required parameter $ when calling restReportsRawDataConfigPut'
             );
@@ -522,8 +522,8 @@ class ReportApi
         $multipart = false;
 
         // query params
-        if ($ !== null) {
-            $queryParams[''] = ObjectSerializer::toQueryValue($);
+        if ($TODO_value_not_set_by_swagger !== null) {
+            $queryParams[''] = ObjectSerializer::toQueryValue($TODO_value_not_set_by_swagger);
         }
 
 
@@ -601,9 +601,9 @@ class ReportApi
      * Get list of all raw data creators
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesReportModelsRawDataCreator[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesReportModelsRawDataCreator[]
      */
     public function restReportsRawDataCreatorsGet()
     {
@@ -617,13 +617,13 @@ class ReportApi
      * Get list of all raw data creators
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesReportModelsRawDataCreator[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesReportModelsRawDataCreator[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restReportsRawDataCreatorsGetWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesReportModelsRawDataCreator[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesReportModelsRawDataCreator[]';
         $request = $this->restReportsRawDataCreatorsGetRequest();
 
         try {
@@ -675,7 +675,7 @@ class ReportApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesReportModelsRawDataCreator[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesReportModelsRawDataCreator[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -715,7 +715,7 @@ class ReportApi
      */
     public function restReportsRawDataCreatorsGetAsyncWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesReportModelsRawDataCreator[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesReportModelsRawDataCreator[]';
         $request = $this->restReportsRawDataCreatorsGetRequest();
 
         return $this->client
@@ -849,9 +849,9 @@ class ReportApi
      *
      * @param  string $path The raw data file path (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\Mixed
+     * @return \BSApp\Service\plentymarketsAPI\Model\Mixed
      */
     public function restReportsRawDataFileGet($path)
     {
@@ -866,13 +866,13 @@ class ReportApi
      *
      * @param  string $path The raw data file path (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\Mixed, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\Mixed, HTTP status code, HTTP response headers (array of strings)
      */
     public function restReportsRawDataFileGetWithHttpInfo($path)
     {
-        $returnType = '\Swagger\Client\Model\Mixed';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\Mixed';
         $request = $this->restReportsRawDataFileGetRequest($path);
 
         try {
@@ -924,7 +924,7 @@ class ReportApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\Mixed',
+                        '\BSApp\Service\plentymarketsAPI\Model\Mixed',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -966,7 +966,7 @@ class ReportApi
      */
     public function restReportsRawDataFileGetAsyncWithHttpInfo($path)
     {
-        $returnType = '\Swagger\Client\Model\Mixed';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\Mixed';
         $request = $this->restReportsRawDataFileGetRequest($path);
 
         return $this->client
@@ -1116,9 +1116,9 @@ class ReportApi
      * @param  string $sort_order Defines the sort order, possible values are: asc, desc (optional)
      * @param  string $after The last evaluated key as base64, provide that as the starting point for the next query (pagination) (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesReportModelsRawDataSearchResult
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesReportModelsRawDataSearchResult
      */
     public function restReportsRawDataGet($data_name = null, $process_status = null, $created_at_timestamp = null, $items_per_page = null, $sort_order = null, $after = null)
     {
@@ -1138,13 +1138,13 @@ class ReportApi
      * @param  string $sort_order Defines the sort order, possible values are: asc, desc (optional)
      * @param  string $after The last evaluated key as base64, provide that as the starting point for the next query (pagination) (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesReportModelsRawDataSearchResult, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesReportModelsRawDataSearchResult, HTTP status code, HTTP response headers (array of strings)
      */
     public function restReportsRawDataGetWithHttpInfo($data_name = null, $process_status = null, $created_at_timestamp = null, $items_per_page = null, $sort_order = null, $after = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesReportModelsRawDataSearchResult';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesReportModelsRawDataSearchResult';
         $request = $this->restReportsRawDataGetRequest($data_name, $process_status, $created_at_timestamp, $items_per_page, $sort_order, $after);
 
         try {
@@ -1196,7 +1196,7 @@ class ReportApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesReportModelsRawDataSearchResult',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesReportModelsRawDataSearchResult',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1248,7 +1248,7 @@ class ReportApi
      */
     public function restReportsRawDataGetAsyncWithHttpInfo($data_name = null, $process_status = null, $created_at_timestamp = null, $items_per_page = null, $sort_order = null, $after = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesReportModelsRawDataSearchResult';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesReportModelsRawDataSearchResult';
         $request = $this->restReportsRawDataGetRequest($data_name, $process_status, $created_at_timestamp, $items_per_page, $sort_order, $after);
 
         return $this->client

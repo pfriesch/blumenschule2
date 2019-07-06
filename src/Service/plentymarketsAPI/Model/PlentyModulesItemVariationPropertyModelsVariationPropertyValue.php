@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  BSApp\Service\plentymarketsAPI
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace BSApp\Service\plentymarketsAPI\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \BSApp\Service\plentymarketsAPI\ObjectSerializer;
 
 /**
  * PlentyModulesItemVariationPropertyModelsVariationPropertyValue Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  BSApp\Service\plentymarketsAPI
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -65,7 +65,7 @@ class PlentyModulesItemVariationPropertyModelsVariationPropertyValue implements 
 'value_file' => 'string',
 'surcharge' => 'BigDecimal',
 'property' => 'object',
-'value_texts' => '\Swagger\Client\Model\PlentyModulesItemVariationPropertyModelsVariationPropertyValueText[]'    ];
+'value_texts' => '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationPropertyModelsVariationPropertyValueText[]'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -469,7 +469,7 @@ class PlentyModulesItemVariationPropertyModelsVariationPropertyValue implements 
     /**
      * Gets value_texts
      *
-     * @return \Swagger\Client\Model\PlentyModulesItemVariationPropertyModelsVariationPropertyValueText[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationPropertyModelsVariationPropertyValueText[]
      */
     public function getValueTexts()
     {
@@ -479,7 +479,7 @@ class PlentyModulesItemVariationPropertyModelsVariationPropertyValue implements 
     /**
      * Sets value_texts
      *
-     * @param \Swagger\Client\Model\PlentyModulesItemVariationPropertyModelsVariationPropertyValueText[] $value_texts (List)
+     * @param \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationPropertyModelsVariationPropertyValueText[] $value_texts (List)
      *
      * @return $this
      */

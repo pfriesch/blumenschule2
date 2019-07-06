@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  BSApp\Service\plentymarketsAPI
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace BSApp\Service\plentymarketsAPI\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -33,16 +33,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use BSApp\Service\plentymarketsAPI\ApiException;
+use BSApp\Service\plentymarketsAPI\Configuration;
+use BSApp\Service\plentymarketsAPI\HeaderSelector;
+use BSApp\Service\plentymarketsAPI\ObjectSerializer;
 
 /**
  * StockManagementApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  BSApp\Service\plentymarketsAPI
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -98,7 +98,7 @@ class StockManagementApi
      * @param  int $items_per_page The number of items per page. (optional)
      * @param  int $columns The properties to be loaded. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -120,7 +120,7 @@ class StockManagementApi
      * @param  int $items_per_page The number of items per page. (optional)
      * @param  int $columns The properties to be loaded. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -394,7 +394,7 @@ class StockManagementApi
      *
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -410,7 +410,7 @@ class StockManagementApi
      *
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -618,7 +618,7 @@ class StockManagementApi
      * @param  string $updated_at_to Filter that restricts the search result to stock that were last updated within a specified period of time. This filter can be used alone or can be combined with the UpdatedAtFrom filter. The date has to be in the W3C format, e.g. &#x27;2016-10-24T13:33:23+02:00&#x27;. (optional)
      * @param  int $variation_id Filter that restricts the search result to stock with a variation. The id of the variation must be specified. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -641,7 +641,7 @@ class StockManagementApi
      * @param  string $updated_at_to Filter that restricts the search result to stock that were last updated within a specified period of time. This filter can be used alone or can be combined with the UpdatedAtFrom filter. The date has to be in the W3C format, e.g. &#x27;2016-10-24T13:33:23+02:00&#x27;. (optional)
      * @param  int $variation_id Filter that restricts the search result to stock with a variation. The id of the variation must be specified. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -932,9 +932,9 @@ class StockManagementApi
      *
      * @param  int $with Related objects to be loaded. repairWarehouse is the only relation currently available. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\IlluminateDatabaseEloquentCollection
+     * @return \BSApp\Service\plentymarketsAPI\Model\IlluminateDatabaseEloquentCollection
      */
     public function restStockmanagementWarehousesGet($with = null)
     {
@@ -949,13 +949,13 @@ class StockManagementApi
      *
      * @param  int $with Related objects to be loaded. repairWarehouse is the only relation currently available. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\IlluminateDatabaseEloquentCollection, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\IlluminateDatabaseEloquentCollection, HTTP status code, HTTP response headers (array of strings)
      */
     public function restStockmanagementWarehousesGetWithHttpInfo($with = null)
     {
-        $returnType = '\Swagger\Client\Model\IlluminateDatabaseEloquentCollection';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\IlluminateDatabaseEloquentCollection';
         $request = $this->restStockmanagementWarehousesGetRequest($with);
 
         try {
@@ -1007,7 +1007,7 @@ class StockManagementApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\IlluminateDatabaseEloquentCollection',
+                        '\BSApp\Service\plentymarketsAPI\Model\IlluminateDatabaseEloquentCollection',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1049,7 +1049,7 @@ class StockManagementApi
      */
     public function restStockmanagementWarehousesGetAsyncWithHttpInfo($with = null)
     {
-        $returnType = '\Swagger\Client\Model\IlluminateDatabaseEloquentCollection';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\IlluminateDatabaseEloquentCollection';
         $request = $this->restStockmanagementWarehousesGetRequest($with);
 
         return $this->client
@@ -1188,9 +1188,9 @@ class StockManagementApi
      *
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesStockManagementWarehouseModelsWarehouse
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesStockManagementWarehouseModelsWarehouse
      */
     public function restStockmanagementWarehousesPost($body = null)
     {
@@ -1205,13 +1205,13 @@ class StockManagementApi
      *
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesStockManagementWarehouseModelsWarehouse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesStockManagementWarehouseModelsWarehouse, HTTP status code, HTTP response headers (array of strings)
      */
     public function restStockmanagementWarehousesPostWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesStockManagementWarehouseModelsWarehouse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesStockManagementWarehouseModelsWarehouse';
         $request = $this->restStockmanagementWarehousesPostRequest($body);
 
         try {
@@ -1263,7 +1263,7 @@ class StockManagementApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesStockManagementWarehouseModelsWarehouse',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesStockManagementWarehouseModelsWarehouse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1305,7 +1305,7 @@ class StockManagementApi
      */
     public function restStockmanagementWarehousesPostAsyncWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesStockManagementWarehouseModelsWarehouse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesStockManagementWarehouseModelsWarehouse';
         $request = $this->restStockmanagementWarehousesPostRequest($body);
 
         return $this->client
@@ -1444,9 +1444,9 @@ class StockManagementApi
      * @param  int $warehouse_id The id of the warehouse to be loaded (required)
      * @param  int $with Related objects to be loaded. &#x27;repairWarehouse&#x27; is the only relation currently available. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesStockManagementWarehouseModelsWarehouse
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesStockManagementWarehouseModelsWarehouse
      */
     public function restStockmanagementWarehousesWarehouseIdGet($warehouse_id, $with = null)
     {
@@ -1462,13 +1462,13 @@ class StockManagementApi
      * @param  int $warehouse_id The id of the warehouse to be loaded (required)
      * @param  int $with Related objects to be loaded. &#x27;repairWarehouse&#x27; is the only relation currently available. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesStockManagementWarehouseModelsWarehouse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesStockManagementWarehouseModelsWarehouse, HTTP status code, HTTP response headers (array of strings)
      */
     public function restStockmanagementWarehousesWarehouseIdGetWithHttpInfo($warehouse_id, $with = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesStockManagementWarehouseModelsWarehouse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesStockManagementWarehouseModelsWarehouse';
         $request = $this->restStockmanagementWarehousesWarehouseIdGetRequest($warehouse_id, $with);
 
         try {
@@ -1520,7 +1520,7 @@ class StockManagementApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesStockManagementWarehouseModelsWarehouse',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesStockManagementWarehouseModelsWarehouse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1564,7 +1564,7 @@ class StockManagementApi
      */
     public function restStockmanagementWarehousesWarehouseIdGetAsyncWithHttpInfo($warehouse_id, $with = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesStockManagementWarehouseModelsWarehouse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesStockManagementWarehouseModelsWarehouse';
         $request = $this->restStockmanagementWarehousesWarehouseIdGetRequest($warehouse_id, $with);
 
         return $this->client
@@ -1722,7 +1722,7 @@ class StockManagementApi
      * @param  int $columns The attributes to be loaded. (optional)
      * @param  int $with The relations to be loaded. Possible values are &#x27;warehouse&#x27;, &#x27;shelves&#x27; and &#x27;storageLocations&#x27;. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -1743,7 +1743,7 @@ class StockManagementApi
      * @param  int $columns The attributes to be loaded. (optional)
      * @param  int $with The relations to be loaded. Possible values are &#x27;warehouse&#x27;, &#x27;shelves&#x27; and &#x27;storageLocations&#x27;. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2020,9 +2020,9 @@ class StockManagementApi
      *
      * @param  int $warehouse_id The id of the warehouse. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesStockManagementWarehouseManagementModelsRack
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesStockManagementWarehouseManagementModelsRack
      */
     public function restStockmanagementWarehousesWarehouseIdManagementRacksPost($warehouse_id)
     {
@@ -2037,13 +2037,13 @@ class StockManagementApi
      *
      * @param  int $warehouse_id The id of the warehouse. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesStockManagementWarehouseManagementModelsRack, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesStockManagementWarehouseManagementModelsRack, HTTP status code, HTTP response headers (array of strings)
      */
     public function restStockmanagementWarehousesWarehouseIdManagementRacksPostWithHttpInfo($warehouse_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesStockManagementWarehouseManagementModelsRack';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesStockManagementWarehouseManagementModelsRack';
         $request = $this->restStockmanagementWarehousesWarehouseIdManagementRacksPostRequest($warehouse_id);
 
         try {
@@ -2095,7 +2095,7 @@ class StockManagementApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesStockManagementWarehouseManagementModelsRack',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesStockManagementWarehouseManagementModelsRack',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2137,7 +2137,7 @@ class StockManagementApi
      */
     public function restStockmanagementWarehousesWarehouseIdManagementRacksPostAsyncWithHttpInfo($warehouse_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesStockManagementWarehouseManagementModelsRack';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesStockManagementWarehouseManagementModelsRack';
         $request = $this->restStockmanagementWarehousesWarehouseIdManagementRacksPostRequest($warehouse_id);
 
         return $this->client
@@ -2289,9 +2289,9 @@ class StockManagementApi
      * @param  int $columns The attributes to be loaded. (optional)
      * @param  int $with The relations to be loaded. Possible values are &#x27;warehouse&#x27;, &#x27;shelves&#x27; and &#x27;storageLocations&#x27;. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesStockManagementWarehouseManagementModelsRack
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesStockManagementWarehouseManagementModelsRack
      */
     public function restStockmanagementWarehousesWarehouseIdManagementRacksRackIdGet($warehouse_id, $rack_id, $columns = null, $with = null)
     {
@@ -2309,13 +2309,13 @@ class StockManagementApi
      * @param  int $columns The attributes to be loaded. (optional)
      * @param  int $with The relations to be loaded. Possible values are &#x27;warehouse&#x27;, &#x27;shelves&#x27; and &#x27;storageLocations&#x27;. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesStockManagementWarehouseManagementModelsRack, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesStockManagementWarehouseManagementModelsRack, HTTP status code, HTTP response headers (array of strings)
      */
     public function restStockmanagementWarehousesWarehouseIdManagementRacksRackIdGetWithHttpInfo($warehouse_id, $rack_id, $columns = null, $with = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesStockManagementWarehouseManagementModelsRack';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesStockManagementWarehouseManagementModelsRack';
         $request = $this->restStockmanagementWarehousesWarehouseIdManagementRacksRackIdGetRequest($warehouse_id, $rack_id, $columns, $with);
 
         try {
@@ -2367,7 +2367,7 @@ class StockManagementApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesStockManagementWarehouseManagementModelsRack',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesStockManagementWarehouseManagementModelsRack',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2415,7 +2415,7 @@ class StockManagementApi
      */
     public function restStockmanagementWarehousesWarehouseIdManagementRacksRackIdGetAsyncWithHttpInfo($warehouse_id, $rack_id, $columns = null, $with = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesStockManagementWarehouseManagementModelsRack';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesStockManagementWarehouseManagementModelsRack';
         $request = $this->restStockmanagementWarehousesWarehouseIdManagementRacksRackIdGetRequest($warehouse_id, $rack_id, $columns, $with);
 
         return $this->client
@@ -2594,7 +2594,7 @@ class StockManagementApi
      * @param  int $columns The attributes to be loaded. (optional)
      * @param  int $with The relations to be loaded. Possible values are &#x27;warehouse&#x27;, &#x27;rack&#x27; and &#x27;storageLocations&#x27;. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -2616,7 +2616,7 @@ class StockManagementApi
      * @param  int $columns The attributes to be loaded. (optional)
      * @param  int $with The relations to be loaded. Possible values are &#x27;warehouse&#x27;, &#x27;rack&#x27; and &#x27;storageLocations&#x27;. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2911,9 +2911,9 @@ class StockManagementApi
      * @param  int $warehouse_id The id of the warehouse. (required)
      * @param  int $rack_id The id of the rack. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesStockManagementWarehouseManagementModelsShelf
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesStockManagementWarehouseManagementModelsShelf
      */
     public function restStockmanagementWarehousesWarehouseIdManagementRacksRackIdShelvesPost($warehouse_id, $rack_id)
     {
@@ -2929,13 +2929,13 @@ class StockManagementApi
      * @param  int $warehouse_id The id of the warehouse. (required)
      * @param  int $rack_id The id of the rack. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesStockManagementWarehouseManagementModelsShelf, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesStockManagementWarehouseManagementModelsShelf, HTTP status code, HTTP response headers (array of strings)
      */
     public function restStockmanagementWarehousesWarehouseIdManagementRacksRackIdShelvesPostWithHttpInfo($warehouse_id, $rack_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesStockManagementWarehouseManagementModelsShelf';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesStockManagementWarehouseManagementModelsShelf';
         $request = $this->restStockmanagementWarehousesWarehouseIdManagementRacksRackIdShelvesPostRequest($warehouse_id, $rack_id);
 
         try {
@@ -2987,7 +2987,7 @@ class StockManagementApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesStockManagementWarehouseManagementModelsShelf',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesStockManagementWarehouseManagementModelsShelf',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3031,7 +3031,7 @@ class StockManagementApi
      */
     public function restStockmanagementWarehousesWarehouseIdManagementRacksRackIdShelvesPostAsyncWithHttpInfo($warehouse_id, $rack_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesStockManagementWarehouseManagementModelsShelf';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesStockManagementWarehouseManagementModelsShelf';
         $request = $this->restStockmanagementWarehousesWarehouseIdManagementRacksRackIdShelvesPostRequest($warehouse_id, $rack_id);
 
         return $this->client
@@ -3199,9 +3199,9 @@ class StockManagementApi
      * @param  int $columns The attributes to be loaded. (optional)
      * @param  int $with The relations to be loaded. Possible values are &#x27;warehouse&#x27;, &#x27;rack&#x27; and &#x27;storageLocations&#x27;. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesStockManagementWarehouseManagementModelsShelf
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesStockManagementWarehouseManagementModelsShelf
      */
     public function restStockmanagementWarehousesWarehouseIdManagementRacksRackIdShelvesShelfIdGet($warehouse_id, $rack_id, $shelf_id, $columns = null, $with = null)
     {
@@ -3220,13 +3220,13 @@ class StockManagementApi
      * @param  int $columns The attributes to be loaded. (optional)
      * @param  int $with The relations to be loaded. Possible values are &#x27;warehouse&#x27;, &#x27;rack&#x27; and &#x27;storageLocations&#x27;. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesStockManagementWarehouseManagementModelsShelf, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesStockManagementWarehouseManagementModelsShelf, HTTP status code, HTTP response headers (array of strings)
      */
     public function restStockmanagementWarehousesWarehouseIdManagementRacksRackIdShelvesShelfIdGetWithHttpInfo($warehouse_id, $rack_id, $shelf_id, $columns = null, $with = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesStockManagementWarehouseManagementModelsShelf';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesStockManagementWarehouseManagementModelsShelf';
         $request = $this->restStockmanagementWarehousesWarehouseIdManagementRacksRackIdShelvesShelfIdGetRequest($warehouse_id, $rack_id, $shelf_id, $columns, $with);
 
         try {
@@ -3278,7 +3278,7 @@ class StockManagementApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesStockManagementWarehouseManagementModelsShelf',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesStockManagementWarehouseManagementModelsShelf',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3328,7 +3328,7 @@ class StockManagementApi
      */
     public function restStockmanagementWarehousesWarehouseIdManagementRacksRackIdShelvesShelfIdGetAsyncWithHttpInfo($warehouse_id, $rack_id, $shelf_id, $columns = null, $with = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesStockManagementWarehouseManagementModelsShelf';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesStockManagementWarehouseManagementModelsShelf';
         $request = $this->restStockmanagementWarehousesWarehouseIdManagementRacksRackIdShelvesShelfIdGetRequest($warehouse_id, $rack_id, $shelf_id, $columns, $with);
 
         return $this->client
@@ -3523,7 +3523,7 @@ class StockManagementApi
      * @param  int $columns The attributes to be loaded. (optional)
      * @param  int $with The relations to be loaded. Possible values are &#x27;warehouse&#x27;, &#x27;rack&#x27; and &#x27;shelf&#x27;. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -3546,7 +3546,7 @@ class StockManagementApi
      * @param  int $columns The attributes to be loaded. (optional)
      * @param  int $with The relations to be loaded. Possible values are &#x27;warehouse&#x27;, &#x27;rack&#x27; and &#x27;shelf&#x27;. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -3859,9 +3859,9 @@ class StockManagementApi
      * @param  int $rack_id The id of the rack. (required)
      * @param  int $shelf_id The id of the shelf. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesStockManagementWarehouseManagementModelsStorageLocation
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesStockManagementWarehouseManagementModelsStorageLocation
      */
     public function restStockmanagementWarehousesWarehouseIdManagementRacksRackIdShelvesShelfIdStorageLocationsPost($warehouse_id, $rack_id, $shelf_id)
     {
@@ -3878,13 +3878,13 @@ class StockManagementApi
      * @param  int $rack_id The id of the rack. (required)
      * @param  int $shelf_id The id of the shelf. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesStockManagementWarehouseManagementModelsStorageLocation, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesStockManagementWarehouseManagementModelsStorageLocation, HTTP status code, HTTP response headers (array of strings)
      */
     public function restStockmanagementWarehousesWarehouseIdManagementRacksRackIdShelvesShelfIdStorageLocationsPostWithHttpInfo($warehouse_id, $rack_id, $shelf_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesStockManagementWarehouseManagementModelsStorageLocation';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesStockManagementWarehouseManagementModelsStorageLocation';
         $request = $this->restStockmanagementWarehousesWarehouseIdManagementRacksRackIdShelvesShelfIdStorageLocationsPostRequest($warehouse_id, $rack_id, $shelf_id);
 
         try {
@@ -3936,7 +3936,7 @@ class StockManagementApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesStockManagementWarehouseManagementModelsStorageLocation',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesStockManagementWarehouseManagementModelsStorageLocation',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3982,7 +3982,7 @@ class StockManagementApi
      */
     public function restStockmanagementWarehousesWarehouseIdManagementRacksRackIdShelvesShelfIdStorageLocationsPostAsyncWithHttpInfo($warehouse_id, $rack_id, $shelf_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesStockManagementWarehouseManagementModelsStorageLocation';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesStockManagementWarehouseManagementModelsStorageLocation';
         $request = $this->restStockmanagementWarehousesWarehouseIdManagementRacksRackIdShelvesShelfIdStorageLocationsPostRequest($warehouse_id, $rack_id, $shelf_id);
 
         return $this->client
@@ -4166,9 +4166,9 @@ class StockManagementApi
      * @param  int $columns The attributes to be loaded. (optional)
      * @param  int $with The relations to be loaded. Possible values are &#x27;warehouse&#x27;, &#x27;rack&#x27; and &#x27;shelf&#x27;. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesStockManagementWarehouseManagementModelsStorageLocation
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesStockManagementWarehouseManagementModelsStorageLocation
      */
     public function restStockmanagementWarehousesWarehouseIdManagementRacksRackIdShelvesShelfIdStorageLocationsStorageLocationIdGet($warehouse_id, $rack_id, $shelf_id, $storage_location_id, $columns = null, $with = null)
     {
@@ -4188,13 +4188,13 @@ class StockManagementApi
      * @param  int $columns The attributes to be loaded. (optional)
      * @param  int $with The relations to be loaded. Possible values are &#x27;warehouse&#x27;, &#x27;rack&#x27; and &#x27;shelf&#x27;. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesStockManagementWarehouseManagementModelsStorageLocation, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesStockManagementWarehouseManagementModelsStorageLocation, HTTP status code, HTTP response headers (array of strings)
      */
     public function restStockmanagementWarehousesWarehouseIdManagementRacksRackIdShelvesShelfIdStorageLocationsStorageLocationIdGetWithHttpInfo($warehouse_id, $rack_id, $shelf_id, $storage_location_id, $columns = null, $with = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesStockManagementWarehouseManagementModelsStorageLocation';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesStockManagementWarehouseManagementModelsStorageLocation';
         $request = $this->restStockmanagementWarehousesWarehouseIdManagementRacksRackIdShelvesShelfIdStorageLocationsStorageLocationIdGetRequest($warehouse_id, $rack_id, $shelf_id, $storage_location_id, $columns, $with);
 
         try {
@@ -4246,7 +4246,7 @@ class StockManagementApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesStockManagementWarehouseManagementModelsStorageLocation',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesStockManagementWarehouseManagementModelsStorageLocation',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4298,7 +4298,7 @@ class StockManagementApi
      */
     public function restStockmanagementWarehousesWarehouseIdManagementRacksRackIdShelvesShelfIdStorageLocationsStorageLocationIdGetAsyncWithHttpInfo($warehouse_id, $rack_id, $shelf_id, $storage_location_id, $columns = null, $with = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesStockManagementWarehouseManagementModelsStorageLocation';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesStockManagementWarehouseManagementModelsStorageLocation';
         $request = $this->restStockmanagementWarehousesWarehouseIdManagementRacksRackIdShelvesShelfIdStorageLocationsStorageLocationIdGetRequest($warehouse_id, $rack_id, $shelf_id, $storage_location_id, $columns, $with);
 
         return $this->client
@@ -4506,7 +4506,7 @@ class StockManagementApi
      * @param  int $columns The attributes to be loaded. (optional)
      * @param  int $with The relations to be loaded. Possible values are &#x27;warehouse&#x27;, &#x27;rack&#x27; and &#x27;shelf&#x27;. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -4527,7 +4527,7 @@ class StockManagementApi
      * @param  int $columns The attributes to be loaded. (optional)
      * @param  int $with The relations to be loaded. Possible values are &#x27;warehouse&#x27;, &#x27;rack&#x27; and &#x27;shelf&#x27;. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -4807,9 +4807,9 @@ class StockManagementApi
      * @param  int $columns The attributes to be loaded. (optional)
      * @param  int $with The relations to be loaded. Possible values are &#x27;warehouse&#x27;, &#x27;rack&#x27; and &#x27;shelf&#x27;. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesStockManagementWarehouseManagementModelsStorageLocation
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesStockManagementWarehouseManagementModelsStorageLocation
      */
     public function restStockmanagementWarehousesWarehouseIdManagementStorageLocationsStorageLocationIdGet($warehouse_id, $storage_location_id, $columns = null, $with = null)
     {
@@ -4827,13 +4827,13 @@ class StockManagementApi
      * @param  int $columns The attributes to be loaded. (optional)
      * @param  int $with The relations to be loaded. Possible values are &#x27;warehouse&#x27;, &#x27;rack&#x27; and &#x27;shelf&#x27;. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesStockManagementWarehouseManagementModelsStorageLocation, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesStockManagementWarehouseManagementModelsStorageLocation, HTTP status code, HTTP response headers (array of strings)
      */
     public function restStockmanagementWarehousesWarehouseIdManagementStorageLocationsStorageLocationIdGetWithHttpInfo($warehouse_id, $storage_location_id, $columns = null, $with = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesStockManagementWarehouseManagementModelsStorageLocation';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesStockManagementWarehouseManagementModelsStorageLocation';
         $request = $this->restStockmanagementWarehousesWarehouseIdManagementStorageLocationsStorageLocationIdGetRequest($warehouse_id, $storage_location_id, $columns, $with);
 
         try {
@@ -4885,7 +4885,7 @@ class StockManagementApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesStockManagementWarehouseManagementModelsStorageLocation',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesStockManagementWarehouseManagementModelsStorageLocation',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4933,7 +4933,7 @@ class StockManagementApi
      */
     public function restStockmanagementWarehousesWarehouseIdManagementStorageLocationsStorageLocationIdGetAsyncWithHttpInfo($warehouse_id, $storage_location_id, $columns = null, $with = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesStockManagementWarehouseManagementModelsStorageLocation';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesStockManagementWarehouseManagementModelsStorageLocation';
         $request = $this->restStockmanagementWarehousesWarehouseIdManagementStorageLocationsStorageLocationIdGetRequest($warehouse_id, $storage_location_id, $columns, $with);
 
         return $this->client
@@ -5108,7 +5108,7 @@ class StockManagementApi
      * @param  int $warehouse_id The ID of the warehouse. (required)
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -5125,7 +5125,7 @@ class StockManagementApi
      * @param  int $warehouse_id The ID of the warehouse. (required)
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -5345,7 +5345,7 @@ class StockManagementApi
      * @param  int $warehouse_id The ID of the warehouse. (required)
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -5362,7 +5362,7 @@ class StockManagementApi
      * @param  int $warehouse_id The ID of the warehouse. (required)
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -5587,7 +5587,7 @@ class StockManagementApi
      * @param  int $items_per_page The number of items per page. (optional)
      * @param  int $columns The properties to be loaded. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -5610,7 +5610,7 @@ class StockManagementApi
      * @param  int $items_per_page The number of items per page. (optional)
      * @param  int $columns The properties to be loaded. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -5909,7 +5909,7 @@ class StockManagementApi
      * @param  int $year Get entries from the archive for the given year. All movements older than 3 months are stored in the archive. (optional)
      * @param  int $columns The properties to be loaded (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -5934,7 +5934,7 @@ class StockManagementApi
      * @param  int $year Get entries from the archive for the given year. All movements older than 3 months are stored in the archive. (optional)
      * @param  int $columns The properties to be loaded (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -6259,7 +6259,7 @@ class StockManagementApi
      * @param  int $columns The properties to be loaded. (optional)
      * @param  int $with Load additional relations for a StockStorageLocation. Possible values:     &lt;ul&gt;     &lt;li&gt;&#x27;storageLocation&#x27; &#x3D; The storageLocation this stock information belongs to.&lt;/li&gt;     &lt;/ul&gt;     Example: &lt;code&gt;?with[]&#x3D;storageLocation&lt;/code&gt; (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -6284,7 +6284,7 @@ class StockManagementApi
      * @param  int $columns The properties to be loaded. (optional)
      * @param  int $with Load additional relations for a StockStorageLocation. Possible values:     &lt;ul&gt;     &lt;li&gt;&#x27;storageLocation&#x27; &#x3D; The storageLocation this stock information belongs to.&lt;/li&gt;     &lt;/ul&gt;     Example: &lt;code&gt;?with[]&#x3D;storageLocation&lt;/code&gt; (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -6591,9 +6591,9 @@ class StockManagementApi
      * @param  int $variation_stock_correction The item that is unpacked (required)
      * @param  int $warehouse_id warehouse_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesStockManagementWarehouseModelsWarehouse
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesStockManagementWarehouseModelsWarehouse
      */
     public function restStockmanagementWarehousesWarehouseIdStockUnpackVariationPut($variation_stock_intake, $variation_stock_correction, $warehouse_id)
     {
@@ -6610,13 +6610,13 @@ class StockManagementApi
      * @param  int $variation_stock_correction The item that is unpacked (required)
      * @param  int $warehouse_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesStockManagementWarehouseModelsWarehouse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesStockManagementWarehouseModelsWarehouse, HTTP status code, HTTP response headers (array of strings)
      */
     public function restStockmanagementWarehousesWarehouseIdStockUnpackVariationPutWithHttpInfo($variation_stock_intake, $variation_stock_correction, $warehouse_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesStockManagementWarehouseModelsWarehouse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesStockManagementWarehouseModelsWarehouse';
         $request = $this->restStockmanagementWarehousesWarehouseIdStockUnpackVariationPutRequest($variation_stock_intake, $variation_stock_correction, $warehouse_id);
 
         try {
@@ -6668,7 +6668,7 @@ class StockManagementApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesStockManagementWarehouseModelsWarehouse',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesStockManagementWarehouseModelsWarehouse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6714,7 +6714,7 @@ class StockManagementApi
      */
     public function restStockmanagementWarehousesWarehouseIdStockUnpackVariationPutAsyncWithHttpInfo($variation_stock_intake, $variation_stock_correction, $warehouse_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesStockManagementWarehouseModelsWarehouse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesStockManagementWarehouseModelsWarehouse';
         $request = $this->restStockmanagementWarehousesWarehouseIdStockUnpackVariationPutRequest($variation_stock_intake, $variation_stock_correction, $warehouse_id);
 
         return $this->client

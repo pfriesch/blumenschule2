@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  BSApp\Service\plentymarketsAPI
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace BSApp\Service\plentymarketsAPI\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -33,16 +33,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use BSApp\Service\plentymarketsAPI\ApiException;
+use BSApp\Service\plentymarketsAPI\Configuration;
+use BSApp\Service\plentymarketsAPI\HeaderSelector;
+use BSApp\Service\plentymarketsAPI\ObjectSerializer;
 
 /**
  * AuthorizationApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  BSApp\Service\plentymarketsAPI
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -92,9 +92,9 @@ class AuthorizationApi
      * Get authorized user
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\IlluminateHttpJsonResponse
+     * @return \BSApp\Service\plentymarketsAPI\Model\IlluminateHttpJsonResponse
      */
     public function restAuthorizedUserGet()
     {
@@ -108,13 +108,13 @@ class AuthorizationApi
      * Get authorized user
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\IlluminateHttpJsonResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\IlluminateHttpJsonResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAuthorizedUserGetWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\IlluminateHttpJsonResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\IlluminateHttpJsonResponse';
         $request = $this->restAuthorizedUserGetRequest();
 
         try {
@@ -166,7 +166,7 @@ class AuthorizationApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\IlluminateHttpJsonResponse',
+                        '\BSApp\Service\plentymarketsAPI\Model\IlluminateHttpJsonResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -206,7 +206,7 @@ class AuthorizationApi
      */
     public function restAuthorizedUserGetAsyncWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\IlluminateHttpJsonResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\IlluminateHttpJsonResponse';
         $request = $this->restAuthorizedUserGetRequest();
 
         return $this->client
@@ -339,9 +339,9 @@ class AuthorizationApi
      * Get authorized user with UiConfig
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\IlluminateHttpJsonResponse
+     * @return \BSApp\Service\plentymarketsAPI\Model\IlluminateHttpJsonResponse
      */
     public function restUserAuthorizedUserWithUiConfigGet()
     {
@@ -355,13 +355,13 @@ class AuthorizationApi
      * Get authorized user with UiConfig
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\IlluminateHttpJsonResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\IlluminateHttpJsonResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function restUserAuthorizedUserWithUiConfigGetWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\IlluminateHttpJsonResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\IlluminateHttpJsonResponse';
         $request = $this->restUserAuthorizedUserWithUiConfigGetRequest();
 
         try {
@@ -413,7 +413,7 @@ class AuthorizationApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\IlluminateHttpJsonResponse',
+                        '\BSApp\Service\plentymarketsAPI\Model\IlluminateHttpJsonResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -453,7 +453,7 @@ class AuthorizationApi
      */
     public function restUserAuthorizedUserWithUiConfigGetAsyncWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\IlluminateHttpJsonResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\IlluminateHttpJsonResponse';
         $request = $this->restUserAuthorizedUserWithUiConfigGetRequest();
 
         return $this->client
@@ -586,9 +586,9 @@ class AuthorizationApi
      * Get authorized user
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\IlluminateHttpJsonResponse
+     * @return \BSApp\Service\plentymarketsAPI\Model\IlluminateHttpJsonResponse
      */
     public function restUsersMeGet()
     {
@@ -602,13 +602,13 @@ class AuthorizationApi
      * Get authorized user
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\IlluminateHttpJsonResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\IlluminateHttpJsonResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function restUsersMeGetWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\IlluminateHttpJsonResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\IlluminateHttpJsonResponse';
         $request = $this->restUsersMeGetRequest();
 
         try {
@@ -660,7 +660,7 @@ class AuthorizationApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\IlluminateHttpJsonResponse',
+                        '\BSApp\Service\plentymarketsAPI\Model\IlluminateHttpJsonResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -700,7 +700,7 @@ class AuthorizationApi
      */
     public function restUsersMeGetAsyncWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\IlluminateHttpJsonResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\IlluminateHttpJsonResponse';
         $request = $this->restUsersMeGetRequest();
 
         return $this->client

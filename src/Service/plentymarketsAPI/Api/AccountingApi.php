@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  BSApp\Service\plentymarketsAPI
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace BSApp\Service\plentymarketsAPI\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -33,16 +33,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use BSApp\Service\plentymarketsAPI\ApiException;
+use BSApp\Service\plentymarketsAPI\Configuration;
+use BSApp\Service\plentymarketsAPI\HeaderSelector;
+use BSApp\Service\plentymarketsAPI\ObjectSerializer;
 
 /**
  * AccountingApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  BSApp\Service\plentymarketsAPI
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -92,9 +92,9 @@ class AccountingApi
      * Get all unique posting accounts
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesAccountingModelsPostingAccounts[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountingModelsPostingAccounts[]
      */
     public function restAccountingLocationsExistingAccountsGet()
     {
@@ -108,13 +108,13 @@ class AccountingApi
      * Get all unique posting accounts
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesAccountingModelsPostingAccounts[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountingModelsPostingAccounts[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountingLocationsExistingAccountsGetWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountingModelsPostingAccounts[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountingModelsPostingAccounts[]';
         $request = $this->restAccountingLocationsExistingAccountsGetRequest();
 
         try {
@@ -166,7 +166,7 @@ class AccountingApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesAccountingModelsPostingAccounts[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountingModelsPostingAccounts[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -206,7 +206,7 @@ class AccountingApi
      */
     public function restAccountingLocationsExistingAccountsGetAsyncWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountingModelsPostingAccounts[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountingModelsPostingAccounts[]';
         $request = $this->restAccountingLocationsExistingAccountsGetRequest();
 
         return $this->client
@@ -341,9 +341,9 @@ class AccountingApi
      * @param  int $location_id The ID of the accounting location. (required)
      * @param  int $country_id The ID of the country. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesAccountingModelsRevenueAccountCountryConfiguration
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountingModelsRevenueAccountCountryConfiguration
      */
     public function restAccountingLocationsLocationIdCountriesCountryIdRevenueAccountsGet($location_id, $country_id)
     {
@@ -359,13 +359,13 @@ class AccountingApi
      * @param  int $location_id The ID of the accounting location. (required)
      * @param  int $country_id The ID of the country. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesAccountingModelsRevenueAccountCountryConfiguration, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountingModelsRevenueAccountCountryConfiguration, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountingLocationsLocationIdCountriesCountryIdRevenueAccountsGetWithHttpInfo($location_id, $country_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountingModelsRevenueAccountCountryConfiguration';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountingModelsRevenueAccountCountryConfiguration';
         $request = $this->restAccountingLocationsLocationIdCountriesCountryIdRevenueAccountsGetRequest($location_id, $country_id);
 
         try {
@@ -417,7 +417,7 @@ class AccountingApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesAccountingModelsRevenueAccountCountryConfiguration',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountingModelsRevenueAccountCountryConfiguration',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -461,7 +461,7 @@ class AccountingApi
      */
     public function restAccountingLocationsLocationIdCountriesCountryIdRevenueAccountsGetAsyncWithHttpInfo($location_id, $country_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountingModelsRevenueAccountCountryConfiguration';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountingModelsRevenueAccountCountryConfiguration';
         $request = $this->restAccountingLocationsLocationIdCountriesCountryIdRevenueAccountsGetRequest($location_id, $country_id);
 
         return $this->client
@@ -625,9 +625,9 @@ class AccountingApi
      *
      * @param  int $location_id The ID of the accounting location. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesAccountingModelsDebtorAccountConfiguration
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountingModelsDebtorAccountConfiguration
      */
     public function restAccountingLocationsLocationIdDebtorAccountConfigurationsGet($location_id)
     {
@@ -642,13 +642,13 @@ class AccountingApi
      *
      * @param  int $location_id The ID of the accounting location. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesAccountingModelsDebtorAccountConfiguration, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountingModelsDebtorAccountConfiguration, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountingLocationsLocationIdDebtorAccountConfigurationsGetWithHttpInfo($location_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountingModelsDebtorAccountConfiguration';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountingModelsDebtorAccountConfiguration';
         $request = $this->restAccountingLocationsLocationIdDebtorAccountConfigurationsGetRequest($location_id);
 
         try {
@@ -700,7 +700,7 @@ class AccountingApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesAccountingModelsDebtorAccountConfiguration',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountingModelsDebtorAccountConfiguration',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -742,7 +742,7 @@ class AccountingApi
      */
     public function restAccountingLocationsLocationIdDebtorAccountConfigurationsGetAsyncWithHttpInfo($location_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountingModelsDebtorAccountConfiguration';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountingModelsDebtorAccountConfiguration';
         $request = $this->restAccountingLocationsLocationIdDebtorAccountConfigurationsGetRequest($location_id);
 
         return $this->client
@@ -892,9 +892,9 @@ class AccountingApi
      * @param  int $location_id The ID of the accounting location. (required)
      * @param  string $mode The mode defines how pending amounts are assigned to debtor accounts. The following modes are available:      &lt;ul&gt;       &lt;li&gt;character        &#x3D; The debtor accounts are selected based on the first character of customer information. The information and the order of the information that will be used are defined with the sequence. There are 3 different sequences available.&lt;/li&gt;       &lt;li&gt;payment          &#x3D; The debtor accounts are selected based on the payment method.&lt;/li&gt;       &lt;li&gt;country          &#x3D; The debtor accounts are selected based on the country of delivery.&lt;/li&gt;       &lt;li&gt;country_payment  &#x3D; The debtor accounts are selected based on two criteria. The first criteria is the country and if the country is same as the country of the accounting location then the payment method is used to select the deptor account.&lt;/li&gt;      &lt;/ul&gt; (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\IlluminateSupportCollection
+     * @return \BSApp\Service\plentymarketsAPI\Model\IlluminateSupportCollection
      */
     public function restAccountingLocationsLocationIdDebtorAccountsModeGet($location_id, $mode)
     {
@@ -910,13 +910,13 @@ class AccountingApi
      * @param  int $location_id The ID of the accounting location. (required)
      * @param  string $mode The mode defines how pending amounts are assigned to debtor accounts. The following modes are available:      &lt;ul&gt;       &lt;li&gt;character        &#x3D; The debtor accounts are selected based on the first character of customer information. The information and the order of the information that will be used are defined with the sequence. There are 3 different sequences available.&lt;/li&gt;       &lt;li&gt;payment          &#x3D; The debtor accounts are selected based on the payment method.&lt;/li&gt;       &lt;li&gt;country          &#x3D; The debtor accounts are selected based on the country of delivery.&lt;/li&gt;       &lt;li&gt;country_payment  &#x3D; The debtor accounts are selected based on two criteria. The first criteria is the country and if the country is same as the country of the accounting location then the payment method is used to select the deptor account.&lt;/li&gt;      &lt;/ul&gt; (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\IlluminateSupportCollection, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\IlluminateSupportCollection, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountingLocationsLocationIdDebtorAccountsModeGetWithHttpInfo($location_id, $mode)
     {
-        $returnType = '\Swagger\Client\Model\IlluminateSupportCollection';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\IlluminateSupportCollection';
         $request = $this->restAccountingLocationsLocationIdDebtorAccountsModeGetRequest($location_id, $mode);
 
         try {
@@ -968,7 +968,7 @@ class AccountingApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\IlluminateSupportCollection',
+                        '\BSApp\Service\plentymarketsAPI\Model\IlluminateSupportCollection',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1012,7 +1012,7 @@ class AccountingApi
      */
     public function restAccountingLocationsLocationIdDebtorAccountsModeGetAsyncWithHttpInfo($location_id, $mode)
     {
-        $returnType = '\Swagger\Client\Model\IlluminateSupportCollection';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\IlluminateSupportCollection';
         $request = $this->restAccountingLocationsLocationIdDebtorAccountsModeGetRequest($location_id, $mode);
 
         return $this->client
@@ -1176,7 +1176,7 @@ class AccountingApi
      *
      * @param  int $location_id The ID of the accounting location (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1192,7 +1192,7 @@ class AccountingApi
      *
      * @param  int $location_id The ID of the accounting location (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1405,9 +1405,9 @@ class AccountingApi
      *
      * @param  int $location_id The ID of the accounting location (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesAccountingModelsAccountingLocation
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountingModelsAccountingLocation
      */
     public function restAccountingLocationsLocationIdGet($location_id)
     {
@@ -1422,13 +1422,13 @@ class AccountingApi
      *
      * @param  int $location_id The ID of the accounting location (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesAccountingModelsAccountingLocation, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountingModelsAccountingLocation, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountingLocationsLocationIdGetWithHttpInfo($location_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountingModelsAccountingLocation';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountingModelsAccountingLocation';
         $request = $this->restAccountingLocationsLocationIdGetRequest($location_id);
 
         try {
@@ -1480,7 +1480,7 @@ class AccountingApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesAccountingModelsAccountingLocation',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountingModelsAccountingLocation',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1522,7 +1522,7 @@ class AccountingApi
      */
     public function restAccountingLocationsLocationIdGetAsyncWithHttpInfo($location_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountingModelsAccountingLocation';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountingModelsAccountingLocation';
         $request = $this->restAccountingLocationsLocationIdGetRequest($location_id);
 
         return $this->client
@@ -1671,9 +1671,9 @@ class AccountingApi
      *
      * @param  int $location_id The ID of the accounting location. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesAccountingModelsPostingAccounts[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountingModelsPostingAccounts[]
      */
     public function restAccountingLocationsLocationIdPostingAccountsGet($location_id)
     {
@@ -1688,13 +1688,13 @@ class AccountingApi
      *
      * @param  int $location_id The ID of the accounting location. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesAccountingModelsPostingAccounts[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountingModelsPostingAccounts[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountingLocationsLocationIdPostingAccountsGetWithHttpInfo($location_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountingModelsPostingAccounts[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountingModelsPostingAccounts[]';
         $request = $this->restAccountingLocationsLocationIdPostingAccountsGetRequest($location_id);
 
         try {
@@ -1746,7 +1746,7 @@ class AccountingApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesAccountingModelsPostingAccounts[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountingModelsPostingAccounts[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1788,7 +1788,7 @@ class AccountingApi
      */
     public function restAccountingLocationsLocationIdPostingAccountsGetAsyncWithHttpInfo($location_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountingModelsPostingAccounts[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountingModelsPostingAccounts[]';
         $request = $this->restAccountingLocationsLocationIdPostingAccountsGetRequest($location_id);
 
         return $this->client
@@ -1937,9 +1937,9 @@ class AccountingApi
      *
      * @param  int $location_id The ID of the accounting location. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesAccountingModelsPostingKeyConfiguration
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountingModelsPostingKeyConfiguration
      */
     public function restAccountingLocationsLocationIdPostingKeyConfigurationsGet($location_id)
     {
@@ -1954,13 +1954,13 @@ class AccountingApi
      *
      * @param  int $location_id The ID of the accounting location. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesAccountingModelsPostingKeyConfiguration, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountingModelsPostingKeyConfiguration, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountingLocationsLocationIdPostingKeyConfigurationsGetWithHttpInfo($location_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountingModelsPostingKeyConfiguration';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountingModelsPostingKeyConfiguration';
         $request = $this->restAccountingLocationsLocationIdPostingKeyConfigurationsGetRequest($location_id);
 
         try {
@@ -2012,7 +2012,7 @@ class AccountingApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesAccountingModelsPostingKeyConfiguration',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountingModelsPostingKeyConfiguration',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2054,7 +2054,7 @@ class AccountingApi
      */
     public function restAccountingLocationsLocationIdPostingKeyConfigurationsGetAsyncWithHttpInfo($location_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountingModelsPostingKeyConfiguration';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountingModelsPostingKeyConfiguration';
         $request = $this->restAccountingLocationsLocationIdPostingKeyConfigurationsGetRequest($location_id);
 
         return $this->client
@@ -2204,9 +2204,9 @@ class AccountingApi
      * @param  int $location_id The ID of the accounting location (required)
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesAccountingModelsAccountingLocation
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountingModelsAccountingLocation
      */
     public function restAccountingLocationsLocationIdPut($location_id, $body = null)
     {
@@ -2222,13 +2222,13 @@ class AccountingApi
      * @param  int $location_id The ID of the accounting location (required)
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesAccountingModelsAccountingLocation, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountingModelsAccountingLocation, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountingLocationsLocationIdPutWithHttpInfo($location_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountingModelsAccountingLocation';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountingModelsAccountingLocation';
         $request = $this->restAccountingLocationsLocationIdPutRequest($location_id, $body);
 
         try {
@@ -2280,7 +2280,7 @@ class AccountingApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesAccountingModelsAccountingLocation',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountingModelsAccountingLocation',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2324,7 +2324,7 @@ class AccountingApi
      */
     public function restAccountingLocationsLocationIdPutAsyncWithHttpInfo($location_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountingModelsAccountingLocation';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountingModelsAccountingLocation';
         $request = $this->restAccountingLocationsLocationIdPutRequest($location_id, $body);
 
         return $this->client
@@ -2477,9 +2477,9 @@ class AccountingApi
      *
      * @param  int $location_id The ID of the accounting location. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesAccountingModelsRevenueAccountLocationConfiguration
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountingModelsRevenueAccountLocationConfiguration
      */
     public function restAccountingLocationsLocationIdRevenueAccountConfigurationsGet($location_id)
     {
@@ -2494,13 +2494,13 @@ class AccountingApi
      *
      * @param  int $location_id The ID of the accounting location. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesAccountingModelsRevenueAccountLocationConfiguration, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountingModelsRevenueAccountLocationConfiguration, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountingLocationsLocationIdRevenueAccountConfigurationsGetWithHttpInfo($location_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountingModelsRevenueAccountLocationConfiguration';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountingModelsRevenueAccountLocationConfiguration';
         $request = $this->restAccountingLocationsLocationIdRevenueAccountConfigurationsGetRequest($location_id);
 
         try {
@@ -2552,7 +2552,7 @@ class AccountingApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesAccountingModelsRevenueAccountLocationConfiguration',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountingModelsRevenueAccountLocationConfiguration',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2594,7 +2594,7 @@ class AccountingApi
      */
     public function restAccountingLocationsLocationIdRevenueAccountConfigurationsGetAsyncWithHttpInfo($location_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountingModelsRevenueAccountLocationConfiguration';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountingModelsRevenueAccountLocationConfiguration';
         $request = $this->restAccountingLocationsLocationIdRevenueAccountConfigurationsGetRequest($location_id);
 
         return $this->client
@@ -2743,9 +2743,9 @@ class AccountingApi
      *
      * @param  int $location_id The ID of the accounting location (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesAccountingModelsAccountingLocationSettings
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountingModelsAccountingLocationSettings
      */
     public function restAccountingLocationsLocationIdSettingsGet($location_id)
     {
@@ -2760,13 +2760,13 @@ class AccountingApi
      *
      * @param  int $location_id The ID of the accounting location (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesAccountingModelsAccountingLocationSettings, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountingModelsAccountingLocationSettings, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountingLocationsLocationIdSettingsGetWithHttpInfo($location_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountingModelsAccountingLocationSettings';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountingModelsAccountingLocationSettings';
         $request = $this->restAccountingLocationsLocationIdSettingsGetRequest($location_id);
 
         try {
@@ -2818,7 +2818,7 @@ class AccountingApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesAccountingModelsAccountingLocationSettings',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountingModelsAccountingLocationSettings',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2860,7 +2860,7 @@ class AccountingApi
      */
     public function restAccountingLocationsLocationIdSettingsGetAsyncWithHttpInfo($location_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountingModelsAccountingLocationSettings';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountingModelsAccountingLocationSettings';
         $request = $this->restAccountingLocationsLocationIdSettingsGetRequest($location_id);
 
         return $this->client
@@ -3010,9 +3010,9 @@ class AccountingApi
      * @param  int $location_id The ID of the accounting location. (required)
      * @param  string $type The type of the PostingAccount. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesAccountingModelsPostingAccounts[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountingModelsPostingAccounts[]
      */
     public function restAccountingLocationsLocationIdTypePostingAccountsGet($location_id, $type)
     {
@@ -3028,13 +3028,13 @@ class AccountingApi
      * @param  int $location_id The ID of the accounting location. (required)
      * @param  string $type The type of the PostingAccount. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesAccountingModelsPostingAccounts[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountingModelsPostingAccounts[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountingLocationsLocationIdTypePostingAccountsGetWithHttpInfo($location_id, $type)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountingModelsPostingAccounts[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountingModelsPostingAccounts[]';
         $request = $this->restAccountingLocationsLocationIdTypePostingAccountsGetRequest($location_id, $type);
 
         try {
@@ -3086,7 +3086,7 @@ class AccountingApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesAccountingModelsPostingAccounts[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountingModelsPostingAccounts[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3130,7 +3130,7 @@ class AccountingApi
      */
     public function restAccountingLocationsLocationIdTypePostingAccountsGetAsyncWithHttpInfo($location_id, $type)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountingModelsPostingAccounts[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountingModelsPostingAccounts[]';
         $request = $this->restAccountingLocationsLocationIdTypePostingAccountsGetRequest($location_id, $type);
 
         return $this->client
@@ -3294,9 +3294,9 @@ class AccountingApi
      *
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesAccountingModelsAccountingLocation
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountingModelsAccountingLocation
      */
     public function restAccountingLocationsPost($body = null)
     {
@@ -3311,13 +3311,13 @@ class AccountingApi
      *
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesAccountingModelsAccountingLocation, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountingModelsAccountingLocation, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountingLocationsPostWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountingModelsAccountingLocation';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountingModelsAccountingLocation';
         $request = $this->restAccountingLocationsPostRequest($body);
 
         try {
@@ -3369,7 +3369,7 @@ class AccountingApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesAccountingModelsAccountingLocation',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountingModelsAccountingLocation',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3411,7 +3411,7 @@ class AccountingApi
      */
     public function restAccountingLocationsPostAsyncWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountingModelsAccountingLocation';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountingModelsAccountingLocation';
         $request = $this->restAccountingLocationsPostRequest($body);
 
         return $this->client
@@ -3548,9 +3548,9 @@ class AccountingApi
      * Get all posting accounts
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesAccountingModelsPostingAccounts[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountingModelsPostingAccounts[]
      */
     public function restAccountingLocationsPostingAccountsGet()
     {
@@ -3564,13 +3564,13 @@ class AccountingApi
      * Get all posting accounts
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesAccountingModelsPostingAccounts[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountingModelsPostingAccounts[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountingLocationsPostingAccountsGetWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountingModelsPostingAccounts[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountingModelsPostingAccounts[]';
         $request = $this->restAccountingLocationsPostingAccountsGetRequest();
 
         try {
@@ -3622,7 +3622,7 @@ class AccountingApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesAccountingModelsPostingAccounts[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountingModelsPostingAccounts[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3662,7 +3662,7 @@ class AccountingApi
      */
     public function restAccountingLocationsPostingAccountsGetAsyncWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountingModelsPostingAccounts[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountingModelsPostingAccounts[]';
         $request = $this->restAccountingLocationsPostingAccountsGetRequest();
 
         return $this->client
@@ -3796,7 +3796,7 @@ class AccountingApi
      *
      * @param  int $id The ID of the posting account (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -3812,7 +3812,7 @@ class AccountingApi
      *
      * @param  int $id The ID of the posting account (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -4025,9 +4025,9 @@ class AccountingApi
      *
      * @param  int $id id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesAccountingModelsPostingAccounts
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountingModelsPostingAccounts
      */
     public function restAccountingLocationsPostingAccountsIdGet($id)
     {
@@ -4042,13 +4042,13 @@ class AccountingApi
      *
      * @param  int $id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesAccountingModelsPostingAccounts, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountingModelsPostingAccounts, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountingLocationsPostingAccountsIdGetWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountingModelsPostingAccounts';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountingModelsPostingAccounts';
         $request = $this->restAccountingLocationsPostingAccountsIdGetRequest($id);
 
         try {
@@ -4100,7 +4100,7 @@ class AccountingApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesAccountingModelsPostingAccounts',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountingModelsPostingAccounts',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4142,7 +4142,7 @@ class AccountingApi
      */
     public function restAccountingLocationsPostingAccountsIdGetAsyncWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountingModelsPostingAccounts';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountingModelsPostingAccounts';
         $request = $this->restAccountingLocationsPostingAccountsIdGetRequest($id);
 
         return $this->client
@@ -4290,9 +4290,9 @@ class AccountingApi
      * Save posting accounts
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesAccountingModelsPostingAccounts[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountingModelsPostingAccounts[]
      */
     public function restAccountingLocationsPostingAccountsPost()
     {
@@ -4306,13 +4306,13 @@ class AccountingApi
      * Save posting accounts
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesAccountingModelsPostingAccounts[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountingModelsPostingAccounts[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountingLocationsPostingAccountsPostWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountingModelsPostingAccounts[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountingModelsPostingAccounts[]';
         $request = $this->restAccountingLocationsPostingAccountsPostRequest();
 
         try {
@@ -4364,7 +4364,7 @@ class AccountingApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesAccountingModelsPostingAccounts[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountingModelsPostingAccounts[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4404,7 +4404,7 @@ class AccountingApi
      */
     public function restAccountingLocationsPostingAccountsPostAsyncWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountingModelsPostingAccounts[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountingModelsPostingAccounts[]';
         $request = $this->restAccountingLocationsPostingAccountsPostRequest();
 
         return $this->client
@@ -4539,7 +4539,7 @@ class AccountingApi
      * @param  int $page The page to get. The default page that will be returned is page 1. (optional)
      * @param  int $items_per_page The number of revenue accounts to be displayed per page. The default number of orders per page is 50. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -4557,7 +4557,7 @@ class AccountingApi
      * @param  int $page The page to get. The default page that will be returned is page 1. (optional)
      * @param  int $items_per_page The number of revenue accounts to be displayed per page. The default number of orders per page is 50. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -4805,9 +4805,9 @@ class AccountingApi
      * @param  int $webstore_id The ID of the webstore (required)
      * @param  int $webstore_id2 webstore_id2 (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesAccountingModelsPostingAccounts[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountingModelsPostingAccounts[]
      */
     public function restAccountingLocationsWebstoreIdCountryIdPostingAccountsGet($country_id, $webstore_id, $webstore_id2)
     {
@@ -4824,13 +4824,13 @@ class AccountingApi
      * @param  int $webstore_id The ID of the webstore (required)
      * @param  int $webstore_id2 (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesAccountingModelsPostingAccounts[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountingModelsPostingAccounts[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountingLocationsWebstoreIdCountryIdPostingAccountsGetWithHttpInfo($country_id, $webstore_id, $webstore_id2)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountingModelsPostingAccounts[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountingModelsPostingAccounts[]';
         $request = $this->restAccountingLocationsWebstoreIdCountryIdPostingAccountsGetRequest($country_id, $webstore_id, $webstore_id2);
 
         try {
@@ -4882,7 +4882,7 @@ class AccountingApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesAccountingModelsPostingAccounts[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountingModelsPostingAccounts[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4928,7 +4928,7 @@ class AccountingApi
      */
     public function restAccountingLocationsWebstoreIdCountryIdPostingAccountsGetAsyncWithHttpInfo($country_id, $webstore_id, $webstore_id2)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountingModelsPostingAccounts[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountingModelsPostingAccounts[]';
         $request = $this->restAccountingLocationsWebstoreIdCountryIdPostingAccountsGetRequest($country_id, $webstore_id, $webstore_id2);
 
         return $this->client
@@ -5102,9 +5102,9 @@ class AccountingApi
      * List all accounting locations
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesAccountingModelsAccountingLocation[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountingModelsAccountingLocation[]
      */
     public function restAccountingStoresLocationsGet()
     {
@@ -5118,13 +5118,13 @@ class AccountingApi
      * List all accounting locations
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesAccountingModelsAccountingLocation[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountingModelsAccountingLocation[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountingStoresLocationsGetWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountingModelsAccountingLocation[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountingModelsAccountingLocation[]';
         $request = $this->restAccountingStoresLocationsGetRequest();
 
         try {
@@ -5176,7 +5176,7 @@ class AccountingApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesAccountingModelsAccountingLocation[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountingModelsAccountingLocation[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5216,7 +5216,7 @@ class AccountingApi
      */
     public function restAccountingStoresLocationsGetAsyncWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountingModelsAccountingLocation[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountingModelsAccountingLocation[]';
         $request = $this->restAccountingStoresLocationsGetRequest();
 
         return $this->client
@@ -5350,9 +5350,9 @@ class AccountingApi
      *
      * @param  int $plenty_id plenty_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesAccountingModelsAccountingLocation[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountingModelsAccountingLocation[]
      */
     public function restAccountingStoresPlentyIdLocationsGet($plenty_id)
     {
@@ -5367,13 +5367,13 @@ class AccountingApi
      *
      * @param  int $plenty_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesAccountingModelsAccountingLocation[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountingModelsAccountingLocation[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountingStoresPlentyIdLocationsGetWithHttpInfo($plenty_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountingModelsAccountingLocation[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountingModelsAccountingLocation[]';
         $request = $this->restAccountingStoresPlentyIdLocationsGetRequest($plenty_id);
 
         try {
@@ -5425,7 +5425,7 @@ class AccountingApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesAccountingModelsAccountingLocation[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountingModelsAccountingLocation[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5467,7 +5467,7 @@ class AccountingApi
      */
     public function restAccountingStoresPlentyIdLocationsGetAsyncWithHttpInfo($plenty_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountingModelsAccountingLocation[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountingModelsAccountingLocation[]';
         $request = $this->restAccountingStoresPlentyIdLocationsGetRequest($plenty_id);
 
         return $this->client
@@ -5617,9 +5617,9 @@ class AccountingApi
      * @param  int $plenty_id plenty_id (required)
      * @param  int $country_id The ID of the country of the accounting location. The default accounting location of the client will be returned if the ID of a country is not specified. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesAccountingModelsAccountingLocation
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountingModelsAccountingLocation
      */
     public function restStoresPlentyIdLocationsGet($plenty_id, $country_id = null)
     {
@@ -5635,13 +5635,13 @@ class AccountingApi
      * @param  int $plenty_id (required)
      * @param  int $country_id The ID of the country of the accounting location. The default accounting location of the client will be returned if the ID of a country is not specified. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesAccountingModelsAccountingLocation, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountingModelsAccountingLocation, HTTP status code, HTTP response headers (array of strings)
      */
     public function restStoresPlentyIdLocationsGetWithHttpInfo($plenty_id, $country_id = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountingModelsAccountingLocation';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountingModelsAccountingLocation';
         $request = $this->restStoresPlentyIdLocationsGetRequest($plenty_id, $country_id);
 
         try {
@@ -5693,7 +5693,7 @@ class AccountingApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesAccountingModelsAccountingLocation',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountingModelsAccountingLocation',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5737,7 +5737,7 @@ class AccountingApi
      */
     public function restStoresPlentyIdLocationsGetAsyncWithHttpInfo($plenty_id, $country_id = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountingModelsAccountingLocation';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountingModelsAccountingLocation';
         $request = $this->restStoresPlentyIdLocationsGetRequest($plenty_id, $country_id);
 
         return $this->client
@@ -5894,7 +5894,7 @@ class AccountingApi
      * @param  int $with The relations to load with the VAT object. The relations available are location or country. (optional)
      * @param  int $columns The properties to be loaded. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -5914,7 +5914,7 @@ class AccountingApi
      * @param  int $with The relations to load with the VAT object. The relations available are location or country. (optional)
      * @param  int $columns The properties to be loaded. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -6179,9 +6179,9 @@ class AccountingApi
      * @param  int $with The relations to load with the VAT object. The relations available are location or country. (optional)
      * @param  int $columns The attributes of the VAT configuration (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesAccountingVatModelsVat
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountingVatModelsVat
      */
     public function restVatLocationsLocationIdCountriesCountryIdDateDateGet($location_id, $country_id, $start_date, $date, $with = null, $columns = null)
     {
@@ -6201,13 +6201,13 @@ class AccountingApi
      * @param  int $with The relations to load with the VAT object. The relations available are location or country. (optional)
      * @param  int $columns The attributes of the VAT configuration (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesAccountingVatModelsVat, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountingVatModelsVat, HTTP status code, HTTP response headers (array of strings)
      */
     public function restVatLocationsLocationIdCountriesCountryIdDateDateGetWithHttpInfo($location_id, $country_id, $start_date, $date, $with = null, $columns = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountingVatModelsVat';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountingVatModelsVat';
         $request = $this->restVatLocationsLocationIdCountriesCountryIdDateDateGetRequest($location_id, $country_id, $start_date, $date, $with, $columns);
 
         try {
@@ -6259,7 +6259,7 @@ class AccountingApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesAccountingVatModelsVat',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountingVatModelsVat',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6311,7 +6311,7 @@ class AccountingApi
      */
     public function restVatLocationsLocationIdCountriesCountryIdDateDateGetAsyncWithHttpInfo($location_id, $country_id, $start_date, $date, $with = null, $columns = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountingVatModelsVat';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountingVatModelsVat';
         $request = $this->restVatLocationsLocationIdCountriesCountryIdDateDateGetRequest($location_id, $country_id, $start_date, $date, $with, $columns);
 
         return $this->client
@@ -6514,9 +6514,9 @@ class AccountingApi
      * @param  int $with The relations to load with the VAT object. The relations available are location or country. (optional)
      * @param  int $columns The attributes of the VAT configuration (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesAccountingVatModelsVat[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountingVatModelsVat[]
      */
     public function restVatLocationsLocationIdCountriesCountryIdGet($location_id, $country_id, $with = null, $columns = null)
     {
@@ -6534,13 +6534,13 @@ class AccountingApi
      * @param  int $with The relations to load with the VAT object. The relations available are location or country. (optional)
      * @param  int $columns The attributes of the VAT configuration (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesAccountingVatModelsVat[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountingVatModelsVat[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restVatLocationsLocationIdCountriesCountryIdGetWithHttpInfo($location_id, $country_id, $with = null, $columns = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountingVatModelsVat[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountingVatModelsVat[]';
         $request = $this->restVatLocationsLocationIdCountriesCountryIdGetRequest($location_id, $country_id, $with, $columns);
 
         try {
@@ -6592,7 +6592,7 @@ class AccountingApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesAccountingVatModelsVat[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountingVatModelsVat[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6640,7 +6640,7 @@ class AccountingApi
      */
     public function restVatLocationsLocationIdCountriesCountryIdGetAsyncWithHttpInfo($location_id, $country_id, $with = null, $columns = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountingVatModelsVat[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountingVatModelsVat[]';
         $request = $this->restVatLocationsLocationIdCountriesCountryIdGetRequest($location_id, $country_id, $with, $columns);
 
         return $this->client
@@ -6816,9 +6816,9 @@ class AccountingApi
      * @param  int $with The relations to load with the VAT object. The relations available are location and country. (optional)
      * @param  int $columns The attributes of the VAT configuration (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\IlluminateSupportCollection
+     * @return \BSApp\Service\plentymarketsAPI\Model\IlluminateSupportCollection
      */
     public function restVatLocationsLocationIdGet($location_id, $with = null, $columns = null)
     {
@@ -6835,13 +6835,13 @@ class AccountingApi
      * @param  int $with The relations to load with the VAT object. The relations available are location and country. (optional)
      * @param  int $columns The attributes of the VAT configuration (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\IlluminateSupportCollection, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\IlluminateSupportCollection, HTTP status code, HTTP response headers (array of strings)
      */
     public function restVatLocationsLocationIdGetWithHttpInfo($location_id, $with = null, $columns = null)
     {
-        $returnType = '\Swagger\Client\Model\IlluminateSupportCollection';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\IlluminateSupportCollection';
         $request = $this->restVatLocationsLocationIdGetRequest($location_id, $with, $columns);
 
         try {
@@ -6893,7 +6893,7 @@ class AccountingApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\IlluminateSupportCollection',
+                        '\BSApp\Service\plentymarketsAPI\Model\IlluminateSupportCollection',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6939,7 +6939,7 @@ class AccountingApi
      */
     public function restVatLocationsLocationIdGetAsyncWithHttpInfo($location_id, $with = null, $columns = null)
     {
-        $returnType = '\Swagger\Client\Model\IlluminateSupportCollection';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\IlluminateSupportCollection';
         $request = $this->restVatLocationsLocationIdGetRequest($location_id, $with, $columns);
 
         return $this->client
@@ -7098,9 +7098,9 @@ class AccountingApi
      *
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesAccountingVatModelsVat
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountingVatModelsVat
      */
     public function restVatPost($body = null)
     {
@@ -7115,13 +7115,13 @@ class AccountingApi
      *
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesAccountingVatModelsVat, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountingVatModelsVat, HTTP status code, HTTP response headers (array of strings)
      */
     public function restVatPostWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountingVatModelsVat';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountingVatModelsVat';
         $request = $this->restVatPostRequest($body);
 
         try {
@@ -7173,7 +7173,7 @@ class AccountingApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesAccountingVatModelsVat',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountingVatModelsVat',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -7215,7 +7215,7 @@ class AccountingApi
      */
     public function restVatPostAsyncWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountingVatModelsVat';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountingVatModelsVat';
         $request = $this->restVatPostRequest($body);
 
         return $this->client
@@ -7354,9 +7354,9 @@ class AccountingApi
      * @param  int $plenty_id The plenty ID of the client (store) (optional)
      * @param  string $started_at The date in the W3C format when the vat configuration went into effect (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesAccountingVatModelsVat
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountingVatModelsVat
      */
     public function restVatStandardGet($plenty_id = null, $started_at = null)
     {
@@ -7372,13 +7372,13 @@ class AccountingApi
      * @param  int $plenty_id The plenty ID of the client (store) (optional)
      * @param  string $started_at The date in the W3C format when the vat configuration went into effect (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesAccountingVatModelsVat, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountingVatModelsVat, HTTP status code, HTTP response headers (array of strings)
      */
     public function restVatStandardGetWithHttpInfo($plenty_id = null, $started_at = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountingVatModelsVat';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountingVatModelsVat';
         $request = $this->restVatStandardGetRequest($plenty_id, $started_at);
 
         try {
@@ -7430,7 +7430,7 @@ class AccountingApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesAccountingVatModelsVat',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountingVatModelsVat',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -7474,7 +7474,7 @@ class AccountingApi
      */
     public function restVatStandardGetAsyncWithHttpInfo($plenty_id = null, $started_at = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountingVatModelsVat';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountingVatModelsVat';
         $request = $this->restVatStandardGetRequest($plenty_id, $started_at);
 
         return $this->client
@@ -7618,9 +7618,9 @@ class AccountingApi
      *
      * @param  int $vat_id vat_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesAccountingVatModelsVat
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountingVatModelsVat
      */
     public function restVatVatIdGet($vat_id)
     {
@@ -7635,13 +7635,13 @@ class AccountingApi
      *
      * @param  int $vat_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesAccountingVatModelsVat, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountingVatModelsVat, HTTP status code, HTTP response headers (array of strings)
      */
     public function restVatVatIdGetWithHttpInfo($vat_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountingVatModelsVat';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountingVatModelsVat';
         $request = $this->restVatVatIdGetRequest($vat_id);
 
         try {
@@ -7693,7 +7693,7 @@ class AccountingApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesAccountingVatModelsVat',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountingVatModelsVat',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -7735,7 +7735,7 @@ class AccountingApi
      */
     public function restVatVatIdGetAsyncWithHttpInfo($vat_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountingVatModelsVat';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountingVatModelsVat';
         $request = $this->restVatVatIdGetRequest($vat_id);
 
         return $this->client
@@ -7885,9 +7885,9 @@ class AccountingApi
      * @param  int $vat_id vat_id (required)
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesAccountingVatModelsVat
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountingVatModelsVat
      */
     public function restVatVatIdPut($vat_id, $body = null)
     {
@@ -7903,13 +7903,13 @@ class AccountingApi
      * @param  int $vat_id (required)
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesAccountingVatModelsVat, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountingVatModelsVat, HTTP status code, HTTP response headers (array of strings)
      */
     public function restVatVatIdPutWithHttpInfo($vat_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountingVatModelsVat';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountingVatModelsVat';
         $request = $this->restVatVatIdPutRequest($vat_id, $body);
 
         try {
@@ -7961,7 +7961,7 @@ class AccountingApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesAccountingVatModelsVat',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountingVatModelsVat',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -8005,7 +8005,7 @@ class AccountingApi
      */
     public function restVatVatIdPutAsyncWithHttpInfo($vat_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountingVatModelsVat';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountingVatModelsVat';
         $request = $this->restVatVatIdPutRequest($vat_id, $body);
 
         return $this->client

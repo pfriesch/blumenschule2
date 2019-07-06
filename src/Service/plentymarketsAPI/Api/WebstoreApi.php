@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  BSApp\Service\plentymarketsAPI
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace BSApp\Service\plentymarketsAPI\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -33,16 +33,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use BSApp\Service\plentymarketsAPI\ApiException;
+use BSApp\Service\plentymarketsAPI\Configuration;
+use BSApp\Service\plentymarketsAPI\HeaderSelector;
+use BSApp\Service\plentymarketsAPI\ObjectSerializer;
 
 /**
  * WebstoreApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  BSApp\Service\plentymarketsAPI
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -92,9 +92,9 @@ class WebstoreApi
      * List clients (stores)
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesSystemModelsWebstore[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesSystemModelsWebstore[]
      */
     public function restWebstoresGet()
     {
@@ -108,13 +108,13 @@ class WebstoreApi
      * List clients (stores)
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesSystemModelsWebstore[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesSystemModelsWebstore[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restWebstoresGetWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesSystemModelsWebstore[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesSystemModelsWebstore[]';
         $request = $this->restWebstoresGetRequest();
 
         try {
@@ -166,7 +166,7 @@ class WebstoreApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesSystemModelsWebstore[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesSystemModelsWebstore[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -206,7 +206,7 @@ class WebstoreApi
      */
     public function restWebstoresGetAsyncWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesSystemModelsWebstore[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesSystemModelsWebstore[]';
         $request = $this->restWebstoresGetRequest();
 
         return $this->client
@@ -338,9 +338,9 @@ class WebstoreApi
      *
      * @param  int $webstore_id webstore_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesPluginPluginSetModelsPluginSet
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPluginPluginSetModelsPluginSet
      */
     public function restWebstoresWebstoreIdPluginSetGet($webstore_id)
     {
@@ -353,13 +353,13 @@ class WebstoreApi
      *
      * @param  int $webstore_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesPluginPluginSetModelsPluginSet, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPluginPluginSetModelsPluginSet, HTTP status code, HTTP response headers (array of strings)
      */
     public function restWebstoresWebstoreIdPluginSetGetWithHttpInfo($webstore_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPluginPluginSetModelsPluginSet';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPluginPluginSetModelsPluginSet';
         $request = $this->restWebstoresWebstoreIdPluginSetGetRequest($webstore_id);
 
         try {
@@ -411,7 +411,7 @@ class WebstoreApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesPluginPluginSetModelsPluginSet',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPluginPluginSetModelsPluginSet',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -453,7 +453,7 @@ class WebstoreApi
      */
     public function restWebstoresWebstoreIdPluginSetGetAsyncWithHttpInfo($webstore_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesPluginPluginSetModelsPluginSet';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesPluginPluginSetModelsPluginSet';
         $request = $this->restWebstoresWebstoreIdPluginSetGetRequest($webstore_id);
 
         return $this->client
@@ -600,7 +600,7 @@ class WebstoreApi
      *
      * @param  int $webstore_id webstore_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -614,7 +614,7 @@ class WebstoreApi
      *
      * @param  int $webstore_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */

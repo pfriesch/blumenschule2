@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  BSApp\Service\plentymarketsAPI
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace BSApp\Service\plentymarketsAPI\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -33,16 +33,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use BSApp\Service\plentymarketsAPI\ApiException;
+use BSApp\Service\plentymarketsAPI\Configuration;
+use BSApp\Service\plentymarketsAPI\HeaderSelector;
+use BSApp\Service\plentymarketsAPI\ObjectSerializer;
 
 /**
  * AuthenticationApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  BSApp\Service\plentymarketsAPI
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -90,9 +90,9 @@ class AuthenticationApi
      * Operation restCheckPasswordPost
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\Mixed
+     * @return \BSApp\Service\plentymarketsAPI\Model\Mixed
      */
     public function restCheckPasswordPost()
     {
@@ -104,13 +104,13 @@ class AuthenticationApi
      * Operation restCheckPasswordPostWithHttpInfo
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\Mixed, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\Mixed, HTTP status code, HTTP response headers (array of strings)
      */
     public function restCheckPasswordPostWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\Mixed';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\Mixed';
         $request = $this->restCheckPasswordPostRequest();
 
         try {
@@ -162,7 +162,7 @@ class AuthenticationApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\Mixed',
+                        '\BSApp\Service\plentymarketsAPI\Model\Mixed',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -202,7 +202,7 @@ class AuthenticationApi
      */
     public function restCheckPasswordPostAsyncWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\Mixed';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\Mixed';
         $request = $this->restCheckPasswordPostRequest();
 
         return $this->client
@@ -329,9 +329,9 @@ class AuthenticationApi
      * Operation restCheckPinPost
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\Mixed
+     * @return \BSApp\Service\plentymarketsAPI\Model\Mixed
      */
     public function restCheckPinPost()
     {
@@ -343,13 +343,13 @@ class AuthenticationApi
      * Operation restCheckPinPostWithHttpInfo
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\Mixed, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\Mixed, HTTP status code, HTTP response headers (array of strings)
      */
     public function restCheckPinPostWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\Mixed';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\Mixed';
         $request = $this->restCheckPinPostRequest();
 
         try {
@@ -401,7 +401,7 @@ class AuthenticationApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\Mixed',
+                        '\BSApp\Service\plentymarketsAPI\Model\Mixed',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -441,7 +441,7 @@ class AuthenticationApi
      */
     public function restCheckPinPostAsyncWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\Mixed';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\Mixed';
         $request = $this->restCheckPinPostRequest();
 
         return $this->client
@@ -571,9 +571,9 @@ class AuthenticationApi
      *
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\IlluminateHttpResponse
+     * @return \BSApp\Service\plentymarketsAPI\Model\IlluminateHttpResponse
      */
     public function restLoginPost($body = null)
     {
@@ -588,13 +588,13 @@ class AuthenticationApi
      *
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\IlluminateHttpResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\IlluminateHttpResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function restLoginPostWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\IlluminateHttpResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\IlluminateHttpResponse';
         $request = $this->restLoginPostRequest($body);
 
         try {
@@ -646,7 +646,7 @@ class AuthenticationApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\IlluminateHttpResponse',
+                        '\BSApp\Service\plentymarketsAPI\Model\IlluminateHttpResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -688,7 +688,7 @@ class AuthenticationApi
      */
     public function restLoginPostAsyncWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\IlluminateHttpResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\IlluminateHttpResponse';
         $request = $this->restLoginPostRequest($body);
 
         return $this->client
@@ -821,9 +821,9 @@ class AuthenticationApi
      * Refresh
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesAuthenticationModelsTokenData
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAuthenticationModelsTokenData
      */
     public function restLoginRefreshPost()
     {
@@ -837,13 +837,13 @@ class AuthenticationApi
      * Refresh
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesAuthenticationModelsTokenData, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAuthenticationModelsTokenData, HTTP status code, HTTP response headers (array of strings)
      */
     public function restLoginRefreshPostWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAuthenticationModelsTokenData';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAuthenticationModelsTokenData';
         $request = $this->restLoginRefreshPostRequest();
 
         try {
@@ -895,7 +895,7 @@ class AuthenticationApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesAuthenticationModelsTokenData',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAuthenticationModelsTokenData',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -935,7 +935,7 @@ class AuthenticationApi
      */
     public function restLoginRefreshPostAsyncWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAuthenticationModelsTokenData';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAuthenticationModelsTokenData';
         $request = $this->restLoginRefreshPostRequest();
 
         return $this->client
@@ -1064,7 +1064,7 @@ class AuthenticationApi
      * Logout
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1079,7 +1079,7 @@ class AuthenticationApi
      * Logout
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1272,9 +1272,9 @@ class AuthenticationApi
      * Operation restQuickLoginPost
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\IlluminateHttpResponse
+     * @return \BSApp\Service\plentymarketsAPI\Model\IlluminateHttpResponse
      */
     public function restQuickLoginPost()
     {
@@ -1286,13 +1286,13 @@ class AuthenticationApi
      * Operation restQuickLoginPostWithHttpInfo
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\IlluminateHttpResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\IlluminateHttpResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function restQuickLoginPostWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\IlluminateHttpResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\IlluminateHttpResponse';
         $request = $this->restQuickLoginPostRequest();
 
         try {
@@ -1344,7 +1344,7 @@ class AuthenticationApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\IlluminateHttpResponse',
+                        '\BSApp\Service\plentymarketsAPI\Model\IlluminateHttpResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1384,7 +1384,7 @@ class AuthenticationApi
      */
     public function restQuickLoginPostAsyncWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\IlluminateHttpResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\IlluminateHttpResponse';
         $request = $this->restQuickLoginPostRequest();
 
         return $this->client
@@ -1511,9 +1511,9 @@ class AuthenticationApi
      * Operation restSessionLimitsGet
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\IlluminateHttpResponse
+     * @return \BSApp\Service\plentymarketsAPI\Model\IlluminateHttpResponse
      */
     public function restSessionLimitsGet()
     {
@@ -1525,13 +1525,13 @@ class AuthenticationApi
      * Operation restSessionLimitsGetWithHttpInfo
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\IlluminateHttpResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\IlluminateHttpResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function restSessionLimitsGetWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\IlluminateHttpResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\IlluminateHttpResponse';
         $request = $this->restSessionLimitsGetRequest();
 
         try {
@@ -1583,7 +1583,7 @@ class AuthenticationApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\IlluminateHttpResponse',
+                        '\BSApp\Service\plentymarketsAPI\Model\IlluminateHttpResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1623,7 +1623,7 @@ class AuthenticationApi
      */
     public function restSessionLimitsGetAsyncWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\IlluminateHttpResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\IlluminateHttpResponse';
         $request = $this->restSessionLimitsGetRequest();
 
         return $this->client
@@ -1754,7 +1754,7 @@ class AuthenticationApi
      * Operation restUserGet
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1767,7 +1767,7 @@ class AuthenticationApi
      * Operation restUserGetWithHttpInfo
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */

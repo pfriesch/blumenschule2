@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  BSApp\Service\plentymarketsAPI
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace BSApp\Service\plentymarketsAPI\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -33,16 +33,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use BSApp\Service\plentymarketsAPI\ApiException;
+use BSApp\Service\plentymarketsAPI\Configuration;
+use BSApp\Service\plentymarketsAPI\HeaderSelector;
+use BSApp\Service\plentymarketsAPI\ObjectSerializer;
 
 /**
  * DocumentApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  BSApp\Service\plentymarketsAPI
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -94,9 +94,9 @@ class DocumentApi
      * @param  int $category_id category_id (required)
      * @param  int $document_id document_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse
      */
     public function restCategoriesCategoryIdDocumentsDocumentIdDelete($category_id, $document_id)
     {
@@ -112,13 +112,13 @@ class DocumentApi
      * @param  int $category_id (required)
      * @param  int $document_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function restCategoriesCategoryIdDocumentsDocumentIdDeleteWithHttpInfo($category_id, $document_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse';
         $request = $this->restCategoriesCategoryIdDocumentsDocumentIdDeleteRequest($category_id, $document_id);
 
         try {
@@ -170,7 +170,7 @@ class DocumentApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -214,7 +214,7 @@ class DocumentApi
      */
     public function restCategoriesCategoryIdDocumentsDocumentIdDeleteAsyncWithHttpInfo($category_id, $document_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse';
         $request = $this->restCategoriesCategoryIdDocumentsDocumentIdDeleteRequest($category_id, $document_id);
 
         return $this->client
@@ -378,9 +378,9 @@ class DocumentApi
      *
      * @param  int $category_id The ID of the category (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\SymfonyComponentHttpFoundationStreamedResponse
+     * @return \BSApp\Service\plentymarketsAPI\Model\SymfonyComponentHttpFoundationStreamedResponse
      */
     public function restCategoriesCategoryIdDocumentsDownloadsGet($category_id)
     {
@@ -395,13 +395,13 @@ class DocumentApi
      *
      * @param  int $category_id The ID of the category (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\SymfonyComponentHttpFoundationStreamedResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\SymfonyComponentHttpFoundationStreamedResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function restCategoriesCategoryIdDocumentsDownloadsGetWithHttpInfo($category_id)
     {
-        $returnType = '\Swagger\Client\Model\SymfonyComponentHttpFoundationStreamedResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\SymfonyComponentHttpFoundationStreamedResponse';
         $request = $this->restCategoriesCategoryIdDocumentsDownloadsGetRequest($category_id);
 
         try {
@@ -453,7 +453,7 @@ class DocumentApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\SymfonyComponentHttpFoundationStreamedResponse',
+                        '\BSApp\Service\plentymarketsAPI\Model\SymfonyComponentHttpFoundationStreamedResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -495,7 +495,7 @@ class DocumentApi
      */
     public function restCategoriesCategoryIdDocumentsDownloadsGetAsyncWithHttpInfo($category_id)
     {
-        $returnType = '\Swagger\Client\Model\SymfonyComponentHttpFoundationStreamedResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\SymfonyComponentHttpFoundationStreamedResponse';
         $request = $this->restCategoriesCategoryIdDocumentsDownloadsGetRequest($category_id);
 
         return $this->client
@@ -644,7 +644,7 @@ class DocumentApi
      *
      * @param  int $category_id The ID of the category (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -661,7 +661,7 @@ class DocumentApi
      *
      * @param  int $category_id The ID of the category (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -916,9 +916,9 @@ class DocumentApi
      * @param  int $directory_id The directory ID (optional)
      * @param  string $display_date The date displayed on the document (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesDocumentModelsDocument[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesDocumentModelsDocument[]
      */
     public function restCategoriesCategoryIdDocumentsPost($documents, $category_id, $body = null, $number = null, $number_with_prefix = null, $directory_id = null, $display_date = null)
     {
@@ -939,13 +939,13 @@ class DocumentApi
      * @param  int $directory_id The directory ID (optional)
      * @param  string $display_date The date displayed on the document (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesDocumentModelsDocument[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesDocumentModelsDocument[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restCategoriesCategoryIdDocumentsPostWithHttpInfo($documents, $category_id, $body = null, $number = null, $number_with_prefix = null, $directory_id = null, $display_date = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesDocumentModelsDocument[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesDocumentModelsDocument[]';
         $request = $this->restCategoriesCategoryIdDocumentsPostRequest($documents, $category_id, $body, $number, $number_with_prefix, $directory_id, $display_date);
 
         try {
@@ -997,7 +997,7 @@ class DocumentApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesDocumentModelsDocument[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesDocumentModelsDocument[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1051,7 +1051,7 @@ class DocumentApi
      */
     public function restCategoriesCategoryIdDocumentsPostAsyncWithHttpInfo($documents, $category_id, $body = null, $number = null, $number_with_prefix = null, $directory_id = null, $display_date = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesDocumentModelsDocument[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesDocumentModelsDocument[]';
         $request = $this->restCategoriesCategoryIdDocumentsPostRequest($documents, $category_id, $body, $number, $number_with_prefix, $directory_id, $display_date);
 
         return $this->client
@@ -1235,9 +1235,9 @@ class DocumentApi
      *
      * @param  int $document_id The ID of the document (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyDataSimpleRestResponse
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse
      */
     public function restDocumentsDocumentIdGet($document_id)
     {
@@ -1252,13 +1252,13 @@ class DocumentApi
      *
      * @param  int $document_id The ID of the document (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyDataSimpleRestResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function restDocumentsDocumentIdGetWithHttpInfo($document_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyDataSimpleRestResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse';
         $request = $this->restDocumentsDocumentIdGetRequest($document_id);
 
         try {
@@ -1310,7 +1310,7 @@ class DocumentApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyDataSimpleRestResponse',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1352,7 +1352,7 @@ class DocumentApi
      */
     public function restDocumentsDocumentIdGetAsyncWithHttpInfo($document_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyDataSimpleRestResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse';
         $request = $this->restDocumentsDocumentIdGetRequest($document_id);
 
         return $this->client
@@ -1509,9 +1509,9 @@ class DocumentApi
      * @param  string $display_date_from Filter that restricts the search result to documents that were displayed on the specified date. The date has to be in the W3C format, e.g. &#x27;2016-10-24T13:33:23+02:00&#x27;. (optional)
      * @param  string $display_date_to Filter that restricts the search result to documents that were displayed within a certain period of time. This filter can be used alone or can be combined with the displayDateFrom filter. The date has to be in the W3C format, e.g. &#x27;2016-10-24T13:33:23+02:00&#x27;. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\SymfonyComponentHttpFoundationStreamedResponse
+     * @return \BSApp\Service\plentymarketsAPI\Model\SymfonyComponentHttpFoundationStreamedResponse
      */
     public function restOrdersDocumentsDownloadsTypeGet($type, $page, $items_per_page, $contact_id = null, $plenty_id = null, $created_at_from = null, $created_at_to = null, $display_date_from = null, $display_date_to = null)
     {
@@ -1534,13 +1534,13 @@ class DocumentApi
      * @param  string $display_date_from Filter that restricts the search result to documents that were displayed on the specified date. The date has to be in the W3C format, e.g. &#x27;2016-10-24T13:33:23+02:00&#x27;. (optional)
      * @param  string $display_date_to Filter that restricts the search result to documents that were displayed within a certain period of time. This filter can be used alone or can be combined with the displayDateFrom filter. The date has to be in the W3C format, e.g. &#x27;2016-10-24T13:33:23+02:00&#x27;. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\SymfonyComponentHttpFoundationStreamedResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\SymfonyComponentHttpFoundationStreamedResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersDocumentsDownloadsTypeGetWithHttpInfo($type, $page, $items_per_page, $contact_id = null, $plenty_id = null, $created_at_from = null, $created_at_to = null, $display_date_from = null, $display_date_to = null)
     {
-        $returnType = '\Swagger\Client\Model\SymfonyComponentHttpFoundationStreamedResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\SymfonyComponentHttpFoundationStreamedResponse';
         $request = $this->restOrdersDocumentsDownloadsTypeGetRequest($type, $page, $items_per_page, $contact_id, $plenty_id, $created_at_from, $created_at_to, $display_date_from, $display_date_to);
 
         try {
@@ -1592,7 +1592,7 @@ class DocumentApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\SymfonyComponentHttpFoundationStreamedResponse',
+                        '\BSApp\Service\plentymarketsAPI\Model\SymfonyComponentHttpFoundationStreamedResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1650,7 +1650,7 @@ class DocumentApi
      */
     public function restOrdersDocumentsDownloadsTypeGetAsyncWithHttpInfo($type, $page, $items_per_page, $contact_id = null, $plenty_id = null, $created_at_from = null, $created_at_to = null, $display_date_from = null, $display_date_to = null)
     {
-        $returnType = '\Swagger\Client\Model\SymfonyComponentHttpFoundationStreamedResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\SymfonyComponentHttpFoundationStreamedResponse';
         $request = $this->restOrdersDocumentsDownloadsTypeGetRequest($type, $page, $items_per_page, $contact_id, $plenty_id, $created_at_from, $created_at_to, $display_date_from, $display_date_to);
 
         return $this->client
@@ -1861,7 +1861,7 @@ class DocumentApi
      * @param  int $with Load additional relations for a document. Currently possible are:     &lt;ul&gt;     &lt;li&gt;&#x27;references&#x27; &#x3D; The document reference objects that are associated with the document.&lt;/li&gt;     &lt;/ul&gt;     Example: &lt;code&gt;?with[]&#x3D;references&lt;/code&gt; (optional)
      * @param  bool $with_content Load also the document content as base64 encoded string. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -1888,7 +1888,7 @@ class DocumentApi
      * @param  int $with Load additional relations for a document. Currently possible are:     &lt;ul&gt;     &lt;li&gt;&#x27;references&#x27; &#x3D; The document reference objects that are associated with the document.&lt;/li&gt;     &lt;/ul&gt;     Example: &lt;code&gt;?with[]&#x3D;references&lt;/code&gt; (optional)
      * @param  bool $with_content Load also the document content as base64 encoded string. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2220,9 +2220,9 @@ class DocumentApi
      * @param  int $order_id The ID of the order (required)
      * @param  int $document_id The ID of the document (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse
      */
     public function restOrdersOrderIdDocumentsDocumentIdDelete($order_id, $document_id)
     {
@@ -2238,13 +2238,13 @@ class DocumentApi
      * @param  int $order_id The ID of the order (required)
      * @param  int $document_id The ID of the document (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersOrderIdDocumentsDocumentIdDeleteWithHttpInfo($order_id, $document_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse';
         $request = $this->restOrdersOrderIdDocumentsDocumentIdDeleteRequest($order_id, $document_id);
 
         try {
@@ -2296,7 +2296,7 @@ class DocumentApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2340,7 +2340,7 @@ class DocumentApi
      */
     public function restOrdersOrderIdDocumentsDocumentIdDeleteAsyncWithHttpInfo($order_id, $document_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse';
         $request = $this->restOrdersOrderIdDocumentsDocumentIdDeleteRequest($order_id, $document_id);
 
         return $this->client
@@ -2505,9 +2505,9 @@ class DocumentApi
      * @param  int $order_id The ID of the order (required)
      * @param  string $type The type of the document. The types available are receipt, invoiceExternal, invoice, deliveryNote, poDeliveryNote, creditNote, creditNoreExternal, orderConfirmation, offer, dunningLetter, returnNote, successConfirmation and correction. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\SymfonyComponentHttpFoundationStreamedResponse
+     * @return \BSApp\Service\plentymarketsAPI\Model\SymfonyComponentHttpFoundationStreamedResponse
      */
     public function restOrdersOrderIdDocumentsDownloadsTypeGet($order_id, $type)
     {
@@ -2523,13 +2523,13 @@ class DocumentApi
      * @param  int $order_id The ID of the order (required)
      * @param  string $type The type of the document. The types available are receipt, invoiceExternal, invoice, deliveryNote, poDeliveryNote, creditNote, creditNoreExternal, orderConfirmation, offer, dunningLetter, returnNote, successConfirmation and correction. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\SymfonyComponentHttpFoundationStreamedResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\SymfonyComponentHttpFoundationStreamedResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersOrderIdDocumentsDownloadsTypeGetWithHttpInfo($order_id, $type)
     {
-        $returnType = '\Swagger\Client\Model\SymfonyComponentHttpFoundationStreamedResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\SymfonyComponentHttpFoundationStreamedResponse';
         $request = $this->restOrdersOrderIdDocumentsDownloadsTypeGetRequest($order_id, $type);
 
         try {
@@ -2581,7 +2581,7 @@ class DocumentApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\SymfonyComponentHttpFoundationStreamedResponse',
+                        '\BSApp\Service\plentymarketsAPI\Model\SymfonyComponentHttpFoundationStreamedResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2625,7 +2625,7 @@ class DocumentApi
      */
     public function restOrdersOrderIdDocumentsDownloadsTypeGetAsyncWithHttpInfo($order_id, $type)
     {
-        $returnType = '\Swagger\Client\Model\SymfonyComponentHttpFoundationStreamedResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\SymfonyComponentHttpFoundationStreamedResponse';
         $request = $this->restOrdersOrderIdDocumentsDownloadsTypeGetRequest($order_id, $type);
 
         return $this->client
@@ -2791,9 +2791,9 @@ class DocumentApi
      * @param  string $type The document type. Supported types are &#x27;reorder&#x27;, &#x27;poDeliveryNote&#x27;. (required)
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyDataSimpleRestResponse
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse
      */
     public function restOrdersOrderIdDocumentsTypeGeneratePost($order_id, $type, $body = null)
     {
@@ -2810,13 +2810,13 @@ class DocumentApi
      * @param  string $type The document type. Supported types are &#x27;reorder&#x27;, &#x27;poDeliveryNote&#x27;. (required)
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyDataSimpleRestResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersOrderIdDocumentsTypeGeneratePostWithHttpInfo($order_id, $type, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyDataSimpleRestResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse';
         $request = $this->restOrdersOrderIdDocumentsTypeGeneratePostRequest($order_id, $type, $body);
 
         try {
@@ -2868,7 +2868,7 @@ class DocumentApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyDataSimpleRestResponse',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2914,7 +2914,7 @@ class DocumentApi
      */
     public function restOrdersOrderIdDocumentsTypeGeneratePostAsyncWithHttpInfo($order_id, $type, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyDataSimpleRestResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse';
         $request = $this->restOrdersOrderIdDocumentsTypeGeneratePostRequest($order_id, $type, $body);
 
         return $this->client
@@ -3089,7 +3089,7 @@ class DocumentApi
      * @param  int $with Load additional relations for a document. Currently possible are:     &lt;ul&gt;     &lt;li&gt;&#x27;references&#x27; &#x3D; The document reference objects that are associated with the document.&lt;/li&gt;     &lt;/ul&gt;     Example: &lt;code&gt;?with[]&#x3D;references&lt;/code&gt; (optional)
      * @param  bool $with_content Load also the document content as base64 encoded string. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -3113,7 +3113,7 @@ class DocumentApi
      * @param  int $with Load additional relations for a document. Currently possible are:     &lt;ul&gt;     &lt;li&gt;&#x27;references&#x27; &#x3D; The document reference objects that are associated with the document.&lt;/li&gt;     &lt;/ul&gt;     Example: &lt;code&gt;?with[]&#x3D;references&lt;/code&gt; (optional)
      * @param  bool $with_content Load also the document content as base64 encoded string. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -3423,9 +3423,9 @@ class DocumentApi
      * @param  string $type The document type. Supported types are &#x27;invoiceExternal&#x27;, &#x27;deliveryNote&#x27;, &#x27;poDeliveryNote&#x27;, &#x27;orderConfirmation&#x27;, &#x27;offer&#x27;, &#x27;dunningLetter&#x27;, &#x27;returnNote&#x27;, &#x27;successConfirmation&#x27;, &#x27;correction&#x27;, &#x27;creditNoteExternal&#x27;, &#x27;reorder&#x27;. (required)
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesDocumentModelsDocument[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesDocumentModelsDocument[]
      */
     public function restOrdersOrderIdDocumentsTypePost($order_id, $type, $body = null)
     {
@@ -3442,13 +3442,13 @@ class DocumentApi
      * @param  string $type The document type. Supported types are &#x27;invoiceExternal&#x27;, &#x27;deliveryNote&#x27;, &#x27;poDeliveryNote&#x27;, &#x27;orderConfirmation&#x27;, &#x27;offer&#x27;, &#x27;dunningLetter&#x27;, &#x27;returnNote&#x27;, &#x27;successConfirmation&#x27;, &#x27;correction&#x27;, &#x27;creditNoteExternal&#x27;, &#x27;reorder&#x27;. (required)
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesDocumentModelsDocument[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesDocumentModelsDocument[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersOrderIdDocumentsTypePostWithHttpInfo($order_id, $type, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesDocumentModelsDocument[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesDocumentModelsDocument[]';
         $request = $this->restOrdersOrderIdDocumentsTypePostRequest($order_id, $type, $body);
 
         try {
@@ -3500,7 +3500,7 @@ class DocumentApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesDocumentModelsDocument[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesDocumentModelsDocument[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3546,7 +3546,7 @@ class DocumentApi
      */
     public function restOrdersOrderIdDocumentsTypePostAsyncWithHttpInfo($order_id, $type, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesDocumentModelsDocument[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesDocumentModelsDocument[]';
         $request = $this->restOrdersOrderIdDocumentsTypePostRequest($order_id, $type, $body);
 
         return $this->client

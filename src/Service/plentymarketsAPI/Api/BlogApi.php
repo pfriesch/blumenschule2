@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  BSApp\Service\plentymarketsAPI
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace BSApp\Service\plentymarketsAPI\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -33,16 +33,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use BSApp\Service\plentymarketsAPI\ApiException;
+use BSApp\Service\plentymarketsAPI\Configuration;
+use BSApp\Service\plentymarketsAPI\HeaderSelector;
+use BSApp\Service\plentymarketsAPI\ObjectSerializer;
 
 /**
  * BlogApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  BSApp\Service\plentymarketsAPI
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -92,9 +92,9 @@ class BlogApi
      * Create a blog post
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesBlogModelsBlogPost
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesBlogModelsBlogPost
      */
     public function restBlogsPostPost()
     {
@@ -108,13 +108,13 @@ class BlogApi
      * Create a blog post
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesBlogModelsBlogPost, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesBlogModelsBlogPost, HTTP status code, HTTP response headers (array of strings)
      */
     public function restBlogsPostPostWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesBlogModelsBlogPost';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesBlogModelsBlogPost';
         $request = $this->restBlogsPostPostRequest();
 
         try {
@@ -166,7 +166,7 @@ class BlogApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesBlogModelsBlogPost',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesBlogModelsBlogPost',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -206,7 +206,7 @@ class BlogApi
      */
     public function restBlogsPostPostAsyncWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesBlogModelsBlogPost';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesBlogModelsBlogPost';
         $request = $this->restBlogsPostPostRequest();
 
         return $this->client
@@ -340,7 +340,7 @@ class BlogApi
      *
      * @param  int $post_id post_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -356,7 +356,7 @@ class BlogApi
      *
      * @param  int $post_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -569,9 +569,9 @@ class BlogApi
      *
      * @param  int $post_id post_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesBlogModelsBlogPost
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesBlogModelsBlogPost
      */
     public function restBlogsPostPostIdGet($post_id)
     {
@@ -586,13 +586,13 @@ class BlogApi
      *
      * @param  int $post_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesBlogModelsBlogPost, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesBlogModelsBlogPost, HTTP status code, HTTP response headers (array of strings)
      */
     public function restBlogsPostPostIdGetWithHttpInfo($post_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesBlogModelsBlogPost';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesBlogModelsBlogPost';
         $request = $this->restBlogsPostPostIdGetRequest($post_id);
 
         try {
@@ -644,7 +644,7 @@ class BlogApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesBlogModelsBlogPost',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesBlogModelsBlogPost',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -686,7 +686,7 @@ class BlogApi
      */
     public function restBlogsPostPostIdGetAsyncWithHttpInfo($post_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesBlogModelsBlogPost';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesBlogModelsBlogPost';
         $request = $this->restBlogsPostPostIdGetRequest($post_id);
 
         return $this->client
@@ -835,9 +835,9 @@ class BlogApi
      *
      * @param  int $post_id post_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesBlogModelsBlogPost
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesBlogModelsBlogPost
      */
     public function restBlogsPostPostIdPut($post_id)
     {
@@ -852,13 +852,13 @@ class BlogApi
      *
      * @param  int $post_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesBlogModelsBlogPost, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesBlogModelsBlogPost, HTTP status code, HTTP response headers (array of strings)
      */
     public function restBlogsPostPostIdPutWithHttpInfo($post_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesBlogModelsBlogPost';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesBlogModelsBlogPost';
         $request = $this->restBlogsPostPostIdPutRequest($post_id);
 
         try {
@@ -910,7 +910,7 @@ class BlogApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesBlogModelsBlogPost',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesBlogModelsBlogPost',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -952,7 +952,7 @@ class BlogApi
      */
     public function restBlogsPostPostIdPutAsyncWithHttpInfo($post_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesBlogModelsBlogPost';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesBlogModelsBlogPost';
         $request = $this->restBlogsPostPostIdPutRequest($post_id);
 
         return $this->client
@@ -1100,9 +1100,9 @@ class BlogApi
      * List blog posts
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesBlogModelsBlogPost[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesBlogModelsBlogPost[]
      */
     public function restBlogsPostsGet()
     {
@@ -1116,13 +1116,13 @@ class BlogApi
      * List blog posts
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesBlogModelsBlogPost[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesBlogModelsBlogPost[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restBlogsPostsGetWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesBlogModelsBlogPost[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesBlogModelsBlogPost[]';
         $request = $this->restBlogsPostsGetRequest();
 
         try {
@@ -1174,7 +1174,7 @@ class BlogApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesBlogModelsBlogPost[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesBlogModelsBlogPost[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1214,7 +1214,7 @@ class BlogApi
      */
     public function restBlogsPostsGetAsyncWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesBlogModelsBlogPost[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesBlogModelsBlogPost[]';
         $request = $this->restBlogsPostsGetRequest();
 
         return $this->client

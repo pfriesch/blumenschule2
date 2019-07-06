@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  BSApp\Service\plentymarketsAPI
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace BSApp\Service\plentymarketsAPI\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -33,16 +33,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use BSApp\Service\plentymarketsAPI\ApiException;
+use BSApp\Service\plentymarketsAPI\Configuration;
+use BSApp\Service\plentymarketsAPI\HeaderSelector;
+use BSApp\Service\plentymarketsAPI\ObjectSerializer;
 
 /**
  * BoardApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  BSApp\Service\plentymarketsAPI
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -94,9 +94,9 @@ class BoardApi
      * @param  string $board_id board_id (required)
      * @param  string $column_id column_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyDataSimpleRestResponse
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse
      */
     public function restBoardsBoardIdColumnsColumnIdDelete($board_id, $column_id)
     {
@@ -112,13 +112,13 @@ class BoardApi
      * @param  string $board_id (required)
      * @param  string $column_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyDataSimpleRestResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function restBoardsBoardIdColumnsColumnIdDeleteWithHttpInfo($board_id, $column_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyDataSimpleRestResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse';
         $request = $this->restBoardsBoardIdColumnsColumnIdDeleteRequest($board_id, $column_id);
 
         try {
@@ -170,7 +170,7 @@ class BoardApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyDataSimpleRestResponse',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -214,7 +214,7 @@ class BoardApi
      */
     public function restBoardsBoardIdColumnsColumnIdDeleteAsyncWithHttpInfo($board_id, $column_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyDataSimpleRestResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse';
         $request = $this->restBoardsBoardIdColumnsColumnIdDeleteRequest($board_id, $column_id);
 
         return $this->client
@@ -380,9 +380,9 @@ class BoardApi
      * @param  string $board_id board_id (required)
      * @param  string $column_id column_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyDataSimpleRestResponse
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse
      */
     public function restBoardsBoardIdColumnsColumnIdPositionPut($position, $board_id, $column_id)
     {
@@ -399,13 +399,13 @@ class BoardApi
      * @param  string $board_id (required)
      * @param  string $column_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyDataSimpleRestResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function restBoardsBoardIdColumnsColumnIdPositionPutWithHttpInfo($position, $board_id, $column_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyDataSimpleRestResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse';
         $request = $this->restBoardsBoardIdColumnsColumnIdPositionPutRequest($position, $board_id, $column_id);
 
         try {
@@ -457,7 +457,7 @@ class BoardApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyDataSimpleRestResponse',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -503,7 +503,7 @@ class BoardApi
      */
     public function restBoardsBoardIdColumnsColumnIdPositionPutAsyncWithHttpInfo($position, $board_id, $column_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyDataSimpleRestResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse';
         $request = $this->restBoardsBoardIdColumnsColumnIdPositionPutRequest($position, $board_id, $column_id);
 
         return $this->client
@@ -679,9 +679,9 @@ class BoardApi
      * @param  int $board_id board_id (required)
      * @param  int $column_id column_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesBoardModelsBoardColumn
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesBoardModelsBoardColumn
      */
     public function restBoardsBoardIdColumnsColumnIdPost($board_id, $column_id)
     {
@@ -697,13 +697,13 @@ class BoardApi
      * @param  int $board_id (required)
      * @param  int $column_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesBoardModelsBoardColumn, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesBoardModelsBoardColumn, HTTP status code, HTTP response headers (array of strings)
      */
     public function restBoardsBoardIdColumnsColumnIdPostWithHttpInfo($board_id, $column_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesBoardModelsBoardColumn';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesBoardModelsBoardColumn';
         $request = $this->restBoardsBoardIdColumnsColumnIdPostRequest($board_id, $column_id);
 
         try {
@@ -755,7 +755,7 @@ class BoardApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesBoardModelsBoardColumn',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesBoardModelsBoardColumn',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -799,7 +799,7 @@ class BoardApi
      */
     public function restBoardsBoardIdColumnsColumnIdPostAsyncWithHttpInfo($board_id, $column_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesBoardModelsBoardColumn';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesBoardModelsBoardColumn';
         $request = $this->restBoardsBoardIdColumnsColumnIdPostRequest($board_id, $column_id);
 
         return $this->client
@@ -965,9 +965,9 @@ class BoardApi
      * @param  string $column_id column_id (required)
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesBoardModelsBoardColumn
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesBoardModelsBoardColumn
      */
     public function restBoardsBoardIdColumnsColumnIdPut($board_id, $column_id, $body = null)
     {
@@ -984,13 +984,13 @@ class BoardApi
      * @param  string $column_id (required)
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesBoardModelsBoardColumn, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesBoardModelsBoardColumn, HTTP status code, HTTP response headers (array of strings)
      */
     public function restBoardsBoardIdColumnsColumnIdPutWithHttpInfo($board_id, $column_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesBoardModelsBoardColumn';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesBoardModelsBoardColumn';
         $request = $this->restBoardsBoardIdColumnsColumnIdPutRequest($board_id, $column_id, $body);
 
         try {
@@ -1042,7 +1042,7 @@ class BoardApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesBoardModelsBoardColumn',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesBoardModelsBoardColumn',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1088,7 +1088,7 @@ class BoardApi
      */
     public function restBoardsBoardIdColumnsColumnIdPutAsyncWithHttpInfo($board_id, $column_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesBoardModelsBoardColumn';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesBoardModelsBoardColumn';
         $request = $this->restBoardsBoardIdColumnsColumnIdPutRequest($board_id, $column_id, $body);
 
         return $this->client
@@ -1259,9 +1259,9 @@ class BoardApi
      * @param  int $start_at Position of a task to start listing at. (optional)
      * @param  int $tasks_per_page Number of tasks to list per page. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesBoardModelsBoardTask[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesBoardModelsBoardTask[]
      */
     public function restBoardsBoardIdColumnsColumnIdTasksGet($board_id, $column_id, $start_at = null, $tasks_per_page = null)
     {
@@ -1279,13 +1279,13 @@ class BoardApi
      * @param  int $start_at Position of a task to start listing at. (optional)
      * @param  int $tasks_per_page Number of tasks to list per page. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesBoardModelsBoardTask[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesBoardModelsBoardTask[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restBoardsBoardIdColumnsColumnIdTasksGetWithHttpInfo($board_id, $column_id, $start_at = null, $tasks_per_page = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesBoardModelsBoardTask[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesBoardModelsBoardTask[]';
         $request = $this->restBoardsBoardIdColumnsColumnIdTasksGetRequest($board_id, $column_id, $start_at, $tasks_per_page);
 
         try {
@@ -1337,7 +1337,7 @@ class BoardApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesBoardModelsBoardTask[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesBoardModelsBoardTask[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1385,7 +1385,7 @@ class BoardApi
      */
     public function restBoardsBoardIdColumnsColumnIdTasksGetAsyncWithHttpInfo($board_id, $column_id, $start_at = null, $tasks_per_page = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesBoardModelsBoardTask[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesBoardModelsBoardTask[]';
         $request = $this->restBoardsBoardIdColumnsColumnIdTasksGetRequest($board_id, $column_id, $start_at, $tasks_per_page);
 
         return $this->client
@@ -1561,9 +1561,9 @@ class BoardApi
      * @param  string $column_id The ID of the column (required)
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesBoardModelsBoardTask
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesBoardModelsBoardTask
      */
     public function restBoardsBoardIdColumnsColumnIdTasksPost($board_id, $column_id, $body = null)
     {
@@ -1580,13 +1580,13 @@ class BoardApi
      * @param  string $column_id The ID of the column (required)
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesBoardModelsBoardTask, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesBoardModelsBoardTask, HTTP status code, HTTP response headers (array of strings)
      */
     public function restBoardsBoardIdColumnsColumnIdTasksPostWithHttpInfo($board_id, $column_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesBoardModelsBoardTask';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesBoardModelsBoardTask';
         $request = $this->restBoardsBoardIdColumnsColumnIdTasksPostRequest($board_id, $column_id, $body);
 
         try {
@@ -1638,7 +1638,7 @@ class BoardApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesBoardModelsBoardTask',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesBoardModelsBoardTask',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1684,7 +1684,7 @@ class BoardApi
      */
     public function restBoardsBoardIdColumnsColumnIdTasksPostAsyncWithHttpInfo($board_id, $column_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesBoardModelsBoardTask';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesBoardModelsBoardTask';
         $request = $this->restBoardsBoardIdColumnsColumnIdTasksPostRequest($board_id, $column_id, $body);
 
         return $this->client
@@ -1854,9 +1854,9 @@ class BoardApi
      * @param  string $column_id The ID of the column (required)
      * @param  string $task_id The ID of the task to be deleted (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyDataSimpleRestResponse
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse
      */
     public function restBoardsBoardIdColumnsColumnIdTasksTaskIdDelete($board_id, $column_id, $task_id)
     {
@@ -1873,13 +1873,13 @@ class BoardApi
      * @param  string $column_id The ID of the column (required)
      * @param  string $task_id The ID of the task to be deleted (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyDataSimpleRestResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function restBoardsBoardIdColumnsColumnIdTasksTaskIdDeleteWithHttpInfo($board_id, $column_id, $task_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyDataSimpleRestResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse';
         $request = $this->restBoardsBoardIdColumnsColumnIdTasksTaskIdDeleteRequest($board_id, $column_id, $task_id);
 
         try {
@@ -1931,7 +1931,7 @@ class BoardApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyDataSimpleRestResponse',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1977,7 +1977,7 @@ class BoardApi
      */
     public function restBoardsBoardIdColumnsColumnIdTasksTaskIdDeleteAsyncWithHttpInfo($board_id, $column_id, $task_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyDataSimpleRestResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse';
         $request = $this->restBoardsBoardIdColumnsColumnIdTasksTaskIdDeleteRequest($board_id, $column_id, $task_id);
 
         return $this->client
@@ -2158,9 +2158,9 @@ class BoardApi
      * @param  string $column_id The ID of the column (required)
      * @param  string $task_id The ID of the task (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesBoardModelsBoardTask
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesBoardModelsBoardTask
      */
     public function restBoardsBoardIdColumnsColumnIdTasksTaskIdGet($board_id, $column_id, $task_id)
     {
@@ -2177,13 +2177,13 @@ class BoardApi
      * @param  string $column_id The ID of the column (required)
      * @param  string $task_id The ID of the task (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesBoardModelsBoardTask, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesBoardModelsBoardTask, HTTP status code, HTTP response headers (array of strings)
      */
     public function restBoardsBoardIdColumnsColumnIdTasksTaskIdGetWithHttpInfo($board_id, $column_id, $task_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesBoardModelsBoardTask';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesBoardModelsBoardTask';
         $request = $this->restBoardsBoardIdColumnsColumnIdTasksTaskIdGetRequest($board_id, $column_id, $task_id);
 
         try {
@@ -2235,7 +2235,7 @@ class BoardApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesBoardModelsBoardTask',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesBoardModelsBoardTask',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2281,7 +2281,7 @@ class BoardApi
      */
     public function restBoardsBoardIdColumnsColumnIdTasksTaskIdGetAsyncWithHttpInfo($board_id, $column_id, $task_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesBoardModelsBoardTask';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesBoardModelsBoardTask';
         $request = $this->restBoardsBoardIdColumnsColumnIdTasksTaskIdGetRequest($board_id, $column_id, $task_id);
 
         return $this->client
@@ -2463,9 +2463,9 @@ class BoardApi
      * @param  int $board_id board_id (required)
      * @param  int $task_id task_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyDataSimpleRestResponse
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse
      */
     public function restBoardsBoardIdColumnsColumnIdTasksTaskIdPositionPut($position, $column_id, $board_id, $task_id)
     {
@@ -2483,13 +2483,13 @@ class BoardApi
      * @param  int $board_id (required)
      * @param  int $task_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyDataSimpleRestResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function restBoardsBoardIdColumnsColumnIdTasksTaskIdPositionPutWithHttpInfo($position, $column_id, $board_id, $task_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyDataSimpleRestResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse';
         $request = $this->restBoardsBoardIdColumnsColumnIdTasksTaskIdPositionPutRequest($position, $column_id, $board_id, $task_id);
 
         try {
@@ -2541,7 +2541,7 @@ class BoardApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyDataSimpleRestResponse',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2589,7 +2589,7 @@ class BoardApi
      */
     public function restBoardsBoardIdColumnsColumnIdTasksTaskIdPositionPutAsyncWithHttpInfo($position, $column_id, $board_id, $task_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyDataSimpleRestResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse';
         $request = $this->restBoardsBoardIdColumnsColumnIdTasksTaskIdPositionPutRequest($position, $column_id, $board_id, $task_id);
 
         return $this->client
@@ -2781,9 +2781,9 @@ class BoardApi
      * @param  int $column_id column_id (required)
      * @param  int $task_id task_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesBoardModelsBoardTask
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesBoardModelsBoardTask
      */
     public function restBoardsBoardIdColumnsColumnIdTasksTaskIdPost($board_id, $column_id, $task_id)
     {
@@ -2800,13 +2800,13 @@ class BoardApi
      * @param  int $column_id (required)
      * @param  int $task_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesBoardModelsBoardTask, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesBoardModelsBoardTask, HTTP status code, HTTP response headers (array of strings)
      */
     public function restBoardsBoardIdColumnsColumnIdTasksTaskIdPostWithHttpInfo($board_id, $column_id, $task_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesBoardModelsBoardTask';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesBoardModelsBoardTask';
         $request = $this->restBoardsBoardIdColumnsColumnIdTasksTaskIdPostRequest($board_id, $column_id, $task_id);
 
         try {
@@ -2858,7 +2858,7 @@ class BoardApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesBoardModelsBoardTask',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesBoardModelsBoardTask',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2904,7 +2904,7 @@ class BoardApi
      */
     public function restBoardsBoardIdColumnsColumnIdTasksTaskIdPostAsyncWithHttpInfo($board_id, $column_id, $task_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesBoardModelsBoardTask';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesBoardModelsBoardTask';
         $request = $this->restBoardsBoardIdColumnsColumnIdTasksTaskIdPostRequest($board_id, $column_id, $task_id);
 
         return $this->client
@@ -3086,9 +3086,9 @@ class BoardApi
      * @param  string $task_id The ID of the task to be updated (required)
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesBoardModelsBoardTask
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesBoardModelsBoardTask
      */
     public function restBoardsBoardIdColumnsColumnIdTasksTaskIdPut($board_id, $column_id, $task_id, $body = null)
     {
@@ -3106,13 +3106,13 @@ class BoardApi
      * @param  string $task_id The ID of the task to be updated (required)
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesBoardModelsBoardTask, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesBoardModelsBoardTask, HTTP status code, HTTP response headers (array of strings)
      */
     public function restBoardsBoardIdColumnsColumnIdTasksTaskIdPutWithHttpInfo($board_id, $column_id, $task_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesBoardModelsBoardTask';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesBoardModelsBoardTask';
         $request = $this->restBoardsBoardIdColumnsColumnIdTasksTaskIdPutRequest($board_id, $column_id, $task_id, $body);
 
         try {
@@ -3164,7 +3164,7 @@ class BoardApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesBoardModelsBoardTask',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesBoardModelsBoardTask',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3212,7 +3212,7 @@ class BoardApi
      */
     public function restBoardsBoardIdColumnsColumnIdTasksTaskIdPutAsyncWithHttpInfo($board_id, $column_id, $task_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesBoardModelsBoardTask';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesBoardModelsBoardTask';
         $request = $this->restBoardsBoardIdColumnsColumnIdTasksTaskIdPutRequest($board_id, $column_id, $task_id, $body);
 
         return $this->client
@@ -3398,9 +3398,9 @@ class BoardApi
      * @param  string $task_id The ID of the task (required)
      * @param  string $reference_value Reference type followed by foreign ID of the referenced object. Syntax: TYPE-ID Example: user-123456 Types: user,ticket,contact,order,item (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesBoardModelsBoardTaskReference
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesBoardModelsBoardTaskReference
      */
     public function restBoardsBoardIdColumnsColumnIdTasksTaskIdReferencesPost($board_id, $column_id, $task_id, $reference_value)
     {
@@ -3418,13 +3418,13 @@ class BoardApi
      * @param  string $task_id The ID of the task (required)
      * @param  string $reference_value Reference type followed by foreign ID of the referenced object. Syntax: TYPE-ID Example: user-123456 Types: user,ticket,contact,order,item (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesBoardModelsBoardTaskReference, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesBoardModelsBoardTaskReference, HTTP status code, HTTP response headers (array of strings)
      */
     public function restBoardsBoardIdColumnsColumnIdTasksTaskIdReferencesPostWithHttpInfo($board_id, $column_id, $task_id, $reference_value)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesBoardModelsBoardTaskReference';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesBoardModelsBoardTaskReference';
         $request = $this->restBoardsBoardIdColumnsColumnIdTasksTaskIdReferencesPostRequest($board_id, $column_id, $task_id, $reference_value);
 
         try {
@@ -3476,7 +3476,7 @@ class BoardApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesBoardModelsBoardTaskReference',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesBoardModelsBoardTaskReference',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3524,7 +3524,7 @@ class BoardApi
      */
     public function restBoardsBoardIdColumnsColumnIdTasksTaskIdReferencesPostAsyncWithHttpInfo($board_id, $column_id, $task_id, $reference_value)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesBoardModelsBoardTaskReference';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesBoardModelsBoardTaskReference';
         $request = $this->restBoardsBoardIdColumnsColumnIdTasksTaskIdReferencesPostRequest($board_id, $column_id, $task_id, $reference_value);
 
         return $this->client
@@ -3717,9 +3717,9 @@ class BoardApi
      * @param  int $task_id task_id (required)
      * @param  int $reference_id reference_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyDataSimpleRestResponse
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse
      */
     public function restBoardsBoardIdColumnsColumnIdTasksTaskIdReferencesReferenceIdDelete($board_id, $column_id, $task_id, $reference_id)
     {
@@ -3737,13 +3737,13 @@ class BoardApi
      * @param  int $task_id (required)
      * @param  int $reference_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyDataSimpleRestResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function restBoardsBoardIdColumnsColumnIdTasksTaskIdReferencesReferenceIdDeleteWithHttpInfo($board_id, $column_id, $task_id, $reference_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyDataSimpleRestResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse';
         $request = $this->restBoardsBoardIdColumnsColumnIdTasksTaskIdReferencesReferenceIdDeleteRequest($board_id, $column_id, $task_id, $reference_id);
 
         try {
@@ -3795,7 +3795,7 @@ class BoardApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyDataSimpleRestResponse',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3843,7 +3843,7 @@ class BoardApi
      */
     public function restBoardsBoardIdColumnsColumnIdTasksTaskIdReferencesReferenceIdDeleteAsyncWithHttpInfo($board_id, $column_id, $task_id, $reference_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyDataSimpleRestResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse';
         $request = $this->restBoardsBoardIdColumnsColumnIdTasksTaskIdReferencesReferenceIdDeleteRequest($board_id, $column_id, $task_id, $reference_id);
 
         return $this->client
@@ -4039,9 +4039,9 @@ class BoardApi
      * @param  int $reference_type reference_type (required)
      * @param  int $reference_key reference_key (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyDataSimpleRestResponse
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse
      */
     public function restBoardsBoardIdColumnsColumnIdTasksTaskIdReferencesReferenceTypeReferenceKeyGet($board_id, $column_id, $task_id, $reference_type, $reference_key)
     {
@@ -4058,13 +4058,13 @@ class BoardApi
      * @param  int $reference_type (required)
      * @param  int $reference_key (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyDataSimpleRestResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function restBoardsBoardIdColumnsColumnIdTasksTaskIdReferencesReferenceTypeReferenceKeyGetWithHttpInfo($board_id, $column_id, $task_id, $reference_type, $reference_key)
     {
-        $returnType = '\Swagger\Client\Model\PlentyDataSimpleRestResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse';
         $request = $this->restBoardsBoardIdColumnsColumnIdTasksTaskIdReferencesReferenceTypeReferenceKeyGetRequest($board_id, $column_id, $task_id, $reference_type, $reference_key);
 
         try {
@@ -4116,7 +4116,7 @@ class BoardApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyDataSimpleRestResponse',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4166,7 +4166,7 @@ class BoardApi
      */
     public function restBoardsBoardIdColumnsColumnIdTasksTaskIdReferencesReferenceTypeReferenceKeyGetAsyncWithHttpInfo($board_id, $column_id, $task_id, $reference_type, $reference_key)
     {
-        $returnType = '\Swagger\Client\Model\PlentyDataSimpleRestResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse';
         $request = $this->restBoardsBoardIdColumnsColumnIdTasksTaskIdReferencesReferenceTypeReferenceKeyGetRequest($board_id, $column_id, $task_id, $reference_type, $reference_key);
 
         return $this->client
@@ -4375,9 +4375,9 @@ class BoardApi
      *
      * @param  string $board_id board_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesBoardModelsBoardColumn[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesBoardModelsBoardColumn[]
      */
     public function restBoardsBoardIdColumnsGet($board_id)
     {
@@ -4392,13 +4392,13 @@ class BoardApi
      *
      * @param  string $board_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesBoardModelsBoardColumn[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesBoardModelsBoardColumn[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restBoardsBoardIdColumnsGetWithHttpInfo($board_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesBoardModelsBoardColumn[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesBoardModelsBoardColumn[]';
         $request = $this->restBoardsBoardIdColumnsGetRequest($board_id);
 
         try {
@@ -4450,7 +4450,7 @@ class BoardApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesBoardModelsBoardColumn[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesBoardModelsBoardColumn[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4492,7 +4492,7 @@ class BoardApi
      */
     public function restBoardsBoardIdColumnsGetAsyncWithHttpInfo($board_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesBoardModelsBoardColumn[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesBoardModelsBoardColumn[]';
         $request = $this->restBoardsBoardIdColumnsGetRequest($board_id);
 
         return $this->client
@@ -4642,9 +4642,9 @@ class BoardApi
      * @param  string $board_id board_id (required)
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesBoardModelsBoardColumn
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesBoardModelsBoardColumn
      */
     public function restBoardsBoardIdColumnsPost($board_id, $body = null)
     {
@@ -4660,13 +4660,13 @@ class BoardApi
      * @param  string $board_id (required)
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesBoardModelsBoardColumn, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesBoardModelsBoardColumn, HTTP status code, HTTP response headers (array of strings)
      */
     public function restBoardsBoardIdColumnsPostWithHttpInfo($board_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesBoardModelsBoardColumn';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesBoardModelsBoardColumn';
         $request = $this->restBoardsBoardIdColumnsPostRequest($board_id, $body);
 
         try {
@@ -4718,7 +4718,7 @@ class BoardApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesBoardModelsBoardColumn',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesBoardModelsBoardColumn',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4762,7 +4762,7 @@ class BoardApi
      */
     public function restBoardsBoardIdColumnsPostAsyncWithHttpInfo($board_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesBoardModelsBoardColumn';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesBoardModelsBoardColumn';
         $request = $this->restBoardsBoardIdColumnsPostRequest($board_id, $body);
 
         return $this->client

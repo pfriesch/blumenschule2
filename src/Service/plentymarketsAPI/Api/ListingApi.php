@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  BSApp\Service\plentymarketsAPI
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace BSApp\Service\plentymarketsAPI\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -33,16 +33,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use BSApp\Service\plentymarketsAPI\ApiException;
+use BSApp\Service\plentymarketsAPI\Configuration;
+use BSApp\Service\plentymarketsAPI\HeaderSelector;
+use BSApp\Service\plentymarketsAPI\ObjectSerializer;
 
 /**
  * ListingApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  BSApp\Service\plentymarketsAPI
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -100,7 +100,7 @@ class ListingApi
      * @param  int $items_per_page The number of items to list per page. (optional)
      * @param  int $with An array with child instances to be loaded. One of &#x27;stockDependenceType&#x27;, &#x27;type&#x27;, &#x27;markets&#x27;, &#x27;properties&#x27;. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -124,7 +124,7 @@ class ListingApi
      * @param  int $items_per_page The number of items to list per page. (optional)
      * @param  int $with An array with child instances to be loaded. One of &#x27;stockDependenceType&#x27;, &#x27;type&#x27;, &#x27;markets&#x27;, &#x27;properties&#x27;. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -412,9 +412,9 @@ class ListingApi
      *
      * @param  int $id The listing ID. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse
      */
     public function restListingsIdDelete($id)
     {
@@ -429,13 +429,13 @@ class ListingApi
      *
      * @param  int $id The listing ID. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function restListingsIdDeleteWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse';
         $request = $this->restListingsIdDeleteRequest($id);
 
         try {
@@ -487,7 +487,7 @@ class ListingApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -529,7 +529,7 @@ class ListingApi
      */
     public function restListingsIdDeleteAsyncWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse';
         $request = $this->restListingsIdDeleteRequest($id);
 
         return $this->client
@@ -679,9 +679,9 @@ class ListingApi
      * @param  int $id The ID of the listing entry. (required)
      * @param  int $with An array with child instances to be loaded. One of &#x27;stockDependenceType&#x27;, &#x27;type&#x27;, &#x27;markets&#x27;, &#x27;properties&#x27;. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesListingModelsListing
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesListingModelsListing
      */
     public function restListingsIdGet($id, $with = null)
     {
@@ -697,13 +697,13 @@ class ListingApi
      * @param  int $id The ID of the listing entry. (required)
      * @param  int $with An array with child instances to be loaded. One of &#x27;stockDependenceType&#x27;, &#x27;type&#x27;, &#x27;markets&#x27;, &#x27;properties&#x27;. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesListingModelsListing, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesListingModelsListing, HTTP status code, HTTP response headers (array of strings)
      */
     public function restListingsIdGetWithHttpInfo($id, $with = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesListingModelsListing';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesListingModelsListing';
         $request = $this->restListingsIdGetRequest($id, $with);
 
         try {
@@ -755,7 +755,7 @@ class ListingApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesListingModelsListing',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesListingModelsListing',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -799,7 +799,7 @@ class ListingApi
      */
     public function restListingsIdGetAsyncWithHttpInfo($id, $with = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesListingModelsListing';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesListingModelsListing';
         $request = $this->restListingsIdGetRequest($id, $with);
 
         return $this->client
@@ -954,9 +954,9 @@ class ListingApi
      * @param  int $id The ID of the listing. (required)
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesListingModelsListing
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesListingModelsListing
      */
     public function restListingsIdPut($id, $body = null)
     {
@@ -972,13 +972,13 @@ class ListingApi
      * @param  int $id The ID of the listing. (required)
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesListingModelsListing, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesListingModelsListing, HTTP status code, HTTP response headers (array of strings)
      */
     public function restListingsIdPutWithHttpInfo($id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesListingModelsListing';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesListingModelsListing';
         $request = $this->restListingsIdPutRequest($id, $body);
 
         try {
@@ -1030,7 +1030,7 @@ class ListingApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesListingModelsListing',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesListingModelsListing',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1074,7 +1074,7 @@ class ListingApi
      */
     public function restListingsIdPutAsyncWithHttpInfo($id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesListingModelsListing';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesListingModelsListing';
         $request = $this->restListingsIdPutRequest($id, $body);
 
         return $this->client
@@ -1227,9 +1227,9 @@ class ListingApi
      *
      * @param  int $id The layout template ID. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse
      */
     public function restListingsLayoutTemplatesIdDelete($id)
     {
@@ -1244,13 +1244,13 @@ class ListingApi
      *
      * @param  int $id The layout template ID. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function restListingsLayoutTemplatesIdDeleteWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse';
         $request = $this->restListingsLayoutTemplatesIdDeleteRequest($id);
 
         try {
@@ -1302,7 +1302,7 @@ class ListingApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1344,7 +1344,7 @@ class ListingApi
      */
     public function restListingsLayoutTemplatesIdDeleteAsyncWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse';
         $request = $this->restListingsLayoutTemplatesIdDeleteRequest($id);
 
         return $this->client
@@ -1493,9 +1493,9 @@ class ListingApi
      *
      * @param  int $id The ID of the layout template entry. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesListingLayoutTemplateModelsLayoutTemplate
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesListingLayoutTemplateModelsLayoutTemplate
      */
     public function restListingsLayoutTemplatesIdGet($id)
     {
@@ -1510,13 +1510,13 @@ class ListingApi
      *
      * @param  int $id The ID of the layout template entry. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesListingLayoutTemplateModelsLayoutTemplate, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesListingLayoutTemplateModelsLayoutTemplate, HTTP status code, HTTP response headers (array of strings)
      */
     public function restListingsLayoutTemplatesIdGetWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesListingLayoutTemplateModelsLayoutTemplate';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesListingLayoutTemplateModelsLayoutTemplate';
         $request = $this->restListingsLayoutTemplatesIdGetRequest($id);
 
         try {
@@ -1568,7 +1568,7 @@ class ListingApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesListingLayoutTemplateModelsLayoutTemplate',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesListingLayoutTemplateModelsLayoutTemplate',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1610,7 +1610,7 @@ class ListingApi
      */
     public function restListingsLayoutTemplatesIdGetAsyncWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesListingLayoutTemplateModelsLayoutTemplate';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesListingLayoutTemplateModelsLayoutTemplate';
         $request = $this->restListingsLayoutTemplatesIdGetRequest($id);
 
         return $this->client
@@ -1759,9 +1759,9 @@ class ListingApi
      *
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesListingLayoutTemplateModelsLayoutTemplate
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesListingLayoutTemplateModelsLayoutTemplate
      */
     public function restListingsLayoutTemplatesPost($body = null)
     {
@@ -1776,13 +1776,13 @@ class ListingApi
      *
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesListingLayoutTemplateModelsLayoutTemplate, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesListingLayoutTemplateModelsLayoutTemplate, HTTP status code, HTTP response headers (array of strings)
      */
     public function restListingsLayoutTemplatesPostWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesListingLayoutTemplateModelsLayoutTemplate';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesListingLayoutTemplateModelsLayoutTemplate';
         $request = $this->restListingsLayoutTemplatesPostRequest($body);
 
         try {
@@ -1834,7 +1834,7 @@ class ListingApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesListingLayoutTemplateModelsLayoutTemplate',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesListingLayoutTemplateModelsLayoutTemplate',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1876,7 +1876,7 @@ class ListingApi
      */
     public function restListingsLayoutTemplatesPostAsyncWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesListingLayoutTemplateModelsLayoutTemplate';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesListingLayoutTemplateModelsLayoutTemplate';
         $request = $this->restListingsLayoutTemplatesPostRequest($body);
 
         return $this->client
@@ -2013,9 +2013,9 @@ class ListingApi
      * Get all listing market directories
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesListingMarketDirectoryModelsListingMarketDirectory[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesListingMarketDirectoryModelsListingMarketDirectory[]
      */
     public function restListingsMarketsDirectoriesGet()
     {
@@ -2029,13 +2029,13 @@ class ListingApi
      * Get all listing market directories
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesListingMarketDirectoryModelsListingMarketDirectory[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesListingMarketDirectoryModelsListingMarketDirectory[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restListingsMarketsDirectoriesGetWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesListingMarketDirectoryModelsListingMarketDirectory[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesListingMarketDirectoryModelsListingMarketDirectory[]';
         $request = $this->restListingsMarketsDirectoriesGetRequest();
 
         try {
@@ -2087,7 +2087,7 @@ class ListingApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesListingMarketDirectoryModelsListingMarketDirectory[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesListingMarketDirectoryModelsListingMarketDirectory[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2127,7 +2127,7 @@ class ListingApi
      */
     public function restListingsMarketsDirectoriesGetAsyncWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesListingMarketDirectoryModelsListingMarketDirectory[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesListingMarketDirectoryModelsListingMarketDirectory[]';
         $request = $this->restListingsMarketsDirectoriesGetRequest();
 
         return $this->client
@@ -2261,9 +2261,9 @@ class ListingApi
      *
      * @param  int $id The listing market directory ID. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse
      */
     public function restListingsMarketsDirectoriesIdDelete($id)
     {
@@ -2278,13 +2278,13 @@ class ListingApi
      *
      * @param  int $id The listing market directory ID. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function restListingsMarketsDirectoriesIdDeleteWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse';
         $request = $this->restListingsMarketsDirectoriesIdDeleteRequest($id);
 
         try {
@@ -2336,7 +2336,7 @@ class ListingApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2378,7 +2378,7 @@ class ListingApi
      */
     public function restListingsMarketsDirectoriesIdDeleteAsyncWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse';
         $request = $this->restListingsMarketsDirectoriesIdDeleteRequest($id);
 
         return $this->client
@@ -2527,9 +2527,9 @@ class ListingApi
      *
      * @param  int $id The ID of the listing market directory entry. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesListingMarketDirectoryModelsListingMarketDirectory
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesListingMarketDirectoryModelsListingMarketDirectory
      */
     public function restListingsMarketsDirectoriesIdGet($id)
     {
@@ -2544,13 +2544,13 @@ class ListingApi
      *
      * @param  int $id The ID of the listing market directory entry. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesListingMarketDirectoryModelsListingMarketDirectory, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesListingMarketDirectoryModelsListingMarketDirectory, HTTP status code, HTTP response headers (array of strings)
      */
     public function restListingsMarketsDirectoriesIdGetWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesListingMarketDirectoryModelsListingMarketDirectory';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesListingMarketDirectoryModelsListingMarketDirectory';
         $request = $this->restListingsMarketsDirectoriesIdGetRequest($id);
 
         try {
@@ -2602,7 +2602,7 @@ class ListingApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesListingMarketDirectoryModelsListingMarketDirectory',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesListingMarketDirectoryModelsListingMarketDirectory',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2644,7 +2644,7 @@ class ListingApi
      */
     public function restListingsMarketsDirectoriesIdGetAsyncWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesListingMarketDirectoryModelsListingMarketDirectory';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesListingMarketDirectoryModelsListingMarketDirectory';
         $request = $this->restListingsMarketsDirectoriesIdGetRequest($id);
 
         return $this->client
@@ -2794,9 +2794,9 @@ class ListingApi
      * @param  int $id The listing market directory ID. (required)
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesListingMarketDirectoryModelsListingMarketDirectory
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesListingMarketDirectoryModelsListingMarketDirectory
      */
     public function restListingsMarketsDirectoriesIdPut($id, $body = null)
     {
@@ -2812,13 +2812,13 @@ class ListingApi
      * @param  int $id The listing market directory ID. (required)
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesListingMarketDirectoryModelsListingMarketDirectory, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesListingMarketDirectoryModelsListingMarketDirectory, HTTP status code, HTTP response headers (array of strings)
      */
     public function restListingsMarketsDirectoriesIdPutWithHttpInfo($id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesListingMarketDirectoryModelsListingMarketDirectory';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesListingMarketDirectoryModelsListingMarketDirectory';
         $request = $this->restListingsMarketsDirectoriesIdPutRequest($id, $body);
 
         try {
@@ -2870,7 +2870,7 @@ class ListingApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesListingMarketDirectoryModelsListingMarketDirectory',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesListingMarketDirectoryModelsListingMarketDirectory',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2914,7 +2914,7 @@ class ListingApi
      */
     public function restListingsMarketsDirectoriesIdPutAsyncWithHttpInfo($id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesListingMarketDirectoryModelsListingMarketDirectory';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesListingMarketDirectoryModelsListingMarketDirectory';
         $request = $this->restListingsMarketsDirectoriesIdPutRequest($id, $body);
 
         return $this->client
@@ -3067,9 +3067,9 @@ class ListingApi
      *
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesListingMarketDirectoryModelsListingMarketDirectory
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesListingMarketDirectoryModelsListingMarketDirectory
      */
     public function restListingsMarketsDirectoriesPost($body = null)
     {
@@ -3084,13 +3084,13 @@ class ListingApi
      *
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesListingMarketDirectoryModelsListingMarketDirectory, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesListingMarketDirectoryModelsListingMarketDirectory, HTTP status code, HTTP response headers (array of strings)
      */
     public function restListingsMarketsDirectoriesPostWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesListingMarketDirectoryModelsListingMarketDirectory';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesListingMarketDirectoryModelsListingMarketDirectory';
         $request = $this->restListingsMarketsDirectoriesPostRequest($body);
 
         try {
@@ -3142,7 +3142,7 @@ class ListingApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesListingMarketDirectoryModelsListingMarketDirectory',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesListingMarketDirectoryModelsListingMarketDirectory',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3184,7 +3184,7 @@ class ListingApi
      */
     public function restListingsMarketsDirectoriesPostAsyncWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesListingMarketDirectoryModelsListingMarketDirectory';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesListingMarketDirectoryModelsListingMarketDirectory';
         $request = $this->restListingsMarketsDirectoriesPostRequest($body);
 
         return $this->client
@@ -3331,7 +3331,7 @@ class ListingApi
      * @param  int $shipping_profile_id Filter that restricts the search result to listing markets that belong to a given shipping profile ID (optional)
      * @param  int $with An array with child instances to be loaded. Valid instances are &#x27;listing&#x27;, &#x27;texts&#x27;, &#x27;properties&#x27;, &#x27;prices&#x27;, &#x27;dates&#x27;, &#x27;infos&#x27;. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -3357,7 +3357,7 @@ class ListingApi
      * @param  int $shipping_profile_id Filter that restricts the search result to listing markets that belong to a given shipping profile ID (optional)
      * @param  int $with An array with child instances to be loaded. Valid instances are &#x27;listing&#x27;, &#x27;texts&#x27;, &#x27;properties&#x27;, &#x27;prices&#x27;, &#x27;dates&#x27;, &#x27;infos&#x27;. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -3678,7 +3678,7 @@ class ListingApi
      * @param  string $updated_at_to Filter that restricts the search result to listing markets that were last updated within a specified period of time. This filter can be used alone or can be combined with the UpdatedAtFrom filter. The date has to be in the W3C format, e.g. &#x27;2016-10-24T13:33:23+02:00&#x27;. (optional)
      * @param  int $with An array with child instances to be loaded. Valid instances are &#x27;listing&#x27;, &#x27;texts&#x27;, &#x27;properties&#x27;, &#x27;prices&#x27;, &#x27;dates&#x27;, &#x27;infos&#x27;. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -3714,7 +3714,7 @@ class ListingApi
      * @param  string $updated_at_to Filter that restricts the search result to listing markets that were last updated within a specified period of time. This filter can be used alone or can be combined with the UpdatedAtFrom filter. The date has to be in the W3C format, e.g. &#x27;2016-10-24T13:33:23+02:00&#x27;. (optional)
      * @param  int $with An array with child instances to be loaded. Valid instances are &#x27;listing&#x27;, &#x27;texts&#x27;, &#x27;properties&#x27;, &#x27;prices&#x27;, &#x27;dates&#x27;, &#x27;infos&#x27;. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -4087,9 +4087,9 @@ class ListingApi
      * @param  int $id The ID of the listing market history that needs to be ended. This must be passed as an array. This parameter is only needed if more than one listing market history should be ended. (required)
      * @param  bool $delete_on_success Tells if the listing market history should also be deleted from the database. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\Mixed[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\Mixed[]
      */
     public function restListingsMarketsHistoriesEndIdDelete($id, $delete_on_success = null)
     {
@@ -4105,13 +4105,13 @@ class ListingApi
      * @param  int $id The ID of the listing market history that needs to be ended. This must be passed as an array. This parameter is only needed if more than one listing market history should be ended. (required)
      * @param  bool $delete_on_success Tells if the listing market history should also be deleted from the database. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\Mixed[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\Mixed[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restListingsMarketsHistoriesEndIdDeleteWithHttpInfo($id, $delete_on_success = null)
     {
-        $returnType = '\Swagger\Client\Model\Mixed[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\Mixed[]';
         $request = $this->restListingsMarketsHistoriesEndIdDeleteRequest($id, $delete_on_success);
 
         try {
@@ -4163,7 +4163,7 @@ class ListingApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\Mixed[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\Mixed[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4207,7 +4207,7 @@ class ListingApi
      */
     public function restListingsMarketsHistoriesEndIdDeleteAsyncWithHttpInfo($id, $delete_on_success = null)
     {
-        $returnType = '\Swagger\Client\Model\Mixed[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\Mixed[]';
         $request = $this->restListingsMarketsHistoriesEndIdDeleteRequest($id, $delete_on_success);
 
         return $this->client
@@ -4390,7 +4390,7 @@ class ListingApi
      * @param  string $is_click_and_collect Filter that restricts the search result to listing market histories that belong to eBay Click &amp; Collect. (optional)
      * @param  int $with An array with child instances to be loaded. Valid instances are &#x27;listingMarket&#x27;, &#x27;texts&#x27;, &#x27;properties&#x27;, &#x27;prices&#x27;, &#x27;dates&#x27;. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -4436,7 +4436,7 @@ class ListingApi
      * @param  string $is_click_and_collect Filter that restricts the search result to listing market histories that belong to eBay Click &amp; Collect. (optional)
      * @param  int $with An array with child instances to be loaded. Valid instances are &#x27;listingMarket&#x27;, &#x27;texts&#x27;, &#x27;properties&#x27;, &#x27;prices&#x27;, &#x27;dates&#x27;. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -4879,9 +4879,9 @@ class ListingApi
      * @param  int $id The ID of the listing market history entry. (required)
      * @param  int $with An array with child instances to be loaded. One of &#x27;listingMarket&#x27;, &#x27;texts&#x27;, &#x27;properties&#x27;, &#x27;dates&#x27;, &#x27;variations&#x27;. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesListingMarketHistoryModelsListingMarketHistory
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesListingMarketHistoryModelsListingMarketHistory
      */
     public function restListingsMarketsHistoriesIdGet($id, $with = null)
     {
@@ -4897,13 +4897,13 @@ class ListingApi
      * @param  int $id The ID of the listing market history entry. (required)
      * @param  int $with An array with child instances to be loaded. One of &#x27;listingMarket&#x27;, &#x27;texts&#x27;, &#x27;properties&#x27;, &#x27;dates&#x27;, &#x27;variations&#x27;. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesListingMarketHistoryModelsListingMarketHistory, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesListingMarketHistoryModelsListingMarketHistory, HTTP status code, HTTP response headers (array of strings)
      */
     public function restListingsMarketsHistoriesIdGetWithHttpInfo($id, $with = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesListingMarketHistoryModelsListingMarketHistory';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesListingMarketHistoryModelsListingMarketHistory';
         $request = $this->restListingsMarketsHistoriesIdGetRequest($id, $with);
 
         try {
@@ -4955,7 +4955,7 @@ class ListingApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesListingMarketHistoryModelsListingMarketHistory',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesListingMarketHistoryModelsListingMarketHistory',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4999,7 +4999,7 @@ class ListingApi
      */
     public function restListingsMarketsHistoriesIdGetAsyncWithHttpInfo($id, $with = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesListingMarketHistoryModelsListingMarketHistory';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesListingMarketHistoryModelsListingMarketHistory';
         $request = $this->restListingsMarketsHistoriesIdGetRequest($id, $with);
 
         return $this->client
@@ -5153,9 +5153,9 @@ class ListingApi
      *
      * @param  int $id The ID of the listing market history that needs to be relisted. This must be passed as an array. This parameter is only needed if more than one listing market history should be relisted. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\Mixed[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\Mixed[]
      */
     public function restListingsMarketsHistoriesRelistIdPost($id)
     {
@@ -5170,13 +5170,13 @@ class ListingApi
      *
      * @param  int $id The ID of the listing market history that needs to be relisted. This must be passed as an array. This parameter is only needed if more than one listing market history should be relisted. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\Mixed[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\Mixed[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restListingsMarketsHistoriesRelistIdPostWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\Mixed[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\Mixed[]';
         $request = $this->restListingsMarketsHistoriesRelistIdPostRequest($id);
 
         try {
@@ -5228,7 +5228,7 @@ class ListingApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\Mixed[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\Mixed[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5270,7 +5270,7 @@ class ListingApi
      */
     public function restListingsMarketsHistoriesRelistIdPostAsyncWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\Mixed[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\Mixed[]';
         $request = $this->restListingsMarketsHistoriesRelistIdPostRequest($id);
 
         return $this->client
@@ -5420,9 +5420,9 @@ class ListingApi
      * @param  int $id The ID of the listing market history that needs to be updated. This must be passed as an array. This parameter is only needed if more than one listing market history should be updated. (required)
      * @param  int $options Multiple update options. Available values are:     &lt;ul&gt;     &lt;li&gt;all - Updates everything     &lt;li&gt;title - Updates the title     &lt;li&gt;subtitle - Updates the subtitle&lt;/li&gt;&lt;/li&gt;     &lt;li&gt;itemSpecifics - Updates the item specifics&lt;/li&gt;     &lt;li&gt;category - Updates the platform and shop category&lt;/li&gt;     &lt;li&gt;listingDetails - Updates listing details&lt;/li&gt;     &lt;li&gt;enhancements - Updates the enhancements information&lt;/li&gt;     &lt;li&gt;duration - Updates the duration&lt;/li&gt;     &lt;li&gt;shipping - Updates the shipping information&lt;/li&gt;     &lt;li&gt;description - Updates the description&lt;/li&gt;     &lt;li&gt;pictures - Updates the entry pictures&lt;/li&gt;     &lt;li&gt;quantityAndPrice - Updates the quantity and price (also for variations)&lt;/li&gt;     &lt;li&gt;resetVariations - Reset the variations. The variations from the item are transmitted again&lt;/li&gt;     &lt;li&gt;partsFitmentList - Updates the parts fitment information (only available for eBay)&lt;/li&gt;     &lt;li&gt;loyaltyProgram - Updates the listing loyalty program information (only available for eBay Plus)&lt;/li&gt;     &lt;li&gt;resetRrp - Reset the recommended retail price information (only available for eBay)&lt;/li&gt;     &lt;li&gt;payment - Updates payment information (only available for Hood)&lt;/li&gt;     &lt;/ul&gt; (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\Mixed[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\Mixed[]
      */
     public function restListingsMarketsHistoriesUpdateIdPut($id, $options = null)
     {
@@ -5438,13 +5438,13 @@ class ListingApi
      * @param  int $id The ID of the listing market history that needs to be updated. This must be passed as an array. This parameter is only needed if more than one listing market history should be updated. (required)
      * @param  int $options Multiple update options. Available values are:     &lt;ul&gt;     &lt;li&gt;all - Updates everything     &lt;li&gt;title - Updates the title     &lt;li&gt;subtitle - Updates the subtitle&lt;/li&gt;&lt;/li&gt;     &lt;li&gt;itemSpecifics - Updates the item specifics&lt;/li&gt;     &lt;li&gt;category - Updates the platform and shop category&lt;/li&gt;     &lt;li&gt;listingDetails - Updates listing details&lt;/li&gt;     &lt;li&gt;enhancements - Updates the enhancements information&lt;/li&gt;     &lt;li&gt;duration - Updates the duration&lt;/li&gt;     &lt;li&gt;shipping - Updates the shipping information&lt;/li&gt;     &lt;li&gt;description - Updates the description&lt;/li&gt;     &lt;li&gt;pictures - Updates the entry pictures&lt;/li&gt;     &lt;li&gt;quantityAndPrice - Updates the quantity and price (also for variations)&lt;/li&gt;     &lt;li&gt;resetVariations - Reset the variations. The variations from the item are transmitted again&lt;/li&gt;     &lt;li&gt;partsFitmentList - Updates the parts fitment information (only available for eBay)&lt;/li&gt;     &lt;li&gt;loyaltyProgram - Updates the listing loyalty program information (only available for eBay Plus)&lt;/li&gt;     &lt;li&gt;resetRrp - Reset the recommended retail price information (only available for eBay)&lt;/li&gt;     &lt;li&gt;payment - Updates payment information (only available for Hood)&lt;/li&gt;     &lt;/ul&gt; (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\Mixed[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\Mixed[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restListingsMarketsHistoriesUpdateIdPutWithHttpInfo($id, $options = null)
     {
-        $returnType = '\Swagger\Client\Model\Mixed[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\Mixed[]';
         $request = $this->restListingsMarketsHistoriesUpdateIdPutRequest($id, $options);
 
         try {
@@ -5496,7 +5496,7 @@ class ListingApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\Mixed[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\Mixed[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5540,7 +5540,7 @@ class ListingApi
      */
     public function restListingsMarketsHistoriesUpdateIdPutAsyncWithHttpInfo($id, $options = null)
     {
-        $returnType = '\Swagger\Client\Model\Mixed[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\Mixed[]';
         $request = $this->restListingsMarketsHistoriesUpdateIdPutRequest($id, $options);
 
         return $this->client
@@ -5694,9 +5694,9 @@ class ListingApi
      *
      * @param  int $id The listing market ID. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse
      */
     public function restListingsMarketsIdDelete($id)
     {
@@ -5711,13 +5711,13 @@ class ListingApi
      *
      * @param  int $id The listing market ID. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function restListingsMarketsIdDeleteWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse';
         $request = $this->restListingsMarketsIdDeleteRequest($id);
 
         try {
@@ -5769,7 +5769,7 @@ class ListingApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5811,7 +5811,7 @@ class ListingApi
      */
     public function restListingsMarketsIdDeleteAsyncWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse';
         $request = $this->restListingsMarketsIdDeleteRequest($id);
 
         return $this->client
@@ -5961,9 +5961,9 @@ class ListingApi
      * @param  int $id The ID of the listing market entry. (required)
      * @param  int $with An array with child instances to be loaded. One of &#x27;listing&#x27;, &#x27;texts&#x27;, &#x27;properties&#x27;, &#x27;itemSpecifics&#x27;, &#x27;prices&#x27;, &#x27;dates&#x27;, &#x27;infos&#x27;. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesListingMarketModelsListingMarket
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesListingMarketModelsListingMarket
      */
     public function restListingsMarketsIdGet($id, $with = null)
     {
@@ -5979,13 +5979,13 @@ class ListingApi
      * @param  int $id The ID of the listing market entry. (required)
      * @param  int $with An array with child instances to be loaded. One of &#x27;listing&#x27;, &#x27;texts&#x27;, &#x27;properties&#x27;, &#x27;itemSpecifics&#x27;, &#x27;prices&#x27;, &#x27;dates&#x27;, &#x27;infos&#x27;. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesListingMarketModelsListingMarket, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesListingMarketModelsListingMarket, HTTP status code, HTTP response headers (array of strings)
      */
     public function restListingsMarketsIdGetWithHttpInfo($id, $with = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesListingMarketModelsListingMarket';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesListingMarketModelsListingMarket';
         $request = $this->restListingsMarketsIdGetRequest($id, $with);
 
         try {
@@ -6037,7 +6037,7 @@ class ListingApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesListingMarketModelsListingMarket',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesListingMarketModelsListingMarket',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6081,7 +6081,7 @@ class ListingApi
      */
     public function restListingsMarketsIdGetAsyncWithHttpInfo($id, $with = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesListingMarketModelsListingMarket';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesListingMarketModelsListingMarket';
         $request = $this->restListingsMarketsIdGetRequest($id, $with);
 
         return $this->client
@@ -6237,9 +6237,9 @@ class ListingApi
      * @param  int $id The listing market ID. (required)
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesListingMarketModelsListingMarket
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesListingMarketModelsListingMarket
      */
     public function restListingsMarketsIdPut($referrer_id, $id, $body = null)
     {
@@ -6256,13 +6256,13 @@ class ListingApi
      * @param  int $id The listing market ID. (required)
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesListingMarketModelsListingMarket, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesListingMarketModelsListingMarket, HTTP status code, HTTP response headers (array of strings)
      */
     public function restListingsMarketsIdPutWithHttpInfo($referrer_id, $id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesListingMarketModelsListingMarket';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesListingMarketModelsListingMarket';
         $request = $this->restListingsMarketsIdPutRequest($referrer_id, $id, $body);
 
         try {
@@ -6314,7 +6314,7 @@ class ListingApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesListingMarketModelsListingMarket',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesListingMarketModelsListingMarket',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6360,7 +6360,7 @@ class ListingApi
      */
     public function restListingsMarketsIdPutAsyncWithHttpInfo($referrer_id, $id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesListingMarketModelsListingMarket';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesListingMarketModelsListingMarket';
         $request = $this->restListingsMarketsIdPutRequest($referrer_id, $id, $body);
 
         return $this->client
@@ -6532,7 +6532,7 @@ class ListingApi
      * @param  string $created_at_to Filter that restricts the search result to listing markets that were last updated within a specified period of time. This filter can be used alone or can be combined with the UpdatedAtFrom filter. The date has to be in the W3C format, e.g. &#x27;2016-10-24T13:33:23+02:00&#x27;. (optional)
      * @param  int $with An array with child instances to be loaded. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -6557,7 +6557,7 @@ class ListingApi
      * @param  string $created_at_to Filter that restricts the search result to listing markets that were last updated within a specified period of time. This filter can be used alone or can be combined with the UpdatedAtFrom filter. The date has to be in the W3C format, e.g. &#x27;2016-10-24T13:33:23+02:00&#x27;. (optional)
      * @param  int $with An array with child instances to be loaded. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -6852,9 +6852,9 @@ class ListingApi
      *
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesListingMarketItemSpecificModelsListingMarketItemSpecific
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesListingMarketItemSpecificModelsListingMarketItemSpecific
      */
     public function restListingsMarketsItemSpecificsGet($body = null)
     {
@@ -6869,13 +6869,13 @@ class ListingApi
      *
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesListingMarketItemSpecificModelsListingMarketItemSpecific, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesListingMarketItemSpecificModelsListingMarketItemSpecific, HTTP status code, HTTP response headers (array of strings)
      */
     public function restListingsMarketsItemSpecificsGetWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesListingMarketItemSpecificModelsListingMarketItemSpecific';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesListingMarketItemSpecificModelsListingMarketItemSpecific';
         $request = $this->restListingsMarketsItemSpecificsGetRequest($body);
 
         try {
@@ -6927,7 +6927,7 @@ class ListingApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesListingMarketItemSpecificModelsListingMarketItemSpecific',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesListingMarketItemSpecificModelsListingMarketItemSpecific',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6969,7 +6969,7 @@ class ListingApi
      */
     public function restListingsMarketsItemSpecificsGetAsyncWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesListingMarketItemSpecificModelsListingMarketItemSpecific';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesListingMarketItemSpecificModelsListingMarketItemSpecific';
         $request = $this->restListingsMarketsItemSpecificsGetRequest($body);
 
         return $this->client
@@ -7107,9 +7107,9 @@ class ListingApi
      *
      * @param  int $id id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyDataSimpleRestResponse
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse
      */
     public function restListingsMarketsItemSpecificsIdDelete($id)
     {
@@ -7124,13 +7124,13 @@ class ListingApi
      *
      * @param  int $id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyDataSimpleRestResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function restListingsMarketsItemSpecificsIdDeleteWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyDataSimpleRestResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse';
         $request = $this->restListingsMarketsItemSpecificsIdDeleteRequest($id);
 
         try {
@@ -7182,7 +7182,7 @@ class ListingApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyDataSimpleRestResponse',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -7224,7 +7224,7 @@ class ListingApi
      */
     public function restListingsMarketsItemSpecificsIdDeleteAsyncWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyDataSimpleRestResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse';
         $request = $this->restListingsMarketsItemSpecificsIdDeleteRequest($id);
 
         return $this->client
@@ -7373,9 +7373,9 @@ class ListingApi
      *
      * @param  int $id id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesListingMarketItemSpecificModelsListingMarketItemSpecific
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesListingMarketItemSpecificModelsListingMarketItemSpecific
      */
     public function restListingsMarketsItemSpecificsIdGet($id)
     {
@@ -7390,13 +7390,13 @@ class ListingApi
      *
      * @param  int $id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesListingMarketItemSpecificModelsListingMarketItemSpecific, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesListingMarketItemSpecificModelsListingMarketItemSpecific, HTTP status code, HTTP response headers (array of strings)
      */
     public function restListingsMarketsItemSpecificsIdGetWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesListingMarketItemSpecificModelsListingMarketItemSpecific';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesListingMarketItemSpecificModelsListingMarketItemSpecific';
         $request = $this->restListingsMarketsItemSpecificsIdGetRequest($id);
 
         try {
@@ -7448,7 +7448,7 @@ class ListingApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesListingMarketItemSpecificModelsListingMarketItemSpecific',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesListingMarketItemSpecificModelsListingMarketItemSpecific',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -7490,7 +7490,7 @@ class ListingApi
      */
     public function restListingsMarketsItemSpecificsIdGetAsyncWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesListingMarketItemSpecificModelsListingMarketItemSpecific';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesListingMarketItemSpecificModelsListingMarketItemSpecific';
         $request = $this->restListingsMarketsItemSpecificsIdGetRequest($id);
 
         return $this->client
@@ -7640,9 +7640,9 @@ class ListingApi
      * @param  int $id id (required)
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesListingMarketItemSpecificModelsListingMarketItemSpecific
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesListingMarketItemSpecificModelsListingMarketItemSpecific
      */
     public function restListingsMarketsItemSpecificsIdPut($id, $body = null)
     {
@@ -7658,13 +7658,13 @@ class ListingApi
      * @param  int $id (required)
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesListingMarketItemSpecificModelsListingMarketItemSpecific, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesListingMarketItemSpecificModelsListingMarketItemSpecific, HTTP status code, HTTP response headers (array of strings)
      */
     public function restListingsMarketsItemSpecificsIdPutWithHttpInfo($id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesListingMarketItemSpecificModelsListingMarketItemSpecific';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesListingMarketItemSpecificModelsListingMarketItemSpecific';
         $request = $this->restListingsMarketsItemSpecificsIdPutRequest($id, $body);
 
         try {
@@ -7716,7 +7716,7 @@ class ListingApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesListingMarketItemSpecificModelsListingMarketItemSpecific',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesListingMarketItemSpecificModelsListingMarketItemSpecific',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -7760,7 +7760,7 @@ class ListingApi
      */
     public function restListingsMarketsItemSpecificsIdPutAsyncWithHttpInfo($id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesListingMarketItemSpecificModelsListingMarketItemSpecific';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesListingMarketItemSpecificModelsListingMarketItemSpecific';
         $request = $this->restListingsMarketsItemSpecificsIdPutRequest($id, $body);
 
         return $this->client
@@ -7913,9 +7913,9 @@ class ListingApi
      *
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesListingMarketModelsListingMarket[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesListingMarketModelsListingMarket[]
      */
     public function restListingsMarketsPost($body = null)
     {
@@ -7930,13 +7930,13 @@ class ListingApi
      *
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesListingMarketModelsListingMarket[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesListingMarketModelsListingMarket[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restListingsMarketsPostWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesListingMarketModelsListingMarket[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesListingMarketModelsListingMarket[]';
         $request = $this->restListingsMarketsPostRequest($body);
 
         try {
@@ -7988,7 +7988,7 @@ class ListingApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesListingMarketModelsListingMarket[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesListingMarketModelsListingMarket[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -8030,7 +8030,7 @@ class ListingApi
      */
     public function restListingsMarketsPostAsyncWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesListingMarketModelsListingMarket[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesListingMarketModelsListingMarket[]';
         $request = $this->restListingsMarketsPostRequest($body);
 
         return $this->client
@@ -8170,9 +8170,9 @@ class ListingApi
      * @param  string $start_at When should the listings be started. The date has to be in the format, e.g. &#x27;2019-04-04 12:40:00&#x27;. (optional)
      * @param  int $distribution The number of minutes that the listing should be started. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\Mixed[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\Mixed[]
      */
     public function restListingsMarketsStartIdPost($id, $start_at = null, $distribution = null)
     {
@@ -8189,13 +8189,13 @@ class ListingApi
      * @param  string $start_at When should the listings be started. The date has to be in the format, e.g. &#x27;2019-04-04 12:40:00&#x27;. (optional)
      * @param  int $distribution The number of minutes that the listing should be started. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\Mixed[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\Mixed[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restListingsMarketsStartIdPostWithHttpInfo($id, $start_at = null, $distribution = null)
     {
-        $returnType = '\Swagger\Client\Model\Mixed[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\Mixed[]';
         $request = $this->restListingsMarketsStartIdPostRequest($id, $start_at, $distribution);
 
         try {
@@ -8247,7 +8247,7 @@ class ListingApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\Mixed[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\Mixed[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -8293,7 +8293,7 @@ class ListingApi
      */
     public function restListingsMarketsStartIdPostAsyncWithHttpInfo($id, $start_at = null, $distribution = null)
     {
-        $returnType = '\Swagger\Client\Model\Mixed[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\Mixed[]';
         $request = $this->restListingsMarketsStartIdPostRequest($id, $start_at, $distribution);
 
         return $this->client
@@ -8457,7 +8457,7 @@ class ListingApi
      * @param  int $page The page of results to search for. (optional)
      * @param  int $items_per_page The number of items to list per page. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -8479,7 +8479,7 @@ class ListingApi
      * @param  int $page The page of results to search for. (optional)
      * @param  int $items_per_page The number of items to list per page. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -8755,9 +8755,9 @@ class ListingApi
      * @param  int $listing_market_id The listing market ID this text belongs to. (required)
      * @param  int $id id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse
      */
     public function restListingsMarketsTextsIdDelete($lang, $listing_market_id, $id)
     {
@@ -8774,13 +8774,13 @@ class ListingApi
      * @param  int $listing_market_id The listing market ID this text belongs to. (required)
      * @param  int $id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function restListingsMarketsTextsIdDeleteWithHttpInfo($lang, $listing_market_id, $id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse';
         $request = $this->restListingsMarketsTextsIdDeleteRequest($lang, $listing_market_id, $id);
 
         try {
@@ -8832,7 +8832,7 @@ class ListingApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -8878,7 +8878,7 @@ class ListingApi
      */
     public function restListingsMarketsTextsIdDeleteAsyncWithHttpInfo($lang, $listing_market_id, $id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse';
         $request = $this->restListingsMarketsTextsIdDeleteRequest($lang, $listing_market_id, $id);
 
         return $this->client
@@ -9049,9 +9049,9 @@ class ListingApi
      *
      * @param  int $id The ID of the listing market text entry. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesListingMarketTextModelsListingMarketText
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesListingMarketTextModelsListingMarketText
      */
     public function restListingsMarketsTextsIdGet($id)
     {
@@ -9066,13 +9066,13 @@ class ListingApi
      *
      * @param  int $id The ID of the listing market text entry. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesListingMarketTextModelsListingMarketText, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesListingMarketTextModelsListingMarketText, HTTP status code, HTTP response headers (array of strings)
      */
     public function restListingsMarketsTextsIdGetWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesListingMarketTextModelsListingMarketText';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesListingMarketTextModelsListingMarketText';
         $request = $this->restListingsMarketsTextsIdGetRequest($id);
 
         try {
@@ -9124,7 +9124,7 @@ class ListingApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesListingMarketTextModelsListingMarketText',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesListingMarketTextModelsListingMarketText',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -9166,7 +9166,7 @@ class ListingApi
      */
     public function restListingsMarketsTextsIdGetAsyncWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesListingMarketTextModelsListingMarketText';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesListingMarketTextModelsListingMarketText';
         $request = $this->restListingsMarketsTextsIdGetRequest($id);
 
         return $this->client
@@ -9317,9 +9317,9 @@ class ListingApi
      * @param  string $lang The listing market text language that should be updated. (required)
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesListingMarketTextModelsListingMarketText
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesListingMarketTextModelsListingMarketText
      */
     public function restListingsMarketsTextsListingMarketIdLangPut($listing_market_id, $lang, $body = null)
     {
@@ -9336,13 +9336,13 @@ class ListingApi
      * @param  string $lang The listing market text language that should be updated. (required)
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesListingMarketTextModelsListingMarketText, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesListingMarketTextModelsListingMarketText, HTTP status code, HTTP response headers (array of strings)
      */
     public function restListingsMarketsTextsListingMarketIdLangPutWithHttpInfo($listing_market_id, $lang, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesListingMarketTextModelsListingMarketText';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesListingMarketTextModelsListingMarketText';
         $request = $this->restListingsMarketsTextsListingMarketIdLangPutRequest($listing_market_id, $lang, $body);
 
         try {
@@ -9394,7 +9394,7 @@ class ListingApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesListingMarketTextModelsListingMarketText',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesListingMarketTextModelsListingMarketText',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -9440,7 +9440,7 @@ class ListingApi
      */
     public function restListingsMarketsTextsListingMarketIdLangPutAsyncWithHttpInfo($listing_market_id, $lang, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesListingMarketTextModelsListingMarketText';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesListingMarketTextModelsListingMarketText';
         $request = $this->restListingsMarketsTextsListingMarketIdLangPutRequest($listing_market_id, $lang, $body);
 
         return $this->client
@@ -9609,9 +9609,9 @@ class ListingApi
      * @param  int $listing_market_id The listing market ID this text belongs to. (required)
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesListingMarketTextModelsListingMarketText
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesListingMarketTextModelsListingMarketText
      */
     public function restListingsMarketsTextsPost($listing_market_id, $body = null)
     {
@@ -9627,13 +9627,13 @@ class ListingApi
      * @param  int $listing_market_id The listing market ID this text belongs to. (required)
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesListingMarketTextModelsListingMarketText, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesListingMarketTextModelsListingMarketText, HTTP status code, HTTP response headers (array of strings)
      */
     public function restListingsMarketsTextsPostWithHttpInfo($listing_market_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesListingMarketTextModelsListingMarketText';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesListingMarketTextModelsListingMarketText';
         $request = $this->restListingsMarketsTextsPostRequest($listing_market_id, $body);
 
         try {
@@ -9685,7 +9685,7 @@ class ListingApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesListingMarketTextModelsListingMarketText',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesListingMarketTextModelsListingMarketText',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -9729,7 +9729,7 @@ class ListingApi
      */
     public function restListingsMarketsTextsPostAsyncWithHttpInfo($listing_market_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesListingMarketTextModelsListingMarketText';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesListingMarketTextModelsListingMarketText';
         $request = $this->restListingsMarketsTextsPostRequest($listing_market_id, $body);
 
         return $this->client
@@ -9878,9 +9878,9 @@ class ListingApi
      *
      * @param  int $id The ID of the listing market that need to be verified. This can also be passed as an array. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\Mixed[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\Mixed[]
      */
     public function restListingsMarketsVerifyIdPost($id)
     {
@@ -9895,13 +9895,13 @@ class ListingApi
      *
      * @param  int $id The ID of the listing market that need to be verified. This can also be passed as an array. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\Mixed[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\Mixed[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restListingsMarketsVerifyIdPostWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\Mixed[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\Mixed[]';
         $request = $this->restListingsMarketsVerifyIdPostRequest($id);
 
         try {
@@ -9953,7 +9953,7 @@ class ListingApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\Mixed[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\Mixed[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -9995,7 +9995,7 @@ class ListingApi
      */
     public function restListingsMarketsVerifyIdPostAsyncWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\Mixed[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\Mixed[]';
         $request = $this->restListingsMarketsVerifyIdPostRequest($id);
 
         return $this->client
@@ -10144,9 +10144,9 @@ class ListingApi
      *
      * @param  int $id The option template ID. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse
      */
     public function restListingsOptionTemplatesIdDelete($id)
     {
@@ -10161,13 +10161,13 @@ class ListingApi
      *
      * @param  int $id The option template ID. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function restListingsOptionTemplatesIdDeleteWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse';
         $request = $this->restListingsOptionTemplatesIdDeleteRequest($id);
 
         try {
@@ -10219,7 +10219,7 @@ class ListingApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -10261,7 +10261,7 @@ class ListingApi
      */
     public function restListingsOptionTemplatesIdDeleteAsyncWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse';
         $request = $this->restListingsOptionTemplatesIdDeleteRequest($id);
 
         return $this->client
@@ -10410,9 +10410,9 @@ class ListingApi
      *
      * @param  int $id The ID of the option template entry. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesListingOptionTemplateModelsOptionTemplate
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesListingOptionTemplateModelsOptionTemplate
      */
     public function restListingsOptionTemplatesIdGet($id)
     {
@@ -10427,13 +10427,13 @@ class ListingApi
      *
      * @param  int $id The ID of the option template entry. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesListingOptionTemplateModelsOptionTemplate, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesListingOptionTemplateModelsOptionTemplate, HTTP status code, HTTP response headers (array of strings)
      */
     public function restListingsOptionTemplatesIdGetWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesListingOptionTemplateModelsOptionTemplate';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesListingOptionTemplateModelsOptionTemplate';
         $request = $this->restListingsOptionTemplatesIdGetRequest($id);
 
         try {
@@ -10485,7 +10485,7 @@ class ListingApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesListingOptionTemplateModelsOptionTemplate',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesListingOptionTemplateModelsOptionTemplate',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -10527,7 +10527,7 @@ class ListingApi
      */
     public function restListingsOptionTemplatesIdGetAsyncWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesListingOptionTemplateModelsOptionTemplate';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesListingOptionTemplateModelsOptionTemplate';
         $request = $this->restListingsOptionTemplatesIdGetRequest($id);
 
         return $this->client
@@ -10677,9 +10677,9 @@ class ListingApi
      * @param  int $id The option template ID. (required)
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesListingOptionTemplateModelsOptionTemplate
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesListingOptionTemplateModelsOptionTemplate
      */
     public function restListingsOptionTemplatesIdPut($id, $body = null)
     {
@@ -10695,13 +10695,13 @@ class ListingApi
      * @param  int $id The option template ID. (required)
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesListingOptionTemplateModelsOptionTemplate, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesListingOptionTemplateModelsOptionTemplate, HTTP status code, HTTP response headers (array of strings)
      */
     public function restListingsOptionTemplatesIdPutWithHttpInfo($id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesListingOptionTemplateModelsOptionTemplate';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesListingOptionTemplateModelsOptionTemplate';
         $request = $this->restListingsOptionTemplatesIdPutRequest($id, $body);
 
         try {
@@ -10753,7 +10753,7 @@ class ListingApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesListingOptionTemplateModelsOptionTemplate',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesListingOptionTemplateModelsOptionTemplate',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -10797,7 +10797,7 @@ class ListingApi
      */
     public function restListingsOptionTemplatesIdPutAsyncWithHttpInfo($id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesListingOptionTemplateModelsOptionTemplate';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesListingOptionTemplateModelsOptionTemplate';
         $request = $this->restListingsOptionTemplatesIdPutRequest($id, $body);
 
         return $this->client
@@ -10950,9 +10950,9 @@ class ListingApi
      *
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesListingOptionTemplateModelsOptionTemplate
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesListingOptionTemplateModelsOptionTemplate
      */
     public function restListingsOptionTemplatesPost($body = null)
     {
@@ -10967,13 +10967,13 @@ class ListingApi
      *
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesListingOptionTemplateModelsOptionTemplate, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesListingOptionTemplateModelsOptionTemplate, HTTP status code, HTTP response headers (array of strings)
      */
     public function restListingsOptionTemplatesPostWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesListingOptionTemplateModelsOptionTemplate';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesListingOptionTemplateModelsOptionTemplate';
         $request = $this->restListingsOptionTemplatesPostRequest($body);
 
         try {
@@ -11025,7 +11025,7 @@ class ListingApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesListingOptionTemplateModelsOptionTemplate',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesListingOptionTemplateModelsOptionTemplate',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -11067,7 +11067,7 @@ class ListingApi
      */
     public function restListingsOptionTemplatesPostAsyncWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesListingOptionTemplateModelsOptionTemplate';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesListingOptionTemplateModelsOptionTemplate';
         $request = $this->restListingsOptionTemplatesPostRequest($body);
 
         return $this->client
@@ -11204,9 +11204,9 @@ class ListingApi
      * Get a preview list of option templates
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\Mixed[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\Mixed[]
      */
     public function restListingsOptionTemplatesPreviewGet()
     {
@@ -11220,13 +11220,13 @@ class ListingApi
      * Get a preview list of option templates
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\Mixed[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\Mixed[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restListingsOptionTemplatesPreviewGetWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\Mixed[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\Mixed[]';
         $request = $this->restListingsOptionTemplatesPreviewGetRequest();
 
         try {
@@ -11278,7 +11278,7 @@ class ListingApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\Mixed[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\Mixed[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -11318,7 +11318,7 @@ class ListingApi
      */
     public function restListingsOptionTemplatesPreviewGetAsyncWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\Mixed[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\Mixed[]';
         $request = $this->restListingsOptionTemplatesPreviewGetRequest();
 
         return $this->client
@@ -11452,9 +11452,9 @@ class ListingApi
      *
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesListingModelsListing
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesListingModelsListing
      */
     public function restListingsPost($body = null)
     {
@@ -11469,13 +11469,13 @@ class ListingApi
      *
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesListingModelsListing, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesListingModelsListing, HTTP status code, HTTP response headers (array of strings)
      */
     public function restListingsPostWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesListingModelsListing';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesListingModelsListing';
         $request = $this->restListingsPostRequest($body);
 
         try {
@@ -11527,7 +11527,7 @@ class ListingApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesListingModelsListing',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesListingModelsListing',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -11569,7 +11569,7 @@ class ListingApi
      */
     public function restListingsPostAsyncWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesListingModelsListing';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesListingModelsListing';
         $request = $this->restListingsPostRequest($body);
 
         return $this->client
@@ -11711,7 +11711,7 @@ class ListingApi
      * @param  int $referrer_id Filter that restricts the search result to listing shipping profiles with given referrer ID(s). (optional)
      * @param  int $credentials_id Filter that restricts the search result to listing shipping profiles with given credential ID(s). (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -11732,7 +11732,7 @@ class ListingApi
      * @param  int $referrer_id Filter that restricts the search result to listing shipping profiles with given referrer ID(s). (optional)
      * @param  int $credentials_id Filter that restricts the search result to listing shipping profiles with given credential ID(s). (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -12000,9 +12000,9 @@ class ListingApi
      * @param  int $id The ID of the listing shipping profile entry. (required)
      * @param  int $with An array with child instances to be loaded. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesListingShippingProfileModelsShippingProfile
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesListingShippingProfileModelsShippingProfile
      */
     public function restListingsShippingProfilesIdGet($id, $with = null)
     {
@@ -12018,13 +12018,13 @@ class ListingApi
      * @param  int $id The ID of the listing shipping profile entry. (required)
      * @param  int $with An array with child instances to be loaded. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesListingShippingProfileModelsShippingProfile, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesListingShippingProfileModelsShippingProfile, HTTP status code, HTTP response headers (array of strings)
      */
     public function restListingsShippingProfilesIdGetWithHttpInfo($id, $with = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesListingShippingProfileModelsShippingProfile';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesListingShippingProfileModelsShippingProfile';
         $request = $this->restListingsShippingProfilesIdGetRequest($id, $with);
 
         try {
@@ -12076,7 +12076,7 @@ class ListingApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesListingShippingProfileModelsShippingProfile',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesListingShippingProfileModelsShippingProfile',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -12120,7 +12120,7 @@ class ListingApi
      */
     public function restListingsShippingProfilesIdGetAsyncWithHttpInfo($id, $with = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesListingShippingProfileModelsShippingProfile';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesListingShippingProfileModelsShippingProfile';
         $request = $this->restListingsShippingProfilesIdGetRequest($id, $with);
 
         return $this->client
@@ -12276,7 +12276,7 @@ class ListingApi
      * @param  int $items_per_page The number of items to list per page. (optional)
      * @param  int $with An array with child instances to be loaded. Available values: &#x27;names&#x27;. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -12295,7 +12295,7 @@ class ListingApi
      * @param  int $items_per_page The number of items to list per page. (optional)
      * @param  int $with An array with child instances to be loaded. Available values: &#x27;names&#x27;. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -12549,9 +12549,9 @@ class ListingApi
      * @param  int $id The ID of the listing stock dependence type entry. (required)
      * @param  int $with An array with child instances to be loaded. Available values: &#x27;names&#x27;. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesListingStockDependenceTypeModelsStockDependenceType
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesListingStockDependenceTypeModelsStockDependenceType
      */
     public function restListingsStockDependenceTypesIdGet($id, $with = null)
     {
@@ -12567,13 +12567,13 @@ class ListingApi
      * @param  int $id The ID of the listing stock dependence type entry. (required)
      * @param  int $with An array with child instances to be loaded. Available values: &#x27;names&#x27;. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesListingStockDependenceTypeModelsStockDependenceType, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesListingStockDependenceTypeModelsStockDependenceType, HTTP status code, HTTP response headers (array of strings)
      */
     public function restListingsStockDependenceTypesIdGetWithHttpInfo($id, $with = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesListingStockDependenceTypeModelsStockDependenceType';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesListingStockDependenceTypeModelsStockDependenceType';
         $request = $this->restListingsStockDependenceTypesIdGetRequest($id, $with);
 
         try {
@@ -12625,7 +12625,7 @@ class ListingApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesListingStockDependenceTypeModelsStockDependenceType',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesListingStockDependenceTypeModelsStockDependenceType',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -12669,7 +12669,7 @@ class ListingApi
      */
     public function restListingsStockDependenceTypesIdGetAsyncWithHttpInfo($id, $with = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesListingStockDependenceTypeModelsStockDependenceType';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesListingStockDependenceTypeModelsStockDependenceType';
         $request = $this->restListingsStockDependenceTypesIdGetRequest($id, $with);
 
         return $this->client
@@ -12824,7 +12824,7 @@ class ListingApi
      * @param  int $page The page of results to search for. (optional)
      * @param  int $items_per_page The number of items to list per page. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -12842,7 +12842,7 @@ class ListingApi
      * @param  int $page The page of results to search for. (optional)
      * @param  int $items_per_page The number of items to list per page. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -13089,9 +13089,9 @@ class ListingApi
      * @param  int $id The ID of the listing type entry. (required)
      * @param  int $with An array with child instances to be loaded. Available values: &#x27;names&#x27;. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesListingTypeModelsListingType
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesListingTypeModelsListingType
      */
     public function restListingsTypesIdGet($id, $with = null)
     {
@@ -13107,13 +13107,13 @@ class ListingApi
      * @param  int $id The ID of the listing type entry. (required)
      * @param  int $with An array with child instances to be loaded. Available values: &#x27;names&#x27;. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesListingTypeModelsListingType, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesListingTypeModelsListingType, HTTP status code, HTTP response headers (array of strings)
      */
     public function restListingsTypesIdGetWithHttpInfo($id, $with = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesListingTypeModelsListingType';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesListingTypeModelsListingType';
         $request = $this->restListingsTypesIdGetRequest($id, $with);
 
         try {
@@ -13165,7 +13165,7 @@ class ListingApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesListingTypeModelsListingType',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesListingTypeModelsListingType',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -13209,7 +13209,7 @@ class ListingApi
      */
     public function restListingsTypesIdGetAsyncWithHttpInfo($id, $with = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesListingTypeModelsListingType';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesListingTypeModelsListingType';
         $request = $this->restListingsTypesIdGetRequest($id, $with);
 
         return $this->client

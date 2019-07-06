@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  BSApp\Service\plentymarketsAPI
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace BSApp\Service\plentymarketsAPI\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -33,16 +33,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use BSApp\Service\plentymarketsAPI\ApiException;
+use BSApp\Service\plentymarketsAPI\Configuration;
+use BSApp\Service\plentymarketsAPI\HeaderSelector;
+use BSApp\Service\plentymarketsAPI\ObjectSerializer;
 
 /**
  * ShopApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  BSApp\Service\plentymarketsAPI
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -93,7 +93,7 @@ class ShopApi
      *
      * @param  int $content_link_id content_link_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -109,7 +109,7 @@ class ShopApi
      *
      * @param  int $content_link_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -322,9 +322,9 @@ class ShopApi
      *
      * @param  int $content_link_id content_link_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesShopBuilderModelsContentLink
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesShopBuilderModelsContentLink
      */
     public function restShopBuilderContentLinksContentLinkIdGet($content_link_id)
     {
@@ -339,13 +339,13 @@ class ShopApi
      *
      * @param  int $content_link_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesShopBuilderModelsContentLink, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesShopBuilderModelsContentLink, HTTP status code, HTTP response headers (array of strings)
      */
     public function restShopBuilderContentLinksContentLinkIdGetWithHttpInfo($content_link_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesShopBuilderModelsContentLink';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesShopBuilderModelsContentLink';
         $request = $this->restShopBuilderContentLinksContentLinkIdGetRequest($content_link_id);
 
         try {
@@ -397,7 +397,7 @@ class ShopApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesShopBuilderModelsContentLink',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesShopBuilderModelsContentLink',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -439,7 +439,7 @@ class ShopApi
      */
     public function restShopBuilderContentLinksContentLinkIdGetAsyncWithHttpInfo($content_link_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesShopBuilderModelsContentLink';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesShopBuilderModelsContentLink';
         $request = $this->restShopBuilderContentLinksContentLinkIdGetRequest($content_link_id);
 
         return $this->client
@@ -589,9 +589,9 @@ class ShopApi
      * @param  int $content_link_id content_link_id (required)
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesShopBuilderModelsContentLink
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesShopBuilderModelsContentLink
      */
     public function restShopBuilderContentLinksContentLinkIdPut($content_link_id, $body = null)
     {
@@ -607,13 +607,13 @@ class ShopApi
      * @param  int $content_link_id (required)
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesShopBuilderModelsContentLink, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesShopBuilderModelsContentLink, HTTP status code, HTTP response headers (array of strings)
      */
     public function restShopBuilderContentLinksContentLinkIdPutWithHttpInfo($content_link_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesShopBuilderModelsContentLink';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesShopBuilderModelsContentLink';
         $request = $this->restShopBuilderContentLinksContentLinkIdPutRequest($content_link_id, $body);
 
         try {
@@ -665,7 +665,7 @@ class ShopApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesShopBuilderModelsContentLink',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesShopBuilderModelsContentLink',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -709,7 +709,7 @@ class ShopApi
      */
     public function restShopBuilderContentLinksContentLinkIdPutAsyncWithHttpInfo($content_link_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesShopBuilderModelsContentLink';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesShopBuilderModelsContentLink';
         $request = $this->restShopBuilderContentLinksContentLinkIdPutRequest($content_link_id, $body);
 
         return $this->client
@@ -861,9 +861,9 @@ class ShopApi
      * List all content links for a given plugin set
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesShopBuilderModelsContentLink[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesShopBuilderModelsContentLink[]
      */
     public function restShopBuilderContentLinksGet()
     {
@@ -877,13 +877,13 @@ class ShopApi
      * List all content links for a given plugin set
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesShopBuilderModelsContentLink[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesShopBuilderModelsContentLink[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restShopBuilderContentLinksGetWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesShopBuilderModelsContentLink[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesShopBuilderModelsContentLink[]';
         $request = $this->restShopBuilderContentLinksGetRequest();
 
         try {
@@ -935,7 +935,7 @@ class ShopApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesShopBuilderModelsContentLink[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesShopBuilderModelsContentLink[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -975,7 +975,7 @@ class ShopApi
      */
     public function restShopBuilderContentLinksGetAsyncWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesShopBuilderModelsContentLink[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesShopBuilderModelsContentLink[]';
         $request = $this->restShopBuilderContentLinksGetRequest();
 
         return $this->client
@@ -1109,9 +1109,9 @@ class ShopApi
      *
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesShopBuilderModelsContentLink
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesShopBuilderModelsContentLink
      */
     public function restShopBuilderContentLinksPost($body = null)
     {
@@ -1126,13 +1126,13 @@ class ShopApi
      *
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesShopBuilderModelsContentLink, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesShopBuilderModelsContentLink, HTTP status code, HTTP response headers (array of strings)
      */
     public function restShopBuilderContentLinksPostWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesShopBuilderModelsContentLink';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesShopBuilderModelsContentLink';
         $request = $this->restShopBuilderContentLinksPostRequest($body);
 
         try {
@@ -1184,7 +1184,7 @@ class ShopApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesShopBuilderModelsContentLink',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesShopBuilderModelsContentLink',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1226,7 +1226,7 @@ class ShopApi
      */
     public function restShopBuilderContentLinksPostAsyncWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesShopBuilderModelsContentLink';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesShopBuilderModelsContentLink';
         $request = $this->restShopBuilderContentLinksPostRequest($body);
 
         return $this->client
@@ -1364,7 +1364,7 @@ class ShopApi
      *
      * @param  int $content_id content_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1380,7 +1380,7 @@ class ShopApi
      *
      * @param  int $content_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1593,9 +1593,9 @@ class ShopApi
      *
      * @param  int $content_id content_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesShopBuilderModelsContent
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesShopBuilderModelsContent
      */
     public function restShopBuilderContentsContentIdGet($content_id)
     {
@@ -1610,13 +1610,13 @@ class ShopApi
      *
      * @param  int $content_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesShopBuilderModelsContent, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesShopBuilderModelsContent, HTTP status code, HTTP response headers (array of strings)
      */
     public function restShopBuilderContentsContentIdGetWithHttpInfo($content_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesShopBuilderModelsContent';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesShopBuilderModelsContent';
         $request = $this->restShopBuilderContentsContentIdGetRequest($content_id);
 
         try {
@@ -1668,7 +1668,7 @@ class ShopApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesShopBuilderModelsContent',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesShopBuilderModelsContent',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1710,7 +1710,7 @@ class ShopApi
      */
     public function restShopBuilderContentsContentIdGetAsyncWithHttpInfo($content_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesShopBuilderModelsContent';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesShopBuilderModelsContent';
         $request = $this->restShopBuilderContentsContentIdGetRequest($content_id);
 
         return $this->client
@@ -1859,9 +1859,9 @@ class ShopApi
      *
      * @param  int $content_id content_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\Response
+     * @return \BSApp\Service\plentymarketsAPI\Model\Response
      */
     public function restShopBuilderContentsContentIdOptions($content_id)
     {
@@ -1876,13 +1876,13 @@ class ShopApi
      *
      * @param  int $content_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function restShopBuilderContentsContentIdOptionsWithHttpInfo($content_id)
     {
-        $returnType = '\Swagger\Client\Model\Response';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\Response';
         $request = $this->restShopBuilderContentsContentIdOptionsRequest($content_id);
 
         try {
@@ -1934,7 +1934,7 @@ class ShopApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\Response',
+                        '\BSApp\Service\plentymarketsAPI\Model\Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1976,7 +1976,7 @@ class ShopApi
      */
     public function restShopBuilderContentsContentIdOptionsAsyncWithHttpInfo($content_id)
     {
-        $returnType = '\Swagger\Client\Model\Response';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\Response';
         $request = $this->restShopBuilderContentsContentIdOptionsRequest($content_id);
 
         return $this->client
@@ -2121,9 +2121,9 @@ class ShopApi
      *
      * @param  int $content_id content_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesShopBuilderModelsContent
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesShopBuilderModelsContent
      */
     public function restShopBuilderContentsContentIdPost($content_id)
     {
@@ -2138,13 +2138,13 @@ class ShopApi
      *
      * @param  int $content_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesShopBuilderModelsContent, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesShopBuilderModelsContent, HTTP status code, HTTP response headers (array of strings)
      */
     public function restShopBuilderContentsContentIdPostWithHttpInfo($content_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesShopBuilderModelsContent';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesShopBuilderModelsContent';
         $request = $this->restShopBuilderContentsContentIdPostRequest($content_id);
 
         try {
@@ -2196,7 +2196,7 @@ class ShopApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesShopBuilderModelsContent',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesShopBuilderModelsContent',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2238,7 +2238,7 @@ class ShopApi
      */
     public function restShopBuilderContentsContentIdPostAsyncWithHttpInfo($content_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesShopBuilderModelsContent';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesShopBuilderModelsContent';
         $request = $this->restShopBuilderContentsContentIdPostRequest($content_id);
 
         return $this->client
@@ -2389,9 +2389,9 @@ class ShopApi
      * @param  object $body body (optional)
      * @param  string $frontend_lang Language to be used when rendering frontend widgets. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesShopBuilderModelsContent
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesShopBuilderModelsContent
      */
     public function restShopBuilderContentsContentIdPut($content_id, $body = null, $frontend_lang = null)
     {
@@ -2408,13 +2408,13 @@ class ShopApi
      * @param  object $body (optional)
      * @param  string $frontend_lang Language to be used when rendering frontend widgets. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesShopBuilderModelsContent, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesShopBuilderModelsContent, HTTP status code, HTTP response headers (array of strings)
      */
     public function restShopBuilderContentsContentIdPutWithHttpInfo($content_id, $body = null, $frontend_lang = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesShopBuilderModelsContent';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesShopBuilderModelsContent';
         $request = $this->restShopBuilderContentsContentIdPutRequest($content_id, $body, $frontend_lang);
 
         try {
@@ -2466,7 +2466,7 @@ class ShopApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesShopBuilderModelsContent',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesShopBuilderModelsContent',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2512,7 +2512,7 @@ class ShopApi
      */
     public function restShopBuilderContentsContentIdPutAsyncWithHttpInfo($content_id, $body = null, $frontend_lang = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesShopBuilderModelsContent';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesShopBuilderModelsContent';
         $request = $this->restShopBuilderContentsContentIdPutRequest($content_id, $body, $frontend_lang);
 
         return $this->client
@@ -2669,9 +2669,9 @@ class ShopApi
      * List all contents.
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesShopBuilderModelsContent[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesShopBuilderModelsContent[]
      */
     public function restShopBuilderContentsGet()
     {
@@ -2685,13 +2685,13 @@ class ShopApi
      * List all contents.
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesShopBuilderModelsContent[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesShopBuilderModelsContent[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restShopBuilderContentsGetWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesShopBuilderModelsContent[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesShopBuilderModelsContent[]';
         $request = $this->restShopBuilderContentsGetRequest();
 
         try {
@@ -2743,7 +2743,7 @@ class ShopApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesShopBuilderModelsContent[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesShopBuilderModelsContent[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2783,7 +2783,7 @@ class ShopApi
      */
     public function restShopBuilderContentsGetAsyncWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesShopBuilderModelsContent[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesShopBuilderModelsContent[]';
         $request = $this->restShopBuilderContentsGetRequest();
 
         return $this->client
@@ -2918,9 +2918,9 @@ class ShopApi
      * @param  object $body body (optional)
      * @param  string $frontend_lang Language to be used when rendering frontend widgets. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesShopBuilderModelsContent
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesShopBuilderModelsContent
      */
     public function restShopBuilderContentsPost($body = null, $frontend_lang = null)
     {
@@ -2936,13 +2936,13 @@ class ShopApi
      * @param  object $body (optional)
      * @param  string $frontend_lang Language to be used when rendering frontend widgets. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesShopBuilderModelsContent, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesShopBuilderModelsContent, HTTP status code, HTTP response headers (array of strings)
      */
     public function restShopBuilderContentsPostWithHttpInfo($body = null, $frontend_lang = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesShopBuilderModelsContent';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesShopBuilderModelsContent';
         $request = $this->restShopBuilderContentsPostRequest($body, $frontend_lang);
 
         try {
@@ -2994,7 +2994,7 @@ class ShopApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesShopBuilderModelsContent',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesShopBuilderModelsContent',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3038,7 +3038,7 @@ class ShopApi
      */
     public function restShopBuilderContentsPostAsyncWithHttpInfo($body = null, $frontend_lang = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesShopBuilderModelsContent';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesShopBuilderModelsContent';
         $request = $this->restShopBuilderContentsPostRequest($body, $frontend_lang);
 
         return $this->client
@@ -3180,9 +3180,9 @@ class ShopApi
      * Generate templates for all contents.
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyDataSimpleRestResponse
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse
      */
     public function restShopBuilderContentsPut()
     {
@@ -3196,13 +3196,13 @@ class ShopApi
      * Generate templates for all contents.
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyDataSimpleRestResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function restShopBuilderContentsPutWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\PlentyDataSimpleRestResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse';
         $request = $this->restShopBuilderContentsPutRequest();
 
         try {
@@ -3254,7 +3254,7 @@ class ShopApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyDataSimpleRestResponse',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3294,7 +3294,7 @@ class ShopApi
      */
     public function restShopBuilderContentsPutAsyncWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\PlentyDataSimpleRestResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse';
         $request = $this->restShopBuilderContentsPutRequest();
 
         return $this->client
@@ -3435,7 +3435,7 @@ class ShopApi
      * @param  string $language Language of the content link (optional)
      * @param  int $active Active state of the content link (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -3459,7 +3459,7 @@ class ShopApi
      * @param  string $language Language of the content link (optional)
      * @param  int $active Active state of the content link (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -3746,9 +3746,9 @@ class ShopApi
      * List content pages from all plugins in a given plugin set.
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesShopBuilderModelsContentPage[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesShopBuilderModelsContentPage[]
      */
     public function restShopBuilderPagesGet()
     {
@@ -3762,13 +3762,13 @@ class ShopApi
      * List content pages from all plugins in a given plugin set.
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesShopBuilderModelsContentPage[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesShopBuilderModelsContentPage[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restShopBuilderPagesGetWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesShopBuilderModelsContentPage[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesShopBuilderModelsContentPage[]';
         $request = $this->restShopBuilderPagesGetRequest();
 
         try {
@@ -3820,7 +3820,7 @@ class ShopApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesShopBuilderModelsContentPage[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesShopBuilderModelsContentPage[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3860,7 +3860,7 @@ class ShopApi
      */
     public function restShopBuilderPagesGetAsyncWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesShopBuilderModelsContentPage[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesShopBuilderModelsContentPage[]';
         $request = $this->restShopBuilderPagesGetRequest();
 
         return $this->client
@@ -3994,9 +3994,9 @@ class ShopApi
      *
      * @param  string $identifier Filter results by widget identifier. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\IlluminateHttpResponse
+     * @return \BSApp\Service\plentymarketsAPI\Model\IlluminateHttpResponse
      */
     public function restShopBuilderWidgetsGet($identifier = null)
     {
@@ -4011,13 +4011,13 @@ class ShopApi
      *
      * @param  string $identifier Filter results by widget identifier. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\IlluminateHttpResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\IlluminateHttpResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function restShopBuilderWidgetsGetWithHttpInfo($identifier = null)
     {
-        $returnType = '\Swagger\Client\Model\IlluminateHttpResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\IlluminateHttpResponse';
         $request = $this->restShopBuilderWidgetsGetRequest($identifier);
 
         try {
@@ -4069,7 +4069,7 @@ class ShopApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\IlluminateHttpResponse',
+                        '\BSApp\Service\plentymarketsAPI\Model\IlluminateHttpResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4111,7 +4111,7 @@ class ShopApi
      */
     public function restShopBuilderWidgetsGetAsyncWithHttpInfo($identifier = null)
     {
-        $returnType = '\Swagger\Client\Model\IlluminateHttpResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\IlluminateHttpResponse';
         $request = $this->restShopBuilderWidgetsGetRequest($identifier);
 
         return $this->client
@@ -4249,9 +4249,9 @@ class ShopApi
      * Get cross origin headers.
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\IlluminateHttpResponse
+     * @return \BSApp\Service\plentymarketsAPI\Model\IlluminateHttpResponse
      */
     public function restShopBuilderWidgetsOptions()
     {
@@ -4265,13 +4265,13 @@ class ShopApi
      * Get cross origin headers.
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\IlluminateHttpResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\IlluminateHttpResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function restShopBuilderWidgetsOptionsWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\IlluminateHttpResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\IlluminateHttpResponse';
         $request = $this->restShopBuilderWidgetsOptionsRequest();
 
         try {
@@ -4323,7 +4323,7 @@ class ShopApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\IlluminateHttpResponse',
+                        '\BSApp\Service\plentymarketsAPI\Model\IlluminateHttpResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4363,7 +4363,7 @@ class ShopApi
      */
     public function restShopBuilderWidgetsOptionsAsyncWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\IlluminateHttpResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\IlluminateHttpResponse';
         $request = $this->restShopBuilderWidgetsOptionsRequest();
 
         return $this->client
@@ -4493,9 +4493,9 @@ class ShopApi
      *
      * @param  string $frontend_lang Language to be used when rendering frontend widgets. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\IlluminateHttpResponse
+     * @return \BSApp\Service\plentymarketsAPI\Model\IlluminateHttpResponse
      */
     public function restShopBuilderWidgetsPost($frontend_lang = null)
     {
@@ -4510,13 +4510,13 @@ class ShopApi
      *
      * @param  string $frontend_lang Language to be used when rendering frontend widgets. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\IlluminateHttpResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\IlluminateHttpResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function restShopBuilderWidgetsPostWithHttpInfo($frontend_lang = null)
     {
-        $returnType = '\Swagger\Client\Model\IlluminateHttpResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\IlluminateHttpResponse';
         $request = $this->restShopBuilderWidgetsPostRequest($frontend_lang);
 
         try {
@@ -4568,7 +4568,7 @@ class ShopApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\IlluminateHttpResponse',
+                        '\BSApp\Service\plentymarketsAPI\Model\IlluminateHttpResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4610,7 +4610,7 @@ class ShopApi
      */
     public function restShopBuilderWidgetsPostAsyncWithHttpInfo($frontend_lang = null)
     {
-        $returnType = '\Swagger\Client\Model\IlluminateHttpResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\IlluminateHttpResponse';
         $request = $this->restShopBuilderWidgetsPostRequest($frontend_lang);
 
         return $this->client

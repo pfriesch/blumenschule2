@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  BSApp\Service\plentymarketsAPI
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace BSApp\Service\plentymarketsAPI\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \BSApp\Service\plentymarketsAPI\ObjectSerializer;
 
 /**
  * PlentyModulesPluginModelsPlugin Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  BSApp\Service\plentymarketsAPI
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -103,7 +103,7 @@ class PlentyModulesPluginModelsPlugin implements ModelInterface, ArrayAccess
 'branch' => 'string',
 'offer_trial' => 'bool',
 'offer_freemium' => 'bool',
-'webstores' => '\Swagger\Client\Model\PlentyModulesSystemModelsWebstore[]',
+'webstores' => '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesSystemModelsWebstore[]',
 'plugin_set_ids' => 'int[]'    ];
 
     /**
@@ -1615,7 +1615,7 @@ class PlentyModulesPluginModelsPlugin implements ModelInterface, ArrayAccess
     /**
      * Gets webstores
      *
-     * @return \Swagger\Client\Model\PlentyModulesSystemModelsWebstore[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesSystemModelsWebstore[]
      */
     public function getWebstores()
     {
@@ -1625,7 +1625,7 @@ class PlentyModulesPluginModelsPlugin implements ModelInterface, ArrayAccess
     /**
      * Sets webstores
      *
-     * @param \Swagger\Client\Model\PlentyModulesSystemModelsWebstore[] $webstores A list of clients (stores) activated for the plugin (List)
+     * @param \BSApp\Service\plentymarketsAPI\Model\PlentyModulesSystemModelsWebstore[] $webstores A list of clients (stores) activated for the plugin (List)
      *
      * @return $this
      */

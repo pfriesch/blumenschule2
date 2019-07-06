@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  BSApp\Service\plentymarketsAPI
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace BSApp\Service\plentymarketsAPI\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -33,16 +33,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use BSApp\Service\plentymarketsAPI\ApiException;
+use BSApp\Service\plentymarketsAPI\Configuration;
+use BSApp\Service\plentymarketsAPI\HeaderSelector;
+use BSApp\Service\plentymarketsAPI\ObjectSerializer;
 
 /**
  * TagApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  BSApp\Service\plentymarketsAPI
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -93,9 +93,9 @@ class TagApi
      *
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\Mixed[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\Mixed[]
      */
     public function restTagsBulkPost($body = null)
     {
@@ -110,13 +110,13 @@ class TagApi
      *
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\Mixed[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\Mixed[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restTagsBulkPostWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\Mixed[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\Mixed[]';
         $request = $this->restTagsBulkPostRequest($body);
 
         try {
@@ -168,7 +168,7 @@ class TagApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\Mixed[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\Mixed[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -210,7 +210,7 @@ class TagApi
      */
     public function restTagsBulkPostAsyncWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\Mixed[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\Mixed[]';
         $request = $this->restTagsBulkPostRequest($body);
 
         return $this->client
@@ -348,9 +348,9 @@ class TagApi
      *
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\Mixed[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\Mixed[]
      */
     public function restTagsBulkPut($body = null)
     {
@@ -365,13 +365,13 @@ class TagApi
      *
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\Mixed[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\Mixed[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restTagsBulkPutWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\Mixed[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\Mixed[]';
         $request = $this->restTagsBulkPutRequest($body);
 
         try {
@@ -423,7 +423,7 @@ class TagApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\Mixed[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\Mixed[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -465,7 +465,7 @@ class TagApi
      */
     public function restTagsBulkPutAsyncWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\Mixed[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\Mixed[]';
         $request = $this->restTagsBulkPutRequest($body);
 
         return $this->client
@@ -607,9 +607,9 @@ class TagApi
      * @param  string $tag_lang Filter restricts the list of results to tags which have names in the specified language. The language must be specified. (optional)
      * @param  string $color Filter restricts the list of results to tags with the specified color. The color must be specified. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\IlluminateSupportCollection
+     * @return \BSApp\Service\plentymarketsAPI\Model\IlluminateSupportCollection
      */
     public function restTagsGet($with = null, $tag_name = null, $tag_availability = null, $tag_lang = null, $color = null)
     {
@@ -628,13 +628,13 @@ class TagApi
      * @param  string $tag_lang Filter restricts the list of results to tags which have names in the specified language. The language must be specified. (optional)
      * @param  string $color Filter restricts the list of results to tags with the specified color. The color must be specified. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\IlluminateSupportCollection, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\IlluminateSupportCollection, HTTP status code, HTTP response headers (array of strings)
      */
     public function restTagsGetWithHttpInfo($with = null, $tag_name = null, $tag_availability = null, $tag_lang = null, $color = null)
     {
-        $returnType = '\Swagger\Client\Model\IlluminateSupportCollection';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\IlluminateSupportCollection';
         $request = $this->restTagsGetRequest($with, $tag_name, $tag_availability, $tag_lang, $color);
 
         try {
@@ -686,7 +686,7 @@ class TagApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\IlluminateSupportCollection',
+                        '\BSApp\Service\plentymarketsAPI\Model\IlluminateSupportCollection',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -736,7 +736,7 @@ class TagApi
      */
     public function restTagsGetAsyncWithHttpInfo($with = null, $tag_name = null, $tag_availability = null, $tag_lang = null, $color = null)
     {
-        $returnType = '\Swagger\Client\Model\IlluminateSupportCollection';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\IlluminateSupportCollection';
         $request = $this->restTagsGetRequest($with, $tag_name, $tag_availability, $tag_lang, $color);
 
         return $this->client
@@ -895,7 +895,7 @@ class TagApi
      *
      * @param  int $id id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -911,7 +911,7 @@ class TagApi
      *
      * @param  int $id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1124,9 +1124,9 @@ class TagApi
      *
      * @param  int $id id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesTagModelsTag
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesTagModelsTag
      */
     public function restTagsIdGet($id)
     {
@@ -1141,13 +1141,13 @@ class TagApi
      *
      * @param  int $id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesTagModelsTag, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesTagModelsTag, HTTP status code, HTTP response headers (array of strings)
      */
     public function restTagsIdGetWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesTagModelsTag';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesTagModelsTag';
         $request = $this->restTagsIdGetRequest($id);
 
         try {
@@ -1199,7 +1199,7 @@ class TagApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesTagModelsTag',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesTagModelsTag',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1241,7 +1241,7 @@ class TagApi
      */
     public function restTagsIdGetAsyncWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesTagModelsTag';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesTagModelsTag';
         $request = $this->restTagsIdGetRequest($id);
 
         return $this->client
@@ -1391,9 +1391,9 @@ class TagApi
      * @param  int $id id (required)
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesTagModelsTag
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesTagModelsTag
      */
     public function restTagsIdPut($id, $body = null)
     {
@@ -1409,13 +1409,13 @@ class TagApi
      * @param  int $id (required)
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesTagModelsTag, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesTagModelsTag, HTTP status code, HTTP response headers (array of strings)
      */
     public function restTagsIdPutWithHttpInfo($id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesTagModelsTag';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesTagModelsTag';
         $request = $this->restTagsIdPutRequest($id, $body);
 
         try {
@@ -1467,7 +1467,7 @@ class TagApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesTagModelsTag',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesTagModelsTag',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1511,7 +1511,7 @@ class TagApi
      */
     public function restTagsIdPutAsyncWithHttpInfo($id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesTagModelsTag';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesTagModelsTag';
         $request = $this->restTagsIdPutRequest($id, $body);
 
         return $this->client
@@ -1666,9 +1666,9 @@ class TagApi
      * @param  int $tag_type tag_type (required)
      * @param  int $relationship_uuid relationship_uuid (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse
      */
     public function restTagsIdRelationshipsTagTypeRelationshipUUIDDelete($id, $tag_type, $relationship_uuid)
     {
@@ -1685,13 +1685,13 @@ class TagApi
      * @param  int $tag_type (required)
      * @param  int $relationship_uuid (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function restTagsIdRelationshipsTagTypeRelationshipUUIDDeleteWithHttpInfo($id, $tag_type, $relationship_uuid)
     {
-        $returnType = '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse';
         $request = $this->restTagsIdRelationshipsTagTypeRelationshipUUIDDeleteRequest($id, $tag_type, $relationship_uuid);
 
         try {
@@ -1743,7 +1743,7 @@ class TagApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1789,7 +1789,7 @@ class TagApi
      */
     public function restTagsIdRelationshipsTagTypeRelationshipUUIDDeleteAsyncWithHttpInfo($id, $tag_type, $relationship_uuid)
     {
-        $returnType = '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse';
         $request = $this->restTagsIdRelationshipsTagTypeRelationshipUUIDDeleteRequest($id, $tag_type, $relationship_uuid);
 
         return $this->client
@@ -1968,9 +1968,9 @@ class TagApi
      *
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesTagModelsTag
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesTagModelsTag
      */
     public function restTagsPost($body = null)
     {
@@ -1985,13 +1985,13 @@ class TagApi
      *
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesTagModelsTag, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesTagModelsTag, HTTP status code, HTTP response headers (array of strings)
      */
     public function restTagsPostWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesTagModelsTag';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesTagModelsTag';
         $request = $this->restTagsPostRequest($body);
 
         try {
@@ -2043,7 +2043,7 @@ class TagApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesTagModelsTag',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesTagModelsTag',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2085,7 +2085,7 @@ class TagApi
      */
     public function restTagsPostAsyncWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesTagModelsTag';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesTagModelsTag';
         $request = $this->restTagsPostRequest($body);
 
         return $this->client
@@ -2226,9 +2226,9 @@ class TagApi
      * @param  string $tag_type Filter restricts the list of results to tag relationships with the specified tag type. The tag type must be specified. (optional)
      * @param  int $relationship_value Filter restricts the list of results to tag relationships with the specified relationship value. This is the ID of the data record. The relationship value must be specified. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\IlluminateSupportCollection
+     * @return \BSApp\Service\plentymarketsAPI\Model\IlluminateSupportCollection
      */
     public function restTagsRelationshipsGet($with = null, $tag_id = null, $tag_type = null, $relationship_value = null)
     {
@@ -2246,13 +2246,13 @@ class TagApi
      * @param  string $tag_type Filter restricts the list of results to tag relationships with the specified tag type. The tag type must be specified. (optional)
      * @param  int $relationship_value Filter restricts the list of results to tag relationships with the specified relationship value. This is the ID of the data record. The relationship value must be specified. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\IlluminateSupportCollection, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\IlluminateSupportCollection, HTTP status code, HTTP response headers (array of strings)
      */
     public function restTagsRelationshipsGetWithHttpInfo($with = null, $tag_id = null, $tag_type = null, $relationship_value = null)
     {
-        $returnType = '\Swagger\Client\Model\IlluminateSupportCollection';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\IlluminateSupportCollection';
         $request = $this->restTagsRelationshipsGetRequest($with, $tag_id, $tag_type, $relationship_value);
 
         try {
@@ -2304,7 +2304,7 @@ class TagApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\IlluminateSupportCollection',
+                        '\BSApp\Service\plentymarketsAPI\Model\IlluminateSupportCollection',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2352,7 +2352,7 @@ class TagApi
      */
     public function restTagsRelationshipsGetAsyncWithHttpInfo($with = null, $tag_id = null, $tag_type = null, $relationship_value = null)
     {
-        $returnType = '\Swagger\Client\Model\IlluminateSupportCollection';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\IlluminateSupportCollection';
         $request = $this->restTagsRelationshipsGetRequest($with, $tag_id, $tag_type, $relationship_value);
 
         return $this->client
@@ -2506,9 +2506,9 @@ class TagApi
      *
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesTagModelsTagRelationship
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesTagModelsTagRelationship
      */
     public function restTagsRelationshipsPost($body = null)
     {
@@ -2523,13 +2523,13 @@ class TagApi
      *
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesTagModelsTagRelationship, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesTagModelsTagRelationship, HTTP status code, HTTP response headers (array of strings)
      */
     public function restTagsRelationshipsPostWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesTagModelsTagRelationship';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesTagModelsTagRelationship';
         $request = $this->restTagsRelationshipsPostRequest($body);
 
         try {
@@ -2581,7 +2581,7 @@ class TagApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesTagModelsTagRelationship',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesTagModelsTagRelationship',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2623,7 +2623,7 @@ class TagApi
      */
     public function restTagsRelationshipsPostAsyncWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesTagModelsTagRelationship';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesTagModelsTagRelationship';
         $request = $this->restTagsRelationshipsPostRequest($body);
 
         return $this->client
@@ -2763,7 +2763,7 @@ class TagApi
      * @param  int $tag_type tag_type (required)
      * @param  int $id id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -2781,7 +2781,7 @@ class TagApi
      * @param  int $tag_type (required)
      * @param  int $id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */

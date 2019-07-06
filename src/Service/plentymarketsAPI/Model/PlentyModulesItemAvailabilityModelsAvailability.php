@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  BSApp\Service\plentymarketsAPI
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace BSApp\Service\plentymarketsAPI\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \BSApp\Service\plentymarketsAPI\ObjectSerializer;
 
 /**
  * PlentyModulesItemAvailabilityModelsAvailability Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  BSApp\Service\plentymarketsAPI
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -59,7 +59,7 @@ class PlentyModulesItemAvailabilityModelsAvailability implements ModelInterface,
         'id' => 'int',
 'icon' => 'string',
 'average_days' => 'int',
-'names' => '\Swagger\Client\Model\PlentyModulesItemAvailabilityModelsAvailabilityName[]'    ];
+'names' => '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemAvailabilityModelsAvailabilityName[]'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -289,7 +289,7 @@ class PlentyModulesItemAvailabilityModelsAvailability implements ModelInterface,
     /**
      * Gets names
      *
-     * @return \Swagger\Client\Model\PlentyModulesItemAvailabilityModelsAvailabilityName[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemAvailabilityModelsAvailabilityName[]
      */
     public function getNames()
     {
@@ -299,7 +299,7 @@ class PlentyModulesItemAvailabilityModelsAvailability implements ModelInterface,
     /**
      * Sets names
      *
-     * @param \Swagger\Client\Model\PlentyModulesItemAvailabilityModelsAvailabilityName[] $names (List)
+     * @param \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemAvailabilityModelsAvailabilityName[] $names (List)
      *
      * @return $this
      */

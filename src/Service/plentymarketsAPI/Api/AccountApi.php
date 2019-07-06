@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  BSApp\Service\plentymarketsAPI
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace BSApp\Service\plentymarketsAPI\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -33,16 +33,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use BSApp\Service\plentymarketsAPI\ApiException;
+use BSApp\Service\plentymarketsAPI\Configuration;
+use BSApp\Service\plentymarketsAPI\HeaderSelector;
+use BSApp\Service\plentymarketsAPI\ObjectSerializer;
 
 /**
  * AccountApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  BSApp\Service\plentymarketsAPI
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -93,9 +93,9 @@ class AccountApi
      *
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesAuthenticationModelsTokenData
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAuthenticationModelsTokenData
      */
     public function restAccountLoginPost($body = null)
     {
@@ -110,13 +110,13 @@ class AccountApi
      *
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesAuthenticationModelsTokenData, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAuthenticationModelsTokenData, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountLoginPostWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAuthenticationModelsTokenData';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAuthenticationModelsTokenData';
         $request = $this->restAccountLoginPostRequest($body);
 
         try {
@@ -168,7 +168,7 @@ class AccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesAuthenticationModelsTokenData',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAuthenticationModelsTokenData',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -210,7 +210,7 @@ class AccountApi
      */
     public function restAccountLoginPostAsyncWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAuthenticationModelsTokenData';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAuthenticationModelsTokenData';
         $request = $this->restAccountLoginPostRequest($body);
 
         return $this->client
@@ -343,7 +343,7 @@ class AccountApi
      * Refresh
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -358,7 +358,7 @@ class AccountApi
      * Refresh
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -549,7 +549,7 @@ class AccountApi
      * Logout
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -564,7 +564,7 @@ class AccountApi
      * Logout
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -756,9 +756,9 @@ class AccountApi
      *
      * @param  int $account_id account_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesAccountContactModelsContact[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContact[]
      */
     public function restAccountsAccountIdContactsGet($account_id)
     {
@@ -773,13 +773,13 @@ class AccountApi
      *
      * @param  int $account_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesAccountContactModelsContact[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContact[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsAccountIdContactsGetWithHttpInfo($account_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountContactModelsContact[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContact[]';
         $request = $this->restAccountsAccountIdContactsGetRequest($account_id);
 
         try {
@@ -831,7 +831,7 @@ class AccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesAccountContactModelsContact[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContact[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -873,7 +873,7 @@ class AccountApi
      */
     public function restAccountsAccountIdContactsGetAsyncWithHttpInfo($account_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountContactModelsContact[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContact[]';
         $request = $this->restAccountsAccountIdContactsGetRequest($account_id);
 
         return $this->client
@@ -1022,7 +1022,7 @@ class AccountApi
      *
      * @param  int $account_id account_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1038,7 +1038,7 @@ class AccountApi
      *
      * @param  int $account_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1251,9 +1251,9 @@ class AccountApi
      *
      * @param  int $account_id account_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesAccountModelsAccount
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountModelsAccount
      */
     public function restAccountsAccountIdGet($account_id)
     {
@@ -1268,13 +1268,13 @@ class AccountApi
      *
      * @param  int $account_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesAccountModelsAccount, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountModelsAccount, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsAccountIdGetWithHttpInfo($account_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountModelsAccount';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountModelsAccount';
         $request = $this->restAccountsAccountIdGetRequest($account_id);
 
         try {
@@ -1326,7 +1326,7 @@ class AccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesAccountModelsAccount',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountModelsAccount',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1368,7 +1368,7 @@ class AccountApi
      */
     public function restAccountsAccountIdGetAsyncWithHttpInfo($account_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountModelsAccount';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountModelsAccount';
         $request = $this->restAccountsAccountIdGetRequest($account_id);
 
         return $this->client
@@ -1518,9 +1518,9 @@ class AccountApi
      * @param  int $account_id account_id (required)
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesAccountModelsAccount
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountModelsAccount
      */
     public function restAccountsAccountIdPut($account_id, $body = null)
     {
@@ -1536,13 +1536,13 @@ class AccountApi
      * @param  int $account_id (required)
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesAccountModelsAccount, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountModelsAccount, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsAccountIdPutWithHttpInfo($account_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountModelsAccount';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountModelsAccount';
         $request = $this->restAccountsAccountIdPutRequest($account_id, $body);
 
         try {
@@ -1594,7 +1594,7 @@ class AccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesAccountModelsAccount',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountModelsAccount',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1638,7 +1638,7 @@ class AccountApi
      */
     public function restAccountsAccountIdPutAsyncWithHttpInfo($account_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountModelsAccount';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountModelsAccount';
         $request = $this->restAccountsAccountIdPutRequest($account_id, $body);
 
         return $this->client
@@ -1791,7 +1791,7 @@ class AccountApi
      *
      * @param  int $address_id address_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1807,7 +1807,7 @@ class AccountApi
      *
      * @param  int $address_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2020,9 +2020,9 @@ class AccountApi
      *
      * @param  int $address_id address_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesAccountAddressModelsAddress
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountAddressModelsAddress
      */
     public function restAccountsAddressesAddressIdGet($address_id)
     {
@@ -2037,13 +2037,13 @@ class AccountApi
      *
      * @param  int $address_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesAccountAddressModelsAddress, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountAddressModelsAddress, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsAddressesAddressIdGetWithHttpInfo($address_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountAddressModelsAddress';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountAddressModelsAddress';
         $request = $this->restAccountsAddressesAddressIdGetRequest($address_id);
 
         try {
@@ -2095,7 +2095,7 @@ class AccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesAccountAddressModelsAddress',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountAddressModelsAddress',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2137,7 +2137,7 @@ class AccountApi
      */
     public function restAccountsAddressesAddressIdGetAsyncWithHttpInfo($address_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountAddressModelsAddress';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountAddressModelsAddress';
         $request = $this->restAccountsAddressesAddressIdGetRequest($address_id);
 
         return $this->client
@@ -2286,7 +2286,7 @@ class AccountApi
      *
      * @param  int $address_id address_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -2302,7 +2302,7 @@ class AccountApi
      *
      * @param  int $address_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2515,9 +2515,9 @@ class AccountApi
      *
      * @param  int $address_id address_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesAccountAddressModelsAddressOption[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountAddressModelsAddressOption[]
      */
     public function restAccountsAddressesAddressIdOptionsGet($address_id)
     {
@@ -2532,13 +2532,13 @@ class AccountApi
      *
      * @param  int $address_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesAccountAddressModelsAddressOption[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountAddressModelsAddressOption[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsAddressesAddressIdOptionsGetWithHttpInfo($address_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountAddressModelsAddressOption[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountAddressModelsAddressOption[]';
         $request = $this->restAccountsAddressesAddressIdOptionsGetRequest($address_id);
 
         try {
@@ -2590,7 +2590,7 @@ class AccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesAccountAddressModelsAddressOption[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountAddressModelsAddressOption[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2632,7 +2632,7 @@ class AccountApi
      */
     public function restAccountsAddressesAddressIdOptionsGetAsyncWithHttpInfo($address_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountAddressModelsAddressOption[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountAddressModelsAddressOption[]';
         $request = $this->restAccountsAddressesAddressIdOptionsGetRequest($address_id);
 
         return $this->client
@@ -2782,9 +2782,9 @@ class AccountApi
      * @param  int $address_id address_id (required)
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesAccountAddressModelsAddressOption[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountAddressModelsAddressOption[]
      */
     public function restAccountsAddressesAddressIdOptionsPost($address_id, $body = null)
     {
@@ -2800,13 +2800,13 @@ class AccountApi
      * @param  int $address_id (required)
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesAccountAddressModelsAddressOption[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountAddressModelsAddressOption[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsAddressesAddressIdOptionsPostWithHttpInfo($address_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountAddressModelsAddressOption[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountAddressModelsAddressOption[]';
         $request = $this->restAccountsAddressesAddressIdOptionsPostRequest($address_id, $body);
 
         try {
@@ -2858,7 +2858,7 @@ class AccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesAccountAddressModelsAddressOption[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountAddressModelsAddressOption[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2902,7 +2902,7 @@ class AccountApi
      */
     public function restAccountsAddressesAddressIdOptionsPostAsyncWithHttpInfo($address_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountAddressModelsAddressOption[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountAddressModelsAddressOption[]';
         $request = $this->restAccountsAddressesAddressIdOptionsPostRequest($address_id, $body);
 
         return $this->client
@@ -3055,9 +3055,9 @@ class AccountApi
      *
      * @param  int $address_id address_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesAccountAddressModelsAddressOption[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountAddressModelsAddressOption[]
      */
     public function restAccountsAddressesAddressIdOptionsPut($address_id)
     {
@@ -3072,13 +3072,13 @@ class AccountApi
      *
      * @param  int $address_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesAccountAddressModelsAddressOption[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountAddressModelsAddressOption[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsAddressesAddressIdOptionsPutWithHttpInfo($address_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountAddressModelsAddressOption[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountAddressModelsAddressOption[]';
         $request = $this->restAccountsAddressesAddressIdOptionsPutRequest($address_id);
 
         try {
@@ -3130,7 +3130,7 @@ class AccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesAccountAddressModelsAddressOption[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountAddressModelsAddressOption[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3172,7 +3172,7 @@ class AccountApi
      */
     public function restAccountsAddressesAddressIdOptionsPutAsyncWithHttpInfo($address_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountAddressModelsAddressOption[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountAddressModelsAddressOption[]';
         $request = $this->restAccountsAddressesAddressIdOptionsPutRequest($address_id);
 
         return $this->client
@@ -3322,9 +3322,9 @@ class AccountApi
      * @param  int $address_id address_id (required)
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesAccountAddressModelsAddress
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountAddressModelsAddress
      */
     public function restAccountsAddressesAddressIdPut($address_id, $body = null)
     {
@@ -3340,13 +3340,13 @@ class AccountApi
      * @param  int $address_id (required)
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesAccountAddressModelsAddress, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountAddressModelsAddress, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsAddressesAddressIdPutWithHttpInfo($address_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountAddressModelsAddress';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountAddressModelsAddress';
         $request = $this->restAccountsAddressesAddressIdPutRequest($address_id, $body);
 
         try {
@@ -3398,7 +3398,7 @@ class AccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesAccountAddressModelsAddress',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountAddressModelsAddress',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3442,7 +3442,7 @@ class AccountApi
      */
     public function restAccountsAddressesAddressIdPutAsyncWithHttpInfo($address_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountAddressModelsAddress';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountAddressModelsAddress';
         $request = $this->restAccountsAddressesAddressIdPutRequest($address_id, $body);
 
         return $this->client
@@ -3595,9 +3595,9 @@ class AccountApi
      *
      * @param  int $address_id address_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesAccountAddressModelsAddress
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountAddressModelsAddress
      */
     public function restAccountsAddressesAddressIdRelatedDataGet($address_id)
     {
@@ -3612,13 +3612,13 @@ class AccountApi
      *
      * @param  int $address_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesAccountAddressModelsAddress, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountAddressModelsAddress, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsAddressesAddressIdRelatedDataGetWithHttpInfo($address_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountAddressModelsAddress';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountAddressModelsAddress';
         $request = $this->restAccountsAddressesAddressIdRelatedDataGetRequest($address_id);
 
         try {
@@ -3670,7 +3670,7 @@ class AccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesAccountAddressModelsAddress',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountAddressModelsAddress',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3712,7 +3712,7 @@ class AccountApi
      */
     public function restAccountsAddressesAddressIdRelatedDataGetAsyncWithHttpInfo($address_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountAddressModelsAddress';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountAddressModelsAddress';
         $request = $this->restAccountsAddressesAddressIdRelatedDataGetRequest($address_id);
 
         return $this->client
@@ -3861,7 +3861,7 @@ class AccountApi
      *
      * @param  int $address_contact_relation_id address_contact_relation_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -3877,7 +3877,7 @@ class AccountApi
      *
      * @param  int $address_contact_relation_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -4090,9 +4090,9 @@ class AccountApi
      *
      * @param  int $address_contact_relation_id address_contact_relation_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesAccountAddressModelsAddressContactRelation
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountAddressModelsAddressContactRelation
      */
     public function restAccountsAddressesContactRelationsAddressContactRelationIdGet($address_contact_relation_id)
     {
@@ -4107,13 +4107,13 @@ class AccountApi
      *
      * @param  int $address_contact_relation_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesAccountAddressModelsAddressContactRelation, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountAddressModelsAddressContactRelation, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsAddressesContactRelationsAddressContactRelationIdGetWithHttpInfo($address_contact_relation_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountAddressModelsAddressContactRelation';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountAddressModelsAddressContactRelation';
         $request = $this->restAccountsAddressesContactRelationsAddressContactRelationIdGetRequest($address_contact_relation_id);
 
         try {
@@ -4165,7 +4165,7 @@ class AccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesAccountAddressModelsAddressContactRelation',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountAddressModelsAddressContactRelation',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4207,7 +4207,7 @@ class AccountApi
      */
     public function restAccountsAddressesContactRelationsAddressContactRelationIdGetAsyncWithHttpInfo($address_contact_relation_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountAddressModelsAddressContactRelation';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountAddressModelsAddressContactRelation';
         $request = $this->restAccountsAddressesContactRelationsAddressContactRelationIdGetRequest($address_contact_relation_id);
 
         return $this->client
@@ -4363,7 +4363,7 @@ class AccountApi
      * @param  int $items_per_page The number of items to list per page (optional)
      * @param  string $with Includes the specified address contact relation information in the results. The following parameters are available: contact and address. More than one parameter should be separated by commas. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -4387,7 +4387,7 @@ class AccountApi
      * @param  int $items_per_page The number of items to list per page (optional)
      * @param  string $with Includes the specified address contact relation information in the results. The following parameters are available: contact and address. More than one parameter should be separated by commas. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -4675,9 +4675,9 @@ class AccountApi
      *
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesAccountAddressModelsAddressContactRelation[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountAddressModelsAddressContactRelation[]
      */
     public function restAccountsAddressesContactRelationsPost($body = null)
     {
@@ -4692,13 +4692,13 @@ class AccountApi
      *
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesAccountAddressModelsAddressContactRelation[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountAddressModelsAddressContactRelation[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsAddressesContactRelationsPostWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountAddressModelsAddressContactRelation[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountAddressModelsAddressContactRelation[]';
         $request = $this->restAccountsAddressesContactRelationsPostRequest($body);
 
         try {
@@ -4750,7 +4750,7 @@ class AccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesAccountAddressModelsAddressContactRelation[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountAddressModelsAddressContactRelation[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4792,7 +4792,7 @@ class AccountApi
      */
     public function restAccountsAddressesContactRelationsPostAsyncWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountAddressModelsAddressContactRelation[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountAddressModelsAddressContactRelation[]';
         $request = $this->restAccountsAddressesContactRelationsPostRequest($body);
 
         return $this->client
@@ -4930,9 +4930,9 @@ class AccountApi
      *
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesAccountAddressModelsAddressContactRelation[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountAddressModelsAddressContactRelation[]
      */
     public function restAccountsAddressesContactRelationsPut($body = null)
     {
@@ -4947,13 +4947,13 @@ class AccountApi
      *
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesAccountAddressModelsAddressContactRelation[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountAddressModelsAddressContactRelation[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsAddressesContactRelationsPutWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountAddressModelsAddressContactRelation[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountAddressModelsAddressContactRelation[]';
         $request = $this->restAccountsAddressesContactRelationsPutRequest($body);
 
         try {
@@ -5005,7 +5005,7 @@ class AccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesAccountAddressModelsAddressContactRelation[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountAddressModelsAddressContactRelation[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5047,7 +5047,7 @@ class AccountApi
      */
     public function restAccountsAddressesContactRelationsPutAsyncWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountAddressModelsAddressContactRelation[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountAddressModelsAddressContactRelation[]';
         $request = $this->restAccountsAddressesContactRelationsPutRequest($body);
 
         return $this->client
@@ -5184,9 +5184,9 @@ class AccountApi
      * List address option types
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesAccountAddressModelsAddressOptionType[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountAddressModelsAddressOptionType[]
      */
     public function restAccountsAddressesOptionTypesGet()
     {
@@ -5200,13 +5200,13 @@ class AccountApi
      * List address option types
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesAccountAddressModelsAddressOptionType[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountAddressModelsAddressOptionType[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsAddressesOptionTypesGetWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountAddressModelsAddressOptionType[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountAddressModelsAddressOptionType[]';
         $request = $this->restAccountsAddressesOptionTypesGetRequest();
 
         try {
@@ -5258,7 +5258,7 @@ class AccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesAccountAddressModelsAddressOptionType[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountAddressModelsAddressOptionType[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5298,7 +5298,7 @@ class AccountApi
      */
     public function restAccountsAddressesOptionTypesGetAsyncWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountAddressModelsAddressOptionType[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountAddressModelsAddressOptionType[]';
         $request = $this->restAccountsAddressesOptionTypesGetRequest();
 
         return $this->client
@@ -5432,7 +5432,7 @@ class AccountApi
      *
      * @param  int $option_type_id option_type_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -5448,7 +5448,7 @@ class AccountApi
      *
      * @param  int $option_type_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -5661,9 +5661,9 @@ class AccountApi
      *
      * @param  int $option_type_id option_type_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesAccountAddressModelsAddressOptionType
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountAddressModelsAddressOptionType
      */
     public function restAccountsAddressesOptionTypesOptionTypeIdGet($option_type_id)
     {
@@ -5678,13 +5678,13 @@ class AccountApi
      *
      * @param  int $option_type_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesAccountAddressModelsAddressOptionType, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountAddressModelsAddressOptionType, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsAddressesOptionTypesOptionTypeIdGetWithHttpInfo($option_type_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountAddressModelsAddressOptionType';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountAddressModelsAddressOptionType';
         $request = $this->restAccountsAddressesOptionTypesOptionTypeIdGetRequest($option_type_id);
 
         try {
@@ -5736,7 +5736,7 @@ class AccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesAccountAddressModelsAddressOptionType',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountAddressModelsAddressOptionType',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5778,7 +5778,7 @@ class AccountApi
      */
     public function restAccountsAddressesOptionTypesOptionTypeIdGetAsyncWithHttpInfo($option_type_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountAddressModelsAddressOptionType';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountAddressModelsAddressOptionType';
         $request = $this->restAccountsAddressesOptionTypesOptionTypeIdGetRequest($option_type_id);
 
         return $this->client
@@ -5928,9 +5928,9 @@ class AccountApi
      * @param  int $option_type_id option_type_id (required)
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesAccountAddressModelsAddressOptionType
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountAddressModelsAddressOptionType
      */
     public function restAccountsAddressesOptionTypesOptionTypeIdPut($option_type_id, $body = null)
     {
@@ -5946,13 +5946,13 @@ class AccountApi
      * @param  int $option_type_id (required)
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesAccountAddressModelsAddressOptionType, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountAddressModelsAddressOptionType, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsAddressesOptionTypesOptionTypeIdPutWithHttpInfo($option_type_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountAddressModelsAddressOptionType';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountAddressModelsAddressOptionType';
         $request = $this->restAccountsAddressesOptionTypesOptionTypeIdPutRequest($option_type_id, $body);
 
         try {
@@ -6004,7 +6004,7 @@ class AccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesAccountAddressModelsAddressOptionType',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountAddressModelsAddressOptionType',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6048,7 +6048,7 @@ class AccountApi
      */
     public function restAccountsAddressesOptionTypesOptionTypeIdPutAsyncWithHttpInfo($option_type_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountAddressModelsAddressOptionType';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountAddressModelsAddressOptionType';
         $request = $this->restAccountsAddressesOptionTypesOptionTypeIdPutRequest($option_type_id, $body);
 
         return $this->client
@@ -6201,9 +6201,9 @@ class AccountApi
      *
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesAccountAddressModelsAddressOptionType
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountAddressModelsAddressOptionType
      */
     public function restAccountsAddressesOptionTypesPost($body = null)
     {
@@ -6218,13 +6218,13 @@ class AccountApi
      *
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesAccountAddressModelsAddressOptionType, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountAddressModelsAddressOptionType, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsAddressesOptionTypesPostWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountAddressModelsAddressOptionType';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountAddressModelsAddressOptionType';
         $request = $this->restAccountsAddressesOptionTypesPostRequest($body);
 
         try {
@@ -6276,7 +6276,7 @@ class AccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesAccountAddressModelsAddressOptionType',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountAddressModelsAddressOptionType',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6318,7 +6318,7 @@ class AccountApi
      */
     public function restAccountsAddressesOptionTypesPostAsyncWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountAddressModelsAddressOptionType';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountAddressModelsAddressOptionType';
         $request = $this->restAccountsAddressesOptionTypesPostRequest($body);
 
         return $this->client
@@ -6456,7 +6456,7 @@ class AccountApi
      *
      * @param  int $option_id option_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -6472,7 +6472,7 @@ class AccountApi
      *
      * @param  int $option_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -6685,9 +6685,9 @@ class AccountApi
      *
      * @param  int $option_id option_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesAccountAddressModelsAddressOption
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountAddressModelsAddressOption
      */
     public function restAccountsAddressesOptionsOptionIdGet($option_id)
     {
@@ -6702,13 +6702,13 @@ class AccountApi
      *
      * @param  int $option_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesAccountAddressModelsAddressOption, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountAddressModelsAddressOption, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsAddressesOptionsOptionIdGetWithHttpInfo($option_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountAddressModelsAddressOption';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountAddressModelsAddressOption';
         $request = $this->restAccountsAddressesOptionsOptionIdGetRequest($option_id);
 
         try {
@@ -6760,7 +6760,7 @@ class AccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesAccountAddressModelsAddressOption',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountAddressModelsAddressOption',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6802,7 +6802,7 @@ class AccountApi
      */
     public function restAccountsAddressesOptionsOptionIdGetAsyncWithHttpInfo($option_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountAddressModelsAddressOption';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountAddressModelsAddressOption';
         $request = $this->restAccountsAddressesOptionsOptionIdGetRequest($option_id);
 
         return $this->client
@@ -6951,9 +6951,9 @@ class AccountApi
      *
      * @param  int $option_id option_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesAccountAddressModelsAddressOption
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountAddressModelsAddressOption
      */
     public function restAccountsAddressesOptionsOptionIdPut($option_id)
     {
@@ -6968,13 +6968,13 @@ class AccountApi
      *
      * @param  int $option_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesAccountAddressModelsAddressOption, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountAddressModelsAddressOption, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsAddressesOptionsOptionIdPutWithHttpInfo($option_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountAddressModelsAddressOption';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountAddressModelsAddressOption';
         $request = $this->restAccountsAddressesOptionsOptionIdPutRequest($option_id);
 
         try {
@@ -7026,7 +7026,7 @@ class AccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesAccountAddressModelsAddressOption',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountAddressModelsAddressOption',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -7068,7 +7068,7 @@ class AccountApi
      */
     public function restAccountsAddressesOptionsOptionIdPutAsyncWithHttpInfo($option_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountAddressModelsAddressOption';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountAddressModelsAddressOption';
         $request = $this->restAccountsAddressesOptionsOptionIdPutRequest($option_id);
 
         return $this->client
@@ -7217,7 +7217,7 @@ class AccountApi
      *
      * @param  int $address_pos_relation_id address_pos_relation_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -7233,7 +7233,7 @@ class AccountApi
      *
      * @param  int $address_pos_relation_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -7446,9 +7446,9 @@ class AccountApi
      *
      * @param  int $address_pos_relation_id address_pos_relation_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesAccountAddressModelsAddressPosRelation
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountAddressModelsAddressPosRelation
      */
     public function restAccountsAddressesPosRelationsAddressPosRelationIdGet($address_pos_relation_id)
     {
@@ -7463,13 +7463,13 @@ class AccountApi
      *
      * @param  int $address_pos_relation_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesAccountAddressModelsAddressPosRelation, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountAddressModelsAddressPosRelation, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsAddressesPosRelationsAddressPosRelationIdGetWithHttpInfo($address_pos_relation_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountAddressModelsAddressPosRelation';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountAddressModelsAddressPosRelation';
         $request = $this->restAccountsAddressesPosRelationsAddressPosRelationIdGetRequest($address_pos_relation_id);
 
         try {
@@ -7521,7 +7521,7 @@ class AccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesAccountAddressModelsAddressPosRelation',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountAddressModelsAddressPosRelation',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -7563,7 +7563,7 @@ class AccountApi
      */
     public function restAccountsAddressesPosRelationsAddressPosRelationIdGetAsyncWithHttpInfo($address_pos_relation_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountAddressModelsAddressPosRelation';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountAddressModelsAddressPosRelation';
         $request = $this->restAccountsAddressesPosRelationsAddressPosRelationIdGetRequest($address_pos_relation_id);
 
         return $this->client
@@ -7712,9 +7712,9 @@ class AccountApi
      *
      * @param  int $address_pos_relation_id address_pos_relation_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesAccountAddressModelsAddressPosRelation
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountAddressModelsAddressPosRelation
      */
     public function restAccountsAddressesPosRelationsAddressPosRelationIdPut($address_pos_relation_id)
     {
@@ -7729,13 +7729,13 @@ class AccountApi
      *
      * @param  int $address_pos_relation_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesAccountAddressModelsAddressPosRelation, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountAddressModelsAddressPosRelation, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsAddressesPosRelationsAddressPosRelationIdPutWithHttpInfo($address_pos_relation_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountAddressModelsAddressPosRelation';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountAddressModelsAddressPosRelation';
         $request = $this->restAccountsAddressesPosRelationsAddressPosRelationIdPutRequest($address_pos_relation_id);
 
         try {
@@ -7787,7 +7787,7 @@ class AccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesAccountAddressModelsAddressPosRelation',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountAddressModelsAddressPosRelation',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -7829,7 +7829,7 @@ class AccountApi
      */
     public function restAccountsAddressesPosRelationsAddressPosRelationIdPutAsyncWithHttpInfo($address_pos_relation_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountAddressModelsAddressPosRelation';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountAddressModelsAddressPosRelation';
         $request = $this->restAccountsAddressesPosRelationsAddressPosRelationIdPutRequest($address_pos_relation_id);
 
         return $this->client
@@ -7980,7 +7980,7 @@ class AccountApi
      * @param  int $items_per_page items per page (optional)
      * @param  string $with Includes the specified address pos relation information in the results. The following parameters are available: address and type. More than one parameter should be separated by commas. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -7999,7 +7999,7 @@ class AccountApi
      * @param  int $items_per_page items per page (optional)
      * @param  string $with Includes the specified address pos relation information in the results. The following parameters are available: address and type. More than one parameter should be separated by commas. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -8251,9 +8251,9 @@ class AccountApi
      * Create an address POS relation
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesAccountAddressModelsAddressPosRelation
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountAddressModelsAddressPosRelation
      */
     public function restAccountsAddressesPosRelationsPost()
     {
@@ -8267,13 +8267,13 @@ class AccountApi
      * Create an address POS relation
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesAccountAddressModelsAddressPosRelation, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountAddressModelsAddressPosRelation, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsAddressesPosRelationsPostWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountAddressModelsAddressPosRelation';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountAddressModelsAddressPosRelation';
         $request = $this->restAccountsAddressesPosRelationsPostRequest();
 
         try {
@@ -8325,7 +8325,7 @@ class AccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesAccountAddressModelsAddressPosRelation',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountAddressModelsAddressPosRelation',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -8365,7 +8365,7 @@ class AccountApi
      */
     public function restAccountsAddressesPosRelationsPostAsyncWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountAddressModelsAddressPosRelation';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountAddressModelsAddressPosRelation';
         $request = $this->restAccountsAddressesPosRelationsPostRequest();
 
         return $this->client
@@ -8499,9 +8499,9 @@ class AccountApi
      *
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesAccountAddressModelsAddress
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountAddressModelsAddress
      */
     public function restAccountsAddressesPost($body = null)
     {
@@ -8516,13 +8516,13 @@ class AccountApi
      *
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesAccountAddressModelsAddress, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountAddressModelsAddress, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsAddressesPostWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountAddressModelsAddress';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountAddressModelsAddress';
         $request = $this->restAccountsAddressesPostRequest($body);
 
         try {
@@ -8574,7 +8574,7 @@ class AccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesAccountAddressModelsAddress',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountAddressModelsAddress',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -8616,7 +8616,7 @@ class AccountApi
      */
     public function restAccountsAddressesPostAsyncWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountAddressModelsAddress';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountAddressModelsAddress';
         $request = $this->restAccountsAddressesPostRequest($body);
 
         return $this->client
@@ -8753,9 +8753,9 @@ class AccountApi
      * List address relation types
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesAccountAddressModelsAddressRelationType[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountAddressModelsAddressRelationType[]
      */
     public function restAccountsAddressesRelationTypesGet()
     {
@@ -8769,13 +8769,13 @@ class AccountApi
      * List address relation types
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesAccountAddressModelsAddressRelationType[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountAddressModelsAddressRelationType[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsAddressesRelationTypesGetWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountAddressModelsAddressRelationType[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountAddressModelsAddressRelationType[]';
         $request = $this->restAccountsAddressesRelationTypesGetRequest();
 
         try {
@@ -8827,7 +8827,7 @@ class AccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesAccountAddressModelsAddressRelationType[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountAddressModelsAddressRelationType[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -8867,7 +8867,7 @@ class AccountApi
      */
     public function restAccountsAddressesRelationTypesGetAsyncWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountAddressModelsAddressRelationType[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountAddressModelsAddressRelationType[]';
         $request = $this->restAccountsAddressesRelationTypesGetRequest();
 
         return $this->client
@@ -9002,9 +9002,9 @@ class AccountApi
      * @param  int $application application (required)
      * @param  int $lang lang (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\IlluminateDatabaseEloquentCollection
+     * @return \BSApp\Service\plentymarketsAPI\Model\IlluminateDatabaseEloquentCollection
      */
     public function restAccountsAddressesRelationsTypesApplicationsApplicationLangGet($application, $lang)
     {
@@ -9020,13 +9020,13 @@ class AccountApi
      * @param  int $application (required)
      * @param  int $lang (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\IlluminateDatabaseEloquentCollection, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\IlluminateDatabaseEloquentCollection, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsAddressesRelationsTypesApplicationsApplicationLangGetWithHttpInfo($application, $lang)
     {
-        $returnType = '\Swagger\Client\Model\IlluminateDatabaseEloquentCollection';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\IlluminateDatabaseEloquentCollection';
         $request = $this->restAccountsAddressesRelationsTypesApplicationsApplicationLangGetRequest($application, $lang);
 
         try {
@@ -9078,7 +9078,7 @@ class AccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\IlluminateDatabaseEloquentCollection',
+                        '\BSApp\Service\plentymarketsAPI\Model\IlluminateDatabaseEloquentCollection',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -9122,7 +9122,7 @@ class AccountApi
      */
     public function restAccountsAddressesRelationsTypesApplicationsApplicationLangGetAsyncWithHttpInfo($application, $lang)
     {
-        $returnType = '\Swagger\Client\Model\IlluminateDatabaseEloquentCollection';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\IlluminateDatabaseEloquentCollection';
         $request = $this->restAccountsAddressesRelationsTypesApplicationsApplicationLangGetRequest($application, $lang);
 
         return $this->client
@@ -9285,9 +9285,9 @@ class AccountApi
      * Create an address warehouse relation
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesAccountAddressModelsAddressWarehouseRelation
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountAddressModelsAddressWarehouseRelation
      */
     public function restAccountsAddressesWarehouseRelationsPost()
     {
@@ -9301,13 +9301,13 @@ class AccountApi
      * Create an address warehouse relation
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesAccountAddressModelsAddressWarehouseRelation, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountAddressModelsAddressWarehouseRelation, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsAddressesWarehouseRelationsPostWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountAddressModelsAddressWarehouseRelation';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountAddressModelsAddressWarehouseRelation';
         $request = $this->restAccountsAddressesWarehouseRelationsPostRequest();
 
         try {
@@ -9359,7 +9359,7 @@ class AccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesAccountAddressModelsAddressWarehouseRelation',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountAddressModelsAddressWarehouseRelation',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -9399,7 +9399,7 @@ class AccountApi
      */
     public function restAccountsAddressesWarehouseRelationsPostAsyncWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountAddressModelsAddressWarehouseRelation';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountAddressModelsAddressWarehouseRelation';
         $request = $this->restAccountsAddressesWarehouseRelationsPostRequest();
 
         return $this->client
@@ -9533,7 +9533,7 @@ class AccountApi
      *
      * @param  int $relation_id relation_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -9549,7 +9549,7 @@ class AccountApi
      *
      * @param  int $relation_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -9762,9 +9762,9 @@ class AccountApi
      *
      * @param  int $relation_id relation_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesAccountAddressModelsAddressWarehouseRelation
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountAddressModelsAddressWarehouseRelation
      */
     public function restAccountsAddressesWarehouseRelationsRelationIdPut($relation_id)
     {
@@ -9779,13 +9779,13 @@ class AccountApi
      *
      * @param  int $relation_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesAccountAddressModelsAddressWarehouseRelation, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountAddressModelsAddressWarehouseRelation, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsAddressesWarehouseRelationsRelationIdPutWithHttpInfo($relation_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountAddressModelsAddressWarehouseRelation';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountAddressModelsAddressWarehouseRelation';
         $request = $this->restAccountsAddressesWarehouseRelationsRelationIdPutRequest($relation_id);
 
         try {
@@ -9837,7 +9837,7 @@ class AccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesAccountAddressModelsAddressWarehouseRelation',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountAddressModelsAddressWarehouseRelation',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -9879,7 +9879,7 @@ class AccountApi
      */
     public function restAccountsAddressesWarehouseRelationsRelationIdPutAsyncWithHttpInfo($relation_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountAddressModelsAddressWarehouseRelation';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountAddressModelsAddressWarehouseRelation';
         $request = $this->restAccountsAddressesWarehouseRelationsRelationIdPutRequest($relation_id);
 
         return $this->client
@@ -10028,7 +10028,7 @@ class AccountApi
      *
      * @param  int $account_contact_relation_id account_contact_relation_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -10044,7 +10044,7 @@ class AccountApi
      *
      * @param  int $account_contact_relation_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -10257,9 +10257,9 @@ class AccountApi
      *
      * @param  int $account_contact_relation_id account_contact_relation_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesAccountModelsAccountContactRelation
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountModelsAccountContactRelation
      */
     public function restAccountsContactRelationsAccountContactRelationIdGet($account_contact_relation_id)
     {
@@ -10274,13 +10274,13 @@ class AccountApi
      *
      * @param  int $account_contact_relation_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesAccountModelsAccountContactRelation, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountModelsAccountContactRelation, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsContactRelationsAccountContactRelationIdGetWithHttpInfo($account_contact_relation_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountModelsAccountContactRelation';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountModelsAccountContactRelation';
         $request = $this->restAccountsContactRelationsAccountContactRelationIdGetRequest($account_contact_relation_id);
 
         try {
@@ -10332,7 +10332,7 @@ class AccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesAccountModelsAccountContactRelation',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountModelsAccountContactRelation',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -10374,7 +10374,7 @@ class AccountApi
      */
     public function restAccountsContactRelationsAccountContactRelationIdGetAsyncWithHttpInfo($account_contact_relation_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountModelsAccountContactRelation';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountModelsAccountContactRelation';
         $request = $this->restAccountsContactRelationsAccountContactRelationIdGetRequest($account_contact_relation_id);
 
         return $this->client
@@ -10523,7 +10523,7 @@ class AccountApi
      *
      * @param  int $contact_bank_id contact_bank_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -10539,7 +10539,7 @@ class AccountApi
      *
      * @param  int $contact_bank_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -10752,9 +10752,9 @@ class AccountApi
      *
      * @param  int $contact_bank_id contact_bank_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesAccountContactModelsContactBank
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContactBank
      */
     public function restAccountsContactsBanksContactBankIdGet($contact_bank_id)
     {
@@ -10769,13 +10769,13 @@ class AccountApi
      *
      * @param  int $contact_bank_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesAccountContactModelsContactBank, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContactBank, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsContactsBanksContactBankIdGetWithHttpInfo($contact_bank_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountContactModelsContactBank';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContactBank';
         $request = $this->restAccountsContactsBanksContactBankIdGetRequest($contact_bank_id);
 
         try {
@@ -10827,7 +10827,7 @@ class AccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesAccountContactModelsContactBank',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContactBank',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -10869,7 +10869,7 @@ class AccountApi
      */
     public function restAccountsContactsBanksContactBankIdGetAsyncWithHttpInfo($contact_bank_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountContactModelsContactBank';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContactBank';
         $request = $this->restAccountsContactsBanksContactBankIdGetRequest($contact_bank_id);
 
         return $this->client
@@ -11019,9 +11019,9 @@ class AccountApi
      * @param  int $contact_bank_id contact_bank_id (required)
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesAccountContactModelsContactBank
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContactBank
      */
     public function restAccountsContactsBanksContactBankIdPut($contact_bank_id, $body = null)
     {
@@ -11037,13 +11037,13 @@ class AccountApi
      * @param  int $contact_bank_id (required)
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesAccountContactModelsContactBank, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContactBank, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsContactsBanksContactBankIdPutWithHttpInfo($contact_bank_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountContactModelsContactBank';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContactBank';
         $request = $this->restAccountsContactsBanksContactBankIdPutRequest($contact_bank_id, $body);
 
         try {
@@ -11095,7 +11095,7 @@ class AccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesAccountContactModelsContactBank',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContactBank',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -11139,7 +11139,7 @@ class AccountApi
      */
     public function restAccountsContactsBanksContactBankIdPutAsyncWithHttpInfo($contact_bank_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountContactModelsContactBank';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContactBank';
         $request = $this->restAccountsContactsBanksContactBankIdPutRequest($contact_bank_id, $body);
 
         return $this->client
@@ -11292,9 +11292,9 @@ class AccountApi
      *
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesAccountContactModelsContactBank
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContactBank
      */
     public function restAccountsContactsBanksPost($body = null)
     {
@@ -11309,13 +11309,13 @@ class AccountApi
      *
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesAccountContactModelsContactBank, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContactBank, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsContactsBanksPostWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountContactModelsContactBank';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContactBank';
         $request = $this->restAccountsContactsBanksPostRequest($body);
 
         try {
@@ -11367,7 +11367,7 @@ class AccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesAccountContactModelsContactBank',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContactBank',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -11409,7 +11409,7 @@ class AccountApi
      */
     public function restAccountsContactsBanksPostAsyncWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountContactModelsContactBank';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContactBank';
         $request = $this->restAccountsContactsBanksPostRequest($body);
 
         return $this->client
@@ -11547,7 +11547,7 @@ class AccountApi
      *
      * @param  int $contact_class_id contact_class_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return string
      */
@@ -11564,7 +11564,7 @@ class AccountApi
      *
      * @param  int $contact_class_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of string, HTTP status code, HTTP response headers (array of strings)
      */
@@ -11812,7 +11812,7 @@ class AccountApi
      * List contact classes
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return string[]
      */
@@ -11828,7 +11828,7 @@ class AccountApi
      * List contact classes
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of string[], HTTP status code, HTTP response headers (array of strings)
      */
@@ -12060,7 +12060,7 @@ class AccountApi
      *
      * @param  int $contact_event_id contact_event_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -12076,7 +12076,7 @@ class AccountApi
      *
      * @param  int $contact_event_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -12290,9 +12290,9 @@ class AccountApi
      * @param  int $contact_event_id contact_event_id (required)
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesAccountContactContactEventModelsContactEvent
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactContactEventModelsContactEvent
      */
     public function restAccountsContactsContactEventsContactEventIdPut($contact_event_id, $body = null)
     {
@@ -12308,13 +12308,13 @@ class AccountApi
      * @param  int $contact_event_id (required)
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesAccountContactContactEventModelsContactEvent, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactContactEventModelsContactEvent, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsContactsContactEventsContactEventIdPutWithHttpInfo($contact_event_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountContactContactEventModelsContactEvent';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactContactEventModelsContactEvent';
         $request = $this->restAccountsContactsContactEventsContactEventIdPutRequest($contact_event_id, $body);
 
         try {
@@ -12366,7 +12366,7 @@ class AccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesAccountContactContactEventModelsContactEvent',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactContactEventModelsContactEvent',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -12410,7 +12410,7 @@ class AccountApi
      */
     public function restAccountsContactsContactEventsContactEventIdPutAsyncWithHttpInfo($contact_event_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountContactContactEventModelsContactEvent';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactContactEventModelsContactEvent';
         $request = $this->restAccountsContactsContactEventsContactEventIdPutRequest($contact_event_id, $body);
 
         return $this->client
@@ -12564,7 +12564,7 @@ class AccountApi
      * @param  int $page The page of results to search for (optional)
      * @param  int $items_per_page The number of items to list per page (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -12582,7 +12582,7 @@ class AccountApi
      * @param  int $page The page of results to search for (optional)
      * @param  int $items_per_page The number of items to list per page (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -12830,9 +12830,9 @@ class AccountApi
      * @param  int $page The page of results to search for (optional)
      * @param  int $items_per_page The number of items to list per page (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesAccountContactContactEventModelsContactEvent
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactContactEventModelsContactEvent
      */
     public function restAccountsContactsContactEventsPost($body = null, $page = null, $items_per_page = null)
     {
@@ -12849,13 +12849,13 @@ class AccountApi
      * @param  int $page The page of results to search for (optional)
      * @param  int $items_per_page The number of items to list per page (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesAccountContactContactEventModelsContactEvent, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactContactEventModelsContactEvent, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsContactsContactEventsPostWithHttpInfo($body = null, $page = null, $items_per_page = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountContactContactEventModelsContactEvent';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactContactEventModelsContactEvent';
         $request = $this->restAccountsContactsContactEventsPostRequest($body, $page, $items_per_page);
 
         try {
@@ -12907,7 +12907,7 @@ class AccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesAccountContactContactEventModelsContactEvent',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactContactEventModelsContactEvent',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -12953,7 +12953,7 @@ class AccountApi
      */
     public function restAccountsContactsContactEventsPostAsyncWithHttpInfo($body = null, $page = null, $items_per_page = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountContactContactEventModelsContactEvent';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactContactEventModelsContactEvent';
         $request = $this->restAccountsContactsContactEventsPostRequest($body, $page, $items_per_page);
 
         return $this->client
@@ -13100,9 +13100,9 @@ class AccountApi
      * Get the contact event types as a key/value array.
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\Mixed[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\Mixed[]
      */
     public function restAccountsContactsContactEventsTypesPreviewGet()
     {
@@ -13116,13 +13116,13 @@ class AccountApi
      * Get the contact event types as a key/value array.
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\Mixed[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\Mixed[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsContactsContactEventsTypesPreviewGetWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\Mixed[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\Mixed[]';
         $request = $this->restAccountsContactsContactEventsTypesPreviewGetRequest();
 
         try {
@@ -13174,7 +13174,7 @@ class AccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\Mixed[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\Mixed[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -13214,7 +13214,7 @@ class AccountApi
      */
     public function restAccountsContactsContactEventsTypesPreviewGetAsyncWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\Mixed[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\Mixed[]';
         $request = $this->restAccountsContactsContactEventsTypesPreviewGetRequest();
 
         return $this->client
@@ -13348,7 +13348,7 @@ class AccountApi
      *
      * @param  int $contact_id contact_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -13364,7 +13364,7 @@ class AccountApi
      *
      * @param  int $contact_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -13578,9 +13578,9 @@ class AccountApi
      * @param  string $password The new password (required)
      * @param  int $contact_id contact_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyDataSimpleRestResponse
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse
      */
     public function restAccountsContactsContactIdAccessDataNewPasswordPut($password, $contact_id)
     {
@@ -13596,13 +13596,13 @@ class AccountApi
      * @param  string $password The new password (required)
      * @param  int $contact_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyDataSimpleRestResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsContactsContactIdAccessDataNewPasswordPutWithHttpInfo($password, $contact_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyDataSimpleRestResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse';
         $request = $this->restAccountsContactsContactIdAccessDataNewPasswordPutRequest($password, $contact_id);
 
         try {
@@ -13654,7 +13654,7 @@ class AccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyDataSimpleRestResponse',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -13698,7 +13698,7 @@ class AccountApi
      */
     public function restAccountsContactsContactIdAccessDataNewPasswordPutAsyncWithHttpInfo($password, $contact_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyDataSimpleRestResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse';
         $request = $this->restAccountsContactsContactIdAccessDataNewPasswordPutRequest($password, $contact_id);
 
         return $this->client
@@ -13859,9 +13859,9 @@ class AccountApi
      * @param  string $password The new password (required)
      * @param  int $contact_id contact_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyDataSimpleRestResponse
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse
      */
     public function restAccountsContactsContactIdAccessDataSetPasswordPut($password, $contact_id)
     {
@@ -13877,13 +13877,13 @@ class AccountApi
      * @param  string $password The new password (required)
      * @param  int $contact_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyDataSimpleRestResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsContactsContactIdAccessDataSetPasswordPutWithHttpInfo($password, $contact_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyDataSimpleRestResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse';
         $request = $this->restAccountsContactsContactIdAccessDataSetPasswordPutRequest($password, $contact_id);
 
         try {
@@ -13935,7 +13935,7 @@ class AccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyDataSimpleRestResponse',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -13979,7 +13979,7 @@ class AccountApi
      */
     public function restAccountsContactsContactIdAccessDataSetPasswordPutAsyncWithHttpInfo($password, $contact_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyDataSimpleRestResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse';
         $request = $this->restAccountsContactsContactIdAccessDataSetPasswordPutRequest($password, $contact_id);
 
         return $this->client
@@ -14139,9 +14139,9 @@ class AccountApi
      *
      * @param  int $contact_id contact_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyDataSimpleRestResponse
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse
      */
     public function restAccountsContactsContactIdAccessDataUnblockUserPut($contact_id)
     {
@@ -14156,13 +14156,13 @@ class AccountApi
      *
      * @param  int $contact_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyDataSimpleRestResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsContactsContactIdAccessDataUnblockUserPutWithHttpInfo($contact_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyDataSimpleRestResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse';
         $request = $this->restAccountsContactsContactIdAccessDataUnblockUserPutRequest($contact_id);
 
         try {
@@ -14214,7 +14214,7 @@ class AccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyDataSimpleRestResponse',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -14256,7 +14256,7 @@ class AccountApi
      */
     public function restAccountsContactsContactIdAccessDataUnblockUserPutAsyncWithHttpInfo($contact_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyDataSimpleRestResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse';
         $request = $this->restAccountsContactsContactIdAccessDataUnblockUserPutRequest($contact_id);
 
         return $this->client
@@ -14406,7 +14406,7 @@ class AccountApi
      * @param  int $contact_id contact_id (required)
      * @param  int $account_id account_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -14423,7 +14423,7 @@ class AccountApi
      * @param  int $contact_id (required)
      * @param  int $account_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -14654,9 +14654,9 @@ class AccountApi
      * @param  int $contact_id contact_id (required)
      * @param  int $account_id account_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesAccountModelsAccount
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountModelsAccount
      */
     public function restAccountsContactsContactIdAccountsAccountIdGet($contact_id, $account_id)
     {
@@ -14672,13 +14672,13 @@ class AccountApi
      * @param  int $contact_id (required)
      * @param  int $account_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesAccountModelsAccount, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountModelsAccount, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsContactsContactIdAccountsAccountIdGetWithHttpInfo($contact_id, $account_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountModelsAccount';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountModelsAccount';
         $request = $this->restAccountsContactsContactIdAccountsAccountIdGetRequest($contact_id, $account_id);
 
         try {
@@ -14730,7 +14730,7 @@ class AccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesAccountModelsAccount',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountModelsAccount',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -14774,7 +14774,7 @@ class AccountApi
      */
     public function restAccountsContactsContactIdAccountsAccountIdGetAsyncWithHttpInfo($contact_id, $account_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountModelsAccount';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountModelsAccount';
         $request = $this->restAccountsContactsContactIdAccountsAccountIdGetRequest($contact_id, $account_id);
 
         return $this->client
@@ -14939,9 +14939,9 @@ class AccountApi
      * @param  int $contact_id contact_id (required)
      * @param  int $account_id account_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesAccountModelsAccount
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountModelsAccount
      */
     public function restAccountsContactsContactIdAccountsAccountIdPut($contact_id, $account_id)
     {
@@ -14957,13 +14957,13 @@ class AccountApi
      * @param  int $contact_id (required)
      * @param  int $account_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesAccountModelsAccount, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountModelsAccount, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsContactsContactIdAccountsAccountIdPutWithHttpInfo($contact_id, $account_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountModelsAccount';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountModelsAccount';
         $request = $this->restAccountsContactsContactIdAccountsAccountIdPutRequest($contact_id, $account_id);
 
         try {
@@ -15015,7 +15015,7 @@ class AccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesAccountModelsAccount',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountModelsAccount',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -15059,7 +15059,7 @@ class AccountApi
      */
     public function restAccountsContactsContactIdAccountsAccountIdPutAsyncWithHttpInfo($contact_id, $account_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountModelsAccount';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountModelsAccount';
         $request = $this->restAccountsContactsContactIdAccountsAccountIdPutRequest($contact_id, $account_id);
 
         return $this->client
@@ -15224,9 +15224,9 @@ class AccountApi
      * @param  int $contact_id contact_id (required)
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesAccountModelsAccount
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountModelsAccount
      */
     public function restAccountsContactsContactIdAccountsPost($contact_id, $body = null)
     {
@@ -15242,13 +15242,13 @@ class AccountApi
      * @param  int $contact_id (required)
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesAccountModelsAccount, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountModelsAccount, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsContactsContactIdAccountsPostWithHttpInfo($contact_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountModelsAccount';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountModelsAccount';
         $request = $this->restAccountsContactsContactIdAccountsPostRequest($contact_id, $body);
 
         try {
@@ -15300,7 +15300,7 @@ class AccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesAccountModelsAccount',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountModelsAccount',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -15344,7 +15344,7 @@ class AccountApi
      */
     public function restAccountsContactsContactIdAccountsPostAsyncWithHttpInfo($contact_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountModelsAccount';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountModelsAccount';
         $request = $this->restAccountsContactsContactIdAccountsPostRequest($contact_id, $body);
 
         return $this->client
@@ -15499,7 +15499,7 @@ class AccountApi
      * @param  int $address_id address_id (required)
      * @param  int $type_id The type ID of the address. Possible values: &lt;ul&gt;&lt;li&gt;Invoice address &#x3D; 1&lt;/li&gt;&lt;li&gt; Delivery address &#x3D; 2&lt;/li&gt;&lt;/ul&gt; (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -15517,7 +15517,7 @@ class AccountApi
      * @param  int $address_id (required)
      * @param  int $type_id The type ID of the address. Possible values: &lt;ul&gt;&lt;li&gt;Invoice address &#x3D; 1&lt;/li&gt;&lt;li&gt; Delivery address &#x3D; 2&lt;/li&gt;&lt;/ul&gt; (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -15757,9 +15757,9 @@ class AccountApi
      * @param  bool $is_primary Sets a contact address per address type as the primary address. (optional)
      * @param  int $type_id The type ID of the address. Possible values: &lt;ul&gt;&lt;li&gt;Invoice address &#x3D; 1&lt;/li&gt;&lt;li&gt; Delivery address &#x3D; 2&lt;/li&gt;&lt;/ul&gt; (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesAccountAddressModelsAddress
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountAddressModelsAddress
      */
     public function restAccountsContactsContactIdAddressesAddressIdPut($contact_id, $address_id, $is_primary = null, $type_id = null)
     {
@@ -15777,13 +15777,13 @@ class AccountApi
      * @param  bool $is_primary Sets a contact address per address type as the primary address. (optional)
      * @param  int $type_id The type ID of the address. Possible values: &lt;ul&gt;&lt;li&gt;Invoice address &#x3D; 1&lt;/li&gt;&lt;li&gt; Delivery address &#x3D; 2&lt;/li&gt;&lt;/ul&gt; (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesAccountAddressModelsAddress, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountAddressModelsAddress, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsContactsContactIdAddressesAddressIdPutWithHttpInfo($contact_id, $address_id, $is_primary = null, $type_id = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountAddressModelsAddress';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountAddressModelsAddress';
         $request = $this->restAccountsContactsContactIdAddressesAddressIdPutRequest($contact_id, $address_id, $is_primary, $type_id);
 
         try {
@@ -15835,7 +15835,7 @@ class AccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesAccountAddressModelsAddress',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountAddressModelsAddress',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -15883,7 +15883,7 @@ class AccountApi
      */
     public function restAccountsContactsContactIdAddressesAddressIdPutAsyncWithHttpInfo($contact_id, $address_id, $is_primary = null, $type_id = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountAddressModelsAddress';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountAddressModelsAddress';
         $request = $this->restAccountsContactsContactIdAddressesAddressIdPutRequest($contact_id, $address_id, $is_primary, $type_id);
 
         return $this->client
@@ -16059,9 +16059,9 @@ class AccountApi
      * @param  int $address_id address_id (required)
      * @param  int $address_type_id address_type_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesAccountAddressModelsAddressContactRelation
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountAddressModelsAddressContactRelation
      */
     public function restAccountsContactsContactIdAddressesAddressIdTypesAddressTypeIdPrimaryPut($contact_id, $address_id, $address_type_id)
     {
@@ -16078,13 +16078,13 @@ class AccountApi
      * @param  int $address_id (required)
      * @param  int $address_type_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesAccountAddressModelsAddressContactRelation, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountAddressModelsAddressContactRelation, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsContactsContactIdAddressesAddressIdTypesAddressTypeIdPrimaryPutWithHttpInfo($contact_id, $address_id, $address_type_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountAddressModelsAddressContactRelation';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountAddressModelsAddressContactRelation';
         $request = $this->restAccountsContactsContactIdAddressesAddressIdTypesAddressTypeIdPrimaryPutRequest($contact_id, $address_id, $address_type_id);
 
         try {
@@ -16136,7 +16136,7 @@ class AccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesAccountAddressModelsAddressContactRelation',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountAddressModelsAddressContactRelation',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -16182,7 +16182,7 @@ class AccountApi
      */
     public function restAccountsContactsContactIdAddressesAddressIdTypesAddressTypeIdPrimaryPutAsyncWithHttpInfo($contact_id, $address_id, $address_type_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountAddressModelsAddressContactRelation';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountAddressModelsAddressContactRelation';
         $request = $this->restAccountsContactsContactIdAddressesAddressIdTypesAddressTypeIdPrimaryPutRequest($contact_id, $address_id, $address_type_id);
 
         return $this->client
@@ -16363,9 +16363,9 @@ class AccountApi
      * @param  int $address_id address_id (required)
      * @param  int $address_type_id address_type_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesAccountAddressModelsAddressContactRelation
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountAddressModelsAddressContactRelation
      */
     public function restAccountsContactsContactIdAddressesAddressIdTypesAddressTypeIdResetPrimaryPut($contact_id, $address_id, $address_type_id)
     {
@@ -16382,13 +16382,13 @@ class AccountApi
      * @param  int $address_id (required)
      * @param  int $address_type_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesAccountAddressModelsAddressContactRelation, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountAddressModelsAddressContactRelation, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsContactsContactIdAddressesAddressIdTypesAddressTypeIdResetPrimaryPutWithHttpInfo($contact_id, $address_id, $address_type_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountAddressModelsAddressContactRelation';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountAddressModelsAddressContactRelation';
         $request = $this->restAccountsContactsContactIdAddressesAddressIdTypesAddressTypeIdResetPrimaryPutRequest($contact_id, $address_id, $address_type_id);
 
         try {
@@ -16440,7 +16440,7 @@ class AccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesAccountAddressModelsAddressContactRelation',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountAddressModelsAddressContactRelation',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -16486,7 +16486,7 @@ class AccountApi
      */
     public function restAccountsContactsContactIdAddressesAddressIdTypesAddressTypeIdResetPrimaryPutAsyncWithHttpInfo($contact_id, $address_id, $address_type_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountAddressModelsAddressContactRelation';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountAddressModelsAddressContactRelation';
         $request = $this->restAccountsContactsContactIdAddressesAddressIdTypesAddressTypeIdResetPrimaryPutRequest($contact_id, $address_id, $address_type_id);
 
         return $this->client
@@ -16668,9 +16668,9 @@ class AccountApi
      * @param  int $page The requested page. The default page that will be returned is page 1. (optional)
      * @param  int $items_per_page The number of addresses to list per page. The default number is 1000. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesAccountAddressModelsAddress[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountAddressModelsAddress[]
      */
     public function restAccountsContactsContactIdAddressesAddressTypeIdGet($contact_id, $address_type_id, $page = null, $items_per_page = null)
     {
@@ -16688,13 +16688,13 @@ class AccountApi
      * @param  int $page The requested page. The default page that will be returned is page 1. (optional)
      * @param  int $items_per_page The number of addresses to list per page. The default number is 1000. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesAccountAddressModelsAddress[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountAddressModelsAddress[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsContactsContactIdAddressesAddressTypeIdGetWithHttpInfo($contact_id, $address_type_id, $page = null, $items_per_page = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountAddressModelsAddress[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountAddressModelsAddress[]';
         $request = $this->restAccountsContactsContactIdAddressesAddressTypeIdGetRequest($contact_id, $address_type_id, $page, $items_per_page);
 
         try {
@@ -16746,7 +16746,7 @@ class AccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesAccountAddressModelsAddress[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountAddressModelsAddress[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -16794,7 +16794,7 @@ class AccountApi
      */
     public function restAccountsContactsContactIdAddressesAddressTypeIdGetAsyncWithHttpInfo($contact_id, $address_type_id, $page = null, $items_per_page = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountAddressModelsAddress[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountAddressModelsAddress[]';
         $request = $this->restAccountsContactsContactIdAddressesAddressTypeIdGetRequest($contact_id, $address_type_id, $page, $items_per_page);
 
         return $this->client
@@ -16971,9 +16971,9 @@ class AccountApi
      * @param  bool $is_primary Sets a contact address per address type as the primary address. (optional)
      * @param  int $type_id The type ID of the address. Possible values: &lt;ul&gt;&lt;li&gt;Invoice address &#x3D; 1&lt;/li&gt;&lt;li&gt; Delivery address &#x3D; 2&lt;/li&gt;&lt;/ul&gt; (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesAccountAddressModelsAddress
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountAddressModelsAddress
      */
     public function restAccountsContactsContactIdAddressesPost($contact_id, $body = null, $is_primary = null, $type_id = null)
     {
@@ -16991,13 +16991,13 @@ class AccountApi
      * @param  bool $is_primary Sets a contact address per address type as the primary address. (optional)
      * @param  int $type_id The type ID of the address. Possible values: &lt;ul&gt;&lt;li&gt;Invoice address &#x3D; 1&lt;/li&gt;&lt;li&gt; Delivery address &#x3D; 2&lt;/li&gt;&lt;/ul&gt; (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesAccountAddressModelsAddress, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountAddressModelsAddress, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsContactsContactIdAddressesPostWithHttpInfo($contact_id, $body = null, $is_primary = null, $type_id = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountAddressModelsAddress';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountAddressModelsAddress';
         $request = $this->restAccountsContactsContactIdAddressesPostRequest($contact_id, $body, $is_primary, $type_id);
 
         try {
@@ -17049,7 +17049,7 @@ class AccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesAccountAddressModelsAddress',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountAddressModelsAddress',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -17097,7 +17097,7 @@ class AccountApi
      */
     public function restAccountsContactsContactIdAddressesPostAsyncWithHttpInfo($contact_id, $body = null, $is_primary = null, $type_id = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountAddressModelsAddress';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountAddressModelsAddress';
         $request = $this->restAccountsContactsContactIdAddressesPostRequest($contact_id, $body, $is_primary, $type_id);
 
         return $this->client
@@ -17260,9 +17260,9 @@ class AccountApi
      *
      * @param  int $contact_id contact_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesAccountContactModelsContactBank[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContactBank[]
      */
     public function restAccountsContactsContactIdBanksGet($contact_id)
     {
@@ -17277,13 +17277,13 @@ class AccountApi
      *
      * @param  int $contact_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesAccountContactModelsContactBank[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContactBank[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsContactsContactIdBanksGetWithHttpInfo($contact_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountContactModelsContactBank[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContactBank[]';
         $request = $this->restAccountsContactsContactIdBanksGetRequest($contact_id);
 
         try {
@@ -17335,7 +17335,7 @@ class AccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesAccountContactModelsContactBank[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContactBank[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -17377,7 +17377,7 @@ class AccountApi
      */
     public function restAccountsContactsContactIdBanksGetAsyncWithHttpInfo($contact_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountContactModelsContactBank[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContactBank[]';
         $request = $this->restAccountsContactsContactIdBanksGetRequest($contact_id);
 
         return $this->client
@@ -17528,7 +17528,7 @@ class AccountApi
      * @param  int $page The page of results to search for (optional)
      * @param  int $items_per_page The number of items to list per page (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -17547,7 +17547,7 @@ class AccountApi
      * @param  int $page The page of results to search for (optional)
      * @param  int $items_per_page The number of items to list per page (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -17811,7 +17811,7 @@ class AccountApi
      * @param  int $contact_id contact_id (required)
      * @param  bool $check_existing_orders Flag that checks if the contact is linked to orders. If the contact is linked to orders, CustomerDeleteException is thrown and the contact will not be deleted. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -17828,7 +17828,7 @@ class AccountApi
      * @param  int $contact_id (required)
      * @param  bool $check_existing_orders Flag that checks if the contact is linked to orders. If the contact is linked to orders, CustomerDeleteException is thrown and the contact will not be deleted. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -18049,9 +18049,9 @@ class AccountApi
      * @param  int $contact_id contact_id (required)
      * @param  string $with Includes the specified contact information in the results. The following parameters are available: addresses, accounts. More than one parameter should be separated by commas. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesAccountContactModelsContact
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContact
      */
     public function restAccountsContactsContactIdGet($contact_id, $with = null)
     {
@@ -18067,13 +18067,13 @@ class AccountApi
      * @param  int $contact_id (required)
      * @param  string $with Includes the specified contact information in the results. The following parameters are available: addresses, accounts. More than one parameter should be separated by commas. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesAccountContactModelsContact, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContact, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsContactsContactIdGetWithHttpInfo($contact_id, $with = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountContactModelsContact';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContact';
         $request = $this->restAccountsContactsContactIdGetRequest($contact_id, $with);
 
         try {
@@ -18125,7 +18125,7 @@ class AccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesAccountContactModelsContact',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContact',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -18169,7 +18169,7 @@ class AccountApi
      */
     public function restAccountsContactsContactIdGetAsyncWithHttpInfo($contact_id, $with = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountContactModelsContact';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContact';
         $request = $this->restAccountsContactsContactIdGetRequest($contact_id, $with);
 
         return $this->client
@@ -18323,7 +18323,7 @@ class AccountApi
      *
      * @param  int $contact_id contact_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -18339,7 +18339,7 @@ class AccountApi
      *
      * @param  int $contact_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -18552,9 +18552,9 @@ class AccountApi
      *
      * @param  int $contact_id contact_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesAccountContactModelsContactOption[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContactOption[]
      */
     public function restAccountsContactsContactIdOptionsGet($contact_id)
     {
@@ -18569,13 +18569,13 @@ class AccountApi
      *
      * @param  int $contact_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesAccountContactModelsContactOption[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContactOption[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsContactsContactIdOptionsGetWithHttpInfo($contact_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountContactModelsContactOption[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContactOption[]';
         $request = $this->restAccountsContactsContactIdOptionsGetRequest($contact_id);
 
         try {
@@ -18627,7 +18627,7 @@ class AccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesAccountContactModelsContactOption[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContactOption[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -18669,7 +18669,7 @@ class AccountApi
      */
     public function restAccountsContactsContactIdOptionsGetAsyncWithHttpInfo($contact_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountContactModelsContactOption[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContactOption[]';
         $request = $this->restAccountsContactsContactIdOptionsGetRequest($contact_id);
 
         return $this->client
@@ -18818,9 +18818,9 @@ class AccountApi
      *
      * @param  int $contact_id contact_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesAccountContactModelsContactOption[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContactOption[]
      */
     public function restAccountsContactsContactIdOptionsPost($contact_id)
     {
@@ -18835,13 +18835,13 @@ class AccountApi
      *
      * @param  int $contact_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesAccountContactModelsContactOption[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContactOption[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsContactsContactIdOptionsPostWithHttpInfo($contact_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountContactModelsContactOption[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContactOption[]';
         $request = $this->restAccountsContactsContactIdOptionsPostRequest($contact_id);
 
         try {
@@ -18893,7 +18893,7 @@ class AccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesAccountContactModelsContactOption[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContactOption[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -18935,7 +18935,7 @@ class AccountApi
      */
     public function restAccountsContactsContactIdOptionsPostAsyncWithHttpInfo($contact_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountContactModelsContactOption[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContactOption[]';
         $request = $this->restAccountsContactsContactIdOptionsPostRequest($contact_id);
 
         return $this->client
@@ -19084,9 +19084,9 @@ class AccountApi
      *
      * @param  int $contact_id contact_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesAccountContactModelsContactOption[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContactOption[]
      */
     public function restAccountsContactsContactIdOptionsPut($contact_id)
     {
@@ -19101,13 +19101,13 @@ class AccountApi
      *
      * @param  int $contact_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesAccountContactModelsContactOption[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContactOption[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsContactsContactIdOptionsPutWithHttpInfo($contact_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountContactModelsContactOption[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContactOption[]';
         $request = $this->restAccountsContactsContactIdOptionsPutRequest($contact_id);
 
         try {
@@ -19159,7 +19159,7 @@ class AccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesAccountContactModelsContactOption[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContactOption[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -19201,7 +19201,7 @@ class AccountApi
      */
     public function restAccountsContactsContactIdOptionsPutAsyncWithHttpInfo($contact_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountContactModelsContactOption[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContactOption[]';
         $request = $this->restAccountsContactsContactIdOptionsPutRequest($contact_id);
 
         return $this->client
@@ -19350,9 +19350,9 @@ class AccountApi
      *
      * @param  int $contact_id contact_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyDataSimpleRestResponse
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse
      */
     public function restAccountsContactsContactIdOptionsValidateGet($contact_id)
     {
@@ -19367,13 +19367,13 @@ class AccountApi
      *
      * @param  int $contact_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyDataSimpleRestResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsContactsContactIdOptionsValidateGetWithHttpInfo($contact_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyDataSimpleRestResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse';
         $request = $this->restAccountsContactsContactIdOptionsValidateGetRequest($contact_id);
 
         try {
@@ -19425,7 +19425,7 @@ class AccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyDataSimpleRestResponse',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -19467,7 +19467,7 @@ class AccountApi
      */
     public function restAccountsContactsContactIdOptionsValidateGetAsyncWithHttpInfo($contact_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyDataSimpleRestResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse';
         $request = $this->restAccountsContactsContactIdOptionsValidateGetRequest($contact_id);
 
         return $this->client
@@ -19618,9 +19618,9 @@ class AccountApi
      * @param  object $body body (optional)
      * @param  int $tag_relationships When this parameter is used, the current relations between contacts and tags will be deleted and replaced by the given ones. If the parameter is not used, the current relations remain. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesAccountContactModelsContact
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContact
      */
     public function restAccountsContactsContactIdPut($contact_id, $body = null, $tag_relationships = null)
     {
@@ -19637,13 +19637,13 @@ class AccountApi
      * @param  object $body (optional)
      * @param  int $tag_relationships When this parameter is used, the current relations between contacts and tags will be deleted and replaced by the given ones. If the parameter is not used, the current relations remain. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesAccountContactModelsContact, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContact, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsContactsContactIdPutWithHttpInfo($contact_id, $body = null, $tag_relationships = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountContactModelsContact';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContact';
         $request = $this->restAccountsContactsContactIdPutRequest($contact_id, $body, $tag_relationships);
 
         try {
@@ -19695,7 +19695,7 @@ class AccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesAccountContactModelsContact',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContact',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -19741,7 +19741,7 @@ class AccountApi
      */
     public function restAccountsContactsContactIdPutAsyncWithHttpInfo($contact_id, $body = null, $tag_relationships = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountContactModelsContact';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContact';
         $request = $this->restAccountsContactsContactIdPutRequest($contact_id, $body, $tag_relationships);
 
         return $this->client
@@ -19899,9 +19899,9 @@ class AccountApi
      *
      * @param  int $contact_id contact_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesAccountContactModelsContact
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContact
      */
     public function restAccountsContactsContactIdRelatedDataGet($contact_id)
     {
@@ -19916,13 +19916,13 @@ class AccountApi
      *
      * @param  int $contact_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesAccountContactModelsContact, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContact, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsContactsContactIdRelatedDataGetWithHttpInfo($contact_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountContactModelsContact';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContact';
         $request = $this->restAccountsContactsContactIdRelatedDataGetRequest($contact_id);
 
         try {
@@ -19974,7 +19974,7 @@ class AccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesAccountContactModelsContact',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContact',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -20016,7 +20016,7 @@ class AccountApi
      */
     public function restAccountsContactsContactIdRelatedDataGetAsyncWithHttpInfo($contact_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountContactModelsContact';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContact';
         $request = $this->restAccountsContactsContactIdRelatedDataGetRequest($contact_id);
 
         return $this->client
@@ -20165,9 +20165,9 @@ class AccountApi
      *
      * @param  int $contact_id contact_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyDataSimpleRestResponse
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse
      */
     public function restAccountsContactsContactIdVcardGet($contact_id)
     {
@@ -20182,13 +20182,13 @@ class AccountApi
      *
      * @param  int $contact_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyDataSimpleRestResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsContactsContactIdVcardGetWithHttpInfo($contact_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyDataSimpleRestResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse';
         $request = $this->restAccountsContactsContactIdVcardGetRequest($contact_id);
 
         try {
@@ -20240,7 +20240,7 @@ class AccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyDataSimpleRestResponse',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -20282,7 +20282,7 @@ class AccountApi
      */
     public function restAccountsContactsContactIdVcardGetAsyncWithHttpInfo($contact_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyDataSimpleRestResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse';
         $request = $this->restAccountsContactsContactIdVcardGetRequest($contact_id);
 
         return $this->client
@@ -20431,7 +20431,7 @@ class AccountApi
      *
      * @param  int $department_id department_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -20447,7 +20447,7 @@ class AccountApi
      *
      * @param  int $department_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -20660,9 +20660,9 @@ class AccountApi
      *
      * @param  int $department_id department_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesAccountContactModelsContactDepartment
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContactDepartment
      */
     public function restAccountsContactsDepartmentsDepartmentIdGet($department_id)
     {
@@ -20677,13 +20677,13 @@ class AccountApi
      *
      * @param  int $department_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesAccountContactModelsContactDepartment, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContactDepartment, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsContactsDepartmentsDepartmentIdGetWithHttpInfo($department_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountContactModelsContactDepartment';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContactDepartment';
         $request = $this->restAccountsContactsDepartmentsDepartmentIdGetRequest($department_id);
 
         try {
@@ -20735,7 +20735,7 @@ class AccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesAccountContactModelsContactDepartment',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContactDepartment',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -20777,7 +20777,7 @@ class AccountApi
      */
     public function restAccountsContactsDepartmentsDepartmentIdGetAsyncWithHttpInfo($department_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountContactModelsContactDepartment';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContactDepartment';
         $request = $this->restAccountsContactsDepartmentsDepartmentIdGetRequest($department_id);
 
         return $this->client
@@ -20927,9 +20927,9 @@ class AccountApi
      * @param  int $department_id department_id (required)
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesAccountContactModelsContactDepartment
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContactDepartment
      */
     public function restAccountsContactsDepartmentsDepartmentIdPut($department_id, $body = null)
     {
@@ -20945,13 +20945,13 @@ class AccountApi
      * @param  int $department_id (required)
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesAccountContactModelsContactDepartment, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContactDepartment, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsContactsDepartmentsDepartmentIdPutWithHttpInfo($department_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountContactModelsContactDepartment';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContactDepartment';
         $request = $this->restAccountsContactsDepartmentsDepartmentIdPutRequest($department_id, $body);
 
         try {
@@ -21003,7 +21003,7 @@ class AccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesAccountContactModelsContactDepartment',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContactDepartment',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -21047,7 +21047,7 @@ class AccountApi
      */
     public function restAccountsContactsDepartmentsDepartmentIdPutAsyncWithHttpInfo($department_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountContactModelsContactDepartment';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContactDepartment';
         $request = $this->restAccountsContactsDepartmentsDepartmentIdPutRequest($department_id, $body);
 
         return $this->client
@@ -21199,9 +21199,9 @@ class AccountApi
      * List contact departments
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesAccountContactModelsContactDepartment[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContactDepartment[]
      */
     public function restAccountsContactsDepartmentsGet()
     {
@@ -21215,13 +21215,13 @@ class AccountApi
      * List contact departments
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesAccountContactModelsContactDepartment[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContactDepartment[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsContactsDepartmentsGetWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountContactModelsContactDepartment[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContactDepartment[]';
         $request = $this->restAccountsContactsDepartmentsGetRequest();
 
         try {
@@ -21273,7 +21273,7 @@ class AccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesAccountContactModelsContactDepartment[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContactDepartment[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -21313,7 +21313,7 @@ class AccountApi
      */
     public function restAccountsContactsDepartmentsGetAsyncWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountContactModelsContactDepartment[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContactDepartment[]';
         $request = $this->restAccountsContactsDepartmentsGetRequest();
 
         return $this->client
@@ -21447,9 +21447,9 @@ class AccountApi
      *
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesAccountContactModelsContactDepartment
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContactDepartment
      */
     public function restAccountsContactsDepartmentsPost($body = null)
     {
@@ -21464,13 +21464,13 @@ class AccountApi
      *
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesAccountContactModelsContactDepartment, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContactDepartment, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsContactsDepartmentsPostWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountContactModelsContactDepartment';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContactDepartment';
         $request = $this->restAccountsContactsDepartmentsPostRequest($body);
 
         try {
@@ -21522,7 +21522,7 @@ class AccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesAccountContactModelsContactDepartment',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContactDepartment',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -21564,7 +21564,7 @@ class AccountApi
      */
     public function restAccountsContactsDepartmentsPostAsyncWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountContactModelsContactDepartment';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContactDepartment';
         $request = $this->restAccountsContactsDepartmentsPostRequest($body);
 
         return $this->client
@@ -21732,7 +21732,7 @@ class AccountApi
      * @param  string $delivery_address_id Filter that restricts the search result to contacts with a delivery address with the id provided (optional)
      * @param  int $tag_ids Filter restricts the list of results to contacts with the specified tagIds. More than one ID should be separated by commas. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -21779,7 +21779,7 @@ class AccountApi
      * @param  string $delivery_address_id Filter that restricts the search result to contacts with a delivery address with the id provided (optional)
      * @param  int $tag_ids Filter restricts the list of results to contacts with the specified tagIds. More than one ID should be separated by commas. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -22227,9 +22227,9 @@ class AccountApi
      * List all group function related data
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyDataSimpleRestResponse
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse
      */
     public function restAccountsContactsGroupFunctionsGet()
     {
@@ -22243,13 +22243,13 @@ class AccountApi
      * List all group function related data
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyDataSimpleRestResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsContactsGroupFunctionsGetWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\PlentyDataSimpleRestResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse';
         $request = $this->restAccountsContactsGroupFunctionsGetRequest();
 
         try {
@@ -22301,7 +22301,7 @@ class AccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyDataSimpleRestResponse',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -22341,7 +22341,7 @@ class AccountApi
      */
     public function restAccountsContactsGroupFunctionsGetAsyncWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\PlentyDataSimpleRestResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse';
         $request = $this->restAccountsContactsGroupFunctionsGetRequest();
 
         return $this->client
@@ -22478,9 +22478,9 @@ class AccountApi
      * @param  int $newsletter A newsletter folder ID (optional)
      * @param  int $address_label_template An address label template ID (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyDataSimpleRestResponse
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse
      */
     public function restAccountsContactsGroupFunctionsPost($contact_list = null, $email_template = null, $newsletter = null, $address_label_template = null)
     {
@@ -22498,13 +22498,13 @@ class AccountApi
      * @param  int $newsletter A newsletter folder ID (optional)
      * @param  int $address_label_template An address label template ID (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyDataSimpleRestResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsContactsGroupFunctionsPostWithHttpInfo($contact_list = null, $email_template = null, $newsletter = null, $address_label_template = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyDataSimpleRestResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse';
         $request = $this->restAccountsContactsGroupFunctionsPostRequest($contact_list, $email_template, $newsletter, $address_label_template);
 
         try {
@@ -22556,7 +22556,7 @@ class AccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyDataSimpleRestResponse',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -22604,7 +22604,7 @@ class AccountApi
      */
     public function restAccountsContactsGroupFunctionsPostAsyncWithHttpInfo($contact_list = null, $email_template = null, $newsletter = null, $address_label_template = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyDataSimpleRestResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleRestResponse';
         $request = $this->restAccountsContactsGroupFunctionsPostRequest($contact_list, $email_template, $newsletter, $address_label_template);
 
         return $this->client
@@ -22757,9 +22757,9 @@ class AccountApi
      * List contact option sub-types
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesAccountContactModelsContactOptionSubType[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContactOptionSubType[]
      */
     public function restAccountsContactsOptionSubTypesGet()
     {
@@ -22773,13 +22773,13 @@ class AccountApi
      * List contact option sub-types
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesAccountContactModelsContactOptionSubType[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContactOptionSubType[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsContactsOptionSubTypesGetWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountContactModelsContactOptionSubType[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContactOptionSubType[]';
         $request = $this->restAccountsContactsOptionSubTypesGetRequest();
 
         try {
@@ -22831,7 +22831,7 @@ class AccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesAccountContactModelsContactOptionSubType[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContactOptionSubType[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -22871,7 +22871,7 @@ class AccountApi
      */
     public function restAccountsContactsOptionSubTypesGetAsyncWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountContactModelsContactOptionSubType[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContactOptionSubType[]';
         $request = $this->restAccountsContactsOptionSubTypesGetRequest();
 
         return $this->client
@@ -23005,7 +23005,7 @@ class AccountApi
      *
      * @param  int $option_sub_type_id option_sub_type_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -23021,7 +23021,7 @@ class AccountApi
      *
      * @param  int $option_sub_type_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -23234,9 +23234,9 @@ class AccountApi
      *
      * @param  int $option_sub_type_id option_sub_type_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesAccountContactModelsContactOptionSubType
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContactOptionSubType
      */
     public function restAccountsContactsOptionSubTypesOptionSubTypeIdGet($option_sub_type_id)
     {
@@ -23251,13 +23251,13 @@ class AccountApi
      *
      * @param  int $option_sub_type_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesAccountContactModelsContactOptionSubType, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContactOptionSubType, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsContactsOptionSubTypesOptionSubTypeIdGetWithHttpInfo($option_sub_type_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountContactModelsContactOptionSubType';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContactOptionSubType';
         $request = $this->restAccountsContactsOptionSubTypesOptionSubTypeIdGetRequest($option_sub_type_id);
 
         try {
@@ -23309,7 +23309,7 @@ class AccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesAccountContactModelsContactOptionSubType',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContactOptionSubType',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -23351,7 +23351,7 @@ class AccountApi
      */
     public function restAccountsContactsOptionSubTypesOptionSubTypeIdGetAsyncWithHttpInfo($option_sub_type_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountContactModelsContactOptionSubType';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContactOptionSubType';
         $request = $this->restAccountsContactsOptionSubTypesOptionSubTypeIdGetRequest($option_sub_type_id);
 
         return $this->client
@@ -23501,9 +23501,9 @@ class AccountApi
      * @param  int $option_sub_type_id option_sub_type_id (required)
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesAccountContactModelsContactOptionSubType
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContactOptionSubType
      */
     public function restAccountsContactsOptionSubTypesOptionSubTypeIdPut($option_sub_type_id, $body = null)
     {
@@ -23519,13 +23519,13 @@ class AccountApi
      * @param  int $option_sub_type_id (required)
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesAccountContactModelsContactOptionSubType, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContactOptionSubType, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsContactsOptionSubTypesOptionSubTypeIdPutWithHttpInfo($option_sub_type_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountContactModelsContactOptionSubType';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContactOptionSubType';
         $request = $this->restAccountsContactsOptionSubTypesOptionSubTypeIdPutRequest($option_sub_type_id, $body);
 
         try {
@@ -23577,7 +23577,7 @@ class AccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesAccountContactModelsContactOptionSubType',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContactOptionSubType',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -23621,7 +23621,7 @@ class AccountApi
      */
     public function restAccountsContactsOptionSubTypesOptionSubTypeIdPutAsyncWithHttpInfo($option_sub_type_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountContactModelsContactOptionSubType';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContactOptionSubType';
         $request = $this->restAccountsContactsOptionSubTypesOptionSubTypeIdPutRequest($option_sub_type_id, $body);
 
         return $this->client
@@ -23774,9 +23774,9 @@ class AccountApi
      *
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesAccountContactModelsContactOptionSubType
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContactOptionSubType
      */
     public function restAccountsContactsOptionSubTypesPost($body = null)
     {
@@ -23791,13 +23791,13 @@ class AccountApi
      *
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesAccountContactModelsContactOptionSubType, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContactOptionSubType, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsContactsOptionSubTypesPostWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountContactModelsContactOptionSubType';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContactOptionSubType';
         $request = $this->restAccountsContactsOptionSubTypesPostRequest($body);
 
         try {
@@ -23849,7 +23849,7 @@ class AccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesAccountContactModelsContactOptionSubType',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContactOptionSubType',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -23891,7 +23891,7 @@ class AccountApi
      */
     public function restAccountsContactsOptionSubTypesPostAsyncWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountContactModelsContactOptionSubType';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContactOptionSubType';
         $request = $this->restAccountsContactsOptionSubTypesPostRequest($body);
 
         return $this->client
@@ -24029,9 +24029,9 @@ class AccountApi
      *
      * @param  string $with Lists possible option sub-types for each listed option if the parameter &#x27;subTypes&#x27; is set. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesAccountContactModelsContactOptionType[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContactOptionType[]
      */
     public function restAccountsContactsOptionTypesGet($with = null)
     {
@@ -24046,13 +24046,13 @@ class AccountApi
      *
      * @param  string $with Lists possible option sub-types for each listed option if the parameter &#x27;subTypes&#x27; is set. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesAccountContactModelsContactOptionType[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContactOptionType[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsContactsOptionTypesGetWithHttpInfo($with = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountContactModelsContactOptionType[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContactOptionType[]';
         $request = $this->restAccountsContactsOptionTypesGetRequest($with);
 
         try {
@@ -24104,7 +24104,7 @@ class AccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesAccountContactModelsContactOptionType[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContactOptionType[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -24146,7 +24146,7 @@ class AccountApi
      */
     public function restAccountsContactsOptionTypesGetAsyncWithHttpInfo($with = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountContactModelsContactOptionType[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContactOptionType[]';
         $request = $this->restAccountsContactsOptionTypesGetRequest($with);
 
         return $this->client
@@ -24285,7 +24285,7 @@ class AccountApi
      *
      * @param  int $option_type_id option_type_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -24301,7 +24301,7 @@ class AccountApi
      *
      * @param  int $option_type_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -24514,9 +24514,9 @@ class AccountApi
      *
      * @param  int $option_type_id option_type_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesAccountContactModelsContactOptionType
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContactOptionType
      */
     public function restAccountsContactsOptionTypesOptionTypeIdGet($option_type_id)
     {
@@ -24531,13 +24531,13 @@ class AccountApi
      *
      * @param  int $option_type_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesAccountContactModelsContactOptionType, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContactOptionType, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsContactsOptionTypesOptionTypeIdGetWithHttpInfo($option_type_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountContactModelsContactOptionType';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContactOptionType';
         $request = $this->restAccountsContactsOptionTypesOptionTypeIdGetRequest($option_type_id);
 
         try {
@@ -24589,7 +24589,7 @@ class AccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesAccountContactModelsContactOptionType',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContactOptionType',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -24631,7 +24631,7 @@ class AccountApi
      */
     public function restAccountsContactsOptionTypesOptionTypeIdGetAsyncWithHttpInfo($option_type_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountContactModelsContactOptionType';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContactOptionType';
         $request = $this->restAccountsContactsOptionTypesOptionTypeIdGetRequest($option_type_id);
 
         return $this->client
@@ -24781,9 +24781,9 @@ class AccountApi
      * @param  int $option_type_id option_type_id (required)
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesAccountContactModelsContactOptionType
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContactOptionType
      */
     public function restAccountsContactsOptionTypesOptionTypeIdPut($option_type_id, $body = null)
     {
@@ -24799,13 +24799,13 @@ class AccountApi
      * @param  int $option_type_id (required)
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesAccountContactModelsContactOptionType, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContactOptionType, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsContactsOptionTypesOptionTypeIdPutWithHttpInfo($option_type_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountContactModelsContactOptionType';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContactOptionType';
         $request = $this->restAccountsContactsOptionTypesOptionTypeIdPutRequest($option_type_id, $body);
 
         try {
@@ -24857,7 +24857,7 @@ class AccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesAccountContactModelsContactOptionType',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContactOptionType',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -24901,7 +24901,7 @@ class AccountApi
      */
     public function restAccountsContactsOptionTypesOptionTypeIdPutAsyncWithHttpInfo($option_type_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountContactModelsContactOptionType';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContactOptionType';
         $request = $this->restAccountsContactsOptionTypesOptionTypeIdPutRequest($option_type_id, $body);
 
         return $this->client
@@ -25054,9 +25054,9 @@ class AccountApi
      *
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesAccountContactModelsContactOptionType
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContactOptionType
      */
     public function restAccountsContactsOptionTypesPost($body = null)
     {
@@ -25071,13 +25071,13 @@ class AccountApi
      *
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesAccountContactModelsContactOptionType, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContactOptionType, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsContactsOptionTypesPostWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountContactModelsContactOptionType';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContactOptionType';
         $request = $this->restAccountsContactsOptionTypesPostRequest($body);
 
         try {
@@ -25129,7 +25129,7 @@ class AccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesAccountContactModelsContactOptionType',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContactOptionType',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -25171,7 +25171,7 @@ class AccountApi
      */
     public function restAccountsContactsOptionTypesPostAsyncWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountContactModelsContactOptionType';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContactOptionType';
         $request = $this->restAccountsContactsOptionTypesPostRequest($body);
 
         return $this->client
@@ -25309,7 +25309,7 @@ class AccountApi
      *
      * @param  int $option_id option_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -25325,7 +25325,7 @@ class AccountApi
      *
      * @param  int $option_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -25538,9 +25538,9 @@ class AccountApi
      *
      * @param  int $option_id option_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesAccountContactModelsContactOption
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContactOption
      */
     public function restAccountsContactsOptionsOptionIdGet($option_id)
     {
@@ -25555,13 +25555,13 @@ class AccountApi
      *
      * @param  int $option_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesAccountContactModelsContactOption, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContactOption, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsContactsOptionsOptionIdGetWithHttpInfo($option_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountContactModelsContactOption';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContactOption';
         $request = $this->restAccountsContactsOptionsOptionIdGetRequest($option_id);
 
         try {
@@ -25613,7 +25613,7 @@ class AccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesAccountContactModelsContactOption',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContactOption',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -25655,7 +25655,7 @@ class AccountApi
      */
     public function restAccountsContactsOptionsOptionIdGetAsyncWithHttpInfo($option_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountContactModelsContactOption';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContactOption';
         $request = $this->restAccountsContactsOptionsOptionIdGetRequest($option_id);
 
         return $this->client
@@ -25804,9 +25804,9 @@ class AccountApi
      *
      * @param  int $option_id option_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesAccountContactModelsContactOption
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContactOption
      */
     public function restAccountsContactsOptionsOptionIdPut($option_id)
     {
@@ -25821,13 +25821,13 @@ class AccountApi
      *
      * @param  int $option_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesAccountContactModelsContactOption, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContactOption, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsContactsOptionsOptionIdPutWithHttpInfo($option_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountContactModelsContactOption';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContactOption';
         $request = $this->restAccountsContactsOptionsOptionIdPutRequest($option_id);
 
         try {
@@ -25879,7 +25879,7 @@ class AccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesAccountContactModelsContactOption',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContactOption',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -25921,7 +25921,7 @@ class AccountApi
      */
     public function restAccountsContactsOptionsOptionIdPutAsyncWithHttpInfo($option_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountContactModelsContactOption';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContactOption';
         $request = $this->restAccountsContactsOptionsOptionIdPutRequest($option_id);
 
         return $this->client
@@ -26069,9 +26069,9 @@ class AccountApi
      * List contact positions
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesAccountContactModelsContactPosition[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContactPosition[]
      */
     public function restAccountsContactsPositionsGet()
     {
@@ -26085,13 +26085,13 @@ class AccountApi
      * List contact positions
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesAccountContactModelsContactPosition[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContactPosition[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsContactsPositionsGetWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountContactModelsContactPosition[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContactPosition[]';
         $request = $this->restAccountsContactsPositionsGetRequest();
 
         try {
@@ -26143,7 +26143,7 @@ class AccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesAccountContactModelsContactPosition[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContactPosition[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -26183,7 +26183,7 @@ class AccountApi
      */
     public function restAccountsContactsPositionsGetAsyncWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountContactModelsContactPosition[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContactPosition[]';
         $request = $this->restAccountsContactsPositionsGetRequest();
 
         return $this->client
@@ -26317,7 +26317,7 @@ class AccountApi
      *
      * @param  int $position_id position_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -26333,7 +26333,7 @@ class AccountApi
      *
      * @param  int $position_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -26546,9 +26546,9 @@ class AccountApi
      *
      * @param  int $position_id position_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesAccountContactModelsContactPosition
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContactPosition
      */
     public function restAccountsContactsPositionsPositionIdGet($position_id)
     {
@@ -26563,13 +26563,13 @@ class AccountApi
      *
      * @param  int $position_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesAccountContactModelsContactPosition, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContactPosition, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsContactsPositionsPositionIdGetWithHttpInfo($position_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountContactModelsContactPosition';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContactPosition';
         $request = $this->restAccountsContactsPositionsPositionIdGetRequest($position_id);
 
         try {
@@ -26621,7 +26621,7 @@ class AccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesAccountContactModelsContactPosition',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContactPosition',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -26663,7 +26663,7 @@ class AccountApi
      */
     public function restAccountsContactsPositionsPositionIdGetAsyncWithHttpInfo($position_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountContactModelsContactPosition';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContactPosition';
         $request = $this->restAccountsContactsPositionsPositionIdGetRequest($position_id);
 
         return $this->client
@@ -26813,9 +26813,9 @@ class AccountApi
      * @param  int $position_id position_id (required)
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesAccountContactModelsContactPosition
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContactPosition
      */
     public function restAccountsContactsPositionsPositionIdPut($position_id, $body = null)
     {
@@ -26831,13 +26831,13 @@ class AccountApi
      * @param  int $position_id (required)
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesAccountContactModelsContactPosition, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContactPosition, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsContactsPositionsPositionIdPutWithHttpInfo($position_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountContactModelsContactPosition';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContactPosition';
         $request = $this->restAccountsContactsPositionsPositionIdPutRequest($position_id, $body);
 
         try {
@@ -26889,7 +26889,7 @@ class AccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesAccountContactModelsContactPosition',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContactPosition',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -26933,7 +26933,7 @@ class AccountApi
      */
     public function restAccountsContactsPositionsPositionIdPutAsyncWithHttpInfo($position_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountContactModelsContactPosition';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContactPosition';
         $request = $this->restAccountsContactsPositionsPositionIdPutRequest($position_id, $body);
 
         return $this->client
@@ -27086,9 +27086,9 @@ class AccountApi
      *
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesAccountContactModelsContactPosition
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContactPosition
      */
     public function restAccountsContactsPositionsPost($body = null)
     {
@@ -27103,13 +27103,13 @@ class AccountApi
      *
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesAccountContactModelsContactPosition, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContactPosition, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsContactsPositionsPostWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountContactModelsContactPosition';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContactPosition';
         $request = $this->restAccountsContactsPositionsPostRequest($body);
 
         try {
@@ -27161,7 +27161,7 @@ class AccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesAccountContactModelsContactPosition',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContactPosition',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -27203,7 +27203,7 @@ class AccountApi
      */
     public function restAccountsContactsPositionsPostAsyncWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountContactModelsContactPosition';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContactPosition';
         $request = $this->restAccountsContactsPositionsPostRequest($body);
 
         return $this->client
@@ -27341,9 +27341,9 @@ class AccountApi
      *
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesAccountContactModelsContact
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContact
      */
     public function restAccountsContactsPost($body = null)
     {
@@ -27358,13 +27358,13 @@ class AccountApi
      *
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesAccountContactModelsContact, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContact, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsContactsPostWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountContactModelsContact';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContact';
         $request = $this->restAccountsContactsPostRequest($body);
 
         try {
@@ -27416,7 +27416,7 @@ class AccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesAccountContactModelsContact',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContact',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -27458,7 +27458,7 @@ class AccountApi
      */
     public function restAccountsContactsPostAsyncWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountContactModelsContact';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContact';
         $request = $this->restAccountsContactsPostRequest($body);
 
         return $this->client
@@ -27595,9 +27595,9 @@ class AccountApi
      * List contact types
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesAccountContactModelsContactType[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContactType[]
      */
     public function restAccountsContactsTypesGet()
     {
@@ -27611,13 +27611,13 @@ class AccountApi
      * List contact types
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesAccountContactModelsContactType[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContactType[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsContactsTypesGetWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountContactModelsContactType[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContactType[]';
         $request = $this->restAccountsContactsTypesGetRequest();
 
         try {
@@ -27669,7 +27669,7 @@ class AccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesAccountContactModelsContactType[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContactType[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -27709,7 +27709,7 @@ class AccountApi
      */
     public function restAccountsContactsTypesGetAsyncWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountContactModelsContactType[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContactType[]';
         $request = $this->restAccountsContactsTypesGetRequest();
 
         return $this->client
@@ -27843,9 +27843,9 @@ class AccountApi
      *
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesAccountContactModelsContactType
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContactType
      */
     public function restAccountsContactsTypesPost($body = null)
     {
@@ -27860,13 +27860,13 @@ class AccountApi
      *
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesAccountContactModelsContactType, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContactType, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsContactsTypesPostWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountContactModelsContactType';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContactType';
         $request = $this->restAccountsContactsTypesPostRequest($body);
 
         try {
@@ -27918,7 +27918,7 @@ class AccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesAccountContactModelsContactType',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContactType',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -27960,7 +27960,7 @@ class AccountApi
      */
     public function restAccountsContactsTypesPostAsyncWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountContactModelsContactType';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContactType';
         $request = $this->restAccountsContactsTypesPostRequest($body);
 
         return $this->client
@@ -28098,7 +28098,7 @@ class AccountApi
      *
      * @param  int $type_id type_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -28114,7 +28114,7 @@ class AccountApi
      *
      * @param  int $type_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -28327,9 +28327,9 @@ class AccountApi
      *
      * @param  int $type_id type_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesAccountContactModelsContactType
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContactType
      */
     public function restAccountsContactsTypesTypeIdGet($type_id)
     {
@@ -28344,13 +28344,13 @@ class AccountApi
      *
      * @param  int $type_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesAccountContactModelsContactType, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContactType, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsContactsTypesTypeIdGetWithHttpInfo($type_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountContactModelsContactType';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContactType';
         $request = $this->restAccountsContactsTypesTypeIdGetRequest($type_id);
 
         try {
@@ -28402,7 +28402,7 @@ class AccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesAccountContactModelsContactType',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContactType',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -28444,7 +28444,7 @@ class AccountApi
      */
     public function restAccountsContactsTypesTypeIdGetAsyncWithHttpInfo($type_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountContactModelsContactType';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContactType';
         $request = $this->restAccountsContactsTypesTypeIdGetRequest($type_id);
 
         return $this->client
@@ -28594,9 +28594,9 @@ class AccountApi
      * @param  int $type_id type_id (required)
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesAccountContactModelsContactType
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContactType
      */
     public function restAccountsContactsTypesTypeIdPut($type_id, $body = null)
     {
@@ -28612,13 +28612,13 @@ class AccountApi
      * @param  int $type_id (required)
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesAccountContactModelsContactType, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContactType, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsContactsTypesTypeIdPutWithHttpInfo($type_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountContactModelsContactType';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContactType';
         $request = $this->restAccountsContactsTypesTypeIdPutRequest($type_id, $body);
 
         try {
@@ -28670,7 +28670,7 @@ class AccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesAccountContactModelsContactType',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContactType',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -28714,7 +28714,7 @@ class AccountApi
      */
     public function restAccountsContactsTypesTypeIdPutAsyncWithHttpInfo($type_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountContactModelsContactType';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountContactModelsContactType';
         $request = $this->restAccountsContactsTypesTypeIdPutRequest($type_id, $body);
 
         return $this->client
@@ -28869,7 +28869,7 @@ class AccountApi
      * @param  string $created_at Filter that restricts the search result to accounts that were created according to given filters.                                    &lt;br&gt; Usage: &lt;ul&gt;                                    &lt;li&gt;&#x27;createdAt&#x3D;between:yyyy-mm-dd,yyyy-mm-dd&#x27;&lt;/li&gt;                                    &lt;li&gt;&#x27;createdAt&#x3D;eq:yyyy-mm-dd&#x27; (&#x3D;)&lt;/li&gt;                                    &lt;li&gt;&#x27;createdAt&#x3D;gt:yyyy-mm-dd&#x27; (&gt;)&lt;/li&gt;                                    &lt;li&gt;&#x27;createdAt&#x3D;gte:yyyy-mm-dd&#x27; (&gt;&#x3D;)&lt;/li&gt;                                    &lt;li&gt;&#x27;createdAt&#x3D;lt:yyyy-mm-dd&#x27; (&lt;)&lt;/li&gt;                                    &lt;li&gt;&#x27;createdAt&#x3D;lte:yyyy-mm-dd&#x27; (&lt;&#x3D;)&lt;/li&gt;                                    &lt;li&gt;Dates can also include the time. Example: 2017-03-08 13:24:17&lt;/li&gt;                                    &lt;li&gt;Without including the time we will use 00:00:00 as default. Example: 2017-03-08 00:00:00&lt;/li&gt;           &lt;/ul&gt; (optional)
      * @param  string $company_name Filter that restricts the search result to accounts that have a company name according to given filters.                                     &lt;br&gt; Usage: &lt;ul&gt;                                     &lt;li&gt;&#x27;companyName&#x3D;like:expamle&#x27;&lt;/li&gt;                                     &lt;li&gt;&#x27;companyName&#x3D;eq:example&#x27; (&#x3D;)&lt;/li&gt;                                     &lt;/ul&gt; (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -28888,7 +28888,7 @@ class AccountApi
      * @param  string $created_at Filter that restricts the search result to accounts that were created according to given filters.                                    &lt;br&gt; Usage: &lt;ul&gt;                                    &lt;li&gt;&#x27;createdAt&#x3D;between:yyyy-mm-dd,yyyy-mm-dd&#x27;&lt;/li&gt;                                    &lt;li&gt;&#x27;createdAt&#x3D;eq:yyyy-mm-dd&#x27; (&#x3D;)&lt;/li&gt;                                    &lt;li&gt;&#x27;createdAt&#x3D;gt:yyyy-mm-dd&#x27; (&gt;)&lt;/li&gt;                                    &lt;li&gt;&#x27;createdAt&#x3D;gte:yyyy-mm-dd&#x27; (&gt;&#x3D;)&lt;/li&gt;                                    &lt;li&gt;&#x27;createdAt&#x3D;lt:yyyy-mm-dd&#x27; (&lt;)&lt;/li&gt;                                    &lt;li&gt;&#x27;createdAt&#x3D;lte:yyyy-mm-dd&#x27; (&lt;&#x3D;)&lt;/li&gt;                                    &lt;li&gt;Dates can also include the time. Example: 2017-03-08 13:24:17&lt;/li&gt;                                    &lt;li&gt;Without including the time we will use 00:00:00 as default. Example: 2017-03-08 00:00:00&lt;/li&gt;           &lt;/ul&gt; (optional)
      * @param  string $company_name Filter that restricts the search result to accounts that have a company name according to given filters.                                     &lt;br&gt; Usage: &lt;ul&gt;                                     &lt;li&gt;&#x27;companyName&#x3D;like:expamle&#x27;&lt;/li&gt;                                     &lt;li&gt;&#x27;companyName&#x3D;eq:example&#x27; (&#x3D;)&lt;/li&gt;                                     &lt;/ul&gt; (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -29141,9 +29141,9 @@ class AccountApi
      *
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesAccountModelsAccount
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountModelsAccount
      */
     public function restAccountsPost($body = null)
     {
@@ -29158,13 +29158,13 @@ class AccountApi
      *
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesAccountModelsAccount, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountModelsAccount, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsPostWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountModelsAccount';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountModelsAccount';
         $request = $this->restAccountsPostRequest($body);
 
         try {
@@ -29216,7 +29216,7 @@ class AccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesAccountModelsAccount',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountModelsAccount',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -29258,7 +29258,7 @@ class AccountApi
      */
     public function restAccountsPostAsyncWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountModelsAccount';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountModelsAccount';
         $request = $this->restAccountsPostRequest($body);
 
         return $this->client
@@ -29395,9 +29395,9 @@ class AccountApi
      * Create an address for existing order
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesAccountAddressModelsAddressOrderRelation
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountAddressModelsAddressOrderRelation
      */
     public function restOrdersAddressesPost()
     {
@@ -29411,13 +29411,13 @@ class AccountApi
      * Create an address for existing order
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesAccountAddressModelsAddressOrderRelation, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountAddressModelsAddressOrderRelation, HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersAddressesPostWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountAddressModelsAddressOrderRelation';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountAddressModelsAddressOrderRelation';
         $request = $this->restOrdersAddressesPostRequest();
 
         try {
@@ -29469,7 +29469,7 @@ class AccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesAccountAddressModelsAddressOrderRelation',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountAddressModelsAddressOrderRelation',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -29509,7 +29509,7 @@ class AccountApi
      */
     public function restOrdersAddressesPostAsyncWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountAddressModelsAddressOrderRelation';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountAddressModelsAddressOrderRelation';
         $request = $this->restOrdersAddressesPostRequest();
 
         return $this->client
@@ -29644,9 +29644,9 @@ class AccountApi
      * @param  int $order_id order_id (required)
      * @param  int $relation_type_id relation_type_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesAccountAddressModelsAddressOrderRelation
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountAddressModelsAddressOrderRelation
      */
     public function restOrdersOrderIdAddressesRelationTypeIdGet($order_id, $relation_type_id)
     {
@@ -29662,13 +29662,13 @@ class AccountApi
      * @param  int $order_id (required)
      * @param  int $relation_type_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesAccountAddressModelsAddressOrderRelation, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountAddressModelsAddressOrderRelation, HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersOrderIdAddressesRelationTypeIdGetWithHttpInfo($order_id, $relation_type_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountAddressModelsAddressOrderRelation';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountAddressModelsAddressOrderRelation';
         $request = $this->restOrdersOrderIdAddressesRelationTypeIdGetRequest($order_id, $relation_type_id);
 
         try {
@@ -29720,7 +29720,7 @@ class AccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesAccountAddressModelsAddressOrderRelation',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountAddressModelsAddressOrderRelation',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -29764,7 +29764,7 @@ class AccountApi
      */
     public function restOrdersOrderIdAddressesRelationTypeIdGetAsyncWithHttpInfo($order_id, $relation_type_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountAddressModelsAddressOrderRelation';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountAddressModelsAddressOrderRelation';
         $request = $this->restOrdersOrderIdAddressesRelationTypeIdGetRequest($order_id, $relation_type_id);
 
         return $this->client
@@ -29927,9 +29927,9 @@ class AccountApi
      * Create an address for existing warehouse
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesAccountAddressModelsAddressWarehouseRelation
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountAddressModelsAddressWarehouseRelation
      */
     public function restStockmanagementWarehousesAddressesPost()
     {
@@ -29943,13 +29943,13 @@ class AccountApi
      * Create an address for existing warehouse
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesAccountAddressModelsAddressWarehouseRelation, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountAddressModelsAddressWarehouseRelation, HTTP status code, HTTP response headers (array of strings)
      */
     public function restStockmanagementWarehousesAddressesPostWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountAddressModelsAddressWarehouseRelation';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountAddressModelsAddressWarehouseRelation';
         $request = $this->restStockmanagementWarehousesAddressesPostRequest();
 
         try {
@@ -30001,7 +30001,7 @@ class AccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesAccountAddressModelsAddressWarehouseRelation',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountAddressModelsAddressWarehouseRelation',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -30041,7 +30041,7 @@ class AccountApi
      */
     public function restStockmanagementWarehousesAddressesPostAsyncWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountAddressModelsAddressWarehouseRelation';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountAddressModelsAddressWarehouseRelation';
         $request = $this->restStockmanagementWarehousesAddressesPostRequest();
 
         return $this->client
@@ -30176,9 +30176,9 @@ class AccountApi
      * @param  int $warehouse_id warehouse_id (required)
      * @param  int $relation_type_id relation_type_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesAccountAddressModelsAddressWarehouseRelation
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountAddressModelsAddressWarehouseRelation
      */
     public function restStockmanagementWarehousesWarehouseIdAddressesRelationTypeIdGet($warehouse_id, $relation_type_id)
     {
@@ -30194,13 +30194,13 @@ class AccountApi
      * @param  int $warehouse_id (required)
      * @param  int $relation_type_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesAccountAddressModelsAddressWarehouseRelation, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountAddressModelsAddressWarehouseRelation, HTTP status code, HTTP response headers (array of strings)
      */
     public function restStockmanagementWarehousesWarehouseIdAddressesRelationTypeIdGetWithHttpInfo($warehouse_id, $relation_type_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountAddressModelsAddressWarehouseRelation';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountAddressModelsAddressWarehouseRelation';
         $request = $this->restStockmanagementWarehousesWarehouseIdAddressesRelationTypeIdGetRequest($warehouse_id, $relation_type_id);
 
         try {
@@ -30252,7 +30252,7 @@ class AccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesAccountAddressModelsAddressWarehouseRelation',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountAddressModelsAddressWarehouseRelation',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -30296,7 +30296,7 @@ class AccountApi
      */
     public function restStockmanagementWarehousesWarehouseIdAddressesRelationTypeIdGetAsyncWithHttpInfo($warehouse_id, $relation_type_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountAddressModelsAddressWarehouseRelation';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountAddressModelsAddressWarehouseRelation';
         $request = $this->restStockmanagementWarehousesWarehouseIdAddressesRelationTypeIdGetRequest($warehouse_id, $relation_type_id);
 
         return $this->client

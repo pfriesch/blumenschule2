@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  BSApp\Service\plentymarketsAPI
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace BSApp\Service\plentymarketsAPI\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \BSApp\Service\plentymarketsAPI\ObjectSerializer;
 
 /**
  * PlentyModulesItemBarcodeModelsBarcode Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  BSApp\Service\plentymarketsAPI
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -60,7 +60,7 @@ class PlentyModulesItemBarcodeModelsBarcode implements ModelInterface, ArrayAcce
 'name' => 'string',
 'type' => 'string',
 'created_at' => 'string',
-'referrers' => '\Swagger\Client\Model\PlentyModulesItemBarcodeModelsBarcodeLinkReferrer[]'    ];
+'referrers' => '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemBarcodeModelsBarcodeLinkReferrer[]'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -319,7 +319,7 @@ class PlentyModulesItemBarcodeModelsBarcode implements ModelInterface, ArrayAcce
     /**
      * Gets referrers
      *
-     * @return \Swagger\Client\Model\PlentyModulesItemBarcodeModelsBarcodeLinkReferrer[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemBarcodeModelsBarcodeLinkReferrer[]
      */
     public function getReferrers()
     {
@@ -329,7 +329,7 @@ class PlentyModulesItemBarcodeModelsBarcode implements ModelInterface, ArrayAcce
     /**
      * Sets referrers
      *
-     * @param \Swagger\Client\Model\PlentyModulesItemBarcodeModelsBarcodeLinkReferrer[] $referrers (List)
+     * @param \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemBarcodeModelsBarcodeLinkReferrer[] $referrers (List)
      *
      * @return $this
      */

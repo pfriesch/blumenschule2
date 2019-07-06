@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  BSApp\Service\plentymarketsAPI
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace BSApp\Service\plentymarketsAPI\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -33,16 +33,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use BSApp\Service\plentymarketsAPI\ApiException;
+use BSApp\Service\plentymarketsAPI\Configuration;
+use BSApp\Service\plentymarketsAPI\HeaderSelector;
+use BSApp\Service\plentymarketsAPI\ObjectSerializer;
 
 /**
  * CategoryApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  BSApp\Service\plentymarketsAPI
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -103,7 +103,7 @@ class CategoryApi
      * @param  bool $linklist Filter for the linklist of categories (optional)
      * @param  string $updated_at Filter restricts the list of results to items updated after the specified date. The date can be specified as unix timestamps or in the ISO 8601 date format. The PHP function strtotime is also supported. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -130,7 +130,7 @@ class CategoryApi
      * @param  bool $linklist Filter for the linklist of categories (optional)
      * @param  string $updated_at Filter restricts the list of results to items updated after the specified date. The date can be specified as unix timestamps or in the ISO 8601 date format. The PHP function strtotime is also supported. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -439,9 +439,9 @@ class CategoryApi
      *
      * @param  int $id id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse
      */
     public function restCategoriesIdClientsDelete($id)
     {
@@ -456,13 +456,13 @@ class CategoryApi
      *
      * @param  int $id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function restCategoriesIdClientsDeleteWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse';
         $request = $this->restCategoriesIdClientsDeleteRequest($id);
 
         try {
@@ -514,7 +514,7 @@ class CategoryApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -556,7 +556,7 @@ class CategoryApi
      */
     public function restCategoriesIdClientsDeleteAsyncWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse';
         $request = $this->restCategoriesIdClientsDeleteRequest($id);
 
         return $this->client
@@ -705,9 +705,9 @@ class CategoryApi
      *
      * @param  int $id id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse
      */
     public function restCategoriesIdDelete($id)
     {
@@ -722,13 +722,13 @@ class CategoryApi
      *
      * @param  int $id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function restCategoriesIdDeleteWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse';
         $request = $this->restCategoriesIdDeleteRequest($id);
 
         try {
@@ -780,7 +780,7 @@ class CategoryApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -822,7 +822,7 @@ class CategoryApi
      */
     public function restCategoriesIdDeleteAsyncWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse';
         $request = $this->restCategoriesIdDeleteRequest($id);
 
         return $this->client
@@ -972,9 +972,9 @@ class CategoryApi
      * @param  int $id id (required)
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse
      */
     public function restCategoriesIdDetailsDelete($id, $body = null)
     {
@@ -990,13 +990,13 @@ class CategoryApi
      * @param  int $id (required)
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function restCategoriesIdDetailsDeleteWithHttpInfo($id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse';
         $request = $this->restCategoriesIdDetailsDeleteRequest($id, $body);
 
         try {
@@ -1048,7 +1048,7 @@ class CategoryApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1092,7 +1092,7 @@ class CategoryApi
      */
     public function restCategoriesIdDetailsDeleteAsyncWithHttpInfo($id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyRepositoriesModelsDeleteResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse';
         $request = $this->restCategoriesIdDetailsDeleteRequest($id, $body);
 
         return $this->client
@@ -1256,7 +1256,7 @@ class CategoryApi
      * @param  bool $linklist Filter for the linklist of categories (optional)
      * @param  string $updated_at Filter restricts the list of results to items updated after the specified date. The date can be specified as unix timestamps or in the ISO 8601 date format. The PHP function strtotime is also supported. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -1284,7 +1284,7 @@ class CategoryApi
      * @param  bool $linklist Filter for the linklist of categories (optional)
      * @param  string $updated_at Filter restricts the list of results to items updated after the specified date. The date can be specified as unix timestamps or in the ISO 8601 date format. The PHP function strtotime is also supported. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1611,9 +1611,9 @@ class CategoryApi
      * @param  int $id id (required)
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesCategoryModelsCategory
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesCategoryModelsCategory
      */
     public function restCategoriesIdPut($id, $body = null)
     {
@@ -1629,13 +1629,13 @@ class CategoryApi
      * @param  int $id (required)
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesCategoryModelsCategory, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesCategoryModelsCategory, HTTP status code, HTTP response headers (array of strings)
      */
     public function restCategoriesIdPutWithHttpInfo($id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesCategoryModelsCategory';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesCategoryModelsCategory';
         $request = $this->restCategoriesIdPutRequest($id, $body);
 
         try {
@@ -1687,7 +1687,7 @@ class CategoryApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesCategoryModelsCategory',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesCategoryModelsCategory',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1731,7 +1731,7 @@ class CategoryApi
      */
     public function restCategoriesIdPutAsyncWithHttpInfo($id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesCategoryModelsCategory';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesCategoryModelsCategory';
         $request = $this->restCategoriesIdPutRequest($id, $body);
 
         return $this->client
@@ -1885,9 +1885,9 @@ class CategoryApi
      * @param  int $id id (required)
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesCategoryModelsCategoryTemplate
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesCategoryModelsCategoryTemplate
      */
     public function restCategoriesIdTemplatesDelete($id, $body = null)
     {
@@ -1903,13 +1903,13 @@ class CategoryApi
      * @param  int $id (required)
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesCategoryModelsCategoryTemplate, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesCategoryModelsCategoryTemplate, HTTP status code, HTTP response headers (array of strings)
      */
     public function restCategoriesIdTemplatesDeleteWithHttpInfo($id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesCategoryModelsCategoryTemplate';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesCategoryModelsCategoryTemplate';
         $request = $this->restCategoriesIdTemplatesDeleteRequest($id, $body);
 
         try {
@@ -1961,7 +1961,7 @@ class CategoryApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesCategoryModelsCategoryTemplate',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesCategoryModelsCategoryTemplate',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2005,7 +2005,7 @@ class CategoryApi
      */
     public function restCategoriesIdTemplatesDeleteAsyncWithHttpInfo($id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesCategoryModelsCategoryTemplate';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesCategoryModelsCategoryTemplate';
         $request = $this->restCategoriesIdTemplatesDeleteRequest($id, $body);
 
         return $this->client
@@ -2161,9 +2161,9 @@ class CategoryApi
      * @param  object $body body (optional)
      * @param  string $lang The &lt;a href&#x3D;&#x27;https://developers.plentymarkets.com/rest-doc/introduction#countries&#x27; target&#x3D;&#x27;_blank&#x27;&gt;language&lt;/a&gt; of the template. If no language filter is set, the default language of the system is used. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesCategoryModelsCategoryTemplate
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesCategoryModelsCategoryTemplate
      */
     public function restCategoriesIdTemplatesGet($plenty_id, $id, $body = null, $lang = null)
     {
@@ -2181,13 +2181,13 @@ class CategoryApi
      * @param  object $body (optional)
      * @param  string $lang The &lt;a href&#x3D;&#x27;https://developers.plentymarkets.com/rest-doc/introduction#countries&#x27; target&#x3D;&#x27;_blank&#x27;&gt;language&lt;/a&gt; of the template. If no language filter is set, the default language of the system is used. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesCategoryModelsCategoryTemplate, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesCategoryModelsCategoryTemplate, HTTP status code, HTTP response headers (array of strings)
      */
     public function restCategoriesIdTemplatesGetWithHttpInfo($plenty_id, $id, $body = null, $lang = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesCategoryModelsCategoryTemplate';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesCategoryModelsCategoryTemplate';
         $request = $this->restCategoriesIdTemplatesGetRequest($plenty_id, $id, $body, $lang);
 
         try {
@@ -2239,7 +2239,7 @@ class CategoryApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesCategoryModelsCategoryTemplate',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesCategoryModelsCategoryTemplate',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2287,7 +2287,7 @@ class CategoryApi
      */
     public function restCategoriesIdTemplatesGetAsyncWithHttpInfo($plenty_id, $id, $body = null, $lang = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesCategoryModelsCategoryTemplate';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesCategoryModelsCategoryTemplate';
         $request = $this->restCategoriesIdTemplatesGetRequest($plenty_id, $id, $body, $lang);
 
         return $this->client
@@ -2457,9 +2457,9 @@ class CategoryApi
      * @param  int $id id (required)
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesCategoryModelsCategoryTemplate
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesCategoryModelsCategoryTemplate
      */
     public function restCategoriesIdTemplatesPut($id, $body = null)
     {
@@ -2475,13 +2475,13 @@ class CategoryApi
      * @param  int $id (required)
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesCategoryModelsCategoryTemplate, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesCategoryModelsCategoryTemplate, HTTP status code, HTTP response headers (array of strings)
      */
     public function restCategoriesIdTemplatesPutWithHttpInfo($id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesCategoryModelsCategoryTemplate';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesCategoryModelsCategoryTemplate';
         $request = $this->restCategoriesIdTemplatesPutRequest($id, $body);
 
         try {
@@ -2533,7 +2533,7 @@ class CategoryApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesCategoryModelsCategoryTemplate',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesCategoryModelsCategoryTemplate',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2577,7 +2577,7 @@ class CategoryApi
      */
     public function restCategoriesIdTemplatesPutAsyncWithHttpInfo($id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesCategoryModelsCategoryTemplate';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesCategoryModelsCategoryTemplate';
         $request = $this->restCategoriesIdTemplatesPutRequest($id, $body);
 
         return $this->client
@@ -2730,9 +2730,9 @@ class CategoryApi
      *
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesCategoryModelsCategory[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesCategoryModelsCategory[]
      */
     public function restCategoriesPost($body = null)
     {
@@ -2747,13 +2747,13 @@ class CategoryApi
      *
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesCategoryModelsCategory[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesCategoryModelsCategory[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restCategoriesPostWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesCategoryModelsCategory[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesCategoryModelsCategory[]';
         $request = $this->restCategoriesPostRequest($body);
 
         try {
@@ -2805,7 +2805,7 @@ class CategoryApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesCategoryModelsCategory[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesCategoryModelsCategory[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2847,7 +2847,7 @@ class CategoryApi
      */
     public function restCategoriesPostAsyncWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesCategoryModelsCategory[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesCategoryModelsCategory[]';
         $request = $this->restCategoriesPostRequest($body);
 
         return $this->client
@@ -2985,9 +2985,9 @@ class CategoryApi
      *
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesCategoryModelsCategory[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesCategoryModelsCategory[]
      */
     public function restCategoriesPut($body = null)
     {
@@ -3002,13 +3002,13 @@ class CategoryApi
      *
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesCategoryModelsCategory[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesCategoryModelsCategory[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restCategoriesPutWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesCategoryModelsCategory[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesCategoryModelsCategory[]';
         $request = $this->restCategoriesPutRequest($body);
 
         try {
@@ -3060,7 +3060,7 @@ class CategoryApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesCategoryModelsCategory[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesCategoryModelsCategory[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3102,7 +3102,7 @@ class CategoryApi
      */
     public function restCategoriesPutAsyncWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesCategoryModelsCategory[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesCategoryModelsCategory[]';
         $request = $this->restCategoriesPutRequest($body);
 
         return $this->client
@@ -3242,9 +3242,9 @@ class CategoryApi
      * @param  int $items_per_page The number of results per page (optional)
      * @param  string $type The category type. Available values: item, container, content, blog (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyRepositoriesModelsPaginationResponse
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsPaginationResponse
      */
     public function restCategoryBranchesGet($page = null, $items_per_page = null, $type = null)
     {
@@ -3261,13 +3261,13 @@ class CategoryApi
      * @param  int $items_per_page The number of results per page (optional)
      * @param  string $type The category type. Available values: item, container, content, blog (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyRepositoriesModelsPaginationResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsPaginationResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function restCategoryBranchesGetWithHttpInfo($page = null, $items_per_page = null, $type = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyRepositoriesModelsPaginationResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsPaginationResponse';
         $request = $this->restCategoryBranchesGetRequest($page, $items_per_page, $type);
 
         try {
@@ -3319,7 +3319,7 @@ class CategoryApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyRepositoriesModelsPaginationResponse',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsPaginationResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3365,7 +3365,7 @@ class CategoryApi
      */
     public function restCategoryBranchesGetAsyncWithHttpInfo($page = null, $items_per_page = null, $type = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyRepositoriesModelsPaginationResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsPaginationResponse';
         $request = $this->restCategoryBranchesGetRequest($page, $items_per_page, $type);
 
         return $this->client
@@ -3514,9 +3514,9 @@ class CategoryApi
      *
      * @param  int $id The unique category ID (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesCategoryModelsCategoryBranch
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesCategoryModelsCategoryBranch
      */
     public function restCategoryBranchesIdGet($id)
     {
@@ -3531,13 +3531,13 @@ class CategoryApi
      *
      * @param  int $id The unique category ID (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesCategoryModelsCategoryBranch, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesCategoryModelsCategoryBranch, HTTP status code, HTTP response headers (array of strings)
      */
     public function restCategoryBranchesIdGetWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesCategoryModelsCategoryBranch';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesCategoryModelsCategoryBranch';
         $request = $this->restCategoryBranchesIdGetRequest($id);
 
         try {
@@ -3589,7 +3589,7 @@ class CategoryApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesCategoryModelsCategoryBranch',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesCategoryModelsCategoryBranch',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3631,7 +3631,7 @@ class CategoryApi
      */
     public function restCategoryBranchesIdGetAsyncWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesCategoryModelsCategoryBranch';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesCategoryModelsCategoryBranch';
         $request = $this->restCategoryBranchesIdGetRequest($id);
 
         return $this->client

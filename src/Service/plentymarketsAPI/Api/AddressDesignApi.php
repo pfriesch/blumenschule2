@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  BSApp\Service\plentymarketsAPI
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace BSApp\Service\plentymarketsAPI\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -33,16 +33,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use BSApp\Service\plentymarketsAPI\ApiException;
+use BSApp\Service\plentymarketsAPI\Configuration;
+use BSApp\Service\plentymarketsAPI\HeaderSelector;
+use BSApp\Service\plentymarketsAPI\ObjectSerializer;
 
 /**
  * AddressDesignApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  BSApp\Service\plentymarketsAPI
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -93,9 +93,9 @@ class AddressDesignApi
      *
      * @param  int $country_id The ID of the country (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesAddressDesignModelsAddressLayout
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAddressDesignModelsAddressLayout
      */
     public function restAddressLayoutCountryCountryIdGet($country_id)
     {
@@ -110,13 +110,13 @@ class AddressDesignApi
      *
      * @param  int $country_id The ID of the country (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesAddressDesignModelsAddressLayout, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAddressDesignModelsAddressLayout, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAddressLayoutCountryCountryIdGetWithHttpInfo($country_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAddressDesignModelsAddressLayout';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAddressDesignModelsAddressLayout';
         $request = $this->restAddressLayoutCountryCountryIdGetRequest($country_id);
 
         try {
@@ -168,7 +168,7 @@ class AddressDesignApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesAddressDesignModelsAddressLayout',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAddressDesignModelsAddressLayout',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -210,7 +210,7 @@ class AddressDesignApi
      */
     public function restAddressLayoutCountryCountryIdGetAsyncWithHttpInfo($country_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAddressDesignModelsAddressLayout';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAddressDesignModelsAddressLayout';
         $request = $this->restAddressLayoutCountryCountryIdGetRequest($country_id);
 
         return $this->client
@@ -358,9 +358,9 @@ class AddressDesignApi
      * Get default layout
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesAddressDesignModelsAddressLayout
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAddressDesignModelsAddressLayout
      */
     public function restAddressLayoutDefaultGet()
     {
@@ -374,13 +374,13 @@ class AddressDesignApi
      * Get default layout
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesAddressDesignModelsAddressLayout, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAddressDesignModelsAddressLayout, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAddressLayoutDefaultGetWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAddressDesignModelsAddressLayout';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAddressDesignModelsAddressLayout';
         $request = $this->restAddressLayoutDefaultGetRequest();
 
         try {
@@ -432,7 +432,7 @@ class AddressDesignApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesAddressDesignModelsAddressLayout',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAddressDesignModelsAddressLayout',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -472,7 +472,7 @@ class AddressDesignApi
      */
     public function restAddressLayoutDefaultGetAsyncWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAddressDesignModelsAddressLayout';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAddressDesignModelsAddressLayout';
         $request = $this->restAddressLayoutDefaultGetRequest();
 
         return $this->client
@@ -605,9 +605,9 @@ class AddressDesignApi
      * Get all the available fields.
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\Mixed
+     * @return \BSApp\Service\plentymarketsAPI\Model\Mixed
      */
     public function restAddressLayoutFieldsGet()
     {
@@ -621,13 +621,13 @@ class AddressDesignApi
      * Get all the available fields.
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\Mixed, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\Mixed, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAddressLayoutFieldsGetWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\Mixed';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\Mixed';
         $request = $this->restAddressLayoutFieldsGetRequest();
 
         try {
@@ -679,7 +679,7 @@ class AddressDesignApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\Mixed',
+                        '\BSApp\Service\plentymarketsAPI\Model\Mixed',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -719,7 +719,7 @@ class AddressDesignApi
      */
     public function restAddressLayoutFieldsGetAsyncWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\Mixed';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\Mixed';
         $request = $this->restAddressLayoutFieldsGetRequest();
 
         return $this->client
@@ -852,9 +852,9 @@ class AddressDesignApi
      * Get all layouts with their contents
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesAddressDesignModelsAddressLayout[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAddressDesignModelsAddressLayout[]
      */
     public function restAddressLayoutGet()
     {
@@ -868,13 +868,13 @@ class AddressDesignApi
      * Get all layouts with their contents
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesAddressDesignModelsAddressLayout[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAddressDesignModelsAddressLayout[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restAddressLayoutGetWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAddressDesignModelsAddressLayout[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAddressDesignModelsAddressLayout[]';
         $request = $this->restAddressLayoutGetRequest();
 
         try {
@@ -926,7 +926,7 @@ class AddressDesignApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesAddressDesignModelsAddressLayout[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAddressDesignModelsAddressLayout[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -966,7 +966,7 @@ class AddressDesignApi
      */
     public function restAddressLayoutGetAsyncWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAddressDesignModelsAddressLayout[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAddressDesignModelsAddressLayout[]';
         $request = $this->restAddressLayoutGetRequest();
 
         return $this->client
@@ -1100,9 +1100,9 @@ class AddressDesignApi
      *
      * @param  string $layout The layout array (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesAddressDesignModelsAddressLayout
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAddressDesignModelsAddressLayout
      */
     public function restAddressLayoutPost($layout)
     {
@@ -1117,13 +1117,13 @@ class AddressDesignApi
      *
      * @param  string $layout The layout array (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesAddressDesignModelsAddressLayout, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAddressDesignModelsAddressLayout, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAddressLayoutPostWithHttpInfo($layout)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAddressDesignModelsAddressLayout';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAddressDesignModelsAddressLayout';
         $request = $this->restAddressLayoutPostRequest($layout);
 
         try {
@@ -1175,7 +1175,7 @@ class AddressDesignApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesAddressDesignModelsAddressLayout',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAddressDesignModelsAddressLayout',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1217,7 +1217,7 @@ class AddressDesignApi
      */
     public function restAddressLayoutPostAsyncWithHttpInfo($layout)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAddressDesignModelsAddressLayout';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAddressDesignModelsAddressLayout';
         $request = $this->restAddressLayoutPostRequest($layout);
 
         return $this->client
@@ -1362,9 +1362,9 @@ class AddressDesignApi
      *
      * @param  string $uuid The UUID of the current layout (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesOrderShippingCountriesModelsCountry[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderShippingCountriesModelsCountry[]
      */
     public function restAddressLayoutUsedCountriesUuidGet($uuid)
     {
@@ -1379,13 +1379,13 @@ class AddressDesignApi
      *
      * @param  string $uuid The UUID of the current layout (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesOrderShippingCountriesModelsCountry[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderShippingCountriesModelsCountry[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restAddressLayoutUsedCountriesUuidGetWithHttpInfo($uuid)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderShippingCountriesModelsCountry[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderShippingCountriesModelsCountry[]';
         $request = $this->restAddressLayoutUsedCountriesUuidGetRequest($uuid);
 
         try {
@@ -1437,7 +1437,7 @@ class AddressDesignApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesOrderShippingCountriesModelsCountry[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderShippingCountriesModelsCountry[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1479,7 +1479,7 @@ class AddressDesignApi
      */
     public function restAddressLayoutUsedCountriesUuidGetAsyncWithHttpInfo($uuid)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesOrderShippingCountriesModelsCountry[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderShippingCountriesModelsCountry[]';
         $request = $this->restAddressLayoutUsedCountriesUuidGetRequest($uuid);
 
         return $this->client
@@ -1628,9 +1628,9 @@ class AddressDesignApi
      *
      * @param  string $uuid The uuid of the layout (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\Mixed
+     * @return \BSApp\Service\plentymarketsAPI\Model\Mixed
      */
     public function restAddressLayoutUuidDelete($uuid)
     {
@@ -1645,13 +1645,13 @@ class AddressDesignApi
      *
      * @param  string $uuid The uuid of the layout (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\Mixed, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\Mixed, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAddressLayoutUuidDeleteWithHttpInfo($uuid)
     {
-        $returnType = '\Swagger\Client\Model\Mixed';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\Mixed';
         $request = $this->restAddressLayoutUuidDeleteRequest($uuid);
 
         try {
@@ -1703,7 +1703,7 @@ class AddressDesignApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\Mixed',
+                        '\BSApp\Service\plentymarketsAPI\Model\Mixed',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1745,7 +1745,7 @@ class AddressDesignApi
      */
     public function restAddressLayoutUuidDeleteAsyncWithHttpInfo($uuid)
     {
-        $returnType = '\Swagger\Client\Model\Mixed';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\Mixed';
         $request = $this->restAddressLayoutUuidDeleteRequest($uuid);
 
         return $this->client
@@ -1894,9 +1894,9 @@ class AddressDesignApi
      *
      * @param  string $uuid The UUID of the layout (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesAddressDesignModelsAddressLayout
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAddressDesignModelsAddressLayout
      */
     public function restAddressLayoutUuidGet($uuid)
     {
@@ -1911,13 +1911,13 @@ class AddressDesignApi
      *
      * @param  string $uuid The UUID of the layout (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesAddressDesignModelsAddressLayout, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAddressDesignModelsAddressLayout, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAddressLayoutUuidGetWithHttpInfo($uuid)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAddressDesignModelsAddressLayout';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAddressDesignModelsAddressLayout';
         $request = $this->restAddressLayoutUuidGetRequest($uuid);
 
         try {
@@ -1969,7 +1969,7 @@ class AddressDesignApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesAddressDesignModelsAddressLayout',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAddressDesignModelsAddressLayout',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2011,7 +2011,7 @@ class AddressDesignApi
      */
     public function restAddressLayoutUuidGetAsyncWithHttpInfo($uuid)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAddressDesignModelsAddressLayout';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAddressDesignModelsAddressLayout';
         $request = $this->restAddressLayoutUuidGetRequest($uuid);
 
         return $this->client
@@ -2161,9 +2161,9 @@ class AddressDesignApi
      * @param  string $layout The layout array (required)
      * @param  string $uuid The UUID of the layout (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesAddressDesignModelsAddressLayout
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAddressDesignModelsAddressLayout
      */
     public function restAddressLayoutUuidPut($layout, $uuid)
     {
@@ -2179,13 +2179,13 @@ class AddressDesignApi
      * @param  string $layout The layout array (required)
      * @param  string $uuid The UUID of the layout (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesAddressDesignModelsAddressLayout, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAddressDesignModelsAddressLayout, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAddressLayoutUuidPutWithHttpInfo($layout, $uuid)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAddressDesignModelsAddressLayout';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAddressDesignModelsAddressLayout';
         $request = $this->restAddressLayoutUuidPutRequest($layout, $uuid);
 
         try {
@@ -2237,7 +2237,7 @@ class AddressDesignApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesAddressDesignModelsAddressLayout',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAddressDesignModelsAddressLayout',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2281,7 +2281,7 @@ class AddressDesignApi
      */
     public function restAddressLayoutUuidPutAsyncWithHttpInfo($layout, $uuid)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAddressDesignModelsAddressLayout';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAddressDesignModelsAddressLayout';
         $request = $this->restAddressLayoutUuidPutRequest($layout, $uuid);
 
         return $this->client

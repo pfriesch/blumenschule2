@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  BSApp\Service\plentymarketsAPI
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace BSApp\Service\plentymarketsAPI\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \BSApp\Service\plentymarketsAPI\ObjectSerializer;
 
 /**
  * PlentyModulesItemItemImageModelsItemImage Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  BSApp\Service\plentymarketsAPI
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -72,8 +72,8 @@ class PlentyModulesItemItemImageModelsItemImage implements ModelInterface, Array
 'url_middle' => 'string',
 'url_preview' => 'string',
 'url_second_preview' => 'string',
-'names' => '\Swagger\Client\Model\PlentyModulesItemItemImageModelsItemImageName[]',
-'availabilities' => '\Swagger\Client\Model\PlentyModulesItemItemImageModelsItemImageAvailability[]'    ];
+'names' => '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemItemImageModelsItemImageName[]',
+'availabilities' => '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemItemImageModelsItemImageAvailability[]'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -685,7 +685,7 @@ class PlentyModulesItemItemImageModelsItemImage implements ModelInterface, Array
     /**
      * Gets names
      *
-     * @return \Swagger\Client\Model\PlentyModulesItemItemImageModelsItemImageName[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemItemImageModelsItemImageName[]
      */
     public function getNames()
     {
@@ -695,7 +695,7 @@ class PlentyModulesItemItemImageModelsItemImage implements ModelInterface, Array
     /**
      * Sets names
      *
-     * @param \Swagger\Client\Model\PlentyModulesItemItemImageModelsItemImageName[] $names Lists the image's name details as an array. (List)
+     * @param \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemItemImageModelsItemImageName[] $names Lists the image's name details as an array. (List)
      *
      * @return $this
      */
@@ -709,7 +709,7 @@ class PlentyModulesItemItemImageModelsItemImage implements ModelInterface, Array
     /**
      * Gets availabilities
      *
-     * @return \Swagger\Client\Model\PlentyModulesItemItemImageModelsItemImageAvailability[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemItemImageModelsItemImageAvailability[]
      */
     public function getAvailabilities()
     {
@@ -719,7 +719,7 @@ class PlentyModulesItemItemImageModelsItemImage implements ModelInterface, Array
     /**
      * Sets availabilities
      *
-     * @param \Swagger\Client\Model\PlentyModulesItemItemImageModelsItemImageAvailability[] $availabilities Lists the image's availability details as an array. (List)
+     * @param \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemItemImageModelsItemImageAvailability[] $availabilities Lists the image's availability details as an array. (List)
      *
      * @return $this
      */

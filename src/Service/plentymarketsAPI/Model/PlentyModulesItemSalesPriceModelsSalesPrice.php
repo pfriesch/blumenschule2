@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  BSApp\Service\plentymarketsAPI
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace BSApp\Service\plentymarketsAPI\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \BSApp\Service\plentymarketsAPI\ObjectSerializer;
 
 /**
  * PlentyModulesItemSalesPriceModelsSalesPrice Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  BSApp\Service\plentymarketsAPI
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -64,13 +64,13 @@ class PlentyModulesItemSalesPriceModelsSalesPrice implements ModelInterface, Arr
 'is_displayed_by_default' => 'bool',
 'is_live_conversion' => 'bool',
 'interval' => 'string',
-'names' => '\Swagger\Client\Model\PlentyModulesItemSalesPriceModelsSalesPriceName[]',
-'accounts' => '\Swagger\Client\Model\PlentyModulesItemSalesPriceModelsSalesPriceAccount[]',
-'countries' => '\Swagger\Client\Model\PlentyModulesItemSalesPriceModelsSalesPriceCountry[]',
-'currencies' => '\Swagger\Client\Model\PlentyModulesItemSalesPriceModelsSalesPriceCurrency[]',
-'customer_classes' => '\Swagger\Client\Model\PlentyModulesItemSalesPriceModelsSalesPriceCustomerClass[]',
-'referrers' => '\Swagger\Client\Model\PlentyModulesItemSalesPriceModelsSalesPriceReferrer[]',
-'clients' => '\Swagger\Client\Model\PlentyModulesItemSalesPriceModelsSalesPriceOnlineStore[]'    ];
+'names' => '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSalesPriceModelsSalesPriceName[]',
+'accounts' => '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSalesPriceModelsSalesPriceAccount[]',
+'countries' => '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSalesPriceModelsSalesPriceCountry[]',
+'currencies' => '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSalesPriceModelsSalesPriceCurrency[]',
+'customer_classes' => '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSalesPriceModelsSalesPriceCustomerClass[]',
+'referrers' => '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSalesPriceModelsSalesPriceReferrer[]',
+'clients' => '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSalesPriceModelsSalesPriceOnlineStore[]'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -475,7 +475,7 @@ class PlentyModulesItemSalesPriceModelsSalesPrice implements ModelInterface, Arr
     /**
      * Gets names
      *
-     * @return \Swagger\Client\Model\PlentyModulesItemSalesPriceModelsSalesPriceName[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSalesPriceModelsSalesPriceName[]
      */
     public function getNames()
     {
@@ -485,7 +485,7 @@ class PlentyModulesItemSalesPriceModelsSalesPrice implements ModelInterface, Arr
     /**
      * Sets names
      *
-     * @param \Swagger\Client\Model\PlentyModulesItemSalesPriceModelsSalesPriceName[] $names names (List)
+     * @param \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSalesPriceModelsSalesPriceName[] $names names (List)
      *
      * @return $this
      */
@@ -499,7 +499,7 @@ class PlentyModulesItemSalesPriceModelsSalesPrice implements ModelInterface, Arr
     /**
      * Gets accounts
      *
-     * @return \Swagger\Client\Model\PlentyModulesItemSalesPriceModelsSalesPriceAccount[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSalesPriceModelsSalesPriceAccount[]
      */
     public function getAccounts()
     {
@@ -509,7 +509,7 @@ class PlentyModulesItemSalesPriceModelsSalesPrice implements ModelInterface, Arr
     /**
      * Sets accounts
      *
-     * @param \Swagger\Client\Model\PlentyModulesItemSalesPriceModelsSalesPriceAccount[] $accounts accounts (List)
+     * @param \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSalesPriceModelsSalesPriceAccount[] $accounts accounts (List)
      *
      * @return $this
      */
@@ -523,7 +523,7 @@ class PlentyModulesItemSalesPriceModelsSalesPrice implements ModelInterface, Arr
     /**
      * Gets countries
      *
-     * @return \Swagger\Client\Model\PlentyModulesItemSalesPriceModelsSalesPriceCountry[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSalesPriceModelsSalesPriceCountry[]
      */
     public function getCountries()
     {
@@ -533,7 +533,7 @@ class PlentyModulesItemSalesPriceModelsSalesPrice implements ModelInterface, Arr
     /**
      * Sets countries
      *
-     * @param \Swagger\Client\Model\PlentyModulesItemSalesPriceModelsSalesPriceCountry[] $countries countries (List)
+     * @param \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSalesPriceModelsSalesPriceCountry[] $countries countries (List)
      *
      * @return $this
      */
@@ -547,7 +547,7 @@ class PlentyModulesItemSalesPriceModelsSalesPrice implements ModelInterface, Arr
     /**
      * Gets currencies
      *
-     * @return \Swagger\Client\Model\PlentyModulesItemSalesPriceModelsSalesPriceCurrency[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSalesPriceModelsSalesPriceCurrency[]
      */
     public function getCurrencies()
     {
@@ -557,7 +557,7 @@ class PlentyModulesItemSalesPriceModelsSalesPrice implements ModelInterface, Arr
     /**
      * Sets currencies
      *
-     * @param \Swagger\Client\Model\PlentyModulesItemSalesPriceModelsSalesPriceCurrency[] $currencies currencies (List)
+     * @param \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSalesPriceModelsSalesPriceCurrency[] $currencies currencies (List)
      *
      * @return $this
      */
@@ -571,7 +571,7 @@ class PlentyModulesItemSalesPriceModelsSalesPrice implements ModelInterface, Arr
     /**
      * Gets customer_classes
      *
-     * @return \Swagger\Client\Model\PlentyModulesItemSalesPriceModelsSalesPriceCustomerClass[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSalesPriceModelsSalesPriceCustomerClass[]
      */
     public function getCustomerClasses()
     {
@@ -581,7 +581,7 @@ class PlentyModulesItemSalesPriceModelsSalesPrice implements ModelInterface, Arr
     /**
      * Sets customer_classes
      *
-     * @param \Swagger\Client\Model\PlentyModulesItemSalesPriceModelsSalesPriceCustomerClass[] $customer_classes customerClasses (List)
+     * @param \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSalesPriceModelsSalesPriceCustomerClass[] $customer_classes customerClasses (List)
      *
      * @return $this
      */
@@ -595,7 +595,7 @@ class PlentyModulesItemSalesPriceModelsSalesPrice implements ModelInterface, Arr
     /**
      * Gets referrers
      *
-     * @return \Swagger\Client\Model\PlentyModulesItemSalesPriceModelsSalesPriceReferrer[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSalesPriceModelsSalesPriceReferrer[]
      */
     public function getReferrers()
     {
@@ -605,7 +605,7 @@ class PlentyModulesItemSalesPriceModelsSalesPrice implements ModelInterface, Arr
     /**
      * Sets referrers
      *
-     * @param \Swagger\Client\Model\PlentyModulesItemSalesPriceModelsSalesPriceReferrer[] $referrers referrer (List)
+     * @param \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSalesPriceModelsSalesPriceReferrer[] $referrers referrer (List)
      *
      * @return $this
      */
@@ -619,7 +619,7 @@ class PlentyModulesItemSalesPriceModelsSalesPrice implements ModelInterface, Arr
     /**
      * Gets clients
      *
-     * @return \Swagger\Client\Model\PlentyModulesItemSalesPriceModelsSalesPriceOnlineStore[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSalesPriceModelsSalesPriceOnlineStore[]
      */
     public function getClients()
     {
@@ -629,7 +629,7 @@ class PlentyModulesItemSalesPriceModelsSalesPrice implements ModelInterface, Arr
     /**
      * Sets clients
      *
-     * @param \Swagger\Client\Model\PlentyModulesItemSalesPriceModelsSalesPriceOnlineStore[] $clients clients (List)
+     * @param \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemSalesPriceModelsSalesPriceOnlineStore[] $clients clients (List)
      *
      * @return $this
      */

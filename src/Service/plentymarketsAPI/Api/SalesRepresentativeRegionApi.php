@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  BSApp\Service\plentymarketsAPI
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace BSApp\Service\plentymarketsAPI\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -33,16 +33,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use BSApp\Service\plentymarketsAPI\ApiException;
+use BSApp\Service\plentymarketsAPI\Configuration;
+use BSApp\Service\plentymarketsAPI\HeaderSelector;
+use BSApp\Service\plentymarketsAPI\ObjectSerializer;
 
 /**
  * SalesRepresentativeRegionApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  BSApp\Service\plentymarketsAPI
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -92,9 +92,9 @@ class SalesRepresentativeRegionApi
      * @param  int $account_id account_id (required)
      * @param  int $contact_id contact_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesAccountModelsSalesRepresentativeRegion
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountModelsSalesRepresentativeRegion
      */
     public function restAccountsAccountIdContactsContactIdSalesRepresentativeRegionsGet($account_id, $contact_id)
     {
@@ -108,13 +108,13 @@ class SalesRepresentativeRegionApi
      * @param  int $account_id (required)
      * @param  int $contact_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesAccountModelsSalesRepresentativeRegion, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountModelsSalesRepresentativeRegion, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsAccountIdContactsContactIdSalesRepresentativeRegionsGetWithHttpInfo($account_id, $contact_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountModelsSalesRepresentativeRegion';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountModelsSalesRepresentativeRegion';
         $request = $this->restAccountsAccountIdContactsContactIdSalesRepresentativeRegionsGetRequest($account_id, $contact_id);
 
         try {
@@ -166,7 +166,7 @@ class SalesRepresentativeRegionApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesAccountModelsSalesRepresentativeRegion',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountModelsSalesRepresentativeRegion',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -210,7 +210,7 @@ class SalesRepresentativeRegionApi
      */
     public function restAccountsAccountIdContactsContactIdSalesRepresentativeRegionsGetAsyncWithHttpInfo($account_id, $contact_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountModelsSalesRepresentativeRegion';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountModelsSalesRepresentativeRegion';
         $request = $this->restAccountsAccountIdContactsContactIdSalesRepresentativeRegionsGetRequest($account_id, $contact_id);
 
         return $this->client
@@ -373,9 +373,9 @@ class SalesRepresentativeRegionApi
      * @param  int $account_id account_id (required)
      * @param  int $contact_id contact_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesAccountModelsSalesRepresentativeRegion
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountModelsSalesRepresentativeRegion
      */
     public function restAccountsAccountIdContactsContactIdSalesRepresentativeRegionsPost($account_id, $contact_id)
     {
@@ -389,13 +389,13 @@ class SalesRepresentativeRegionApi
      * @param  int $account_id (required)
      * @param  int $contact_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesAccountModelsSalesRepresentativeRegion, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountModelsSalesRepresentativeRegion, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsAccountIdContactsContactIdSalesRepresentativeRegionsPostWithHttpInfo($account_id, $contact_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountModelsSalesRepresentativeRegion';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountModelsSalesRepresentativeRegion';
         $request = $this->restAccountsAccountIdContactsContactIdSalesRepresentativeRegionsPostRequest($account_id, $contact_id);
 
         try {
@@ -447,7 +447,7 @@ class SalesRepresentativeRegionApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesAccountModelsSalesRepresentativeRegion',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountModelsSalesRepresentativeRegion',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -491,7 +491,7 @@ class SalesRepresentativeRegionApi
      */
     public function restAccountsAccountIdContactsContactIdSalesRepresentativeRegionsPostAsyncWithHttpInfo($account_id, $contact_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountModelsSalesRepresentativeRegion';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountModelsSalesRepresentativeRegion';
         $request = $this->restAccountsAccountIdContactsContactIdSalesRepresentativeRegionsPostRequest($account_id, $contact_id);
 
         return $this->client
@@ -653,9 +653,9 @@ class SalesRepresentativeRegionApi
      *
      * @param  int $contact_id contact_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\IlluminateSupportCollection
+     * @return \BSApp\Service\plentymarketsAPI\Model\IlluminateSupportCollection
      */
     public function restAccountsContactsContactIdSalesRepresentativeRegionsGet($contact_id)
     {
@@ -668,13 +668,13 @@ class SalesRepresentativeRegionApi
      *
      * @param  int $contact_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\IlluminateSupportCollection, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\IlluminateSupportCollection, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsContactsContactIdSalesRepresentativeRegionsGetWithHttpInfo($contact_id)
     {
-        $returnType = '\Swagger\Client\Model\IlluminateSupportCollection';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\IlluminateSupportCollection';
         $request = $this->restAccountsContactsContactIdSalesRepresentativeRegionsGetRequest($contact_id);
 
         try {
@@ -726,7 +726,7 @@ class SalesRepresentativeRegionApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\IlluminateSupportCollection',
+                        '\BSApp\Service\plentymarketsAPI\Model\IlluminateSupportCollection',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -768,7 +768,7 @@ class SalesRepresentativeRegionApi
      */
     public function restAccountsContactsContactIdSalesRepresentativeRegionsGetAsyncWithHttpInfo($contact_id)
     {
-        $returnType = '\Swagger\Client\Model\IlluminateSupportCollection';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\IlluminateSupportCollection';
         $request = $this->restAccountsContactsContactIdSalesRepresentativeRegionsGetRequest($contact_id);
 
         return $this->client
@@ -914,7 +914,7 @@ class SalesRepresentativeRegionApi
      * Operation restAccountsContactsSalesRepresentativeRegionsGet
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -928,7 +928,7 @@ class SalesRepresentativeRegionApi
      * Operation restAccountsContactsSalesRepresentativeRegionsGetWithHttpInfo
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1158,9 +1158,9 @@ class SalesRepresentativeRegionApi
      *
      * @param  int $sales_representative_region_id sales_representative_region_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyDataSimpleJsonResponse
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleJsonResponse
      */
     public function restAccountsSalesRepresentativeRegionsSalesRepresentativeRegionIdDelete($sales_representative_region_id)
     {
@@ -1173,13 +1173,13 @@ class SalesRepresentativeRegionApi
      *
      * @param  int $sales_representative_region_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyDataSimpleJsonResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleJsonResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsSalesRepresentativeRegionsSalesRepresentativeRegionIdDeleteWithHttpInfo($sales_representative_region_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyDataSimpleJsonResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleJsonResponse';
         $request = $this->restAccountsSalesRepresentativeRegionsSalesRepresentativeRegionIdDeleteRequest($sales_representative_region_id);
 
         try {
@@ -1231,7 +1231,7 @@ class SalesRepresentativeRegionApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyDataSimpleJsonResponse',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleJsonResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1273,7 +1273,7 @@ class SalesRepresentativeRegionApi
      */
     public function restAccountsSalesRepresentativeRegionsSalesRepresentativeRegionIdDeleteAsyncWithHttpInfo($sales_representative_region_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyDataSimpleJsonResponse';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyDataSimpleJsonResponse';
         $request = $this->restAccountsSalesRepresentativeRegionsSalesRepresentativeRegionIdDeleteRequest($sales_representative_region_id);
 
         return $this->client
@@ -1420,9 +1420,9 @@ class SalesRepresentativeRegionApi
      *
      * @param  int $sales_representative_region_id sales_representative_region_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesAccountModelsSalesRepresentativeRegion
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountModelsSalesRepresentativeRegion
      */
     public function restAccountsSalesRepresentativeRegionsSalesRepresentativeRegionIdGet($sales_representative_region_id)
     {
@@ -1435,13 +1435,13 @@ class SalesRepresentativeRegionApi
      *
      * @param  int $sales_representative_region_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesAccountModelsSalesRepresentativeRegion, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountModelsSalesRepresentativeRegion, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsSalesRepresentativeRegionsSalesRepresentativeRegionIdGetWithHttpInfo($sales_representative_region_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountModelsSalesRepresentativeRegion';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountModelsSalesRepresentativeRegion';
         $request = $this->restAccountsSalesRepresentativeRegionsSalesRepresentativeRegionIdGetRequest($sales_representative_region_id);
 
         try {
@@ -1493,7 +1493,7 @@ class SalesRepresentativeRegionApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesAccountModelsSalesRepresentativeRegion',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountModelsSalesRepresentativeRegion',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1535,7 +1535,7 @@ class SalesRepresentativeRegionApi
      */
     public function restAccountsSalesRepresentativeRegionsSalesRepresentativeRegionIdGetAsyncWithHttpInfo($sales_representative_region_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountModelsSalesRepresentativeRegion';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountModelsSalesRepresentativeRegion';
         $request = $this->restAccountsSalesRepresentativeRegionsSalesRepresentativeRegionIdGetRequest($sales_representative_region_id);
 
         return $this->client
@@ -1682,9 +1682,9 @@ class SalesRepresentativeRegionApi
      *
      * @param  int $sales_representative_region_id sales_representative_region_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesAccountModelsSalesRepresentativeRegion
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountModelsSalesRepresentativeRegion
      */
     public function restAccountsSalesRepresentativeRegionsSalesRepresentativeRegionIdPut($sales_representative_region_id)
     {
@@ -1697,13 +1697,13 @@ class SalesRepresentativeRegionApi
      *
      * @param  int $sales_representative_region_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesAccountModelsSalesRepresentativeRegion, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountModelsSalesRepresentativeRegion, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsSalesRepresentativeRegionsSalesRepresentativeRegionIdPutWithHttpInfo($sales_representative_region_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountModelsSalesRepresentativeRegion';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountModelsSalesRepresentativeRegion';
         $request = $this->restAccountsSalesRepresentativeRegionsSalesRepresentativeRegionIdPutRequest($sales_representative_region_id);
 
         try {
@@ -1755,7 +1755,7 @@ class SalesRepresentativeRegionApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesAccountModelsSalesRepresentativeRegion',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountModelsSalesRepresentativeRegion',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1797,7 +1797,7 @@ class SalesRepresentativeRegionApi
      */
     public function restAccountsSalesRepresentativeRegionsSalesRepresentativeRegionIdPutAsyncWithHttpInfo($sales_representative_region_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountModelsSalesRepresentativeRegion';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountModelsSalesRepresentativeRegion';
         $request = $this->restAccountsSalesRepresentativeRegionsSalesRepresentativeRegionIdPutRequest($sales_representative_region_id);
 
         return $this->client

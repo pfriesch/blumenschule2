@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  BSApp\Service\plentymarketsAPI
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace BSApp\Service\plentymarketsAPI\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -33,16 +33,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use BSApp\Service\plentymarketsAPI\ApiException;
+use BSApp\Service\plentymarketsAPI\Configuration;
+use BSApp\Service\plentymarketsAPI\HeaderSelector;
+use BSApp\Service\plentymarketsAPI\ObjectSerializer;
 
 /**
  * OrderSummaryApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  BSApp\Service\plentymarketsAPI
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -93,9 +93,9 @@ class OrderSummaryApi
      *
      * @param  int $contact_id contact_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesAccountOrderSummaryModelsOrderSummary
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountOrderSummaryModelsOrderSummary
      */
     public function restAccountsOrderSummariesContactsContactIdGet($contact_id)
     {
@@ -110,13 +110,13 @@ class OrderSummaryApi
      *
      * @param  int $contact_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesAccountOrderSummaryModelsOrderSummary, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountOrderSummaryModelsOrderSummary, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsOrderSummariesContactsContactIdGetWithHttpInfo($contact_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountOrderSummaryModelsOrderSummary';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountOrderSummaryModelsOrderSummary';
         $request = $this->restAccountsOrderSummariesContactsContactIdGetRequest($contact_id);
 
         try {
@@ -168,7 +168,7 @@ class OrderSummaryApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesAccountOrderSummaryModelsOrderSummary',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountOrderSummaryModelsOrderSummary',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -210,7 +210,7 @@ class OrderSummaryApi
      */
     public function restAccountsOrderSummariesContactsContactIdGetAsyncWithHttpInfo($contact_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountOrderSummaryModelsOrderSummary';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountOrderSummaryModelsOrderSummary';
         $request = $this->restAccountsOrderSummariesContactsContactIdGetRequest($contact_id);
 
         return $this->client
@@ -358,9 +358,9 @@ class OrderSummaryApi
      * List order summaries
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesAccountOrderSummaryModelsOrderSummary[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountOrderSummaryModelsOrderSummary[]
      */
     public function restAccountsOrderSummariesGet()
     {
@@ -374,13 +374,13 @@ class OrderSummaryApi
      * List order summaries
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesAccountOrderSummaryModelsOrderSummary[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountOrderSummaryModelsOrderSummary[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsOrderSummariesGetWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountOrderSummaryModelsOrderSummary[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountOrderSummaryModelsOrderSummary[]';
         $request = $this->restAccountsOrderSummariesGetRequest();
 
         try {
@@ -432,7 +432,7 @@ class OrderSummaryApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesAccountOrderSummaryModelsOrderSummary[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountOrderSummaryModelsOrderSummary[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -472,7 +472,7 @@ class OrderSummaryApi
      */
     public function restAccountsOrderSummariesGetAsyncWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountOrderSummaryModelsOrderSummary[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountOrderSummaryModelsOrderSummary[]';
         $request = $this->restAccountsOrderSummariesGetRequest();
 
         return $this->client
@@ -606,7 +606,7 @@ class OrderSummaryApi
      *
      * @param  int $order_summary_id order_summary_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -622,7 +622,7 @@ class OrderSummaryApi
      *
      * @param  int $order_summary_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -835,9 +835,9 @@ class OrderSummaryApi
      *
      * @param  int $order_summary_id order_summary_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesAccountOrderSummaryModelsOrderSummary
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountOrderSummaryModelsOrderSummary
      */
     public function restAccountsOrderSummariesOrderSummaryIdGet($order_summary_id)
     {
@@ -852,13 +852,13 @@ class OrderSummaryApi
      *
      * @param  int $order_summary_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesAccountOrderSummaryModelsOrderSummary, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountOrderSummaryModelsOrderSummary, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsOrderSummariesOrderSummaryIdGetWithHttpInfo($order_summary_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountOrderSummaryModelsOrderSummary';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountOrderSummaryModelsOrderSummary';
         $request = $this->restAccountsOrderSummariesOrderSummaryIdGetRequest($order_summary_id);
 
         try {
@@ -910,7 +910,7 @@ class OrderSummaryApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesAccountOrderSummaryModelsOrderSummary',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountOrderSummaryModelsOrderSummary',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -952,7 +952,7 @@ class OrderSummaryApi
      */
     public function restAccountsOrderSummariesOrderSummaryIdGetAsyncWithHttpInfo($order_summary_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountOrderSummaryModelsOrderSummary';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountOrderSummaryModelsOrderSummary';
         $request = $this->restAccountsOrderSummariesOrderSummaryIdGetRequest($order_summary_id);
 
         return $this->client
@@ -1101,9 +1101,9 @@ class OrderSummaryApi
      *
      * @param  int $order_summary_id order_summary_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesAccountOrderSummaryModelsOrderSummary
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountOrderSummaryModelsOrderSummary
      */
     public function restAccountsOrderSummariesOrderSummaryIdPut($order_summary_id)
     {
@@ -1118,13 +1118,13 @@ class OrderSummaryApi
      *
      * @param  int $order_summary_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesAccountOrderSummaryModelsOrderSummary, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountOrderSummaryModelsOrderSummary, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsOrderSummariesOrderSummaryIdPutWithHttpInfo($order_summary_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountOrderSummaryModelsOrderSummary';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountOrderSummaryModelsOrderSummary';
         $request = $this->restAccountsOrderSummariesOrderSummaryIdPutRequest($order_summary_id);
 
         try {
@@ -1176,7 +1176,7 @@ class OrderSummaryApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesAccountOrderSummaryModelsOrderSummary',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountOrderSummaryModelsOrderSummary',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1218,7 +1218,7 @@ class OrderSummaryApi
      */
     public function restAccountsOrderSummariesOrderSummaryIdPutAsyncWithHttpInfo($order_summary_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountOrderSummaryModelsOrderSummary';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountOrderSummaryModelsOrderSummary';
         $request = $this->restAccountsOrderSummariesOrderSummaryIdPutRequest($order_summary_id);
 
         return $this->client
@@ -1367,9 +1367,9 @@ class OrderSummaryApi
      *
      * @param  int $address_id address_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesAccountOrderSummaryModelsOrderSummary
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountOrderSummaryModelsOrderSummary
      */
     public function restAccountsOrderSummariesOrdersAddressIdGet($address_id)
     {
@@ -1384,13 +1384,13 @@ class OrderSummaryApi
      *
      * @param  int $address_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesAccountOrderSummaryModelsOrderSummary, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountOrderSummaryModelsOrderSummary, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsOrderSummariesOrdersAddressIdGetWithHttpInfo($address_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountOrderSummaryModelsOrderSummary';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountOrderSummaryModelsOrderSummary';
         $request = $this->restAccountsOrderSummariesOrdersAddressIdGetRequest($address_id);
 
         try {
@@ -1442,7 +1442,7 @@ class OrderSummaryApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesAccountOrderSummaryModelsOrderSummary',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountOrderSummaryModelsOrderSummary',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1484,7 +1484,7 @@ class OrderSummaryApi
      */
     public function restAccountsOrderSummariesOrdersAddressIdGetAsyncWithHttpInfo($address_id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountOrderSummaryModelsOrderSummary';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountOrderSummaryModelsOrderSummary';
         $request = $this->restAccountsOrderSummariesOrdersAddressIdGetRequest($address_id);
 
         return $this->client
@@ -1632,9 +1632,9 @@ class OrderSummaryApi
      * Create an order summary
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesAccountOrderSummaryModelsOrderSummary
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountOrderSummaryModelsOrderSummary
      */
     public function restAccountsOrderSummariesPost()
     {
@@ -1648,13 +1648,13 @@ class OrderSummaryApi
      * Create an order summary
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesAccountOrderSummaryModelsOrderSummary, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountOrderSummaryModelsOrderSummary, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsOrderSummariesPostWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountOrderSummaryModelsOrderSummary';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountOrderSummaryModelsOrderSummary';
         $request = $this->restAccountsOrderSummariesPostRequest();
 
         try {
@@ -1706,7 +1706,7 @@ class OrderSummaryApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesAccountOrderSummaryModelsOrderSummary',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountOrderSummaryModelsOrderSummary',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1746,7 +1746,7 @@ class OrderSummaryApi
      */
     public function restAccountsOrderSummariesPostAsyncWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesAccountOrderSummaryModelsOrderSummary';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAccountOrderSummaryModelsOrderSummary';
         $request = $this->restAccountsOrderSummariesPostRequest();
 
         return $this->client

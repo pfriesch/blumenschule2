@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  BSApp\Service\plentymarketsAPI
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace BSApp\Service\plentymarketsAPI\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -33,16 +33,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use BSApp\Service\plentymarketsAPI\ApiException;
+use BSApp\Service\plentymarketsAPI\Configuration;
+use BSApp\Service\plentymarketsAPI\HeaderSelector;
+use BSApp\Service\plentymarketsAPI\ObjectSerializer;
 
 /**
  * BasketApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  BSApp\Service\plentymarketsAPI
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -92,9 +92,9 @@ class BasketApi
      * Get basket
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesBasketModelsBasket
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesBasketModelsBasket
      */
     public function restBasketGet()
     {
@@ -108,13 +108,13 @@ class BasketApi
      * Get basket
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesBasketModelsBasket, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesBasketModelsBasket, HTTP status code, HTTP response headers (array of strings)
      */
     public function restBasketGetWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesBasketModelsBasket';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesBasketModelsBasket';
         $request = $this->restBasketGetRequest();
 
         try {
@@ -166,7 +166,7 @@ class BasketApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesBasketModelsBasket',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesBasketModelsBasket',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -206,7 +206,7 @@ class BasketApi
      */
     public function restBasketGetAsyncWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesBasketModelsBasket';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesBasketModelsBasket';
         $request = $this->restBasketGetRequest();
 
         return $this->client
@@ -335,9 +335,9 @@ class BasketApi
      * List basket items
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesBasketModelsBasketItem[]
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesBasketModelsBasketItem[]
      */
     public function restBasketItemsGet()
     {
@@ -351,13 +351,13 @@ class BasketApi
      * List basket items
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesBasketModelsBasketItem[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesBasketModelsBasketItem[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restBasketItemsGetWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesBasketModelsBasketItem[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesBasketModelsBasketItem[]';
         $request = $this->restBasketItemsGetRequest();
 
         try {
@@ -409,7 +409,7 @@ class BasketApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesBasketModelsBasketItem[]',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesBasketModelsBasketItem[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -449,7 +449,7 @@ class BasketApi
      */
     public function restBasketItemsGetAsyncWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesBasketModelsBasketItem[]';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesBasketModelsBasketItem[]';
         $request = $this->restBasketItemsGetRequest();
 
         return $this->client
@@ -579,9 +579,9 @@ class BasketApi
      *
      * @param  int $id id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesBasketModelsBasketItem
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesBasketModelsBasketItem
      */
     public function restBasketItemsIdGet($id)
     {
@@ -596,13 +596,13 @@ class BasketApi
      *
      * @param  int $id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesBasketModelsBasketItem, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesBasketModelsBasketItem, HTTP status code, HTTP response headers (array of strings)
      */
     public function restBasketItemsIdGetWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesBasketModelsBasketItem';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesBasketModelsBasketItem';
         $request = $this->restBasketItemsIdGetRequest($id);
 
         try {
@@ -654,7 +654,7 @@ class BasketApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesBasketModelsBasketItem',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesBasketModelsBasketItem',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -696,7 +696,7 @@ class BasketApi
      */
     public function restBasketItemsIdGetAsyncWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesBasketModelsBasketItem';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesBasketModelsBasketItem';
         $request = $this->restBasketItemsIdGetRequest($id);
 
         return $this->client
@@ -841,9 +841,9 @@ class BasketApi
      *
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlentyModulesBasketModelsBasketItem
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesBasketModelsBasketItem
      */
     public function restBasketItemsPost($body = null)
     {
@@ -858,13 +858,13 @@ class BasketApi
      *
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlentyModulesBasketModelsBasketItem, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesBasketModelsBasketItem, HTTP status code, HTTP response headers (array of strings)
      */
     public function restBasketItemsPostWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesBasketModelsBasketItem';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesBasketModelsBasketItem';
         $request = $this->restBasketItemsPostRequest($body);
 
         try {
@@ -916,7 +916,7 @@ class BasketApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlentyModulesBasketModelsBasketItem',
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesBasketModelsBasketItem',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -958,7 +958,7 @@ class BasketApi
      */
     public function restBasketItemsPostAsyncWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\PlentyModulesBasketModelsBasketItem';
+        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesBasketModelsBasketItem';
         $request = $this->restBasketItemsPostRequest($body);
 
         return $this->client
