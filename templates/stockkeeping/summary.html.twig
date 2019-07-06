@@ -1,0 +1,63 @@
+{% extends '::baseBS.html.twig' %}
+
+{% block body -%}
+    <nav class="navbar navbar-default" role="navigation">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Bestandsliste Buchungen</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+
+                <li ><a href="{{ path('data_stockkeepting_summary') }}">Summe</a></li>
+                <li ><a href="{{ path('BSData_mainmenu') }}">Export</a></li>
+
+                <li class=""><a  href="{{ path('BSData_product_lable') }}">Etiketten</a></li>
+                <li class=""><a href="{{ path('BSData_mainmenu') }}">zurück</a></li>
+
+            </ul>
+
+
+        </div>
+        <!-- /.navbar-collapse -->
+    </nav>
+
+
+
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+
+                <th>Quantity</th>
+                <th>Article ID</th>
+                <th>Article Code</th>
+                <th>Name</th>
+
+            </tr>
+        </thead>
+        <tbody>
+        {% for entity in entities %}
+            <tr>
+                {#<td><a href="{{ path('data_stockkeepting_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>#}
+                <td>{{ entity.quantity }}</td>
+                <td>{{ entity.articleId }}</td>
+                <td>{{ entity.articleCode }}</td>
+                <td>{{ entity.articleName }}</td>
+                {#<td>{% if entity.printed %}{{ entity.printed|date('d.m.Y H:i') }}{% endif %}</td>#}
+                {#<td>{% if entity.exported %}{{ entity.exported|date('Y-m-d H:i:s') }}{% endif %}</td>#}
+                {#<td></td>#}
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+
+    {% endblock %}

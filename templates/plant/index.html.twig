@@ -1,0 +1,144 @@
+{% extends '::baseBS.html.twig' %}
+{% block title %}Pflanzen{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+
+
+    <style type="text/css">
+        .ui-autocomplete-loading {
+            background: white url('/images/ui-anim_basic_16x16.gif') right center no-repeat;
+        }
+    </style>
+{% endblock %}
+
+
+{% block javascripts %}
+    {{ parent() }}
+
+    <script src="{{ asset('/js/plant.js') }}" type="text/javascript"></script>
+{% endblock %}
+
+{% block body %}
+
+
+    {{ include(
+        'BSDataBundle:Default:menu.html.twig',
+    {   'links':    {    'neue Pflanze' :  path('BSData_plant_new') ,
+                         "zurück" :  path('BSData_mainmenu')
+                    },
+        'title': 'Pflanzen' }
+    ) }}
+
+
+
+
+    <div class="row">
+        <div class="col-md-10">
+            <div class="panel panel-default">
+            <table class="table table-hover">
+                <thead>
+                <tr>
+                    <th>
+                        <div class="form-group">
+                        <label class="control-label" for="search_code">{{  knp_pagination_sortable(pagination,'Code', 'a.code')|raw }}</label> <br>
+                        <input type="text" id="search_code" class="search_code form-control"  value="" size="10" />
+                        </div>
+                    </th>
+                    <th>
+                        <div class="form-group">
+                        <label class="control-label" for="search_name" >{{  knp_pagination_sortable(pagination,'Name', 'a.name')|raw }} </label><br>
+                        <input type="text" id="search_name" class="search_name form-control" data-url="{{ path('BSData_plant_search_name', { 'search': 'minze' }) }}" value="" size="20" >
+                        </div>
+                    </th>
+
+                    <th>
+                        <div class="form-group">
+                            <label class="control-label" for="search_latein">{{  knp_pagination_sortable(pagination,'Latein', 'a.latein')|raw }}</label><br>
+                        <input type="text" id="search_latein" class="search_latein form-control" value="" size="20" >
+                        </div>
+                    </th>
+                  <!--  <th>Winterhärte</th>
+                    <th>Standort</th>
+                    <th>Synonym</th>
+                    <th>Höhe</th>
+                    <th>Blütezeit</th>
+                    <th>Farbe</th>
+                    <th>Duft</th>
+                    <th>Licht</th>
+                    <th>Boden</th>
+                    <th>Habitus</th>
+                    <th>Preisgruppe</th>
+                    <th>Topfgröße</th>
+                    <th>Lieferbar</th>
+                    <th>Bemerkung</th>-->
+                    <th >Aktionen</th>
+                </tr>
+               <tr>
+
+               </tr>
+
+                </thead>
+                <tbody class="results">
+                {% for entity in pagination %}
+                <tr onclick="$('div .plantshow').load('{{ path('BSData_plant_edit', { 'id': entity.id }) }}'); ">
+                    <td>{{ entity.code }}</td>
+                    <td>{{ entity.name }}</td>
+                    <td>{{ entity.latein }}</td>
+                   <!-- <td>{{ entity.hardy }}</td>
+                    <td>{{ entity.place }}</td>
+                    <td>{{ entity.synonym }}</td>
+                    <td>{{ entity.hfrom }} - {{ entity.hto }}</td>
+                    <td>{{ entity.bfrom }} - {{ entity.bto }}</td>
+                    <td>{{ entity.bcolor }}</td>
+                    <td>{{ entity.flavour }}</td>
+                    <td>{{ entity.light }}</td>
+                    <td>{{ entity.base }}</td>
+                    <td>{{ entity.habitus }}</td>
+                    <td>{{ entity.pricegroup }}</td>
+                    <td>{{ entity.potsize }}</td>
+                    <td>{{ entity.aviable }}</td>
+                    <td>{{ entity.comment }}</td>-->
+                    <td>
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-default btn-xs  dropdown-toggle" data-toggle="dropdown">
+                                Action <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>  <a  href="{{ path('BSData_plant_edit', { 'id': entity.id }) }}">Bearbeiten</a></li>
+                                {# <li> <a  href="{{ path('BSData_plant_crateProduct', { 'id': entity.id }) }}">Produkt erstellen</a></li> #}
+                                <li>  <a href="{{ path('BSData_plant_delete', { 'id': entity.id }) }}" > Löschen</a>
+                            </ul>
+                        </div>
+
+
+
+
+
+
+                    </td>
+                </tr>
+
+                {% endfor %}
+                </tbody>
+
+
+
+
+
+
+            </table>
+
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-10">
+            {{ knp_pagination_render(pagination) }}
+        </div>
+    </div>
+
+    <div id="dialog" title="Basic dialog">
+        <p>Bitte warten es wird geladen ...</p>
+    </div>
+{% endblock %}

@@ -1,0 +1,71 @@
+BSOrder_menu:
+  path:  /
+  controller: BSApp\Controller\Order:indexAction
+
+
+BSOrder_search:
+  path:  /search
+  controller: BSApp\Controller\Order:indexAction
+
+BSOrder_getInvoice:
+  path:  /invoice/{orderID}
+  controller: BSApp\Controller\Order:getInvoiceAction
+
+BSOrder_packet:
+  path:  /packets
+  controller: BSApp\Controller\Order:indexAction
+
+BSOrder_state_open:
+  path:  /state/open
+  controller: BSApp\Controller\Order:stateAction
+  defaults:
+    state: 4
+
+BSOrder_state:
+  path:  /state/{state}
+  controller: BSApp\Controller\Order:stateAction
+  defaults:
+    state: 5.5
+
+BSOrder_sync:
+  path:  /sync/{state}
+  controller: BSApp\Controller\Order:syncAction
+  defaults:
+    state: 7
+
+BSOrder_set_state:
+  path:  /setstate/{state}
+  controller: BSApp\Controller\Order:setstateAction
+  defaults:
+    state: 6
+
+BSOrder_print:
+  path:  /print
+  controller: BSApp\Controller\Order:printAction
+
+BSOrder_export:
+  path:  /export/{date}
+  controller: BSApp\Controller\Order:exportAction
+  defaults:
+    date: 1
+
+BSOrder_open:
+  path:  /open
+  controller: BSApp\Controller\Order:openAction
+
+BSOrder_accounting:
+  path:  /accounting/{page}
+  controller: BSApp\Controller\Order:accountingAction
+  defaults:
+    page: 1
+
+BSOrder_exported:
+  path:  /exported/{date}/{page}
+  controller: BSApp\Controller\Order:exportedAction
+  defaults:
+    page: 1
+
+BSOrder_check:
+  path:  /check
+  controller: BSApp\Controller\Order:checkAction
+

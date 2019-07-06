@@ -1,0 +1,17 @@
+BSLable_print:
+  path:  /print
+  controller: BSApp\Controller\Lable:printAction
+
+BSLable_search:
+  path:  /search
+  controller: BSApp\Controller\Lable:searchAction
+
+BSLable_autofill:
+  path:  /autofill/{search}
+  controller: BSApp\Controller\Lable:autofillAction
+
+BSLable_home:
+  path:  /{page}
+  controller: BSApp\Controller\Lable:indexAction
+  defaults:
+    page: 1

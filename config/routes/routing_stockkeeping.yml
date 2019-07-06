@@ -1,0 +1,52 @@
+data_stockkeepting:
+  path: /
+  methods: GET
+  controller:  BSApp\Controller\StockkeepingController:indexAction
+
+data_stockkeepting_summary:
+  path: /summary
+  methods: GET
+  controller:  BSApp\Controller\StockkeepingController:summaryAction
+
+
+data_stockkeepting_export:
+  path: /export
+  methods: GET
+  controller:  BSApp\Controller\StockkeepingController:exportAction
+
+
+data_stockkeepting_create:
+  path: /
+  methods: POST
+  #  * @Template("BSDataBundle:Stockkeeping:new.html.twig")
+
+  controller:  BSApp\Controller\StockkeepingController:createAction
+
+
+data_stockkeepting_new:
+  path: /new
+  methods: GET
+  controller:  BSApp\Controller\StockkeepingController:newAction
+
+
+data_stockkeepting_show:
+  path: /{id}
+  methods: GET
+  controller:  BSApp\Controller\StockkeepingController:showAction
+
+
+data_stockkeepting_edit:
+  path: /{id}/edit
+  methods: GET
+  controller:  BSApp\Controller\StockkeepingController:editAction
+
+
+data_stockkeepting_update:
+  path: /summary
+  methods: PUT
+  controller:  BSApp\Controller\StockkeepingController:summaryAction
+
+data_stockkeepting_delete:
+  path: /{id}
+  methods: DELETE
+  controller:  BSApp\Controller\StockkeepingController:deleteAction

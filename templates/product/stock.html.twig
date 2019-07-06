@@ -1,0 +1,9 @@
+{#<form role="form" class="stockProductForm" action="{{ path('BSData_product_stock', { 'id': entity.id }) }}" method="post" {{ form_start(form) }}>#}
+{{ form_start(form) }}
+
+    {{ form_errors(form) }}
+    {{ form_errors(form.Stock) }}
+    {{ form_widget(form.Stock) }}
+    {{ form_rest(form) }}
+
+{{ form_end(form) }}
