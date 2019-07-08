@@ -22,7 +22,7 @@ class StockController extends AbstractController
 
         $entities = $em->getRepository('BSApp\Entity\Stock')->findAll();
 
-        return array('entities' => $entities);
+        return $this->render('stock/index.html.twig', array('entities' => $entities));
     }
 
     /**

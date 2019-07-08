@@ -1,6 +1,6 @@
 <?php
 
-namespace BSApp\Entity;
+namespace BSApp\Entity\checkout;
 
 use Doctrine\ORM\Mapping as ORM;
 
@@ -8,7 +8,7 @@ use Doctrine\ORM\Mapping as ORM;
  * BSApp\Entity\checkoutItem
  *
  * @ORM\Table()
- * @ORM\Entity(repositoryClass="BSApp\Entity\checkoutItemRepository")
+ * @ORM\Entity(repositoryClass="BSApp\Entity\checkout\checkoutItemRepository")
  */
 class checkoutItem
 {

@@ -51,6 +51,14 @@ BSData_paymentmethods:
 
 
 
+BSData_product:
+  path:  /product/{page}
+  controller: BSApp\Controller\ProductController:indexAction
+  defaults:
+    page: 1
+
+
+
 
 
 
@@ -127,14 +135,6 @@ BSData_product_sync:
 BSData_product_stock:
   path:  /product/{id}/stock
   controller: BSApp\Controller\ProductController:stockAction
-
-
-
-BSData_product:
-  path:  /product/{page}
-  controller: BSApp\Controller\ProductController:indexAction
-  defaults:
-    page: 1
 
 
 

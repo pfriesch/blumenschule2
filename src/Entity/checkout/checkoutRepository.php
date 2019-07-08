@@ -1,6 +1,6 @@
 <?php
 
-namespace BSApp\Entity;
+namespace BSApp\Entity\checkout;
 
 use Doctrine\ORM\EntityRepository;
 use Doctrine\Orm\NoResultException;

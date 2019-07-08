@@ -2,8 +2,8 @@
 
 namespace BSApp\Controller;
 
-use BSApp\Entity\checkout;
-use BSApp\Entity\checkoutItem;
+use BSApp\Entity\checkout\checkout;
+use BSApp\Entity\checkout\checkoutItem;
 use DateTime;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -17,17 +17,17 @@ class CheckoutController extends AbstractController
 {
     public function indexAction($cashbox_id = 1)
     {
-        $em = $this->getDoctrine()->getEntityManager();
+        $em = $this->getDoctrine()->getManager();
 
-        $currentBaskets = $em->getRepository('BSCheckoutBundle:checkout')->getCurrentBaskets($cashbox_id);
-        $cashbox = $em->getRepository('BSCheckoutBundle:cashbox')->find($cashbox_id);
-        $quickbuttons = $em->getRepository('BSCheckoutBundle:quickbutton')->getQuickbuttons($cashbox_id);
+        $currentBaskets = $em->getRepository('checkout\checkout::class')->getCurrentBaskets($cashbox_id);
+        $cashbox = $em->getRepository('checkout\cashbox::class')->find($cashbox_id);
+        $quickbuttons = $em->getRepository('checkout\quickbutton::class')->getQuickbuttons($cashbox_id);
 
         $checkout = $this->getRequest()->query->get('checkout');
         $basket = null;
         if ($checkout) {
 
-            $basket = $em->getRepository('BSCheckoutBundle:checkout')->find($checkout);
+            $basket = $em->getRepository('checkout\checkout::class')->find($checkout);
         }
 
         if (!$basket) {
@@ -36,7 +36,7 @@ class CheckoutController extends AbstractController
 
         $last = $em->getRepository('BSCheckoutBundle:checkout')->getLastBasket($cashbox, $basket);
 
-        return $this->render('BSCheckoutBundle:Default:index.html.twig', array(
+        return $this->render('checkout/index.html.twig', array(
                 'basket' => $basket,
                 'last' => $last,
                 'baskets' => $currentBaskets,
@@ -69,7 +69,7 @@ class CheckoutController extends AbstractController
 
     public function newAction($cashbox_id = 1)
     {
-        $em = $this->getDoctrine()->getEntityManager();
+        $em = $this->getDoctrine()->getManager();
         $cashbox = $em->getRepository('BSCheckoutBundle:cashbox')->find($cashbox_id);
         $basket = new Checkout();
         // $basket->setBuydate(new \DateTime());
@@ -87,10 +87,10 @@ class CheckoutController extends AbstractController
     public function historyAction($cashbox_id, $date)
     {
         if ($date == null) $date = date("d-m-Y");
-        $em = $this->getDoctrine()->getEntityManager();
+        $em = $this->getDoctrine()->getManager();
 
-        $Baskets = $em->getRepository('BSCheckoutBundle:checkout')->getHistory($cashbox_id, $date);
-        return $this->render('BSCheckoutBundle:Default:history.html.twig', array(
+        $Baskets = $em->getRepository(checkout::class)->getHistory($cashbox_id, $date);
+        return $this->render('checkout/history.html.twig', array(
             'Baskets' => $Baskets,
             'cashbox_id' => $cashbox_id,
             'date' => $date
@@ -106,7 +106,7 @@ class CheckoutController extends AbstractController
         $name = trim($this->getRequest()->request->get('name'));
         $price = floatval(str_replace(',', '.', $price));
 
-        $em = $this->getDoctrine()->getEntityManager();
+        $em = $this->getDoctrine()->getManager();
 
         // $currentBasket = $em->getRepository('BSCheckoutBundle:checkout')->getCurrentBasket($cashbox_id);
         $currentBasket = $em->getRepository('BSCheckoutBundle:checkout')->find($checkout);
@@ -152,7 +152,7 @@ class CheckoutController extends AbstractController
 
     public function clearAction($cashbox_id, $checkout)
     {
-        $em = $this->getDoctrine()->getEntityManager();
+        $em = $this->getDoctrine()->getManager();
         $checkout = $em->getRepository('BSCheckoutBundle:checkout')->clearBasket($cashbox_id, $checkout);
         //$checkout = $em->getRepository('BSCheckoutBundle:checkout')->find($checkout);
 
@@ -164,7 +164,7 @@ class CheckoutController extends AbstractController
 
     public function finishAction($cashbox_id, $checkout)
     {
-        $em = $this->getDoctrine()->getEntityManager();
+        $em = $this->getDoctrine()->getManager();
         $payment_id = 0;
         $payment_id = $this->getRequest()->request->get('payment_id');
         //$cashbox_id = $this->getRequest()->request->get('cashbox_id');
@@ -198,7 +198,7 @@ class CheckoutController extends AbstractController
 
     public function orderAction($cashbox_id, $checkout)
     {
-        $em = $this->getDoctrine()->getEntityManager();
+        $em = $this->getDoctrine()->getManager();
 
         //$currentBasket = $em->getRepository('BSCheckoutBundle:checkout')->getCurrentBasket($cashbox_id);
         $currentBasket = $em->getRepository('BSCheckoutBundle:checkout')->find($checkout);
@@ -302,7 +302,7 @@ class CheckoutController extends AbstractController
 
     public function itemAction($cashbox_id, $checkout)
     {
-        $em = $this->getDoctrine()->getEntityManager();
+        $em = $this->getDoctrine()->getManager();
 
         $action = $this->getRequest()->request->get('action');
         $quantity = $this->getRequest()->request->get('quantity');
@@ -344,7 +344,7 @@ class CheckoutController extends AbstractController
     public function bontextAction($cashbox_id, $id)
     {
         $bontext = $this->getRequest()->request->get('bontext');
-        $em = $this->getDoctrine()->getEntityManager();
+        $em = $this->getDoctrine()->getManager();
 
         //$cashbox = $em->getRepository('BSCheckoutBundle:cashbox')->find($cashbox_id);
         $currentBasket = $em->getRepository('BSCheckoutBundle:checkout')->find($id);
@@ -361,7 +361,7 @@ class CheckoutController extends AbstractController
 
         $bontext = nl2br($bontext);
 
-        $em = $this->getDoctrine()->getEntityManager();
+        $em = $this->getDoctrine()->getManager();
 
         $cashbox = $em->getRepository('BSCheckoutBundle:cashbox')->find($cashbox_id);
         $currentBasket = $em->getRepository('BSCheckoutBundle:checkout')->find($id);
@@ -403,7 +403,7 @@ class CheckoutController extends AbstractController
 
     public function payoffAction()
     {
-        $em = $this->getDoctrine()->getEntityManager();
+        $em = $this->getDoctrine()->getManager();
 
         return $this->render('BSCheckoutBundle:Default:payoff.html.twig');
     }

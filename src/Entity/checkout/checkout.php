@@ -1,6 +1,6 @@
 <?php
 
-namespace BSApp\Entity;
+namespace BSApp\Entity\checkout;
 
 use Doctrine\ORM\Mapping as ORM;
 use Doctrine\Common\Collections\ArrayCollection;
@@ -9,7 +9,7 @@ use Doctrine\Common\Collections\ArrayCollection;
  * BSApp\Entity\checkout
  *
  * @ORM\Table()
- * @ORM\Entity(repositoryClass="BSApp\Entity\checkoutRepository")
+ * @ORM\Entity(repositoryClass="BSApp\Entity\checkout\checkoutRepository")
  */
 class checkout
 {
@@ -214,7 +214,7 @@ class checkout
     /**
      * Set cashbox
      *
-     * @param BSApp\Entity\cashbox $cashbox
+     * @param BSApp\Entity\checkout\cashbox $cashbox
      */
     public function setCashbox(cashbox $cashbox)
     {
@@ -224,7 +224,7 @@ class checkout
     /**
      * Get cashbox
      *
-     * @return BSApp\Entity\cashbox
+     * @return BSApp\Entity\checkout\cashbox
      */
     public function getCashbox()
     {

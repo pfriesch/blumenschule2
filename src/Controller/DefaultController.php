@@ -11,12 +11,12 @@ class DefaultController extends AbstractController
     public function indexAction()
     {
 
-        return $this->render('BSApp:Default:index.html.twig');
+        return $this->render('index/index.html.twig');
     }
 
     public function dataAction()
     {
-        return $this->render('BSApp:Default:data.html.twig');
+        return $this->render('BSApp:Default:data.html.twig'); #TODO invalid template path
     }
 
 

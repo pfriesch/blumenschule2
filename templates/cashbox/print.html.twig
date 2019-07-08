@@ -1,5 +1,5 @@
-{% extends 'base.html.twig' %}
-{% block title %}INTERN - Waren{% endblock %}
+{% extends '::base.html.twig' %}
+{% block title %}Kassen Bericht{% endblock %}
 
 
 {% block javascripts %}
@@ -9,7 +9,7 @@
 
 {% block body %}
 
-    <h1>Waren </h1>
+    <h1>Kassen Bericht </h1>
     </div>
     </header>
     <nav class="ym-hlist">
@@ -17,7 +17,7 @@
 
         <ul>
 
-            <li><a href="{{ path('BSData_product') }}">zurück</a></li>
+            <li><a href="{{ path('BSCheckout_home', { 'cashbox_id': cashbox_id})  }}">zurück</a></li>
         </ul>
 
     </nav>
@@ -28,13 +28,7 @@
         <div class="ym-gl">
 
             <div class="ym-gbox">
-
-                <form action="{{ path('BSData_product_create') }}" method="post" {{ form_enctype(form) }}>
-                    {{ form_widget(form) }}
-                    <p>
-                        <button type="submit">Create</button>
-                    </p>
-                </form>
+                <object data="{{ urlPDF }}" type="application/pdf" width="800" height="600px"></object>
 
             </div>
 

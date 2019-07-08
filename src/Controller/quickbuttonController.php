@@ -2,18 +2,16 @@
 
 namespace BSApp\Controller;
 
-use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use BSApp\Entity\quickbutton;
 use Acme\BSCheckoutBundle\Form\quickbuttonType;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 /**
  * quickbutton controller.
  *
  */
-class quickbuttonController extends Controller
+class quickbuttonController extends AbstractController
 {
     /**
      * Lists all quickbutton entities.

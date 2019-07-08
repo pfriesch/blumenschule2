@@ -1,14 +1,14 @@
 <?php
 
-namespace BSApp\Entity;
+namespace BSApp\Entity\checkout;
 
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * BSApp\Entity\Quickbutton
+ * BSApp\Entity\checkout\Quickbutton
  *
  * @ORM\Table()
- * @ORM\Entity(repositoryClass="BSApp\Entity\quickbuttonRepository")
+ * @ORM\Entity(repositoryClass="BSApp\Entity\checkout\quickbuttonRepository")
  */
 class quickbutton
 {
@@ -158,7 +158,7 @@ class quickbutton
     /**
      * Set cashbox
      *
-     * @param BSApp\Entity\cashbox $cashbox
+     * @param BSApp\Entity\checkout\cashbox $cashbox
      */
     public function setCashbox(cashbox $cashbox)
     {
@@ -168,7 +168,7 @@ class quickbutton
     /**
      * Get cashbox
      *
-     * @return BSApp\Entity\cashbox
+     * @return BSApp\Entity\checkout\cashbox
      */
     public function getCashbox()
     {

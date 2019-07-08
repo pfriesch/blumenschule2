@@ -1,15 +1,15 @@
 <?php
 
-namespace BSApp\Entity;
+namespace BSApp\Entity\checkout;
 
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * BSApp\Entity\cashbox
+ * BSApp\Entity\checkout\cashbox
  *
  * @ORM\Table()
- * @ORM\Entity(repositoryClass="BSApp\Entity\cashboxRepository")
+ * @ORM\Entity(repositoryClass="BSApp\Entity\checkout\cashboxRepository")
  */
 class cashbox
 {
@@ -144,7 +144,7 @@ class cashbox
     /**
      * Add quickbuttons
      *
-     * @param BSApp\Entity\quickbutton $quickbuttons
+     * @param BSApp\Entity\checkout\quickbutton $quickbuttons
      */
     public function addquickbutton(quickbutton $quickbuttons)
     {
