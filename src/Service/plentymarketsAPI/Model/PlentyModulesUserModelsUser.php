@@ -114,7 +114,7 @@ class PlentyModulesUserModelsUser implements ModelInterface, ArrayAccess
         'blog' => 'bool',
         'lead' => 'bool',
         'customer' => 'bool',
-        'total_vacation_days' => 'BigDecimal',
+        'total_vacation_days' => 'float',
         'role_id' => 'int',
         'salutation' => 'string',
         'data_lang' => 'string',
@@ -1986,7 +1986,7 @@ class PlentyModulesUserModelsUser implements ModelInterface, ArrayAccess
     /**
      * Gets total_vacation_days
      *
-     * @return BigDecimal
+     * @return float
      */
     public function getTotalVacationDays()
     {
@@ -1996,7 +1996,7 @@ class PlentyModulesUserModelsUser implements ModelInterface, ArrayAccess
     /**
      * Sets total_vacation_days
      *
-     * @param BigDecimal $total_vacation_days total_vacation_days
+     * @param float $total_vacation_days total_vacation_days
      *
      * @return $this
      */

@@ -62,12 +62,12 @@ class PlentyModulesAccountModelsAccount implements ModelInterface, ArrayAccess
         'tax_id_number' => 'string',
         'valuta' => 'int',
         'discount_days' => 'int',
-        'discount_percent' => 'BigDecimal',
+        'discount_percent' => 'float',
         'time_for_payment_allowed_days' => 'int',
         'sales_representative_contact_id' => 'int',
         'user_id' => 'int',
         'delivery_time' => 'int',
-        'dealer_min_order_value' => 'BigDecimal',
+        'dealer_min_order_value' => 'float',
         'created_at' => 'string',
         'updated_at' => 'string'];
 
@@ -420,7 +420,7 @@ class PlentyModulesAccountModelsAccount implements ModelInterface, ArrayAccess
     /**
      * Gets discount_percent
      *
-     * @return BigDecimal
+     * @return float
      */
     public function getDiscountPercent()
     {
@@ -430,7 +430,7 @@ class PlentyModulesAccountModelsAccount implements ModelInterface, ArrayAccess
     /**
      * Sets discount_percent
      *
-     * @param BigDecimal $discount_percent The early payment discount in percent specified for the account
+     * @param float $discount_percent The early payment discount in percent specified for the account
      *
      * @return $this
      */
@@ -540,7 +540,7 @@ class PlentyModulesAccountModelsAccount implements ModelInterface, ArrayAccess
     /**
      * Gets dealer_min_order_value
      *
-     * @return BigDecimal
+     * @return float
      */
     public function getDealerMinOrderValue()
     {
@@ -550,7 +550,7 @@ class PlentyModulesAccountModelsAccount implements ModelInterface, ArrayAccess
     /**
      * Sets dealer_min_order_value
      *
-     * @param BigDecimal $dealer_min_order_value The minimum order value for the supplier
+     * @param float $dealer_min_order_value The minimum order value for the supplier
      *
      * @return $this
      */

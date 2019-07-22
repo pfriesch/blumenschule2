@@ -59,7 +59,7 @@ class PlentyModulesPropertyModelsPropertyRelationMarkup implements ModelInterfac
         'id' => 'int',
         'property_relation_id' => 'int',
         'variation_sales_price_id' => 'int',
-        'markup' => 'BigDecimal'];
+        'markup' => 'float'];
 
     /**
      * Array of property to format mappings. Used for (de)serialization
@@ -288,7 +288,7 @@ class PlentyModulesPropertyModelsPropertyRelationMarkup implements ModelInterfac
     /**
      * Gets markup
      *
-     * @return BigDecimal
+     * @return float
      */
     public function getMarkup()
     {
@@ -298,7 +298,7 @@ class PlentyModulesPropertyModelsPropertyRelationMarkup implements ModelInterfac
     /**
      * Sets markup
      *
-     * @param BigDecimal $markup The markup of the property relation markup
+     * @param float $markup The markup of the property relation markup
      *
      * @return $this
      */

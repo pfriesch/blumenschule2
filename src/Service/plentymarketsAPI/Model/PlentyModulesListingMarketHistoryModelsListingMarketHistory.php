@@ -65,7 +65,7 @@ class PlentyModulesListingMarketHistoryModelsListingMarketHistory implements Mod
         'quantity_sold' => 'int',
         'quantity_sold_delta' => 'int',
         'quantity_remain' => 'int',
-        'price' => 'BigDecimal',
+        'price' => 'float',
         'currency' => 'string',
         'sku' => 'string',
         'created_at' => 'string',
@@ -492,7 +492,7 @@ class PlentyModulesListingMarketHistoryModelsListingMarketHistory implements Mod
     /**
      * Gets price
      *
-     * @return BigDecimal
+     * @return float
      */
     public function getPrice()
     {
@@ -502,7 +502,7 @@ class PlentyModulesListingMarketHistoryModelsListingMarketHistory implements Mod
     /**
      * Sets price
      *
-     * @param BigDecimal $price The price offered for this listing market. @see ListingMarketHistoryVariation if the listing market history contains variations.
+     * @param float $price The price offered for this listing market. @see ListingMarketHistoryVariation if the listing market history contains variations.
      *
      * @return $this
      */

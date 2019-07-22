@@ -22,7 +22,7 @@ class LableController extends AbstractController
 
     public function searchAction($search)
     {
-        $em = $this->getDoctrine()->getEntityManager();
+        $em = $this->getDoctrine()->getManager();
         $dql = "SELECT a FROM BSApp:Product a";
         $query = $em->createQuery($dql);
 
@@ -44,7 +44,7 @@ class LableController extends AbstractController
 
     public function autofillAction($search)
     {
-        $em = $this->getDoctrine()->getEntityManager();
+        $em = $this->getDoctrine()->getManager();
         $dql = "SELECT a FROM BSApp:Product a";
         $query = $em->createQuery($dql);
 

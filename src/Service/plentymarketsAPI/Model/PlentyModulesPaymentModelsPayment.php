@@ -57,8 +57,8 @@ class PlentyModulesPaymentModelsPayment implements ModelInterface, ArrayAccess
      */
     protected static $swaggerTypes = [
         'id' => 'int',
-        'amount' => 'BigDecimal',
-        'exchange_ratio' => 'BigDecimal',
+        'amount' => 'float',
+        'exchange_ratio' => 'float',
         'parent_id' => 'int',
         'deleted' => 'int',
         'unaccountable' => 'int',
@@ -324,7 +324,7 @@ class PlentyModulesPaymentModelsPayment implements ModelInterface, ArrayAccess
     /**
      * Gets amount
      *
-     * @return BigDecimal
+     * @return float
      */
     public function getAmount()
     {
@@ -334,7 +334,7 @@ class PlentyModulesPaymentModelsPayment implements ModelInterface, ArrayAccess
     /**
      * Sets amount
      *
-     * @param BigDecimal $amount The amount of the payment
+     * @param float $amount The amount of the payment
      *
      * @return $this
      */
@@ -348,7 +348,7 @@ class PlentyModulesPaymentModelsPayment implements ModelInterface, ArrayAccess
     /**
      * Gets exchange_ratio
      *
-     * @return BigDecimal
+     * @return float
      */
     public function getExchangeRatio()
     {
@@ -358,7 +358,7 @@ class PlentyModulesPaymentModelsPayment implements ModelInterface, ArrayAccess
     /**
      * Sets exchange_ratio
      *
-     * @param BigDecimal $exchange_ratio The exchange rate. Exchange rates are used if the default currency saved in plentymarkets differs from the currency of the order.
+     * @param float $exchange_ratio The exchange rate. Exchange rates are used if the default currency saved in plentymarkets differs from the currency of the order.
      *
      * @return $this
      */

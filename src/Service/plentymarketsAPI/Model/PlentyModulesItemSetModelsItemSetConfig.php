@@ -57,9 +57,9 @@ class PlentyModulesItemSetModelsItemSetConfig implements ModelInterface, ArrayAc
      */
     protected static $swaggerTypes = [
         'set_id' => 'int',
-        'rebate' => 'BigDecimal',
-        'min_price' => 'BigDecimal',
-        'max_price' => 'BigDecimal',
+        'rebate' => 'float',
+        'min_price' => 'float',
+        'max_price' => 'float',
         'is_purchasable' => 'int'];
 
     /**
@@ -246,7 +246,7 @@ class PlentyModulesItemSetModelsItemSetConfig implements ModelInterface, ArrayAc
     /**
      * Gets rebate
      *
-     * @return BigDecimal
+     * @return float
      */
     public function getRebate()
     {
@@ -256,7 +256,7 @@ class PlentyModulesItemSetModelsItemSetConfig implements ModelInterface, ArrayAc
     /**
      * Sets rebate
      *
-     * @param BigDecimal $rebate The discount in percent to be subtracted from the sum of the prices of the selected set components.
+     * @param float $rebate The discount in percent to be subtracted from the sum of the prices of the selected set components.
      *
      * @return $this
      */
@@ -270,7 +270,7 @@ class PlentyModulesItemSetModelsItemSetConfig implements ModelInterface, ArrayAc
     /**
      * Gets min_price
      *
-     * @return BigDecimal
+     * @return float
      */
     public function getMinPrice()
     {
@@ -280,7 +280,7 @@ class PlentyModulesItemSetModelsItemSetConfig implements ModelInterface, ArrayAc
     /**
      * Sets min_price
      *
-     * @param BigDecimal $min_price The minimum price of the sum of all components; read only
+     * @param float $min_price The minimum price of the sum of all components; read only
      *
      * @return $this
      */
@@ -294,7 +294,7 @@ class PlentyModulesItemSetModelsItemSetConfig implements ModelInterface, ArrayAc
     /**
      * Gets max_price
      *
-     * @return BigDecimal
+     * @return float
      */
     public function getMaxPrice()
     {
@@ -304,7 +304,7 @@ class PlentyModulesItemSetModelsItemSetConfig implements ModelInterface, ArrayAc
     /**
      * Sets max_price
      *
-     * @param BigDecimal $max_price the maximum price of the sum of all components; read only
+     * @param float $max_price the maximum price of the sum of all components; read only
      *
      * @return $this
      */

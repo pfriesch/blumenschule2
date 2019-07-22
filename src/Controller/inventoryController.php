@@ -20,7 +20,7 @@ class inventoryController extends AbstractController
     {
         $em = $this->getDoctrine()->getManager();
 
-        $entities = $em->getRepository('BSApp:inventory')->findAll();
+        $entities = $em->getRepository(inventory::class)->findAll();
 
         return array(
             'entities' => $entities,
@@ -74,7 +74,7 @@ class inventoryController extends AbstractController
     {
         $em = $this->getDoctrine()->getManager();
 
-        $entity = $em->getRepository('BSApp:inventory')->find($id);
+        $entity = $em->getRepository(inventory::class)->find($id);
 
         if (!$entity) {
             throw $this->createNotFoundException('Unable to find inventory entity.');
@@ -96,7 +96,7 @@ class inventoryController extends AbstractController
     {
         $em = $this->getDoctrine()->getManager();
 
-        $entity = $em->getRepository('BSApp:inventory')->find($id);
+        $entity = $em->getRepository(inventory::class)->find($id);
 
         if (!$entity) {
             throw $this->createNotFoundException('Unable to find inventory entity.');
@@ -120,7 +120,7 @@ class inventoryController extends AbstractController
     {
         $em = $this->getDoctrine()->getManager();
 
-        $entity = $em->getRepository('BSApp:inventory')->find($id);
+        $entity = $em->getRepository(inventory::class)->find($id);
 
         if (!$entity) {
             throw $this->createNotFoundException('Unable to find inventory entity.');
@@ -155,7 +155,7 @@ class inventoryController extends AbstractController
 
         if ($form->isValid()) {
             $em = $this->getDoctrine()->getManager();
-            $entity = $em->getRepository('BSApp:inventory')->find($id);
+            $entity = $em->getRepository(inventory::class)->find($id);
 
             if (!$entity) {
                 throw $this->createNotFoundException('Unable to find inventory entity.');

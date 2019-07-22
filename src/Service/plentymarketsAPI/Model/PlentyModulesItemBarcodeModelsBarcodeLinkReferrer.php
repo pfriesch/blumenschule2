@@ -57,7 +57,7 @@ class PlentyModulesItemBarcodeModelsBarcodeLinkReferrer implements ModelInterfac
      */
     protected static $swaggerTypes = [
         'barcode_id' => 'int',
-        'referrer_id' => 'BigDecimal',
+        'referrer_id' => 'float',
         'created_at' => 'string',
         'updated_at' => 'string',
         'barcode' => 'object'];
@@ -246,7 +246,7 @@ class PlentyModulesItemBarcodeModelsBarcodeLinkReferrer implements ModelInterfac
     /**
      * Gets referrer_id
      *
-     * @return BigDecimal
+     * @return float
      */
     public function getReferrerId()
     {
@@ -256,7 +256,7 @@ class PlentyModulesItemBarcodeModelsBarcodeLinkReferrer implements ModelInterfac
     /**
      * Sets referrer_id
      *
-     * @param BigDecimal $referrer_id The unique ID of the referrer. To activate all referrers, the value <strong>-1</strong> must be specified. This value activates all referrers in the system by default, including any referrers added at a later stage.
+     * @param float $referrer_id The unique ID of the referrer. To activate all referrers, the value <strong>-1</strong> must be specified. This value activates all referrers in the system by default, including any referrers added at a later stage.
      *
      * @return $this
      */

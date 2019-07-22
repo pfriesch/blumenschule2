@@ -56,7 +56,7 @@ class PlentyModulesOrderCurrencyModelsCurrencyExchangeRate implements ModelInter
      * @var string[]
      */
     protected static $swaggerTypes = [
-        'exchange_rate' => 'BigDecimal'];
+        'exchange_rate' => 'float'];
 
     /**
      * Array of property to format mappings. Used for (de)serialization
@@ -198,7 +198,7 @@ class PlentyModulesOrderCurrencyModelsCurrencyExchangeRate implements ModelInter
     /**
      * Gets exchange_rate
      *
-     * @return BigDecimal
+     * @return float
      */
     public function getExchangeRate()
     {
@@ -208,7 +208,7 @@ class PlentyModulesOrderCurrencyModelsCurrencyExchangeRate implements ModelInter
     /**
      * Sets exchange_rate
      *
-     * @param BigDecimal $exchange_rate The exchange rate
+     * @param float $exchange_rate The exchange rate
      *
      * @return $this
      */

@@ -59,14 +59,14 @@ class PlentyModulesItemVariationSupplierModelsVariationSupplier implements Model
         'id' => 'int',
         'variation_id' => 'int',
         'supplier_id' => 'int',
-        'purchase_price' => 'BigDecimal',
+        'purchase_price' => 'float',
         'minimum_purchase' => 'int',
         'item_number' => 'string',
         'last_price_query' => 'string',
         'delivery_time_in_days' => 'int',
-        'discount' => 'BigDecimal',
+        'discount' => 'float',
         'is_discountable' => 'string',
-        'packaging_unit' => 'BigDecimal',
+        'packaging_unit' => 'float',
         'last_update_timestamp' => 'string',
         'created_at' => 'string'];
 
@@ -342,7 +342,7 @@ class PlentyModulesItemVariationSupplierModelsVariationSupplier implements Model
     /**
      * Gets purchase_price
      *
-     * @return BigDecimal
+     * @return float
      */
     public function getPurchasePrice()
     {
@@ -352,7 +352,7 @@ class PlentyModulesItemVariationSupplierModelsVariationSupplier implements Model
     /**
      * Sets purchase_price
      *
-     * @param BigDecimal $purchase_price The price at which the variation was purchased from this supplier.
+     * @param float $purchase_price The price at which the variation was purchased from this supplier.
      *
      * @return $this
      */
@@ -462,7 +462,7 @@ class PlentyModulesItemVariationSupplierModelsVariationSupplier implements Model
     /**
      * Gets discount
      *
-     * @return BigDecimal
+     * @return float
      */
     public function getDiscount()
     {
@@ -472,7 +472,7 @@ class PlentyModulesItemVariationSupplierModelsVariationSupplier implements Model
     /**
      * Sets discount
      *
-     * @param BigDecimal $discount The discount in percent the supplier grants for the variation.
+     * @param float $discount The discount in percent the supplier grants for the variation.
      *
      * @return $this
      */
@@ -510,7 +510,7 @@ class PlentyModulesItemVariationSupplierModelsVariationSupplier implements Model
     /**
      * Gets packaging_unit
      *
-     * @return BigDecimal
+     * @return float
      */
     public function getPackagingUnit()
     {
@@ -520,7 +520,7 @@ class PlentyModulesItemVariationSupplierModelsVariationSupplier implements Model
     /**
      * Sets packaging_unit
      *
-     * @param BigDecimal $packaging_unit The packaging unit of the supplier if it differs from the packaging unit settings in plentymarkets.
+     * @param float $packaging_unit The packaging unit of the supplier if it differs from the packaging unit settings in plentymarkets.
      *
      * @return $this
      */

@@ -74,7 +74,7 @@ class PlentyModulesAccountContactModelsContact implements ModelInterface, ArrayA
         'rating' => 'int',
         'book_account' => 'string',
         'lang' => 'string',
-        'referrer_id' => 'BigDecimal',
+        'referrer_id' => 'float',
         'plenty_id' => 'int',
         'user_id' => 'int',
         'birthday_at' => 'string',
@@ -98,7 +98,7 @@ class PlentyModulesAccountContactModelsContact implements ModelInterface, ArrayA
         'marketplace_partner' => 'string',
         'valuta' => 'int',
         'discount_days' => 'int',
-        'discount_percent' => 'BigDecimal',
+        'discount_percent' => 'float',
         'time_for_payment_allowed_days' => 'int',
         'sales_representative_contact_id' => 'int'];
 
@@ -894,7 +894,7 @@ class PlentyModulesAccountContactModelsContact implements ModelInterface, ArrayA
     /**
      * Gets referrer_id
      *
-     * @return BigDecimal
+     * @return float
      */
     public function getReferrerId()
     {
@@ -904,7 +904,7 @@ class PlentyModulesAccountContactModelsContact implements ModelInterface, ArrayA
     /**
      * Sets referrer_id
      *
-     * @param BigDecimal $referrer_id The origin of the contact
+     * @param float $referrer_id The origin of the contact
      *
      * @return $this
      */
@@ -1470,7 +1470,7 @@ class PlentyModulesAccountContactModelsContact implements ModelInterface, ArrayA
     /**
      * Gets discount_percent
      *
-     * @return BigDecimal
+     * @return float
      */
     public function getDiscountPercent()
     {
@@ -1480,7 +1480,7 @@ class PlentyModulesAccountContactModelsContact implements ModelInterface, ArrayA
     /**
      * Sets discount_percent
      *
-     * @param BigDecimal $discount_percent The early payment discount in percent specified for the account
+     * @param float $discount_percent The early payment discount in percent specified for the account
      *
      * @return $this
      */

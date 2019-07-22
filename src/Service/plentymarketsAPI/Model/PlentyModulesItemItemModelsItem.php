@@ -109,7 +109,7 @@ class PlentyModulesItemItemModelsItem implements ModelInterface, ArrayAccess
         'free18' => 'string',
         'free19' => 'string',
         'free20' => 'string',
-        'maximum_order_quantity' => 'BigDecimal'];
+        'maximum_order_quantity' => 'float'];
 
     /**
      * Array of property to format mappings. Used for (de)serialization
@@ -1788,7 +1788,7 @@ class PlentyModulesItemItemModelsItem implements ModelInterface, ArrayAccess
     /**
      * Gets maximum_order_quantity
      *
-     * @return BigDecimal
+     * @return float
      */
     public function getMaximumOrderQuantity()
     {
@@ -1798,7 +1798,7 @@ class PlentyModulesItemItemModelsItem implements ModelInterface, ArrayAccess
     /**
      * Sets maximum_order_quantity
      *
-     * @param BigDecimal $maximum_order_quantity The maximum order quantity of an item permitted per order. If a maximum order quantity is specified, no more than this quantity of any combination of the variations of the item can be ordered. Decimal values are possible to allow orders by weight or length. Default value is 0. If value is 0, the maximum order quantity is unlimited.
+     * @param float $maximum_order_quantity The maximum order quantity of an item permitted per order. If a maximum order quantity is specified, no more than this quantity of any combination of the variations of the item can be ordered. Decimal values are possible to allow orders by weight or length. Default value is 0. If value is 0, the maximum order quantity is unlimited.
      *
      * @return $this
      */

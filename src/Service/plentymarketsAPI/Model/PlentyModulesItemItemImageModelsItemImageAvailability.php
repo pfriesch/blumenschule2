@@ -58,7 +58,7 @@ class PlentyModulesItemItemImageModelsItemImageAvailability implements ModelInte
     protected static $swaggerTypes = [
         'image_id' => 'int',
         'type' => 'string',
-        'value' => 'BigDecimal'];
+        'value' => 'float'];
 
     /**
      * Array of property to format mappings. Used for (de)serialization
@@ -258,7 +258,7 @@ class PlentyModulesItemItemImageModelsItemImageAvailability implements ModelInte
     /**
      * Gets value
      *
-     * @return BigDecimal
+     * @return float
      */
     public function getValue()
     {
@@ -268,7 +268,7 @@ class PlentyModulesItemItemImageModelsItemImageAvailability implements ModelInte
     /**
      * Sets value
      *
-     * @param BigDecimal $value For the type <b>mandant</b>, this is the plentyID of the client (store) for which the image is available. For the types <b>marketplace</b> and <b>listing</b>, this is the ID of the referrer for which the image is available. <ul><li><strong>-1.00</strong> = The image is available for all referrers of this type.</li></ul>
+     * @param float $value For the type <b>mandant</b>, this is the plentyID of the client (store) for which the image is available. For the types <b>marketplace</b> and <b>listing</b>, this is the ID of the referrer for which the image is available. <ul><li><strong>-1.00</strong> = The image is available for all referrers of this type.</li></ul>
      *
      * @return $this
      */

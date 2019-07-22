@@ -21,6 +21,11 @@ bs_app_data:
   resource: 'routes/routing_data.yml'
   prefix: /data
 
+bs_app_data_plang:
+  resource: 'routes/routing_data_plant.yml'
+  prefix: /data/plant
+
+
 bs_app_lable:
   resource: 'routes/routing_label.yml'
   prefix: /lable

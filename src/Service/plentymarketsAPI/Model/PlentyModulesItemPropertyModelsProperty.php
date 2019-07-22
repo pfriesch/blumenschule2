@@ -70,7 +70,7 @@ class PlentyModulesItemPropertyModelsProperty implements ModelInterface, ArrayAc
         'is_shown_at_checkout' => 'bool',
         'is_shown_in_pdf' => 'bool',
         'is_shown_as_additional_costs' => 'bool',
-        'surcharge' => 'BigDecimal',
+        'surcharge' => 'float',
         'updated_at' => 'string'];
 
     /**
@@ -624,7 +624,7 @@ class PlentyModulesItemPropertyModelsProperty implements ModelInterface, ArrayAc
     /**
      * Gets surcharge
      *
-     * @return BigDecimal
+     * @return float
      */
     public function getSurcharge()
     {
@@ -634,7 +634,7 @@ class PlentyModulesItemPropertyModelsProperty implements ModelInterface, ArrayAc
     /**
      * Sets surcharge
      *
-     * @param BigDecimal $surcharge The surcharge for the property. Surcharges will automatically be added to the item price in the detailed view of an item and in the order process. The default value is 0.00, i.e. no surcharge. In the plentymarkets front end, the template variable PriceDynamic displays the price of a variation including the surcharge.
+     * @param float $surcharge The surcharge for the property. Surcharges will automatically be added to the item price in the detailed view of an item and in the order process. The default value is 0.00, i.e. no surcharge. In the plentymarkets front end, the template variable PriceDynamic displays the price of a variation including the surcharge.
      *
      * @return $this
      */

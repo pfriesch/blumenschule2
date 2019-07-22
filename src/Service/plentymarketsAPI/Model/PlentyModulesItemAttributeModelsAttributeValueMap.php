@@ -56,7 +56,7 @@ class PlentyModulesItemAttributeModelsAttributeValueMap implements ModelInterfac
      * @var string[]
      */
     protected static $swaggerTypes = [
-        'market_id' => 'BigDecimal',
+        'market_id' => 'float',
         'attribute_id' => 'int',
         'attribute_value_id' => 'int',
         'name' => 'string',
@@ -228,7 +228,7 @@ class PlentyModulesItemAttributeModelsAttributeValueMap implements ModelInterfac
     /**
      * Gets market_id
      *
-     * @return BigDecimal
+     * @return float
      */
     public function getMarketId()
     {
@@ -238,7 +238,7 @@ class PlentyModulesItemAttributeModelsAttributeValueMap implements ModelInterfac
     /**
      * Sets market_id
      *
-     * @param BigDecimal $market_id The unique ID of the market.
+     * @param float $market_id The unique ID of the market.
      *
      * @return $this
      */

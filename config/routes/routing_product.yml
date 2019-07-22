@@ -50,4 +50,5 @@ product_delete:
 
 product_all:
   path: /all/{search}
+  defaults: {search: ""}
   controller:  BSApp\Controller\ProductController:productAllAction

@@ -57,10 +57,10 @@ class PlentyModulesOrderShippingPalletModelsOrderShippingPallet implements Model
      */
     protected static $swaggerTypes = [
         'id' => 'int',
-        'individual_weight' => 'BigDecimal',
-        'width' => 'BigDecimal',
-        'height' => 'BigDecimal',
-        'length' => 'BigDecimal',
+        'individual_weight' => 'float',
+        'width' => 'float',
+        'height' => 'float',
+        'length' => 'float',
         'is_stackable' => 'bool',
         'additional_info' => 'int',
         'barcode' => 'string',
@@ -270,7 +270,7 @@ class PlentyModulesOrderShippingPalletModelsOrderShippingPallet implements Model
     /**
      * Gets individual_weight
      *
-     * @return BigDecimal
+     * @return float
      */
     public function getIndividualWeight()
     {
@@ -280,7 +280,7 @@ class PlentyModulesOrderShippingPalletModelsOrderShippingPallet implements Model
     /**
      * Sets individual_weight
      *
-     * @param BigDecimal $individual_weight The weight of the order shipping pallet
+     * @param float $individual_weight The weight of the order shipping pallet
      *
      * @return $this
      */
@@ -294,7 +294,7 @@ class PlentyModulesOrderShippingPalletModelsOrderShippingPallet implements Model
     /**
      * Gets width
      *
-     * @return BigDecimal
+     * @return float
      */
     public function getWidth()
     {
@@ -304,7 +304,7 @@ class PlentyModulesOrderShippingPalletModelsOrderShippingPallet implements Model
     /**
      * Sets width
      *
-     * @param BigDecimal $width The width of the order shipping pallet
+     * @param float $width The width of the order shipping pallet
      *
      * @return $this
      */
@@ -318,7 +318,7 @@ class PlentyModulesOrderShippingPalletModelsOrderShippingPallet implements Model
     /**
      * Gets height
      *
-     * @return BigDecimal
+     * @return float
      */
     public function getHeight()
     {
@@ -328,7 +328,7 @@ class PlentyModulesOrderShippingPalletModelsOrderShippingPallet implements Model
     /**
      * Sets height
      *
-     * @param BigDecimal $height The height of the order shipping pallet
+     * @param float $height The height of the order shipping pallet
      *
      * @return $this
      */
@@ -342,7 +342,7 @@ class PlentyModulesOrderShippingPalletModelsOrderShippingPallet implements Model
     /**
      * Gets length
      *
-     * @return BigDecimal
+     * @return float
      */
     public function getLength()
     {
@@ -352,7 +352,7 @@ class PlentyModulesOrderShippingPalletModelsOrderShippingPallet implements Model
     /**
      * Sets length
      *
-     * @param BigDecimal $length The length of the order shipping pallet
+     * @param float $length The length of the order shipping pallet
      *
      * @return $this
      */

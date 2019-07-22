@@ -58,7 +58,7 @@ class PlentyModulesOrderTransactionModelsOrderItemTransaction implements ModelIn
     protected static $swaggerTypes = [
         'id' => 'int',
         'order_item_id' => 'int',
-        'quantity' => 'BigDecimal',
+        'quantity' => 'float',
         'user_id' => 'int',
         'identification' => 'string',
         'direction' => 'string',
@@ -324,7 +324,7 @@ class PlentyModulesOrderTransactionModelsOrderItemTransaction implements ModelIn
     /**
      * Gets quantity
      *
-     * @return BigDecimal
+     * @return float
      */
     public function getQuantity()
     {
@@ -334,7 +334,7 @@ class PlentyModulesOrderTransactionModelsOrderItemTransaction implements ModelIn
     /**
      * Sets quantity
      *
-     * @param BigDecimal $quantity The quantity
+     * @param float $quantity The quantity
      *
      * @return $this
      */

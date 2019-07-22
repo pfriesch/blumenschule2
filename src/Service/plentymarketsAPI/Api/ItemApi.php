@@ -37,6 +37,7 @@ use BSApp\Service\plentymarketsAPI\ApiException;
 use BSApp\Service\plentymarketsAPI\Configuration;
 use BSApp\Service\plentymarketsAPI\HeaderSelector;
 use BSApp\Service\plentymarketsAPI\ObjectSerializer;
+use BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemItemModelsItem;
 
 /**
  * ItemApi Class Doc Comment
@@ -48575,7 +48576,7 @@ class ItemApi
      */
     public function restItemsItemIdGetWithHttpInfo($item_id, $lang = null)
     {
-        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemItemModelsItem';
+        $returnType = PlentyModulesItemItemModelsItem::class;
         $request = $this->restItemsItemIdGetRequest($item_id, $lang);
 
         try {

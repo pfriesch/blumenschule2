@@ -58,7 +58,7 @@ class PlentyModulesItemVariationSkuModelsVariationSku implements ModelInterface,
     protected static $swaggerTypes = [
         'id' => 'int',
         'variation_id' => 'int',
-        'market_id' => 'BigDecimal',
+        'market_id' => 'float',
         'account_id' => 'int',
         'initial_sku' => 'string',
         'sku' => 'string',
@@ -330,7 +330,7 @@ class PlentyModulesItemVariationSkuModelsVariationSku implements ModelInterface,
     /**
      * Gets market_id
      *
-     * @return BigDecimal
+     * @return float
      */
     public function getMarketId()
     {
@@ -340,7 +340,7 @@ class PlentyModulesItemVariationSkuModelsVariationSku implements ModelInterface,
     /**
      * Sets market_id
      *
-     * @param BigDecimal $market_id The ID of the market
+     * @param float $market_id The ID of the market
      *
      * @return $this
      */

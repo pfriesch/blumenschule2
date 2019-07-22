@@ -31,9 +31,11 @@
                 <ul class="dropdown-menu">
                     <li><a href="{{ path('BSData_product_lable') }}">Etiketten</a></li>
 {#                    <li><a href="{{ path('BSData_plant', { 'page': 1 }) }}">Pflanzen</a></li>#}
-                    <li><a href="{{ path('BSData_product', { 'page': 1 }) }}">Waren</a></li>
+{#                    <li><a href="{{ path('BSData_product', { 'page': 1 }) }}">Waren</a></li>#}
 {#                    <li><a href="{{ path('product_all', { 'page': 1 }) }}">Waren&Pflanzen/Daten</a></li>#}
+                    <li><a href="{{ path('product_all', { 'page': 1 }) }}">Daten</a></li>
                     <li><a href="{{ path('BSData_stock') }}">Lager</a></li>
+                    <li><a href="{{ path('data_stockkeepting') }}">Bestand</a></li>
 
                     <li><a href="{{ path('BSCheckout_history', { 'cashbox_id': 1,'date':'now' } )}}" >Kassen History</a></li>
                 </ul>

@@ -58,7 +58,7 @@ class PlentyModulesItemVariationSalesPriceModelsVariationSalesPrice implements M
     protected static $swaggerTypes = [
         'variation_id' => 'int',
         'sales_price_id' => 'int',
-        'price' => 'BigDecimal'];
+        'price' => 'float'];
 
     /**
      * Array of property to format mappings. Used for (de)serialization
@@ -258,7 +258,7 @@ class PlentyModulesItemVariationSalesPriceModelsVariationSalesPrice implements M
     /**
      * Gets price
      *
-     * @return BigDecimal
+     * @return float
      */
     public function getPrice()
     {
@@ -268,7 +268,7 @@ class PlentyModulesItemVariationSalesPriceModelsVariationSalesPrice implements M
     /**
      * Sets price
      *
-     * @param BigDecimal $price The price of the variation saved for this sales price
+     * @param float $price The price of the variation saved for this sales price
      *
      * @return $this
      */

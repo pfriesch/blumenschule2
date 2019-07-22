@@ -19,7 +19,7 @@ class checkoutRepository extends EntityRepository
 
         //
         $em = $this->getEntityManager();
-        $cashbox = $em->getRepository('BSCheckoutBundle:cashbox')->find($cashbox_id);
+        $cashbox = $em->getRepository(cashbox::class)->find($cashbox_id);
         $qb = $this->createQueryBuilder('b');
         $qb->join('b.cashbox', 'c');
         $qb->where('b.finish <> true');

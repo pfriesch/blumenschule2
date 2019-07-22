@@ -58,7 +58,7 @@ class PlentyModulesItemPropertyModelsPropertyMarketReference implements ModelInt
     protected static $swaggerTypes = [
         'property_id' => 'int',
         'component_id' => 'int',
-        'market_id' => 'BigDecimal',
+        'market_id' => 'float',
         'external_component' => 'string'];
 
     /**
@@ -264,7 +264,7 @@ class PlentyModulesItemPropertyModelsPropertyMarketReference implements ModelInt
     /**
      * Gets market_id
      *
-     * @return BigDecimal
+     * @return float
      */
     public function getMarketId()
     {
@@ -274,7 +274,7 @@ class PlentyModulesItemPropertyModelsPropertyMarketReference implements ModelInt
     /**
      * Sets market_id
      *
-     * @param BigDecimal $market_id The unique ID of the market
+     * @param float $market_id The unique ID of the market
      *
      * @return $this
      */

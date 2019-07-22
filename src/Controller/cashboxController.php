@@ -2,10 +2,11 @@
 
 namespace BSApp\Controller;
 
-use BSApp\Entity\quickbutton;
+use BSApp\Entity\checkout\cashbox;
+use BSApp\Entity\checkout\checkout;
+use BSApp\Entity\checkout\quickbutton;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
-use BSApp\Entity\cashbox;
 
 /**
  * cashbox controller.
@@ -19,9 +20,9 @@ class cashboxController extends AbstractController
      */
     public function indexAction()
     {
-        $em = $this->getDoctrine()->getEntityManager();
+        $em = $this->getDoctrine()->getManager();
 
-        $entities = $em->getRepository('BSCheckoutBundle:cashbox')->findAll();
+        $entities = $em->getRepository(cashbox::class)->findAll();
 
         return array('entities' => $entities);
     }
@@ -32,15 +33,15 @@ class cashboxController extends AbstractController
      */
     public function closeAction($id)
     {
-        $em = $this->getDoctrine()->getEntityManager();
+        $em = $this->getDoctrine()->getManager();
 
-        $cashbox = $em->getRepository('BSCheckoutBundle:cashbox')->find($id);
+        $cashbox = $em->getRepository(cashbox::class)->find($id);
 
         if (!$cashbox) {
             throw $this->createNotFoundException('Kann die Kasse nicht finden');
         }
 
-        $checkouts = $em->getRepository('BSCheckoutBundle:checkout')->getHistory($cashbox->getID(), 'now');
+        $checkouts = $em->getRepository(checkout::class)->getHistory($cashbox->getID(), 'now');
 
 
         return array('checkouts' => $checkouts);
@@ -54,9 +55,9 @@ class cashboxController extends AbstractController
      */
     public function showAction($id)
     {
-        $em = $this->getDoctrine()->getEntityManager();
+        $em = $this->getDoctrine()->getManager();
 
-        $entity = $em->getRepository('BSCheckoutBundle:cashbox')->find($id);
+        $entity = $em->getRepository(cashbox::class)->find($id);
 
         if (!$entity) {
             throw $this->createNotFoundException('Unable to find cashbox entity.');
@@ -71,7 +72,7 @@ class cashboxController extends AbstractController
         $quickbutton = new quickbutton();
         $quickbutton->setCashbox($entity);
         $quickbutton_form = $this->createForm(new quickbuttonType(), $quickbutton);
-        $quickbuttons = $em->getRepository('BSCheckoutBundle:quickbutton')->getQuickbuttons($entity->getID());
+        $quickbuttons = $em->getRepository(quickbutton::class)->getQuickbuttons($entity->getID());
 
         $bon_after_text = $this->createFormBuilder()
             ->add('bontext', 'textarea', array('label' => 'Bon Text', 'data' => $entity->getBonafter(), 'attr' => array('class' => 'ckeditor')))->getForm();
@@ -90,9 +91,9 @@ class cashboxController extends AbstractController
      */
     public function bontext_saveAction($id)
     {
-        $em = $this->getDoctrine()->getEntityManager();
+        $em = $this->getDoctrine()->getManager();
 
-        $entity = $em->getRepository('BSCheckoutBundle:cashbox')->find($id);
+        $entity = $em->getRepository(cashbox::class)->find($id);
 
         if (!$entity) {
             throw $this->createNotFoundException('Unable to find cashbox entity.');
@@ -117,9 +118,9 @@ class cashboxController extends AbstractController
      */
     public function button_addAction($id)
     {
-        $em = $this->getDoctrine()->getEntityManager();
+        $em = $this->getDoctrine()->getManager();
 
-        $entity = $em->getRepository('BSCheckoutBundle:cashbox')->find($id);
+        $entity = $em->getRepository(cashbox::class)->find($id);
 
         if (!$entity) {
             throw $this->createNotFoundException('Unable to find cashbox entity.');
@@ -150,9 +151,9 @@ class cashboxController extends AbstractController
      */
     public function button_deleteAction($id, $itemid)
     {
-        $em = $this->getDoctrine()->getEntityManager();
+        $em = $this->getDoctrine()->getManager();
 
-        $entity = $em->getRepository('BSCheckoutBundle:cashbox')->find($id);
+        $entity = $em->getRepository(cashbox::class)->find($id);
 
         if (!$entity) {
             throw $this->createNotFoundException('Unable to find cashbox entity.');
@@ -200,7 +201,7 @@ class cashboxController extends AbstractController
         $form->bindRequest($request);
 
         if ($form->isValid()) {
-            $em = $this->getDoctrine()->getEntityManager();
+            $em = $this->getDoctrine()->getManager();
             $em->persist($entity);
             $em->flush();
 
@@ -220,9 +221,9 @@ class cashboxController extends AbstractController
      */
     public function editAction($id)
     {
-        $em = $this->getDoctrine()->getEntityManager();
+        $em = $this->getDoctrine()->getManager();
 
-        $entity = $em->getRepository('BSCheckoutBundle:cashbox')->find($id);
+        $entity = $em->getRepository(cashbox::class)->find($id);
 
         if (!$entity) {
             throw $this->createNotFoundException('Unable to find cashbox entity.');
@@ -244,9 +245,9 @@ class cashboxController extends AbstractController
      */
     public function updateAction($id)
     {
-        $em = $this->getDoctrine()->getEntityManager();
+        $em = $this->getDoctrine()->getManager();
 
-        $entity = $em->getRepository('BSCheckoutBundle:cashbox')->find($id);
+        $entity = $em->getRepository(cashbox::class)->find($id);
 
         if (!$entity) {
             throw $this->createNotFoundException('Unable to find cashbox entity.');
@@ -285,8 +286,8 @@ class cashboxController extends AbstractController
         $form->bindRequest($request);
 
         if ($form->isValid()) {
-            $em = $this->getDoctrine()->getEntityManager();
-            $entity = $em->getRepository('BSCheckoutBundle:cashbox')->find($id);
+            $em = $this->getDoctrine()->getManager();
+            $entity = $em->getRepository(cashbox::class)->find($id);
 
             if (!$entity) {
                 throw $this->createNotFoundException('Unable to find cashbox entity.');
@@ -311,8 +312,8 @@ class cashboxController extends AbstractController
 
         $pdfname = 'cashbox_' . $id . '_' . date('U');
 
-        $em = $this->getDoctrine()->getEntityManager();
-        $Baskets = $em->getRepository('BSCheckoutBundle:checkout')->getHistory($id, $date);
+        $em = $this->getDoctrine()->getManager();
+        $Baskets = $em->getRepository(checkout::class)->getHistory($id, $date);
 
         $summary = array();
         $summary2 = array();
@@ -471,7 +472,7 @@ class cashboxController extends AbstractController
 
         $pdf->Output(__DIR__ . "/../../../../web/print/" . $pdfname . ".pdf", 'F');
 
-        return $this->render('BSCheckoutBundle:cashbox:print.html.twig', array(
+        return $this->render('cashbox/print.html.twig', array(
             'urlPDF' => "/print/" . $pdfname . ".pdf",
             'cashbox_id' => $id,
         ));

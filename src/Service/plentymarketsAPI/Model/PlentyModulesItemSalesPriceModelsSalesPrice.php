@@ -58,7 +58,7 @@ class PlentyModulesItemSalesPriceModelsSalesPrice implements ModelInterface, Arr
     protected static $swaggerTypes = [
         'id' => 'int',
         'position' => 'int',
-        'minimum_order_quantity' => 'BigDecimal',
+        'minimum_order_quantity' => 'float',
         'type' => 'string',
         'is_customer_price' => 'bool',
         'is_displayed_by_default' => 'bool',
@@ -330,7 +330,7 @@ class PlentyModulesItemSalesPriceModelsSalesPrice implements ModelInterface, Arr
     /**
      * Gets minimum_order_quantity
      *
-     * @return BigDecimal
+     * @return float
      */
     public function getMinimumOrderQuantity()
     {
@@ -340,7 +340,7 @@ class PlentyModulesItemSalesPriceModelsSalesPrice implements ModelInterface, Arr
     /**
      * Sets minimum_order_quantity
      *
-     * @param BigDecimal $minimum_order_quantity The minimum order quantity of the sales price. Sales prices with different minimum quantities can be used to create a quantity based graduation of prices in plentymarkets.
+     * @param float $minimum_order_quantity The minimum order quantity of the sales price. Sales prices with different minimum quantities can be used to create a quantity based graduation of prices in plentymarkets.
      *
      * @return $this
      */

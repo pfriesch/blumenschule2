@@ -20,7 +20,7 @@ class StockController extends AbstractController
 //        TODO: This action seems to be broken route:/data/stock, also according to the routing this is supposted to handle paging
         $em = $this->getDoctrine()->getManager();
 
-        $entities = $em->getRepository('BSApp\Entity\Stock')->findAll();
+        $entities = $em->getRepository(Stock::class)->findAll();
 
         return $this->render('stock/index.html.twig', array('entities' => $entities));
     }
@@ -33,7 +33,7 @@ class StockController extends AbstractController
     {
         $em = $this->getDoctrine()->getManager();
 
-        $entity = $em->getRepository('BSApp\Entity\Stock')->find($id);
+        $entity = $em->getRepository(Stock::class)->find($id);
 
         if (!$entity) {
             throw $this->createNotFoundException('Unable to find Stock entity.');
@@ -108,7 +108,7 @@ class StockController extends AbstractController
     {
         $em = $this->getDoctrine()->getManager();
 
-        $entity = $em->getRepository('BSApp\Entity\Stock')->find($id);
+        $entity = $em->getRepository(Stock::class)->find($id);
 
         if (!$entity) {
             throw $this->createNotFoundException('Unable to find Stock entity.');
@@ -132,7 +132,7 @@ class StockController extends AbstractController
     {
         $em = $this->getDoctrine()->getManager();
 
-        $entity = $em->getRepository('BSApp\Entity\Stock')->find($id);
+        $entity = $em->getRepository(Stock::class)->find($id);
 
         if (!$entity) {
             throw $this->createNotFoundException('Unable to find Stock entity.');
@@ -172,7 +172,7 @@ class StockController extends AbstractController
 
         if ($form->isValid()) {
             $em = $this->getDoctrine()->getManager();
-            $entity = $em->getRepository('BSApp\Entity\Stock')->find($id);
+            $entity = $em->getRepository(Stock::class)->find($id);
 
             if (!$entity) {
                 throw $this->createNotFoundException('Unable to find Stock entity.');

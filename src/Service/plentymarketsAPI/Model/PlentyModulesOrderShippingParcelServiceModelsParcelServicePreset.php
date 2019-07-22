@@ -67,7 +67,7 @@ class PlentyModulesOrderShippingParcelServiceModelsParcelServicePreset implement
         'is_express' => 'int',
         'is_postident' => 'int',
         'is_default_enabled' => 'int',
-        'island_fee' => 'BigDecimal',
+        'island_fee' => 'float',
         'is_cod' => 'int',
         'supported_multishop' => 'string[]',
         'supported_referrer' => 'string[]',
@@ -630,7 +630,7 @@ class PlentyModulesOrderShippingParcelServiceModelsParcelServicePreset implement
     /**
      * Gets island_fee
      *
-     * @return BigDecimal
+     * @return float
      */
     public function getIslandFee()
     {
@@ -640,7 +640,7 @@ class PlentyModulesOrderShippingParcelServiceModelsParcelServicePreset implement
     /**
      * Sets island_fee
      *
-     * @param BigDecimal $island_fee The extra charge for islands saved in the shipping profile
+     * @param float $island_fee The extra charge for islands saved in the shipping profile
      *
      * @return $this
      */

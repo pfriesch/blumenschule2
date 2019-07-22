@@ -59,15 +59,15 @@ class PlentyModulesItemVariationStockModelsVariationStock implements ModelInterf
         'item_id' => 'int',
         'variation_id' => 'int',
         'warehouse_id' => 'int',
-        'reserved_listing' => 'BigDecimal',
-        'reserved_bundles' => 'BigDecimal',
-        'value_of_goods' => 'BigDecimal',
-        'purchase_price' => 'BigDecimal',
-        'physical_stock' => 'BigDecimal',
-        'reserved_stock' => 'BigDecimal',
-        'net_stock' => 'BigDecimal',
-        'reorder_level' => 'BigDecimal',
-        'delta_reorder_level' => 'BigDecimal'];
+        'reserved_listing' => 'float',
+        'reserved_bundles' => 'float',
+        'value_of_goods' => 'float',
+        'purchase_price' => 'float',
+        'physical_stock' => 'float',
+        'reserved_stock' => 'float',
+        'net_stock' => 'float',
+        'reorder_level' => 'float',
+        'delta_reorder_level' => 'float'];
 
     /**
      * Array of property to format mappings. Used for (de)serialization
@@ -336,7 +336,7 @@ class PlentyModulesItemVariationStockModelsVariationStock implements ModelInterf
     /**
      * Gets reserved_listing
      *
-     * @return BigDecimal
+     * @return float
      */
     public function getReservedListing()
     {
@@ -346,7 +346,7 @@ class PlentyModulesItemVariationStockModelsVariationStock implements ModelInterf
     /**
      * Sets reserved_listing
      *
-     * @param BigDecimal $reserved_listing The quantity of a variation that is reserved for listings
+     * @param float $reserved_listing The quantity of a variation that is reserved for listings
      *
      * @return $this
      */
@@ -360,7 +360,7 @@ class PlentyModulesItemVariationStockModelsVariationStock implements ModelInterf
     /**
      * Gets reserved_bundles
      *
-     * @return BigDecimal
+     * @return float
      */
     public function getReservedBundles()
     {
@@ -370,7 +370,7 @@ class PlentyModulesItemVariationStockModelsVariationStock implements ModelInterf
     /**
      * Sets reserved_bundles
      *
-     * @param BigDecimal $reserved_bundles The quantity of a variation that is reserved for item bundles
+     * @param float $reserved_bundles The quantity of a variation that is reserved for item bundles
      *
      * @return $this
      */
@@ -384,7 +384,7 @@ class PlentyModulesItemVariationStockModelsVariationStock implements ModelInterf
     /**
      * Gets value_of_goods
      *
-     * @return BigDecimal
+     * @return float
      */
     public function getValueOfGoods()
     {
@@ -394,7 +394,7 @@ class PlentyModulesItemVariationStockModelsVariationStock implements ModelInterf
     /**
      * Sets value_of_goods
      *
-     * @param BigDecimal $value_of_goods The value of goods based on the physical stock
+     * @param float $value_of_goods The value of goods based on the physical stock
      *
      * @return $this
      */
@@ -408,7 +408,7 @@ class PlentyModulesItemVariationStockModelsVariationStock implements ModelInterf
     /**
      * Gets purchase_price
      *
-     * @return BigDecimal
+     * @return float
      */
     public function getPurchasePrice()
     {
@@ -418,7 +418,7 @@ class PlentyModulesItemVariationStockModelsVariationStock implements ModelInterf
     /**
      * Sets purchase_price
      *
-     * @param BigDecimal $purchase_price The purchase price of the variation stock
+     * @param float $purchase_price The purchase price of the variation stock
      *
      * @return $this
      */
@@ -432,7 +432,7 @@ class PlentyModulesItemVariationStockModelsVariationStock implements ModelInterf
     /**
      * Gets physical_stock
      *
-     * @return BigDecimal
+     * @return float
      */
     public function getPhysicalStock()
     {
@@ -442,7 +442,7 @@ class PlentyModulesItemVariationStockModelsVariationStock implements ModelInterf
     /**
      * Sets physical_stock
      *
-     * @param BigDecimal $physical_stock The physical stock of the variation stock
+     * @param float $physical_stock The physical stock of the variation stock
      *
      * @return $this
      */
@@ -456,7 +456,7 @@ class PlentyModulesItemVariationStockModelsVariationStock implements ModelInterf
     /**
      * Gets reserved_stock
      *
-     * @return BigDecimal
+     * @return float
      */
     public function getReservedStock()
     {
@@ -466,7 +466,7 @@ class PlentyModulesItemVariationStockModelsVariationStock implements ModelInterf
     /**
      * Sets reserved_stock
      *
-     * @param BigDecimal $reserved_stock The reserved stock of the variation stock
+     * @param float $reserved_stock The reserved stock of the variation stock
      *
      * @return $this
      */
@@ -480,7 +480,7 @@ class PlentyModulesItemVariationStockModelsVariationStock implements ModelInterf
     /**
      * Gets net_stock
      *
-     * @return BigDecimal
+     * @return float
      */
     public function getNetStock()
     {
@@ -490,7 +490,7 @@ class PlentyModulesItemVariationStockModelsVariationStock implements ModelInterf
     /**
      * Sets net_stock
      *
-     * @param BigDecimal $net_stock The net stock is the stock that can still be sold
+     * @param float $net_stock The net stock is the stock that can still be sold
      *
      * @return $this
      */
@@ -504,7 +504,7 @@ class PlentyModulesItemVariationStockModelsVariationStock implements ModelInterf
     /**
      * Gets reorder_level
      *
-     * @return BigDecimal
+     * @return float
      */
     public function getReorderLevel()
     {
@@ -514,7 +514,7 @@ class PlentyModulesItemVariationStockModelsVariationStock implements ModelInterf
     /**
      * Sets reorder_level
      *
-     * @param BigDecimal $reorder_level The quantity of a variation that triggers a reorder
+     * @param float $reorder_level The quantity of a variation that triggers a reorder
      *
      * @return $this
      */
@@ -528,7 +528,7 @@ class PlentyModulesItemVariationStockModelsVariationStock implements ModelInterf
     /**
      * Gets delta_reorder_level
      *
-     * @return BigDecimal
+     * @return float
      */
     public function getDeltaReorderLevel()
     {
@@ -538,7 +538,7 @@ class PlentyModulesItemVariationStockModelsVariationStock implements ModelInterf
     /**
      * Sets delta_reorder_level
      *
-     * @param BigDecimal $delta_reorder_level The quantity of a variation that is required to reach the reorder level
+     * @param float $delta_reorder_level The quantity of a variation that is required to reach the reorder level
      *
      * @return $this
      */

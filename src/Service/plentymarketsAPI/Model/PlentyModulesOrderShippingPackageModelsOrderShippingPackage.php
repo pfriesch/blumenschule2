@@ -65,7 +65,7 @@ class PlentyModulesOrderShippingPackageModelsOrderShippingPackage implements Mod
         'label_base64' => 'string',
         'export_label_base64' => 'string',
         'package_type' => 'int',
-        'volume' => 'BigDecimal',
+        'volume' => 'float',
         'pallet_id' => 'int',
         'is_closed' => 'bool'];
 
@@ -480,7 +480,7 @@ class PlentyModulesOrderShippingPackageModelsOrderShippingPackage implements Mod
     /**
      * Gets volume
      *
-     * @return BigDecimal
+     * @return float
      */
     public function getVolume()
     {
@@ -490,7 +490,7 @@ class PlentyModulesOrderShippingPackageModelsOrderShippingPackage implements Mod
     /**
      * Sets volume
      *
-     * @param BigDecimal $volume The volume of the package
+     * @param float $volume The volume of the package
      *
      * @return $this
      */

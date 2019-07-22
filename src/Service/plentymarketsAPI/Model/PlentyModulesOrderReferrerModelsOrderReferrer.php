@@ -56,7 +56,7 @@ class PlentyModulesOrderReferrerModelsOrderReferrer implements ModelInterface, A
      * @var string[]
      */
     protected static $swaggerTypes = [
-        'id' => 'BigDecimal',
+        'id' => 'float',
         'is_editable' => 'bool',
         'backend_name' => 'string',
         'name' => 'string',
@@ -234,7 +234,7 @@ class PlentyModulesOrderReferrerModelsOrderReferrer implements ModelInterface, A
     /**
      * Gets id
      *
-     * @return BigDecimal
+     * @return float
      */
     public function getId()
     {
@@ -244,7 +244,7 @@ class PlentyModulesOrderReferrerModelsOrderReferrer implements ModelInterface, A
     /**
      * Sets id
      *
-     * @param BigDecimal $id The ID of the order referrer
+     * @param float $id The ID of the order referrer
      *
      * @return $this
      */

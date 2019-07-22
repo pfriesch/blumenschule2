@@ -58,7 +58,7 @@ class PlentyModulesPropertyModelsPropertyMarket implements ModelInterface, Array
     protected static $swaggerTypes = [
         'id' => 'int',
         'property_id' => 'int',
-        'referrer_id' => 'BigDecimal',
+        'referrer_id' => 'float',
         'referrer_sub_id' => 'int',
         'value' => 'string'];
 
@@ -270,7 +270,7 @@ class PlentyModulesPropertyModelsPropertyMarket implements ModelInterface, Array
     /**
      * Gets referrer_id
      *
-     * @return BigDecimal
+     * @return float
      */
     public function getReferrerId()
     {
@@ -280,7 +280,7 @@ class PlentyModulesPropertyModelsPropertyMarket implements ModelInterface, Array
     /**
      * Sets referrer_id
      *
-     * @param BigDecimal $referrer_id The ID of the referrer
+     * @param float $referrer_id The ID of the referrer
      *
      * @return $this
      */

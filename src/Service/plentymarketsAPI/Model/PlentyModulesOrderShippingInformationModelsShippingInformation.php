@@ -60,7 +60,7 @@ class PlentyModulesOrderShippingInformationModelsShippingInformation implements 
         'shipping_service_provider' => 'string',
         'transaction_id' => 'string',
         'shipping_status' => 'string',
-        'shipping_costs' => 'BigDecimal',
+        'shipping_costs' => 'float',
         'additional_data' => 'string',
         'registration_at' => 'int',
         'shipment_at' => 'int'];
@@ -336,7 +336,7 @@ class PlentyModulesOrderShippingInformationModelsShippingInformation implements 
     /**
      * Gets shipping_costs
      *
-     * @return BigDecimal
+     * @return float
      */
     public function getShippingCosts()
     {
@@ -346,7 +346,7 @@ class PlentyModulesOrderShippingInformationModelsShippingInformation implements 
     /**
      * Sets shipping_costs
      *
-     * @param BigDecimal $shipping_costs The shipping costs
+     * @param float $shipping_costs The shipping costs
      *
      * @return $this
      */

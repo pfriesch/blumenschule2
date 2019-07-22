@@ -61,15 +61,15 @@ class PlentyModulesOrderCouponCodeValidationModelsCouponCodeValidation implement
         'contact_id' => 'int',
         'coupon_code' => 'string',
         'currency' => 'string',
-        'referrer' => 'BigDecimal',
-        'sales_discount' => 'BigDecimal',
-        'sales_discount_net' => 'BigDecimal',
-        'item_discount' => 'BigDecimal',
-        'item_discount_net' => 'BigDecimal',
-        'shipping_discount' => 'BigDecimal',
-        'shipping_discount_net' => 'BigDecimal',
+        'referrer' => 'float',
+        'sales_discount' => 'float',
+        'sales_discount_net' => 'float',
+        'item_discount' => 'float',
+        'item_discount_net' => 'float',
+        'shipping_discount' => 'float',
+        'shipping_discount_net' => 'float',
         'used_vat_fields' => 'object[]',
-        'rest_coupon_amount' => 'BigDecimal',
+        'rest_coupon_amount' => 'float',
         'checked_items' => 'object[]',
         'validate_params' => 'object[]',
         'coupon_campaign_type' => 'string'];
@@ -414,7 +414,7 @@ class PlentyModulesOrderCouponCodeValidationModelsCouponCodeValidation implement
     /**
      * Gets referrer
      *
-     * @return BigDecimal
+     * @return float
      */
     public function getReferrer()
     {
@@ -424,7 +424,7 @@ class PlentyModulesOrderCouponCodeValidationModelsCouponCodeValidation implement
     /**
      * Sets referrer
      *
-     * @param BigDecimal $referrer The order referrer
+     * @param float $referrer The order referrer
      *
      * @return $this
      */
@@ -438,7 +438,7 @@ class PlentyModulesOrderCouponCodeValidationModelsCouponCodeValidation implement
     /**
      * Gets sales_discount
      *
-     * @return BigDecimal
+     * @return float
      */
     public function getSalesDiscount()
     {
@@ -448,7 +448,7 @@ class PlentyModulesOrderCouponCodeValidationModelsCouponCodeValidation implement
     /**
      * Sets sales_discount
      *
-     * @param BigDecimal $sales_discount The total discount from a coupon applied to an order. The discount is given as gross amount.
+     * @param float $sales_discount The total discount from a coupon applied to an order. The discount is given as gross amount.
      *
      * @return $this
      */
@@ -462,7 +462,7 @@ class PlentyModulesOrderCouponCodeValidationModelsCouponCodeValidation implement
     /**
      * Gets sales_discount_net
      *
-     * @return BigDecimal
+     * @return float
      */
     public function getSalesDiscountNet()
     {
@@ -472,7 +472,7 @@ class PlentyModulesOrderCouponCodeValidationModelsCouponCodeValidation implement
     /**
      * Sets sales_discount_net
      *
-     * @param BigDecimal $sales_discount_net The net discount from a coupon applied to an order. The net discount is the total discount minus the vat amount.
+     * @param float $sales_discount_net The net discount from a coupon applied to an order. The net discount is the total discount minus the vat amount.
      *
      * @return $this
      */
@@ -486,7 +486,7 @@ class PlentyModulesOrderCouponCodeValidationModelsCouponCodeValidation implement
     /**
      * Gets item_discount
      *
-     * @return BigDecimal
+     * @return float
      */
     public function getItemDiscount()
     {
@@ -496,7 +496,7 @@ class PlentyModulesOrderCouponCodeValidationModelsCouponCodeValidation implement
     /**
      * Sets item_discount
      *
-     * @param BigDecimal $item_discount The discount amount applied to items.
+     * @param float $item_discount The discount amount applied to items.
      *
      * @return $this
      */
@@ -510,7 +510,7 @@ class PlentyModulesOrderCouponCodeValidationModelsCouponCodeValidation implement
     /**
      * Gets item_discount_net
      *
-     * @return BigDecimal
+     * @return float
      */
     public function getItemDiscountNet()
     {
@@ -520,7 +520,7 @@ class PlentyModulesOrderCouponCodeValidationModelsCouponCodeValidation implement
     /**
      * Sets item_discount_net
      *
-     * @param BigDecimal $item_discount_net The net discount applied to items.
+     * @param float $item_discount_net The net discount applied to items.
      *
      * @return $this
      */
@@ -534,7 +534,7 @@ class PlentyModulesOrderCouponCodeValidationModelsCouponCodeValidation implement
     /**
      * Gets shipping_discount
      *
-     * @return BigDecimal
+     * @return float
      */
     public function getShippingDiscount()
     {
@@ -544,7 +544,7 @@ class PlentyModulesOrderCouponCodeValidationModelsCouponCodeValidation implement
     /**
      * Sets shipping_discount
      *
-     * @param BigDecimal $shipping_discount The discount applied to shipping costs.
+     * @param float $shipping_discount The discount applied to shipping costs.
      *
      * @return $this
      */
@@ -558,7 +558,7 @@ class PlentyModulesOrderCouponCodeValidationModelsCouponCodeValidation implement
     /**
      * Gets shipping_discount_net
      *
-     * @return BigDecimal
+     * @return float
      */
     public function getShippingDiscountNet()
     {
@@ -568,7 +568,7 @@ class PlentyModulesOrderCouponCodeValidationModelsCouponCodeValidation implement
     /**
      * Sets shipping_discount_net
      *
-     * @param BigDecimal $shipping_discount_net The net discount applied to shipping costs.
+     * @param float $shipping_discount_net The net discount applied to shipping costs.
      *
      * @return $this
      */
@@ -606,7 +606,7 @@ class PlentyModulesOrderCouponCodeValidationModelsCouponCodeValidation implement
     /**
      * Gets rest_coupon_amount
      *
-     * @return BigDecimal
+     * @return float
      */
     public function getRestCouponAmount()
     {
@@ -616,7 +616,7 @@ class PlentyModulesOrderCouponCodeValidationModelsCouponCodeValidation implement
     /**
      * Sets rest_coupon_amount
      *
-     * @param BigDecimal $rest_coupon_amount The remaining coupon amount
+     * @param float $rest_coupon_amount The remaining coupon amount
      *
      * @return $this
      */

@@ -34,7 +34,7 @@ class CheckoutController extends AbstractController
             $basket = $currentBaskets[0];
         }
 
-        $last = $em->getRepository('BSCheckoutBundle:checkout')->getLastBasket($cashbox, $basket);
+        $last = $em->getRepository(checkout::class)->getLastBasket($cashbox, $basket);
 
         return $this->render('checkout/index.html.twig', array(
                 'basket' => $basket,
@@ -70,7 +70,7 @@ class CheckoutController extends AbstractController
     public function newAction($cashbox_id = 1)
     {
         $em = $this->getDoctrine()->getManager();
-        $cashbox = $em->getRepository('BSCheckoutBundle:cashbox')->find($cashbox_id);
+        $cashbox = $em->getRepository(cashbox::class)->find($cashbox_id);
         $basket = new Checkout();
         // $basket->setBuydate(new \DateTime());
         $basket->setCashbox($cashbox);
@@ -108,8 +108,8 @@ class CheckoutController extends AbstractController
 
         $em = $this->getDoctrine()->getManager();
 
-        // $currentBasket = $em->getRepository('BSCheckoutBundle:checkout')->getCurrentBasket($cashbox_id);
-        $currentBasket = $em->getRepository('BSCheckoutBundle:checkout')->find($checkout);
+        // $currentBasket = $em->getRepository(checkout::class)->getCurrentBasket($cashbox_id);
+        $currentBasket = $em->getRepository(checkout::class)->find($checkout);
 
 
         if (is_float($price) && $price > 0) {
@@ -153,8 +153,8 @@ class CheckoutController extends AbstractController
     public function clearAction($cashbox_id, $checkout)
     {
         $em = $this->getDoctrine()->getManager();
-        $checkout = $em->getRepository('BSCheckoutBundle:checkout')->clearBasket($cashbox_id, $checkout);
-        //$checkout = $em->getRepository('BSCheckoutBundle:checkout')->find($checkout);
+        $checkout = $em->getRepository(checkout::class)->clearBasket($cashbox_id, $checkout);
+        //$checkout = $em->getRepository(checkout::class)->find($checkout);
 
         $em->remove($checkout);
         $em->flush();
@@ -174,7 +174,7 @@ class CheckoutController extends AbstractController
 
         }
 
-        $cb = $em->getRepository('BSCheckoutBundle:checkout')->find($checkout);
+        $cb = $em->getRepository(checkout::class)->find($checkout);
         $sum = 0.0;
         foreach ($cb->getCheckoutItems() as $product) {
 
@@ -200,8 +200,8 @@ class CheckoutController extends AbstractController
     {
         $em = $this->getDoctrine()->getManager();
 
-        //$currentBasket = $em->getRepository('BSCheckoutBundle:checkout')->getCurrentBasket($cashbox_id);
-        $currentBasket = $em->getRepository('BSCheckoutBundle:checkout')->find($checkout);
+        //$currentBasket = $em->getRepository(checkout::class)->getCurrentBasket($cashbox_id);
+        $currentBasket = $em->getRepository(checkout::class)->find($checkout);
 
         /** @var PlentyMarketsAPI $plentyMarketsAPI */
         $plentyMarketsAPI = $this->container->get('app.plenty_markets_api');
@@ -285,7 +285,7 @@ class CheckoutController extends AbstractController
             // URL aus dem Response holen und anzeigen lassen
             $PDFURL = $response[0]->InvoiceDocumentURL;
             // Warenkorb Löschen
-            $checkout = $em->getRepository('BSCheckoutBundle:checkout')->clearBasket($cashbox_id, $checkout);
+            $checkout = $em->getRepository(checkout::class)->clearBasket($cashbox_id, $checkout);
             $em->remove($checkout);
             $em->flush();
 
@@ -335,7 +335,7 @@ class CheckoutController extends AbstractController
 
         }
 
-        $currentBasket = $em->getRepository('BSCheckoutBundle:checkout')->find($checkout);
+        $currentBasket = $em->getRepository(checkout::class)->find($checkout);
 
         return $this->createCurrentBasketJSON($currentBasket);
 
@@ -346,8 +346,8 @@ class CheckoutController extends AbstractController
         $bontext = $this->getRequest()->request->get('bontext');
         $em = $this->getDoctrine()->getManager();
 
-        //$cashbox = $em->getRepository('BSCheckoutBundle:cashbox')->find($cashbox_id);
-        $currentBasket = $em->getRepository('BSCheckoutBundle:checkout')->find($id);
+        //$cashbox = $em->getRepository(cashbox::class)->find($cashbox_id);
+        $currentBasket = $em->getRepository(checkout::class)->find($id);
 
         $currentBasket->setBontext($bontext);
         $em->persist($currentBasket);
@@ -363,8 +363,8 @@ class CheckoutController extends AbstractController
 
         $em = $this->getDoctrine()->getManager();
 
-        $cashbox = $em->getRepository('BSCheckoutBundle:cashbox')->find($cashbox_id);
-        $currentBasket = $em->getRepository('BSCheckoutBundle:checkout')->find($id);
+        $cashbox = $em->getRepository(cashbox::class)->find($cashbox_id);
+        $currentBasket = $em->getRepository(checkout::class)->find($id);
 
         $currentBasket->setBontext($bontext);
         $em->persist($currentBasket);

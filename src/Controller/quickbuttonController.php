@@ -19,9 +19,9 @@ class quickbuttonController extends AbstractController
      */
     public function indexAction()
     {
-        $em = $this->getDoctrine()->getEntityManager();
+        $em = $this->getDoctrine()->getManager();
 
-        $entities = $em->getRepository('BSCheckoutBundle:quickbutton')->findAll();
+        $entities = $em->getRepository(quickbutton::class)->findAll();
 
         return array('entities' => $entities);
     }
@@ -32,9 +32,9 @@ class quickbuttonController extends AbstractController
      */
     public function showAction($id)
     {
-        $em = $this->getDoctrine()->getEntityManager();
+        $em = $this->getDoctrine()->getManager();
 
-        $entity = $em->getRepository('BSCheckoutBundle:quickbutton')->find($id);
+        $entity = $em->getRepository(quickbutton::class)->find($id);
 
         if (!$entity) {
             throw $this->createNotFoundException('Unable to find quickbutton entity.');
@@ -74,7 +74,7 @@ class quickbuttonController extends AbstractController
         $form->bindRequest($request);
 
         if ($form->isValid()) {
-            $em = $this->getDoctrine()->getEntityManager();
+            $em = $this->getDoctrine()->getManager();
             $em->persist($entity);
             $em->flush();
 
@@ -92,9 +92,9 @@ class quickbuttonController extends AbstractController
      */
     public function editAction($id)
     {
-        $em = $this->getDoctrine()->getEntityManager();
+        $em = $this->getDoctrine()->getManager();
 
-        $entity = $em->getRepository('BSCheckoutBundle:quickbutton')->find($id);
+        $entity = $em->getRepository(quickbutton::class)->find($id);
 
         if (!$entity) {
             throw $this->createNotFoundException('Unable to find quickbutton entity.');
@@ -116,9 +116,9 @@ class quickbuttonController extends AbstractController
      */
     public function updateAction($id)
     {
-        $em = $this->getDoctrine()->getEntityManager();
+        $em = $this->getDoctrine()->getManager();
 
-        $entity = $em->getRepository('BSCheckoutBundle:quickbutton')->find($id);
+        $entity = $em->getRepository(quickbutton::class)->find($id);
 
         if (!$entity) {
             throw $this->createNotFoundException('Unable to find quickbutton entity.');
@@ -160,8 +160,8 @@ class quickbuttonController extends AbstractController
         //$form->bindRequest($request);
 
         // if ($form->isValid()) {
-        $em = $this->getDoctrine()->getEntityManager();
-        $entity = $em->getRepository('BSCheckoutBundle:quickbutton')->find($id);
+        $em = $this->getDoctrine()->getManager();
+        $entity = $em->getRepository(quickbutton::class)->find($id);
 
         if (!$entity) {
             throw $this->createNotFoundException('Unable to find quickbutton entity.');

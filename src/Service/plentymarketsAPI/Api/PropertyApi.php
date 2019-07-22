@@ -8688,7 +8688,7 @@ class PropertyApi
      * Create a property market
      *
      * @param int $property_id Property id (required)
-     * @param BigDecimal $referrer_id The referrer id of the property market (required)
+     * @param float $referrer_id The referrer id of the property market (required)
      * @param int $referrer_sub_id The referrer sub id of the property market (required)
      * @param string $value The value of the property market (required)
      * @param object $body body (optional)
@@ -8709,7 +8709,7 @@ class PropertyApi
      * Create a property market
      *
      * @param int $property_id Property id (required)
-     * @param BigDecimal $referrer_id The referrer id of the property market (required)
+     * @param float $referrer_id The referrer id of the property market (required)
      * @param int $referrer_sub_id The referrer sub id of the property market (required)
      * @param string $value The value of the property market (required)
      * @param object $body (optional)
@@ -8788,7 +8788,7 @@ class PropertyApi
      * Create a property market
      *
      * @param int $property_id Property id (required)
-     * @param BigDecimal $referrer_id The referrer id of the property market (required)
+     * @param float $referrer_id The referrer id of the property market (required)
      * @param int $referrer_sub_id The referrer sub id of the property market (required)
      * @param string $value The value of the property market (required)
      * @param object $body (optional)
@@ -8812,7 +8812,7 @@ class PropertyApi
      * Create a property market
      *
      * @param int $property_id Property id (required)
-     * @param BigDecimal $referrer_id The referrer id of the property market (required)
+     * @param float $referrer_id The referrer id of the property market (required)
      * @param int $referrer_sub_id The referrer sub id of the property market (required)
      * @param string $value The value of the property market (required)
      * @param object $body (optional)
@@ -8866,7 +8866,7 @@ class PropertyApi
      * Create request for operation 'restPropertiesMarketsPost'
      *
      * @param int $property_id Property id (required)
-     * @param BigDecimal $referrer_id The referrer id of the property market (required)
+     * @param float $referrer_id The referrer id of the property market (required)
      * @param int $referrer_sub_id The referrer sub id of the property market (required)
      * @param string $value The value of the property market (required)
      * @param object $body (optional)
@@ -14250,7 +14250,7 @@ class PropertyApi
      *
      * @param int $property_relation_id The ID of the property elation (required)
      * @param int $variation_sales_price_id The ID of a variation&#x27;s sales price (required)
-     * @param BigDecimal $markup The property relation markup (required)
+     * @param float $markup The property relation markup (required)
      * @param object $body body (optional)
      *
      * @return PlentyModulesPropertyModelsPropertyRelationMarkup
@@ -14270,7 +14270,7 @@ class PropertyApi
      *
      * @param int $property_relation_id The ID of the property elation (required)
      * @param int $variation_sales_price_id The ID of a variation&#x27;s sales price (required)
-     * @param BigDecimal $markup The property relation markup (required)
+     * @param float $markup The property relation markup (required)
      * @param object $body (optional)
      *
      * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesPropertyModelsPropertyRelationMarkup, HTTP status code, HTTP response headers (array of strings)
@@ -14348,7 +14348,7 @@ class PropertyApi
      *
      * @param int $property_relation_id The ID of the property elation (required)
      * @param int $variation_sales_price_id The ID of a variation&#x27;s sales price (required)
-     * @param BigDecimal $markup The property relation markup (required)
+     * @param float $markup The property relation markup (required)
      * @param object $body (optional)
      *
      * @return PromiseInterface
@@ -14371,7 +14371,7 @@ class PropertyApi
      *
      * @param int $property_relation_id The ID of the property elation (required)
      * @param int $variation_sales_price_id The ID of a variation&#x27;s sales price (required)
-     * @param BigDecimal $markup The property relation markup (required)
+     * @param float $markup The property relation markup (required)
      * @param object $body (optional)
      *
      * @return PromiseInterface
@@ -14424,7 +14424,7 @@ class PropertyApi
      *
      * @param int $property_relation_id The ID of the property elation (required)
      * @param int $variation_sales_price_id The ID of a variation&#x27;s sales price (required)
-     * @param BigDecimal $markup The property relation markup (required)
+     * @param float $markup The property relation markup (required)
      * @param object $body (optional)
      *
      * @return Request

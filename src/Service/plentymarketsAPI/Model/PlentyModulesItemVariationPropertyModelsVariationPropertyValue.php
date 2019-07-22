@@ -61,9 +61,9 @@ class PlentyModulesItemVariationPropertyModelsVariationPropertyValue implements 
         'property_id' => 'int',
         'property_selection_id' => 'int',
         'value_int' => 'int',
-        'value_float' => 'BigDecimal',
+        'value_float' => 'float',
         'value_file' => 'string',
-        'surcharge' => 'BigDecimal',
+        'surcharge' => 'float',
         'property' => 'object',
         'value_texts' => '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationPropertyModelsVariationPropertyValueText[]'];
 
@@ -372,7 +372,7 @@ class PlentyModulesItemVariationPropertyModelsVariationPropertyValue implements 
     /**
      * Gets value_float
      *
-     * @return BigDecimal
+     * @return float
      */
     public function getValueFloat()
     {
@@ -382,7 +382,7 @@ class PlentyModulesItemVariationPropertyModelsVariationPropertyValue implements 
     /**
      * Sets value_float
      *
-     * @param BigDecimal $value_float The float value of the property value of the variation
+     * @param float $value_float The float value of the property value of the variation
      *
      * @return $this
      */
@@ -420,7 +420,7 @@ class PlentyModulesItemVariationPropertyModelsVariationPropertyValue implements 
     /**
      * Gets surcharge
      *
-     * @return BigDecimal
+     * @return float
      */
     public function getSurcharge()
     {
@@ -430,7 +430,7 @@ class PlentyModulesItemVariationPropertyModelsVariationPropertyValue implements 
     /**
      * Sets surcharge
      *
-     * @param BigDecimal $surcharge The surcharge of the property value of the variation
+     * @param float $surcharge The surcharge of the property value of the variation
      *
      * @return $this
      */

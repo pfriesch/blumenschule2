@@ -60,7 +60,7 @@ class PlentyModulesAccountOrderSummaryModelsOrderSummary implements ModelInterfa
         'address_id' => 'int',
         'contact_id' => 'int',
         'unpaid_orders_count' => 'int',
-        'unpaid_order_total_amount' => 'BigDecimal',
+        'unpaid_order_total_amount' => 'float',
         'order_count' => 'int',
         'created_at' => 'string',
         'updated_at' => 'string'];
@@ -336,7 +336,7 @@ class PlentyModulesAccountOrderSummaryModelsOrderSummary implements ModelInterfa
     /**
      * Gets unpaid_order_total_amount
      *
-     * @return BigDecimal
+     * @return float
      */
     public function getUnpaidOrderTotalAmount()
     {
@@ -346,7 +346,7 @@ class PlentyModulesAccountOrderSummaryModelsOrderSummary implements ModelInterfa
     /**
      * Sets unpaid_order_total_amount
      *
-     * @param BigDecimal $unpaid_order_total_amount The total amount of unpaid orders
+     * @param float $unpaid_order_total_amount The total amount of unpaid orders
      *
      * @return $this
      */

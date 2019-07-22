@@ -22,7 +22,7 @@ class StockkeepingController extends AbstractController
         $em = $this->getDoctrine()->getManager();
 
         $repository = $this->getDoctrine()
-            ->getRepository('BSApp\Entity\Stockkeeping');
+            ->getRepository(Stockkeeping::class);
         $query = $repository->createQueryBuilder('s')
             ->where('s.exported is null')
             ->getQuery();
@@ -75,7 +75,7 @@ class StockkeepingController extends AbstractController
 
 
         $repository = $this->getDoctrine()
-            ->getRepository('BSApp\Entity\Stockkeeping');
+            ->getRepository(Stockkeeping::class);
         $query = $repository->createQueryBuilder('s')
             ->where('s.exported is null')
             ->getQuery();
@@ -142,7 +142,7 @@ class StockkeepingController extends AbstractController
     {
         $em = $this->getDoctrine()->getManager();
 
-        $entity = $em->getRepository('BSApp\Entity\Stockkeeping')->find($id);
+        $entity = $em->getRepository(Stockkeeping::class)->find($id);
 
         if (!$entity) {
             throw $this->createNotFoundException('Unable to find Stockkeeping entity.');
@@ -164,7 +164,7 @@ class StockkeepingController extends AbstractController
     {
         $em = $this->getDoctrine()->getManager();
 
-        $entity = $em->getRepository('BSApp\Entity\Stockkeeping')->find($id);
+        $entity = $em->getRepository(Stockkeeping::class)->find($id);
 
         if (!$entity) {
             throw $this->createNotFoundException('Unable to find Stockkeeping entity.');
@@ -188,7 +188,7 @@ class StockkeepingController extends AbstractController
     {
         $em = $this->getDoctrine()->getManager();
 
-        $entity = $em->getRepository('BSApp\Entity\Stockkeeping')->find($id);
+        $entity = $em->getRepository(Stockkeeping::class)->find($id);
 
         if (!$entity) {
             throw $this->createNotFoundException('Unable to find Stockkeeping entity.');
@@ -223,7 +223,7 @@ class StockkeepingController extends AbstractController
 
         if ($form->isValid()) {
             $em = $this->getDoctrine()->getManager();
-            $entity = $em->getRepository('BSApp\Entity\Stockkeeping')->find($id);
+            $entity = $em->getRepository(Stockkeeping::class)->find($id);
 
             if (!$entity) {
                 throw $this->createNotFoundException('Unable to find Stockkeeping entity.');

@@ -59,7 +59,7 @@ class PlentyModulesMarketEbayMarketplaceModelsMarketplace implements ModelInterf
         'site_id' => 'int',
         'marketplace_id' => 'string',
         'market_id' => 'int',
-        'referrer_id' => 'BigDecimal',
+        'referrer_id' => 'float',
         'shortcut' => 'string',
         'currency' => 'string'];
 
@@ -300,7 +300,7 @@ class PlentyModulesMarketEbayMarketplaceModelsMarketplace implements ModelInterf
     /**
      * Gets referrer_id
      *
-     * @return BigDecimal
+     * @return float
      */
     public function getReferrerId()
     {
@@ -310,7 +310,7 @@ class PlentyModulesMarketEbayMarketplaceModelsMarketplace implements ModelInterf
     /**
      * Sets referrer_id
      *
-     * @param BigDecimal $referrer_id System wide internal ID for the marketplace. Use this instead of `marketId` whenever possible!
+     * @param float $referrer_id System wide internal ID for the marketplace. Use this instead of `marketId` whenever possible!
      *
      * @return $this
      */

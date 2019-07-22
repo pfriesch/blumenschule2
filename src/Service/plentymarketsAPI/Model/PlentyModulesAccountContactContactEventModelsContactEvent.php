@@ -67,7 +67,7 @@ class PlentyModulesAccountContactContactEventModelsContactEvent implements Model
         'event_inserted_at' => 'string',
         'event_billed_at' => 'string',
         'event_provision_paid_at' => 'string',
-        'event_credit_value' => 'BigDecimal'];
+        'event_credit_value' => 'float'];
 
     /**
      * Array of property to format mappings. Used for (de)serialization
@@ -528,7 +528,7 @@ class PlentyModulesAccountContactContactEventModelsContactEvent implements Model
     /**
      * Gets event_credit_value
      *
-     * @return BigDecimal
+     * @return float
      */
     public function getEventCreditValue()
     {
@@ -538,7 +538,7 @@ class PlentyModulesAccountContactContactEventModelsContactEvent implements Model
     /**
      * Sets event_credit_value
      *
-     * @param BigDecimal $event_credit_value The credit value of the event
+     * @param float $event_credit_value The credit value of the event
      *
      * @return $this
      */

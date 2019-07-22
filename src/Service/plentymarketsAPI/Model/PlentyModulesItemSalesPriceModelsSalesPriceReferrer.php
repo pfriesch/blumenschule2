@@ -57,7 +57,7 @@ class PlentyModulesItemSalesPriceModelsSalesPriceReferrer implements ModelInterf
      */
     protected static $swaggerTypes = [
         'sales_price_id' => 'int',
-        'referrer_id' => 'BigDecimal',
+        'referrer_id' => 'float',
         'created_at' => 'string',
         'updated_at' => 'string'];
 
@@ -240,7 +240,7 @@ class PlentyModulesItemSalesPriceModelsSalesPriceReferrer implements ModelInterf
     /**
      * Gets referrer_id
      *
-     * @return BigDecimal
+     * @return float
      */
     public function getReferrerId()
     {
@@ -250,7 +250,7 @@ class PlentyModulesItemSalesPriceModelsSalesPriceReferrer implements ModelInterf
     /**
      * Sets referrer_id
      *
-     * @param BigDecimal $referrer_id The unique ID of the referrer
+     * @param float $referrer_id The unique ID of the referrer
      *
      * @return $this
      */

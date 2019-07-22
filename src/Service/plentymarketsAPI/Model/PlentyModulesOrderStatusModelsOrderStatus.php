@@ -56,7 +56,7 @@ class PlentyModulesOrderStatusModelsOrderStatus implements ModelInterface, Array
      * @var string[]
      */
     protected static $swaggerTypes = [
-        'status_id' => 'BigDecimal',
+        'status_id' => 'float',
         'is_erasable' => 'bool',
         'created_at' => 'string',
         'updated_at' => 'string',
@@ -240,7 +240,7 @@ class PlentyModulesOrderStatusModelsOrderStatus implements ModelInterface, Array
     /**
      * Gets status_id
      *
-     * @return BigDecimal
+     * @return float
      */
     public function getStatusId()
     {
@@ -250,7 +250,7 @@ class PlentyModulesOrderStatusModelsOrderStatus implements ModelInterface, Array
     /**
      * Sets status_id
      *
-     * @param BigDecimal $status_id The ID of the status.
+     * @param float $status_id The ID of the status.
      *
      * @return $this
      */

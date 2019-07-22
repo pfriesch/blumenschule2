@@ -63,22 +63,22 @@ class PlentyModulesBasketModelsBasket implements ModelInterface, ArrayAccess
         'customer_invoice_address_id' => 'int',
         'customer_shipping_address_id' => 'int',
         'currency' => 'string',
-        'referrer_id' => 'BigDecimal',
+        'referrer_id' => 'float',
         'shipping_country_id' => 'int',
         'method_of_payment_id' => 'int',
         'shipping_provider_id' => 'int',
         'shipping_profile_id' => 'int',
-        'item_sum' => 'BigDecimal',
-        'item_sum_net' => 'BigDecimal',
-        'basket_amount' => 'BigDecimal',
-        'basket_amount_net' => 'BigDecimal',
-        'shipping_amount' => 'BigDecimal',
-        'shipping_amount_net' => 'BigDecimal',
-        'payment_amount' => 'BigDecimal',
+        'item_sum' => 'float',
+        'item_sum_net' => 'float',
+        'basket_amount' => 'float',
+        'basket_amount_net' => 'float',
+        'shipping_amount' => 'float',
+        'shipping_amount_net' => 'float',
+        'payment_amount' => 'float',
         'coupon_code' => 'string',
-        'coupon_discount' => 'BigDecimal',
+        'coupon_discount' => 'float',
         'shipping_delete_by_coupon' => 'bool',
-        'basket_rebate' => 'BigDecimal',
+        'basket_rebate' => 'float',
         'basket_rebate_type' => 'int',
         'max_fsk' => 'int',
         'order_timestamp' => 'int',
@@ -528,7 +528,7 @@ class PlentyModulesBasketModelsBasket implements ModelInterface, ArrayAccess
     /**
      * Gets referrer_id
      *
-     * @return BigDecimal
+     * @return float
      */
     public function getReferrerId()
     {
@@ -538,7 +538,7 @@ class PlentyModulesBasketModelsBasket implements ModelInterface, ArrayAccess
     /**
      * Sets referrer_id
      *
-     * @param BigDecimal $referrer_id The ID of the order referrer
+     * @param float $referrer_id The ID of the order referrer
      *
      * @return $this
      */
@@ -648,7 +648,7 @@ class PlentyModulesBasketModelsBasket implements ModelInterface, ArrayAccess
     /**
      * Gets item_sum
      *
-     * @return BigDecimal
+     * @return float
      */
     public function getItemSum()
     {
@@ -658,7 +658,7 @@ class PlentyModulesBasketModelsBasket implements ModelInterface, ArrayAccess
     /**
      * Sets item_sum
      *
-     * @param BigDecimal $item_sum The gross value of items in the shopping cart
+     * @param float $item_sum The gross value of items in the shopping cart
      *
      * @return $this
      */
@@ -672,7 +672,7 @@ class PlentyModulesBasketModelsBasket implements ModelInterface, ArrayAccess
     /**
      * Gets item_sum_net
      *
-     * @return BigDecimal
+     * @return float
      */
     public function getItemSumNet()
     {
@@ -682,7 +682,7 @@ class PlentyModulesBasketModelsBasket implements ModelInterface, ArrayAccess
     /**
      * Sets item_sum_net
      *
-     * @param BigDecimal $item_sum_net The net value of items in the shopping cart
+     * @param float $item_sum_net The net value of items in the shopping cart
      *
      * @return $this
      */
@@ -696,7 +696,7 @@ class PlentyModulesBasketModelsBasket implements ModelInterface, ArrayAccess
     /**
      * Gets basket_amount
      *
-     * @return BigDecimal
+     * @return float
      */
     public function getBasketAmount()
     {
@@ -706,7 +706,7 @@ class PlentyModulesBasketModelsBasket implements ModelInterface, ArrayAccess
     /**
      * Sets basket_amount
      *
-     * @param BigDecimal $basket_amount The total gross value of the shopping cart
+     * @param float $basket_amount The total gross value of the shopping cart
      *
      * @return $this
      */
@@ -720,7 +720,7 @@ class PlentyModulesBasketModelsBasket implements ModelInterface, ArrayAccess
     /**
      * Gets basket_amount_net
      *
-     * @return BigDecimal
+     * @return float
      */
     public function getBasketAmountNet()
     {
@@ -730,7 +730,7 @@ class PlentyModulesBasketModelsBasket implements ModelInterface, ArrayAccess
     /**
      * Sets basket_amount_net
      *
-     * @param BigDecimal $basket_amount_net The total net value of the shopping cart
+     * @param float $basket_amount_net The total net value of the shopping cart
      *
      * @return $this
      */
@@ -744,7 +744,7 @@ class PlentyModulesBasketModelsBasket implements ModelInterface, ArrayAccess
     /**
      * Gets shipping_amount
      *
-     * @return BigDecimal
+     * @return float
      */
     public function getShippingAmount()
     {
@@ -754,7 +754,7 @@ class PlentyModulesBasketModelsBasket implements ModelInterface, ArrayAccess
     /**
      * Sets shipping_amount
      *
-     * @param BigDecimal $shipping_amount The gross shipping costs
+     * @param float $shipping_amount The gross shipping costs
      *
      * @return $this
      */
@@ -768,7 +768,7 @@ class PlentyModulesBasketModelsBasket implements ModelInterface, ArrayAccess
     /**
      * Gets shipping_amount_net
      *
-     * @return BigDecimal
+     * @return float
      */
     public function getShippingAmountNet()
     {
@@ -778,7 +778,7 @@ class PlentyModulesBasketModelsBasket implements ModelInterface, ArrayAccess
     /**
      * Sets shipping_amount_net
      *
-     * @param BigDecimal $shipping_amount_net The net shipping costs
+     * @param float $shipping_amount_net The net shipping costs
      *
      * @return $this
      */
@@ -792,7 +792,7 @@ class PlentyModulesBasketModelsBasket implements ModelInterface, ArrayAccess
     /**
      * Gets payment_amount
      *
-     * @return BigDecimal
+     * @return float
      */
     public function getPaymentAmount()
     {
@@ -802,7 +802,7 @@ class PlentyModulesBasketModelsBasket implements ModelInterface, ArrayAccess
     /**
      * Sets payment_amount
      *
-     * @param BigDecimal $payment_amount The amount of the payment
+     * @param float $payment_amount The amount of the payment
      *
      * @return $this
      */
@@ -840,7 +840,7 @@ class PlentyModulesBasketModelsBasket implements ModelInterface, ArrayAccess
     /**
      * Gets coupon_discount
      *
-     * @return BigDecimal
+     * @return float
      */
     public function getCouponDiscount()
     {
@@ -850,7 +850,7 @@ class PlentyModulesBasketModelsBasket implements ModelInterface, ArrayAccess
     /**
      * Sets coupon_discount
      *
-     * @param BigDecimal $coupon_discount The received discount due to the coupon code
+     * @param float $coupon_discount The received discount due to the coupon code
      *
      * @return $this
      */
@@ -888,7 +888,7 @@ class PlentyModulesBasketModelsBasket implements ModelInterface, ArrayAccess
     /**
      * Gets basket_rebate
      *
-     * @return BigDecimal
+     * @return float
      */
     public function getBasketRebate()
     {
@@ -898,7 +898,7 @@ class PlentyModulesBasketModelsBasket implements ModelInterface, ArrayAccess
     /**
      * Sets basket_rebate
      *
-     * @param BigDecimal $basket_rebate The discount to the shopping cart value. The discount can either be set as a discount scale for items, as a customer class discount or as a discount based on the payment method.
+     * @param float $basket_rebate The discount to the shopping cart value. The discount can either be set as a discount scale for items, as a customer class discount or as a discount based on the payment method.
      *
      * @return $this
      */

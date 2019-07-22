@@ -67,8 +67,8 @@ class PlentyModulesItemVariationModelsVariation implements ModelInterface, Array
         'external_id' => 'string',
         'availability' => 'int',
         'estimated_available_at' => 'string',
-        'purchase_price' => 'BigDecimal',
-        'moving_average_price' => 'BigDecimal',
+        'purchase_price' => 'float',
+        'moving_average_price' => 'float',
         'created_at' => 'string',
         'updated_at' => 'string',
         'related_updated_at' => 'string',
@@ -83,9 +83,9 @@ class PlentyModulesItemVariationModelsVariation implements ModelInterface, Array
         'is_visible_in_list_if_net_stock_is_positive' => 'bool',
         'is_invisible_in_list_if_net_stock_is_not_positive' => 'bool',
         'main_warehouse_id' => 'int',
-        'maximum_order_quantity' => 'BigDecimal',
-        'minimum_order_quantity' => 'BigDecimal',
-        'interval_order_quantity' => 'BigDecimal',
+        'maximum_order_quantity' => 'float',
+        'minimum_order_quantity' => 'float',
+        'interval_order_quantity' => 'float',
         'available_until' => 'string',
         'released_at' => 'string',
         'name' => 'string',
@@ -95,26 +95,26 @@ class PlentyModulesItemVariationModelsVariation implements ModelInterface, Array
         'width_mm' => 'int',
         'length_mm' => 'int',
         'height_mm' => 'int',
-        'extra_shipping_charge1' => 'BigDecimal',
-        'extra_shipping_charge2' => 'BigDecimal',
+        'extra_shipping_charge1' => 'float',
+        'extra_shipping_charge2' => 'float',
         'units_contained' => 'int',
         'pallet_type_id' => 'int',
         'packing_units' => 'int',
         'packing_unit_type_id' => 'int',
-        'transportation_costs' => 'BigDecimal',
-        'storage_costs' => 'BigDecimal',
-        'customs' => 'BigDecimal',
-        'operating_costs' => 'BigDecimal',
+        'transportation_costs' => 'float',
+        'storage_costs' => 'float',
+        'customs' => 'float',
+        'operating_costs' => 'float',
         'vat_id' => 'int',
         'bundle_type' => 'string',
         'automatic_client_visibility' => 'int',
         'automatic_list_visibility' => 'int',
         'is_hidden_in_category_list' => 'bool',
-        'default_shipping_costs' => 'BigDecimal',
+        'default_shipping_costs' => 'float',
         'may_show_unit_price' => 'bool',
         'sales_rank' => 'int',
         'parent_variation_id' => 'int',
-        'parent_variation_quantity' => 'BigDecimal',
+        'parent_variation_quantity' => 'float',
         'single_item_count' => 'int',
         'category_variation_id' => 'int',
         'market_variation_id' => 'int',
@@ -888,7 +888,7 @@ class PlentyModulesItemVariationModelsVariation implements ModelInterface, Array
     /**
      * Gets purchase_price
      *
-     * @return BigDecimal
+     * @return float
      */
     public function getPurchasePrice()
     {
@@ -898,7 +898,7 @@ class PlentyModulesItemVariationModelsVariation implements ModelInterface, Array
     /**
      * Sets purchase_price
      *
-     * @param BigDecimal $purchase_price The net purchase price. Value e.g. is used for price calculations.
+     * @param float $purchase_price The net purchase price. Value e.g. is used for price calculations.
      *
      * @return $this
      */
@@ -912,7 +912,7 @@ class PlentyModulesItemVariationModelsVariation implements ModelInterface, Array
     /**
      * Gets moving_average_price
      *
-     * @return BigDecimal
+     * @return float
      */
     public function getMovingAveragePrice()
     {
@@ -922,7 +922,7 @@ class PlentyModulesItemVariationModelsVariation implements ModelInterface, Array
     /**
      * Sets moving_average_price
      *
-     * @param BigDecimal $moving_average_price The moving average purchase price of the variation.
+     * @param float $moving_average_price The moving average purchase price of the variation.
      *
      * @return $this
      */
@@ -1272,7 +1272,7 @@ class PlentyModulesItemVariationModelsVariation implements ModelInterface, Array
     /**
      * Gets maximum_order_quantity
      *
-     * @return BigDecimal
+     * @return float
      */
     public function getMaximumOrderQuantity()
     {
@@ -1282,7 +1282,7 @@ class PlentyModulesItemVariationModelsVariation implements ModelInterface, Array
     /**
      * Sets maximum_order_quantity
      *
-     * @param BigDecimal $maximum_order_quantity The maximum order quantity permitted per order. Decimal values are possible to allow orders by weight or length. Default value is 0. If value is 0, the maximum order quantity is unlimited.
+     * @param float $maximum_order_quantity The maximum order quantity permitted per order. Decimal values are possible to allow orders by weight or length. Default value is 0. If value is 0, the maximum order quantity is unlimited.
      *
      * @return $this
      */
@@ -1296,7 +1296,7 @@ class PlentyModulesItemVariationModelsVariation implements ModelInterface, Array
     /**
      * Gets minimum_order_quantity
      *
-     * @return BigDecimal
+     * @return float
      */
     public function getMinimumOrderQuantity()
     {
@@ -1306,7 +1306,7 @@ class PlentyModulesItemVariationModelsVariation implements ModelInterface, Array
     /**
      * Sets minimum_order_quantity
      *
-     * @param BigDecimal $minimum_order_quantity The minimum order quantity. Decimal values are possible to allow orders by weight or length.
+     * @param float $minimum_order_quantity The minimum order quantity. Decimal values are possible to allow orders by weight or length.
      *
      * @return $this
      */
@@ -1320,7 +1320,7 @@ class PlentyModulesItemVariationModelsVariation implements ModelInterface, Array
     /**
      * Gets interval_order_quantity
      *
-     * @return BigDecimal
+     * @return float
      */
     public function getIntervalOrderQuantity()
     {
@@ -1330,7 +1330,7 @@ class PlentyModulesItemVariationModelsVariation implements ModelInterface, Array
     /**
      * Sets interval_order_quantity
      *
-     * @param BigDecimal $interval_order_quantity The quantity intervals the variation can be ordered in. Decimal values are possible to allow orders by weight or length.
+     * @param float $interval_order_quantity The quantity intervals the variation can be ordered in. Decimal values are possible to allow orders by weight or length.
      *
      * @return $this
      */
@@ -1560,7 +1560,7 @@ class PlentyModulesItemVariationModelsVariation implements ModelInterface, Array
     /**
      * Gets extra_shipping_charge1
      *
-     * @return BigDecimal
+     * @return float
      */
     public function getExtraShippingCharge1()
     {
@@ -1570,7 +1570,7 @@ class PlentyModulesItemVariationModelsVariation implements ModelInterface, Array
     /**
      * Sets extra_shipping_charge1
      *
-     * @param BigDecimal $extra_shipping_charge1 The extra shipping charge 1 for the variation. Extra shipping charges are useful for large or bulky items that are particularly expensive to ship. Charge 1 is added to the regular shipping costs for the first item of an order. If different variations are ordered, the extra shipping charge 1 of the variation with the highest charge 1 is selected.
+     * @param float $extra_shipping_charge1 The extra shipping charge 1 for the variation. Extra shipping charges are useful for large or bulky items that are particularly expensive to ship. Charge 1 is added to the regular shipping costs for the first item of an order. If different variations are ordered, the extra shipping charge 1 of the variation with the highest charge 1 is selected.
      *
      * @return $this
      */
@@ -1584,7 +1584,7 @@ class PlentyModulesItemVariationModelsVariation implements ModelInterface, Array
     /**
      * Gets extra_shipping_charge2
      *
-     * @return BigDecimal
+     * @return float
      */
     public function getExtraShippingCharge2()
     {
@@ -1594,7 +1594,7 @@ class PlentyModulesItemVariationModelsVariation implements ModelInterface, Array
     /**
      * Sets extra_shipping_charge2
      *
-     * @param BigDecimal $extra_shipping_charge2 The extra shipping charge 2 for the variation. Extra shipping charges are useful for large or bulky items that are expensive to ship. Charge 2 is added to the shipping costs for any additional items of an order.
+     * @param float $extra_shipping_charge2 The extra shipping charge 2 for the variation. Extra shipping charges are useful for large or bulky items that are expensive to ship. Charge 2 is added to the shipping costs for any additional items of an order.
      *
      * @return $this
      */
@@ -1704,7 +1704,7 @@ class PlentyModulesItemVariationModelsVariation implements ModelInterface, Array
     /**
      * Gets transportation_costs
      *
-     * @return BigDecimal
+     * @return float
      */
     public function getTransportationCosts()
     {
@@ -1714,7 +1714,7 @@ class PlentyModulesItemVariationModelsVariation implements ModelInterface, Array
     /**
      * Sets transportation_costs
      *
-     * @param BigDecimal $transportation_costs The net transportation costs for the variation. This value is used for price calculations and for calculating the acquisition price.
+     * @param float $transportation_costs The net transportation costs for the variation. This value is used for price calculations and for calculating the acquisition price.
      *
      * @return $this
      */
@@ -1728,7 +1728,7 @@ class PlentyModulesItemVariationModelsVariation implements ModelInterface, Array
     /**
      * Gets storage_costs
      *
-     * @return BigDecimal
+     * @return float
      */
     public function getStorageCosts()
     {
@@ -1738,7 +1738,7 @@ class PlentyModulesItemVariationModelsVariation implements ModelInterface, Array
     /**
      * Sets storage_costs
      *
-     * @param BigDecimal $storage_costs The net storage costs for the variation
+     * @param float $storage_costs The net storage costs for the variation
      *
      * @return $this
      */
@@ -1752,7 +1752,7 @@ class PlentyModulesItemVariationModelsVariation implements ModelInterface, Array
     /**
      * Gets customs
      *
-     * @return BigDecimal
+     * @return float
      */
     public function getCustoms()
     {
@@ -1762,7 +1762,7 @@ class PlentyModulesItemVariationModelsVariation implements ModelInterface, Array
     /**
      * Sets customs
      *
-     * @param BigDecimal $customs The customs rate in percent
+     * @param float $customs The customs rate in percent
      *
      * @return $this
      */
@@ -1776,7 +1776,7 @@ class PlentyModulesItemVariationModelsVariation implements ModelInterface, Array
     /**
      * Gets operating_costs
      *
-     * @return BigDecimal
+     * @return float
      */
     public function getOperatingCosts()
     {
@@ -1786,7 +1786,7 @@ class PlentyModulesItemVariationModelsVariation implements ModelInterface, Array
     /**
      * Sets operating_costs
      *
-     * @param BigDecimal $operating_costs The operating costs for the variation in percent
+     * @param float $operating_costs The operating costs for the variation in percent
      *
      * @return $this
      */
@@ -1920,7 +1920,7 @@ class PlentyModulesItemVariationModelsVariation implements ModelInterface, Array
     /**
      * Gets default_shipping_costs
      *
-     * @return BigDecimal
+     * @return float
      */
     public function getDefaultShippingCosts()
     {
@@ -1930,7 +1930,7 @@ class PlentyModulesItemVariationModelsVariation implements ModelInterface, Array
     /**
      * Sets default_shipping_costs
      *
-     * @param BigDecimal $default_shipping_costs The default shipping costs for the variation.
+     * @param float $default_shipping_costs The default shipping costs for the variation.
      *
      * @return $this
      */
@@ -2016,7 +2016,7 @@ class PlentyModulesItemVariationModelsVariation implements ModelInterface, Array
     /**
      * Gets parent_variation_quantity
      *
-     * @return BigDecimal
+     * @return float
      */
     public function getParentVariationQuantity()
     {
@@ -2026,7 +2026,7 @@ class PlentyModulesItemVariationModelsVariation implements ModelInterface, Array
     /**
      * Sets parent_variation_quantity
      *
-     * @param BigDecimal $parent_variation_quantity parent_variation_quantity
+     * @param float $parent_variation_quantity parent_variation_quantity
      *
      * @return $this
      */

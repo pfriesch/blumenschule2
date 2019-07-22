@@ -3078,7 +3078,7 @@ class MarketApi
      *
      * Get all eBay marketplaces.
      *
-     * @param BigDecimal $referrer_id Get only marketplaces that match the given referrer ID (optional)
+     * @param float $referrer_id Get only marketplaces that match the given referrer ID (optional)
      * @param string $marketplace_id Get only marketplaces that match the given marketplace ID (optional)
      * @param int $market_id Get only marketplaces that match the given market ID (optional)
      * @param int $site_id Get only marketplaces that match the given site ID (optional)
@@ -3098,7 +3098,7 @@ class MarketApi
      *
      * Get all eBay marketplaces.
      *
-     * @param BigDecimal $referrer_id Get only marketplaces that match the given referrer ID (optional)
+     * @param float $referrer_id Get only marketplaces that match the given referrer ID (optional)
      * @param string $marketplace_id Get only marketplaces that match the given marketplace ID (optional)
      * @param int $market_id Get only marketplaces that match the given market ID (optional)
      * @param int $site_id Get only marketplaces that match the given site ID (optional)
@@ -3176,7 +3176,7 @@ class MarketApi
      *
      * Get all eBay marketplaces.
      *
-     * @param BigDecimal $referrer_id Get only marketplaces that match the given referrer ID (optional)
+     * @param float $referrer_id Get only marketplaces that match the given referrer ID (optional)
      * @param string $marketplace_id Get only marketplaces that match the given marketplace ID (optional)
      * @param int $market_id Get only marketplaces that match the given market ID (optional)
      * @param int $site_id Get only marketplaces that match the given site ID (optional)
@@ -3199,7 +3199,7 @@ class MarketApi
      *
      * Get all eBay marketplaces.
      *
-     * @param BigDecimal $referrer_id Get only marketplaces that match the given referrer ID (optional)
+     * @param float $referrer_id Get only marketplaces that match the given referrer ID (optional)
      * @param string $marketplace_id Get only marketplaces that match the given marketplace ID (optional)
      * @param int $market_id Get only marketplaces that match the given market ID (optional)
      * @param int $site_id Get only marketplaces that match the given site ID (optional)
@@ -3252,7 +3252,7 @@ class MarketApi
     /**
      * Create request for operation 'restMarketsEbayMarketplacesGet'
      *
-     * @param BigDecimal $referrer_id Get only marketplaces that match the given referrer ID (optional)
+     * @param float $referrer_id Get only marketplaces that match the given referrer ID (optional)
      * @param string $marketplace_id Get only marketplaces that match the given marketplace ID (optional)
      * @param int $market_id Get only marketplaces that match the given market ID (optional)
      * @param int $site_id Get only marketplaces that match the given site ID (optional)

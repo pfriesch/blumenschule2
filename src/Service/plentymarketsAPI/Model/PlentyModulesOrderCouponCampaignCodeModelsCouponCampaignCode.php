@@ -61,7 +61,7 @@ class PlentyModulesOrderCouponCampaignCodeModelsCouponCampaignCode implements Mo
         'disable' => 'int',
         'consumed' => 'int',
         'used_count' => 'int',
-        'used_amount' => 'BigDecimal',
+        'used_amount' => 'float',
         'value' => 'object'];
 
     /**
@@ -354,7 +354,7 @@ class PlentyModulesOrderCouponCampaignCodeModelsCouponCampaignCode implements Mo
     /**
      * Gets used_amount
      *
-     * @return BigDecimal
+     * @return float
      */
     public function getUsedAmount()
     {
@@ -364,7 +364,7 @@ class PlentyModulesOrderCouponCampaignCodeModelsCouponCampaignCode implements Mo
     /**
      * Sets used_amount
      *
-     * @param BigDecimal $used_amount The amount that is already redeemed. The total amount that can be redeemed is defined in the campaign as coupon value, because the value applies to all codes of a campaign.
+     * @param float $used_amount The amount that is already redeemed. The total amount that can be redeemed is defined in the campaign as coupon value, because the value applies to all codes of a campaign.
      *
      * @return $this
      */

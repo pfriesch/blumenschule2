@@ -61,6 +61,7 @@ use BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderStatusHistoryModelsSt
 use BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderStatusModelsOrderStatus;
 use BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderTransactionModelsOrderItemTransaction;
 use BSApp\Service\plentymarketsAPI\Model\PlentyRepositoriesModelsDeleteResponse;
+use BSApp\Service\plentymarketsAPI\Model\Used\ModelsOrders;
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
 use GuzzleHttp\Exception\RequestException;
@@ -5602,7 +5603,7 @@ class OrderApi
      */
     public function restOrdersGetWithHttpInfo($order_type = null, $contact_id = null, $referrer_id = null, $shipping_profile_id = null, $owner_user_id = null, $warehouse_id = null, $is_ebay_plus = null, $included_variation = null, $included_item = null, $order_ids = null, $country_id = null, $order_item_name = null, $variation_number = null, $sender_contact = null, $sender_warehouse = null, $receiver_contact = null, $receiver_warehouse = null, $external_order_id = null, $client_id = null, $payment_status = null, $updated_at_from = null, $updated_at_to = null, $created_at_from = null, $created_at_to = null, $paid_at_from = null, $paid_at_to = null, $outgoing_items_booked_at_from = null, $outgoing_items_booked_at_to = null, $status_from = null, $status_to = null, $has_document = null, $has_document_number = null, $page = null, $items_per_page = null, $with = null)
     {
-        $returnType = 'object';
+        $returnType = ModelsOrders::class;
         $request = $this->restOrdersGetRequest($order_type, $contact_id, $referrer_id, $shipping_profile_id, $owner_user_id, $warehouse_id, $is_ebay_plus, $included_variation, $included_item, $order_ids, $country_id, $order_item_name, $variation_number, $sender_contact, $sender_warehouse, $receiver_contact, $receiver_warehouse, $external_order_id, $client_id, $payment_status, $updated_at_from, $updated_at_to, $created_at_from, $created_at_to, $paid_at_from, $paid_at_to, $outgoing_items_booked_at_from, $outgoing_items_booked_at_to, $status_from, $status_to, $has_document, $has_document_number, $page, $items_per_page, $with);
 
         try {
@@ -33902,7 +33903,7 @@ class OrderApi
      * List status histories of orders
      *
      * @param int $order_id The ID of the order (optional)
-     * @param BigDecimal $status_id The ID of the status (optional)
+     * @param float $status_id The ID of the status (optional)
      * @param string $created_at_from Get entries with createdAt date after this date (optional)
      * @param string $created_at_to Get entries with createdAt date before this date (optional)
      * @param string $user_id The ID of the user (optional)
@@ -33923,7 +33924,7 @@ class OrderApi
      * List status histories of orders
      *
      * @param int $order_id The ID of the order (optional)
-     * @param BigDecimal $status_id The ID of the status (optional)
+     * @param float $status_id The ID of the status (optional)
      * @param string $created_at_from Get entries with createdAt date after this date (optional)
      * @param string $created_at_to Get entries with createdAt date before this date (optional)
      * @param string $user_id The ID of the user (optional)
@@ -34002,7 +34003,7 @@ class OrderApi
      * List status histories of orders
      *
      * @param int $order_id The ID of the order (optional)
-     * @param BigDecimal $status_id The ID of the status (optional)
+     * @param float $status_id The ID of the status (optional)
      * @param string $created_at_from Get entries with createdAt date after this date (optional)
      * @param string $created_at_to Get entries with createdAt date before this date (optional)
      * @param string $user_id The ID of the user (optional)
@@ -34026,7 +34027,7 @@ class OrderApi
      * List status histories of orders
      *
      * @param int $order_id The ID of the order (optional)
-     * @param BigDecimal $status_id The ID of the status (optional)
+     * @param float $status_id The ID of the status (optional)
      * @param string $created_at_from Get entries with createdAt date after this date (optional)
      * @param string $created_at_to Get entries with createdAt date before this date (optional)
      * @param string $user_id The ID of the user (optional)
@@ -34080,7 +34081,7 @@ class OrderApi
      * Create request for operation 'restOrdersStatusHistoryGet'
      *
      * @param int $order_id The ID of the order (optional)
-     * @param BigDecimal $status_id The ID of the status (optional)
+     * @param float $status_id The ID of the status (optional)
      * @param string $created_at_from Get entries with createdAt date after this date (optional)
      * @param string $created_at_to Get entries with createdAt date before this date (optional)
      * @param string $user_id The ID of the user (optional)
@@ -34435,8 +34436,8 @@ class OrderApi
      *
      * Searches order statuses.
      *
-     * @param BigDecimal $status_id_from Filter that restricts the search for order statuses to IDs from a defined value. (optional)
-     * @param BigDecimal $status_id_to Filter that restricts the search for order statuses to IDs to a defined value. (optional)
+     * @param float $status_id_from Filter that restricts the search for order statuses to IDs from a defined value. (optional)
+     * @param float $status_id_to Filter that restricts the search for order statuses to IDs to a defined value. (optional)
      *
      * @return object
      * @throws InvalidArgumentException
@@ -34453,8 +34454,8 @@ class OrderApi
      *
      * Searches order statuses.
      *
-     * @param BigDecimal $status_id_from Filter that restricts the search for order statuses to IDs from a defined value. (optional)
-     * @param BigDecimal $status_id_to Filter that restricts the search for order statuses to IDs to a defined value. (optional)
+     * @param float $status_id_from Filter that restricts the search for order statuses to IDs from a defined value. (optional)
+     * @param float $status_id_to Filter that restricts the search for order statuses to IDs to a defined value. (optional)
      *
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      * @throws InvalidArgumentException
@@ -34529,8 +34530,8 @@ class OrderApi
      *
      * Searches order statuses.
      *
-     * @param BigDecimal $status_id_from Filter that restricts the search for order statuses to IDs from a defined value. (optional)
-     * @param BigDecimal $status_id_to Filter that restricts the search for order statuses to IDs to a defined value. (optional)
+     * @param float $status_id_from Filter that restricts the search for order statuses to IDs from a defined value. (optional)
+     * @param float $status_id_to Filter that restricts the search for order statuses to IDs to a defined value. (optional)
      *
      * @return PromiseInterface
      * @throws InvalidArgumentException
@@ -34550,8 +34551,8 @@ class OrderApi
      *
      * Searches order statuses.
      *
-     * @param BigDecimal $status_id_from Filter that restricts the search for order statuses to IDs from a defined value. (optional)
-     * @param BigDecimal $status_id_to Filter that restricts the search for order statuses to IDs to a defined value. (optional)
+     * @param float $status_id_from Filter that restricts the search for order statuses to IDs from a defined value. (optional)
+     * @param float $status_id_to Filter that restricts the search for order statuses to IDs to a defined value. (optional)
      *
      * @return PromiseInterface
      * @throws InvalidArgumentException
@@ -34601,8 +34602,8 @@ class OrderApi
     /**
      * Create request for operation 'restOrdersStatusesGet'
      *
-     * @param BigDecimal $status_id_from Filter that restricts the search for order statuses to IDs from a defined value. (optional)
-     * @param BigDecimal $status_id_to Filter that restricts the search for order statuses to IDs to a defined value. (optional)
+     * @param float $status_id_from Filter that restricts the search for order statuses to IDs from a defined value. (optional)
+     * @param float $status_id_to Filter that restricts the search for order statuses to IDs to a defined value. (optional)
      *
      * @return Request
      * @throws InvalidArgumentException
@@ -35163,7 +35164,7 @@ class OrderApi
      *
      * Delete an order status.
      *
-     * @param BigDecimal $status_id The ID of the status, which shall be deleted. (required)
+     * @param float $status_id The ID of the status, which shall be deleted. (required)
      *
      * @return void
      * @throws InvalidArgumentException
@@ -35179,7 +35180,7 @@ class OrderApi
      *
      * Delete an order status.
      *
-     * @param BigDecimal $status_id The ID of the status, which shall be deleted. (required)
+     * @param float $status_id The ID of the status, which shall be deleted. (required)
      *
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      * @throws InvalidArgumentException
@@ -35232,7 +35233,7 @@ class OrderApi
      *
      * Delete an order status.
      *
-     * @param BigDecimal $status_id The ID of the status, which shall be deleted. (required)
+     * @param float $status_id The ID of the status, which shall be deleted. (required)
      *
      * @return PromiseInterface
      * @throws InvalidArgumentException
@@ -35252,7 +35253,7 @@ class OrderApi
      *
      * Delete an order status.
      *
-     * @param BigDecimal $status_id The ID of the status, which shall be deleted. (required)
+     * @param float $status_id The ID of the status, which shall be deleted. (required)
      *
      * @return PromiseInterface
      * @throws InvalidArgumentException
@@ -35288,7 +35289,7 @@ class OrderApi
     /**
      * Create request for operation 'restOrdersStatusesStatusIdDelete'
      *
-     * @param BigDecimal $status_id The ID of the status, which shall be deleted. (required)
+     * @param float $status_id The ID of the status, which shall be deleted. (required)
      *
      * @return Request
      * @throws InvalidArgumentException
@@ -35392,7 +35393,7 @@ class OrderApi
      *
      * Get an order status.
      *
-     * @param BigDecimal $status_id The ID of the order status. (required)
+     * @param float $status_id The ID of the order status. (required)
      *
      * @return PlentyModulesOrderStatusModelsOrderStatus
      * @throws InvalidArgumentException
@@ -35409,7 +35410,7 @@ class OrderApi
      *
      * Get an order status.
      *
-     * @param BigDecimal $status_id The ID of the order status. (required)
+     * @param float $status_id The ID of the order status. (required)
      *
      * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderStatusModelsOrderStatus, HTTP status code, HTTP response headers (array of strings)
      * @throws InvalidArgumentException
@@ -35484,7 +35485,7 @@ class OrderApi
      *
      * Get an order status.
      *
-     * @param BigDecimal $status_id The ID of the order status. (required)
+     * @param float $status_id The ID of the order status. (required)
      *
      * @return PromiseInterface
      * @throws InvalidArgumentException
@@ -35504,7 +35505,7 @@ class OrderApi
      *
      * Get an order status.
      *
-     * @param BigDecimal $status_id The ID of the order status. (required)
+     * @param float $status_id The ID of the order status. (required)
      *
      * @return PromiseInterface
      * @throws InvalidArgumentException
@@ -35554,7 +35555,7 @@ class OrderApi
     /**
      * Create request for operation 'restOrdersStatusesStatusIdGet'
      *
-     * @param BigDecimal $status_id The ID of the order status. (required)
+     * @param float $status_id The ID of the order status. (required)
      *
      * @return Request
      * @throws InvalidArgumentException
@@ -35658,7 +35659,7 @@ class OrderApi
      *
      * Update an order status.
      *
-     * @param BigDecimal $status_id The ID of the status, which shall be updated. (required)
+     * @param float $status_id The ID of the status, which shall be updated. (required)
      * @param object $body body (optional)
      *
      * @return PlentyModulesOrderStatusModelsOrderStatus
@@ -35676,7 +35677,7 @@ class OrderApi
      *
      * Update an order status.
      *
-     * @param BigDecimal $status_id The ID of the status, which shall be updated. (required)
+     * @param float $status_id The ID of the status, which shall be updated. (required)
      * @param object $body (optional)
      *
      * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesOrderStatusModelsOrderStatus, HTTP status code, HTTP response headers (array of strings)
@@ -35752,7 +35753,7 @@ class OrderApi
      *
      * Update an order status.
      *
-     * @param BigDecimal $status_id The ID of the status, which shall be updated. (required)
+     * @param float $status_id The ID of the status, which shall be updated. (required)
      * @param object $body (optional)
      *
      * @return PromiseInterface
@@ -35773,7 +35774,7 @@ class OrderApi
      *
      * Update an order status.
      *
-     * @param BigDecimal $status_id The ID of the status, which shall be updated. (required)
+     * @param float $status_id The ID of the status, which shall be updated. (required)
      * @param object $body (optional)
      *
      * @return PromiseInterface
@@ -35824,7 +35825,7 @@ class OrderApi
     /**
      * Create request for operation 'restOrdersStatusesStatusIdPut'
      *
-     * @param BigDecimal $status_id The ID of the status, which shall be updated. (required)
+     * @param float $status_id The ID of the status, which shall be updated. (required)
      * @param object $body (optional)
      *
      * @return Request

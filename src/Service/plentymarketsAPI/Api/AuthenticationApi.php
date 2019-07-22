@@ -601,7 +601,7 @@ class AuthenticationApi
      */
     public function restLoginPostWithHttpInfo($body = null)
     {
-        $returnType = '\BSApp\Service\plentymarketsAPI\Model\IlluminateHttpResponse';
+        $returnType = PlentyModulesAuthenticationModelsTokenData::class;
         $request = $this->restLoginPostRequest($body);
 
         try {

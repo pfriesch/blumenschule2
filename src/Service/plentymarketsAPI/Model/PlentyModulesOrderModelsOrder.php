@@ -58,10 +58,10 @@ class PlentyModulesOrderModelsOrder implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'id' => 'int',
         'type_id' => 'int',
-        'status_id' => 'BigDecimal',
+        'status_id' => 'float',
         'status_name' => 'string',
         'owner_id' => 'int',
-        'referrer_id' => 'BigDecimal',
+        'referrer_id' => 'float',
         'created_at' => 'string',
         'updated_at' => 'string',
         'plenty_id' => 'int',
@@ -318,7 +318,7 @@ class PlentyModulesOrderModelsOrder implements ModelInterface, ArrayAccess
     /**
      * Gets status_id
      *
-     * @return BigDecimal
+     * @return float
      */
     public function getStatusId()
     {
@@ -328,7 +328,7 @@ class PlentyModulesOrderModelsOrder implements ModelInterface, ArrayAccess
     /**
      * Sets status_id
      *
-     * @param BigDecimal $status_id The ID of the order status
+     * @param float $status_id The ID of the order status
      *
      * @return $this
      */
@@ -390,7 +390,7 @@ class PlentyModulesOrderModelsOrder implements ModelInterface, ArrayAccess
     /**
      * Gets referrer_id
      *
-     * @return BigDecimal
+     * @return float
      */
     public function getReferrerId()
     {
@@ -400,7 +400,7 @@ class PlentyModulesOrderModelsOrder implements ModelInterface, ArrayAccess
     /**
      * Sets referrer_id
      *
-     * @param BigDecimal $referrer_id The referrer ID of the order
+     * @param float $referrer_id The referrer ID of the order
      *
      * @return $this
      */

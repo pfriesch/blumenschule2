@@ -60,7 +60,7 @@ class PlentyModulesOrderShippingPackageModelsOrderShippingPackageItems implement
         'package_id' => 'int',
         'item_id' => 'int',
         'variation_id' => 'int',
-        'item_quantity' => 'BigDecimal'];
+        'item_quantity' => 'float'];
 
     /**
      * Array of property to format mappings. Used for (de)serialization
@@ -318,7 +318,7 @@ class PlentyModulesOrderShippingPackageModelsOrderShippingPackageItems implement
     /**
      * Gets item_quantity
      *
-     * @return BigDecimal
+     * @return float
      */
     public function getItemQuantity()
     {
@@ -328,7 +328,7 @@ class PlentyModulesOrderShippingPackageModelsOrderShippingPackageItems implement
     /**
      * Sets item_quantity
      *
-     * @param BigDecimal $item_quantity The quantity of the item in the package
+     * @param float $item_quantity The quantity of the item in the package
      *
      * @return $this
      */

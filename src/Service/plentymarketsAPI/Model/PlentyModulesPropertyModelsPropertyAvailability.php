@@ -59,7 +59,7 @@ class PlentyModulesPropertyModelsPropertyAvailability implements ModelInterface,
         'id' => 'int',
         'property_id' => 'int',
         'type' => 'string',
-        'value' => 'BigDecimal'];
+        'value' => 'float'];
 
     /**
      * Array of property to format mappings. Used for (de)serialization
@@ -288,7 +288,7 @@ class PlentyModulesPropertyModelsPropertyAvailability implements ModelInterface,
     /**
      * Gets value
      *
-     * @return BigDecimal
+     * @return float
      */
     public function getValue()
     {
@@ -298,7 +298,7 @@ class PlentyModulesPropertyModelsPropertyAvailability implements ModelInterface,
     /**
      * Sets value
      *
-     * @param BigDecimal $value The value of the property availability
+     * @param float $value The value of the property availability
      *
      * @return $this
      */

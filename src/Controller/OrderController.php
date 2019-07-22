@@ -3,6 +3,7 @@
 namespace BSApp\Controller;
 
 use BSApp\Entity\OrdersItem;
+use BSApp\Service\plentymarketsAPI\BSPlentyService;
 use Swift_Attachment;
 use Swift_Message;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -68,7 +69,7 @@ class OrderController extends AbstractController
             } else {
                 return $this->redirect($this->generateUrl('check_failure'));
             }
-            $em = $this->getDoctrine()->getEntityManager();
+            $em = $this->getDoctrine()->getManager();
             $qb = $em->createQueryBuilder();
             $qb->add('select', 'o')
                 ->add('from', 'BSApp:Orders o');
@@ -144,7 +145,7 @@ class OrderController extends AbstractController
         // $oPlentyMarketsAPI->doGetOrdersWithState( 11, $date  );
 
 
-        $em = $this->getDoctrine()->getEntityManager();
+        $em = $this->getDoctrine()->getManager();
         $qb = $em->createQueryBuilder();
         $qb->add('select', 'o')
             ->add('from', 'BSApp:Orders o')
@@ -185,7 +186,7 @@ class OrderController extends AbstractController
         // $oPlentyMarketsAPI->doGetOrdersWithState( 11, $date  );
 
 
-        $em = $this->getDoctrine()->getEntityManager();
+        $em = $this->getDoctrine()->getManager();
         $qb = $em->createQueryBuilder();
         $qb->add('select', 'o')
             ->add('from', 'BSApp:Orders o')
@@ -255,7 +256,7 @@ class OrderController extends AbstractController
 
             $date = $this->get('request')->attributes->get('date');
 
-            $em = $this->getDoctrine()->getEntityManager();
+            $em = $this->getDoctrine()->getManager();
             $qb = $em->createQueryBuilder();
             $qb->add('select', 'o')
                 ->add('from', 'BSApp:Orders o');
@@ -369,7 +370,7 @@ class OrderController extends AbstractController
 
             // Gutschriften Exportieren
 
-            $em = $this->getDoctrine()->getEntityManager();
+            $em = $this->getDoctrine()->getManager();
             $qb = $em->createQueryBuilder();
             $qb->add('select', 'o')
                 ->add('from', 'BSApp:Orders o');
@@ -511,7 +512,7 @@ class OrderController extends AbstractController
 
     private function getOrderItemSumVAT($orderid, $vat)
     {
-        $em = $this->getDoctrine()->getEntityManager();
+        $em = $this->getDoctrine()->getManager();
         $qb = $em->createQueryBuilder();
         $qb->add('select', 'sum(o.Price * o.Quantity)')
             ->add('from', 'BSApp:OrdersItem o')
@@ -523,24 +524,26 @@ class OrderController extends AbstractController
     }
 
 
-    public function stateAction($state)
+    public function stateAction($state, BSPlentyService $plentyMarketsAPI)
     {
-        /** @var PlentyMarketsAPI $plentyMarketsAPI */
-        $plentyMarketsAPI = $this->container->get('app.plenty_markets_api');
+//        /** @var PlentyMarketsAPI $plentyMarketsAPI */
+//        $plentyMarketsAPI = $this->container->get('app.plenty_markets_api');
 
         $orders = $plentyMarketsAPI->doGetOrdersWithState($state);
-        $em = $this->getDoctrine()->getEntityManager();
+        $em = $this->getDoctrine()->getManager();
         $qb = $em->createQueryBuilder();
         $qb->add('select', 'o.Picklist')
-            ->add('from', 'BSApp:Orders o')
+            ->add('from', 'BSApp\Entity\Orders o')
             ->add('where', $qb->expr()->isNotNull('o.Picklist'))
             ->groupBy('o.Picklist')
             ->orderBy('o.Picklist', 'DESC')
             ->setMaxResults(10);
 
 
-        return $this->render('BSOrderBundle:Order:orders.html.twig', array(
-            'orders' => $orders, 'state' => $state, 'pick' => $qb->getQuery()->getResult()));
+//        TODO paginate with rest api maybe?
+//        TODO First Name and Last Name are missing, worth to add calls to get the full name?
+        return $this->render('orders/orders.html.twig', array(
+            'orders' => $orders->getEntries(), 'state' => $state, 'pick' => $qb->getQuery()->getResult()));
     }
 
 
@@ -590,7 +593,7 @@ class OrderController extends AbstractController
         if ($request->getMethod() == 'POST') {
 
 
-            $em = $this->getDoctrine()->getEntityManager();
+            $em = $this->getDoctrine()->getManager();
             $qb = $em->createQueryBuilder();
             $qb->add('select', $qb->expr()->max('o.Picklist'))
                 ->add('from', 'BSApp:Orders o');
@@ -626,7 +629,7 @@ class OrderController extends AbstractController
                 $repository = $this->getDoctrine()->getRepository('BSApp:Orders');
                 $oOrder = $repository->findOneBy(array('OrderID' => $rOrder));
                 $oOrder->setPicklist($PickListName);
-                //$em = $this->getDoctrine()->getEntityManager();
+                //$em = $this->getDoctrine()->getManager();
                 $em->persist($oOrder);
                 //$em->flush();
                 $aSortPicklistHeader[] = $oOrder;
@@ -830,7 +833,7 @@ class OrderController extends AbstractController
 
     public function getItem($OrderItem)
     {
-        $em = $this->getDoctrine()->getEntityManager();
+        $em = $this->getDoctrine()->getManager();
         $ArtileID = explode("-", $OrderItem->getSKU());
         $repository = $this->getDoctrine()->getRepository('BSApp:Product');
         $product = $repository->findOneBy(array('article_id' => $OrderItem->getArticleID()));

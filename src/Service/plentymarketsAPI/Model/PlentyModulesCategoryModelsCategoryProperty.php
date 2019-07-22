@@ -57,7 +57,7 @@ class PlentyModulesCategoryModelsCategoryProperty implements ModelInterface, Arr
      */
     protected static $swaggerTypes = [
         'category_id' => 'int',
-        'market_id' => 'BigDecimal',
+        'market_id' => 'float',
         'plenty_id' => 'int',
         'value' => 'string'];
 
@@ -240,7 +240,7 @@ class PlentyModulesCategoryModelsCategoryProperty implements ModelInterface, Arr
     /**
      * Gets market_id
      *
-     * @return BigDecimal
+     * @return float
      */
     public function getMarketId()
     {
@@ -250,7 +250,7 @@ class PlentyModulesCategoryModelsCategoryProperty implements ModelInterface, Arr
     /**
      * Sets market_id
      *
-     * @param BigDecimal $market_id The unique ID of the referrer
+     * @param float $market_id The unique ID of the referrer
      *
      * @return $this
      */

@@ -11,7 +11,6 @@ use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Knp\Component\Pager\PaginatorInterface;
 
-
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use BSApp\Entity\Product;
@@ -58,7 +57,7 @@ class ProductController extends AbstractController
     {
 
         $em = $this->getDoctrine()->getManager();
-        $entity = $em->getRepository('BSApp\Entity\Product')->find($id);
+        $entity = $em->getRepository(Product::class)->find($id);
 
         $form = $this->createFormBuilder($entity)
             ->add('Stock', EntityType::class,
@@ -92,7 +91,7 @@ class ProductController extends AbstractController
     {
         $em = $this->getDoctrine()->getManager();
 
-        $entity = $em->getRepository('BSApp\Entity\Product')->find($id);
+        $entity = $em->getRepository(Product::class)->find($id);
 
         if (!$entity) {
             throw $this->createNotFoundException('Unable to find Product entity.');
@@ -250,7 +249,7 @@ class ProductController extends AbstractController
     {
         $em = $this->getDoctrine()->getManager();
 
-        $entity = $em->getRepository('BSApp\Entity\Product')->find($id);
+        $entity = $em->getRepository(Product::class)->find($id);
 
         if (!$entity) {
             throw $this->createNotFoundException('Unable to find Product entity.');
@@ -274,7 +273,7 @@ class ProductController extends AbstractController
     {
         $em = $this->getDoctrine()->getManager();
 
-        $entity = $em->getRepository('BSApp\Entity\Product')->find($id);
+        $entity = $em->getRepository(Product::class)->find($id);
 
         if (!$entity) {
             throw $this->createNotFoundException('Unable to find Product entity.');
@@ -314,7 +313,7 @@ class ProductController extends AbstractController
 
         if ($form->isValid()) {
             $em = $this->getDoctrine()->getManager();
-            $entity = $em->getRepository('BSApp\Entity\Product')->find($id);
+            $entity = $em->getRepository(Product::class)->find($id);
 
             if (!$entity) {
                 throw $this->createNotFoundException('Unable to find Product entity.');
@@ -489,31 +488,26 @@ class ProductController extends AbstractController
      * Lists all Product entities.
      *
      */
-    public function productAllAction($search = null)
+    public function productAllAction($search, Request $request, PaginatorInterface $paginator)//, )
     {
-//    TODO JUST TESTING HERE DELETE
-        $plentyMarketsAPI = $this->container->get('app.plenty_markets_api');
-
-
-        $ordersTest = $plentyMarketsAPI->doGetOrdersWithState(array('dummyBar' => 5));
-
-//    TODO JUST TESTING HERE DELETE TILL HERE
-
 
 //        $em = $this->getDoctrine()->getManager();
 
         //$entities = $em->getRepository('PlentyMarketsOrderBundle:Product')->findAll();
 
 
-        $paginator = $this->get('knp_paginator');
+//        $paginator = $this->get('knp_paginator');
         $pagination = $paginator->paginate(
             $this->plantAndProductSearch($search),
-            $this->get('request')->query->get('page', 1)/*page number*/,
+            $request->query->get('page', 1)/*page number*/,
             $this->limit/*limit per page*/
         );
 
         // parameters to template
-        return compact('pagination');
+        return $this->render('product/productAll.html.twig', [
+            'pagination' => $pagination,
+        ]);
+//        return compact('pagination');
     }
 
     private function plantAndProductSearch($search)
@@ -566,7 +560,9 @@ class ProductController extends AbstractController
             order by name
                 ', $rsm);
 
-        return $query->getArrayResult();
+        $results = $query->getArrayResult();
+//        TODO why is the quary returning null elements? TODO fix it
+        return array_filter($results);
     }
 
     public function searchAction($search)
@@ -636,7 +632,7 @@ class ProductController extends AbstractController
 
         $em = $this->getDoctrine()->getManager();
 
-        $product = $em->getRepository('BSApp\Entity\Product')->findOneBy(array('article_no' => $code));
+        $product = $em->getRepository(Product::class)->findOneBy(array('article_no' => $code));
 
         $item = array();
         $item['article_id'] = $product->getArticleId();
@@ -663,7 +659,7 @@ class ProductController extends AbstractController
 
         $em = $this->getDoctrine()->getManager();
 
-        $entity = $em->getRepository('BSApp\Entity\Product')->find($id);
+        $entity = $em->getRepository(Product::class)->find($id);
         $pdf = $this->get('white_october.tcpdf')->create();
         /*$pdf->init(array(
             'Creator' => 'Blumenschule Schongau',

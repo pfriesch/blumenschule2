@@ -17,9 +17,9 @@ class PaymentMethodsController extends AbstractController
      */
     public function indexAction()
     {
-        $em = $this->getDoctrine()->getEntityManager();
+        $em = $this->getDoctrine()->getManager();
 
-        $entities = $em->getRepository('BSApp:PaymentMethods')->findAll();
+        $entities = $em->getRepository(PaymentMethods::class)->findAll();
 
         return array('entities' => $entities);
     }
@@ -30,9 +30,9 @@ class PaymentMethodsController extends AbstractController
      */
     public function showAction($id)
     {
-        $em = $this->getDoctrine()->getEntityManager();
+        $em = $this->getDoctrine()->getManager();
 
-        $entity = $em->getRepository('BSApp:PaymentMethods')->find($id);
+        $entity = $em->getRepository(PaymentMethods::class)->find($id);
 
         if (!$entity) {
             throw $this->createNotFoundException('Unable to find PaymentMethods entity.');
@@ -79,7 +79,7 @@ class PaymentMethodsController extends AbstractController
         $form->bindRequest($request);
 
         if ($form->isValid()) {
-            $em = $this->getDoctrine()->getEntityManager();
+            $em = $this->getDoctrine()->getManager();
             $em->persist($entity);
             $em->flush();
 
@@ -99,9 +99,9 @@ class PaymentMethodsController extends AbstractController
      */
     public function editAction($id)
     {
-        $em = $this->getDoctrine()->getEntityManager();
+        $em = $this->getDoctrine()->getManager();
 
-        $entity = $em->getRepository('BSApp:PaymentMethods')->find($id);
+        $entity = $em->getRepository(PaymentMethods::class)->find($id);
 
         if (!$entity) {
             throw $this->createNotFoundException('Unable to find PaymentMethods entity.');
@@ -123,9 +123,9 @@ class PaymentMethodsController extends AbstractController
      */
     public function updateAction($id)
     {
-        $em = $this->getDoctrine()->getEntityManager();
+        $em = $this->getDoctrine()->getManager();
 
-        $entity = $em->getRepository('BSApp:PaymentMethods')->find($id);
+        $entity = $em->getRepository(PaymentMethods::class)->find($id);
 
         if (!$entity) {
             throw $this->createNotFoundException('Unable to find PaymentMethods entity.');
@@ -164,8 +164,8 @@ class PaymentMethodsController extends AbstractController
         $form->bindRequest($request);
 
         if ($form->isValid()) {
-            $em = $this->getDoctrine()->getEntityManager();
-            $entity = $em->getRepository('BSApp:PaymentMethods')->find($id);
+            $em = $this->getDoctrine()->getManager();
+            $entity = $em->getRepository(PaymentMethods::class)->find($id);
 
             if (!$entity) {
                 throw $this->createNotFoundException('Unable to find PaymentMethods entity.');

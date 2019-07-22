@@ -59,8 +59,8 @@ class PlentyModulesItemManufacturerModelsManufacturerCommission implements Model
         'id' => 'int',
         'manufacturer_id' => 'int',
         'plenty_id' => 'int',
-        'referrer_id' => 'BigDecimal',
-        'commission' => 'BigDecimal'];
+        'referrer_id' => 'float',
+        'commission' => 'float'];
 
     /**
      * Array of property to format mappings. Used for (de)serialization
@@ -294,7 +294,7 @@ class PlentyModulesItemManufacturerModelsManufacturerCommission implements Model
     /**
      * Gets referrer_id
      *
-     * @return BigDecimal
+     * @return float
      */
     public function getReferrerId()
     {
@@ -304,7 +304,7 @@ class PlentyModulesItemManufacturerModelsManufacturerCommission implements Model
     /**
      * Sets referrer_id
      *
-     * @param BigDecimal $referrer_id The unique ID of the referrer that the commission applies to. The route /rest/orders/referrers provides access to referrers.
+     * @param float $referrer_id The unique ID of the referrer that the commission applies to. The route /rest/orders/referrers provides access to referrers.
      *
      * @return $this
      */
@@ -318,7 +318,7 @@ class PlentyModulesItemManufacturerModelsManufacturerCommission implements Model
     /**
      * Gets commission
      *
-     * @return BigDecimal
+     * @return float
      */
     public function getCommission()
     {
@@ -328,7 +328,7 @@ class PlentyModulesItemManufacturerModelsManufacturerCommission implements Model
     /**
      * Sets commission
      *
-     * @param BigDecimal $commission The manufacturer commission value in percent
+     * @param float $commission The manufacturer commission value in percent
      *
      * @return $this
      */

@@ -61,7 +61,7 @@ class PlentyModulesOrderCurrencyModelsCurrency implements ModelInterface, ArrayA
         'unicode_sign' => 'string',
         'is_active' => 'bool',
         'is_erasable' => 'bool',
-        'exchange_rate' => 'BigDecimal'];
+        'exchange_rate' => 'float'];
 
     /**
      * Array of property to format mappings. Used for (de)serialization
@@ -348,7 +348,7 @@ class PlentyModulesOrderCurrencyModelsCurrency implements ModelInterface, ArrayA
     /**
      * Gets exchange_rate
      *
-     * @return BigDecimal
+     * @return float
      */
     public function getExchangeRate()
     {
@@ -358,7 +358,7 @@ class PlentyModulesOrderCurrencyModelsCurrency implements ModelInterface, ArrayA
     /**
      * Sets exchange_rate
      *
-     * @param BigDecimal $exchange_rate The current exchange rate for this currency.
+     * @param float $exchange_rate The current exchange rate for this currency.
      *
      * @return $this
      */

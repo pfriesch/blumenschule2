@@ -148,7 +148,7 @@ class PlantController extends AbstractController
     {
         $em = $this->getDoctrine()->getManager();
 
-        $entity = $em->getRepository('BSApp:Plant')->find($id);
+        $entity = $em->getRepository(Plant::class)->find($id);
 
         if (!$entity) {
             throw $this->createNotFoundException('Unable to find Plant entity.');
@@ -195,7 +195,7 @@ class PlantController extends AbstractController
         $form->bind($request);
 
         if ($form->isValid()) {
-            $em = $this->getDoctrine()->getEntityManager();
+            $em = $this->getDoctrine()->getManager();
             $em->persist($entity);
             $em->flush();
 
@@ -217,7 +217,7 @@ class PlantController extends AbstractController
     {
         $em = $this->getDoctrine()->getManager();
 
-        $entity = $em->getRepository('BSApp:Plant')->find($id);
+        $entity = $em->getRepository(Plant::class)->find($id);
 
         if (!$entity) {
             throw $this->createNotFoundException('Unable to find Plant entity.');
@@ -241,7 +241,7 @@ class PlantController extends AbstractController
     {
         $em = $this->getDoctrine()->getManager();
 
-        $entity = $em->getRepository('BSApp:Plant')->find($id);
+        $entity = $em->getRepository(Plant::class)->find($id);
 
         if (!$entity) {
             throw $this->createNotFoundException('Unable to find Plant entity.');
@@ -281,7 +281,7 @@ class PlantController extends AbstractController
 
         // if ($form->isValid()) {
         $em = $this->getDoctrine()->getManager();
-        $entity = $em->getRepository('BSApp:Plant')->find($id);
+        $entity = $em->getRepository(Plant::class)->find($id);
 
         if (!$entity) {
             throw $this->createNotFoundException('Unable to find Plant entity.');
@@ -301,7 +301,7 @@ class PlantController extends AbstractController
     {
         $em = $this->getDoctrine()->getManager();
 
-        $entity = $em->getRepository('BSApp:Plant')->find($id);
+        $entity = $em->getRepository(Plant::class)->find($id);
 
         if (!$entity) {
             throw $this->createNotFoundException('Unable to find Plant entity.');

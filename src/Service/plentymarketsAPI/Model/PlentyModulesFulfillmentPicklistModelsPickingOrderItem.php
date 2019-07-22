@@ -63,7 +63,7 @@ class PlentyModulesFulfillmentPicklistModelsPickingOrderItem implements ModelInt
         'process_date' => 'string',
         'process_user_id' => 'int',
         'comment' => 'string',
-        'quantity' => 'BigDecimal',
+        'quantity' => 'float',
         'item_id' => 'int',
         'holding_area' => 'int',
         'warehouse_id' => 'int',
@@ -432,7 +432,7 @@ class PlentyModulesFulfillmentPicklistModelsPickingOrderItem implements ModelInt
     /**
      * Gets quantity
      *
-     * @return BigDecimal
+     * @return float
      */
     public function getQuantity()
     {
@@ -442,7 +442,7 @@ class PlentyModulesFulfillmentPicklistModelsPickingOrderItem implements ModelInt
     /**
      * Sets quantity
      *
-     * @param BigDecimal $quantity quantity
+     * @param float $quantity quantity
      *
      * @return $this
      */

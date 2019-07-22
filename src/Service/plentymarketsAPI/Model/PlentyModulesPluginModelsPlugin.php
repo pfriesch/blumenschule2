@@ -76,7 +76,7 @@ class PlentyModulesPluginModelsPlugin implements ModelInterface, ArrayAccess
         'namespace' => 'string',
         'dependencies' => 'object[]',
         'author' => 'string',
-        'price' => 'BigDecimal',
+        'price' => 'float',
         'keywords' => 'string[]',
         'require' => 'string[]',
         'not_installed_requirements' => 'string[]',
@@ -966,7 +966,7 @@ class PlentyModulesPluginModelsPlugin implements ModelInterface, ArrayAccess
     /**
      * Gets price
      *
-     * @return BigDecimal
+     * @return float
      */
     public function getPrice()
     {
@@ -976,7 +976,7 @@ class PlentyModulesPluginModelsPlugin implements ModelInterface, ArrayAccess
     /**
      * Sets price
      *
-     * @param BigDecimal $price The price of the plugin
+     * @param float $price The price of the plugin
      *
      * @return $this
      */

@@ -60,15 +60,15 @@ class PlentyModulesBasketModelsBasketItem implements ModelInterface, ArrayAccess
         'basket_id' => 'int',
         'session_id' => 'string',
         'order_row_id' => 'int',
-        'quantity' => 'BigDecimal',
-        'quantity_originally' => 'BigDecimal',
+        'quantity' => 'float',
+        'quantity_originally' => 'float',
         'item_id' => 'int',
         'price_id' => 'int',
         'attribute_value_set_id' => 'int',
         'rebate' => 'int',
-        'vat' => 'BigDecimal',
-        'price' => 'BigDecimal',
-        'given_price' => 'BigDecimal',
+        'vat' => 'float',
+        'price' => 'float',
+        'given_price' => 'float',
         'use_given_price' => 'bool',
         'input_width' => 'int',
         'input_length' => 'int',
@@ -81,7 +81,7 @@ class PlentyModulesBasketModelsBasketItem implements ModelInterface, ArrayAccess
         'position' => 'int',
         'size' => 'string',
         'shipping_profile_id' => 'int',
-        'referrer_id' => 'BigDecimal',
+        'referrer_id' => 'float',
         'delivery_date' => 'string',
         'category_id' => 'int',
         'reservation_datetime' => 'int',
@@ -89,7 +89,7 @@ class PlentyModulesBasketModelsBasketItem implements ModelInterface, ArrayAccess
         'bundle_variation_id' => 'int',
         'created_at' => 'string',
         'updated_at' => 'string',
-        'attribute_total_markup' => 'BigDecimal',
+        'attribute_total_markup' => 'float',
         'basket_item_order_params' => 'object[]'];
 
     /**
@@ -498,7 +498,7 @@ class PlentyModulesBasketModelsBasketItem implements ModelInterface, ArrayAccess
     /**
      * Gets quantity
      *
-     * @return BigDecimal
+     * @return float
      */
     public function getQuantity()
     {
@@ -508,7 +508,7 @@ class PlentyModulesBasketModelsBasketItem implements ModelInterface, ArrayAccess
     /**
      * Sets quantity
      *
-     * @param BigDecimal $quantity The current quantity of the item
+     * @param float $quantity The current quantity of the item
      *
      * @return $this
      */
@@ -522,7 +522,7 @@ class PlentyModulesBasketModelsBasketItem implements ModelInterface, ArrayAccess
     /**
      * Gets quantity_originally
      *
-     * @return BigDecimal
+     * @return float
      */
     public function getQuantityOriginally()
     {
@@ -532,7 +532,7 @@ class PlentyModulesBasketModelsBasketItem implements ModelInterface, ArrayAccess
     /**
      * Sets quantity_originally
      *
-     * @param BigDecimal $quantity_originally The initial quantity of the item
+     * @param float $quantity_originally The initial quantity of the item
      *
      * @return $this
      */
@@ -642,7 +642,7 @@ class PlentyModulesBasketModelsBasketItem implements ModelInterface, ArrayAccess
     /**
      * Gets vat
      *
-     * @return BigDecimal
+     * @return float
      */
     public function getVat()
     {
@@ -652,7 +652,7 @@ class PlentyModulesBasketModelsBasketItem implements ModelInterface, ArrayAccess
     /**
      * Sets vat
      *
-     * @param BigDecimal $vat The VAT
+     * @param float $vat The VAT
      *
      * @return $this
      */
@@ -666,7 +666,7 @@ class PlentyModulesBasketModelsBasketItem implements ModelInterface, ArrayAccess
     /**
      * Gets price
      *
-     * @return BigDecimal
+     * @return float
      */
     public function getPrice()
     {
@@ -676,7 +676,7 @@ class PlentyModulesBasketModelsBasketItem implements ModelInterface, ArrayAccess
     /**
      * Sets price
      *
-     * @param BigDecimal $price The item price
+     * @param float $price The item price
      *
      * @return $this
      */
@@ -690,7 +690,7 @@ class PlentyModulesBasketModelsBasketItem implements ModelInterface, ArrayAccess
     /**
      * Gets given_price
      *
-     * @return BigDecimal
+     * @return float
      */
     public function getGivenPrice()
     {
@@ -700,7 +700,7 @@ class PlentyModulesBasketModelsBasketItem implements ModelInterface, ArrayAccess
     /**
      * Sets given_price
      *
-     * @param BigDecimal $given_price given_price
+     * @param float $given_price given_price
      *
      * @return $this
      */
@@ -1002,7 +1002,7 @@ class PlentyModulesBasketModelsBasketItem implements ModelInterface, ArrayAccess
     /**
      * Gets referrer_id
      *
-     * @return BigDecimal
+     * @return float
      */
     public function getReferrerId()
     {
@@ -1012,7 +1012,7 @@ class PlentyModulesBasketModelsBasketItem implements ModelInterface, ArrayAccess
     /**
      * Sets referrer_id
      *
-     * @param BigDecimal $referrer_id The ID of the order referrer
+     * @param float $referrer_id The ID of the order referrer
      *
      * @return $this
      */
@@ -1194,7 +1194,7 @@ class PlentyModulesBasketModelsBasketItem implements ModelInterface, ArrayAccess
     /**
      * Gets attribute_total_markup
      *
-     * @return BigDecimal
+     * @return float
      */
     public function getAttributeTotalMarkup()
     {
@@ -1204,7 +1204,7 @@ class PlentyModulesBasketModelsBasketItem implements ModelInterface, ArrayAccess
     /**
      * Sets attribute_total_markup
      *
-     * @param BigDecimal $attribute_total_markup attribute total markup
+     * @param float $attribute_total_markup attribute total markup
      *
      * @return $this
      */

@@ -58,7 +58,7 @@ class PlentyModulesOrderStatusHistoryModelsStatusHistoryEntry implements ModelIn
     protected static $swaggerTypes = [
         'id' => 'int',
         'order_id' => 'int',
-        'status_id' => 'BigDecimal',
+        'status_id' => 'float',
         'created_at' => 'string',
         'user_id' => 'int',
         'procedure_text' => 'string'];
@@ -276,7 +276,7 @@ class PlentyModulesOrderStatusHistoryModelsStatusHistoryEntry implements ModelIn
     /**
      * Gets status_id
      *
-     * @return BigDecimal
+     * @return float
      */
     public function getStatusId()
     {
@@ -286,7 +286,7 @@ class PlentyModulesOrderStatusHistoryModelsStatusHistoryEntry implements ModelIn
     /**
      * Sets status_id
      *
-     * @param BigDecimal $status_id The ID of the status
+     * @param float $status_id The ID of the status
      *
      * @return $this
      */

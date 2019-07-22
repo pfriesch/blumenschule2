@@ -87,23 +87,6 @@ class ObjectSerializer
     }
 
     /**
-     * Sanitize filename by removing path.
-     * e.g. ../../sun.gif becomes sun.gif
-     *
-     * @param string $filename filename to be sanitized
-     *
-     * @return string the sanitized filename
-     */
-    public static function sanitizeFilename($filename)
-    {
-        if (preg_match("/.*[\/\\\\](.*)$/", $filename, $match)) {
-            return $match[1];
-        } else {
-            return $filename;
-        }
-    }
-
-    /**
      * Take value and turn it into a string suitable for inclusion in
      * the path, by url-encoding.
      *
@@ -114,6 +97,24 @@ class ObjectSerializer
     public static function toPathValue($value)
     {
         return rawurlencode(self::toString($value));
+    }
+
+    /**
+     * Take value and turn it into a string suitable for inclusion in
+     * the parameter. If it's a string, pass through unchanged
+     * If it's a datetime object, format it in ISO8601
+     *
+     * @param string|DateTime $value the value of the parameter
+     *
+     * @return string the header string
+     */
+    public static function toString($value)
+    {
+        if ($value instanceof DateTime) { // datetime in ISO8601 format
+            return $value->format(DateTime::ATOM);
+        } else {
+            return $value;
+        }
     }
 
     /**
@@ -164,24 +165,6 @@ class ObjectSerializer
             return $value->getRealPath();
         } else {
             return self::toString($value);
-        }
-    }
-
-    /**
-     * Take value and turn it into a string suitable for inclusion in
-     * the parameter. If it's a string, pass through unchanged
-     * If it's a datetime object, format it in ISO8601
-     *
-     * @param string|DateTime $value the value of the parameter
-     *
-     * @return string the header string
-     */
-    public static function toString($value)
-    {
-        if ($value instanceof DateTime) { // datetime in ISO8601 format
-            return $value->format(DateTime::ATOM);
-        } else {
-            return $value;
         }
     }
 
@@ -266,7 +249,7 @@ class ObjectSerializer
             } else {
                 return null;
             }
-        } elseif (in_array($class, ['DateTime', 'bool', 'boolean', 'byte', 'double', 'float', 'int', 'integer', 'mixed', 'number', 'object', 'string', 'void'], true)) {
+        } elseif (in_array($class, ['float', 'DateTime', 'bool', 'boolean', 'byte', 'double', 'float', 'int', 'integer', 'mixed', 'number', 'object', 'string', 'void'], true)) {
             settype($data, $class);
             return $data;
         } elseif ($class === '\SplFileObject') {
@@ -316,6 +299,23 @@ class ObjectSerializer
                 }
             }
             return $instance;
+        }
+    }
+
+    /**
+     * Sanitize filename by removing path.
+     * e.g. ../../sun.gif becomes sun.gif
+     *
+     * @param string $filename filename to be sanitized
+     *
+     * @return string the sanitized filename
+     */
+    public static function sanitizeFilename($filename)
+    {
+        if (preg_match("/.*[\/\\\\](.*)$/", $filename, $match)) {
+            return $match[1];
+        } else {
+            return $filename;
         }
     }
 }
