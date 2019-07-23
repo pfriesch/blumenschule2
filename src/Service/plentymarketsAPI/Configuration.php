@@ -210,7 +210,7 @@ class Configuration
 
             try {
                 $result = $apiInstance->restLoginPost($body);
-                $this->setAccessToken($result->getAccessToken());
+                $this->setAccessToken($result->accessToken);
 
             } catch (Exception $e) {
                 echo 'Exception when calling AuthenticationApi->restLoginPost: ', $e->getMessage(), PHP_EOL;

@@ -30,6 +30,8 @@ namespace BSApp\Service\plentymarketsAPI;
 
 use DateTime;
 use InvalidArgumentException;
+use JsonMapper;
+use PHPUnit\Runner\Exception;
 use Psr\Http\Message\StreamInterface;
 use SplFileObject;
 
@@ -217,23 +219,27 @@ class ObjectSerializer
         if (null === $data) {
             return null;
         } elseif (substr($class, 0, 4) === 'map[') { // for associative array e.g. map[string,int]
-            $inner = substr($class, 4, -1);
-            $deserialized = [];
-            if (strrpos($inner, ",") !== false) {
-                $subClass_array = explode(',', $inner, 2);
-                $subClass = $subClass_array[1];
-                foreach ($data as $key => $value) {
-                    $deserialized[$key] = self::deserialize($value, $subClass, null);
-                }
-            }
-            return $deserialized;
+
+            throw new Exception("Don't use, use list of class instead");
+//            $inner = substr($class, 4, -1);
+//            $deserialized = [];
+//            if (strrpos($inner, ",") !== false) {
+//                $subClass_array = explode(',', $inner, 2);
+//                $subClass = $subClass_array[1];
+//                foreach ($data as $key => $value) {
+//                    $deserialized[$key] = self::deserialize($value, $subClass, null);
+//                }
+//            }
+//            return $deserialized;
         } elseif (strcasecmp(substr($class, -2), '[]') === 0) {
-            $subClass = substr($class, 0, -2);
-            $values = [];
-            foreach ($data as $key => $value) {
-                $values[] = self::deserialize($value, $subClass, null);
-            }
-            return $values;
+            throw new Exception("Don't use, use list of class instead");
+
+//            $subClass = substr($class, 0, -2);
+//            $values = [];
+//            foreach ($data as $key => $value) {
+//                $values[] = self::deserialize($value, $subClass, null);
+//            }
+//            return $values;
         } elseif ($class === 'object') {
             settype($data, 'array');
             return $data;
@@ -277,27 +283,15 @@ class ObjectSerializer
             }
             return $data;
         } else {
-            // If a discriminator is defined and points to a valid subclass, use it.
-            $discriminator = $class::DISCRIMINATOR;
-            if (!empty($discriminator) && isset($data->{$discriminator}) && is_string($data->{$discriminator})) {
-                $subclass = '{{invokerPackage}}\Model\\' . $data->{$discriminator};
-                if (is_subclass_of($subclass, $class)) {
-                    $class = $subclass;
-                }
-            }
-            $instance = new $class();
-            foreach ($instance::swaggerTypes() as $property => $type) {
-                $propertySetter = $instance::setters()[$property];
 
-                if (!isset($propertySetter) || !isset($data->{$instance::attributeMap()[$property]})) {
-                    continue;
-                }
+            $mapper = new JsonMapper();
 
-                $propertyValue = $data->{$instance::attributeMap()[$property]};
-                if (isset($propertyValue)) {
-                    $instance->$propertySetter(self::deserialize($propertyValue, $type, null));
-                }
-            }
+//            $mapper->bExceptionOnUndefinedProperty = true; //TODO for debugging, remove for prod?
+//            $mapper->bExceptionOnMissingData = true;
+
+            $instance = $mapper->map($data, new $class);
+
+
             return $instance;
         }
     }

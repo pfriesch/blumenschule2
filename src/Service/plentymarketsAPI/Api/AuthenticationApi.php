@@ -27,9 +27,7 @@
 
 namespace BSApp\Service\plentymarketsAPI\Api;
 
-use BSApp\Service\plentymarketsAPI\Model\IlluminateHttpResponse;
-use BSApp\Service\plentymarketsAPI\Model\Mixed;
-use BSApp\Service\plentymarketsAPI\Model\PlentyModulesAuthenticationModelsTokenData;
+use BSApp\Service\plentymarketsAPI\Model\Plenty\Modules\Authentication\TokenData;
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
 use GuzzleHttp\Exception\RequestException;
@@ -113,13 +111,13 @@ class AuthenticationApi
      * Operation restCheckPasswordPostWithHttpInfo
      *
      *
-     * @return array of \BSApp\Service\plentymarketsAPI\Model\Mixed, HTTP status code, HTTP response headers (array of strings)
+     * @return array of object, HTTP status code, HTTP response headers (array of strings)
      * @throws InvalidArgumentException
      * @throws ApiException on non-2xx response
      */
     public function restCheckPasswordPostWithHttpInfo()
     {
-        $returnType = '\BSApp\Service\plentymarketsAPI\Model\Mixed';
+        $returnType = 'object';
         $request = $this->restCheckPasswordPostRequest();
 
         try {
@@ -171,7 +169,7 @@ class AuthenticationApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSApp\Service\plentymarketsAPI\Model\Mixed',
+                        'object',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -179,76 +177,6 @@ class AuthenticationApi
             }
             throw $e;
         }
-    }
-
-    /**
-     * Operation restCheckPasswordPostAsync
-     *
-     *
-     *
-     *
-     * @return PromiseInterface
-     * @throws InvalidArgumentException
-     */
-    public function restCheckPasswordPostAsync()
-    {
-        return $this->restCheckPasswordPostAsyncWithHttpInfo()
-            ->then(
-                function ($response) {
-                    return $response[0];
-                }
-            );
-    }
-
-    /**
-     * Operation restCheckPasswordPostAsyncWithHttpInfo
-     *
-     *
-     *
-     *
-     * @return PromiseInterface
-     * @throws InvalidArgumentException
-     */
-    public function restCheckPasswordPostAsyncWithHttpInfo()
-    {
-        $returnType = '\BSApp\Service\plentymarketsAPI\Model\Mixed';
-        $request = $this->restCheckPasswordPostRequest();
-
-        return $this->client
-            ->sendAsync($request, $this->createHttpClientOption())
-            ->then(
-                function ($response) use ($returnType) {
-                    $responseBody = $response->getBody();
-                    if ($returnType === '\SplFileObject') {
-                        $content = $responseBody; //stream goes to serializer
-                    } else {
-                        $content = $responseBody->getContents();
-                        if ($returnType !== 'string') {
-                            $content = json_decode($content);
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, $returnType, []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                },
-                function ($exception) {
-                    $response = $exception->getResponse();
-                    $statusCode = $response->getStatusCode();
-                    throw new ApiException(
-                        sprintf(
-                            '[%d] Error connecting to the API (%s)',
-                            $statusCode,
-                            $exception->getRequest()->getUri()
-                        ),
-                        $statusCode,
-                        $response->getHeaders(),
-                        $response->getBody()
-                    );
-                }
-            );
     }
 
     /**
@@ -334,6 +262,95 @@ class AuthenticationApi
     }
 
     /**
+     * Create http client option
+     *
+     * @return array of http client options
+     * @throws RuntimeException on file opening failure
+     */
+    protected function createHttpClientOption()
+    {
+        $options = [];
+        if ($this->config->getDebug()) {
+            $options[RequestOptions::DEBUG] = fopen($this->config->getDebugFile(), 'a');
+            if (!$options[RequestOptions::DEBUG]) {
+                throw new RuntimeException('Failed to open the debug file: ' . $this->config->getDebugFile());
+            }
+        }
+
+        return $options;
+    }
+
+    /**
+     * Operation restCheckPasswordPostAsync
+     *
+     *
+     *
+     *
+     * @return PromiseInterface
+     * @throws InvalidArgumentException
+     */
+    public function restCheckPasswordPostAsync()
+    {
+        return $this->restCheckPasswordPostAsyncWithHttpInfo()
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation restCheckPasswordPostAsyncWithHttpInfo
+     *
+     *
+     *
+     *
+     * @return PromiseInterface
+     * @throws InvalidArgumentException
+     */
+    public function restCheckPasswordPostAsyncWithHttpInfo()
+    {
+        $returnType = 'object';
+        $request = $this->restCheckPasswordPostRequest();
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    $responseBody = $response->getBody();
+                    if ($returnType === '\SplFileObject') {
+                        $content = $responseBody; //stream goes to serializer
+                    } else {
+                        $content = $responseBody->getContents();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
      * Operation restCheckPinPost
      *
      *
@@ -351,13 +368,13 @@ class AuthenticationApi
      * Operation restCheckPinPostWithHttpInfo
      *
      *
-     * @return array of \BSApp\Service\plentymarketsAPI\Model\Mixed, HTTP status code, HTTP response headers (array of strings)
+     * @return array of object, HTTP status code, HTTP response headers (array of strings)
      * @throws InvalidArgumentException
      * @throws ApiException on non-2xx response
      */
     public function restCheckPinPostWithHttpInfo()
     {
-        $returnType = '\BSApp\Service\plentymarketsAPI\Model\Mixed';
+        $returnType = 'object';
         $request = $this->restCheckPinPostRequest();
 
         try {
@@ -409,7 +426,7 @@ class AuthenticationApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSApp\Service\plentymarketsAPI\Model\Mixed',
+                        'object',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -417,76 +434,6 @@ class AuthenticationApi
             }
             throw $e;
         }
-    }
-
-    /**
-     * Operation restCheckPinPostAsync
-     *
-     *
-     *
-     *
-     * @return PromiseInterface
-     * @throws InvalidArgumentException
-     */
-    public function restCheckPinPostAsync()
-    {
-        return $this->restCheckPinPostAsyncWithHttpInfo()
-            ->then(
-                function ($response) {
-                    return $response[0];
-                }
-            );
-    }
-
-    /**
-     * Operation restCheckPinPostAsyncWithHttpInfo
-     *
-     *
-     *
-     *
-     * @return PromiseInterface
-     * @throws InvalidArgumentException
-     */
-    public function restCheckPinPostAsyncWithHttpInfo()
-    {
-        $returnType = '\BSApp\Service\plentymarketsAPI\Model\Mixed';
-        $request = $this->restCheckPinPostRequest();
-
-        return $this->client
-            ->sendAsync($request, $this->createHttpClientOption())
-            ->then(
-                function ($response) use ($returnType) {
-                    $responseBody = $response->getBody();
-                    if ($returnType === '\SplFileObject') {
-                        $content = $responseBody; //stream goes to serializer
-                    } else {
-                        $content = $responseBody->getContents();
-                        if ($returnType !== 'string') {
-                            $content = json_decode($content);
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, $returnType, []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                },
-                function ($exception) {
-                    $response = $exception->getResponse();
-                    $statusCode = $response->getStatusCode();
-                    throw new ApiException(
-                        sprintf(
-                            '[%d] Error connecting to the API (%s)',
-                            $statusCode,
-                            $exception->getRequest()->getUri()
-                        ),
-                        $statusCode,
-                        $response->getHeaders(),
-                        $response->getBody()
-                    );
-                }
-            );
     }
 
     /**
@@ -572,13 +519,83 @@ class AuthenticationApi
     }
 
     /**
+     * Operation restCheckPinPostAsync
+     *
+     *
+     *
+     *
+     * @return PromiseInterface
+     * @throws InvalidArgumentException
+     */
+    public function restCheckPinPostAsync()
+    {
+        return $this->restCheckPinPostAsyncWithHttpInfo()
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation restCheckPinPostAsyncWithHttpInfo
+     *
+     *
+     *
+     *
+     * @return PromiseInterface
+     * @throws InvalidArgumentException
+     */
+    public function restCheckPinPostAsyncWithHttpInfo()
+    {
+        $returnType = 'object';
+        $request = $this->restCheckPinPostRequest();
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    $responseBody = $response->getBody();
+                    if ($returnType === '\SplFileObject') {
+                        $content = $responseBody; //stream goes to serializer
+                    } else {
+                        $content = $responseBody->getContents();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
      * Operation restLoginPost
      *
      * Login
      *
      * @param object $body body (optional)
      *
-     * @return IlluminateHttpResponse
+     * @return TokenData
      * @throws InvalidArgumentException
      * @throws ApiException on non-2xx response
      */
@@ -595,13 +612,13 @@ class AuthenticationApi
      *
      * @param object $body (optional)
      *
-     * @return array of \BSApp\Service\plentymarketsAPI\Model\IlluminateHttpResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of object, HTTP status code, HTTP response headers (array of strings)
      * @throws InvalidArgumentException
      * @throws ApiException on non-2xx response
      */
     public function restLoginPostWithHttpInfo($body = null)
     {
-        $returnType = PlentyModulesAuthenticationModelsTokenData::class;
+        $returnType = TokenData::class;
         $request = $this->restLoginPostRequest($body);
 
         try {
@@ -653,7 +670,7 @@ class AuthenticationApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSApp\Service\plentymarketsAPI\Model\IlluminateHttpResponse',
+                        'object',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -661,78 +678,6 @@ class AuthenticationApi
             }
             throw $e;
         }
-    }
-
-    /**
-     * Operation restLoginPostAsync
-     *
-     * Login
-     *
-     * @param object $body (optional)
-     *
-     * @return PromiseInterface
-     * @throws InvalidArgumentException
-     */
-    public function restLoginPostAsync($body = null)
-    {
-        return $this->restLoginPostAsyncWithHttpInfo($body)
-            ->then(
-                function ($response) {
-                    return $response[0];
-                }
-            );
-    }
-
-    /**
-     * Operation restLoginPostAsyncWithHttpInfo
-     *
-     * Login
-     *
-     * @param object $body (optional)
-     *
-     * @return PromiseInterface
-     * @throws InvalidArgumentException
-     */
-    public function restLoginPostAsyncWithHttpInfo($body = null)
-    {
-        $returnType = '\BSApp\Service\plentymarketsAPI\Model\IlluminateHttpResponse';
-        $request = $this->restLoginPostRequest($body);
-
-        return $this->client
-            ->sendAsync($request, $this->createHttpClientOption())
-            ->then(
-                function ($response) use ($returnType) {
-                    $responseBody = $response->getBody();
-                    if ($returnType === '\SplFileObject') {
-                        $content = $responseBody; //stream goes to serializer
-                    } else {
-                        $content = $responseBody->getContents();
-                        if ($returnType !== 'string') {
-                            $content = json_decode($content);
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, $returnType, []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                },
-                function ($exception) {
-                    $response = $exception->getResponse();
-                    $statusCode = $response->getStatusCode();
-                    throw new ApiException(
-                        sprintf(
-                            '[%d] Error connecting to the API (%s)',
-                            $statusCode,
-                            $exception->getRequest()->getUri()
-                        ),
-                        $statusCode,
-                        $response->getHeaders(),
-                        $response->getBody()
-                    );
-                }
-            );
     }
 
     /**
@@ -822,12 +767,84 @@ class AuthenticationApi
     }
 
     /**
+     * Operation restLoginPostAsync
+     *
+     * Login
+     *
+     * @param object $body (optional)
+     *
+     * @return PromiseInterface
+     * @throws InvalidArgumentException
+     */
+    public function restLoginPostAsync($body = null)
+    {
+        return $this->restLoginPostAsyncWithHttpInfo($body)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation restLoginPostAsyncWithHttpInfo
+     *
+     * Login
+     *
+     * @param object $body (optional)
+     *
+     * @return PromiseInterface
+     * @throws InvalidArgumentException
+     */
+    public function restLoginPostAsyncWithHttpInfo($body = null)
+    {
+        $returnType = 'object';
+        $request = $this->restLoginPostRequest($body);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    $responseBody = $response->getBody();
+                    if ($returnType === '\SplFileObject') {
+                        $content = $responseBody; //stream goes to serializer
+                    } else {
+                        $content = $responseBody->getContents();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
      * Operation restLoginRefreshPost
      *
      * Refresh
      *
      *
-     * @return PlentyModulesAuthenticationModelsTokenData
+     * @return TokenData
      * @throws InvalidArgumentException
      * @throws ApiException on non-2xx response
      */
@@ -843,13 +860,13 @@ class AuthenticationApi
      * Refresh
      *
      *
-     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesAuthenticationModelsTokenData, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\TokenData, HTTP status code, HTTP response headers (array of strings)
      * @throws InvalidArgumentException
      * @throws ApiException on non-2xx response
      */
     public function restLoginRefreshPostWithHttpInfo()
     {
-        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAuthenticationModelsTokenData';
+        $returnType = TokenData::class;
         $request = $this->restLoginRefreshPostRequest();
 
         try {
@@ -901,7 +918,7 @@ class AuthenticationApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAuthenticationModelsTokenData',
+                        TokenData::class,
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -909,76 +926,6 @@ class AuthenticationApi
             }
             throw $e;
         }
-    }
-
-    /**
-     * Operation restLoginRefreshPostAsync
-     *
-     * Refresh
-     *
-     *
-     * @return PromiseInterface
-     * @throws InvalidArgumentException
-     */
-    public function restLoginRefreshPostAsync()
-    {
-        return $this->restLoginRefreshPostAsyncWithHttpInfo()
-            ->then(
-                function ($response) {
-                    return $response[0];
-                }
-            );
-    }
-
-    /**
-     * Operation restLoginRefreshPostAsyncWithHttpInfo
-     *
-     * Refresh
-     *
-     *
-     * @return PromiseInterface
-     * @throws InvalidArgumentException
-     */
-    public function restLoginRefreshPostAsyncWithHttpInfo()
-    {
-        $returnType = '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesAuthenticationModelsTokenData';
-        $request = $this->restLoginRefreshPostRequest();
-
-        return $this->client
-            ->sendAsync($request, $this->createHttpClientOption())
-            ->then(
-                function ($response) use ($returnType) {
-                    $responseBody = $response->getBody();
-                    if ($returnType === '\SplFileObject') {
-                        $content = $responseBody; //stream goes to serializer
-                    } else {
-                        $content = $responseBody->getContents();
-                        if ($returnType !== 'string') {
-                            $content = json_decode($content);
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, $returnType, []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                },
-                function ($exception) {
-                    $response = $exception->getResponse();
-                    $statusCode = $response->getStatusCode();
-                    throw new ApiException(
-                        sprintf(
-                            '[%d] Error connecting to the API (%s)',
-                            $statusCode,
-                            $exception->getRequest()->getUri()
-                        ),
-                        $statusCode,
-                        $response->getHeaders(),
-                        $response->getBody()
-                    );
-                }
-            );
     }
 
     /**
@@ -1064,6 +1011,76 @@ class AuthenticationApi
     }
 
     /**
+     * Operation restLoginRefreshPostAsync
+     *
+     * Refresh
+     *
+     *
+     * @return PromiseInterface
+     * @throws InvalidArgumentException
+     */
+    public function restLoginRefreshPostAsync()
+    {
+        return $this->restLoginRefreshPostAsyncWithHttpInfo()
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation restLoginRefreshPostAsyncWithHttpInfo
+     *
+     * Refresh
+     *
+     *
+     * @return PromiseInterface
+     * @throws InvalidArgumentException
+     */
+    public function restLoginRefreshPostAsyncWithHttpInfo()
+    {
+        $returnType = TokenData::class;
+        $request = $this->restLoginRefreshPostRequest();
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    $responseBody = $response->getBody();
+                    if ($returnType === '\SplFileObject') {
+                        $content = $responseBody; //stream goes to serializer
+                    } else {
+                        $content = $responseBody->getContents();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
      * Operation restLogoutPost
      *
      * Logout
@@ -1128,62 +1145,6 @@ class AuthenticationApi
             }
             throw $e;
         }
-    }
-
-    /**
-     * Operation restLogoutPostAsync
-     *
-     * Logout
-     *
-     *
-     * @return PromiseInterface
-     * @throws InvalidArgumentException
-     */
-    public function restLogoutPostAsync()
-    {
-        return $this->restLogoutPostAsyncWithHttpInfo()
-            ->then(
-                function ($response) {
-                    return $response[0];
-                }
-            );
-    }
-
-    /**
-     * Operation restLogoutPostAsyncWithHttpInfo
-     *
-     * Logout
-     *
-     *
-     * @return PromiseInterface
-     * @throws InvalidArgumentException
-     */
-    public function restLogoutPostAsyncWithHttpInfo()
-    {
-        $returnType = '';
-        $request = $this->restLogoutPostRequest();
-
-        return $this->client
-            ->sendAsync($request, $this->createHttpClientOption())
-            ->then(
-                function ($response) use ($returnType) {
-                    return [null, $response->getStatusCode(), $response->getHeaders()];
-                },
-                function ($exception) {
-                    $response = $exception->getResponse();
-                    $statusCode = $response->getStatusCode();
-                    throw new ApiException(
-                        sprintf(
-                            '[%d] Error connecting to the API (%s)',
-                            $statusCode,
-                            $exception->getRequest()->getUri()
-                        ),
-                        $statusCode,
-                        $response->getHeaders(),
-                        $response->getBody()
-                    );
-                }
-            );
     }
 
     /**
@@ -1273,10 +1234,66 @@ class AuthenticationApi
     }
 
     /**
+     * Operation restLogoutPostAsync
+     *
+     * Logout
+     *
+     *
+     * @return PromiseInterface
+     * @throws InvalidArgumentException
+     */
+    public function restLogoutPostAsync()
+    {
+        return $this->restLogoutPostAsyncWithHttpInfo()
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation restLogoutPostAsyncWithHttpInfo
+     *
+     * Logout
+     *
+     *
+     * @return PromiseInterface
+     * @throws InvalidArgumentException
+     */
+    public function restLogoutPostAsyncWithHttpInfo()
+    {
+        $returnType = '';
+        $request = $this->restLogoutPostRequest();
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    return [null, $response->getStatusCode(), $response->getHeaders()];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
      * Operation restQuickLoginPost
      *
      *
-     * @return IlluminateHttpResponse
+     * @return object
      * @throws InvalidArgumentException
      * @throws ApiException on non-2xx response
      */
@@ -1290,13 +1307,13 @@ class AuthenticationApi
      * Operation restQuickLoginPostWithHttpInfo
      *
      *
-     * @return array of \BSApp\Service\plentymarketsAPI\Model\IlluminateHttpResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of object, HTTP status code, HTTP response headers (array of strings)
      * @throws InvalidArgumentException
      * @throws ApiException on non-2xx response
      */
     public function restQuickLoginPostWithHttpInfo()
     {
-        $returnType = '\BSApp\Service\plentymarketsAPI\Model\IlluminateHttpResponse';
+        $returnType = 'object';
         $request = $this->restQuickLoginPostRequest();
 
         try {
@@ -1348,7 +1365,7 @@ class AuthenticationApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSApp\Service\plentymarketsAPI\Model\IlluminateHttpResponse',
+                        'object',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1356,76 +1373,6 @@ class AuthenticationApi
             }
             throw $e;
         }
-    }
-
-    /**
-     * Operation restQuickLoginPostAsync
-     *
-     *
-     *
-     *
-     * @return PromiseInterface
-     * @throws InvalidArgumentException
-     */
-    public function restQuickLoginPostAsync()
-    {
-        return $this->restQuickLoginPostAsyncWithHttpInfo()
-            ->then(
-                function ($response) {
-                    return $response[0];
-                }
-            );
-    }
-
-    /**
-     * Operation restQuickLoginPostAsyncWithHttpInfo
-     *
-     *
-     *
-     *
-     * @return PromiseInterface
-     * @throws InvalidArgumentException
-     */
-    public function restQuickLoginPostAsyncWithHttpInfo()
-    {
-        $returnType = '\BSApp\Service\plentymarketsAPI\Model\IlluminateHttpResponse';
-        $request = $this->restQuickLoginPostRequest();
-
-        return $this->client
-            ->sendAsync($request, $this->createHttpClientOption())
-            ->then(
-                function ($response) use ($returnType) {
-                    $responseBody = $response->getBody();
-                    if ($returnType === '\SplFileObject') {
-                        $content = $responseBody; //stream goes to serializer
-                    } else {
-                        $content = $responseBody->getContents();
-                        if ($returnType !== 'string') {
-                            $content = json_decode($content);
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, $returnType, []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                },
-                function ($exception) {
-                    $response = $exception->getResponse();
-                    $statusCode = $response->getStatusCode();
-                    throw new ApiException(
-                        sprintf(
-                            '[%d] Error connecting to the API (%s)',
-                            $statusCode,
-                            $exception->getRequest()->getUri()
-                        ),
-                        $statusCode,
-                        $response->getHeaders(),
-                        $response->getBody()
-                    );
-                }
-            );
     }
 
     /**
@@ -1511,10 +1458,80 @@ class AuthenticationApi
     }
 
     /**
+     * Operation restQuickLoginPostAsync
+     *
+     *
+     *
+     *
+     * @return PromiseInterface
+     * @throws InvalidArgumentException
+     */
+    public function restQuickLoginPostAsync()
+    {
+        return $this->restQuickLoginPostAsyncWithHttpInfo()
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation restQuickLoginPostAsyncWithHttpInfo
+     *
+     *
+     *
+     *
+     * @return PromiseInterface
+     * @throws InvalidArgumentException
+     */
+    public function restQuickLoginPostAsyncWithHttpInfo()
+    {
+        $returnType = 'object';
+        $request = $this->restQuickLoginPostRequest();
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    $responseBody = $response->getBody();
+                    if ($returnType === '\SplFileObject') {
+                        $content = $responseBody; //stream goes to serializer
+                    } else {
+                        $content = $responseBody->getContents();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
      * Operation restSessionLimitsGet
      *
      *
-     * @return IlluminateHttpResponse
+     * @return object
      * @throws InvalidArgumentException
      * @throws ApiException on non-2xx response
      */
@@ -1528,13 +1545,13 @@ class AuthenticationApi
      * Operation restSessionLimitsGetWithHttpInfo
      *
      *
-     * @return array of \BSApp\Service\plentymarketsAPI\Model\IlluminateHttpResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of object, HTTP status code, HTTP response headers (array of strings)
      * @throws InvalidArgumentException
      * @throws ApiException on non-2xx response
      */
     public function restSessionLimitsGetWithHttpInfo()
     {
-        $returnType = '\BSApp\Service\plentymarketsAPI\Model\IlluminateHttpResponse';
+        $returnType = 'object';
         $request = $this->restSessionLimitsGetRequest();
 
         try {
@@ -1586,7 +1603,7 @@ class AuthenticationApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSApp\Service\plentymarketsAPI\Model\IlluminateHttpResponse',
+                        'object',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1594,76 +1611,6 @@ class AuthenticationApi
             }
             throw $e;
         }
-    }
-
-    /**
-     * Operation restSessionLimitsGetAsync
-     *
-     *
-     *
-     *
-     * @return PromiseInterface
-     * @throws InvalidArgumentException
-     */
-    public function restSessionLimitsGetAsync()
-    {
-        return $this->restSessionLimitsGetAsyncWithHttpInfo()
-            ->then(
-                function ($response) {
-                    return $response[0];
-                }
-            );
-    }
-
-    /**
-     * Operation restSessionLimitsGetAsyncWithHttpInfo
-     *
-     *
-     *
-     *
-     * @return PromiseInterface
-     * @throws InvalidArgumentException
-     */
-    public function restSessionLimitsGetAsyncWithHttpInfo()
-    {
-        $returnType = '\BSApp\Service\plentymarketsAPI\Model\IlluminateHttpResponse';
-        $request = $this->restSessionLimitsGetRequest();
-
-        return $this->client
-            ->sendAsync($request, $this->createHttpClientOption())
-            ->then(
-                function ($response) use ($returnType) {
-                    $responseBody = $response->getBody();
-                    if ($returnType === '\SplFileObject') {
-                        $content = $responseBody; //stream goes to serializer
-                    } else {
-                        $content = $responseBody->getContents();
-                        if ($returnType !== 'string') {
-                            $content = json_decode($content);
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, $returnType, []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                },
-                function ($exception) {
-                    $response = $exception->getResponse();
-                    $statusCode = $response->getStatusCode();
-                    throw new ApiException(
-                        sprintf(
-                            '[%d] Error connecting to the API (%s)',
-                            $statusCode,
-                            $exception->getRequest()->getUri()
-                        ),
-                        $statusCode,
-                        $response->getHeaders(),
-                        $response->getBody()
-                    );
-                }
-            );
     }
 
     /**
@@ -1753,6 +1700,76 @@ class AuthenticationApi
     }
 
     /**
+     * Operation restSessionLimitsGetAsync
+     *
+     *
+     *
+     *
+     * @return PromiseInterface
+     * @throws InvalidArgumentException
+     */
+    public function restSessionLimitsGetAsync()
+    {
+        return $this->restSessionLimitsGetAsyncWithHttpInfo()
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation restSessionLimitsGetAsyncWithHttpInfo
+     *
+     *
+     *
+     *
+     * @return PromiseInterface
+     * @throws InvalidArgumentException
+     */
+    public function restSessionLimitsGetAsyncWithHttpInfo()
+    {
+        $returnType = 'object';
+        $request = $this->restSessionLimitsGetRequest();
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    $responseBody = $response->getBody();
+                    if ($returnType === '\SplFileObject') {
+                        $content = $responseBody; //stream goes to serializer
+                    } else {
+                        $content = $responseBody->getContents();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
      * Operation restUserGet
      *
      *
@@ -1813,62 +1830,6 @@ class AuthenticationApi
             }
             throw $e;
         }
-    }
-
-    /**
-     * Operation restUserGetAsync
-     *
-     *
-     *
-     *
-     * @return PromiseInterface
-     * @throws InvalidArgumentException
-     */
-    public function restUserGetAsync()
-    {
-        return $this->restUserGetAsyncWithHttpInfo()
-            ->then(
-                function ($response) {
-                    return $response[0];
-                }
-            );
-    }
-
-    /**
-     * Operation restUserGetAsyncWithHttpInfo
-     *
-     *
-     *
-     *
-     * @return PromiseInterface
-     * @throws InvalidArgumentException
-     */
-    public function restUserGetAsyncWithHttpInfo()
-    {
-        $returnType = '';
-        $request = $this->restUserGetRequest();
-
-        return $this->client
-            ->sendAsync($request, $this->createHttpClientOption())
-            ->then(
-                function ($response) use ($returnType) {
-                    return [null, $response->getStatusCode(), $response->getHeaders()];
-                },
-                function ($exception) {
-                    $response = $exception->getResponse();
-                    $statusCode = $response->getStatusCode();
-                    throw new ApiException(
-                        sprintf(
-                            '[%d] Error connecting to the API (%s)',
-                            $statusCode,
-                            $exception->getRequest()->getUri()
-                        ),
-                        $statusCode,
-                        $response->getHeaders(),
-                        $response->getBody()
-                    );
-                }
-            );
     }
 
     /**
@@ -1958,21 +1919,58 @@ class AuthenticationApi
     }
 
     /**
-     * Create http client option
+     * Operation restUserGetAsync
      *
-     * @return array of http client options
-     * @throws RuntimeException on file opening failure
+     *
+     *
+     *
+     * @return PromiseInterface
+     * @throws InvalidArgumentException
      */
-    protected function createHttpClientOption()
+    public function restUserGetAsync()
     {
-        $options = [];
-        if ($this->config->getDebug()) {
-            $options[RequestOptions::DEBUG] = fopen($this->config->getDebugFile(), 'a');
-            if (!$options[RequestOptions::DEBUG]) {
-                throw new RuntimeException('Failed to open the debug file: ' . $this->config->getDebugFile());
-            }
-        }
+        return $this->restUserGetAsyncWithHttpInfo()
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
 
-        return $options;
+    /**
+     * Operation restUserGetAsyncWithHttpInfo
+     *
+     *
+     *
+     *
+     * @return PromiseInterface
+     * @throws InvalidArgumentException
+     */
+    public function restUserGetAsyncWithHttpInfo()
+    {
+        $returnType = '';
+        $request = $this->restUserGetRequest();
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    return [null, $response->getStatusCode(), $response->getHeaders()];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        $response->getBody()
+                    );
+                }
+            );
     }
 }
