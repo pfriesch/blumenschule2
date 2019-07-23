@@ -10,5 +10,5 @@ class ContactWish
      * @var string
      */
     public $text;
-    
+
 }

@@ -10,23 +10,23 @@ class ItemImageName
      * @var integer
      */
     public $imageId;
-    
+
     /**
      *  The language of the image name
      * @var string
      */
     public $lang;
-    
+
     /**
      *  The name of the image in the specified language
      * @var string
      */
     public $name;
-    
+
     /**
      *  The alternative name of the image in the specified language
      * @var string
      */
     public $alternate;
-    
+
 }

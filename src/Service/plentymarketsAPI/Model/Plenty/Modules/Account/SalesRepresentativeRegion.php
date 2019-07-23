@@ -10,23 +10,23 @@ class SalesRepresentativeRegion
      * @var integer
      */
     public $id;
-    
+
     /**
      *  The ID of the foreign key account contact relation
      * @var integer
      */
     public $accountContactRelationId;
-    
+
     /**
-     *  
+     *
      * @var string
      */
     public $postalCodeArea;
-    
+
     /**
-     *  
+     *
      * @var integer
      */
     public $countryId;
-    
+
 }

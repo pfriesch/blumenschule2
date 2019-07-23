@@ -9,6 +9,6 @@ class RackPaginated extends PaginatedResponse
 {
     /**
      * @var Rack[]
-    */
+     */
     public $entries;
 }

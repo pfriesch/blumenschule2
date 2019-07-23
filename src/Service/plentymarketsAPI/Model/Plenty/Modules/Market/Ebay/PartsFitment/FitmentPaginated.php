@@ -9,6 +9,6 @@ class FitmentPaginated extends PaginatedResponse
 {
     /**
      * @var Fitment[]
-    */
+     */
     public $entries;
 }

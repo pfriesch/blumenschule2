@@ -10,16 +10,16 @@ class ContactOption
      * @var integer
      */
     public $id;
-    
+
     /**
      *  The ID of the contact the option belongs to
      * @var integer
      */
     public $contactId;
-    
+
     /**
      *  The type ID of the contact option. It is possible to define individual contact option types. The following types are available by default and cannot be deleted:
-     * 
+     *
      * 1 = Telephone
      * 2 = Email
      * 3 = Telefax
@@ -31,14 +31,14 @@ class ContactOption
      * 9 = Group
      * 10 = Access
      * 11 = Additional
-     * 
+     *
      * @var integer
      */
     public $typeId;
-    
+
     /**
      *  The sub-type ID of the contact option. It is possible to define individual contact option sub-types. The following types are available by default and cannot be deleted:
-     * 
+     *
      * 1 = Work
      * 2 = Mobile private
      * 3 = Mobile work
@@ -52,33 +52,33 @@ class ContactOption
      * 11 = Guest
      * 12 = Contact person
      * 13 = Marketplace partner
-     * 
+     *
      * @var integer
      */
     public $subTypeId;
-    
+
     /**
      *  The value of the option. Depends on the type/sub-type.
      * @var string
      */
     public $value;
-    
+
     /**
      *  The priority for sorting
      * @var integer
      */
     public $priority;
-    
+
     /**
      *  The time the option was created as unix timestamp
      * @var string
      */
     public $createdAt;
-    
+
     /**
      *  The time the option was last updated as unix timestamp
      * @var string
      */
     public $updatedAt;
-    
+
 }

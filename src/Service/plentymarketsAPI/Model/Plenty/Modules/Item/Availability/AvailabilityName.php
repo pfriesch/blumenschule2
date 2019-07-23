@@ -10,17 +10,17 @@ class AvailabilityName
      * @var integer
      */
     public $availabilityId;
-    
+
     /**
      *  The <a href="https://developers.plentymarkets.com/rest-doc/introduction#languages" target="_blank">language code</a> of the availability name
      * @var string
      */
     public $lang;
-    
+
     /**
      *  The name of the item availability in the specified language
      * @var string
      */
     public $name;
-    
+
 }

@@ -10,23 +10,23 @@ class SalesPriceReferrer
      * @var integer
      */
     public $salesPriceId;
-    
+
     /**
      *  The unique ID of the referrer
      * @var float
      */
     public $referrerId;
-    
+
     /**
      *  The time the referrer was activated.
      * @var string
      */
     public $createdAt;
-    
+
     /**
      *  The time the relationship between referrer and sales price was last updated.
      * @var string
      */
     public $updatedAt;
-    
+
 }

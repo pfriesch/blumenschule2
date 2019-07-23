@@ -9,6 +9,6 @@ class SalesPricePaginated extends PaginatedResponse
 {
     /**
      * @var SalesPrice[]
-    */
+     */
     public $entries;
 }

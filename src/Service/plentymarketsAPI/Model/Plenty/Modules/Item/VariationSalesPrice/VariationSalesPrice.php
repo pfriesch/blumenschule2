@@ -10,17 +10,17 @@ class VariationSalesPrice
      * @var integer
      */
     public $variationId;
-    
+
     /**
      *  The unique ID of the sales price
      * @var integer
      */
     public $salesPriceId;
-    
+
     /**
      *  The price of the variation saved for this sales price
      * @var float
      */
     public $price;
-    
+
 }

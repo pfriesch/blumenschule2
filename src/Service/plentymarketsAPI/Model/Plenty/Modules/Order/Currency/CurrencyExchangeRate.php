@@ -10,5 +10,5 @@ class CurrencyExchangeRate
      * @var float
      */
     public $exchangeRate;
-    
+
 }

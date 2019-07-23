@@ -9,6 +9,6 @@ class ExportPaginated extends PaginatedResponse
 {
     /**
      * @var Export[]
-    */
+     */
     public $entries;
 }

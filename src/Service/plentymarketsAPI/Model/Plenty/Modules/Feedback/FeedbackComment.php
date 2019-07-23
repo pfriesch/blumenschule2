@@ -10,17 +10,17 @@ class FeedbackComment
      * @var integer
      */
     public $id;
-    
+
     /**
      *  The message of the comment
      * @var string
      */
     public $message;
-    
+
     /**
      *  If true, the comment is visible
      * @var boolean
      */
     public $isVisible;
-    
+
 }

@@ -10,16 +10,16 @@ class PaymentProperty
      * @var integer
      */
     public $id;
-    
+
     /**
      *  The ID of the payment
      * @var integer
      */
     public $paymentId;
-    
+
     /**
      *  The ID of the property type. The following property types are available:
-     * 
+     *
      *     Transaction ID = 1
      *     Reference ID = 2
      *     Booking text = 3
@@ -54,15 +54,15 @@ class PaymentProperty
      *     The receiver's BIC = 32
      *     Transaction fee = 33
      *     Transaction lifespan = 34
-     * 
+     *
      * @var integer
      */
     public $typeId;
-    
+
     /**
      *  The value of the property type
      * @var string
      */
     public $value;
-    
+
 }

@@ -9,6 +9,6 @@ class WarehouseLocationPaginated extends PaginatedResponse
 {
     /**
      * @var WarehouseLocation[]
-    */
+     */
     public $entries;
 }

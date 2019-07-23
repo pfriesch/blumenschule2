@@ -9,6 +9,6 @@ class ListingMarketHistoryPaginated extends PaginatedResponse
 {
     /**
      * @var ListingMarketHistory[]
-    */
+     */
     public $entries;
 }

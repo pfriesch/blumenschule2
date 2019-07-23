@@ -9,6 +9,6 @@ class RevenueAccountLocationConfigurationPaginated extends PaginatedResponse
 {
     /**
      * @var RevenueAccountLocationConfiguration[]
-    */
+     */
     public $entries;
 }

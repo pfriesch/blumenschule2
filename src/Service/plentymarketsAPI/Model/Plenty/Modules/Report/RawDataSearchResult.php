@@ -12,11 +12,11 @@ class RawDataSearchResult
      * @var string
      */
     public $after;
-    
+
     /**
      *  The raw data search result (List)
      * @var RawData[]
      */
     public $searchResult;
-    
+
 }

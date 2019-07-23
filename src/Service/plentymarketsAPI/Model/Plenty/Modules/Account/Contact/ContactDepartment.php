@@ -7,7 +7,7 @@ class ContactDepartment
 {
     /**
      *  The ID of the contact department. It is possible to define individual departments. The following departments are available by default.
-     * 
+     *
      * 1 = Management
      * 2 = Purchasing Department
      * 3 = Sales Department
@@ -29,15 +29,15 @@ class ContactDepartment
      * 19 = Financial Department
      * 20 = Legal Department
      * 21 = Secretary's Office
-     * 
+     *
      * @var integer
      */
     public $id;
-    
+
     /**
      *  The position for sorting
      * @var integer
      */
     public $position;
-    
+
 }

@@ -9,6 +9,6 @@ class StatusHistoryEntryPaginated extends PaginatedResponse
 {
     /**
      * @var StatusHistoryEntry[]
-    */
+     */
     public $entries;
 }

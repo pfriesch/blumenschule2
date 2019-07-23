@@ -10,23 +10,23 @@ class SalesPriceOnlineStore
      * @var integer
      */
     public $salesPriceId;
-    
+
     /**
      *  The unique ID of the client (store)
      * @var integer
      */
     public $plentyId;
-    
+
     /**
      *  The time the client (store) was activated.
      * @var string
      */
     public $createdAt;
-    
+
     /**
      *  The time the relationship between the client (store) and the sales price was last updated.
      * @var string
      */
     public $updatedAt;
-    
+
 }

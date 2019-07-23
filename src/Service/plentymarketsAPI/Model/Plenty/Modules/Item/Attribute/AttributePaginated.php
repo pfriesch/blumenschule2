@@ -9,6 +9,6 @@ class AttributePaginated extends PaginatedResponse
 {
     /**
      * @var Attribute[]
-    */
+     */
     public $entries;
 }

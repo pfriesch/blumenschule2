@@ -10,10 +10,10 @@ class OrderDateTypeName
      * @var integer
      */
     public $id;
-    
+
     /**
      *  The ID of the date type that this name belongs to. The following date types are available:
-     * 
+     *
      * Deleted on = 1
      * Created on = 2
      * Paid date = 3
@@ -26,21 +26,21 @@ class OrderDateTypeName
      * End date = 10
      * Possible delivery date = 11
      * Market transfer date = 12
-     * 
+     *
      * @var integer
      */
     public $typeId;
-    
+
     /**
      *  The ISO 639-1 language code for the name, e.g. "en" for English
      * @var string
      */
     public $lang;
-    
+
     /**
      *  The name of the order date type
      * @var string
      */
     public $name;
-    
+
 }

@@ -10,23 +10,23 @@ class ListingMarketDirectory
      * @var integer
      */
     public $id;
-    
+
     /**
      *  The name of the listing market directory.
      * @var string
      */
     public $name;
-    
+
     /**
      *  The parent ID of the listing market directory.
      * @var integer
      */
     public $parentId;
-    
+
     /**
      *  The level of the directory.
      * @var integer
      */
     public $level;
-    
+
 }

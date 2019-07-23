@@ -10,12 +10,12 @@ class Order
      * @var integer
      */
     public $id;
-    
+
     /**
      *  The ID of the order type
      *                                                               It is possible to define individual order types. However,
      *                                                               the following types are available by default:
-     * 
+     *
      *     Sales order = 1
      *     Delivery = 2
      *     Returns = 3
@@ -31,80 +31,80 @@ class Order
      *     Partial delivery = 13
      *     Subscription = 14
      *     Redistribution = 15
-     * 
+     *
      * @var integer
      */
     public $typeId;
-    
+
     /**
      *  The ID of the order status
      * @var float
      */
     public $statusId;
-    
+
     /**
      *  The name for the status ID (read only)
      * @var string
      */
     public $statusName;
-    
+
     /**
      *  The user ID of the order's owner
      * @var integer
      */
     public $ownerId;
-    
+
     /**
      *  The referrer ID of the order
      * @var float
      */
     public $referrerId;
-    
+
     /**
      *  The date that the order was created
      * @var string
      */
     public $createdAt;
-    
+
     /**
      *  The date that the order was updated last
      * @var string
      */
     public $updatedAt;
-    
+
     /**
      *  The plenty ID of the client that the order belongs to
      * @var integer
      */
     public $plentyId;
-    
+
     /**
      *  The ID of the location that the order belongs to
      * @var integer
      */
     public $locationId;
-    
+
     /**
      *  True means only the order's total amounts are rounded, false the order item price is rounded too. (read-only)
      * @var boolean
      */
     public $roundTotalsOnly;
-    
+
     /**
      *  The number of decimals this order was rounded with. (read-only)
      * @var integer
      */
     public $numberOfDecimals;
-    
+
     /**
      *  The lock status of the order. The following statuses are available:
-     * 
+     *
      *  unlocked
      *  permanentlyLocked
      *  reversibleLocked
-     * 
+     *
      * @var string
      */
     public $lockStatus;
-    
+
 }

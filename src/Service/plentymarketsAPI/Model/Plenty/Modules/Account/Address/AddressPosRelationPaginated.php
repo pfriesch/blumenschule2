@@ -9,6 +9,6 @@ class AddressPosRelationPaginated extends PaginatedResponse
 {
     /**
      * @var AddressPosRelation[]
-    */
+     */
     public $entries;
 }

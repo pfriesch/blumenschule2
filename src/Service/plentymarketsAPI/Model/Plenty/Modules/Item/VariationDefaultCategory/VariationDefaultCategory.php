@@ -10,23 +10,23 @@ class VariationDefaultCategory
      * @var integer
      */
     public $variationId;
-    
+
     /**
      *  The unique ID of the category branch
      * @var integer
      */
     public $branchId;
-    
+
     /**
      *  The unique plenty ID of the client (store)
      * @var integer
      */
     public $plentyId;
-    
+
     /**
-     *  
+     *
      * @var string
      */
     public $manually;
-    
+
 }

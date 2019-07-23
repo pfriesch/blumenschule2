@@ -9,6 +9,6 @@ class ShelfPaginated extends PaginatedResponse
 {
     /**
      * @var Shelf[]
-    */
+     */
     public $entries;
 }

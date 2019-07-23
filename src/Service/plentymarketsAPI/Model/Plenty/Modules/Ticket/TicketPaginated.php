@@ -9,6 +9,6 @@ class TicketPaginated extends PaginatedResponse
 {
     /**
      * @var Ticket[]
-    */
+     */
     public $entries;
 }

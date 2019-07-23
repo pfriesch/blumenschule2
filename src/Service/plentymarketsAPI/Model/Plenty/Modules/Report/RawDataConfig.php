@@ -10,17 +10,17 @@ class RawDataConfig
      * @var string
      */
     public $dataName;
-    
+
     /**
      *  If active, raw data is generated daily
      * @var integer
      */
     public $active;
-    
+
     /**
-     *  
+     *
      * @var integer
      */
     public $deleteRawDataAfterDays;
-    
+
 }

@@ -10,23 +10,23 @@ class Fitment
      * @var integer
      */
     public $id;
-    
+
     /**
      *  The id of the market the fitment belongs to.
      * @var integer
      */
     public $marketId;
-    
+
     /**
      *  The name of the fitment.
      * @var string
      */
     public $name;
-    
+
     /**
      *  The id of the category the fitment belongs to.
      * @var integer
      */
     public $categoryId;
-    
+
 }

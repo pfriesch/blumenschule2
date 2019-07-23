@@ -10,23 +10,23 @@ class PropertyAvailability
      * @var integer
      */
     public $id;
-    
+
     /**
      *  The ID of the property
      * @var integer
      */
     public $propertyId;
-    
+
     /**
      *  The type of the property availability
      * @var string
      */
     public $type;
-    
+
     /**
      *  The value of the property availability
      * @var float
      */
     public $value;
-    
+
 }

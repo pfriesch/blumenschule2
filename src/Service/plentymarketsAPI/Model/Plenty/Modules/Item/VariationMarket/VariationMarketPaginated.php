@@ -9,6 +9,6 @@ class VariationMarketPaginated extends PaginatedResponse
 {
     /**
      * @var VariationMarket[]
-    */
+     */
     public $entries;
 }

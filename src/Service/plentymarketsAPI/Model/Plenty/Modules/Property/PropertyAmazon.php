@@ -10,29 +10,29 @@ class PropertyAmazon
      * @var integer
      */
     public $id;
-    
+
     /**
      *  The ID of the property
      * @var integer
      */
     public $propertyId;
-    
+
     /**
      *  The platform of the property amazon
      * @var string
      */
     public $platform;
-    
+
     /**
      *  The category of the property amazon
      * @var string
      */
     public $category;
-    
+
     /**
      *  The field of the property amazon
      * @var string
      */
     public $field;
-    
+
 }

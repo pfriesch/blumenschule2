@@ -10,5 +10,5 @@ class CategoryClient
      * @var integer
      */
     public $plentyId;
-    
+
 }

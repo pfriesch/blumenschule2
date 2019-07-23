@@ -9,6 +9,6 @@ class StorageLocationPaginated extends PaginatedResponse
 {
     /**
      * @var StorageLocation[]
-    */
+     */
     public $entries;
 }

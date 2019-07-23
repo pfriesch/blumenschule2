@@ -9,6 +9,6 @@ class BarcodePaginated extends PaginatedResponse
 {
     /**
      * @var Barcode[]
-    */
+     */
     public $entries;
 }

@@ -9,6 +9,6 @@ class PluginPaginated extends PaginatedResponse
 {
     /**
      * @var Plugin[]
-    */
+     */
     public $entries;
 }

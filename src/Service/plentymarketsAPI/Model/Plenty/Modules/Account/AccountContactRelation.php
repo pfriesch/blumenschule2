@@ -10,17 +10,17 @@ class AccountContactRelation
      * @var integer
      */
     public $id;
-    
+
     /**
      *  The ID of the foreign key account
      * @var integer
      */
     public $accountId;
-    
+
     /**
      *  The ID of the foreign key contact
      * @var integer
      */
     public $contactId;
-    
+
 }

@@ -10,16 +10,16 @@ class OrderDate
      * @var integer
      */
     public $id;
-    
+
     /**
      *  The ID of the order that the date belongs to
      * @var integer
      */
     public $orderId;
-    
+
     /**
      *  The ID of the date type. The following types are available:
-     * 
+     *
      * Deleted on = 1
      * Created on = 2
      * Paid date = 3
@@ -37,21 +37,21 @@ class OrderDate
      * Subscription next run = 15
      * Purchase date = 16
      * Finish date = 17
-     * 
+     *
      * @var integer
      */
     public $typeId;
-    
+
     /**
      *  The date when the date was created
      * @var string
      */
     public $createdAt;
-    
+
     /**
      *  The date when the date was last updated
      * @var string
      */
     public $updatedAt;
-    
+
 }

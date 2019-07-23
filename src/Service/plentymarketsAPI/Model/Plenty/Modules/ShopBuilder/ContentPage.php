@@ -10,11 +10,11 @@ class ContentPage
      * @var string
      */
     public $identifier;
-    
+
     /**
      *  Translation key to read the caption from
      * @var string
      */
     public $caption;
-    
+
 }

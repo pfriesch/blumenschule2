@@ -10,5 +10,5 @@ class PostingKeyConfiguration
      * @var integer
      */
     public $locationId;
-    
+
 }

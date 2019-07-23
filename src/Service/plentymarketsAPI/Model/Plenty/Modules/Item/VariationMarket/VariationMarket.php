@@ -10,17 +10,17 @@ class VariationMarket
      * @var integer
      */
     public $variationId;
-    
+
     /**
      *  The unique ID of the market
      * @var integer
      */
     public $marketId;
-    
+
     /**
      *  The time the link between the variation and the market was created.
      * @var string
      */
     public $createdAt;
-    
+
 }

@@ -10,23 +10,23 @@ class AttributeValueImage
      * @var integer
      */
     public $imageId;
-    
+
     /**
      *  The unique ID of the item
      * @var integer
      */
     public $itemId;
-    
+
     /**
      *  The unique ID of the attribute
      * @var integer
      */
     public $attributeId;
-    
+
     /**
      *  The unique ID of the attribute value
      * @var integer
      */
     public $valueId;
-    
+
 }

@@ -9,6 +9,6 @@ class ShippingProfilePaginated extends PaginatedResponse
 {
     /**
      * @var ShippingProfile[]
-    */
+     */
     public $entries;
 }

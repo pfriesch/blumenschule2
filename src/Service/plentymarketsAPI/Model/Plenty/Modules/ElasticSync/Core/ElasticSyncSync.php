@@ -10,29 +10,29 @@ class ElasticSyncSync
      * @var integer
      */
     public $id;
-    
+
     /**
      *  The name of the elastic sync sync
      * @var string
      */
     public $name;
-    
+
     /**
      *  The type of the elastic sync sync
      * @var string
      */
     public $syncType;
-    
+
     /**
      *  The source type of the elastic sync sync
      * @var string
      */
     public $sourceType;
-    
+
     /**
      *  The source data type of the elastic sync sync
      * @var string
      */
     public $sourceDataType;
-    
+
 }

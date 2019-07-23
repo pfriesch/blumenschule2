@@ -7,7 +7,7 @@ class ContactPosition
 {
     /**
      *  The ID of the contact position. It is possible to define individual contact positions. The following positions are available by default:
-     * 
+     *
      * 1 = Analyst
      * 2 = Director of Boards
      * 3 = CEO
@@ -33,15 +33,15 @@ class ContactPosition
      * 23 = Secretary
      * 24 = Economist
      * 25 = Management Board
-     * 
+     *
      * @var integer
      */
     public $id;
-    
+
     /**
      *  The position for sorting
      * @var integer
      */
     public $position;
-    
+
 }

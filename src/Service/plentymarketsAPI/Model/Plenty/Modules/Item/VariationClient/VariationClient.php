@@ -10,17 +10,17 @@ class VariationClient
      * @var integer
      */
     public $variationId;
-    
+
     /**
      *  The unique ID of the client (store)
      * @var integer
      */
     public $plentyId;
-    
+
     /**
      *  The time at which the client (store) was linked to the variation.
      * @var string
      */
     public $createdAt;
-    
+
 }

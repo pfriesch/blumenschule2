@@ -10,17 +10,17 @@ class ItemShippingProfiles
      * @var integer
      */
     public $id;
-    
+
     /**
      *  The unique ID of the item
      * @var integer
      */
     public $itemId;
-    
+
     /**
      *  The unique ID of the shipping profile
      * @var integer
      */
     public $profileId;
-    
+
 }

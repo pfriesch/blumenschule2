@@ -10,23 +10,23 @@ class OrderPropertyTypeName
      * @var integer
      */
     public $id;
-    
+
     /**
      *  The ID of the property type
      * @var integer
      */
     public $typeId;
-    
+
     /**
      *  The name of property type
      * @var string
      */
     public $name;
-    
+
     /**
      *  The language of the type name
      * @var string
      */
     public $lang;
-    
+
 }

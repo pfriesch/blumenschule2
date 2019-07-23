@@ -10,17 +10,17 @@ class PropertySelection
      * @var integer
      */
     public $id;
-    
+
     /**
      *  The ID of the property
      * @var integer
      */
     public $propertyId;
-    
+
     /**
      *  The position of the property selection
      * @var integer
      */
     public $position;
-    
+
 }

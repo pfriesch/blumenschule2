@@ -10,11 +10,11 @@ class RevenueAccountCountryConfiguration
      * @var integer
      */
     public $countryId;
-    
+
     /**
      *  The ID configuration of the revenue account that these accounts are for.
      * @var integer
      */
     public $revenueAccountLocationId;
-    
+
 }

@@ -10,11 +10,11 @@ class PropertyGroup
      * @var integer
      */
     public $id;
-    
+
     /**
      *  The position of the property group
      * @var integer
      */
     public $position;
-    
+
 }

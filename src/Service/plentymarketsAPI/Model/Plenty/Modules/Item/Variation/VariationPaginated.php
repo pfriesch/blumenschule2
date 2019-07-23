@@ -9,6 +9,6 @@ class VariationPaginated extends PaginatedResponse
 {
     /**
      * @var Variation[]
-    */
+     */
     public $entries;
 }

@@ -10,17 +10,17 @@ class VariationPropertyValueText
      * @var integer
      */
     public $valueId;
-    
+
     /**
      *  The <a href="https://developers.plentymarkets.com/rest-doc/introduction#languages" target="_blank">language</a> of the property value text
      * @var string
      */
     public $lang;
-    
+
     /**
      *  The text saved for the property of the type Text
      * @var string
      */
     public $value;
-    
+
 }

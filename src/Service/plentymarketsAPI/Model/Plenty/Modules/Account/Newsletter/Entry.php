@@ -10,17 +10,17 @@ class Entry
      * @var string
      */
     public $subject;
-    
+
     /**
      *  The body of the newsletter entry
      * @var string
      */
     public $body;
-    
+
     /**
      *  The type of the newsletter entry
      * @var string
      */
     public $kind;
-    
+
 }

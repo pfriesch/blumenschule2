@@ -9,6 +9,6 @@ class ListingTypePaginated extends PaginatedResponse
 {
     /**
      * @var ListingType[]
-    */
+     */
     public $entries;
 }

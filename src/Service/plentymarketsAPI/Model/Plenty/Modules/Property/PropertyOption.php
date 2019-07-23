@@ -10,17 +10,17 @@ class PropertyOption
      * @var integer
      */
     public $id;
-    
+
     /**
      *  The ID of the property
      * @var integer
      */
     public $propertyId;
-    
+
     /**
      *  The identifier of the type option
      * @var string
      */
     public $typeOptionIdentifier;
-    
+
 }

@@ -9,6 +9,6 @@ class VatPaginated extends PaginatedResponse
 {
     /**
      * @var Vat[]
-    */
+     */
     public $entries;
 }

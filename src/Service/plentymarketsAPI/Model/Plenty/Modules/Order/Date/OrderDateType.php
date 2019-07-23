@@ -7,7 +7,7 @@ class OrderDateType
 {
     /**
      *  The ID of the order date type. The following date types are available:
-     * 
+     *
      * Deleted on = 1
      * Created on = 2
      * Paid date = 3
@@ -23,21 +23,21 @@ class OrderDateType
      * Subscription cancelled on = 13
      * Subscription last run = 14
      * Subscription next run = 15
-     * 
+     *
      * @var integer
      */
     public $id;
-    
+
     /**
      *  Flag that indicates if this type can be deleted or not.
      * @var boolean
      */
     public $isErasable;
-    
+
     /**
      *  The position for sorting
      * @var integer
      */
     public $position;
-    
+
 }

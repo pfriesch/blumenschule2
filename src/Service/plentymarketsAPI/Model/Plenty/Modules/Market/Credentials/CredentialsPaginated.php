@@ -9,6 +9,6 @@ class CredentialsPaginated extends PaginatedResponse
 {
     /**
      * @var Credentials[]
-    */
+     */
     public $entries;
 }

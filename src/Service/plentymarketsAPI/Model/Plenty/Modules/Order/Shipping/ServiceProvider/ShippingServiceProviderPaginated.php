@@ -9,6 +9,6 @@ class ShippingServiceProviderPaginated extends PaginatedResponse
 {
     /**
      * @var ShippingServiceProvider[]
-    */
+     */
     public $entries;
 }

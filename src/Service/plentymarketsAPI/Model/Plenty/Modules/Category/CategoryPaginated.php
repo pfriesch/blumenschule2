@@ -9,6 +9,6 @@ class CategoryPaginated extends PaginatedResponse
 {
     /**
      * @var Category[]
-    */
+     */
     public $entries;
 }

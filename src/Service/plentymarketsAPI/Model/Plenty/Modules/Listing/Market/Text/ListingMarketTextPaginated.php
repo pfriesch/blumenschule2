@@ -9,6 +9,6 @@ class ListingMarketTextPaginated extends PaginatedResponse
 {
     /**
      * @var ListingMarketText[]
-    */
+     */
     public $entries;
 }

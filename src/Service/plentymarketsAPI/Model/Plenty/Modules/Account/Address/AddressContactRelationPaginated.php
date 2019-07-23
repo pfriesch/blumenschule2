@@ -9,6 +9,6 @@ class AddressContactRelationPaginated extends PaginatedResponse
 {
     /**
      * @var AddressContactRelation[]
-    */
+     */
     public $entries;
 }

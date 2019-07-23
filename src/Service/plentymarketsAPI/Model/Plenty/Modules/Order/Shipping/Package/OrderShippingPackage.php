@@ -10,52 +10,52 @@ class OrderShippingPackage
      * @var integer
      */
     public $id;
-    
+
     /**
      *  The ID of the order
      * @var integer
      */
     public $orderId;
-    
+
     /**
      *  The ID of the package
      * @var integer
      */
     public $packageId;
-    
+
     /**
      *  The weight of the package in grams
      * @var integer
      */
     public $weight;
-    
+
     /**
      *  The package number
      * @var string
      */
     public $packageNumber;
-    
+
     /**
      *  The path to the label
      * @var string
      */
     public $labelPath;
-    
+
     /**
      *  The base64 encoded label
      * @var string
      */
     public $labelBase64;
-    
+
     /**
      *  The base64 encoded export label
      * @var string
      */
     public $exportLabelBase64;
-    
+
     /**
      *  The type of the package. The following types are valid:
-     * 
+     *
      * 0: unpacked
      * 1: Bale
      * 2: Dispenser
@@ -95,27 +95,27 @@ class OrderShippingPackage
      * 37: Bin
      * 38: One-way pallet
      * 39: Foil bag
-     * 
+     *
      * @var integer
      */
     public $packageType;
-    
+
     /**
      *  The volume of the package
      * @var float
      */
     public $volume;
-    
+
     /**
      *  The id of the pallet of which the package belong to
      * @var integer
      */
     public $palletId;
-    
+
     /**
      *  Flag to say if the package is editable or not
      * @var boolean
      */
     public $isClosed;
-    
+
 }

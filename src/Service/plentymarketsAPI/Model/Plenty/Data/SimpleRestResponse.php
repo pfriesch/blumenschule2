@@ -10,17 +10,17 @@ class SimpleRestResponse
      * @var string
      */
     public $contentType;
-    
+
     /**
      *  response content length
      * @var integer
      */
     public $contentLength;
-    
+
     /**
      *  response content
      * @var string
      */
     public $content;
-    
+
 }

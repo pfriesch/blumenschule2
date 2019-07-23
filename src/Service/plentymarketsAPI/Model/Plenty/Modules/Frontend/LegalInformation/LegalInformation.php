@@ -10,36 +10,36 @@ class LegalInformation
      * @var integer
      */
     public $plentyId;
-    
+
     /**
      *  The language of the legal information text
      * @var string
      */
     public $lang;
-    
+
     /**
      *  The type of the legal information text. The types available are:
-     * 
+     *
      * TermsConditions
      * CancellationRights
      * PrivacyPolicy
      * LegalDisclosure
      * WithdrawalForm
-     * 
+     *
      * @var string
      */
     public $type;
-    
+
     /**
      *  The text value of the legal information text
      * @var string
      */
     public $plainText;
-    
+
     /**
      *  The html value of the legal information text
      * @var string
      */
     public $htmlText;
-    
+
 }

@@ -9,6 +9,6 @@ class ContactPaginated extends PaginatedResponse
 {
     /**
      * @var Contact[]
-    */
+     */
     public $entries;
 }

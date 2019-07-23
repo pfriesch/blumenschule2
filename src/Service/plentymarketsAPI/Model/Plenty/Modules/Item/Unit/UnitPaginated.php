@@ -9,6 +9,6 @@ class UnitPaginated extends PaginatedResponse
 {
     /**
      * @var Unit[]
-    */
+     */
     public $entries;
 }

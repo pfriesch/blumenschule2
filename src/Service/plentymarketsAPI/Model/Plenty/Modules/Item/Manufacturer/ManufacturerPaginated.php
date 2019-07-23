@@ -9,6 +9,6 @@ class ManufacturerPaginated extends PaginatedResponse
 {
     /**
      * @var Manufacturer[]
-    */
+     */
     public $entries;
 }

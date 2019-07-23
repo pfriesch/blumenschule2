@@ -10,17 +10,17 @@ class StockDependenceType
      * @var integer
      */
     public $id;
-    
+
     /**
      *  Flag that indicates if the type can be deleted.
      * @var integer
      */
     public $isErasable;
-    
+
     /**
      *  The position for sorting.
      * @var integer
      */
     public $position;
-    
+
 }

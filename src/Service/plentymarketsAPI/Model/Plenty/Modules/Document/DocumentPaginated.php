@@ -9,6 +9,6 @@ class DocumentPaginated extends PaginatedResponse
 {
     /**
      * @var Document[]
-    */
+     */
     public $entries;
 }

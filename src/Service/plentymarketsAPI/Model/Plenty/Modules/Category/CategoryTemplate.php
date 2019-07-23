@@ -10,23 +10,23 @@ class CategoryTemplate
      * @var integer
      */
     public $categoryId;
-    
+
     /**
      *  The unique plenty ID of the client (store)
      * @var integer
      */
     public $plentyId;
-    
+
     /**
      *  The language of the template
      * @var string
      */
     public $lang;
-    
+
     /**
      *  The content of the template
      * @var string
      */
     public $content;
-    
+
 }

@@ -10,23 +10,23 @@ class PaymentOrderRelation
      * @var integer
      */
     public $id;
-    
+
     /**
      *  The ID of the payment
      * @var integer
      */
     public $paymentId;
-    
+
     /**
      *  The ID of the order
      * @var integer
      */
     public $orderId;
-    
+
     /**
      *  The time the payment order relation was assigned
      * @var string
      */
     public $assignedAt;
-    
+
 }

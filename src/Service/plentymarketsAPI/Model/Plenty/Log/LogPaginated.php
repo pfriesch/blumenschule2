@@ -9,6 +9,6 @@ class LogPaginated extends PaginatedResponse
 {
     /**
      * @var Log[]
-    */
+     */
     public $entries;
 }

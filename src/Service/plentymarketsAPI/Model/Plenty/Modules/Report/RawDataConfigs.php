@@ -12,11 +12,11 @@ class RawDataConfigs
      * @var string
      */
     public $plentyIdHash;
-    
+
     /**
      *  List of all saved configurations (List)
      * @var RawDataConfig[]
      */
     public $configs;
-    
+
 }

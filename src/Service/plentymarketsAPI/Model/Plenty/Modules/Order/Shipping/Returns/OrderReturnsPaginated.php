@@ -9,6 +9,6 @@ class OrderReturnsPaginated extends PaginatedResponse
 {
     /**
      * @var OrderReturns[]
-    */
+     */
     public $entries;
 }

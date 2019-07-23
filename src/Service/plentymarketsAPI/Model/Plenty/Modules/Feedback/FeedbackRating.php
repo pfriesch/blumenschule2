@@ -10,17 +10,17 @@ class FeedbackRating
      * @var integer
      */
     public $id;
-    
+
     /**
      *  The value of the rating
      * @var string
      */
     public $ratingValue;
-    
+
     /**
      *  If true, the rating is visible
      * @var boolean
      */
     public $isVisible;
-    
+
 }

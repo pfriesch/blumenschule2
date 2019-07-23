@@ -7,7 +7,7 @@ class AddressOptionType
 {
     /**
      *  The ID of the address option type. It is possible to define individual types. The following types are available by default:
-     * 
+     *
      * 1 = VAT number
      * 2 = External address ID
      * 3 = Entry certificate
@@ -20,21 +20,21 @@ class AddressOptionType
      * 10 = Session ID
      * 11 = Title
      * 12 = Contact person
-     * 
+     *
      * @var integer
      */
     public $id;
-    
+
     /**
      *  The position for sorting
      * @var integer
      */
     public $position;
-    
+
     /**
      *  Flag that indicates if the type can be deleted
      * @var integer
      */
     public $nonErasable;
-    
+
 }

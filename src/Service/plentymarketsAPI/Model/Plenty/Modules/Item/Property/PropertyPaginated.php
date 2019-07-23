@@ -9,6 +9,6 @@ class PropertyPaginated extends PaginatedResponse
 {
     /**
      * @var Property[]
-    */
+     */
     public $entries;
 }

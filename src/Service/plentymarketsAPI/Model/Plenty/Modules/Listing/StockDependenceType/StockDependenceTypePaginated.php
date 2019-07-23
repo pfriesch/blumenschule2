@@ -9,6 +9,6 @@ class StockDependenceTypePaginated extends PaginatedResponse
 {
     /**
      * @var StockDependenceType[]
-    */
+     */
     public $entries;
 }

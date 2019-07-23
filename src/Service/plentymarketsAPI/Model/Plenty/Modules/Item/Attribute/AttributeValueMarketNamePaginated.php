@@ -9,6 +9,6 @@ class AttributeValueMarketNamePaginated extends PaginatedResponse
 {
     /**
      * @var AttributeValueMarketName[]
-    */
+     */
     public $entries;
 }
