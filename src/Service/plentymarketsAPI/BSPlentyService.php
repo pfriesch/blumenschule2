@@ -68,7 +68,7 @@ class BSPlentyService
 
 
         $status_from = $state;
-        $status_from = 0; // TODO remove
+//        $status_from = 0; // TODO remove
         $status_to = $state;
 //        $with = [ 'contactSender', 'contactReceiver', 'orderItems.variation', 'orderItems.transactions', 'orderItems.serialNumbers',
 //            'orderItems.variationBarcodes', 'orderItems.comments' . 'originOrderReferences'];
@@ -82,5 +82,14 @@ class BSPlentyService
         }
 
         return $result;
+    }
+
+    public function doSetOrderStatus($rOrder, $state)
+    {
+        throw new Exception("");
+    }
+
+    public function doGetOrdersInvoiceDocumentURLs($orderID)
+    {
     }
 }

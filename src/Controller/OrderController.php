@@ -3,9 +3,11 @@
 namespace BSApp\Controller;
 
 use BSApp\Entity\OrdersItem;
+use BSApp\Service\orderPDF\OrderPDFService;
 use BSApp\Service\plentymarketsAPI\BSPlentyService;
 use Swift_Attachment;
 use Swift_Message;
+use Exception;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 
@@ -524,7 +526,7 @@ class OrderController extends AbstractController
     }
 
 
-    public function stateAction($state, BSPlentyService $plentyMarketsAPI)
+    public function stateAction($state, Request $request, BSPlentyService $plentyMarketsAPI)
     {
 //        /** @var PlentyMarketsAPI $plentyMarketsAPI */
 //        $plentyMarketsAPI = $this->container->get('app.plenty_markets_api');
@@ -541,22 +543,17 @@ class OrderController extends AbstractController
 
 
 //        TODO paginate with rest api maybe?
-//        TODO First Name and Last Name are missing, worth to add calls to get the full name?
         return $this->render('orders/orders.html.twig', array(
-            'orders' => $orders->entries, 'state' => $state, 'pick' => $qb->getQuery()->getResult()));
+            'orders' => $orders->entries, 'addressUseId' => $_SERVER['addressUseId'], 'state' => $state, 'pick' => $qb->getQuery()->getResult()));
     }
 
 
-    public function openAction($state)
+    public function openAction($state, BSPlentyService $plentyMarketsAPI)
     {
-        /** @var PlentyMarketsAPI $plentyMarketsAPI */
-        $plentyMarketsAPI = $this->container->get('app.plenty_markets_api');
-
         $orders = $plentyMarketsAPI->doGetOrdersWithState($state);
-        // $time = $oPlentyMarketsAPI->doGetServerTime();
 
-        return $this->render('BSOrderBundle:Order:orders.html.twig', array(
-            'orders' => $orders, 'state' => $state));
+        return $this->render('orders/orders.html.twig', array(
+            'orders' => $orders->entries, 'addressUseId' => $_SERVER['addressUseId'], 'state' => $state));
     }
 
 
@@ -567,16 +564,13 @@ class OrderController extends AbstractController
     }
 
 
-    public function setStateAction(Request $request, $state)
+    public function setStateAction(Request $request, $state, BSPlentyService $plentyMarketsAPI)
     {
         $oRequest = array();
 
         foreach ($request->request->all() as $Order) {
             $oRequest[] = strval($Order);
         }
-
-        /** @var PlentyMarketsAPI $plentyMarketsAPI */
-        $plentyMarketsAPI = $this->container->get('app.plenty_markets_api');
 
         foreach ($oRequest as $rOrder) {
             $plentyMarketsAPI->doSetOrderStatus($rOrder, $state);
@@ -586,17 +580,20 @@ class OrderController extends AbstractController
 
     }
 
-    public function printAction(Request $request)
+    public function printAction(Request $request, OrderPDFService $pdfService)
     {
+        $printTempDir = $_SERVER['DOCUMENT_ROOT'] . "print/";
+
+        $PickListName = $request->query->get('picklist');
 
 
-        if ($request->getMethod() == 'POST') {
+        if (!file_exists($printTempDir . "print/" . $PickListName . ".pdf")) {
 
 
             $em = $this->getDoctrine()->getManager();
             $qb = $em->createQueryBuilder();
             $qb->add('select', $qb->expr()->max('o.Picklist'))
-                ->add('from', 'BSApp:Orders o');
+                ->add('from', 'BSApp\Entity\Orders o');
 
             $PickListName = $qb->getQuery()->getSingleScalarResult();
             if ($PickListName == 0 or $PickListName == null) $PickListName = date("Ym") * 1000 + 1;
@@ -613,7 +610,7 @@ class OrderController extends AbstractController
             }
 
 
-            $pdf = new OrderPDF($PickListName);
+            $pdf = $pdfService->pdfBuilderFromPickListName($PickListName);
 
 
             $cellHight = 6;
@@ -797,31 +794,33 @@ class OrderController extends AbstractController
             }
 
 
-            $pdf->Output("print/" . $PickListName . ".pdf", 'F');
+            if (!file_exists($printTempDir) && !is_dir($printTempDir)) {
+                mkdir($printTempDir);
+            }
+
+            $pdf->Output($printTempDir . $PickListName . ".pdf", 'F');
 
 
-            $message = Swift_Message::newInstance();
-            $message
-                ->setSubject('Sammelpack ' . $PickListName)
-                ->setFrom('support@blumenschule.de')
-                ->setTo('florian.engler@gmx.de')
-                ->setBody(
-                    $this->renderView(
-                        'BSOrderBundle:Order:email.html.twig',
-                        array()
-                    )
-                )->attach(Swift_Attachment::fromPath("print/" . $PickListName . ".pdf"));
+//            $message = new Swift_Message();
+//            $message
+//                ->setSubject('Sammelpack ' . $PickListName)
+//                ->setFrom('support@blumenschule.de')
+//                ->setTo('florian.engler@gmx.de')
+//                ->setBody(
+//                    $this->renderView(
+//                        'order    s/email.html.twig',
+//                        array()
+//                    )
+//                )->attach(Swift_Attachment::fromPath("print/" . $PickListName . ".pdf"));
             //  $this->get('mailer')->send($message);
 
 
-            return $this->render('BSOrderBundle:Order:print.html.twig', array(
+            return $this->render('orders/print.html.twig', array(
                 'urlPDF' => "/print/" . $PickListName . ".pdf",
                 "orders" => $oRequest
             ));
         } else {
-            $PickListName = $this->get('request')->query->get('picklist');
-
-            return $this->render('BSOrderBundle:Order:print.html.twig', array(
+            return $this->render('orders/print.html.twig', array(
                 'urlPDF' => "/print/" . $PickListName . ".pdf",
                 "orders" => array()
             ));
@@ -829,7 +828,6 @@ class OrderController extends AbstractController
         }
 
     }
-
 
     public function getItem($OrderItem)
     {
@@ -873,11 +871,8 @@ class OrderController extends AbstractController
     }
 
 
-    public function getInvoiceAction($orderID)
+    public function getInvoiceAction($orderID, BSPlentyService $plentyMarketsAPI)
     {
-        /** @var PlentyMarketsAPI $plentyMarketsAPI */
-        $plentyMarketsAPI = $this->container->get('app.plenty_markets_api');
-
 
         $response = $plentyMarketsAPI->doGetOrdersInvoiceDocumentURLs($orderID);
 

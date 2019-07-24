@@ -156,5 +156,44 @@ class Order
      */
     public $relations;
 
+    public function getLastname()
+    {
+        return $this->addresses[$_SERVER['addressUseId']]->name3;
+    }
+
+    public function getCompany()
+    {
+        return $this->addresses[$_SERVER['addressUseId']]->companyName;
+
+    }
+
+    public function getFirstname()
+    {
+        return $this->addresses[$_SERVER['addressUseId']]->name2;
+    }
+
+    public function getZIP()
+    {
+        return $this->addresses[$_SERVER['addressUseId']]->postalCode;
+    }
+
+    public function getCity()
+    {
+        return $this->addresses[$_SERVER['addressUseId']]->town;
+
+    }
+
+    public function getTelephone()
+    {
+        return $this->addresses[$_SERVER['addressUseId']]->phone;
+
+    }
+
+    public function getOrderID()
+    {
+        return $this->id;
+
+    }
+
 
 }

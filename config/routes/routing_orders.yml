@@ -25,7 +25,7 @@ BSOrder_state:
   path:  /state/{state}
   controller: BSApp\Controller\OrderController:stateAction
   defaults:
-    state: 5.5
+    state: 5
 
 BSOrder_sync:
   path:  /sync/{state}

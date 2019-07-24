@@ -82,7 +82,7 @@
                     </td>
                     <td class="Order_Name">
 {#                        TODO which address to use? 0 or 1 #}
-                        {{order.addresses[0].name2}} {{order.addresses[0].name3}}
+                        {{order.addresses[addressUseId].name2}} {{order.addresses[addressUseId].name3}}
                     </td>
                     <td>
                         {{order.amounts[0].invoiceTotal| number_format(2, ',', '.') }} &euro;
@@ -159,7 +159,7 @@
             {% for picklist in pick %}
                 <tr>
                     <td>
-                        <a href="print?picklist={{picklist.Picklist}}"> {{picklist.Picklist}}</a>
+                        <a href="/orders/print?picklist={{picklist.Picklist}}"> {{picklist.Picklist}}</a>
                     </td>
                 </tr>
             {% endfor %}
