@@ -7,7 +7,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * BSApp\Entity\checkoutItem
  *
- * @ORM\Table()
+ * @ORM\Table(name="checkoutItem")
  * @ORM\Entity(repositoryClass="BSApp\Entity\checkout\checkoutItemRepository")
  */
 class checkoutItem

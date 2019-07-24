@@ -2,11 +2,17 @@
 
 namespace BSApp\Controller;
 
+use BSApp\Entity\checkout\cashbox;
 use BSApp\Entity\checkout\checkout;
 use BSApp\Entity\checkout\checkoutItem;
+use BSApp\Entity\checkout\quickbutton;
 use DateTime;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\Form\Extension\Core\Type\CountryType;
+use Symfony\Component\Form\Extension\Core\Type\EmailType;
+use Symfony\Component\Form\Extension\Core\Type\HiddenType;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 
 /**
@@ -15,15 +21,15 @@ use Symfony\Component\HttpFoundation\Response;
  */
 class CheckoutController extends AbstractController
 {
-    public function indexAction($cashbox_id = 1)
+    public function indexAction($cashbox_id = 1, Request $request)
     {
         $em = $this->getDoctrine()->getManager();
 
-        $currentBaskets = $em->getRepository('checkout\checkout::class')->getCurrentBaskets($cashbox_id);
-        $cashbox = $em->getRepository('checkout\cashbox::class')->find($cashbox_id);
-        $quickbuttons = $em->getRepository('checkout\quickbutton::class')->getQuickbuttons($cashbox_id);
+        $currentBaskets = $em->getRepository(checkout::class)->getCurrentBaskets($cashbox_id);
+        $cashbox = $em->getRepository(checkout::class)->find($cashbox_id);
+        $quickbuttons = $em->getRepository(quickbutton::class)->getQuickbuttons($cashbox_id);
 
-        $checkout = $this->getRequest()->query->get('checkout');
+        $checkout = $request->query->get('checkout');
         $basket = null;
         if ($checkout) {
 
@@ -51,17 +57,17 @@ class CheckoutController extends AbstractController
     private function buildOrderForm()
     {
         return $this->createFormBuilder()
-            ->add('customerno', 'hidden', array('required' => false))
-            ->add('lastname', 'text', array('label' => 'Nachname'))
-            ->add('firstname', 'text', array('label' => 'Vorname', 'required' => false))
-            ->add('company', 'text', array('label' => 'Firma', 'required' => false))
-            ->add('street', 'text', array('label' => 'Strasse', 'required' => false))
-            ->add('HouseNo', 'text', array('label' => 'Hausnummer', 'required' => false))
-            ->add('city', 'text', array('label' => 'Stadt', 'required' => false))
-            ->add('zip', 'text', array('label' => 'PLZ', 'required' => false))
-            ->add('country', 'country', array('label' => 'Land',
+            ->add('customerno', HiddenType::class, array('required' => false))
+            ->add('lastname', TextType::class, array('label' => 'Nachname'))
+            ->add('firstname', TextType::class, array('label' => 'Vorname', 'required' => false))
+            ->add('company', TextType::class, array('label' => 'Firma', 'required' => false))
+            ->add('street', TextType::class, array('label' => 'Strasse', 'required' => false))
+            ->add('HouseNo', TextType::class, array('label' => 'Hausnummer', 'required' => false))
+            ->add('city', TextType::class, array('label' => 'Stadt', 'required' => false))
+            ->add('zip', TextType::class, array('label' => 'PLZ', 'required' => false))
+            ->add('country', CountryType::class, array('label' => 'Land',
                 'preferred_choices' => array('DE', 'AT', 'CH'),))
-            ->add('email', 'email', array('label' => 'Email', 'required' => false))
+            ->add('email', EmailType::class, array('label' => 'Email', 'required' => false))
             ->getForm();
 
 
@@ -113,9 +119,9 @@ class CheckoutController extends AbstractController
 
 
         if (is_float($price) && $price > 0) {
-            $em->getRepository('BSCheckoutBundle:checkoutItem')->addItem($currentBasket, $code, $price, $quantity, $name);
+            $em->getRepository(checkoutItem::class)->addItem($currentBasket, $code, $price, $quantity, $name);
         } else {
-            $em->getRepository('BSCheckoutBundle:checkoutItem')->addItem($currentBasket, $code, 0, $quantity, $name);
+            $em->getRepository(checkoutItem::class)->addItem($currentBasket, $code, 0, $quantity, $name);
         }
 
 
@@ -310,7 +316,7 @@ class CheckoutController extends AbstractController
         $price = floatval(str_replace(',', '.', $price));
         $id = $this->getRequest()->request->get('id');
 
-        $item = $em->getRepository('BSCheckoutBundle:checkoutItem')->find($id);
+        $item = $em->getRepository(checkoutItem::class)->find($id);
         if ($item) {
             switch ($action) {
                 case 'quantity':

@@ -2,6 +2,7 @@
 
 namespace BSApp\Entity\checkout;
 
+use DateTime;
 use Doctrine\ORM\Mapping as ORM;
 use Doctrine\Common\Collections\ArrayCollection;
 
@@ -14,6 +15,10 @@ use Doctrine\Common\Collections\ArrayCollection;
 class checkout
 {
     /**
+     * @ORM\OneToMany(targetEntity="checkoutItem", mappedBy="checkout")
+     */
+    protected $checkoutItems;
+    /**
      * @var integer $id
      *
      * @ORM\Column(name="id", type="integer")
@@ -21,68 +26,54 @@ class checkout
      * @ORM\GeneratedValue(strategy="AUTO")
      */
     private $id;
-
     /**
      * @ORM\ManyToOne(targetEntity="cashbox", inversedBy="checkout")
      * @ORM\JoinColumn(name="cashbox_id", referencedColumnName="id")
      */
 
     private $cashbox;
-
     /**
-     * @var datetime $buydate
+     * @var DateTime $buydate
      *
      * @ORM\Column(name="buydate", type="datetime",nullable = true)
      */
     private $buydate;
-
     /**
      * @var boolean $finish
      *
      * @ORM\Column(name="finish", type="boolean")
      */
     private $finish;
-
     /**
      * @var boolean $closed
      *
      * @ORM\Column(name="closed", type="boolean")
      */
     private $closed;
-
     /**
      * @var string $exported
      *
      * @ORM\Column(name="exported", type="string",nullable = true)
      */
     private $exported;
-
-
     /**
      * @var string $bontext
      *
      * @ORM\Column(name="bontext", type="string", length=255,nullable = true)
      */
     private $bontext;
-
     /**
      * @var integer $payment
      *
      * @ORM\Column(name="payment", type="integer")
      */
     private $payment;
-
     /**
      * @var float $summary
      *
      * @ORM\Column(name="summary", type="float")
      */
     private $summary;
-
-    /**
-     * @ORM\OneToMany(targetEntity="checkoutItem", mappedBy="checkout")
-     */
-    protected $checkoutItems;
 
     public function __construct()
     {
@@ -99,17 +90,6 @@ class checkout
         return $this->id;
     }
 
-
-    /**
-     * Set buydate
-     *
-     * @param datetime $buydate
-     */
-    public function setBuydate($buydate)
-    {
-        $this->buydate = $buydate;
-    }
-
     /**
      * Get buydate
      *
@@ -121,13 +101,13 @@ class checkout
     }
 
     /**
-     * Set finish
+     * Set buydate
      *
-     * @param boolean $finish
+     * @param datetime $buydate
      */
-    public function setFinish($finish)
+    public function setBuydate($buydate)
     {
-        $this->finish = $finish;
+        $this->buydate = $buydate;
     }
 
     /**
@@ -141,13 +121,13 @@ class checkout
     }
 
     /**
-     * Set payment
+     * Set finish
      *
-     * @param integer $payment
+     * @param boolean $finish
      */
-    public function setPayment($payment)
+    public function setFinish($finish)
     {
-        $this->payment = $payment;
+        $this->finish = $finish;
     }
 
     /**
@@ -161,9 +141,19 @@ class checkout
     }
 
     /**
-     * Add checkout_items
+     * Set payment
      *
-     * @param BSApp\Entity\checkout_item $checkoutItems
+     * @param integer $payment
+     */
+    public function setPayment($payment)
+    {
+        $this->payment = $payment;
+    }
+
+    /**
+     * Add checkoutItems
+     *
+     * @param BSApp\Entity\checkoutItem $checkoutItems
      */
     public function addcheckout_item(checkoutItem $checkoutItems)
     {
@@ -191,16 +181,6 @@ class checkout
     }
 
     /**
-     * Set summary
-     *
-     * @param float $summary
-     */
-    public function setSummary($summary)
-    {
-        $this->summary = $summary;
-    }
-
-    /**
      * Get summary
      *
      * @return float
@@ -210,15 +190,14 @@ class checkout
         return $this->summary;
     }
 
-
     /**
-     * Set cashbox
+     * Set summary
      *
-     * @param BSApp\Entity\checkout\cashbox $cashbox
+     * @param float $summary
      */
-    public function setCashbox(cashbox $cashbox)
+    public function setSummary($summary)
     {
-        $this->cashbox = $cashbox;
+        $this->summary = $summary;
     }
 
     /**
@@ -231,15 +210,14 @@ class checkout
         return $this->cashbox;
     }
 
-
     /**
-     * Set closed
+     * Set cashbox
      *
-     * @param boolean $closed
+     * @param BSApp\Entity\checkout\cashbox $cashbox
      */
-    public function setClosed($closed)
+    public function setCashbox(cashbox $cashbox)
     {
-        $this->closed = $closed;
+        $this->cashbox = $cashbox;
     }
 
     /**
@@ -253,13 +231,13 @@ class checkout
     }
 
     /**
-     * Set bontext
+     * Set closed
      *
-     * @param string $bontext
+     * @param boolean $closed
      */
-    public function setBontext($bontext)
+    public function setClosed($closed)
     {
-        $this->bontext = $bontext;
+        $this->closed = $closed;
     }
 
     /**
@@ -273,13 +251,13 @@ class checkout
     }
 
     /**
-     * Set exported
+     * Set bontext
      *
-     * @param string $exported
+     * @param string $bontext
      */
-    public function setExported($exported)
+    public function setBontext($bontext)
     {
-        $this->exported = $exported;
+        $this->bontext = $bontext;
     }
 
     /**
@@ -290,5 +268,15 @@ class checkout
     public function getExported()
     {
         return $this->exported;
+    }
+
+    /**
+     * Set exported
+     *
+     * @param string $exported
+     */
+    public function setExported($exported)
+    {
+        $this->exported = $exported;
     }
 }

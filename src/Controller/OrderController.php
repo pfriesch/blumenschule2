@@ -623,7 +623,7 @@ class OrderController extends AbstractController
                 // $pdf->AliasNbPages();
 
                 //Bestellungsdaten aus localer Datenbank holen
-                $repository = $this->getDoctrine()->getRepository('BSApp:Orders');
+                $repository = $this->getDoctrine()->getRepository('BSApp\Entity\Orders');
                 $oOrder = $repository->findOneBy(array('OrderID' => $rOrder));
                 $oOrder->setPicklist($PickListName);
                 //$em = $this->getDoctrine()->getManager();
@@ -631,7 +631,7 @@ class OrderController extends AbstractController
                 //$em->flush();
                 $aSortPicklistHeader[] = $oOrder;
                 //Betsellinformattionen holen aus localer Datenbank
-                $repository = $this->getDoctrine()->getRepository('BSApp:OrdersInfo');
+                $repository = $this->getDoctrine()->getRepository('BSApp\Entity\OrdersInfo');
                 $aOrderInfo = $repository->findBy(array('OrderID' => $rOrder));
                 // Prüfen auf Markerungen
                 $ersatz = true;
@@ -651,13 +651,13 @@ class OrderController extends AbstractController
                 $pdf->SetFont('Arial', '', 10);
 
                 // Bestell Prositionen aus der localen datenbank holen
-                $repository = $this->getDoctrine()->getRepository('BSApp:OrdersItem');
+                $repository = $this->getDoctrine()->getRepository('BSApp\Entity\OrdersItem');
                 $aOrderItem = $repository->findBy(array('OrderID' => $rOrder));
                 $aSortOrderItems = array();
                 $aCareList = array();
 
                 $oOrderQuantity = 0;
-                $ReproBundle = $this->getDoctrine()->getRepository('BSApp:ProductBundle');
+                $ReproBundle = $this->getDoctrine()->getRepository('BSApp\Entity\ProductBundle');
 
                 //Bestellprositonen zusammen stellen und nach Lagerort Sortieren
                 foreach ($aOrderItem as $item) {
