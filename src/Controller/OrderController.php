@@ -543,7 +543,7 @@ class OrderController extends AbstractController
 //        TODO paginate with rest api maybe?
 //        TODO First Name and Last Name are missing, worth to add calls to get the full name?
         return $this->render('orders/orders.html.twig', array(
-            'orders' => $orders->getEntries(), 'state' => $state, 'pick' => $qb->getQuery()->getResult()));
+            'orders' => $orders->entries, 'state' => $state, 'pick' => $qb->getQuery()->getResult()));
     }
 
 

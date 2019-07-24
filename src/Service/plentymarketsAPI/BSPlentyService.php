@@ -70,8 +70,9 @@ class BSPlentyService
         $status_from = $state;
         $status_from = 0; // TODO remove
         $status_to = $state;
-        $with = [ 'contactSender', 'contactReceiver', 'orderItems.variation', 'orderItems.transactions', 'orderItems.serialNumbers',
-            'orderItems.variationBarcodes', 'orderItems.comments' . 'originOrderReferences'];
+//        $with = [ 'contactSender', 'contactReceiver', 'orderItems.variation', 'orderItems.transactions', 'orderItems.serialNumbers',
+//            'orderItems.variationBarcodes', 'orderItems.comments' . 'originOrderReferences'];
+        $with = ['addresses'];
 
         try {
             $result = $apiInstance->restOrdersGet($order_type, $contact_id, $referrer_id, $shipping_profile_id, $owner_user_id, $warehouse_id, $is_ebay_plus, $included_variation, $included_item, $order_ids, $country_id, $order_item_name, $variation_number, $sender_contact, $sender_warehouse, $receiver_contact, $receiver_warehouse, $external_order_id, $client_id, $payment_status, $updated_at_from, $updated_at_to, $created_at_from, $created_at_to, $paid_at_from, $paid_at_to, $outgoing_items_booked_at_from, $outgoing_items_booked_at_to, $status_from, $status_to, $has_document, $has_document_number, $page, $items_per_page, $with);

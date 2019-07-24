@@ -69,26 +69,26 @@
                 {% for order in orders %}
                 <tr>
                     <td rowspan="2">
-                        <input type="checkbox" name="ID{{order.getId}}" value="{{order.getId}}">
+{#                       TODO or use plentyid instead of real id? #}
+                        <input type="checkbox" name="ID{{order.id}}" value="{{order.id}}">
                     </td>
 
                     <td rowspan="2" class="Order_NO">
-                        {{order.getId}}
+                        {{order.id}}
                     </td>
                     <td rowspan="1">
-                        {{order.getStatusName}}
+                        {{order.statusName}}
 
                     </td>
                     <td class="Order_Name">
-                        Platzhalter Name
-{#         TODO               {{order.head.getFirstName}} {{order.head.getLastname}}#}
+{#                        TODO which address to use? 0 or 1 #}
+                        {{order.addresses[0].name2}} {{order.addresses[0].name3}}
                     </td>
                     <td>
-                        TODO Preis
-{#        TODO                {{order.head.getTotalBrutto| number_format(2, ',', '.') }} &euro;#}
+                        {{order.amounts[0].invoiceTotal| number_format(2, ',', '.') }} &euro;
                     </td>
                     <td>
-                        {{order.getUpdatedAt}}
+                        {{order.updatedAt}}
                     </td>
 
                 </tr>
@@ -104,21 +104,21 @@
 
                             <a class="order_items_view " href="javascript:none;"> Details</a>
                             <table class="order_items" style="display: none;">
-                                {% for item in order.items %}
+                                {% for item in order.orderItems %}
                                 <tr>
                                     <td>
-                                        {{item.getQuantity}}
+                                        {{item.quantity}}
                                     </td>
                                     <td>
-                                        {{item.getArticleCode}}
+                                        {{item.itemVariationId}}
                                     </td>
 
 
                                     <td>
-                                        {{item.getItemText}}
+                                        {{item.orderItemName}}
                                     </td>
                                     <td>
-                                        {{item.getPrice | number_format(2, ',', '.') }} &euro;
+                                        {{item.amounts[0].priceGross | number_format(2, ',', '.') }} &euro;
                                     </td>
                                 </tr>
 

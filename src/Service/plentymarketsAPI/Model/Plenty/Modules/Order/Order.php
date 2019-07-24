@@ -3,6 +3,8 @@
 
 namespace BSApp\Service\plentymarketsAPI\Model\Plenty\Modules\Order;
 
+use BSApp\Service\plentymarketsAPI\Model\Plenty\Modules\Account\Address\Address;
+
 class Order
 {
     /**
@@ -106,5 +108,53 @@ class Order
      * @var string
      */
     public $lockStatus;
+
+
+    /**
+     * @var \BSApp\Service\plentymarketsAPI\Model\Plenty\Modules\Account\Address\Address[]|null //TODO why do I need to give the full path here?
+     */
+    public $addresses;
+
+
+    /**
+     * @var array|null
+     */
+    public $addressRelations;
+
+    /**
+     * @var array|null
+     */
+    public $amounts;
+
+    /**
+     * @var array|null
+     */
+    public $dates;
+
+    /**
+     * @var string|null
+     */
+    public $deletedDate;
+
+    /**
+     * @var array|null
+     */
+    public $orderItems;
+
+    /**
+     * @var array|null
+     */
+    public $orderReferences;
+
+    /**
+     * @var array|null
+     */
+    public $properties;
+
+    /**
+     * @var array|null
+     */
+    public $relations;
+
 
 }
