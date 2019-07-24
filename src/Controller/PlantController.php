@@ -2,6 +2,8 @@
 
 namespace BSApp\Controller;
 
+use BSApp\Service\plentymarketsAPI\BSPlentyService;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use BSApp\Entity\Plant;
 use Symfony\Component\HttpFoundation\Response;
@@ -272,10 +274,8 @@ class PlantController extends AbstractController
      * Deletes a Plant entity.
      *
      */
-    public function deleteAction($id)
+    public function deleteAction($id, Request $request)
     {
-        //$form = $this->createDeleteForm($id);
-        $request = $this->getRequest();
 
         // $form->bind($request);
 
@@ -297,7 +297,7 @@ class PlantController extends AbstractController
     /**
      *
      */
-    public function crateProductAction($id)
+    public function crateProductAction($id, BSPlentyService $plentyMarketsAPI)
     {
         $em = $this->getDoctrine()->getManager();
 
@@ -306,8 +306,6 @@ class PlantController extends AbstractController
         if (!$entity) {
             throw $this->createNotFoundException('Unable to find Plant entity.');
         }
-        /** @var PlentyMarketsAPI $plentyMarketsAPI */
-        $plentyMarketsAPI = $this->container->get('app.plenty_markets_api');
 
         $return = $plentyMarketsAPI->doAddItemsBase($entity->getCode(), 0, $entity->getName(), $entity->getLatein(), $entity->getLabeltext());
 

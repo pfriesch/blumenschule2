@@ -6,6 +6,7 @@ use BSApp\Entity\checkout\cashbox;
 use BSApp\Entity\checkout\checkout;
 use BSApp\Entity\checkout\checkoutItem;
 use BSApp\Entity\checkout\quickbutton;
+use BSApp\Service\plentymarketsAPI\BSPlentyService;
 use DateTime;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Form\Extension\Core\Type\CountryType;
@@ -202,15 +203,12 @@ class CheckoutController extends AbstractController
 
     }
 
-    public function orderAction($cashbox_id, $checkout)
+    public function orderAction($cashbox_id, $checkout,BSPlentyService $plentyMarketsAPI)
     {
         $em = $this->getDoctrine()->getManager();
 
         //$currentBasket = $em->getRepository(checkout::class)->getCurrentBasket($cashbox_id);
         $currentBasket = $em->getRepository(checkout::class)->find($checkout);
-
-        /** @var PlentyMarketsAPI $plentyMarketsAPI */
-        $plentyMarketsAPI = $this->container->get('app.plenty_markets_api');
 
         $request = $this->getRequest();
 

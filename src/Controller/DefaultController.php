@@ -2,6 +2,7 @@
 
 namespace BSApp\Controller;
 
+use BSApp\Service\plentymarketsAPI\BSPlentyService;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 
@@ -20,11 +21,8 @@ class DefaultController extends AbstractController
     }
 
 
-    public function customerSearchAction($string)
+    public function customerSearchAction($string, BSPlentyService $plentyMarketsAPI)
     {
-        /** @var PlentyMarketsAPI $plentyMarketsAPI */
-        $plentyMarketsAPI = $this->container->get('app.plenty_markets_api');
-
 
         $customers = $plentyMarketsAPI->doGetCustomers(array('searchstring' => $string));
 

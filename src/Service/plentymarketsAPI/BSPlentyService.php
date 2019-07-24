@@ -86,10 +86,48 @@ class BSPlentyService
 
     public function doSetOrderStatus($rOrder, $state)
     {
-        throw new Exception("");
+        throw new Exception("setting order status not implemented");
     }
 
     public function doGetOrdersInvoiceDocumentURLs($orderID)
     {
+        throw new Exception("doGetOrdersInvoiceDocumentURLs not yet implemented");
+
+    }
+
+    public function doGetCustomers(array $array)
+    {
+        throw new Exception("doGetOrdersInvoiceDocumentURLs not yet implemented");
+
+    }
+
+    public function doGetItemsBaseByOptions(array $array)
+    {
+        throw new Exception("doGetOrdersInvoiceDocumentURLs not yet implemented");
+
+    }
+
+    public function doGetMethodOfPayments()
+    {
+        throw new Exception("doGetOrdersInvoiceDocumentURLs not yet implemented");
+
+    }
+
+    public function doAddCustomers($form)
+    {
+        throw new Exception("adding coustomers not implemented");
+
+    }
+
+    public function doAddOrders(\BSApp\Controller\RequestAddOrders $pm_orders)
+    {
+        throw new Exception("adding orders not implemented");
+
+    }
+
+    public function doAddItemsBase($getCode, int $int, $getName, $getLatein, $getLabeltext)
+    {
+        throw new Exception("adding items not implemented");
+
     }
 }

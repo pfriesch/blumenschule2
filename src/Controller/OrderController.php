@@ -238,10 +238,8 @@ class OrderController extends AbstractController
 
     }
 
-    public function syncAction($state, Request $request)
+    public function syncAction($state, Request $request, BSPlentyService $plentyMarketsAPI)
     {
-        /** @var PlentyMarketsAPI $plentyMarketsAPI */
-        $plentyMarketsAPI = $this->container->get('app.plenty_markets_api');
 
         $orders = $plentyMarketsAPI->doGetOrdersWithState($state);
 

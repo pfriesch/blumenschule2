@@ -2,6 +2,7 @@
 
 namespace BSApp\Controller;
 
+use BSApp\Service\plentymarketsAPI\BSPlentyService;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use BSApp\Entity\PaymentMethods;
 
@@ -49,7 +50,7 @@ class PaymentMethodsController extends AbstractController
      * Displays a form to create a new PaymentMethods entity.
      *
      */
-    public function newAction()
+    public function newAction(BSPlentyService $plentyMarketsAPI)
     {
         /*  $entity = new PaymentMethods();
           $form   = $this->createForm(new PaymentMethodsType(), $entity);
@@ -59,8 +60,6 @@ class PaymentMethodsController extends AbstractController
               'form'   => $form->createView()
           );
          */
-        /** @var PlentyMarketsAPI $plentyMarketsAPI */
-        $plentyMarketsAPI = $this->container->get('app.plenty_markets_api');
         $plentyMarketsAPI->doGetMethodOfPayments();
 
         return $this->redirect($this->generateUrl('BSData_paymentmethods'));

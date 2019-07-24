@@ -3,6 +3,7 @@
 namespace BSApp\Controller;
 
 use BSApp\Entity\Stockkeeping;
+use BSApp\Service\plentymarketsAPI\BSPlentyService;
 use Datetime;
 use Doctrine\ORM\Mapping\Entity;
 use Doctrine\ORM\Query\ResultSetMapping;
@@ -623,11 +624,9 @@ class ProductController extends AbstractController
 
     }
 
-    public function syncAction($code)
+    public function syncAction($code, BSPlentyService $plentyMarketsAPI)
     {
 
-        /** @var PlentyMarketsAPI $plentyMarketsAPI */
-        $plentyMarketsAPI = $this->container->get('app.plenty_markets_api');
         $plentyMarketsAPI->doGetItemsBaseByOptions(array('ItemNo' => $code));
 
         $em = $this->getDoctrine()->getManager();

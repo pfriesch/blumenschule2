@@ -2,8 +2,10 @@
 
 namespace BSApp\Controller;
 
+use BSApp\Form\StockType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use BSApp\Entity\Stock;
+use Symfony\Component\HttpFoundation\Request;
 
 /**
  * Stock controller.
@@ -29,7 +31,7 @@ class StockController extends AbstractController
      * Finds and displays a Stock entity.
      *
      */
-    public function showAction($id)
+    public function showAction($id, Request $request)
     {
         $em = $this->getDoctrine()->getManager();
 
@@ -48,7 +50,7 @@ class StockController extends AbstractController
         $paginator = $this->get('knp_paginator');
         $pagination = $paginator->paginate(
             $query,
-            $this->get('request')->query->get('page', 1)/*page number*/,
+            $request->query->get('page', 1)/*page number*/,
             25/*limit per page*/
         );
 
@@ -59,29 +61,43 @@ class StockController extends AbstractController
             'pagination' => $pagination);
     }
 
-    /**
-     * Displays a form to create a new Stock entity.
-     *
-     */
-    public function newAction()
+    private function createDeleteForm($id)
     {
-        $entity = new Stock();
-        $form = $this->createForm(new StockType(), $entity);
-
-        return array(
-            'entity' => $entity,
-            'form' => $form->createView()
-        );
+        return $this->createFormBuilder(array('id' => $id))
+            ->add('id', 'hidden')
+            ->getForm();
     }
+
+    private function buildStockForm()
+    {
+        return $this->createFormBuilder(new Stock())
+            ->add('number')
+            ->add('name')
+            ->add('PlentyStockID')->getForm();
+    }
+
+//    /**
+//     * Displays a form to create a new Stock entity.
+//     *
+//     */
+//    public function newAction()
+//    {
+//        $entity = new Stock();
+//        $form = $this->createForm(new StockType(), $entity);
+//
+//        return array(
+//            'entity' => $entity,
+//            'form' => $form->createView()
+//        );
+//    }
 
     /**
      * Creates a new Stock entity.
      *
      */
-    public function createAction()
+    public function createAction(Request $request)
     {
         $entity = new Stock();
-        $request = $this->getRequest();
         $form = $this->createForm(new StockType(), $entity);
         $form->bind($request);
 
@@ -128,7 +144,7 @@ class StockController extends AbstractController
      * Edits an existing Stock entity.
      *
      */
-    public function updateAction($id)
+    public function updateAction($id, Request $request)
     {
         $em = $this->getDoctrine()->getManager();
 
@@ -140,8 +156,6 @@ class StockController extends AbstractController
 
         $editForm = $this->createForm(new StockType(), $entity);
         $deleteForm = $this->createDeleteForm($id);
-
-        $request = $this->getRequest();
 
         $editForm->bind($request);
 
@@ -185,10 +199,10 @@ class StockController extends AbstractController
         return $this->redirect($this->generateUrl('BSData_stock'));
     }
 
-    private function createDeleteForm($id)
-    {
-        return $this->createFormBuilder(array('id' => $id))
-            ->add('id', 'hidden')
-            ->getForm();
-    }
+//    private function createDeleteForm($id)
+//    {
+//        return $this->createFormBuilder(array('id' => $id))
+//            ->add('id', 'hidden')
+//            ->getForm();
+//    }
 }
