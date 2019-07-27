@@ -5,6 +5,7 @@ namespace BSApp\Tests\plentymarketsAPI;
 
 
 use BSApp\Service\plentymarketsAPI\Api\OrderApi;
+use BSApp\Service\plentymarketsAPI\BSPlentyService;
 use BSApp\Service\plentymarketsAPI\Configuration;
 use GuzzleHttp\Client;
 use PHPUnit\Framework\TestCase;
@@ -14,6 +15,8 @@ class AuthenticationTest extends TestCase
 
     public function testAuthentication()
     {
+
+        $plentyService = new BSPlentyService();
 
 // Configure OAuth2 access token for authorization: oAuth2
         $config = Configuration::getDefaultConfiguration()->authenticated();

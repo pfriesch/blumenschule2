@@ -1,4 +1,4 @@
-{% extends '::baseBS.html.twig' %}
+{% extends 'baseBS.html.twig' %}
 {% block title %}INTERN - Etiketten{% endblock %}
 
 {% block stylesheets %}
@@ -7,7 +7,7 @@
 
     <style type="text/css">
         .ui-autocomplete-loading {
-            background: white url('images/ui-anim_basic_16x16.gif') right center no-repeat;
+            background: white url('/assets/images/ui-anim_basic_16x16.gif') right center no-repeat;
         }
     </style>
 {% endblock %}
@@ -16,12 +16,12 @@
 {% block javascripts %}
     {{ parent() }}
 
-    <script src="{{ asset('/js/lable2.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('/assets/js/lable2.js') }}" type="text/javascript"></script>
 {% endblock %}
 
 {% block body %}
     <div class="loading">
-        <img width="100px"   alt="Loading" src="/images/loading.gif">
+        <img width="100px"   alt="Loading" src="/assets/images/loading.gif">
     </div>
 
 
@@ -44,7 +44,7 @@
 
                 <li ><a id='lableA6'href="">DinA6</a></li>
                 <li ><a class="reset" href="#">Reset</a></li>
-                <li ><a  href="{{ path('data_stockkeepting') }}">Bestand</a></li>
+{#                <li ><a  href="{{ path('data_stockkeepting') }}">Bestand</a></li>#}
                 <li class=""><a href="{{ path('BSData_mainmenu') }}">zurück</a></li>
 
             </ul>
@@ -79,20 +79,20 @@
                 <div class="form-group">
                     <label for="name" class="col-lg-2 control-label" >Name</label>
                     <div class="col-lg-10">
-                        <input class="form-control" type="text" id="name" name="labelform[name]">
+                        <input class="form-control" type="text" id="name" name="labelform[name]" readonly>
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="name2" class="col-lg-2 control-label" >Botanisch</label>
+                    <label for="name_botanic" class="col-lg-2 control-label" >Botanisch</label>
                     <div class="col-lg-10">
-                    <input  class="form-control" type="text" id="name2" name="labelform[name2]">
+                    <input  class="form-control" type="text" id="name_botanic" name="labelform[name_botanic]" readonly>
                     </div>
                 </div>
                 <div class="form-group">
 
                     <label for="articlecode" class="col-lg-2 control-label">Code</label>
                     <div class="col-lg-10">
-                    <input class="form-control" type="text" id="articlecode" name="labelform[articlecode]">
+                    <input class="form-control" type="text" id="articlecode" name="labelform[articlecode]" readonly>
                     </div>
                 </div>
                 <div class="form-group">
@@ -116,10 +116,10 @@
                     <label for="descriptionShort" class="col-lg-2 control-label" >Etikettentext</label>
                     <div class="col-lg-10">
                     <textarea  class="form-control" style="width: 350px;height: 93px;" id="descriptionShort"
-                              name="labelform[descriptionShort]"> </textarea>
+                              name="labelform[descriptionShort]" readonly> </textarea>
                         <label for="available" > noch verfügbare zeichen</label>
 
-                        <input class="form-control" type="text" id="available" style="width:50px;">
+                        <input class="form-control" type="text" id="available" style="width:50px;" readonly>
                     </div>
                 </div>
                 <div class="form-group printLable">
@@ -134,7 +134,7 @@
 
         </div>
         <div class="col-md-2 col-md-offset-2">
-            <img src="/images/200px.jpg" class="article_pic img-thumbnail">
+            <img src="/assets/images/200px.jpg" class="article_pic img-thumbnail">
             <div class="form-group">
                 <div class="col-lg-10">
                     <label class="printLable" for="amount" > Anzahl</label>

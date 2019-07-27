@@ -25,21 +25,21 @@ class Product
     private $id;
 
     /**
-     * @var sting $article_id
+     * @var string $article_id
      *
      * @ORM\Column(name="article_id", type="integer", length=10)
      */
     private $article_id;
 
     /**
-     * @var sting $article_no
+     * @var string $article_no
      *
      * @ORM\Column(name="article_no", type="string", length=10)
      */
     private $article_no;
 
     /**
-     * @var sting $EAN
+     * @var string $EAN
      *
      * @ORM\Column(name="EAN", type="string", length=10,nullable= true )
      */

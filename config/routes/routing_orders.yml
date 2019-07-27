@@ -1,71 +1,71 @@
-BSOrder_menu:
-  path:  /
-  controller: BSApp\Controller\OrderController:indexAction
-
-
-BSOrder_search:
-  path:  /search
-  controller: BSApp\Controller\OrderController:indexAction
-
-BSOrder_getInvoice:
-  path:  /invoice/{orderID}
-  controller: BSApp\Controller\OrderController:getInvoiceAction
-
-BSOrder_packet:
-  path:  /packets
-  controller: BSApp\Controller\OrderController:indexAction
-
-BSOrder_state_open:
-  path:  /state/open
-  controller: BSApp\Controller\OrderController:stateAction
-  defaults:
-    state: 4
-
-BSOrder_state:
-  path:  /state/{state}
-  controller: BSApp\Controller\OrderController:stateAction
-  defaults:
-    state: 5
-
-BSOrder_sync:
-  path:  /sync/{state}
-  controller: BSApp\Controller\OrderController:syncAction
-  defaults:
-    state: 7
-
-BSOrder_set_state:
-  path:  /setstate/{state}
-  controller: BSApp\Controller\OrderController:setstateAction
-  defaults:
-    state: 6
-
-BSOrder_print:
-  path:  /print
-  controller: BSApp\Controller\OrderController:printAction
-
-BSOrder_export:
-  path:  /export/{date}
-  controller: BSApp\Controller\OrderController:exportAction
-  defaults:
-    date: 1
-
-BSOrder_open:
-  path:  /open
-  controller: BSApp\Controller\OrderController:openAction
-
-BSOrder_accounting:
-  path:  /accounting/{page}
-  controller: BSApp\Controller\OrderController:accountingAction
-  defaults:
-    page: 1
-
-BSOrder_exported:
-  path:  /exported/{date}/{page}
-  controller: BSApp\Controller\OrderController:exportedAction
-  defaults:
-    page: 1
-
-BSOrder_check:
-  path:  /check
-  controller: BSApp\Controller\OrderController:checkAction
-
+#BSOrder_menu:
+#  path:  /
+#  controller: BSApp\Controller\OrderController:indexAction
+#
+#
+#BSOrder_search:
+#  path:  /search
+#  controller: BSApp\Controller\OrderController:indexAction
+#
+#BSOrder_getInvoice:
+#  path:  /invoice/{orderID}
+#  controller: BSApp\Controller\OrderController:getInvoiceAction
+#
+#BSOrder_packet:
+#  path:  /packets
+#  controller: BSApp\Controller\OrderController:indexAction
+#
+#BSOrder_state_open:
+#  path:  /state/open
+#  controller: BSApp\Controller\OrderController:stateAction
+#  defaults:
+#    state: 4
+#
+#BSOrder_state:
+#  path:  /state/{state}
+#  controller: BSApp\Controller\OrderController:stateAction
+#  defaults:
+#    state: 5
+#
+#BSOrder_sync:
+#  path:  /sync/{state}
+#  controller: BSApp\Controller\OrderController:syncAction
+#  defaults:
+#    state: 7
+#
+#BSOrder_set_state:
+#  path:  /setstate/{state}
+#  controller: BSApp\Controller\OrderController:setstateAction
+#  defaults:
+#    state: 6
+#
+#BSOrder_print:
+#  path:  /print
+#  controller: BSApp\Controller\OrderController:printAction
+#
+#BSOrder_export:
+#  path:  /export/{date}
+#  controller: BSApp\Controller\OrderController:exportAction
+#  defaults:
+#    date: 1
+#
+#BSOrder_open:
+#  path:  /open
+#  controller: BSApp\Controller\OrderController:openAction
+#
+#BSOrder_accounting:
+#  path:  /accounting/{page}
+#  controller: BSApp\Controller\OrderController:accountingAction
+#  defaults:
+#    page: 1
+#
+#BSOrder_exported:
+#  path:  /exported/{date}/{page}
+#  controller: BSApp\Controller\OrderController:exportedAction
+#  defaults:
+#    page: 1
+#
+#BSOrder_check:
+#  path:  /check
+#  controller: BSApp\Controller\OrderController:checkAction
+#

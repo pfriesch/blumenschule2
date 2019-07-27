@@ -4,9 +4,12 @@ namespace BSApp\Controller;
 
 use BSApp\Entity\Stockkeeping;
 use BSApp\Service\plentymarketsAPI\BSPlentyService;
+use BSApp\Service\plentymarketsAPI\Model\Plenty\Modules\Item\Item\Item;
+use BSApp\Service\plentymarketsAPI\Model\Plenty\Modules\Item\Item\ItemPaginated;
 use Datetime;
 use Doctrine\ORM\Mapping\Entity;
 use Doctrine\ORM\Query\ResultSetMapping;
+use Exception;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -105,13 +108,13 @@ class ProductController extends AbstractController
             'delete_form' => $deleteForm->createView(),);
 
     }
-
-    private function createDeleteForm($id)
-    {
-        return $this->createFormBuilder(array('id' => $id))
-            ->add('id', 'hidden')
-            ->getForm();
-    }
+//
+//    private function createDeleteForm($id)
+//    {
+//        return $this->createFormBuilder(array('id' => $id))
+//            ->add('id', 'hidden')
+//            ->getForm();
+//    }
 
     /**
      * Finds and displays a list of Products by matching Article_No.
@@ -201,131 +204,131 @@ class ProductController extends AbstractController
 
     }
 
-    /**
-     * Displays a form to create a new Product entity.
-     *
-     */
-    public function newAction()
-    {
-        $entity = new Product();
-        $form = $this->createForm(new ProductType(), $entity);
+//    /**
+//     * Displays a form to create a new Product entity.
+//     *
+//     */
+//    public function newAction()
+//    {
+//        $entity = new Product();
+//        $form = $this->createForm(new ProductType(), $entity);
+//
+//        return array(
+//            'entity' => $entity,
+//            'form' => $form->createView()
+//        );
+//    }
 
-        return array(
-            'entity' => $entity,
-            'form' => $form->createView()
-        );
-    }
+//    /**
+//     * Creates a new Product entity.
+//     *
+//     */
+//    public function createAction()
+//    {
+//        $entity = new Product();
+//        $request = $this->getRequest();
+//        $form = $this->createForm(new ProductType(), $entity);
+//        $form->bind($request);
+//
+//        if ($form->isValid()) {
+//            $em = $this->getDoctrine()->getManager();
+//            $em->persist($entity);
+//            $em->flush();
+//
+//            return $this->redirect($this->generateUrl('BSApp_product_show', array('id' => $entity->getId())));
+//
+//        }
+//
+//        return array(
+//            'entity' => $entity,
+//            'form' => $form->createView()
+//        );
+//    }
 
-    /**
-     * Creates a new Product entity.
-     *
-     */
-    public function createAction()
-    {
-        $entity = new Product();
-        $request = $this->getRequest();
-        $form = $this->createForm(new ProductType(), $entity);
-        $form->bind($request);
+//    /**
+//     * Displays a form to edit an existing Product entity.
+//     *
+//     */
+//    public function editAction($id)
+//    {
+//        $em = $this->getDoctrine()->getManager();
+//
+//        $entity = $em->getRepository(Product::class)->find($id);
+//
+//        if (!$entity) {
+//            throw $this->createNotFoundException('Unable to find Product entity.');
+//        }
+//
+//        $editForm = $this->createForm(new ProductType(), $entity);
+//        $deleteForm = $this->createDeleteForm($id);
+//
+//        return array(
+//            'entity' => $entity,
+//            'edit_form' => $editForm->createView(),
+//            'delete_form' => $deleteForm->createView(),
+//        );
+//    }
 
-        if ($form->isValid()) {
-            $em = $this->getDoctrine()->getManager();
-            $em->persist($entity);
-            $em->flush();
+//    /**
+//     * Edits an existing Product entity.
+//     *
+//     */
+//    public function updateAction($id)
+//    {
+//        $em = $this->getDoctrine()->getManager();
+//
+//        $entity = $em->getRepository(Product::class)->find($id);
+//
+//        if (!$entity) {
+//            throw $this->createNotFoundException('Unable to find Product entity.');
+//        }
+//
+//        $editForm = $this->createForm(new ProductType(), $entity);
+//        $deleteForm = $this->createDeleteForm($id);
+//
+//        $request = $this->getRequest();
+//
+//        $editForm->bind($request);
+//
+//        if ($editForm->isValid()) {
+//            $em->persist($entity);
+//            $em->flush();
+//
+//            return $this->redirect($this->generateUrl('BSData_product_edit', array('id' => $id)));
+//        }
+//
+//        return array(
+//            'entity' => $entity,
+//            'edit_form' => $editForm->createView(),
+//            'delete_form' => $deleteForm->createView(),
+//        );
+//    }
 
-            return $this->redirect($this->generateUrl('BSApp_product_show', array('id' => $entity->getId())));
-
-        }
-
-        return array(
-            'entity' => $entity,
-            'form' => $form->createView()
-        );
-    }
-
-    /**
-     * Displays a form to edit an existing Product entity.
-     *
-     */
-    public function editAction($id)
-    {
-        $em = $this->getDoctrine()->getManager();
-
-        $entity = $em->getRepository(Product::class)->find($id);
-
-        if (!$entity) {
-            throw $this->createNotFoundException('Unable to find Product entity.');
-        }
-
-        $editForm = $this->createForm(new ProductType(), $entity);
-        $deleteForm = $this->createDeleteForm($id);
-
-        return array(
-            'entity' => $entity,
-            'edit_form' => $editForm->createView(),
-            'delete_form' => $deleteForm->createView(),
-        );
-    }
-
-    /**
-     * Edits an existing Product entity.
-     *
-     */
-    public function updateAction($id)
-    {
-        $em = $this->getDoctrine()->getManager();
-
-        $entity = $em->getRepository(Product::class)->find($id);
-
-        if (!$entity) {
-            throw $this->createNotFoundException('Unable to find Product entity.');
-        }
-
-        $editForm = $this->createForm(new ProductType(), $entity);
-        $deleteForm = $this->createDeleteForm($id);
-
-        $request = $this->getRequest();
-
-        $editForm->bind($request);
-
-        if ($editForm->isValid()) {
-            $em->persist($entity);
-            $em->flush();
-
-            return $this->redirect($this->generateUrl('BSData_product_edit', array('id' => $id)));
-        }
-
-        return array(
-            'entity' => $entity,
-            'edit_form' => $editForm->createView(),
-            'delete_form' => $deleteForm->createView(),
-        );
-    }
-
-    /**
-     * Deletes a Product entity.
-     *
-     */
-    public function deleteAction($id)
-    {
-        $form = $this->createDeleteForm($id);
-        $request = $this->getRequest();
-
-        $form->bind($request);
-
-        if ($form->isValid()) {
-            $em = $this->getDoctrine()->getManager();
-            $entity = $em->getRepository(Product::class)->find($id);
-
-            if (!$entity) {
-                throw $this->createNotFoundException('Unable to find Product entity.');
-            }
-
-            $em->remove($entity);
-            $em->flush();
-        }
-
-        return $this->redirect($this->generateUrl('product'));
-    }
+//    /**
+//     * Deletes a Product entity.
+//     *
+//     */
+//    public function deleteAction($id)
+//    {
+//        $form = $this->createDeleteForm($id);
+//        $request = $this->getRequest();
+//
+//        $form->bind($request);
+//
+//        if ($form->isValid()) {
+//            $em = $this->getDoctrine()->getManager();
+//            $entity = $em->getRepository(Product::class)->find($id);
+//
+//            if (!$entity) {
+//                throw $this->createNotFoundException('Unable to find Product entity.');
+//            }
+//
+//            $em->remove($entity);
+//            $em->flush();
+//        }
+//
+//        return $this->redirect($this->generateUrl('product'));
+//    }
 
     public function createDummyAction()
     {
@@ -342,16 +345,15 @@ class ProductController extends AbstractController
     public function lableAction()
     {
 
-        return $this->render('BSApp\Entity\Product:lable.html.twig', array(
+        return $this->render('product/lable.html.twig', array(
             'urlPDF' => "/print.pdf",
         ));
 
 
     }
 
-    public function printLableAction()
+    public function printLableAction(Request $request)
     {
-        $request = $this->getRequest();
 
         $form = $request->request->get('labelform');
 
@@ -566,57 +568,65 @@ class ProductController extends AbstractController
         return array_filter($results);
     }
 
-    public function searchAction($search)
+    public function searchAction($search, BSPlentyService $plentyService)
     {
-        $em = $this->getDoctrine()->getManager();
+        $result = $plentyService->searchItemsByName($search);
+
+//        $em = $this->getDoctrine()->getManager();
+//
+//
+//        $rsm = new ResultSetMapping();
+//        $rsm->addEntityResult('BSApp\Entity\Product', 'p');
+//        $rsm->addFieldResult('p', 'id', 'id');
+//        $rsm->addFieldResult('p', 'article_id', 'article_id');
+//        $rsm->addFieldResult('p', 'article_no', 'article_no');
+//        $rsm->addFieldResult('p', 'EAN', 'EAN');
+//        $rsm->addFieldResult('p', 'name', 'name');
+//        $rsm->addFieldResult('p', 'name2', 'name2');
+//        $rsm->addFieldResult('p', 'd', 'label_text');
+//        $rsm->addFieldResult('p', 'd2', 'description_short');
+//        $rsm->addFieldResult('p', 'picurl', 'picurl');
+//
+//        // Doctrine does not map to a Entity if the id is null. For that reason we give the id 1
+//        $query = $em->createNativeQuery('
+//            SELECT
+//             1 id,
+//              a.code article_no,
+//              null article_id,
+//              null EAN,
+//              a.name name,
+//              a.latein name2,
+//              a.instructions d,
+//              a.labeltext d2,
+//              null picurl
+//            FROM Plant a
+//            where
+//                a.name like "%' . $search . '%" or
+//                a.code like "' . $search . '%" or
+//                a.latein like "' . $search . '%"
+//            Union
+//            SELECT
+//             1 id,
+//              b.article_no article_no,
+//              b.article_id article_id,
+//              b.EAN EAN,
+//              b.name name,
+//              b.name2 name2,
+//              b.description d,
+//              b.picurl picurl,
+//              b.description_short d2
+//            FROM  Product b
+//            where
+//                b.name like "%' . $search . '%" or
+//                b.article_no like "' . $search . '%" or
+//                b.name2 like "' . $search . '%"
+//            order by name
+//                ', $rsm);
+//
+//        $result = $query->getArrayResult();
 
 
-        $rsm = new ResultSetMapping();
-        $rsm->addEntityResult('BSApp\Entity\Product', 'p');
-        $rsm->addFieldResult('p', 'article_id', 'article_id');
-        $rsm->addFieldResult('p', 'article_no', 'article_no');
-        $rsm->addFieldResult('p', 'EAN', 'EAN');
-        $rsm->addFieldResult('p', 'name', 'name');
-        $rsm->addFieldResult('p', 'name2', 'name2');
-        $rsm->addFieldResult('p', 'd', 'label_text');
-        $rsm->addFieldResult('p', 'd2', 'description_short');
-        $rsm->addFieldResult('p', 'picurl', 'picurl');
-        $query = $em->createNativeQuery('
-            SELECT
-             null article_id,
-              a.code article_no,
-              null EAN,
-              a.name name,
-              a.latein name2,
-              a.instructions d,
-              a.labeltext d2,
-              null picurl
-            FROM Plant a
-            where
-                a.name like "%' . $search . '%" or
-                a.code like "' . $search . '%" or
-                a.latein like "' . $search . '%"
-            Union
-            SELECT
-              b.article_id article_id,
-              b.article_no article_no,
-              b.EAN ,
-              b.name name,
-              b.name2 name2,
-              b.description d,
-              b.picurl picurl,
-              b.description_short d2
-            FROM  Product b
-            where
-                b.name like "%' . $search . '%" or
-                b.article_no like "' . $search . '%" or
-                b.name2 like "' . $search . '%"
-            order by name
-                ', $rsm);
-
-        $result = $query->getArrayResult();
-
-        $response = new Response(json_encode($result));
+        $response = new Response(json_encode(($result->asLabelFormData())));
         $response->headers->set('Content-Type', 'application/json');
 
         return $response;
@@ -624,24 +634,27 @@ class ProductController extends AbstractController
 
     }
 
-    public function syncAction($code, BSPlentyService $plentyMarketsAPI)
+    public function getItemVariationAction($article_id, $variation_id, BSPlentyService $plentyService)
     {
 
-        $plentyMarketsAPI->doGetItemsBaseByOptions(array('ItemNo' => $code));
+        $item = $plentyService->getItemByVariantenNr($article_id, $variation_id);
 
-        $em = $this->getDoctrine()->getManager();
 
-        $product = $em->getRepository(Product::class)->findOneBy(array('article_no' => $code));
-
-        $item = array();
-        $item['article_id'] = $product->getArticleId();
-        $item['article_no'] = $product->getArticleNo();
-        $item['name'] = $product->getName();
-        $item['name2'] = $product->getName2();
-        $item['label_text'] = $product->getLabelText();
-        $item['description_short'] = $product->getDescriptionShort();
-        $item['price'] = $product->getPrice();
-        $item['picurl'] = $product->getPicurl();
+//        $plentyMarketsAPI->doGetItemsBaseByOptions(array('ItemNo' => $code));
+//
+//        $em = $this->getDoctrine()->getManager();
+//
+//        $product = $em->getRepository(Product::class)->findOneBy(array('article_no' => $code));
+//
+//        $item = array();
+//        $item['article_id'] = $product->getArticleId();
+//        $item['article_no'] = $product->getArticleNo();
+//        $item['name'] = $product->getName();
+//        $item['name2'] = $product->getName2();
+//        $item['label_text'] = $product->getLabelText();
+//        $item['description_short'] = $product->getDescriptionShort();
+//        $item['price'] = $product->getPrice();
+//        $item['picurl'] = $product->getPicurl();
         $response = new Response(json_encode($item));
         $response->headers->set('Content-Type', 'application/json');
 
@@ -649,12 +662,12 @@ class ProductController extends AbstractController
 
     }
 
-    public function printAction()
+    public function printAction(Request $request)
     {
-        $id = $this->getRequest()->get('id');
-        $quantity = $this->getRequest()->get('quantity');
-        $width = $this->getRequest()->get('width');
-        $height = $this->getRequest()->get('height');
+        $id = $request->get('id');
+        $quantity = $request->get('quantity');
+        $width = $request->get('width');
+        $height = $request->get('height');
 
         $em = $this->getDoctrine()->getManager();
 
@@ -679,22 +692,22 @@ class ProductController extends AbstractController
         //$pdf->Output("print/".$entity->getArticleNo().".pdf", 'F');
         $pdf->Output("print/lable.pdf", 'F');
 
-        return $this->render('BSApp\Entity\Product:print.html.twig', array(
+        return $this->render('product/print.html.twig', array(
             'urlPDF' => "/print/lable.pdf",
         ));
 
 
     }
 
-    public function printA6Action()
+    public function printA6Action(Request $request)
     {
 
 
         $em = $this->getDoctrine()->getManager();
 
-        $data = $this->get('request')->request->get('A6Lable');
+        $data = $request->request->get('A6Lable');
 
-        return $this->render('BSApp\Entity\Product:printA6.html.twig', array(
+        return $this->render('product/printA6.html.twig', array(
 
             'data' => $data
         ));
@@ -702,6 +715,7 @@ class ProductController extends AbstractController
 
     private function createLabelJSON($products)
     {
+        throw new Exception("not implemented");
 
 
     }

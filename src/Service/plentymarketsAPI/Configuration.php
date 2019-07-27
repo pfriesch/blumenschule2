@@ -216,7 +216,7 @@ class Configuration
                 echo 'Exception when calling AuthenticationApi->restLoginPost: ', $e->getMessage(), PHP_EOL;
             }
         }
-//        TODO handle auth timeout & refresh
+//        TODO handle when access token becomes invalid (timeout or other reason) -> relog and redo request or do after timeout?
 
         return $this;
 

@@ -2,112 +2,112 @@ BSData_mainmenu:
   path:  /
   controller: BSApp\Controller\DefaultController:indexAction
 
-
-BSData_menu:
-  path:  /
-  controller: BSApp\Controller\DefaultController:dataAction
-
-
-BSData_customer_serach:
-  path:  /customer/search/{string}
-  controller: BSApp\Controller\DefaultController:customerSearchAction
-
-
-
-BSData_paymentmethods_show:
-  path:  /paymentmethods/show/{id}
-  controller: BSApp\Controller\PaymentMethodsController:showAction
-
-BSData_paymentmethods_edit:
-  path:  /paymentmethods/edit/{id}
-  controller: BSApp\Controller\PaymentMethodsController:editAction
-
-BSData_paymentmethods_new:
-  path:  /paymentmethods/new
-  controller: BSApp\Controller\PaymentMethodsController:newAction
-
-BSData_paymentmethods_create:
-  path:  /paymentmethods/create
-  controller: BSApp\Controller\PaymentMethodsController:createAction
-
-BSData_paymentmethods_delete:
-  path:  /paymentmethods/delete/{id}
-  controller: BSApp\Controller\PaymentMethodsController:deleteAction
-
-BSData_paymentmethods_update:
-  path:  /paymentmethods/update/{id}
-  controller: BSApp\Controller\PaymentMethodsController:updateAction
-
-BSData_paymentmethods:
-  path:  /paymentmethods/{page}
-  controller: BSApp\Controller\PaymentMethodsController:indexAction
-  defaults:
-    page: 1
-
-
-
-
-
-
-
-
-BSData_product:
-  path:  /product/{page}
-  controller: BSApp\Controller\ProductController:indexAction
-  defaults:
-    page: 1
-
-
-
-
-
-
-BSData_product_show:
-  path:  /product/show/{id}
-  controller: BSApp\Controller\ProductController:showAction
-
-BSData_product_edit:
-  path:  /product/edit/{id}
-  controller: BSApp\Controller\ProductController:editAction
-
-BSData_product_new:
-  path:  /product/new
-  controller: BSApp\Controller\ProductController:newAction
-
-BSData_product_create:
-  path:  /product/create
-  controller: BSApp\Controller\ProductController:createAction
-
-BSData_product_delete:
-  path:  /product/delete/{id}
-  controller: BSApp\Controller\ProductController:deleteAction
-
-BSData_product_update:
-  path:  /product/update/{id}
-  controller: BSApp\Controller\ProductController:updateAction
-
-
-BSData_product_by_code:
-  path:  /product/code/{code}
-  controller: BSApp\Controller\ProductController:codeAction
-
-
-BSData_product_search_code:
-  path:  /product/search/code/{search}/{page}
-  controller: BSApp\Controller\ProductController:searchCodeAction
-  defaults:
-    page: 1
-BSData_product_search_name:
-  path:  /product/search/name/{search}/{page}
-  controller: BSApp\Controller\ProductController:searchNameAction
-  defaults:
-    page: 1
-BSData_product_search_latein:
-  path:  /product/search/latein/{search}/{page}
-  controller: BSApp\Controller\ProductController:searchLateinAction
-  defaults:
-    page: 1
-
+#
+#BSData_menu:
+#  path:  /
+#  controller: BSApp\Controller\DefaultController:dataAction
+#
+#
+#BSData_customer_serach:
+#  path:  /customer/search/{string}
+#  controller: BSApp\Controller\DefaultController:customerSearchAction
+#
+#
+#
+#BSData_paymentmethods_show:
+#  path:  /paymentmethods/show/{id}
+#  controller: BSApp\Controller\PaymentMethodsController:showAction
+#
+#BSData_paymentmethods_edit:
+#  path:  /paymentmethods/edit/{id}
+#  controller: BSApp\Controller\PaymentMethodsController:editAction
+#
+#BSData_paymentmethods_new:
+#  path:  /paymentmethods/new
+#  controller: BSApp\Controller\PaymentMethodsController:newAction
+#
+#BSData_paymentmethods_create:
+#  path:  /paymentmethods/create
+#  controller: BSApp\Controller\PaymentMethodsController:createAction
+#
+#BSData_paymentmethods_delete:
+#  path:  /paymentmethods/delete/{id}
+#  controller: BSApp\Controller\PaymentMethodsController:deleteAction
+#
+#BSData_paymentmethods_update:
+#  path:  /paymentmethods/update/{id}
+#  controller: BSApp\Controller\PaymentMethodsController:updateAction
+#
+#BSData_paymentmethods:
+#  path:  /paymentmethods/{page}
+#  controller: BSApp\Controller\PaymentMethodsController:indexAction
+#  defaults:
+#    page: 1
+#
+#
+#
+#
+#
+#
+#
+#
+#BSData_product:
+#  path:  /product/{page}
+#  controller: BSApp\Controller\ProductController:indexAction
+#  defaults:
+#    page: 1
+#
+#
+#
+#
+#
+#
+#BSData_product_show:
+#  path:  /product/show/{id}
+#  controller: BSApp\Controller\ProductController:showAction
+#
+#BSData_product_edit:
+#  path:  /product/edit/{id}
+#  controller: BSApp\Controller\ProductController:editAction
+#
+#BSData_product_new:
+#  path:  /product/new
+#  controller: BSApp\Controller\ProductController:newAction
+#
+#BSData_product_create:
+#  path:  /product/create
+#  controller: BSApp\Controller\ProductController:createAction
+#
+#BSData_product_delete:
+#  path:  /product/delete/{id}
+#  controller: BSApp\Controller\ProductController:deleteAction
+#
+#BSData_product_update:
+#  path:  /product/update/{id}
+#  controller: BSApp\Controller\ProductController:updateAction
+#
+#
+#BSData_product_by_code:
+#  path:  /product/code/{code}
+#  controller: BSApp\Controller\ProductController:codeAction
+#
+#
+#BSData_product_search_code:
+#  path:  /product/search/code/{search}/{page}
+#  controller: BSApp\Controller\ProductController:searchCodeAction
+#  defaults:
+#    page: 1
+#BSData_product_search_name:
+#  path:  /product/search/name/{search}/{page}
+#  controller: BSApp\Controller\ProductController:searchNameAction
+#  defaults:
+#    page: 1
+#BSData_product_search_latein:
+#  path:  /product/search/latein/{search}/{page}
+#  controller: BSApp\Controller\ProductController:searchLateinAction
+#  defaults:
+#    page: 1
+#
 BSData_product_search_jason:
   path:  /product/sjson/{search}
   controller: BSApp\Controller\ProductController:searchAction
@@ -129,61 +129,61 @@ BSData_product_printA6:
   controller: BSApp\Controller\ProductController:printA6Action
 
 BSData_product_sync:
-  path:  /product/sync/{code}
-  controller: BSApp\Controller\ProductController:syncAction
+  path:  /product/item/{article_id}/variation/{variation_id}
+  controller: BSApp\Controller\ProductController:getItemVariationAction
 
-BSData_product_stock:
-  path:  /product/{id}/stock
-  controller: BSApp\Controller\ProductController:stockAction
-
-
-
-
-
-
-
-
-
-BSData_stock_show:
-  path:  /stock/show/{id}
-  controller: BSApp\Controller\StockController:showAction
-
-BSData_stock_edit:
-  path:  /stock/edit/{id}
-  controller: BSApp\Controller\StockController:editAction
-
-BSData_stock_new:
-  path:  /stock/new
-  controller: BSApp\Controller\StockController:newAction
-
-BSData_stock_create:
-  path:  /stock/create
-  controller: BSApp\Controller\StockController:createAction
-
-BSData_stock_delete:
-  path:  /stock/delete/{id}
-  controller: BSApp\Controller\StockController:deleteAction
-
-BSData_stock_update:
-  path:  /stock/update/{id}
-  controller: BSApp\Controller\StockController:updateAction
-
-BSData_stock:
-  path:  /stock/{page}
-  controller: BSApp\Controller\StockController:indexAction
-  defaults:
-    page: 1
-
-
-
-
-
-#BSInventory:
-#  resource: "@BSApp/Controller/"
-#  type:     annotation
-#  prefix:   /
-
-
-
-
-
+#BSData_product_stock:
+#  path:  /product/{id}/stock
+#  controller: BSApp\Controller\ProductController:stockAction
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#BSData_stock_show:
+#  path:  /stock/show/{id}
+#  controller: BSApp\Controller\StockController:showAction
+#
+#BSData_stock_edit:
+#  path:  /stock/edit/{id}
+#  controller: BSApp\Controller\StockController:editAction
+#
+#BSData_stock_new:
+#  path:  /stock/new
+#  controller: BSApp\Controller\StockController:newAction
+#
+#BSData_stock_create:
+#  path:  /stock/create
+#  controller: BSApp\Controller\StockController:createAction
+#
+#BSData_stock_delete:
+#  path:  /stock/delete/{id}
+#  controller: BSApp\Controller\StockController:deleteAction
+#
+#BSData_stock_update:
+#  path:  /stock/update/{id}
+#  controller: BSApp\Controller\StockController:updateAction
+#
+#BSData_stock:
+#  path:  /stock/{page}
+#  controller: BSApp\Controller\StockController:indexAction
+#  defaults:
+#    page: 1
+#
+#
+#
+#
+#
+##BSInventory:
+##  resource: "@BSApp/Controller/"
+##  type:     annotation
+##  prefix:   /
+#
+#
+#
+#
+#

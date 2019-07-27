@@ -1,54 +1,54 @@
-product:
-  path: /
-  controller:  BSApp\Controller\ProductController:indexAction
-
-
-product_stock:
-  path: /{id}/stock
-  controller:  BSApp\Controller\ProductController:stockAction
-
-
-product_show:
-  path: /{id}/show
-  controller:  BSApp\Controller\ProductController:showAction
-
-
+#product:
+#  path: /
+#  controller:  BSApp\Controller\ProductController:indexAction
+#
+#
+#product_stock:
+#  path: /{id}/stock
+#  controller:  BSApp\Controller\ProductController:stockAction
+#
+#
 #product_show:
 #  path: /{id}/show
-#  controller:  BSApp\Controller\ProductController:searchCodeAction
-
-#product_show:
-#  path: /{id}/show
-#  controller:  BSApp\Controller\ProductController:searchNameAction
-
-
-product_new:
-  path: /new
-  controller:  BSApp\Controller\ProductController:newAction
-
-product_create:
-  path: /create
-  #       * @Template("PlentyMarketsOrderBundle:Product:new.html.twig")
-  methods: POST
-  controller:  BSApp\Controller\ProductController:createAction
-
-product_edit:
-  path: /{id}/edit
-  controller:  BSApp\Controller\ProductController:editAction
-
-product_update:
-  path: /{id}/update
-  methods: POST
-  #    * @Template("PlentyMarketsOrderBundle:Product:edit.html.twig")
-
-  controller:  BSApp\Controller\ProductController:updateAction
-
-product_delete:
-  path: /{id}/delete
-  methods: POST
-  controller:  BSApp\Controller\ProductController:deleteAction
-
-product_all:
-  path: /all/{search}
-  defaults: {search: ""}
-  controller:  BSApp\Controller\ProductController:productAllAction
+#  controller:  BSApp\Controller\ProductController:showAction
+#
+#
+##product_show:
+##  path: /{id}/show
+##  controller:  BSApp\Controller\ProductController:searchCodeAction
+#
+##product_show:
+##  path: /{id}/show
+##  controller:  BSApp\Controller\ProductController:searchNameAction
+#
+#
+#product_new:
+#  path: /new
+#  controller:  BSApp\Controller\ProductController:newAction
+#
+#product_create:
+#  path: /create
+#  #       * @Template("PlentyMarketsOrderBundle:Product:new.html.twig")
+#  methods: POST
+#  controller:  BSApp\Controller\ProductController:createAction
+#
+#product_edit:
+#  path: /{id}/edit
+#  controller:  BSApp\Controller\ProductController:editAction
+#
+#product_update:
+#  path: /{id}/update
+#  methods: POST
+#  #    * @Template("PlentyMarketsOrderBundle:Product:edit.html.twig")
+#
+#  controller:  BSApp\Controller\ProductController:updateAction
+#
+#product_delete:
+#  path: /{id}/delete
+#  methods: POST
+#  controller:  BSApp\Controller\ProductController:deleteAction
+#
+#product_all:
+#  path: /all/{search}
+#  defaults: {search: ""}
+#  controller:  BSApp\Controller\ProductController:productAllAction

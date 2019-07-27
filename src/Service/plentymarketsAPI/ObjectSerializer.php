@@ -288,8 +288,12 @@ class ObjectSerializer
 
 //            $mapper->bExceptionOnUndefinedProperty = true; //TODO for debugging, remove for prod?
 //            $mapper->bExceptionOnMissingData = true;
+            if (is_array($data)) {
+                $instance = $mapper->mapArray($data, array(),$class);
+            } else {
+                $instance = $mapper->map($data, new $class);
 
-            $instance = $mapper->map($data, new $class);
+            }
 
 
             return $instance;

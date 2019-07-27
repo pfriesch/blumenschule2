@@ -21,11 +21,12 @@ $(document).ready(function () {
                     response($.map(data, function (item) {
 
                         return {
-                            label: item.name + ' ' + item.name2 + ' ' + item.code,
+                            label: item.name + ' ' + item.name_botanic + ' ' + item.code,
                             name: item.name,
-                            name2: item.name2,
-                            code: item.article_no,
-                            no: item.article_id,
+                            name_botanic: item.name_botanic,
+                            code: item.code,
+                            article_id: item.article_id,
+                            variant_id: item.variant_id,
                             value: item.name,
                             data: item
                         }
@@ -44,7 +45,7 @@ $(document).ready(function () {
     }).data("ui-autocomplete")._renderItem = function (ul, item) {
         //console.log(item);
         return $("<li>")
-            .append("<a><div class='auto_no'> " + (item.no == null ? '-' : item.no) + "</div><div class='auto_name'> " + item.name + "</div><div class='auto_name2'>" + item.name2 + "</div><div class='auto_code'>" + item.code + "</div></a>")
+            .append("<a><div class='auto_article_id'> " + (item.article_id == null ? '-' : item.article_id) + "</div><div class='auto_name'> " + item.name + "</div><div class='auto_name_botanic'>" + item.name_botanic + "</div><div class='auto_code'>" + item.code + "</div></a>")
             .appendTo(ul);
     };
 
@@ -77,12 +78,12 @@ $(document).ready(function () {
         event.preventDefault();
         var item = $('<div class="a6-print-item" data-a6item="' + A6Index + '"></div>')
         var name = $('form.LableForm input[id="name"]').val();
-        var name2 = $('form.LableForm input[id="name2"]').val();
+        var name_botanic = $('form.LableForm input[id="name_botanic"]').val();
         var description = $('form.LableForm textarea[id="description"]').val();
         var picurl = $('img.article_pic').attr('src');
         item.append($('<img class="a6-print-item-pic img-thumbnail" src="' + picurl + '" />'));
         item.append($('<p><strong>Etikett ' + A6Index + '</strong></p>'));
-        item.append($('<p><strong>' + name + '</strong></p><p>' + name2 + '</p>'));
+        item.append($('<p><strong>' + name + '</strong></p><p>' + name_botanic + '</p>'));
         item.append($('<p>' + description + '</p>'));
 
 
@@ -164,7 +165,7 @@ var searchString = "";
 var searchParam = function () {
 
     $("#search").autocomplete("search", searchString);
-}
+};
 
 var selected = function (event, ui) {
 
@@ -176,9 +177,9 @@ var selected = function (event, ui) {
 
     if (data.article_id == null) {
         var r = confirm('Der Ausgewählte Pflanze hat keine Artikel ID!\n\n "OK" um ohne ID weiterzumachen\n "Abbrechen" um neu zu suchen ');
-        if (r == false) {
+        if (r === false) {
             $("#search").focus();
-            searchString = new String(data.article_no);
+            searchString = String(data.article_no);
             window.setTimeout(searchParam(), 1000);
             return false;
         }
@@ -187,33 +188,35 @@ var selected = function (event, ui) {
     $('.loading').show();
 
 
-    if (data.article_id) {
-        $.getJSON('/data/product/sync/' + data.article_no).done(function (data) {
-            $('#name ').val(data.name);
-            $('#name2 ').val(data.name2);
-            $('#description ').val(data.label_text);
-            $('#descriptionShort ').val(data.description_short);
-            $('#articlecode ').val(data.article_no);
-            $('#articleid ').val(data.article_id);
-            $('#picurl').val(data.picurl);
-            $('.article_pic').attr('src', data.picurl);
-            $('.loading').hide();
-            $('.row').fadeTo('fast', 1)
-        })
-    } else {
+    // if (data.article_id) {
+    $.getJSON('/data/product/item/' + data.article_id + '/variation/' + data.variant_id).done(function (data) {
         $('#name ').val(data.name);
-        $('#name2 ').val(data.name2);
+        $('#name_botanic ').val(data.name_botanic);
         $('#description ').val(data.label_text);
         $('#descriptionShort ').val(data.description_short);
         $('#articlecode ').val(data.article_no);
         $('#articleid ').val(data.article_id);
+        $('#variantid ').val(data.variant_id);
         $('#picurl').val(data.picurl);
         $('.article_pic').attr('src', data.picurl);
         $('.loading').hide();
         $('.row').fadeTo('fast', 1)
-    }
+    });
+    // } else {
+    //     $('#name ').val(data.name);
+    //     $('#name_botanic ').val(data.name_botanic);
+    //     $('#description ').val(data.label_text);
+    //     $('#descriptionShort ').val(data.description_short);
+    //     $('#articlecode ').val(data.article_no);
+    //     $('#articleid ').val(data.article_id);
+    //     $('#variantid ').val(data.variant_id);
+    //     $('#picurl').val(data.picurl);
+    //     $('.article_pic').attr('src', data.picurl);
+    //     $('.loading').hide();
+    //     $('.row').fadeTo('fast', 1)
+    // }
 
 
     countChars();
     return false;
-}
+};

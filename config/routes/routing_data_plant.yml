@@ -1,59 +1,59 @@
-BSData_plant:
-  path: /
-  controller: BSApp\Controller\PlantController:indexAction
-
-
-BSData_plant_search_name:
-  path: /search/name/{search}
-  controller: BSApp\Controller\PlantController:searchNameAction
-
-
-BSData_plant_search_code:
-  path: /search/code/{search}
-  controller: BSApp\Controller\PlantController:searchCodeAction
-
-
-BSData_plant_autotext:
-  path: /autotext/{search}
-  controller: BSApp\Controller\PlantController:searchAutotextAction
-
-
-BSData_plant_search_latein:
-  path: /search/latein/{search}
-  controller: BSApp\Controller\PlantController:searchLateinAction
-
-
-BSData_plant_show:
-  path: /{id}/show
-  controller: BSApp\Controller\PlantController:showAction
-
-
-BSData_plant_new:
-  path: /new
-  controller: BSApp\Controller\PlantController:newAction
-
-
-BSData_plant_create:
-  path: /create
-  controller: BSApp\Controller\PlantController:createAction
-
-
-BSData_plant_edit:
-  path: /{id}/edit
-  controller: BSApp\Controller\PlantController:editAction
-
-
-BSData_plant_update:
-  path: /{id}/update
-  controller: BSApp\Controller\PlantController:updateAction
-
-
-BSData_plant_delete:
-  path: /{id}/delete
-  controller: BSApp\Controller\PlantController:deleteAction
-
-
-BSData_plant_crate_product:
-  path: /{id}/createProduct
-  controller: BSApp\Controller\PlantController:crateProductAction
-
+#BSData_plant:
+#  path: /
+#  controller: BSApp\Controller\PlantController:indexAction
+#
+#
+#BSData_plant_search_name:
+#  path: /search/name/{search}
+#  controller: BSApp\Controller\PlantController:searchNameAction
+#
+#
+#BSData_plant_search_code:
+#  path: /search/code/{search}
+#  controller: BSApp\Controller\PlantController:searchCodeAction
+#
+#
+#BSData_plant_autotext:
+#  path: /autotext/{search}
+#  controller: BSApp\Controller\PlantController:searchAutotextAction
+#
+#
+#BSData_plant_search_latein:
+#  path: /search/latein/{search}
+#  controller: BSApp\Controller\PlantController:searchLateinAction
+#
+#
+#BSData_plant_show:
+#  path: /{id}/show
+#  controller: BSApp\Controller\PlantController:showAction
+#
+#
+#BSData_plant_new:
+#  path: /new
+#  controller: BSApp\Controller\PlantController:newAction
+#
+#
+#BSData_plant_create:
+#  path: /create
+#  controller: BSApp\Controller\PlantController:createAction
+#
+#
+#BSData_plant_edit:
+#  path: /{id}/edit
+#  controller: BSApp\Controller\PlantController:editAction
+#
+#
+#BSData_plant_update:
+#  path: /{id}/update
+#  controller: BSApp\Controller\PlantController:updateAction
+#
+#
+#BSData_plant_delete:
+#  path: /{id}/delete
+#  controller: BSApp\Controller\PlantController:deleteAction
+#
+#
+#BSData_plant_crate_product:
+#  path: /{id}/createProduct
+#  controller: BSApp\Controller\PlantController:crateProductAction
+#
