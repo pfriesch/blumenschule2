@@ -15,6 +15,8 @@ use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Knp\Component\Pager\PaginatorInterface;
 
+use setasign\Fpdi\Tcpdf\Fpdi;
+
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use BSApp\Entity\Product;
@@ -28,86 +30,86 @@ class ProductController extends AbstractController
 
     private $limit = 50;
 
-    /**
-     * Lists all Product entities.
-     * @Template()
-     */
-    public function indexAction($page, PaginatorInterface $paginator)
-    {
-        $em = $this->getDoctrine()->getManager();
-
-        //$entities = $em->getRepository('PlentyMarketsOrderBundle:Product')->findAll();
-
-        //return array('entities' => $entities);
-        $dql = "SELECT a FROM BSApp\Entity\Product a";
-        $query = $em->createQuery($dql);
-
-//        $paginator = $this->get('knp_paginator');
-        $pagination = $paginator->paginate(
-            $query,
-            $page, //$this->get('request')->query->get('page', 1)/*page number*/,
-            $this->limit/*limit per page*/
-        );
-
-        // parameters to template
-        return compact('pagination');
-    }
-
-    /**
-     * Lists all Product entities.
-     *
-     */
-    public function stockAction($id, Request $request)
-    {
-
-        $em = $this->getDoctrine()->getManager();
-        $entity = $em->getRepository(Product::class)->find($id);
-
-        $form = $this->createFormBuilder($entity)
-            ->add('Stock', EntityType::class,
-                array('class' => 'BSApp\Entity\Stock',
-                    'data' => $entity->getStock()
-                ))
-            //->add('id','hidden',array('label'=>'ID','read_only'=>true,'data'=>$id))
-            ->getForm();
-
-        $form->handleRequest($request);
-        if ($form->isSubmitted() && $form->isValid()) {
-            $data = $form->getData();
-            $em->persist($data);
-            $em->flush();
-
-        }
-        return $this->render('product\stock.html.twig', array(
-            'form' => $form->createView(),
-            'entity' => $entity
-        ));
-
-
-    }
-
-
-    /**
-     * Search and displays a Product entity.
-     *
-     */
-    public function showAction($id)
-    {
-        $em = $this->getDoctrine()->getManager();
-
-        $entity = $em->getRepository(Product::class)->find($id);
-
-        if (!$entity) {
-            throw $this->createNotFoundException('Unable to find Product entity.');
-        }
-
-        $deleteForm = $this->createDeleteForm($id);
-
-        return array(
-            'entity' => $entity,
-            'delete_form' => $deleteForm->createView(),);
-
-    }
+//    /**
+//     * Lists all Product entities.
+//     * @Template()
+//     */
+//    public function indexAction($page, PaginatorInterface $paginator)
+//    {
+//        $em = $this->getDoctrine()->getManager();
+//
+//        //$entities = $em->getRepository('PlentyMarketsOrderBundle:Product')->findAll();
+//
+//        //return array('entities' => $entities);
+//        $dql = "SELECT a FROM BSApp\Entity\Product a";
+//        $query = $em->createQuery($dql);
+//
+////        $paginator = $this->get('knp_paginator');
+//        $pagination = $paginator->paginate(
+//            $query,
+//            $page, //$this->get('request')->query->get('page', 1)/*page number*/,
+//            $this->limit/*limit per page*/
+//        );
+//
+//        // parameters to template
+//        return compact('pagination');
+//    }
+//
+//    /**
+//     * Lists all Product entities.
+//     *
+//     */
+//    public function stockAction($id, Request $request)
+//    {
+//
+//        $em = $this->getDoctrine()->getManager();
+//        $entity = $em->getRepository(Product::class)->find($id);
+//
+//        $form = $this->createFormBuilder($entity)
+//            ->add('Stock', EntityType::class,
+//                array('class' => 'BSApp\Entity\Stock',
+//                    'data' => $entity->getStock()
+//                ))
+//            //->add('id','hidden',array('label'=>'ID','read_only'=>true,'data'=>$id))
+//            ->getForm();
+//
+//        $form->handleRequest($request);
+//        if ($form->isSubmitted() && $form->isValid()) {
+//            $data = $form->getData();
+//            $em->persist($data);
+//            $em->flush();
+//
+//        }
+//        return $this->render('product\stock.html.twig', array(
+//            'form' => $form->createView(),
+//            'entity' => $entity
+//        ));
+//
+//
+//    }
+//
+//
+//    /**
+//     * Search and displays a Product entity.
+//     *
+//     */
+//    public function showAction($id)
+//    {
+//        $em = $this->getDoctrine()->getManager();
+//
+//        $entity = $em->getRepository(Product::class)->find($id);
+//
+//        if (!$entity) {
+//            throw $this->createNotFoundException('Unable to find Product entity.');
+//        }
+//
+//        $deleteForm = $this->createDeleteForm($id);
+//
+//        return array(
+//            'entity' => $entity,
+//            'delete_form' => $deleteForm->createView(),);
+//
+//    }
 //
 //    private function createDeleteForm($id)
 //    {
@@ -115,95 +117,95 @@ class ProductController extends AbstractController
 //            ->add('id', 'hidden')
 //            ->getForm();
 //    }
-
-    /**
-     * Finds and displays a list of Products by matching Article_No.
-     *
-     */
-    public function searchCodeAction($page, $search)
-    {
-
-        $em = $this->getDoctrine()->getManager();
-        $qb = $em->createQueryBuilder();
-        $qb->add('select', 'p')
-            ->add('from', 'BSApp\Entity\Product p')
-            ->add('where',
-                $qb->expr()->like('p.article_no', '?1')
-            )->setParameter('1', $search . '%');
-
-
-        $paginator = $this->get('knp_paginator');
-        $pagination = $paginator->paginate(
-            $qb->getQuery(),
-            $page, //$this->get('request')->query->get('page', 1)/*page number*/,
-            $this->limit/*limit per page*/
-        );
-        return $this->render('BSApp\Entity\Product:index.html.twig', array(
-            'pagination' => $pagination));
-    }
-
-    /**
-     * Finds and displays a Products by Article_Name.
-     *
-     */
-    public function searchNameAction($page, $search)
-    {
-
-        $em = $this->getDoctrine()->getManager();
-        $qb = $em->createQueryBuilder();
-        $qb->add('select', 'p')
-            ->add('from', 'BSApp\Entity\Product p')
-            ->add('where',
-                $qb->expr()->like('p.name', '?1')
-            )->setParameter('1', '%' . $search . '%');
-
-        $paginator = $this->get('knp_paginator');
-        $pagination = $paginator->paginate(
-            $qb->getQuery(),
-            $page, //$this->get('request')->query->get('page', 1)/*page number*/,
-            $this->limit/*limit per page*/
-        );
-
-        return $this->render('BSApp\Entity\Product:index.html.twig', array(
-            'pagination' => $pagination));
-        //return compact('pagination');
-
-    }
-
-    /**
-     * Finds and displays a Products by Article_Name2.
-     *
-     * @param $page
-     * @param $search
-     * @return Response
-     *
-     */
-    public function searchLateinAction($page, $search)
-    {
-
-        $em = $this->getDoctrine()->getManager();
-        $qb = $em->createQueryBuilder();
-        $qb->add('select', 'p')
-            ->add('from', 'BSApp\Entity\Product p')
-            ->add('where',
-                $qb->expr()->like('p.name2', '?1')
-            )->setParameter('1', '%' . $search . '%');
-
-
-        $paginator = $this->get('knp_paginator');
-        $pagination = $paginator->paginate(
-            $qb->getQuery(),
-            $page, //$this->get('request')->query->get('page', 1)/*page number*/,
-            $this->limit/*limit per page*/
-        );
-
-
-        return $this->render('BSApp\Entity\Product:index.html.twig', array(
-            'pagination' => $pagination));
-        //return compact('pagination');
-
-    }
-
+//
+//    /**
+//     * Finds and displays a list of Products by matching Article_No.
+//     *
+//     */
+//    public function searchCodeAction($page, $search)
+//    {
+//
+//        $em = $this->getDoctrine()->getManager();
+//        $qb = $em->createQueryBuilder();
+//        $qb->add('select', 'p')
+//            ->add('from', 'BSApp\Entity\Product p')
+//            ->add('where',
+//                $qb->expr()->like('p.article_no', '?1')
+//            )->setParameter('1', $search . '%');
+//
+//
+//        $paginator = $this->get('knp_paginator');
+//        $pagination = $paginator->paginate(
+//            $qb->getQuery(),
+//            $page, //$this->get('request')->query->get('page', 1)/*page number*/,
+//            $this->limit/*limit per page*/
+//        );
+//        return $this->render('BSApp\Entity\Product:index.html.twig', array(
+//            'pagination' => $pagination));
+//    }
+//
+//    /**
+//     * Finds and displays a Products by Article_Name.
+//     *
+//     */
+//    public function searchNameAction($page, $search)
+//    {
+//
+//        $em = $this->getDoctrine()->getManager();
+//        $qb = $em->createQueryBuilder();
+//        $qb->add('select', 'p')
+//            ->add('from', 'BSApp\Entity\Product p')
+//            ->add('where',
+//                $qb->expr()->like('p.name', '?1')
+//            )->setParameter('1', '%' . $search . '%');
+//
+//        $paginator = $this->get('knp_paginator');
+//        $pagination = $paginator->paginate(
+//            $qb->getQuery(),
+//            $page, //$this->get('request')->query->get('page', 1)/*page number*/,
+//            $this->limit/*limit per page*/
+//        );
+//
+//        return $this->render('BSApp\Entity\Product:index.html.twig', array(
+//            'pagination' => $pagination));
+//        //return compact('pagination');
+//
+//    }
+//
+//    /**
+//     * Finds and displays a Products by Article_Name2.
+//     *
+//     * @param $page
+//     * @param $search
+//     * @return Response
+//     *
+//     */
+//    public function searchLateinAction($page, $search)
+//    {
+//
+//        $em = $this->getDoctrine()->getManager();
+//        $qb = $em->createQueryBuilder();
+//        $qb->add('select', 'p')
+//            ->add('from', 'BSApp\Entity\Product p')
+//            ->add('where',
+//                $qb->expr()->like('p.name2', '?1')
+//            )->setParameter('1', '%' . $search . '%');
+//
+//
+//        $paginator = $this->get('knp_paginator');
+//        $pagination = $paginator->paginate(
+//            $qb->getQuery(),
+//            $page, //$this->get('request')->query->get('page', 1)/*page number*/,
+//            $this->limit/*limit per page*/
+//        );
+//
+//
+//        return $this->render('BSApp\Entity\Product:index.html.twig', array(
+//            'pagination' => $pagination));
+//        //return compact('pagination');
+//
+//    }
+//
 //    /**
 //     * Displays a form to create a new Product entity.
 //     *
@@ -218,7 +220,7 @@ class ProductController extends AbstractController
 //            'form' => $form->createView()
 //        );
 //    }
-
+//
 //    /**
 //     * Creates a new Product entity.
 //     *
@@ -244,7 +246,7 @@ class ProductController extends AbstractController
 //            'form' => $form->createView()
 //        );
 //    }
-
+//
 //    /**
 //     * Displays a form to edit an existing Product entity.
 //     *
@@ -268,7 +270,7 @@ class ProductController extends AbstractController
 //            'delete_form' => $deleteForm->createView(),
 //        );
 //    }
-
+//
 //    /**
 //     * Edits an existing Product entity.
 //     *
@@ -303,7 +305,7 @@ class ProductController extends AbstractController
 //            'delete_form' => $deleteForm->createView(),
 //        );
 //    }
-
+//
 //    /**
 //     * Deletes a Product entity.
 //     *
@@ -329,17 +331,17 @@ class ProductController extends AbstractController
 //
 //        return $this->redirect($this->generateUrl('product'));
 //    }
-
-    public function createDummyAction()
-    {
-        $form = $this->buildDummyForm();
-
-        return array(
-            'form' => $form->createView(),
-
-        );
-
-    }
+//
+//    public function createDummyAction()
+//    {
+//        $form = $this->buildDummyForm();
+//
+//        return array(
+//            'form' => $form->createView(),
+//
+//        );
+//
+//    }
 
 
     public function lableAction()
@@ -352,77 +354,77 @@ class ProductController extends AbstractController
 
     }
 
-    public function printLableAction(Request $request)
-    {
+//    public function printLableAction(Request $request)
+//    {
+//
+//        $form = $request->request->get('labelform');
+//
+//        $anzahl = $form['amount'];
+//        $entity = new Product();
+//        $entity->setArticleId($form['articleid']);
+//        $entity->setArticleNo($form['articlecode']);
+//        $entity->setName($form['name']);
+//        $entity->setName2($form['name2']);
+//        $entity->setLabelText($form['description']);
+//        $entity->setDescriptionShort($form['descriptionShort']);
+//        $pdf = $this->get('white_october.tcpdf')->create();
+//        /*$pdf->init(array(
+//            'Creator' => 'Blumenschule Schongau',
+//            'Author' => 'Florian Engler',
+//            'Title' => $entity->getArticleNo(),
+//            'Subject' => $entity->getName(),
+//        ));*/
+//        $pdf->SetAutoPageBreak(false, 0);
+//        $pdf->setPrintHeader(false);
+//        $pdf->setPrintFooter(false);
+//        $pdf->setCellPaddings(1, 1, 1, 1);
+//        $pdf->setCellMargins(1, 1, 1, 1);
+//
+//        for ($i = 0; $i < $anzahl; $i++) {
+//            $pdf = $this->buildLable($pdf, $entity);
+//        }
+//
+//
+//        $unit = new Stockkeeping();
+//
+//        $unit->setArticleId($entity->getArticleId());
+//        $unit->setArticleCode($entity->getArticleNo());
+//        $unit->setArticleName($entity->getName());
+//        $unit->setQuantity(intval($anzahl));
+//        $unit->setPrinted(new Datetime('now'));
+//
+//        $em = $this->getDoctrine()->getManager();
+//        $em->persist($unit);
+//        $em->flush();
+//
+//
+//        //$pdfUrl = "print/".$entity->getArticleNo().".pdf";
+//        $pdfUrl = "print/lable.pdf";
+//        unlink(__DIR__ . "/../../../../web/" . $pdfUrl);
+//        $pdf->Output(__DIR__ . "/../../../../web/" . $pdfUrl, 'F');
+//        $result = array('pdfurl' => '/' . $pdfUrl);
+//
+//        $response = new Response(json_encode($result));
+//        $response->headers->set('Content-Type', 'application/json');
+//
+//        return $response;
+//
+//    }
 
-        $form = $request->request->get('labelform');
-
-        $anzahl = $form['amount'];
-        $entity = new Product();
-        $entity->setArticleId($form['articleid']);
-        $entity->setArticleNo($form['articlecode']);
-        $entity->setName($form['name']);
-        $entity->setName2($form['name2']);
-        $entity->setLabelText($form['description']);
-        $entity->setDescriptionShort($form['descriptionShort']);
-        $pdf = $this->get('white_october.tcpdf')->create();
-        /*$pdf->init(array(
-            'Creator' => 'Blumenschule Schongau',
-            'Author' => 'Florian Engler',
-            'Title' => $entity->getArticleNo(),
-            'Subject' => $entity->getName(),
-        ));*/
-        $pdf->SetAutoPageBreak(false, 0);
-        $pdf->setPrintHeader(false);
-        $pdf->setPrintFooter(false);
-        $pdf->setCellPaddings(1, 1, 1, 1);
-        $pdf->setCellMargins(1, 1, 1, 1);
-
-        for ($i = 0; $i < $anzahl; $i++) {
-            $pdf = $this->buildLable($pdf, $entity);
-        }
-
-
-        $unit = new Stockkeeping();
-
-        $unit->setArticleId($entity->getArticleId());
-        $unit->setArticleCode($entity->getArticleNo());
-        $unit->setArticleName($entity->getName());
-        $unit->setQuantity(intval($anzahl));
-        $unit->setPrinted(new Datetime('now'));
-
-        $em = $this->getDoctrine()->getManager();
-        $em->persist($unit);
-        $em->flush();
-
-
-        //$pdfUrl = "print/".$entity->getArticleNo().".pdf";
-        $pdfUrl = "print/lable.pdf";
-        unlink(__DIR__ . "/../../../../web/" . $pdfUrl);
-        $pdf->Output(__DIR__ . "/../../../../web/" . $pdfUrl, 'F');
-        $result = array('pdfurl' => '/' . $pdfUrl);
-
-        $response = new Response(json_encode($result));
-        $response->headers->set('Content-Type', 'application/json');
-
-        return $response;
-
-    }
-
-    private function buildLable($pdf, Product $entity, $width = 98, $height = 25)
+    private function buildLable($pdf, \BSApp\Entity\Item $item, $width = 98, $height = 25)
     {
 
         $pdf->AddPage('L', array($width, $height));
         //Cell($w, $h=0, $txt='', $border=0, $ln=0, $align='', $fill=0, $link='', $stretch=0, $ignore_min_height=false, $calign='T', $valign='M')
 
         $pdf->SetFont('helvetica', 'B', 11);
-        //$pdf->Write(1,$entity->getName(),'',false,'L',1);
-        //$pdf->Cell(2, 6, $entity->getName(),1,1);
-        $pdf->Text(0, 0, $entity->getName(), false, false, true, 0, 1);
+        //$pdf->Write(1,$item->getName(),'',false,'L',1);
+        //$pdf->Cell(2, 6, $item->getName(),1,1);
+        $pdf->Text(0, 0, $item->name, false, false, true, 0, 1);
         $pdf->SetFont('helvetica', 'B', 8);
-        $pdf->Text(32, 4, $entity->getName2(), false, false, true, 0, 1);
-        //$pdf->Cell(2, 6, $entity->getName2(),1,1);
-        //$pdf->Write(1,$entity->getName(),'',false,'L',1);
+        $pdf->Text(32, 4, $item->name_botanic, false, false, true, 0, 1);
+        //$pdf->Cell(2, 6, $item->getName2(),1,1);
+        //$pdf->Write(1,$item->getName(),'',false,'L',1);
 
         $style = array(
             'position' => '',
@@ -442,10 +444,10 @@ class ProductController extends AbstractController
         );
         //( 	code,	 	type,		x = '', 	y = '',	w = '',	h = '',xres = '',style = '',align = '')
 
-        $pdf->write1DBarcode($entity->getArticleId(), 'EAN8', 1, 8, 30, 10, 0.5, $style, 'T');
-        $pdf->Text(2, 17, $entity->getArticleNo() . ' - ' . $entity->getArticleId(), false, false, true, 0, 1);
+        $pdf->write1DBarcode($item->variant_id, 'EAN8', 1, 8, 30, 10, 0.5, $style, 'T');
+        $pdf->Text(2, 17, $item->code . ' - ' . $item->article_id, false, false, true, 0, 1);
         $pdf->SetFont('helvetica', '', 7);
-        $strings = $this->split_words($entity->getDescriptionShort());
+        $strings = $this->split_words($item->description_short);
         $line = 0;
         foreach ($strings as $s) {
             $pdf->Text(30, 7 + $line, $s, false, false, true, 0, 1);
@@ -487,86 +489,86 @@ class ProductController extends AbstractController
         return $lines;
     }
 
-    /**
-     * Lists all Product entities.
-     *
-     */
-    public function productAllAction($search, Request $request, PaginatorInterface $paginator)//, )
-    {
-
+//    /**
+//     * Lists all Product entities.
+//     *
+//     */
+//    public function productAllAction($search, Request $request, PaginatorInterface $paginator)//, )
+//    {
+//
+////        $em = $this->getDoctrine()->getManager();
+//
+//        //$entities = $em->getRepository('PlentyMarketsOrderBundle:Product')->findAll();
+//
+//
+////        $paginator = $this->get('knp_paginator');
+//        $pagination = $paginator->paginate(
+//            $this->plantAndProductSearch($search),
+//            $request->query->get('page', 1)/*page number*/,
+//            $this->limit/*limit per page*/
+//        );
+//
+//        // parameters to template
+//        return $this->render('product/productAll.html.twig', [
+//            'pagination' => $pagination,
+//        ]);
+////        return compact('pagination');
+//    }
+//
+//    private function plantAndProductSearch($search)
+//    {
 //        $em = $this->getDoctrine()->getManager();
-
-        //$entities = $em->getRepository('PlentyMarketsOrderBundle:Product')->findAll();
-
-
-//        $paginator = $this->get('knp_paginator');
-        $pagination = $paginator->paginate(
-            $this->plantAndProductSearch($search),
-            $request->query->get('page', 1)/*page number*/,
-            $this->limit/*limit per page*/
-        );
-
-        // parameters to template
-        return $this->render('product/productAll.html.twig', [
-            'pagination' => $pagination,
-        ]);
-//        return compact('pagination');
-    }
-
-    private function plantAndProductSearch($search)
-    {
-        $em = $this->getDoctrine()->getManager();
-
-        $rsm = new ResultSetMapping();
-        $rsm->addEntityResult('BSApp\Entity\Product', 'p');
-        $rsm->addFieldResult('p', 'id', 'id');
-        $rsm->addFieldResult('p', 'article_id', 'article_id');
-        $rsm->addFieldResult('p', 'article_no', 'article_no');
-        $rsm->addFieldResult('p', 'EAN', 'EAN');
-        $rsm->addFieldResult('p', 'name', 'name');
-        $rsm->addFieldResult('p', 'name2', 'name2');
-        $rsm->addFieldResult('p', 'd', 'label_text');
-        $rsm->addFieldResult('p', 'd2', 'description_short');
-        $rsm->addFieldResult('p', 'picurl', 'picurl');
-        $query = $em->createNativeQuery('
-            SELECT
-             a.id id,
-             null article_id,
-              a.code article_no,
-              null EAN,
-              a.name name,
-              a.latein name2,
-              a.instructions d,
-              a.labeltext d2,
-              null picurl
-            FROM Plant a
-            where
-                a.name like "%' . $search . '%" or
-                a.code like "' . $search . '%" or
-                a.latein like "' . $search . '%"
-            Union
-            SELECT
-              null id,
-              b.article_id article_id,
-              b.article_no article_no,
-              b.EAN ,
-              b.name name,
-              b.name2 name2,
-              b.description d,
-              b.description_short d2,
-              b.picurl picurl
-            FROM  Product b
-            where
-                b.name like "%' . $search . '%" or
-                b.article_no like "' . $search . '%" or
-                b.name2 like "' . $search . '%"
-            order by name
-                ', $rsm);
-
-        $results = $query->getArrayResult();
-//        TODO why is the quary returning null elements? TODO fix it
-        return array_filter($results);
-    }
+//
+//        $rsm = new ResultSetMapping();
+//        $rsm->addEntityResult('BSApp\Entity\Product', 'p');
+//        $rsm->addFieldResult('p', 'id', 'id');
+//        $rsm->addFieldResult('p', 'article_id', 'article_id');
+//        $rsm->addFieldResult('p', 'article_no', 'article_no');
+//        $rsm->addFieldResult('p', 'EAN', 'EAN');
+//        $rsm->addFieldResult('p', 'name', 'name');
+//        $rsm->addFieldResult('p', 'name2', 'name2');
+//        $rsm->addFieldResult('p', 'd', 'label_text');
+//        $rsm->addFieldResult('p', 'd2', 'description_short');
+//        $rsm->addFieldResult('p', 'picurl', 'picurl');
+//        $query = $em->createNativeQuery('
+//            SELECT
+//             a.id id,
+//             null article_id,
+//              a.code article_no,
+//              null EAN,
+//              a.name name,
+//              a.latein name2,
+//              a.instructions d,
+//              a.labeltext d2,
+//              null picurl
+//            FROM Plant a
+//            where
+//                a.name like "%' . $search . '%" or
+//                a.code like "' . $search . '%" or
+//                a.latein like "' . $search . '%"
+//            Union
+//            SELECT
+//              null id,
+//              b.article_id article_id,
+//              b.article_no article_no,
+//              b.EAN ,
+//              b.name name,
+//              b.name2 name2,
+//              b.description d,
+//              b.description_short d2,
+//              b.picurl picurl
+//            FROM  Product b
+//            where
+//                b.name like "%' . $search . '%" or
+//                b.article_no like "' . $search . '%" or
+//                b.name2 like "' . $search . '%"
+//            order by name
+//                ', $rsm);
+//
+//        $results = $query->getArrayResult();
+////        TODO why is the quary returning null elements? TODO fix it
+//        return array_filter($results);
+//    }
 
     public function searchAction($search, BSPlentyService $plentyService)
     {
@@ -634,27 +636,21 @@ class ProductController extends AbstractController
 
     }
 
-    public function getItemVariationAction($article_id, $variation_id, BSPlentyService $plentyService)
+    public function getItemVariationAction(Request $request, BSPlentyService $plentyService)
     {
+
+        $article_id = (int)$request->get('article_id');
+        $variation_id = (int)$request->get('variant_id');
+        $quantity = (int)$request->get('quantity');
 
         $item = $plentyService->getItemByVariantenNr($article_id, $variation_id);
 
+        if ($quantity > 0){
+            $this->printAction(new \BSApp\Entity\Item($item), $quantity, 98, 25);
+        }
 
-//        $plentyMarketsAPI->doGetItemsBaseByOptions(array('ItemNo' => $code));
-//
-//        $em = $this->getDoctrine()->getManager();
-//
-//        $product = $em->getRepository(Product::class)->findOneBy(array('article_no' => $code));
-//
-//        $item = array();
-//        $item['article_id'] = $product->getArticleId();
-//        $item['article_no'] = $product->getArticleNo();
-//        $item['name'] = $product->getName();
-//        $item['name2'] = $product->getName2();
-//        $item['label_text'] = $product->getLabelText();
-//        $item['description_short'] = $product->getDescriptionShort();
-//        $item['price'] = $product->getPrice();
-//        $item['picurl'] = $product->getPicurl();
+
+
         $response = new Response(json_encode($item));
         $response->headers->set('Content-Type', 'application/json');
 
@@ -662,38 +658,35 @@ class ProductController extends AbstractController
 
     }
 
-    public function printAction(Request $request)
+    public function printAction(\BSApp\Entity\Item $item, $quantity, $width, $height)
     {
-        $id = $request->get('id');
-        $quantity = $request->get('quantity');
-        $width = $request->get('width');
-        $height = $request->get('height');
+        $printTempDir = $_SERVER['DOCUMENT_ROOT'] . "/publicprint/";
 
-        $em = $this->getDoctrine()->getManager();
 
-        $entity = $em->getRepository(Product::class)->find($id);
-        $pdf = $this->get('white_october.tcpdf')->create();
+        $tcpdf = new Fpdi();
+
+//        $pdf = $this->get('white_october.tcpdf')->create();
         /*$pdf->init(array(
             'Creator' => 'Blumenschule Schongau',
             'Author' => 'Florian Engler',
             'Title' => $entity->getArticleNo(),
             'Subject' => $entity->getName(),
         ));*/
-        $pdf->SetAutoPageBreak(false, 0);
-        $pdf->setPrintHeader(false);
-        $pdf->setPrintFooter(false);
-        $pdf->setCellPaddings(1, 1, 1, 1);
-        $pdf->setCellMargins(1, 1, 1, 1);
+        $tcpdf->SetAutoPageBreak(false, 0);
+        $tcpdf->setPrintHeader(false);
+        $tcpdf->setPrintFooter(false);
+        $tcpdf->setCellPaddings(1, 1, 1, 1);
+        $tcpdf->setCellMargins(1, 1, 1, 1);
         for ($i = 0; $i < $quantity; $i++) {
-            $pdf = $this->buildLable($pdf, $entity, $width, $height);
+            $tcpdf = $this->buildLable($tcpdf, $item, $width, $height);
         }
 
 
         //$pdf->Output("print/".$entity->getArticleNo().".pdf", 'F');
-        $pdf->Output("print/lable.pdf", 'F');
+        $tcpdf->Output($printTempDir . "lable.pdf", 'F');
 
         return $this->render('product/print.html.twig', array(
-            'urlPDF' => "/print/lable.pdf",
+            'urlPDF' => "/publicprint/lable.pdf",
         ));
 
 
@@ -703,7 +696,7 @@ class ProductController extends AbstractController
     {
 
 
-        $em = $this->getDoctrine()->getManager();
+//        $em = $this->getDoctrine()->getManager();
 
         $data = $request->request->get('A6Lable');
 
@@ -712,13 +705,13 @@ class ProductController extends AbstractController
             'data' => $data
         ));
     }
-
-    private function createLabelJSON($products)
-    {
-        throw new Exception("not implemented");
-
-
-    }
+//
+//    private function createLabelJSON($products)
+//    {
+//        throw new Exception("not implemented");
+//
+//
+//    }
 
 
 }

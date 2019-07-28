@@ -116,20 +116,20 @@ BSData_product_lable:
   path:  /product/lable
   controller: BSApp\Controller\ProductController:lableAction
 
-BSData_product_lable_print:
-  path:  /product/lable/print
-  controller: BSApp\Controller\ProductController:printLableAction
+#BSData_product_lable_print:
+#  path:  /product/lable/print
+#  controller: BSApp\Controller\ProductController:printLableAction
 
-BSData_product_print:
-  path:  /product/print
-  controller: BSApp\Controller\ProductController:printAction
+#BSData_product_print:
+#  path:  /product/print
+#  controller: BSApp\Controller\ProductController:printAction
 
 BSData_product_printA6:
   path:  /product/printA6
   controller: BSApp\Controller\ProductController:printA6Action
 
 BSData_product_sync:
-  path:  /product/item/{article_id}/variation/{variation_id}
+  path:  /product/getitem
   controller: BSApp\Controller\ProductController:getItemVariationAction
 
 #BSData_product_stock:

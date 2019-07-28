@@ -9,6 +9,7 @@ use BSApp\Service\plentymarketsAPI\Api\OrderApi;
 use BSApp\Service\plentymarketsAPI\Model\Plenty\Modules\Item\Item\Item;
 use Exception;
 use GuzzleHttp\Client;
+use JsonMapper;
 
 /**
  * High level API Service to access the Plentymarkets shop system
@@ -203,9 +204,6 @@ class BSPlentyService
 
     public function getItemByVariantenNr($article_id, $variation_id)
     {
-        $article_id = (int) $article_id;
-        $variation_id = (int) $variation_id;
-
 // Configure OAuth2 access token for authorization: oAuth2
         $config = Configuration::getDefaultConfiguration()->authenticated();
 
@@ -250,7 +248,11 @@ class BSPlentyService
         $item['label_text'] = $result->getLabelText();
         $item['description_short'] = $result->getDescription();
         $item['price'] = $resultPrice[0]->price;
-        $item['picurl'] = $resultImage[0]->url;
+        if (count($resultImage) > 0) {
+            $item['picurl'] = $resultImage[0]->url;
+        } else {
+            $item['picurl'] = "";
+        }
         return $item;
 
     }

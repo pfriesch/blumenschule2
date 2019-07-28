@@ -43,7 +43,7 @@
             <ul class="nav navbar-nav">
 
                 <li ><a id='lableA6'href="">DinA6</a></li>
-                <li ><a class="reset" href="#">Reset</a></li>
+{#                <li ><a class="reset" href="#">Reset</a></li>#}
 {#                <li ><a  href="{{ path('data_stockkeepting') }}">Bestand</a></li>#}
                 <li class=""><a href="{{ path('BSData_mainmenu') }}">zurück</a></li>
 
@@ -61,7 +61,7 @@
 
     <div class="row">
 
-        <form  class="form-horizontal LableForm" role="form"  action="{{ path('BSData_product_lable_print') }}" method="post">
+        <form  class="form-horizontal LableForm" role="form"  action="{{ path('BSData_product_sync') }}" method="post">
 
         <div class="col-md-6">
 
@@ -69,7 +69,7 @@
             <div class="form-group">
                 <label for="name">Suche</label>
                 <input class="form-control" type="text" id="search" name="search">
-                <a  class="reset btn btn-default" href="{{ path('BSData_product_lable') }}">Reset</a>
+{#                <a  class="reset btn btn-default" href="{{ path('BSData_product_lable') }}">Reset</a>#}
             </div>
 
 
@@ -103,12 +103,21 @@
 
                     </div>
                 </div>
+
+            <div class="form-group">
+
+                <label for="variantid" class="col-lg-2 control-label" >VariationID </label>
+                <div class="col-lg-10">
+                    <input class="form-control" type="text" id="variantid" name="labelform[variantid]" readonly >
+
+                </div>
+            </div>
                 <div class="form-group printA6">
 
                     <label for="description" class="col-lg-2 control-label" >Beschreibung</label>
                     <div class="col-lg-10">
                     <textarea  class="form-control" style="width:60%;height: 93px;" id="description"
-                              name="labelform[description]"> </textarea>
+                              name="labelform[description]" readonly> </textarea>
                     </div>
                 </div>
                 <div class="form-group printLable">
@@ -139,7 +148,7 @@
                 <div class="col-lg-10">
                     <label class="printLable" for="amount" > Anzahl</label>
                     <input class="form-control printLable" type="text" id="amount" name="labelform[amount]" placeholder="Anzahl" value="1">
-                    <button class=" btn btn-success btn-default  printLable" type="submit">Etikett erstellen</button>
+                    <button class=" btn btn-success btn-default  printLable" id="submit">Etikett erstellen</button>
                     <button class=" btn btn-success btn-default  printA6" id="addDinA6">zu DinA6 hinzufügen</button>
                 </div>
             </div>
@@ -151,7 +160,7 @@
     <div class="row">
         <div class="col-md-8 pdf-print printLable LableOutput">
 
-            <object class="PdfOut" data="/print/lable.pdf" type="application/pdf" width="100%" height="180px"></object>
+            <object class="PdfOut" data="/publicprint/lable.pdf" type="application/pdf" width="100%" height="180px"></object>
 
 
         </div>

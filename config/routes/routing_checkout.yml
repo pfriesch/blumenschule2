@@ -1,115 +1,115 @@
-#checkout_cashbox:
-#  path: /
-#  controller:  BSApp\Controller\cashboxController:indexAction
-#
-#BSCashbox_close:
-#  path: /{id}/close
-#  controller:  BSApp\Controller\cashboxController:closeAction
-#
-#checkout_cashbox_show:
-#  path: /{id}/show
-#  controller:  BSApp\Controller\cashboxController:showAction
-#
-#cashbox_bontext_save:
-#  path: /{id}/bon_text/save
-#  controller:  BSApp\Controller\cashboxController:bontext_saveAction
-#
-#checkout_cashbox_button_add:
-#  path: /{id}/button/add
-#  controller:  BSApp\Controller\cashboxController:button_addAction
-#
-#checkout_cashbox_button_delete:
-#  path: /{id}/button/delete/{itemid}
-#  controller:  BSApp\Controller\cashboxController:button_deleteAction
-#
-#checkout_cashbox_new:
-#  path: /new
-#  controller:  BSApp\Controller\cashboxController:newAction
-#
-#checkout_cashbox_create:
-#  path: /create
-#  #      * @Template("BSCheckoutBundle:cashbox:new.html.twig")
-#  methods: POST
-#  controller:  BSApp\Controller\cashboxController:createAction
-#
-#checkout_cashbox_edit:
-#  path: /{id}/edit
-#  controller:  BSApp\Controller\cashboxController:editAction
-#
-#checkout_cashbox_update:
-#  path: /{id}/update
-#  methods: POST
-#  controller:  BSApp\Controller\cashboxController:createAction
-#
-#checkout_cashbox_delete:
-#  path: /{id}/delete
-#
-#  methods: POST
-#  controller:  BSApp\Controller\cashboxController:deleteAction
-#
-#
-#checkout_cashbox_print:
-#  path: /{id}/print/{date}
-#  methods: GET
-#  controller:  BSApp\Controller\cashboxController:printAction
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#BSCheckout_home:
-#  path: /{cashbox_id}/checkout
-#  controller:  BSApp\Controller\CheckoutController:indexAction
-#
-#BSCheckout_new:
-#  path: /{cashbox_id}/checkout/new
-#  controller:  BSApp\Controller\CheckoutController:newAction
-#
-#BSCheckout_history:
-#  path: /{cashbox_id}/checkout/history/{date}
-#  controller:  BSApp\Controller\CheckoutController:historyAction
-#
-#BSCheckout_add:
-#  path: /{cashbox_id}/checkout/{checkout}/add
-#  controller:  BSApp\Controller\CheckoutController:addAction
-#
-#BSCheckout_clear:
-#  path: /{cashbox_id}/checkout/{checkout}/clear
-#  methods: POST
-#  controller:  BSApp\Controller\CheckoutController:clearAction
-#
-#BSCheckout_finish:
-#  path: /{cashbox_id}/checkout/{checkout}/finish
-#  methods: POST
-#  controller:  BSApp\Controller\CheckoutController:finishAction
-#
-#BSCheckout_order:
-#  path: /{cashbox_id}/checkout/{checkout}/order
-#  methods: POST
-#  controller:  BSApp\Controller\CheckoutController:orderAction
-#
-#BSCheckout_item:
-#  path: /{cashbox_id}/checkout/{checkout}/itemaction
-#  methods: POST
-#  controller:  BSApp\Controller\CheckoutController:itemAction
-#
-#BSCheckout_bontext:
-#  path: /{cashbox_id}/checkout/{id}/bontext
-#  controller:  BSApp\Controller\CheckoutController:bontextAction
-#
-#BSCheckout_receipt:
-#  path: /{cashbox_id}/checkout/{id}/receipt
-#  controller:  BSApp\Controller\CheckoutController:receiptAction
-#
-#BSCheckout_payoff:
-#  path: /checkout/payoff
-#  controller:  BSApp\Controller\CheckoutController:payoffAction
-#
-#
-#
-#
+checkout_cashbox:
+  path: /
+  controller:  BSApp\Controller\cashboxController:indexAction
+
+BSCashbox_close:
+  path: /{id}/close
+  controller:  BSApp\Controller\cashboxController:closeAction
+
+checkout_cashbox_show:
+  path: /{id}/show
+  controller:  BSApp\Controller\cashboxController:showAction
+
+cashbox_bontext_save:
+  path: /{id}/bon_text/save
+  controller:  BSApp\Controller\cashboxController:bontext_saveAction
+
+checkout_cashbox_button_add:
+  path: /{id}/button/add
+  controller:  BSApp\Controller\cashboxController:button_addAction
+
+checkout_cashbox_button_delete:
+  path: /{id}/button/delete/{itemid}
+  controller:  BSApp\Controller\cashboxController:button_deleteAction
+
+checkout_cashbox_new:
+  path: /new
+  controller:  BSApp\Controller\cashboxController:newAction
+
+checkout_cashbox_create:
+  path: /create
+  #      * @Template("BSCheckoutBundle:cashbox:new.html.twig")
+  methods: POST
+  controller:  BSApp\Controller\cashboxController:createAction
+
+checkout_cashbox_edit:
+  path: /{id}/edit
+  controller:  BSApp\Controller\cashboxController:editAction
+
+checkout_cashbox_update:
+  path: /{id}/update
+  methods: POST
+  controller:  BSApp\Controller\cashboxController:createAction
+
+checkout_cashbox_delete:
+  path: /{id}/delete
+
+  methods: POST
+  controller:  BSApp\Controller\cashboxController:deleteAction
+
+
+checkout_cashbox_print:
+  path: /{id}/print/{date}
+  methods: GET
+  controller:  BSApp\Controller\cashboxController:printAction
+
+
+
+
+
+
+
+
+
+
+BSCheckout_home:
+  path: /{cashbox_id}/checkout
+  controller:  BSApp\Controller\CheckoutController:indexAction
+
+BSCheckout_new:
+  path: /{cashbox_id}/checkout/new
+  controller:  BSApp\Controller\CheckoutController:newAction
+
+BSCheckout_history:
+  path: /{cashbox_id}/checkout/history/{date}
+  controller:  BSApp\Controller\CheckoutController:historyAction
+
+BSCheckout_add:
+  path: /{cashbox_id}/checkout/{checkout}/add
+  controller:  BSApp\Controller\CheckoutController:addAction
+
+BSCheckout_clear:
+  path: /{cashbox_id}/checkout/{checkout}/clear
+  methods: POST
+  controller:  BSApp\Controller\CheckoutController:clearAction
+
+BSCheckout_finish:
+  path: /{cashbox_id}/checkout/{checkout}/finish
+  methods: POST
+  controller:  BSApp\Controller\CheckoutController:finishAction
+
+BSCheckout_order:
+  path: /{cashbox_id}/checkout/{checkout}/order
+  methods: POST
+  controller:  BSApp\Controller\CheckoutController:orderAction
+
+BSCheckout_item:
+  path: /{cashbox_id}/checkout/{checkout}/itemaction
+  methods: POST
+  controller:  BSApp\Controller\CheckoutController:itemAction
+
+BSCheckout_bontext:
+  path: /{cashbox_id}/checkout/{id}/bontext
+  controller:  BSApp\Controller\CheckoutController:bontextAction
+
+BSCheckout_receipt:
+  path: /{cashbox_id}/checkout/{id}/receipt
+  controller:  BSApp\Controller\CheckoutController:receiptAction
+
+BSCheckout_payoff:
+  path: /checkout/payoff
+  controller:  BSApp\Controller\CheckoutController:payoffAction
+
+
+
+

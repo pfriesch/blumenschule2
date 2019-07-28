@@ -34,7 +34,7 @@ class CheckoutController extends AbstractController
         $basket = null;
         if ($checkout) {
 
-            $basket = $em->getRepository('checkout\checkout::class')->find($checkout);
+            $basket = $em->getRepository(checkout::class)->find($checkout);
         }
 
         if (!$basket) {
