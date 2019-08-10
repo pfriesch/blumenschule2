@@ -104,13 +104,13 @@ class CheckoutController extends AbstractController
         ));
     }
 
-    public function addAction($cashbox_id, $checkout)
+    public function addAction($cashbox_id, $checkout, Request $request)
     {
 
-        $code = $this->getRequest()->request->get('code');
-        $price = $this->getRequest()->request->get('price');
-        $quantity = $this->getRequest()->request->get('quantity');
-        $name = trim($this->getRequest()->request->get('name'));
+        $code = $request->request->get('code');
+        $price = $request->request->get('price');
+        $quantity = $request->request->get('quantity');
+        $name = trim($request->request->get('name'));
         $price = floatval(str_replace(',', '.', $price));
 
         $em = $this->getDoctrine()->getManager();
@@ -169,12 +169,12 @@ class CheckoutController extends AbstractController
         return $this->redirect($this->generateUrl('BSCheckout_home', array('cashbox_id' => $cashbox_id)));
     }
 
-    public function finishAction($cashbox_id, $checkout)
+    public function finishAction($cashbox_id, $checkout, Request $request)
     {
         $em = $this->getDoctrine()->getManager();
         $payment_id = 0;
-        $payment_id = $this->getRequest()->request->get('payment_id');
-        //$cashbox_id = $this->getRequest()->request->get('cashbox_id');
+        $payment_id = $request->request->get('payment_id');
+        //$cashbox_id = $request->request->get('cashbox_id');
 
         if (!$cashbox_id) {
             throw $this->createNotFoundException("Keine Parameter übergeben");
@@ -203,14 +203,13 @@ class CheckoutController extends AbstractController
 
     }
 
-    public function orderAction($cashbox_id, $checkout,BSPlentyService $plentyMarketsAPI)
+    public function orderAction($cashbox_id, $checkout, BSPlentyService $plentyMarketsAPI, Request $request)
     {
         $em = $this->getDoctrine()->getManager();
 
         //$currentBasket = $em->getRepository(checkout::class)->getCurrentBasket($cashbox_id);
         $currentBasket = $em->getRepository(checkout::class)->find($checkout);
 
-        $request = $this->getRequest();
 
         $form = $request->request->get('form');
 
@@ -304,15 +303,15 @@ class CheckoutController extends AbstractController
 
     }
 
-    public function itemAction($cashbox_id, $checkout)
+    public function itemAction($cashbox_id, $checkout, Request $request)
     {
         $em = $this->getDoctrine()->getManager();
 
-        $action = $this->getRequest()->request->get('action');
-        $quantity = $this->getRequest()->request->get('quantity');
-        $price = $this->getRequest()->request->get('price');
+        $action = $request->request->get('action');
+        $quantity = $request->request->get('quantity');
+        $price = $request->request->get('price');
         $price = floatval(str_replace(',', '.', $price));
-        $id = $this->getRequest()->request->get('id');
+        $id = $request->request->get('id');
 
         $item = $em->getRepository(checkoutItem::class)->find($id);
         if ($item) {
@@ -345,9 +344,9 @@ class CheckoutController extends AbstractController
 
     }
 
-    public function bontextAction($cashbox_id, $id)
+    public function bontextAction($cashbox_id, $id, Request $request)
     {
-        $bontext = $this->getRequest()->request->get('bontext');
+        $bontext = $request->request->get('bontext');
         $em = $this->getDoctrine()->getManager();
 
         //$cashbox = $em->getRepository(cashbox::class)->find($cashbox_id);
@@ -359,9 +358,9 @@ class CheckoutController extends AbstractController
         return $this->redirect($this->generateUrl('BSCheckout_home', array('cashbox_id' => $cashbox_id)));
     }
 
-    public function receiptAction($cashbox_id, $id)
+    public function receiptAction($cashbox_id, $id, Request $request)
     {
-        $bontext = $this->getRequest()->request->get('bontext');
+        $bontext = $request->request->get('bontext');
 
         $bontext = nl2br($bontext);
 
