@@ -1,7 +1,7 @@
 <?php
 
 
-namespace BSApp\Service\plentymarketsAPI\Model\Plenty\Modules\Item\Variation;
+namespace App\Service\plentymarketsAPI\Model\Plenty\Modules\Item\Variation;
 
 class Variation
 {
@@ -69,7 +69,7 @@ class Variation
      *  The estimated delivery date of variations on reorder.
      * @var string|null
      */
-    public $estimatedAvailableAt;
+    public $estimatedAvailabelAt;
 
     /**
      *  The net purchase price. Value e.g. is used for price calculations.
@@ -138,16 +138,16 @@ class Variation
     public $isInvisibleIfNetStockIsNotPositive;
 
     /**
-     *  Flag that indicates if the variation is available in the online store if net stock is positive. If true, the variation automatically becomes available when the net stock changes to positive.
+     *  Flag that indicates if the variation is availabel in the online store if net stock is positive. If true, the variation automatically becomes availabel when the net stock changes to positive.
      * @var boolean|null
      */
-    public $isAvailableIfNetStockIsPositive;
+    public $isAvailabelIfNetStockIsPositive;
 
     /**
-     *  Flag that indicates if the variation is unavailable in the online store if net stock is not positive. If true, the variation automatically becomes available when the net stock changes to 0 or negative.
+     *  Flag that indicates if the variation is unavailabel in the online store if net stock is not positive. If true, the variation automatically becomes availabel when the net stock changes to 0 or negative.
      * @var boolean|null
      */
-    public $isUnavailableIfNetStockIsNotPositive;
+    public $isUnavailabelIfNetStockIsNotPositive;
 
     /**
      *  Flag that indicates if the variation is visible in the item list of the online store if net stock is positive. If true, the variation automatically becomes visible in categories, search results and item lists (store specials, cross-selling, last seen items) when the net stock changes to positive.
@@ -156,7 +156,7 @@ class Variation
     public $isVisibleInListIfNetStockIsPositive;
 
     /**
-     *  Flag that indicates if the variation is invisible in the item list of the online store if net stock is not positive. If true and no net stock is available for the variation, the variation can only be opened using the direct URL. The variation is not shown in the categories, search results or item lists (store specials, cross-selling, last seen items).
+     *  Flag that indicates if the variation is invisible in the item list of the online store if net stock is not positive. If true and no net stock is availabel for the variation, the variation can only be opened using the direct URL. The variation is not shown in the categories, search results or item lists (store specials, cross-selling, last seen items).
      * @var boolean|null
      */
     public $isInvisibleInListIfNetStockIsNotPositive;
@@ -186,13 +186,13 @@ class Variation
     public $intervalOrderQuantity;
 
     /**
-     *  The last date the item will be available for sale.
+     *  The last date the item will be availabel for sale.
      * @var string|null
      */
-    public $availableUntil;
+    public $availabelUntil;
 
     /**
-     *  The release date of the variation. This is the date on which the variation will become available. The variation can be visible in the online store before this date, e.g. for preorders.
+     *  The release date of the variation. This is the date on which the variation will become availabel. The variation can be visible in the online store before this date, e.g. for preorders.
      * @var string|null
      */
     public $releasedAt;
@@ -312,7 +312,7 @@ class Variation
     public $bundleType;
 
     /**
-     *  Indicates if the variation is set as available for any clients (stores). Possible values:0 / -1 (GET) or 0 (POST) = Variation is not available in any client (store).1 / 2 (GET) or 1 (POST) = Variation is available in at least one client (store).The variation's actual visibility depends on the settings for net stock dependency.
+     *  Indicates if the variation is set as availabel for any clients (stores). Possible values:0 / -1 (GET) or 0 (POST) = Variation is not availabel in any client (store).1 / 2 (GET) or 1 (POST) = Variation is availabel in at least one client (store).The variation's actual visibility depends on the settings for net stock dependency.
      * @var integer|null
      */
     public $automaticClientVisibility;

@@ -1,9 +1,9 @@
 <?php
 
 
-namespace BSApp\Service\plentymarketsAPI\Model\Plenty\Modules\Account\Address;
+namespace App\Service\plentymarketsAPI\Model\Plenty\Modules\Account\Address;
 
-use BSApp\Service\plentymarketsAPI\Model\PaginatedResponse;
+use App\Service\plentymarketsAPI\Model\PaginatedResponse;
 
 class AddressPosRelationPaginated extends PaginatedResponse
 {

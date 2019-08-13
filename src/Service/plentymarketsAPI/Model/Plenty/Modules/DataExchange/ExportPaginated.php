@@ -1,9 +1,9 @@
 <?php
 
 
-namespace BSApp\Service\plentymarketsAPI\Model\Plenty\Modules\DataExchange;
+namespace App\Service\plentymarketsAPI\Model\Plenty\Modules\DataExchange;
 
-use BSApp\Service\plentymarketsAPI\Model\PaginatedResponse;
+use App\Service\plentymarketsAPI\Model\PaginatedResponse;
 
 class ExportPaginated extends PaginatedResponse
 {

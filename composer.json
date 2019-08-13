@@ -13,7 +13,6 @@
     "knplabs/knp-paginator-bundle": "3.0.0",
     "netresearch/jsonmapper": "^1.5",
     "sensio/framework-extra-bundle": "^5.1",
-    "tecnickcom/tcpdf": "^6.2",
     "setasign/fpdi-tcpdf": "2.2",
     "symfony/asset": "4.3.*",
     "symfony/console": "4.3.*",
@@ -26,7 +25,6 @@
     "symfony/http-client": "4.3.*",
     "symfony/intl": "4.3.*",
     "symfony/monolog-bundle": "^3.1",
-    "symfony/orm-pack": "^1.0",
     "symfony/process": "4.3.*",
     "symfony/security-bundle": "4.3.*",
     "symfony/serializer-pack": "*",
@@ -35,7 +33,10 @@
     "symfony/twig-bundle": "4.3.*",
     "symfony/validator": "4.3.*",
     "symfony/web-link": "4.3.*",
-    "symfony/yaml": "4.3.*"
+    "symfony/webpack-encore-bundle": "^1.6",
+    "symfony/yaml": "4.3.*",
+    "tecnickcom/tcpdf": "^6.2",
+    "twbs/bootstrap": "4.3.1"
   },
   "require-dev": {
     "symfony/debug-pack": "*",
@@ -53,12 +54,12 @@
   },
   "autoload": {
     "psr-4": {
-      "BSApp\\": "src/"
+      "App\\": "src/"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "BSApp\\Tests\\": "tests/"
+      "App\\Tests\\": "tests/"
     }
   },
   "replace": {

@@ -1,7 +1,7 @@
 <?php
 
 
-namespace BSApp\Service\plentymarketsAPI\Model\Plenty\Modules\StockManagement\Warehouse;
+namespace App\Service\plentymarketsAPI\Model\Plenty\Modules\StockManagement\Warehouse;
 
 class Warehouse
 {
@@ -24,7 +24,7 @@ class Warehouse
     public $note;
 
     /**
-     *  The id of the warehouse type. The following types are available:
+     *  The id of the warehouse type. The following types are availabel:
      *
      *     0 = Sales warehouse
      *     1 = Repair warehouse
@@ -38,13 +38,13 @@ class Warehouse
     public $typeId;
 
     /**
-     *  Displayed availability of a variation if stock is available
+     *  Displayed availability of a variation if stock is availabel
      * @var integer
      */
     public $onStockAvailability;
 
     /**
-     *  Displayed availability of a variation if no stock is available
+     *  Displayed availability of a variation if no stock is availabel
      * @var integer
      */
     public $outOfStockAvailability;
@@ -56,7 +56,7 @@ class Warehouse
     public $splitByShippingProfile;
 
     /**
-     *  The storage location type. The following types are available: none smallmedium large europallet
+     *  The storage location type. The following types are availabel: none smallmedium large europallet
      * @var string
      */
     public $storageLocationType;
@@ -80,7 +80,7 @@ class Warehouse
     public $isInventoryModeActive;
 
     /**
-     *  The id of the logistics type of the warehouse. The logistics type states which service provider fulfills the storage and shipping. The following logistics types are available:
+     *  The id of the logistics type of the warehouse. The logistics type states which service provider fulfills the storage and shipping. The following logistics types are availabel:
      *
      * own
      * amazon

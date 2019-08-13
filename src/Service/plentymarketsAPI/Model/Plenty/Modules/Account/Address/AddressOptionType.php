@@ -1,12 +1,12 @@
 <?php
 
 
-namespace BSApp\Service\plentymarketsAPI\Model\Plenty\Modules\Account\Address;
+namespace App\Service\plentymarketsAPI\Model\Plenty\Modules\Account\Address;
 
 class AddressOptionType
 {
     /**
-     *  The ID of the address option type. It is possible to define individual types. The following types are available by default:
+     *  The ID of the address option type. It is possible to define individual types. The following types are availabel by default:
      *
      * 1 = VAT number
      * 2 = External address ID

@@ -1,7 +1,7 @@
 <?php
 
 
-namespace BSApp\Service\plentymarketsAPI\Model\Plenty\Modules\Account;
+namespace App\Service\plentymarketsAPI\Model\Plenty\Modules\Account;
 
 class Account
 {

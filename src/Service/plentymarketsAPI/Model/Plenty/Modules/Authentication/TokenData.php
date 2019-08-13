@@ -1,7 +1,7 @@
 <?php
 
 
-namespace BSApp\Service\plentymarketsAPI\Model\Plenty\Modules\Authentication;
+namespace App\Service\plentymarketsAPI\Model\Plenty\Modules\Authentication;
 
 class TokenData
 {

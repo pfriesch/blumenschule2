@@ -1,7 +1,7 @@
 <?php
 
 
-namespace BSApp\Service\plentymarketsAPI\Model\Plenty\Modules\System\Statistic;
+namespace App\Service\plentymarketsAPI\Model\Plenty\Modules\System\Statistic;
 
 class CloudMetricsList
 {

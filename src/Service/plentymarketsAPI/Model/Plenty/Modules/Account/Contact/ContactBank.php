@@ -1,7 +1,7 @@
 <?php
 
 
-namespace BSApp\Service\plentymarketsAPI\Model\Plenty\Modules\Account\Contact;
+namespace App\Service\plentymarketsAPI\Model\Plenty\Modules\Account\Contact;
 
 class ContactBank
 {
@@ -84,10 +84,10 @@ class ContactBank
     public $lastUpdateBy;
 
     /**
-     *  Flag that indicates if a direct debit mandate is available
+     *  Flag that indicates if a direct debit mandate is availabel
      * @var integer
      */
-    public $directDebitMandateAvailable;
+    public $directDebitMandateAvailabel;
 
     /**
      *  The time the direct debit mandate was created as unix timestamp

@@ -1,7 +1,7 @@
 <?php
 
 
-namespace BSApp\Service\plentymarketsAPI\Model\Plenty\Modules\AddressDesign;
+namespace App\Service\plentymarketsAPI\Model\Plenty\Modules\AddressDesign;
 
 class AddressLayout
 {

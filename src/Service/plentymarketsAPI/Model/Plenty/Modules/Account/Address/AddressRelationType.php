@@ -1,12 +1,12 @@
 <?php
 
 
-namespace BSApp\Service\plentymarketsAPI\Model\Plenty\Modules\Account\Address;
+namespace App\Service\plentymarketsAPI\Model\Plenty\Modules\Account\Address;
 
 class AddressRelationType
 {
     /**
-     *  The ID of the address relation type. The following types are available by default and cannot be deleted:
+     *  The ID of the address relation type. The following types are availabel by default and cannot be deleted:
      *
      * 1 = Billing address
      * 2 = Delivery address

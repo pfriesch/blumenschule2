@@ -1,11 +1,11 @@
 <?php
 
 
-namespace BSApp\Service\plentymarketsAPI\Model\Plenty\Modules\Category;
+namespace App\Service\plentymarketsAPI\Model\Plenty\Modules\Category;
 
-use BSApp\Service\plentymarketsAPI\Model\Plenty\Modules\Category\CategoryClient;
-use BSApp\Service\plentymarketsAPI\Model\Plenty\Modules\Category\CategoryDetails;
-use BSApp\Service\plentymarketsAPI\Model\Plenty\Modules\Category\CategoryProperty;
+use App\Service\plentymarketsAPI\Model\Plenty\Modules\Category\CategoryClient;
+use App\Service\plentymarketsAPI\Model\Plenty\Modules\Category\CategoryDetails;
+use App\Service\plentymarketsAPI\Model\Plenty\Modules\Category\CategoryProperty;
 
 class Category
 {

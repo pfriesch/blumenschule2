@@ -1,7 +1,7 @@
 <?php
 
 
-namespace BSApp\Service\plentymarketsAPI\Model\Plenty\Modules\Warehouse;
+namespace App\Service\plentymarketsAPI\Model\Plenty\Modules\Warehouse;
 
 class WarehouseLocation
 {

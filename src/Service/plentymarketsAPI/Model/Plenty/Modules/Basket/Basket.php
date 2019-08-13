@@ -1,7 +1,7 @@
 <?php
 
 
-namespace BSApp\Service\plentymarketsAPI\Model\Plenty\Modules\Basket;
+namespace App\Service\plentymarketsAPI\Model\Plenty\Modules\Basket;
 
 class Basket
 {
@@ -144,7 +144,7 @@ class Basket
     public $basketRebate;
 
     /**
-     *  The discount type. The following types are available:
+     *  The discount type. The following types are availabel:
      *
      *     Discount scale based on net value of items = 4
      *         Discount based on method of payment = 5

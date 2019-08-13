@@ -1,9 +1,9 @@
 <?php
 
 
-namespace BSApp\Service\plentymarketsAPI\Model\Plenty\Modules\Item\VariationProperty;
+namespace App\Service\plentymarketsAPI\Model\Plenty\Modules\Item\VariationProperty;
 
-use BSApp\Service\plentymarketsAPI\Model\Plenty\Modules\Item\VariationProperty\VariationPropertyValueText;
+use App\Service\plentymarketsAPI\Model\Plenty\Modules\Item\VariationProperty\VariationPropertyValueText;
 
 class VariationPropertyValue
 {

@@ -1,7 +1,7 @@
 <?php
 
 
-namespace BSApp\Service\plentymarketsAPI\Model\Plenty\Log;
+namespace App\Service\plentymarketsAPI\Model\Plenty\Log;
 
 class Log
 {

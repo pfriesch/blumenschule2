@@ -1,7 +1,7 @@
 <?php
 
 
-namespace BSApp\Service\plentymarketsAPI\Model\Plenty\Modules\Ticket;
+namespace App\Service\plentymarketsAPI\Model\Plenty\Modules\Ticket;
 
 class Ticket
 {

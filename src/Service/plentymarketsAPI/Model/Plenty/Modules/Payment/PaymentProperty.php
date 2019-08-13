@@ -1,7 +1,7 @@
 <?php
 
 
-namespace BSApp\Service\plentymarketsAPI\Model\Plenty\Modules\Payment;
+namespace App\Service\plentymarketsAPI\Model\Plenty\Modules\Payment;
 
 class PaymentProperty
 {
@@ -18,7 +18,7 @@ class PaymentProperty
     public $paymentId;
 
     /**
-     *  The ID of the property type. The following property types are available:
+     *  The ID of the property type. The following property types are availabel:
      *
      *     Transaction ID = 1
      *     Reference ID = 2

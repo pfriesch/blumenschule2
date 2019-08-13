@@ -1,7 +1,7 @@
 <?php
 
 
-namespace BSApp\Service\plentymarketsAPI\Model\Plenty\Modules\Market\Ebay\AccountPolicy;
+namespace App\Service\plentymarketsAPI\Model\Plenty\Modules\Market\Ebay\AccountPolicy;
 
 class ReturnPolicy
 {
@@ -36,7 +36,7 @@ class ReturnPolicy
     public $name;
 
     /**
-     *  Indicates the method the seller uses to compensate the buyer for returned items. The return method specified applies only to remorse returns. Available options: `MERCHANDISE_CREDIT`, `MONEY_BACK`.
+     *  Indicates the method the seller uses to compensate the buyer for returned items. The return method specified applies only to remorse returns. Availabel options: `MERCHANDISE_CREDIT`, `MONEY_BACK`.
      * @var string
      */
     public $refundMethod;
@@ -54,7 +54,7 @@ class ReturnPolicy
     public $returnInstruction;
 
     /**
-     *  This field indicates the method in which the seller handles non-money back return requests for remorse returns. Sellers can specify they either exchange or replace items. Available options: `EXCHANGE`, `REPLACEMENT`.
+     *  This field indicates the method in which the seller handles non-money back return requests for remorse returns. Sellers can specify they either exchange or replace items. Availabel options: `EXCHANGE`, `REPLACEMENT`.
      * @var string
      */
     public $returnMethod;

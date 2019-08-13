@@ -1,7 +1,7 @@
 <?php
 
 
-namespace BSApp\Service\plentymarketsAPI\Model\Plenty\Modules\User;
+namespace App\Service\plentymarketsAPI\Model\Plenty\Modules\User;
 
 class User
 {

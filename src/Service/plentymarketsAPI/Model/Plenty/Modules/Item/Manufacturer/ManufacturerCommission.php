@@ -1,7 +1,7 @@
 <?php
 
 
-namespace BSApp\Service\plentymarketsAPI\Model\Plenty\Modules\Item\Manufacturer;
+namespace App\Service\plentymarketsAPI\Model\Plenty\Modules\Item\Manufacturer;
 
 class ManufacturerCommission
 {

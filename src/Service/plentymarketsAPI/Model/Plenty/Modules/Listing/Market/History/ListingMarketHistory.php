@@ -1,7 +1,7 @@
 <?php
 
 
-namespace BSApp\Service\plentymarketsAPI\Model\Plenty\Modules\Listing\Market\History;
+namespace App\Service\plentymarketsAPI\Model\Plenty\Modules\Listing\Market\History;
 
 class ListingMarketHistory
 {
@@ -30,7 +30,7 @@ class ListingMarketHistory
     public $externalId;
 
     /**
-     *  The status ID of the current listing market history. The following properties are available:
+     *  The status ID of the current listing market history. The following properties are availabel:
      *
      * 1 = Active
      * 2 = Ended
@@ -42,7 +42,7 @@ class ListingMarketHistory
     public $statusId;
 
     /**
-     *  The quantity available for sale on the marketplace.
+     *  The quantity availabel for sale on the marketplace.
      * @var integer
      */
     public $quantity;

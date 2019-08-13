@@ -1,7 +1,7 @@
 <?php
 
 
-namespace BSApp\Service\plentymarketsAPI\Model\Plenty\Modules\Category;
+namespace App\Service\plentymarketsAPI\Model\Plenty\Modules\Category;
 
 class CategoryProperty
 {

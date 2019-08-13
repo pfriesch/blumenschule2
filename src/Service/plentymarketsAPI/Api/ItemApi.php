@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  BSApp\Service\plentymarketsAPI
+ * @package  App\Service\plentymarketsAPI
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -25,31 +25,31 @@
  * Do not edit the class manually.
  */
 
-namespace BSApp\Service\plentymarketsAPI\Api;
+namespace App\Service\plentymarketsAPI\Api;
 
-use BSApp\Service\plentymarketsAPI\Model\Plenty\Modules\Item\Item\ItemPaginated;
-use BSApp\Service\plentymarketsAPI\Model\Plenty\Modules\Item\ItemImage\ItemImage;
-use BSApp\Service\plentymarketsAPI\Model\Plenty\Modules\Item\SalesPrice\SalesPrice;
-use BSApp\Service\plentymarketsAPI\Model\Plenty\Modules\Item\Variation\VariationPaginated;
-use BSApp\Service\plentymarketsAPI\Model\Plenty\Modules\Item\VariationImage\VariationImage;
-use BSApp\Service\plentymarketsAPI\Model\Plenty\Modules\Item\VariationSalesPrice\VariationSalesPrice;
+use App\Service\plentymarketsAPI\Model\Plenty\Modules\Item\Item\ItemPaginated;
+use App\Service\plentymarketsAPI\Model\Plenty\Modules\Item\ItemImage\ItemImage;
+use App\Service\plentymarketsAPI\Model\Plenty\Modules\Item\SalesPrice\SalesPrice;
+use App\Service\plentymarketsAPI\Model\Plenty\Modules\Item\Variation\VariationPaginated;
+use App\Service\plentymarketsAPI\Model\Plenty\Modules\Item\VariationImage\VariationImage;
+use App\Service\plentymarketsAPI\Model\Plenty\Modules\Item\VariationSalesPrice\VariationSalesPrice;
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
 use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use BSApp\Service\plentymarketsAPI\ApiException;
-use BSApp\Service\plentymarketsAPI\Model\Plenty\Modules\Item\Item\Item;
-use BSApp\Service\plentymarketsAPI\Configuration;
-use BSApp\Service\plentymarketsAPI\HeaderSelector;
-use BSApp\Service\plentymarketsAPI\ObjectSerializer;
+use App\Service\plentymarketsAPI\ApiException;
+use App\Service\plentymarketsAPI\Model\Plenty\Modules\Item\Item\Item;
+use App\Service\plentymarketsAPI\Configuration;
+use App\Service\plentymarketsAPI\HeaderSelector;
+use App\Service\plentymarketsAPI\ObjectSerializer;
 
 /**
  * ItemApi Class Doc Comment
  *
  * @category Class
- * @package  BSApp\Service\plentymarketsAPI
+ * @package  App\Service\plentymarketsAPI
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -213,7 +213,7 @@ class ItemApi
      *
      * @return Item
      * @throws \InvalidArgumentException
-     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
+     * @throws \App\Service\plentymarketsAPI\ApiException on non-2xx response
      */
     public function restItemsItemIdGet($item_id, $lang = null)
     {
@@ -231,7 +231,7 @@ class ItemApi
      *
      * @return array of Item, HTTP status code, HTTP response headers (array of strings)
      * @throws \InvalidArgumentException
-     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
+     * @throws \App\Service\plentymarketsAPI\ApiException on non-2xx response
      */
     public function restItemsItemIdGetWithHttpInfo($item_id, $lang = null)
     {
@@ -287,7 +287,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemItemModelsItem',
+                        '\App\Service\plentymarketsAPI\Model\PlentyModulesItemItemModelsItem',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -304,7 +304,7 @@ class ItemApi
      * List variations of an item
      *
      * @param int $item_id item_id (required)
-     * @param string $with Includes the specified variation information in the results. The following parameters are available: &lt;ul&gt;&lt;li&gt;properties&lt;/b&gt; &#x3D; The properties linked to the variation&lt;/li&gt;&lt;li&gt;variationProperties&lt;/b&gt; &#x3D; The properties linked to the variation&lt;/li&gt;&lt;li&gt;variationBarcodes&lt;/b&gt; &#x3D; The barcode linked to the variation and the saved code&lt;/li&gt;&lt;li&gt;variationBundleComponents&lt;/b&gt; &#x3D; The bundle components of the variation and their quantities&lt;/li&gt;&lt;li&gt;variationComponentBundles&lt;/b&gt; &#x3D; The bundles that this variation is a component of&lt;/li&gt;&lt;li&gt;variationSalesPrices&lt;/b&gt; &#x3D; The sales prices linked to the variation and the saved price&lt;/li&gt;&lt;li&gt;marketItemNumbers&lt;/b&gt; &#x3D; The market ident number of the variation&lt;/li&gt;&lt;li&gt;variationCategories&lt;/b&gt; &#x3D; The categories linked to the variation&lt;/li&gt;&lt;li&gt;variationClients&lt;/b&gt; &#x3D; The clients (stores) for which the variation is activated&lt;/li&gt;&lt;li&gt;variationMarkets&lt;/b&gt; &#x3D; The markets for which the variation is activated &lt;/li&gt;&lt;li&gt;variationDefaultCategory&lt;/b&gt; &#x3D; The default category of the variation&lt;/li&gt;&lt;li&gt;variationSuppliers&lt;/b&gt; &#x3D; The supplier data associated with the variation&lt;/li&gt;&lt;li&gt;variationWarehouses&lt;/b&gt; &#x3D; The warehouse data associated with the variation&lt;/li&gt;&lt;li&gt;images&lt;/b&gt; &#x3D; The images linked to the variation&lt;/li&gt;&lt;li&gt;itemImages&lt;/b&gt; &#x3D; The images linked to the item&lt;/li&gt;&lt;li&gt;variationAttributeValues&lt;/b&gt; &#x3D; The attribute values of the variation&lt;/li&gt;&lt;li&gt;variationSkus&lt;/b&gt; &#x3D; The SKU data associated with the variation&lt;/li&gt;&lt;li&gt;variationAdditionalSkus&lt;/b&gt; &#x3D; The additional SKU data associated with the variation&lt;/li&gt;&lt;li&gt;unit&lt;/b&gt; &#x3D; The unit assigned to the variation&lt;/li&gt;&lt;li&gt;parent&lt;/b&gt; &#x3D; The main variation of the variation. Value is null if this variation is the item&#x27;s main variation.&lt;/li&gt;&lt;li&gt;item&lt;/b&gt; &#x3D; The item of the variation&lt;/li&gt;&lt;li&gt;stock&lt;/b&gt; &#x3D; The stock data of the variation&lt;/li&gt;&lt;/ul&gt; For example, specifying the parameters variationCategories and variationDefaultCategory will include the default category and all other categories the variations are linked to. More than one parameter should be separated by commas. (optional)
+     * @param string $with Includes the specified variation information in the results. The following parameters are availabel: &lt;ul&gt;&lt;li&gt;properties&lt;/b&gt; &#x3D; The properties linked to the variation&lt;/li&gt;&lt;li&gt;variationProperties&lt;/b&gt; &#x3D; The properties linked to the variation&lt;/li&gt;&lt;li&gt;variationBarcodes&lt;/b&gt; &#x3D; The barcode linked to the variation and the saved code&lt;/li&gt;&lt;li&gt;variationBundleComponents&lt;/b&gt; &#x3D; The bundle components of the variation and their quantities&lt;/li&gt;&lt;li&gt;variationComponentBundles&lt;/b&gt; &#x3D; The bundles that this variation is a component of&lt;/li&gt;&lt;li&gt;variationSalesPrices&lt;/b&gt; &#x3D; The sales prices linked to the variation and the saved price&lt;/li&gt;&lt;li&gt;marketItemNumbers&lt;/b&gt; &#x3D; The market ident number of the variation&lt;/li&gt;&lt;li&gt;variationCategories&lt;/b&gt; &#x3D; The categories linked to the variation&lt;/li&gt;&lt;li&gt;variationClients&lt;/b&gt; &#x3D; The clients (stores) for which the variation is activated&lt;/li&gt;&lt;li&gt;variationMarkets&lt;/b&gt; &#x3D; The markets for which the variation is activated &lt;/li&gt;&lt;li&gt;variationDefaultCategory&lt;/b&gt; &#x3D; The default category of the variation&lt;/li&gt;&lt;li&gt;variationSuppliers&lt;/b&gt; &#x3D; The supplier data associated with the variation&lt;/li&gt;&lt;li&gt;variationWarehouses&lt;/b&gt; &#x3D; The warehouse data associated with the variation&lt;/li&gt;&lt;li&gt;images&lt;/b&gt; &#x3D; The images linked to the variation&lt;/li&gt;&lt;li&gt;itemImages&lt;/b&gt; &#x3D; The images linked to the item&lt;/li&gt;&lt;li&gt;variationAttributeValues&lt;/b&gt; &#x3D; The attribute values of the variation&lt;/li&gt;&lt;li&gt;variationSkus&lt;/b&gt; &#x3D; The SKU data associated with the variation&lt;/li&gt;&lt;li&gt;variationAdditionalSkus&lt;/b&gt; &#x3D; The additional SKU data associated with the variation&lt;/li&gt;&lt;li&gt;unit&lt;/b&gt; &#x3D; The unit assigned to the variation&lt;/li&gt;&lt;li&gt;parent&lt;/b&gt; &#x3D; The main variation of the variation. Value is null if this variation is the item&#x27;s main variation.&lt;/li&gt;&lt;li&gt;item&lt;/b&gt; &#x3D; The item of the variation&lt;/li&gt;&lt;li&gt;stock&lt;/b&gt; &#x3D; The stock data of the variation&lt;/li&gt;&lt;/ul&gt; For example, specifying the parameters variationCategories and variationDefaultCategory will include the default category and all other categories the variations are linked to. More than one parameter should be separated by commas. (optional)
      * @param string $lang The &lt;a href&#x3D;&#x27;https://developers.plentymarkets.com/rest-doc/introduction#countries&#x27; target&#x3D;&#x27;_blank&#x27;&gt;language&lt;/a&gt; of the variation information. (optional)
      * @param int $page Limits the results to a specific page. The page number must be specified. (optional)
      * @param int $items_per_page Limits the number of results listed per page to a specific number. The number of variations to be listed per page must be specified. (optional)
@@ -321,7 +321,7 @@ class ItemApi
      * @param string $related_updated_between Filter restricts the list of results to those variations for which related information was updated during the specified period. Related information is defined as information linked to the variation, i.e. barcodes, categories, images, markets, clients (stores), prices, suppliers, warehouses and the default category. See variationUpdatedBetween for supported formats. (optional)
      *
      * @return object
-     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
+     * @throws \App\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      */
     public function restItemsItemIdVariationsGet($item_id, $with = null, $lang = null, $page = null, $items_per_page = null, $is_main = null, $is_active = null, $barcode = null, $number_exact = null, $number_fuzzy = null, $is_bundle = null, $supplier_number = null, $manufacturer_id = null, $updated_between = null, $created_between = null, $related_updated_between = null)
@@ -336,7 +336,7 @@ class ItemApi
      * List variations of an item
      *
      * @param int $item_id (required)
-     * @param string $with Includes the specified variation information in the results. The following parameters are available: &lt;ul&gt;&lt;li&gt;properties&lt;/b&gt; &#x3D; The properties linked to the variation&lt;/li&gt;&lt;li&gt;variationProperties&lt;/b&gt; &#x3D; The properties linked to the variation&lt;/li&gt;&lt;li&gt;variationBarcodes&lt;/b&gt; &#x3D; The barcode linked to the variation and the saved code&lt;/li&gt;&lt;li&gt;variationBundleComponents&lt;/b&gt; &#x3D; The bundle components of the variation and their quantities&lt;/li&gt;&lt;li&gt;variationComponentBundles&lt;/b&gt; &#x3D; The bundles that this variation is a component of&lt;/li&gt;&lt;li&gt;variationSalesPrices&lt;/b&gt; &#x3D; The sales prices linked to the variation and the saved price&lt;/li&gt;&lt;li&gt;marketItemNumbers&lt;/b&gt; &#x3D; The market ident number of the variation&lt;/li&gt;&lt;li&gt;variationCategories&lt;/b&gt; &#x3D; The categories linked to the variation&lt;/li&gt;&lt;li&gt;variationClients&lt;/b&gt; &#x3D; The clients (stores) for which the variation is activated&lt;/li&gt;&lt;li&gt;variationMarkets&lt;/b&gt; &#x3D; The markets for which the variation is activated &lt;/li&gt;&lt;li&gt;variationDefaultCategory&lt;/b&gt; &#x3D; The default category of the variation&lt;/li&gt;&lt;li&gt;variationSuppliers&lt;/b&gt; &#x3D; The supplier data associated with the variation&lt;/li&gt;&lt;li&gt;variationWarehouses&lt;/b&gt; &#x3D; The warehouse data associated with the variation&lt;/li&gt;&lt;li&gt;images&lt;/b&gt; &#x3D; The images linked to the variation&lt;/li&gt;&lt;li&gt;itemImages&lt;/b&gt; &#x3D; The images linked to the item&lt;/li&gt;&lt;li&gt;variationAttributeValues&lt;/b&gt; &#x3D; The attribute values of the variation&lt;/li&gt;&lt;li&gt;variationSkus&lt;/b&gt; &#x3D; The SKU data associated with the variation&lt;/li&gt;&lt;li&gt;variationAdditionalSkus&lt;/b&gt; &#x3D; The additional SKU data associated with the variation&lt;/li&gt;&lt;li&gt;unit&lt;/b&gt; &#x3D; The unit assigned to the variation&lt;/li&gt;&lt;li&gt;parent&lt;/b&gt; &#x3D; The main variation of the variation. Value is null if this variation is the item&#x27;s main variation.&lt;/li&gt;&lt;li&gt;item&lt;/b&gt; &#x3D; The item of the variation&lt;/li&gt;&lt;li&gt;stock&lt;/b&gt; &#x3D; The stock data of the variation&lt;/li&gt;&lt;/ul&gt; For example, specifying the parameters variationCategories and variationDefaultCategory will include the default category and all other categories the variations are linked to. More than one parameter should be separated by commas. (optional)
+     * @param string $with Includes the specified variation information in the results. The following parameters are availabel: &lt;ul&gt;&lt;li&gt;properties&lt;/b&gt; &#x3D; The properties linked to the variation&lt;/li&gt;&lt;li&gt;variationProperties&lt;/b&gt; &#x3D; The properties linked to the variation&lt;/li&gt;&lt;li&gt;variationBarcodes&lt;/b&gt; &#x3D; The barcode linked to the variation and the saved code&lt;/li&gt;&lt;li&gt;variationBundleComponents&lt;/b&gt; &#x3D; The bundle components of the variation and their quantities&lt;/li&gt;&lt;li&gt;variationComponentBundles&lt;/b&gt; &#x3D; The bundles that this variation is a component of&lt;/li&gt;&lt;li&gt;variationSalesPrices&lt;/b&gt; &#x3D; The sales prices linked to the variation and the saved price&lt;/li&gt;&lt;li&gt;marketItemNumbers&lt;/b&gt; &#x3D; The market ident number of the variation&lt;/li&gt;&lt;li&gt;variationCategories&lt;/b&gt; &#x3D; The categories linked to the variation&lt;/li&gt;&lt;li&gt;variationClients&lt;/b&gt; &#x3D; The clients (stores) for which the variation is activated&lt;/li&gt;&lt;li&gt;variationMarkets&lt;/b&gt; &#x3D; The markets for which the variation is activated &lt;/li&gt;&lt;li&gt;variationDefaultCategory&lt;/b&gt; &#x3D; The default category of the variation&lt;/li&gt;&lt;li&gt;variationSuppliers&lt;/b&gt; &#x3D; The supplier data associated with the variation&lt;/li&gt;&lt;li&gt;variationWarehouses&lt;/b&gt; &#x3D; The warehouse data associated with the variation&lt;/li&gt;&lt;li&gt;images&lt;/b&gt; &#x3D; The images linked to the variation&lt;/li&gt;&lt;li&gt;itemImages&lt;/b&gt; &#x3D; The images linked to the item&lt;/li&gt;&lt;li&gt;variationAttributeValues&lt;/b&gt; &#x3D; The attribute values of the variation&lt;/li&gt;&lt;li&gt;variationSkus&lt;/b&gt; &#x3D; The SKU data associated with the variation&lt;/li&gt;&lt;li&gt;variationAdditionalSkus&lt;/b&gt; &#x3D; The additional SKU data associated with the variation&lt;/li&gt;&lt;li&gt;unit&lt;/b&gt; &#x3D; The unit assigned to the variation&lt;/li&gt;&lt;li&gt;parent&lt;/b&gt; &#x3D; The main variation of the variation. Value is null if this variation is the item&#x27;s main variation.&lt;/li&gt;&lt;li&gt;item&lt;/b&gt; &#x3D; The item of the variation&lt;/li&gt;&lt;li&gt;stock&lt;/b&gt; &#x3D; The stock data of the variation&lt;/li&gt;&lt;/ul&gt; For example, specifying the parameters variationCategories and variationDefaultCategory will include the default category and all other categories the variations are linked to. More than one parameter should be separated by commas. (optional)
      * @param string $lang The &lt;a href&#x3D;&#x27;https://developers.plentymarkets.com/rest-doc/introduction#countries&#x27; target&#x3D;&#x27;_blank&#x27;&gt;language&lt;/a&gt; of the variation information. (optional)
      * @param int $page Limits the results to a specific page. The page number must be specified. (optional)
      * @param int $items_per_page Limits the number of results listed per page to a specific number. The number of variations to be listed per page must be specified. (optional)
@@ -353,7 +353,7 @@ class ItemApi
      * @param string $related_updated_between Filter restricts the list of results to those variations for which related information was updated during the specified period. Related information is defined as information linked to the variation, i.e. barcodes, categories, images, markets, clients (stores), prices, suppliers, warehouses and the default category. See variationUpdatedBetween for supported formats. (optional)
      *
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
-     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
+     * @throws \App\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      */
     public function restItemsItemIdVariationsGetWithHttpInfo($item_id, $with = null, $lang = null, $page = null, $items_per_page = null, $is_main = null, $is_active = null, $barcode = null, $number_exact = null, $number_fuzzy = null, $is_bundle = null, $supplier_number = null, $manufacturer_id = null, $updated_between = null, $created_between = null, $related_updated_between = null)
@@ -424,7 +424,7 @@ class ItemApi
      * Create request for operation 'restItemsItemIdVariationsGet'
      *
      * @param int $item_id (required)
-     * @param string $with Includes the specified variation information in the results. The following parameters are available: &lt;ul&gt;&lt;li&gt;properties&lt;/b&gt; &#x3D; The properties linked to the variation&lt;/li&gt;&lt;li&gt;variationProperties&lt;/b&gt; &#x3D; The properties linked to the variation&lt;/li&gt;&lt;li&gt;variationBarcodes&lt;/b&gt; &#x3D; The barcode linked to the variation and the saved code&lt;/li&gt;&lt;li&gt;variationBundleComponents&lt;/b&gt; &#x3D; The bundle components of the variation and their quantities&lt;/li&gt;&lt;li&gt;variationComponentBundles&lt;/b&gt; &#x3D; The bundles that this variation is a component of&lt;/li&gt;&lt;li&gt;variationSalesPrices&lt;/b&gt; &#x3D; The sales prices linked to the variation and the saved price&lt;/li&gt;&lt;li&gt;marketItemNumbers&lt;/b&gt; &#x3D; The market ident number of the variation&lt;/li&gt;&lt;li&gt;variationCategories&lt;/b&gt; &#x3D; The categories linked to the variation&lt;/li&gt;&lt;li&gt;variationClients&lt;/b&gt; &#x3D; The clients (stores) for which the variation is activated&lt;/li&gt;&lt;li&gt;variationMarkets&lt;/b&gt; &#x3D; The markets for which the variation is activated &lt;/li&gt;&lt;li&gt;variationDefaultCategory&lt;/b&gt; &#x3D; The default category of the variation&lt;/li&gt;&lt;li&gt;variationSuppliers&lt;/b&gt; &#x3D; The supplier data associated with the variation&lt;/li&gt;&lt;li&gt;variationWarehouses&lt;/b&gt; &#x3D; The warehouse data associated with the variation&lt;/li&gt;&lt;li&gt;images&lt;/b&gt; &#x3D; The images linked to the variation&lt;/li&gt;&lt;li&gt;itemImages&lt;/b&gt; &#x3D; The images linked to the item&lt;/li&gt;&lt;li&gt;variationAttributeValues&lt;/b&gt; &#x3D; The attribute values of the variation&lt;/li&gt;&lt;li&gt;variationSkus&lt;/b&gt; &#x3D; The SKU data associated with the variation&lt;/li&gt;&lt;li&gt;variationAdditionalSkus&lt;/b&gt; &#x3D; The additional SKU data associated with the variation&lt;/li&gt;&lt;li&gt;unit&lt;/b&gt; &#x3D; The unit assigned to the variation&lt;/li&gt;&lt;li&gt;parent&lt;/b&gt; &#x3D; The main variation of the variation. Value is null if this variation is the item&#x27;s main variation.&lt;/li&gt;&lt;li&gt;item&lt;/b&gt; &#x3D; The item of the variation&lt;/li&gt;&lt;li&gt;stock&lt;/b&gt; &#x3D; The stock data of the variation&lt;/li&gt;&lt;/ul&gt; For example, specifying the parameters variationCategories and variationDefaultCategory will include the default category and all other categories the variations are linked to. More than one parameter should be separated by commas. (optional)
+     * @param string $with Includes the specified variation information in the results. The following parameters are availabel: &lt;ul&gt;&lt;li&gt;properties&lt;/b&gt; &#x3D; The properties linked to the variation&lt;/li&gt;&lt;li&gt;variationProperties&lt;/b&gt; &#x3D; The properties linked to the variation&lt;/li&gt;&lt;li&gt;variationBarcodes&lt;/b&gt; &#x3D; The barcode linked to the variation and the saved code&lt;/li&gt;&lt;li&gt;variationBundleComponents&lt;/b&gt; &#x3D; The bundle components of the variation and their quantities&lt;/li&gt;&lt;li&gt;variationComponentBundles&lt;/b&gt; &#x3D; The bundles that this variation is a component of&lt;/li&gt;&lt;li&gt;variationSalesPrices&lt;/b&gt; &#x3D; The sales prices linked to the variation and the saved price&lt;/li&gt;&lt;li&gt;marketItemNumbers&lt;/b&gt; &#x3D; The market ident number of the variation&lt;/li&gt;&lt;li&gt;variationCategories&lt;/b&gt; &#x3D; The categories linked to the variation&lt;/li&gt;&lt;li&gt;variationClients&lt;/b&gt; &#x3D; The clients (stores) for which the variation is activated&lt;/li&gt;&lt;li&gt;variationMarkets&lt;/b&gt; &#x3D; The markets for which the variation is activated &lt;/li&gt;&lt;li&gt;variationDefaultCategory&lt;/b&gt; &#x3D; The default category of the variation&lt;/li&gt;&lt;li&gt;variationSuppliers&lt;/b&gt; &#x3D; The supplier data associated with the variation&lt;/li&gt;&lt;li&gt;variationWarehouses&lt;/b&gt; &#x3D; The warehouse data associated with the variation&lt;/li&gt;&lt;li&gt;images&lt;/b&gt; &#x3D; The images linked to the variation&lt;/li&gt;&lt;li&gt;itemImages&lt;/b&gt; &#x3D; The images linked to the item&lt;/li&gt;&lt;li&gt;variationAttributeValues&lt;/b&gt; &#x3D; The attribute values of the variation&lt;/li&gt;&lt;li&gt;variationSkus&lt;/b&gt; &#x3D; The SKU data associated with the variation&lt;/li&gt;&lt;li&gt;variationAdditionalSkus&lt;/b&gt; &#x3D; The additional SKU data associated with the variation&lt;/li&gt;&lt;li&gt;unit&lt;/b&gt; &#x3D; The unit assigned to the variation&lt;/li&gt;&lt;li&gt;parent&lt;/b&gt; &#x3D; The main variation of the variation. Value is null if this variation is the item&#x27;s main variation.&lt;/li&gt;&lt;li&gt;item&lt;/b&gt; &#x3D; The item of the variation&lt;/li&gt;&lt;li&gt;stock&lt;/b&gt; &#x3D; The stock data of the variation&lt;/li&gt;&lt;/ul&gt; For example, specifying the parameters variationCategories and variationDefaultCategory will include the default category and all other categories the variations are linked to. More than one parameter should be separated by commas. (optional)
      * @param string $lang The &lt;a href&#x3D;&#x27;https://developers.plentymarkets.com/rest-doc/introduction#countries&#x27; target&#x3D;&#x27;_blank&#x27;&gt;language&lt;/a&gt; of the variation information. (optional)
      * @param int $page Limits the results to a specific page. The page number must be specified. (optional)
      * @param int $items_per_page Limits the number of results listed per page to a specific number. The number of variations to be listed per page must be specified. (optional)
@@ -603,7 +603,7 @@ class ItemApi
      *
      * Search item
      *
-     * @param string $with Includes the specified variation information in the results. The following parameters are available: itemProperties, itemCrossSelling, variations, itemImages, itemShippingProfiles, ebayTitles (optional)
+     * @param string $with Includes the specified variation information in the results. The following parameters are availabel: itemProperties, itemCrossSelling, variations, itemImages, itemShippingProfiles, ebayTitles (optional)
      * @param string $lang The &lt;a href&#x3D;&#x27;https://developers.plentymarkets.com/rest-doc/introduction#countries&#x27; target&#x3D;&#x27;_blank&#x27;&gt;language&lt;/a&gt; of the variation information. (optional)
      * @param int $page Limits the results to a specific page. The page number must be specified. (optional)
      * @param int $items_per_page Limits the number of results listed per page to a specific number. The number of variations to be listed per page must be specified. (optional)
@@ -617,7 +617,7 @@ class ItemApi
      * @param string $variation_related_updated_between Filter restricts the list of results to items with variations for which related information was updated during the specified period. Related information is defined as information linked to the variation, i.e. barcodes, categories, images, markets, clients (stores), prices, suppliers, warehouses and the default category. See variationUpdatedBetween for supported formats. (optional)
      *
      * @return ItemPaginated
-     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
+     * @throws \App\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      */
     public function restItemsGet($with = null, $lang = null, $page = null, $items_per_page = null, $name = null, $manufacturer_id = null, $tag_id = null, $flag_one = null, $flag_two = null, $updated_between = null, $variation_updated_between = null, $variation_related_updated_between = null)
@@ -631,7 +631,7 @@ class ItemApi
      *
      * Search item
      *
-     * @param string $with Includes the specified variation information in the results. The following parameters are available: itemProperties, itemCrossSelling, variations, itemImages, itemShippingProfiles, ebayTitles (optional)
+     * @param string $with Includes the specified variation information in the results. The following parameters are availabel: itemProperties, itemCrossSelling, variations, itemImages, itemShippingProfiles, ebayTitles (optional)
      * @param string $lang The &lt;a href&#x3D;&#x27;https://developers.plentymarkets.com/rest-doc/introduction#countries&#x27; target&#x3D;&#x27;_blank&#x27;&gt;language&lt;/a&gt; of the variation information. (optional)
      * @param int $page Limits the results to a specific page. The page number must be specified. (optional)
      * @param int $items_per_page Limits the number of results listed per page to a specific number. The number of variations to be listed per page must be specified. (optional)
@@ -645,7 +645,7 @@ class ItemApi
      * @param string $variation_related_updated_between Filter restricts the list of results to items with variations for which related information was updated during the specified period. Related information is defined as information linked to the variation, i.e. barcodes, categories, images, markets, clients (stores), prices, suppliers, warehouses and the default category. See variationUpdatedBetween for supported formats. (optional)
      *
      * @return ItemPaginated, HTTP status code, HTTP response headers (array of strings)
-     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
+     * @throws \App\Service\plentymarketsAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      */
     public function restItemsGetWithHttpInfo($with = null, $lang = null, $page = null, $items_per_page = null, $name = null, $manufacturer_id = null, $tag_id = null, $flag_one = null, $flag_two = null, $updated_between = null, $variation_updated_between = null, $variation_related_updated_between = null)
@@ -717,7 +717,7 @@ class ItemApi
      *
      * Search item
      *
-     * @param string $with Includes the specified variation information in the results. The following parameters are available: itemProperties, itemCrossSelling, variations, itemImages, itemShippingProfiles, ebayTitles (optional)
+     * @param string $with Includes the specified variation information in the results. The following parameters are availabel: itemProperties, itemCrossSelling, variations, itemImages, itemShippingProfiles, ebayTitles (optional)
      * @param string $lang The &lt;a href&#x3D;&#x27;https://developers.plentymarkets.com/rest-doc/introduction#countries&#x27; target&#x3D;&#x27;_blank&#x27;&gt;language&lt;/a&gt; of the variation information. (optional)
      * @param int $page Limits the results to a specific page. The page number must be specified. (optional)
      * @param int $items_per_page Limits the number of results listed per page to a specific number. The number of variations to be listed per page must be specified. (optional)
@@ -748,7 +748,7 @@ class ItemApi
      *
      * Search item
      *
-     * @param string $with Includes the specified variation information in the results. The following parameters are available: itemProperties, itemCrossSelling, variations, itemImages, itemShippingProfiles, ebayTitles (optional)
+     * @param string $with Includes the specified variation information in the results. The following parameters are availabel: itemProperties, itemCrossSelling, variations, itemImages, itemShippingProfiles, ebayTitles (optional)
      * @param string $lang The &lt;a href&#x3D;&#x27;https://developers.plentymarkets.com/rest-doc/introduction#countries&#x27; target&#x3D;&#x27;_blank&#x27;&gt;language&lt;/a&gt; of the variation information. (optional)
      * @param int $page Limits the results to a specific page. The page number must be specified. (optional)
      * @param int $items_per_page Limits the number of results listed per page to a specific number. The number of variations to be listed per page must be specified. (optional)
@@ -809,7 +809,7 @@ class ItemApi
     /**
      * Create request for operation 'restItemsGet'
      *
-     * @param string $with Includes the specified variation information in the results. The following parameters are available: itemProperties, itemCrossSelling, variations, itemImages, itemShippingProfiles, ebayTitles (optional)
+     * @param string $with Includes the specified variation information in the results. The following parameters are availabel: itemProperties, itemCrossSelling, variations, itemImages, itemShippingProfiles, ebayTitles (optional)
      * @param string $lang The &lt;a href&#x3D;&#x27;https://developers.plentymarkets.com/rest-doc/introduction#countries&#x27; target&#x3D;&#x27;_blank&#x27;&gt;language&lt;/a&gt; of the variation information. (optional)
      * @param int $page Limits the results to a specific page. The page number must be specified. (optional)
      * @param int $items_per_page Limits the number of results listed per page to a specific number. The number of variations to be listed per page must be specified. (optional)
@@ -962,9 +962,9 @@ class ItemApi
      * @param int $id id (required)
      * @param int $variation_id variation_id (required)
      *
-     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationSalesPriceModelsVariationSalesPrice[]
+     * @return \App\Service\plentymarketsAPI\Model\PlentyModulesItemVariationSalesPriceModelsVariationSalesPrice[]
      * @throws \InvalidArgumentException
-     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
+     * @throws \App\Service\plentymarketsAPI\ApiException on non-2xx response
      */
     public function restItemsIdVariationsVariationIdVariationSalesPricesGet($id, $variation_id)
     {
@@ -980,9 +980,9 @@ class ItemApi
      * @param int $id (required)
      * @param int $variation_id (required)
      *
-     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationSalesPriceModelsVariationSalesPrice[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \App\Service\plentymarketsAPI\Model\PlentyModulesItemVariationSalesPriceModelsVariationSalesPrice[], HTTP status code, HTTP response headers (array of strings)
      * @throws \InvalidArgumentException
-     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
+     * @throws \App\Service\plentymarketsAPI\ApiException on non-2xx response
      */
     public function restItemsIdVariationsVariationIdVariationSalesPricesGetWithHttpInfo($id, $variation_id)
     {
@@ -1038,7 +1038,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationSalesPriceModelsVariationSalesPrice[]',
+                        '\App\Service\plentymarketsAPI\Model\PlentyModulesItemVariationSalesPriceModelsVariationSalesPrice[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1249,9 +1249,9 @@ class ItemApi
      * @param int $variation_id variation_id (required)
      * @param string $updated_at Filter restricts the list of results to variation images updated after the specified date. The date can be specified as unix timestamps or in the ISO 8601 date format. The PHP function strtotime is also supported. (optional)
      *
-     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationImageModelsVariationImage
+     * @return \App\Service\plentymarketsAPI\Model\PlentyModulesItemVariationImageModelsVariationImage
      * @throws \InvalidArgumentException
-     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
+     * @throws \App\Service\plentymarketsAPI\ApiException on non-2xx response
      */
     public function restItemsIdVariationsVariationIdVariationImagesGet($id, $variation_id, $updated_at = null)
     {
@@ -1268,9 +1268,9 @@ class ItemApi
      * @param int $variation_id (required)
      * @param string $updated_at Filter restricts the list of results to variation images updated after the specified date. The date can be specified as unix timestamps or in the ISO 8601 date format. The PHP function strtotime is also supported. (optional)
      *
-     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationImageModelsVariationImage, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \App\Service\plentymarketsAPI\Model\PlentyModulesItemVariationImageModelsVariationImage, HTTP status code, HTTP response headers (array of strings)
      * @throws \InvalidArgumentException
-     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
+     * @throws \App\Service\plentymarketsAPI\ApiException on non-2xx response
      */
     public function restItemsIdVariationsVariationIdVariationImagesGetWithHttpInfo($id, $variation_id, $updated_at = null)
     {
@@ -1326,7 +1326,7 @@ class ItemApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationImageModelsVariationImage',
+                        '\App\Service\plentymarketsAPI\Model\PlentyModulesItemVariationImageModelsVariationImage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1545,7 +1545,7 @@ class ItemApi
      *
      * @return ItemImage[]
      * @throws \InvalidArgumentException
-     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
+     * @throws \App\Service\plentymarketsAPI\ApiException on non-2xx response
      */
     public function restItemsIdImagesGet($id, $updated_at = null)
     {
@@ -1563,7 +1563,7 @@ class ItemApi
      *
      * @return array of ItemImage, HTTP status code, HTTP response headers (array of strings)
      * @throws \InvalidArgumentException
-     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
+     * @throws \App\Service\plentymarketsAPI\ApiException on non-2xx response
      */
     public function restItemsIdImagesGetWithHttpInfo($id, $updated_at = null)
     {

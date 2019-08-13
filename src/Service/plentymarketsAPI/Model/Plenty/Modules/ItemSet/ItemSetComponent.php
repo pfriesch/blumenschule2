@@ -1,7 +1,7 @@
 <?php
 
 
-namespace BSApp\Service\plentymarketsAPI\Model\Plenty\Modules\ItemSet;
+namespace App\Service\plentymarketsAPI\Model\Plenty\Modules\ItemSet;
 
 class ItemSetComponent
 {
@@ -30,7 +30,7 @@ class ItemSetComponent
     public $quantity;
 
     /**
-     *  Flag that indicates if enough stock is available for at least one variation of the component to cover the specified quantity.
+     *  Flag that indicates if enough stock is availabel for at least one variation of the component to cover the specified quantity.
      * @var boolean
      */
     public $isPurchasable;

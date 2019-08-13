@@ -1,7 +1,7 @@
 <?php
 
 
-namespace BSApp\Service\plentymarketsAPI\Model\Plenty\Modules\Item\ItemShippingProfiles;
+namespace App\Service\plentymarketsAPI\Model\Plenty\Modules\Item\ItemShippingProfiles;
 
 class ItemShippingProfiles
 {

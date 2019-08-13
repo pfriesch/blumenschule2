@@ -1,10 +1,10 @@
 <?php
 
 
-namespace BSApp\Service\plentymarketsAPI\Model\Plenty\Modules\Item\ItemImage;
+namespace App\Service\plentymarketsAPI\Model\Plenty\Modules\Item\ItemImage;
 
-use BSApp\Service\plentymarketsAPI\Model\Plenty\Modules\Item\ItemImage\ItemImageName;
-use BSApp\Service\plentymarketsAPI\Model\Plenty\Modules\Item\ItemImage\ItemImageAvailability;
+use App\Service\plentymarketsAPI\Model\Plenty\Modules\Item\ItemImage\ItemImageName;
+use App\Service\plentymarketsAPI\Model\Plenty\Modules\Item\ItemImage\ItemImageAvailability;
 
 class ItemImage
 {

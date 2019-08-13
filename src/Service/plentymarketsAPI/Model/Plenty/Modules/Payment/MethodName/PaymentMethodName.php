@@ -1,7 +1,7 @@
 <?php
 
 
-namespace BSApp\Service\plentymarketsAPI\Model\Plenty\Modules\Payment\MethodName;
+namespace App\Service\plentymarketsAPI\Model\Plenty\Modules\Payment\MethodName;
 
 class PaymentMethodName
 {

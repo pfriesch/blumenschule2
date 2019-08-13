@@ -1,7 +1,7 @@
 <?php
 
 
-namespace BSApp\Service\plentymarketsAPI\Model\Plenty\Modules\Plugin;
+namespace App\Service\plentymarketsAPI\Model\Plenty\Modules\Plugin;
 
 class Configuration
 {

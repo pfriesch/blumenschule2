@@ -1,12 +1,12 @@
 <?php
 
 
-namespace BSApp\Tests\plentymarketsAPI;
+namespace App\Tests\plentymarketsAPI;
 
-use BSApp\Service\plentymarketsAPI\BSPlentyService;
+use App\Service\plentymarketsAPI\BSPlentyService;
 
-use BSApp\Service\plentymarketsAPI\Api\OrderApi;
-use BSApp\Service\plentymarketsAPI\Configuration;
+use App\Service\plentymarketsAPI\Api\OrderApi;
+use App\Service\plentymarketsAPI\Configuration;
 use GuzzleHttp\Client;
 use PHPUnit\Framework\TestCase;
 

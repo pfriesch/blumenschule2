@@ -1,7 +1,7 @@
 <?php
 
 
-namespace BSApp\Service\plentymarketsAPI\Model\Plenty\Modules\Market\Ebay\ItemSpecific;
+namespace App\Service\plentymarketsAPI\Model\Plenty\Modules\Market\Ebay\ItemSpecific;
 
 class ItemSpecific
 {
@@ -42,13 +42,13 @@ class ItemSpecific
     public $valueFormat;
 
     /**
-     *  Help-text defines the purpose of the Item Specific. The help text will be shown only when it is available for the particular Item Specific.
+     *  Help-text defines the purpose of the Item Specific. The help text will be shown only when it is availabel for the particular Item Specific.
      * @var string
      */
     public $helpText;
 
     /**
-     *  A page on the eBay Web site with context-specific help tips that provide useful information about this Item Specific. Only returned when an applicable page is available in the system.
+     *  A page on the eBay Web site with context-specific help tips that provide useful information about this Item Specific. Only returned when an applicable page is availabel in the system.
      * @var string
      */
     public $helpUrl;
@@ -66,7 +66,7 @@ class ItemSpecific
     public $variationSpecifics;
 
     /**
-     *  The available values.
+     *  The availabel values.
      * @var array
      */
     public $values;

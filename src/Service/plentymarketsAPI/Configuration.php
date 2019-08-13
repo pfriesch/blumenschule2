@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  BSApp\Service\plentymarketsAPI
+ * @package  App\Service\plentymarketsAPI
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -25,9 +25,9 @@
  * Do not edit the class manually.
  */
 
-namespace BSApp\Service\plentymarketsAPI;
+namespace App\Service\plentymarketsAPI;
 
-use BSApp\Service\plentymarketsAPI\Api\AuthenticationApi;
+use App\Service\plentymarketsAPI\Api\AuthenticationApi;
 use Exception;
 use GuzzleHttp\Client;
 use InvalidArgumentException;
@@ -38,7 +38,7 @@ use stdClass;
  * PHP version 5
  *
  * @category Class
- * @package  BSApp\Service\plentymarketsAPI
+ * @package  App\Service\plentymarketsAPI
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -136,7 +136,7 @@ class Configuration
      */
     public static function toDebugReport()
     {
-        $report = 'PHP SDK (BSApp\Service\plentymarketsAPI) Debug Report:' . PHP_EOL;
+        $report = 'PHP SDK (App\Service\plentymarketsAPI) Debug Report:' . PHP_EOL;
         $report .= '    OS: ' . php_uname() . PHP_EOL;
         $report .= '    PHP Version: ' . PHP_VERSION . PHP_EOL;
         $report .= '    OpenAPI Spec Version: 1.0.0' . PHP_EOL;

@@ -1,7 +1,7 @@
 <?php
 
 
-namespace BSApp\Service\plentymarketsAPI\Model;
+namespace App\Service\plentymarketsAPI\Model;
 
 
 class PaginatedResponse

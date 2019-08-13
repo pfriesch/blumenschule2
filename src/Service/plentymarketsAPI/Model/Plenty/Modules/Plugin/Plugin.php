@@ -1,9 +1,9 @@
 <?php
 
 
-namespace BSApp\Service\plentymarketsAPI\Model\Plenty\Modules\Plugin;
+namespace App\Service\plentymarketsAPI\Model\Plenty\Modules\Plugin;
 
-use BSApp\Service\plentymarketsAPI\Model\Plenty\Modules\System\Webstore;
+use App\Service\plentymarketsAPI\Model\Plenty\Modules\System\Webstore;
 
 class Plugin
 {
@@ -77,7 +77,7 @@ class Plugin
     public $updateInformation;
 
     /**
-     *  The type of the plugin. The following plugin types are available:
+     *  The type of the plugin. The following plugin types are availabel:
      *
      *     Template
      *     Export

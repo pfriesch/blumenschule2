@@ -1,7 +1,7 @@
 <?php
 
 
-namespace BSApp\Service\plentymarketsAPI\Model\Plenty\Modules\Category;
+namespace App\Service\plentymarketsAPI\Model\Plenty\Modules\Category;
 
 class CategoryDetails
 {
@@ -108,13 +108,13 @@ class CategoryDetails
     public $position;
 
     /**
-     *  The template the category is linked to for the category overview. The template determines what the category overview will look like for this category. This option is available for categories of the type <strong>Item</strong> only. Possible values: ItemViewCategoriesList, ItemViewCategoriesList2 to ItemViewCategoriesList10.
+     *  The template the category is linked to for the category overview. The template determines what the category overview will look like for this category. This option is availabel for categories of the type <strong>Item</strong> only. Possible values: ItemViewCategoriesList, ItemViewCategoriesList2 to ItemViewCategoriesList10.
      * @var string
      */
     public $itemListView;
 
     /**
-     *  The template the category is linked to for the single item view. The template determines the appearance of the single item design for this category. This option is available for categories of the type <strong>Item</strong> only. Possible values: ItemViewSingleItem, ItemViewSingleItem2 to ItemViewSingleItem5.
+     *  The template the category is linked to for the single item view. The template determines the appearance of the single item design for this category. This option is availabel for categories of the type <strong>Item</strong> only. Possible values: ItemViewSingleItem, ItemViewSingleItem2 to ItemViewSingleItem5.
      * @var string
      */
     public $singleItemView;

@@ -1,7 +1,7 @@
 <?php
 
 
-namespace BSApp\Service\plentymarketsAPI\Model\Plenty\Modules\Payment;
+namespace App\Service\plentymarketsAPI\Model\Plenty\Modules\Payment;
 
 class PaymentContactRelation
 {

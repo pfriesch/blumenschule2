@@ -1,9 +1,9 @@
 <?php
 
 
-namespace BSApp\Service\plentymarketsAPI\Model\Plenty\Modules\Item\Attribute;
+namespace App\Service\plentymarketsAPI\Model\Plenty\Modules\Item\Attribute;
 
-use BSApp\Service\plentymarketsAPI\Model\PaginatedResponse;
+use App\Service\plentymarketsAPI\Model\PaginatedResponse;
 
 class AttributeValueMarketNamePaginated extends PaginatedResponse
 {

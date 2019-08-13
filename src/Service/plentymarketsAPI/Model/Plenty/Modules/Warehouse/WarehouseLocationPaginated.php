@@ -1,9 +1,9 @@
 <?php
 
 
-namespace BSApp\Service\plentymarketsAPI\Model\Plenty\Modules\Warehouse;
+namespace App\Service\plentymarketsAPI\Model\Plenty\Modules\Warehouse;
 
-use BSApp\Service\plentymarketsAPI\Model\PaginatedResponse;
+use App\Service\plentymarketsAPI\Model\PaginatedResponse;
 
 class WarehouseLocationPaginated extends PaginatedResponse
 {

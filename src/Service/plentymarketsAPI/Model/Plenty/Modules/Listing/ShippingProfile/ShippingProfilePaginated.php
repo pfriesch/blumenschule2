@@ -1,9 +1,9 @@
 <?php
 
 
-namespace BSApp\Service\plentymarketsAPI\Model\Plenty\Modules\Listing\ShippingProfile;
+namespace App\Service\plentymarketsAPI\Model\Plenty\Modules\Listing\ShippingProfile;
 
-use BSApp\Service\plentymarketsAPI\Model\PaginatedResponse;
+use App\Service\plentymarketsAPI\Model\PaginatedResponse;
 
 class ShippingProfilePaginated extends PaginatedResponse
 {

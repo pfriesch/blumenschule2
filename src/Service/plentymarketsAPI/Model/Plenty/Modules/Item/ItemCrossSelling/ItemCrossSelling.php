@@ -1,7 +1,7 @@
 <?php
 
 
-namespace BSApp\Service\plentymarketsAPI\Model\Plenty\Modules\Item\ItemCrossSelling;
+namespace App\Service\plentymarketsAPI\Model\Plenty\Modules\Item\ItemCrossSelling;
 
 class ItemCrossSelling
 {

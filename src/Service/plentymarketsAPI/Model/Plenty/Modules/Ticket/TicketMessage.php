@@ -1,7 +1,7 @@
 <?php
 
 
-namespace BSApp\Service\plentymarketsAPI\Model\Plenty\Modules\Ticket;
+namespace App\Service\plentymarketsAPI\Model\Plenty\Modules\Ticket;
 
 class TicketMessage
 {
@@ -36,7 +36,7 @@ class TicketMessage
     public $text;
 
     /**
-     *  The type of the message. Two types are available:
+     *  The type of the message. Two types are availabel:
      *
      * message (visible for the customer)
      * comment (not visible for the customer)
@@ -46,7 +46,7 @@ class TicketMessage
     public $type;
 
     /**
-     *  The origin of the message. The following sources are available by default and cannot be deleted.
+     *  The origin of the message. The following sources are availabel by default and cannot be deleted.
      *
      * backend
      * frontend

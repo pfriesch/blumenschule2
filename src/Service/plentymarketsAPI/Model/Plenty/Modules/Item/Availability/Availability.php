@@ -1,9 +1,9 @@
 <?php
 
 
-namespace BSApp\Service\plentymarketsAPI\Model\Plenty\Modules\Item\Availability;
+namespace App\Service\plentymarketsAPI\Model\Plenty\Modules\Item\Availability;
 
-use BSApp\Service\plentymarketsAPI\Model\Plenty\Modules\Item\Availability\AvailabilityName;
+use App\Service\plentymarketsAPI\Model\Plenty\Modules\Item\Availability\AvailabilityName;
 
 class Availability
 {

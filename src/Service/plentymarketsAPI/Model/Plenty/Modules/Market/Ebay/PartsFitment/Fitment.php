@@ -1,7 +1,7 @@
 <?php
 
 
-namespace BSApp\Service\plentymarketsAPI\Model\Plenty\Modules\Market\Ebay\PartsFitment;
+namespace App\Service\plentymarketsAPI\Model\Plenty\Modules\Market\Ebay\PartsFitment;
 
 class Fitment
 {

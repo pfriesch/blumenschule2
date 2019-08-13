@@ -266,7 +266,7 @@ def gen_models(parent_namespace, paginated_classes):
 parser = argparse.ArgumentParser(description='Renerate model definitions from plenty swagger API file')
 parser.add_argument('--api_doc', type=str, default='plentymarketsApiV2.json', required=False,
                     help='path to the swagger API doc')
-parser.add_argument('--parent_namespace', type=str, default='BSApp\Service\plentymarketsAPI\Model', required=False,
+parser.add_argument('--parent_namespace', type=str, default='App\Service\plentymarketsAPI\Model', required=False,
                     help='namespace where the code is generated/used')
 
 args = parser.parse_args()

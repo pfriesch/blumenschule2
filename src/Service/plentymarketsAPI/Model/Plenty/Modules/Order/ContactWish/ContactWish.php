@@ -1,7 +1,7 @@
 <?php
 
 
-namespace BSApp\Service\plentymarketsAPI\Model\Plenty\Modules\Order\ContactWish;
+namespace App\Service\plentymarketsAPI\Model\Plenty\Modules\Order\ContactWish;
 
 class ContactWish
 {

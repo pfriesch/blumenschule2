@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  BSApp\Service\plentymarketsAPI
+ * @package  App\Service\plentymarketsAPI
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -25,9 +25,9 @@
  * Do not edit the class manually.
  */
 
-namespace BSApp\Service\plentymarketsAPI\Api;
+namespace App\Service\plentymarketsAPI\Api;
 
-use BSApp\Service\plentymarketsAPI\Model\Plenty\Modules\Authentication\TokenData;
+use App\Service\plentymarketsAPI\Model\Plenty\Modules\Authentication\TokenData;
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
 use GuzzleHttp\Exception\RequestException;
@@ -36,10 +36,10 @@ use function GuzzleHttp\Psr7\build_query;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use BSApp\Service\plentymarketsAPI\ApiException;
-use BSApp\Service\plentymarketsAPI\Configuration;
-use BSApp\Service\plentymarketsAPI\HeaderSelector;
-use BSApp\Service\plentymarketsAPI\ObjectSerializer;
+use App\Service\plentymarketsAPI\ApiException;
+use App\Service\plentymarketsAPI\Configuration;
+use App\Service\plentymarketsAPI\HeaderSelector;
+use App\Service\plentymarketsAPI\ObjectSerializer;
 use InvalidArgumentException;
 use RuntimeException;
 use stdClass;
@@ -48,7 +48,7 @@ use stdClass;
  * AuthenticationApi Class Doc Comment
  *
  * @category Class
- * @package  BSApp\Service\plentymarketsAPI
+ * @package  App\Service\plentymarketsAPI
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -860,7 +860,7 @@ class AuthenticationApi
      * Refresh
      *
      *
-     * @return array of \BSApp\Service\plentymarketsAPI\Model\TokenData, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \App\Service\plentymarketsAPI\Model\TokenData, HTTP status code, HTTP response headers (array of strings)
      * @throws InvalidArgumentException
      * @throws ApiException on non-2xx response
      */

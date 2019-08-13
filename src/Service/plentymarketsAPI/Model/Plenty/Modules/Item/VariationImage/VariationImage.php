@@ -1,7 +1,7 @@
 <?php
 
 
-namespace BSApp\Service\plentymarketsAPI\Model\Plenty\Modules\Item\VariationImage;
+namespace App\Service\plentymarketsAPI\Model\Plenty\Modules\Item\VariationImage;
 
 class VariationImage
 {

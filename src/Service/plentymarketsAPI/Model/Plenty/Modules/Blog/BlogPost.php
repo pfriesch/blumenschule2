@@ -1,7 +1,7 @@
 <?php
 
 
-namespace BSApp\Service\plentymarketsAPI\Model\Plenty\Modules\Blog;
+namespace App\Service\plentymarketsAPI\Model\Plenty\Modules\Blog;
 
 class BlogPost
 {

@@ -1,7 +1,7 @@
 <?php
 
 
-namespace BSApp\Service\plentymarketsAPI\Model\Plenty\Modules\Account\Contact;
+namespace App\Service\plentymarketsAPI\Model\Plenty\Modules\Account\Contact;
 
 class Contact
 {

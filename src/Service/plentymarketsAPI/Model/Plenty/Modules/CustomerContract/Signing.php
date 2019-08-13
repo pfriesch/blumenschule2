@@ -1,7 +1,7 @@
 <?php
 
 
-namespace BSApp\Service\plentymarketsAPI\Model\Plenty\Modules\CustomerContract;
+namespace App\Service\plentymarketsAPI\Model\Plenty\Modules\CustomerContract;
 
 class Signing
 {

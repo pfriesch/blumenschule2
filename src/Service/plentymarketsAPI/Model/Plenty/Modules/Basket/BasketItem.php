@@ -1,7 +1,7 @@
 <?php
 
 
-namespace BSApp\Service\plentymarketsAPI\Model\Plenty\Modules\Basket;
+namespace App\Service\plentymarketsAPI\Model\Plenty\Modules\Basket;
 
 class BasketItem
 {

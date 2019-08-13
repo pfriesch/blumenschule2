@@ -1,7 +1,7 @@
 <?php
 
 
-namespace BSApp\Entity;
+namespace App\Entity;
 
 
 class Item

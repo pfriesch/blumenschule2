@@ -1,7 +1,7 @@
 <?php
 
 
-namespace BSApp\Service\plentymarketsAPI\Model\Plenty\Modules\PluginMultilingualism;
+namespace App\Service\plentymarketsAPI\Model\Plenty\Modules\PluginMultilingualism;
 
 class PluginTranslation
 {

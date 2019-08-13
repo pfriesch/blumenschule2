@@ -1,9 +1,9 @@
 <?php
 
 
-namespace BSApp\Service\plentymarketsAPI\Model\Plenty\Modules\Item\SalesPrice;
+namespace App\Service\plentymarketsAPI\Model\Plenty\Modules\Item\SalesPrice;
 
-use BSApp\Service\plentymarketsAPI\Model\PaginatedResponse;
+use App\Service\plentymarketsAPI\Model\PaginatedResponse;
 
 class SalesPricePaginated extends PaginatedResponse
 {

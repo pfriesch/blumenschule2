@@ -1,7 +1,7 @@
 <?php
 
 
-namespace BSApp\Service\plentymarketsAPI\Model\Plenty\Modules\Item\VariationSku;
+namespace App\Service\plentymarketsAPI\Model\Plenty\Modules\Item\VariationSku;
 
 class VariationSku
 {

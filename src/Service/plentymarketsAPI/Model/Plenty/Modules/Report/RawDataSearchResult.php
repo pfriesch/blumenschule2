@@ -1,9 +1,9 @@
 <?php
 
 
-namespace BSApp\Service\plentymarketsAPI\Model\Plenty\Modules\Report;
+namespace App\Service\plentymarketsAPI\Model\Plenty\Modules\Report;
 
-use BSApp\Service\plentymarketsAPI\Model\Plenty\Modules\Report\RawData;
+use App\Service\plentymarketsAPI\Model\Plenty\Modules\Report\RawData;
 
 class RawDataSearchResult
 {

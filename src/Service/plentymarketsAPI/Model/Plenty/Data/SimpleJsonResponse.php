@@ -1,7 +1,7 @@
 <?php
 
 
-namespace BSApp\Service\plentymarketsAPI\Model\Plenty\Data;
+namespace App\Service\plentymarketsAPI\Model\Plenty\Data;
 
 class SimpleJsonResponse
 {

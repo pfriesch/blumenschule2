@@ -1,7 +1,7 @@
 <?php
 
 
-namespace BSApp\Service\plentymarketsAPI\Model\Plenty\Modules\Property;
+namespace App\Service\plentymarketsAPI\Model\Plenty\Modules\Property;
 
 class Property
 {

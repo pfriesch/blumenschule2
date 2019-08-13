@@ -1,7 +1,7 @@
 <?php
 
 
-namespace BSApp\Service\plentymarketsAPI\Model\Plenty\Modules\ElasticSync\Core;
+namespace App\Service\plentymarketsAPI\Model\Plenty\Modules\ElasticSync\Core;
 
 class ElasticSyncOption
 {

@@ -1,7 +1,7 @@
 <?php
 
 
-namespace BSApp\Service\plentymarketsAPI\Model\Plenty\Modules\Wizard;
+namespace App\Service\plentymarketsAPI\Model\Plenty\Modules\Wizard;
 
 class Wizard
 {

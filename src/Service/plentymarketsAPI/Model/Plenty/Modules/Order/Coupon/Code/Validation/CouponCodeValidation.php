@@ -1,7 +1,7 @@
 <?php
 
 
-namespace BSApp\Service\plentymarketsAPI\Model\Plenty\Modules\Order\Coupon\Code\Validation;
+namespace App\Service\plentymarketsAPI\Model\Plenty\Modules\Order\Coupon\Code\Validation;
 
 class CouponCodeValidation
 {
@@ -12,7 +12,7 @@ class CouponCodeValidation
     public $campaignId;
 
     /**
-     *  The type of the campaign. Currently the only type available is plentymarkets.
+     *  The type of the campaign. Currently the only type availabel is plentymarkets.
      * @var string
      */
     public $validationType;

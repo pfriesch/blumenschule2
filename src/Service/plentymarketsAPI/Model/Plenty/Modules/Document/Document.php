@@ -1,7 +1,7 @@
 <?php
 
 
-namespace BSApp\Service\plentymarketsAPI\Model\Plenty\Modules\Document;
+namespace App\Service\plentymarketsAPI\Model\Plenty\Modules\Document;
 
 class Document
 {
@@ -12,7 +12,7 @@ class Document
     public $id;
 
     /**
-     *  The type of the document. The following types are available:
+     *  The type of the document. The following types are availabel:
      *
      *     admin
      *     blog

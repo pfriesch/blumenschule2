@@ -1,7 +1,7 @@
 <?php
 
 
-namespace BSApp\Service\plentymarketsAPI\Model\Plenty\Modules\Order\Shipping\PackageType;
+namespace App\Service\plentymarketsAPI\Model\Plenty\Modules\Order\Shipping\PackageType;
 
 class ShippingPackageType
 {

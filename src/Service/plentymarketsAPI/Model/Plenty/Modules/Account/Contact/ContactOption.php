@@ -1,7 +1,7 @@
 <?php
 
 
-namespace BSApp\Service\plentymarketsAPI\Model\Plenty\Modules\Account\Contact;
+namespace App\Service\plentymarketsAPI\Model\Plenty\Modules\Account\Contact;
 
 class ContactOption
 {
@@ -18,7 +18,7 @@ class ContactOption
     public $contactId;
 
     /**
-     *  The type ID of the contact option. It is possible to define individual contact option types. The following types are available by default and cannot be deleted:
+     *  The type ID of the contact option. It is possible to define individual contact option types. The following types are availabel by default and cannot be deleted:
      *
      * 1 = Telephone
      * 2 = Email
@@ -37,7 +37,7 @@ class ContactOption
     public $typeId;
 
     /**
-     *  The sub-type ID of the contact option. It is possible to define individual contact option sub-types. The following types are available by default and cannot be deleted:
+     *  The sub-type ID of the contact option. It is possible to define individual contact option sub-types. The following types are availabel by default and cannot be deleted:
      *
      * 1 = Work
      * 2 = Mobile private

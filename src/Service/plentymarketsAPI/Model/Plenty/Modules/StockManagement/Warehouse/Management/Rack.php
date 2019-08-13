@@ -1,7 +1,7 @@
 <?php
 
 
-namespace BSApp\Service\plentymarketsAPI\Model\Plenty\Modules\StockManagement\Warehouse\Management;
+namespace App\Service\plentymarketsAPI\Model\Plenty\Modules\StockManagement\Warehouse\Management;
 
 class Rack
 {

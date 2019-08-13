@@ -1,15 +1,15 @@
 <?php
 
 
-namespace BSApp\Service\plentymarketsAPI\Model\Plenty\Modules\Item\SalesPrice;
+namespace App\Service\plentymarketsAPI\Model\Plenty\Modules\Item\SalesPrice;
 
-use BSApp\Service\plentymarketsAPI\Model\Plenty\Modules\Item\SalesPrice\SalesPriceName;
-use BSApp\Service\plentymarketsAPI\Model\Plenty\Modules\Item\SalesPrice\SalesPriceAccount;
-use BSApp\Service\plentymarketsAPI\Model\Plenty\Modules\Item\SalesPrice\SalesPriceCountry;
-use BSApp\Service\plentymarketsAPI\Model\Plenty\Modules\Item\SalesPrice\SalesPriceCurrency;
-use BSApp\Service\plentymarketsAPI\Model\Plenty\Modules\Item\SalesPrice\SalesPriceCustomerClass;
-use BSApp\Service\plentymarketsAPI\Model\Plenty\Modules\Item\SalesPrice\SalesPriceReferrer;
-use BSApp\Service\plentymarketsAPI\Model\Plenty\Modules\Item\SalesPrice\SalesPriceOnlineStore;
+use App\Service\plentymarketsAPI\Model\Plenty\Modules\Item\SalesPrice\SalesPriceName;
+use App\Service\plentymarketsAPI\Model\Plenty\Modules\Item\SalesPrice\SalesPriceAccount;
+use App\Service\plentymarketsAPI\Model\Plenty\Modules\Item\SalesPrice\SalesPriceCountry;
+use App\Service\plentymarketsAPI\Model\Plenty\Modules\Item\SalesPrice\SalesPriceCurrency;
+use App\Service\plentymarketsAPI\Model\Plenty\Modules\Item\SalesPrice\SalesPriceCustomerClass;
+use App\Service\plentymarketsAPI\Model\Plenty\Modules\Item\SalesPrice\SalesPriceReferrer;
+use App\Service\plentymarketsAPI\Model\Plenty\Modules\Item\SalesPrice\SalesPriceOnlineStore;
 
 class SalesPrice
 {

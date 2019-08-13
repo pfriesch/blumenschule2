@@ -4,7 +4,7 @@
  * PHP version 7
  *
  * @category Class
- * @package  BSApp\Service\plentymarketsAPI
+ * @package  App\Service\plentymarketsAPI
  * @author   Pius Friesch
  */
 
@@ -15,10 +15,10 @@
  *
  */
 
-namespace BSApp\Service\plentymarketsAPI\Api;
+namespace App\Service\plentymarketsAPI\Api;
 
 
-use BSApp\Service\plentymarketsAPI\Model\Plenty\Modules\Order\OrderPaginated;
+use App\Service\plentymarketsAPI\Model\Plenty\Modules\Order\OrderPaginated;
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
 use GuzzleHttp\Exception\RequestException;
@@ -27,10 +27,10 @@ use function GuzzleHttp\Psr7\build_query;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use BSApp\Service\plentymarketsAPI\ApiException;
-use BSApp\Service\plentymarketsAPI\Configuration;
-use BSApp\Service\plentymarketsAPI\HeaderSelector;
-use BSApp\Service\plentymarketsAPI\ObjectSerializer;
+use App\Service\plentymarketsAPI\ApiException;
+use App\Service\plentymarketsAPI\Configuration;
+use App\Service\plentymarketsAPI\HeaderSelector;
+use App\Service\plentymarketsAPI\ObjectSerializer;
 use InvalidArgumentException;
 use RuntimeException;
 use stdClass;
@@ -39,7 +39,7 @@ use stdClass;
  * OrderApi Class Doc Comment
  *
  * @category Class
- * @package  BSApp\Service\plentymarketsAPI
+ * @package  App\Service\plentymarketsAPI
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */

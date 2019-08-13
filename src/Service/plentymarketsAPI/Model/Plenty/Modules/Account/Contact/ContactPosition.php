@@ -1,12 +1,12 @@
 <?php
 
 
-namespace BSApp\Service\plentymarketsAPI\Model\Plenty\Modules\Account\Contact;
+namespace App\Service\plentymarketsAPI\Model\Plenty\Modules\Account\Contact;
 
 class ContactPosition
 {
     /**
-     *  The ID of the contact position. It is possible to define individual contact positions. The following positions are available by default:
+     *  The ID of the contact position. It is possible to define individual contact positions. The following positions are availabel by default:
      *
      * 1 = Analyst
      * 2 = Director of Boards

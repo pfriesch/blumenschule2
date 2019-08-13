@@ -1,7 +1,7 @@
 <?php
 
 
-namespace BSApp\Service\plentymarketsAPI\Model\Plenty\Modules\Account\Contact\ContactEvent;
+namespace App\Service\plentymarketsAPI\Model\Plenty\Modules\Account\Contact\ContactEvent;
 
 class ContactEvent
 {
@@ -48,10 +48,10 @@ class ContactEvent
     public $eventInfo;
 
     /**
-     *  Billable if set to 1
+     *  Billabel if set to 1
      * @var boolean
      */
-    public $billable;
+    public $billabel;
 
     /**
      *  The date the event was created at as unix timestamp

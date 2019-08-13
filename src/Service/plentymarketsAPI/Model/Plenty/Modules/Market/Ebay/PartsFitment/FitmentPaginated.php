@@ -1,9 +1,9 @@
 <?php
 
 
-namespace BSApp\Service\plentymarketsAPI\Model\Plenty\Modules\Market\Ebay\PartsFitment;
+namespace App\Service\plentymarketsAPI\Model\Plenty\Modules\Market\Ebay\PartsFitment;
 
-use BSApp\Service\plentymarketsAPI\Model\PaginatedResponse;
+use App\Service\plentymarketsAPI\Model\PaginatedResponse;
 
 class FitmentPaginated extends PaginatedResponse
 {

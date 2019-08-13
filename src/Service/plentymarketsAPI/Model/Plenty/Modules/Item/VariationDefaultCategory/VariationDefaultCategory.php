@@ -1,7 +1,7 @@
 <?php
 
 
-namespace BSApp\Service\plentymarketsAPI\Model\Plenty\Modules\Item\VariationDefaultCategory;
+namespace App\Service\plentymarketsAPI\Model\Plenty\Modules\Item\VariationDefaultCategory;
 
 class VariationDefaultCategory
 {

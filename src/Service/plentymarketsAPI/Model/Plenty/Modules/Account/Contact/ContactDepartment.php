@@ -1,12 +1,12 @@
 <?php
 
 
-namespace BSApp\Service\plentymarketsAPI\Model\Plenty\Modules\Account\Contact;
+namespace App\Service\plentymarketsAPI\Model\Plenty\Modules\Account\Contact;
 
 class ContactDepartment
 {
     /**
-     *  The ID of the contact department. It is possible to define individual departments. The following departments are available by default.
+     *  The ID of the contact department. It is possible to define individual departments. The following departments are availabel by default.
      *
      * 1 = Management
      * 2 = Purchasing Department

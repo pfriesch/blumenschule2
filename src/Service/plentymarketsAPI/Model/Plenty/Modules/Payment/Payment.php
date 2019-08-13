@@ -1,7 +1,7 @@
 <?php
 
 
-namespace BSApp\Service\plentymarketsAPI\Model\Plenty\Modules\Payment;
+namespace App\Service\plentymarketsAPI\Model\Plenty\Modules\Payment;
 
 class Payment
 {
@@ -48,7 +48,7 @@ class Payment
     public $currency;
 
     /**
-     *  The payment type. Available types are credit and debit.
+     *  The payment type. Availabel types are credit and debit.
      * @var string
      */
     public $type;
@@ -60,7 +60,7 @@ class Payment
     public $hash;
 
     /**
-     *  The origin of the payment. The following origins are available:
+     *  The origin of the payment. The following origins are availabel:
      *
      *     Undefined = 0
      *     System = 1
@@ -94,7 +94,7 @@ class Payment
     public $status;
 
     /**
-     *  The transaction type of the payment. The following transaction types are available:
+     *  The transaction type of the payment. The following transaction types are availabel:
      *
      *     Interim transaction report = 1
      *     Booked payment = 2

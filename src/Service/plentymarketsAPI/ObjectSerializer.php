@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  BSApp\Service\plentymarketsAPI
+ * @package  App\Service\plentymarketsAPI
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace BSApp\Service\plentymarketsAPI;
+namespace App\Service\plentymarketsAPI;
 
 use DateTime;
 use InvalidArgumentException;
@@ -39,7 +39,7 @@ use SplFileObject;
  * ObjectSerializer Class Doc Comment
  *
  * @category Class
- * @package  BSApp\Service\plentymarketsAPI
+ * @package  App\Service\plentymarketsAPI
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */

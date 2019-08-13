@@ -1,7 +1,7 @@
 <?php
 
 
-namespace BSApp\Service\plentymarketsAPI\Model\Plenty\Modules\Listing\Market;
+namespace App\Service\plentymarketsAPI\Model\Plenty\Modules\Listing\Market;
 
 class ListingMarket
 {

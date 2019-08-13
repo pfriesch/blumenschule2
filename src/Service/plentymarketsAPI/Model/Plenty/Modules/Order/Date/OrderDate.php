@@ -1,7 +1,7 @@
 <?php
 
 
-namespace BSApp\Service\plentymarketsAPI\Model\Plenty\Modules\Order\Date;
+namespace App\Service\plentymarketsAPI\Model\Plenty\Modules\Order\Date;
 
 class OrderDate
 {
@@ -18,7 +18,7 @@ class OrderDate
     public $orderId;
 
     /**
-     *  The ID of the date type. The following types are available:
+     *  The ID of the date type. The following types are availabel:
      *
      * Deleted on = 1
      * Created on = 2

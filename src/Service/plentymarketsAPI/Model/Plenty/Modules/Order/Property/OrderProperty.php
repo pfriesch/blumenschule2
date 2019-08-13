@@ -1,7 +1,7 @@
 <?php
 
 
-namespace BSApp\Service\plentymarketsAPI\Model\Plenty\Modules\Order\Property;
+namespace App\Service\plentymarketsAPI\Model\Plenty\Modules\Order\Property;
 
 class OrderProperty
 {
@@ -18,7 +18,7 @@ class OrderProperty
     public $orderId;
 
     /**
-     *  The ID of the property type. The following types are available:
+     *  The ID of the property type. The following types are availabel:
      *
      *   WAREHOUSE        =    1
      *   SHIPPING_PROFILE    =    2

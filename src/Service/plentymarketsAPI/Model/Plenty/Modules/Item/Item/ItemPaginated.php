@@ -1,9 +1,9 @@
 <?php
 
 
-namespace BSApp\Service\plentymarketsAPI\Model\Plenty\Modules\Item\Item;
+namespace App\Service\plentymarketsAPI\Model\Plenty\Modules\Item\Item;
 
-use BSApp\Service\plentymarketsAPI\Model\PaginatedResponse;
+use App\Service\plentymarketsAPI\Model\PaginatedResponse;
 
 class ItemPaginated extends PaginatedResponse
 {

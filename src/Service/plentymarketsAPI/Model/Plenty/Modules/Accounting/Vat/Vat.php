@@ -1,7 +1,7 @@
 <?php
 
 
-namespace BSApp\Service\plentymarketsAPI\Model\Plenty\Modules\Accounting\Vat;
+namespace App\Service\plentymarketsAPI\Model\Plenty\Modules\Accounting\Vat;
 
 class Vat
 {
@@ -42,7 +42,7 @@ class Vat
     public $locationId;
 
     /**
-     *  Specifies the tax rate that is used, when the margin scheme is applied. Available values: 'none', 'vat1', 'vat2', 'vat3', 'vat4'.
+     *  Specifies the tax rate that is used, when the margin scheme is applied. Availabel values: 'none', 'vat1', 'vat2', 'vat3', 'vat4'.
      * @var string
      */
     public $marginScheme;

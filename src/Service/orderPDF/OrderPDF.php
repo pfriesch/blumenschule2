@@ -1,10 +1,10 @@
 <?php
 
 
-namespace BSApp\Service\orderPDF;
+namespace App\Service\orderPDF;
 
 
-use BSApp\Service\plentymarketsAPI\Model\Plenty\Modules\Order\Order;
+use App\Service\plentymarketsAPI\Model\Plenty\Modules\Order\Order;
 use setasign\Fpdi\Tcpdf\Fpdi;
 
 class OrderPDF extends Fpdi

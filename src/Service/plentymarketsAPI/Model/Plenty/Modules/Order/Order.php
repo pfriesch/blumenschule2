@@ -1,9 +1,9 @@
 <?php
 
 
-namespace BSApp\Service\plentymarketsAPI\Model\Plenty\Modules\Order;
+namespace App\Service\plentymarketsAPI\Model\Plenty\Modules\Order;
 
-use BSApp\Service\plentymarketsAPI\Model\Plenty\Modules\Account\Address\Address;
+use App\Service\plentymarketsAPI\Model\Plenty\Modules\Account\Address\Address;
 
 class Order
 {
@@ -16,7 +16,7 @@ class Order
     /**
      *  The ID of the order type
      *                                                               It is possible to define individual order types. However,
-     *                                                               the following types are available by default:
+     *                                                               the following types are availabel by default:
      *
      *     Sales order = 1
      *     Delivery = 2
@@ -99,7 +99,7 @@ class Order
     public $numberOfDecimals;
 
     /**
-     *  The lock status of the order. The following statuses are available:
+     *  The lock status of the order. The following statuses are availabel:
      *
      *  unlocked
      *  permanentlyLocked
@@ -111,7 +111,7 @@ class Order
 
 
     /**
-     * @var \BSApp\Service\plentymarketsAPI\Model\Plenty\Modules\Account\Address\Address[]|null //TODO why do I need to give the full path here?
+     * @var \App\Service\plentymarketsAPI\Model\Plenty\Modules\Account\Address\Address[]|null //TODO why do I need to give the full path here?
      */
     public $addresses;
 

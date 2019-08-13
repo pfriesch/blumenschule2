@@ -1,7 +1,7 @@
 <?php
 
 
-namespace BSApp\Service\plentymarketsAPI\Model\Plenty\Modules\Item\Property;
+namespace App\Service\plentymarketsAPI\Model\Plenty\Modules\Item\Property;
 
 class Property
 {
@@ -54,7 +54,7 @@ class Property
     public $isSearchable;
 
     /**
-     *  Flag that indicates if the property is available in the order process. Depending on the property type, customers e.g. can enter a text or value or select an option from a drop-down list.
+     *  Flag that indicates if the property is availabel in the order process. Depending on the property type, customers e.g. can enter a text or value or select an option from a drop-down list.
      * @var boolean
      */
     public $isOderProperty;

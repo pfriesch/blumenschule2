@@ -1,7 +1,7 @@
 <?php
 
 
-namespace BSApp\Service\plentymarketsAPI\Model\Plenty\Modules\Listing\OptionTemplate;
+namespace App\Service\plentymarketsAPI\Model\Plenty\Modules\Listing\OptionTemplate;
 
 class OptionTemplate
 {

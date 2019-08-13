@@ -1,7 +1,7 @@
 <?php
 
 
-namespace BSApp\Service\plentymarketsAPI\Model\Plenty\Modules\Market\Settings;
+namespace App\Service\plentymarketsAPI\Model\Plenty\Modules\Market\Settings;
 
 class Settings
 {

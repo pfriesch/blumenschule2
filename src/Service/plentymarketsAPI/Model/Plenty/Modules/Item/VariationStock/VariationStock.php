@@ -1,7 +1,7 @@
 <?php
 
 
-namespace BSApp\Service\plentymarketsAPI\Model\Plenty\Modules\Item\VariationStock;
+namespace App\Service\plentymarketsAPI\Model\Plenty\Modules\Item\VariationStock;
 
 class VariationStock
 {

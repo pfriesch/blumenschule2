@@ -1,7 +1,7 @@
 <?php
 
 
-namespace BSApp\Service\plentymarketsAPI\Model\Plenty\Modules\Item\SalesPrice;
+namespace App\Service\plentymarketsAPI\Model\Plenty\Modules\Item\SalesPrice;
 
 class SalesPriceReferrer
 {

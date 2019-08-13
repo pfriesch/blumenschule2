@@ -1,9 +1,9 @@
 <?php
 
 
-namespace BSApp\Service\plentymarketsAPI\Model\Plenty\Modules\Item\Barcode;
+namespace App\Service\plentymarketsAPI\Model\Plenty\Modules\Item\Barcode;
 
-use BSApp\Service\plentymarketsAPI\Model\Plenty\Modules\Item\Barcode\BarcodeLinkReferrer;
+use App\Service\plentymarketsAPI\Model\Plenty\Modules\Item\Barcode\BarcodeLinkReferrer;
 
 class Barcode
 {

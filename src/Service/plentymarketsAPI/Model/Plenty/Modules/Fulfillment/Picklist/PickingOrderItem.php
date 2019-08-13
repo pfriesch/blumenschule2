@@ -1,7 +1,7 @@
 <?php
 
 
-namespace BSApp\Service\plentymarketsAPI\Model\Plenty\Modules\Fulfillment\Picklist;
+namespace App\Service\plentymarketsAPI\Model\Plenty\Modules\Fulfillment\Picklist;
 
 class PickingOrderItem
 {

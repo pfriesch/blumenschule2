@@ -1,10 +1,10 @@
 <?php
 
 
-namespace BSApp\Service\plentymarketsAPI\Model\Plenty\Modules\Item\Item;
+namespace App\Service\plentymarketsAPI\Model\Plenty\Modules\Item\Item;
 
-use BSApp\Service\plentymarketsAPI\Model\Plenty\Modules\Item\Variation\Variation;
-use BSApp\Service\plentymarketsAPI\Model\Plenty\Modules\Item\VariationDescription\VariationDescription;
+use App\Service\plentymarketsAPI\Model\Plenty\Modules\Item\Variation\Variation;
+use App\Service\plentymarketsAPI\Model\Plenty\Modules\Item\VariationDescription\VariationDescription;
 
 class Item
 {
@@ -195,7 +195,7 @@ class Item
     public $flagTwo;
 
     /**
-     *  The age customers must be to purchase the item. Items with an age rating of 18+ must be linked to a shipping profile for which the PostIdent option is activated.0 = None available3 = Released for ages 3 and up6 = Ages 6 and up9 = Ages 9 and up12 = Ages 12 and up14 = Ages 14 and up16 = Ages 16 and up18 = Ages 18 and up50 = Not marked88 = Not required99 = Unknown
+     *  The age customers must be to purchase the item. Items with an age rating of 18+ must be linked to a shipping profile for which the PostIdent option is activated.0 = None availabel3 = Released for ages 3 and up6 = Ages 6 and up9 = Ages 9 and up12 = Ages 12 and up14 = Ages 14 and up16 = Ages 16 and up18 = Ages 18 and up50 = Not marked88 = Not required99 = Unknown
      * @var integer|null
      */
     public $ageRestriction;
@@ -328,14 +328,14 @@ class Item
 
     /**
      *
-     * @var \BSApp\Service\plentymarketsAPI\Model\Plenty\Modules\Item\VariationDescription\VariationDescription[]|null
+     * @var \App\Service\plentymarketsAPI\Model\Plenty\Modules\Item\VariationDescription\VariationDescription[]|null
      */
     public $texts;
 
 
     /**
      *
-     * @var \BSApp\Service\plentymarketsAPI\Model\Plenty\Modules\Item\Variation\Variation[]|null
+     * @var \App\Service\plentymarketsAPI\Model\Plenty\Modules\Item\Variation\Variation[]|null
      */
     public $variations;
 

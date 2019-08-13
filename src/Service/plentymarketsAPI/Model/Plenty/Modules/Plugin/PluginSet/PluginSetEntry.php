@@ -1,7 +1,7 @@
 <?php
 
 
-namespace BSApp\Service\plentymarketsAPI\Model\Plenty\Modules\Plugin\PluginSet;
+namespace App\Service\plentymarketsAPI\Model\Plenty\Modules\Plugin\PluginSet;
 
 class PluginSetEntry
 {

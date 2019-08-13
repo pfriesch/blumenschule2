@@ -1,7 +1,7 @@
 <?php
 
 
-namespace BSApp\Service\plentymarketsAPI\Model\Plenty\Modules\Market\Ebay\Marketplace;
+namespace App\Service\plentymarketsAPI\Model\Plenty\Modules\Market\Ebay\Marketplace;
 
 class Marketplace
 {

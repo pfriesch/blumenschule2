@@ -1,7 +1,7 @@
 <?php
 
 
-namespace BSApp\Service\plentymarketsAPI\Model\Plenty\Modules\Frontend\LegalInformation;
+namespace App\Service\plentymarketsAPI\Model\Plenty\Modules\Frontend\LegalInformation;
 
 class LegalInformation
 {
@@ -18,7 +18,7 @@ class LegalInformation
     public $lang;
 
     /**
-     *  The type of the legal information text. The types available are:
+     *  The type of the legal information text. The types availabel are:
      *
      * TermsConditions
      * CancellationRights

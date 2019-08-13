@@ -1,7 +1,7 @@
 <?php
 
 
-namespace BSApp\Service\plentymarketsAPI\Model\Plenty\Modules\Account\Newsletter;
+namespace App\Service\plentymarketsAPI\Model\Plenty\Modules\Account\Newsletter;
 
 class Folder
 {
@@ -18,7 +18,7 @@ class Folder
     public $name;
 
     /**
-     *  Flag that indicates if the newsletter folder can be deleted. The folders 'Customers' and 'Interested parties' are available by default and cannot be deleted.
+     *  Flag that indicates if the newsletter folder can be deleted. The folders 'Customers' and 'Interested parties' are availabel by default and cannot be deleted.
      * @var boolean
      */
     public $isDeletable;

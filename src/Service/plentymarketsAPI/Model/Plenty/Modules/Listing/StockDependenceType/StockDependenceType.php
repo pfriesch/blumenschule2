@@ -1,7 +1,7 @@
 <?php
 
 
-namespace BSApp\Service\plentymarketsAPI\Model\Plenty\Modules\Listing\StockDependenceType;
+namespace App\Service\plentymarketsAPI\Model\Plenty\Modules\Listing\StockDependenceType;
 
 class StockDependenceType
 {

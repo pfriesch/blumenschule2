@@ -1,7 +1,7 @@
 <?php
 
 
-namespace BSApp\Service\orderPDF;
+namespace App\Service\orderPDF;
 
 
 class OrderPDFService

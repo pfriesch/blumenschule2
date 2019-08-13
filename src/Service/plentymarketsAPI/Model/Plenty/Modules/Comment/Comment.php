@@ -1,7 +1,7 @@
 <?php
 
 
-namespace BSApp\Service\plentymarketsAPI\Model\Plenty\Modules\Comment;
+namespace App\Service\plentymarketsAPI\Model\Plenty\Modules\Comment;
 
 class Comment
 {

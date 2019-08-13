@@ -1,12 +1,12 @@
 <?php
 
 
-namespace BSApp\Service\plentymarketsAPI;
+namespace App\Service\plentymarketsAPI;
 
-use BSApp\Service\plentymarketsAPI\Api\ItemApi;
-use BSApp\Service\plentymarketsAPI\Api\OrderApi;
+use App\Service\plentymarketsAPI\Api\ItemApi;
+use App\Service\plentymarketsAPI\Api\OrderApi;
 
-use BSApp\Service\plentymarketsAPI\Model\Plenty\Modules\Item\Item\Item;
+use App\Service\plentymarketsAPI\Model\Plenty\Modules\Item\Item\Item;
 use Exception;
 use GuzzleHttp\Client;
 use JsonMapper;
@@ -16,7 +16,7 @@ use JsonMapper;
  *
  *
  * Class BSPlentyService
- * @package BSApp\Service\plentymarketsAPI
+ * @package App\Service\plentymarketsAPI
  */
 class BSPlentyService
 {
@@ -116,8 +116,8 @@ class BSPlentyService
             $config
         );
 
-        $with = "variations"; // string | Includes the specified variation information in the results. The following parameters are available: itemProperties, itemCrossSelling, variations, itemImages, itemShippingProfiles, ebayTitles
-//        $with = null; // string | Includes the specified variation information in the results. The following parameters are available: itemProperties, itemCrossSelling, variations, itemImages, itemShippingProfiles, ebayTitles
+        $with = "variations"; // string | Includes the specified variation information in the results. The following parameters are availabel: itemProperties, itemCrossSelling, variations, itemImages, itemShippingProfiles, ebayTitles
+//        $with = null; // string | Includes the specified variation information in the results. The following parameters are availabel: itemProperties, itemCrossSelling, variations, itemImages, itemShippingProfiles, ebayTitles
         $lang = "de"; // string | The <a href='https://developers.plentymarkets.com/rest-doc/introduction#countries' target='_blank'>language</a> of the variation information.
         $page = 0; // int | Limits the results to a specific page. The page number must be specified.
         $items_per_page = 20; // int | Limits the number of results listed per page to a specific number. The number of variations to be listed per page must be specified.
@@ -177,7 +177,7 @@ class BSPlentyService
         );
 
 //        $item_id = 56; // int |
-        $with = "variationSalesPrices,images,itemImages,parent,item"; // string | Includes the specified variation information in the results. The following parameters are available: <ul><li>properties</b> = The properties linked to the variation</li><li>variationProperties</b> = The properties linked to the variation</li><li>variationBarcodes</b> = The barcode linked to the variation and the saved code</li><li>variationBundleComponents</b> = The bundle components of the variation and their quantities</li><li>variationComponentBundles</b> = The bundles that this variation is a component of</li><li>variationSalesPrices</b> = The sales prices linked to the variation and the saved price</li><li>marketItemNumbers</b> = The market ident number of the variation</li><li>variationCategories</b> = The categories linked to the variation</li><li>variationClients</b> = The clients (stores) for which the variation is activated</li><li>variationMarkets</b> = The markets for which the variation is activated </li><li>variationDefaultCategory</b> = The default category of the variation</li><li>variationSuppliers</b> = The supplier data associated with the variation</li><li>variationWarehouses</b> = The warehouse data associated with the variation</li><li>images</b> = The images linked to the variation</li><li>itemImages</b> = The images linked to the item</li><li>variationAttributeValues</b> = The attribute values of the variation</li><li>variationSkus</b> = The SKU data associated with the variation</li><li>variationAdditionalSkus</b> = The additional SKU data associated with the variation</li><li>unit</b> = The unit assigned to the variation</li><li>parent</b> = The main variation of the variation. Value is null if this variation is the item's main variation.</li><li>item</b> = The item of the variation</li><li>stock</b> = The stock data of the variation</li></ul> For example, specifying the parameters variationCategories and variationDefaultCategory will include the default category and all other categories the variations are linked to. More than one parameter should be separated by commas.
+        $with = "variationSalesPrices,images,itemImages,parent,item"; // string | Includes the specified variation information in the results. The following parameters are availabel: <ul><li>properties</b> = The properties linked to the variation</li><li>variationProperties</b> = The properties linked to the variation</li><li>variationBarcodes</b> = The barcode linked to the variation and the saved code</li><li>variationBundleComponents</b> = The bundle components of the variation and their quantities</li><li>variationComponentBundles</b> = The bundles that this variation is a component of</li><li>variationSalesPrices</b> = The sales prices linked to the variation and the saved price</li><li>marketItemNumbers</b> = The market ident number of the variation</li><li>variationCategories</b> = The categories linked to the variation</li><li>variationClients</b> = The clients (stores) for which the variation is activated</li><li>variationMarkets</b> = The markets for which the variation is activated </li><li>variationDefaultCategory</b> = The default category of the variation</li><li>variationSuppliers</b> = The supplier data associated with the variation</li><li>variationWarehouses</b> = The warehouse data associated with the variation</li><li>images</b> = The images linked to the variation</li><li>itemImages</b> = The images linked to the item</li><li>variationAttributeValues</b> = The attribute values of the variation</li><li>variationSkus</b> = The SKU data associated with the variation</li><li>variationAdditionalSkus</b> = The additional SKU data associated with the variation</li><li>unit</b> = The unit assigned to the variation</li><li>parent</b> = The main variation of the variation. Value is null if this variation is the item's main variation.</li><li>item</b> = The item of the variation</li><li>stock</b> = The stock data of the variation</li></ul> For example, specifying the parameters variationCategories and variationDefaultCategory will include the default category and all other categories the variations are linked to. More than one parameter should be separated by commas.
         $lang = "de"; // string | The <a href='https://developers.plentymarkets.com/rest-doc/introduction#countries' target='_blank'>language</a> of the variation information.
         $page = 0; // int | Limits the results to a specific page. The page number must be specified.
         $items_per_page = 50; // int | Limits the number of results listed per page to a specific number. The number of variations to be listed per page must be specified.
@@ -269,7 +269,7 @@ class BSPlentyService
 
     }
 
-    public function doAddOrders(\BSApp\Controller\RequestAddOrders $pm_orders)
+    public function doAddOrders(\App\Controller\RequestAddOrders $pm_orders)
     {
         throw new Exception("adding orders not implemented");
 

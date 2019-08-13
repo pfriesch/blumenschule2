@@ -1,7 +1,7 @@
 <?php
 
 
-namespace BSApp\Service\plentymarketsAPI\Model\Plenty\Modules\Listing\Market\Text;
+namespace App\Service\plentymarketsAPI\Model\Plenty\Modules\Listing\Market\Text;
 
 class ListingMarketText
 {
@@ -18,7 +18,7 @@ class ListingMarketText
     public $listingMarketId;
 
     /**
-     *  The language of the listing market text. Available values: 'de', 'en', 'fr', 'it', 'es', 'tr', 'nl', 'pl', 'nn', 'da', 'se', 'cz', 'ru', 'sk', 'cn', 'vn', 'pt', 'bg', 'ro'.
+     *  The language of the listing market text. Availabel values: 'de', 'en', 'fr', 'it', 'es', 'tr', 'nl', 'pl', 'nn', 'da', 'se', 'cz', 'ru', 'sk', 'cn', 'vn', 'pt', 'bg', 'ro'.
      * @var string
      */
     public $lang;

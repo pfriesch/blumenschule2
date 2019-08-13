@@ -1,9 +1,9 @@
 <?php
 
 
-namespace BSApp\Service\plentymarketsAPI\Model\Plenty\Modules\Order\Shipping\ServiceProvider;
+namespace App\Service\plentymarketsAPI\Model\Plenty\Modules\Order\Shipping\ServiceProvider;
 
-use BSApp\Service\plentymarketsAPI\Model\PaginatedResponse;
+use App\Service\plentymarketsAPI\Model\PaginatedResponse;
 
 class ShippingServiceProviderPaginated extends PaginatedResponse
 {
