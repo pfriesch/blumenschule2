@@ -2,6 +2,7 @@ require('../css/styleBS.scss');
 const $ = require('jquery');
 require('bootstrap');
 const autocomplete = require("jquery-ui/ui/widgets/autocomplete");
+const effect = require("jquery-ui/ui/effects/effect-transfer");
 
 
 $(document).ready(function () {
@@ -86,6 +87,18 @@ $(document).ready(function () {
         createPdf($data);
 
     });
+    $('#create_label_with_stock').click(function (event) {
+        event.preventDefault();
+        $data = {
+            article_id: $('#articleid ').val(),
+            variant_id: $('#variantid ').val(),
+            quantity: $('#amount').val()
+        };
+        createPdf($data);
+        addStock();
+
+    });
+
 
     $('#labelA6').click(function (event) {
         event.preventDefault();
@@ -151,9 +164,60 @@ $(document).ready(function () {
         }
     });
 
+    $('#add_stock').click(function (event) {
+        event.preventDefault();
+        addStock();
+
+    });
+
+    // $('#remove_stock').click(function (event) {
+    //     event.preventDefault();
+    //     $data = {
+    //         article_id: $('#articleid ').val(),
+    //         variant_id: $('#variantid ').val(),
+    //         quantity: $('#articleStock').val() - $('#amount').val()
+    //     };
+    //     $.post({
+    //         url: "/item/removestock",
+    //         dataType: "json",
+    //         data: $data,
+    //         success: function (data) {
+    //             if ($('#articleid ').val() != data.article_id || $('#variantid ').val() != data.variation_id) {
+    //                 //    TODO alert
+    //                 console.error("data mismatch" + data + " " + $('#articleid ').val() + " " + $('#variantid ').val())
+    //             }
+    //             $('#articleStock').val(data.stock);
+    //             $('#articleStock').switchClass("stockDisplayNormal", "stockDisplayFlash", 100);
+    //             $('#articleStock').switchClass("stockDisplayFlash", "stockDisplayNormal", 500);
+    //         }
+    //     });
+    // });
+
     $('#descriptionShort').keypress(countChars);
     countChars();
 });
+
+var addStock = function () {
+    $data = {
+        article_id: $('#articleid ').val(),
+        variant_id: $('#variantid ').val(),
+        quantity: $('#amount').val()
+    };
+    $.post({
+        url: "/item/addstock",
+        dataType: "json",
+        data: $data,
+        success: function (data) {
+            if ($('#articleid ').val() != data.article_id || $('#variantid ').val() != data.variation_id) {
+                //    TODO alert
+                console.error("data mismatch" + data + " " + $('#articleid ').val() + " " + $('#variantid ').val())
+            }
+            $('#articleStock').val(data.stock);
+            $('#articleStock').switchClass("stockDisplayNormal", "stockDisplayFlash", 100);
+            $('#articleStock').switchClass("stockDisplayFlash", "stockDisplayNormal", 500);
+        }
+    });
+};
 
 
 var countChars = function () {
@@ -200,11 +264,12 @@ var createPdf = function (data) {
     }).done(function (data) {
         $('#name ').val(data.name);
         $('#name_botanic ').val(data.name_botanic);
-        $('#description ').val(data.label_text);
-        $('#descriptionShort ').val(data.description_short);
+        $('#description ').val(data.description_short);
+        $('#descriptionShort ').val(data.label_text);
         $('#articlecode ').val(data.code);
         $('#articleid ').val(data.article_id);
         $('#variantid ').val(data.variant_id);
+        $('#articleStock ').val(data.stock);
         $('#picurl').val(data.picurl);
         $('#edit_article_btn').attr("href", "https://plentymarkets-cloud-de.com/11541?uiAction=item_detail&itemId=" + data.article_id);
 

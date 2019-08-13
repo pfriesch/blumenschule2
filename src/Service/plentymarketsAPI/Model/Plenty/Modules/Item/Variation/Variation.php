@@ -3,6 +3,7 @@
 
 namespace App\Service\plentymarketsAPI\Model\Plenty\Modules\Item\Variation;
 
+
 class Variation
 {
     /**
@@ -436,5 +437,25 @@ class Variation
      * @var boolean|null
      */
     public $hasCalculatedBundleMovingAveragePrice;
+
+    /**
+     *
+     * @var \App\Service\plentymarketsAPI\Model\Plenty\Modules\Item\VariationStock\VariationStock[]|null
+     */
+    public $stock;
+
+
+
+    /**
+     *
+     * @var \App\Service\plentymarketsAPI\Model\Plenty\Modules\Item\ItemImage\ItemImage[]|null
+     */
+    public $itemImages;
+
+    /**
+     *
+     * @var \App\Service\plentymarketsAPI\Model\Plenty\Modules\Item\VariationSalesPrice\VariationSalesPrice[]|null
+     */
+    public $variationSalesPrices;
 
 }

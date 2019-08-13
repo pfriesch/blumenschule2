@@ -29,9 +29,9 @@
 namespace App\Service\plentymarketsAPI;
 
 use DateTime;
+use Exception;
 use InvalidArgumentException;
 use JsonMapper;
-use PHPUnit\Runner\Exception;
 use Psr\Http\Message\StreamInterface;
 use SplFileObject;
 

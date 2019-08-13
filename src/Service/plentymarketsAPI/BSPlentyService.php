@@ -6,7 +6,9 @@ namespace App\Service\plentymarketsAPI;
 use App\Service\plentymarketsAPI\Api\ItemApi;
 use App\Service\plentymarketsAPI\Api\OrderApi;
 
+use App\Service\plentymarketsAPI\Api\StockManagementApi;
 use App\Service\plentymarketsAPI\Model\Plenty\Modules\Item\Item\Item;
+use DateTime;
 use Exception;
 use GuzzleHttp\Client;
 use JsonMapper;
@@ -20,6 +22,51 @@ use JsonMapper;
  */
 class BSPlentyService
 {
+
+    private $defaultWarehouseId = null;
+
+//    private $defaultStorageLocations = null;
+
+
+    private function getDefaultWarehouseId()
+    {
+
+        if ($this->defaultWarehouseId == null) {
+
+
+//        $config = Configuration::getDefaultConfiguration()->authenticated();
+//
+//        $stockApiInstance = new StockManagementApi(
+//            new Client(),
+//            $config
+//        );
+//        try {
+//            $warehouses = $stockApiInstance->restStockmanagementWarehousesGet();
+//            if ($warehouses[0]->name != "Blumenschule"){
+//                throw new Exception("Default warehouse wrong!");
+//
+//            }
+//            $this->defaultWarehouseId = $warehouses[0]->id;
+//        } catch (Exception $e) {
+//            throw new Exception('Exception when calling $stockApiInstance->restStockmanagementWarehousesGet: ' . $e->getMessage());
+//        }
+
+//
+//        try {
+//            $this->defaultStorageLocations = $stockApiInstance->restStockmanagementWarehousesWarehouseIdManagementRacksRackIdShelvesShelfIdStorageLocationsGet($this->defaultWarehouseId);
+//        } catch (Exception $e) {
+//            throw new Exception('Exception when calling $stockApiInstance->restStockmanagementWarehousesWarehouseIdManagementRacksRackIdShelvesShelfIdStorageLocationsGet: ' . $e->getMessage());
+////        }
+
+
+//        Looked up manually and shouldn't change, otherwise use code above
+
+            $this->defaultWarehouseId = 11;
+        }
+        return $this->defaultWarehouseId;
+
+
+    }
 
     public function doGetOrdersWithState($state)
     {
@@ -135,6 +182,8 @@ class BSPlentyService
         } catch (Exception $e) {
             echo 'Exception when calling ItemApi->restItemsGet: ', $e->getMessage(), PHP_EOL;
         }
+
+//        TODO add stock to search display?
         return $result;
     }
 
@@ -177,7 +226,7 @@ class BSPlentyService
         );
 
 //        $item_id = 56; // int |
-        $with = "variationSalesPrices,images,itemImages,parent,item"; // string | Includes the specified variation information in the results. The following parameters are availabel: <ul><li>properties</b> = The properties linked to the variation</li><li>variationProperties</b> = The properties linked to the variation</li><li>variationBarcodes</b> = The barcode linked to the variation and the saved code</li><li>variationBundleComponents</b> = The bundle components of the variation and their quantities</li><li>variationComponentBundles</b> = The bundles that this variation is a component of</li><li>variationSalesPrices</b> = The sales prices linked to the variation and the saved price</li><li>marketItemNumbers</b> = The market ident number of the variation</li><li>variationCategories</b> = The categories linked to the variation</li><li>variationClients</b> = The clients (stores) for which the variation is activated</li><li>variationMarkets</b> = The markets for which the variation is activated </li><li>variationDefaultCategory</b> = The default category of the variation</li><li>variationSuppliers</b> = The supplier data associated with the variation</li><li>variationWarehouses</b> = The warehouse data associated with the variation</li><li>images</b> = The images linked to the variation</li><li>itemImages</b> = The images linked to the item</li><li>variationAttributeValues</b> = The attribute values of the variation</li><li>variationSkus</b> = The SKU data associated with the variation</li><li>variationAdditionalSkus</b> = The additional SKU data associated with the variation</li><li>unit</b> = The unit assigned to the variation</li><li>parent</b> = The main variation of the variation. Value is null if this variation is the item's main variation.</li><li>item</b> = The item of the variation</li><li>stock</b> = The stock data of the variation</li></ul> For example, specifying the parameters variationCategories and variationDefaultCategory will include the default category and all other categories the variations are linked to. More than one parameter should be separated by commas.
+        $with = "variationSalesPrices,images,itemImages,parent,item,stock"; // string | Includes the specified variation information in the results. The following parameters are availabel: <ul><li>properties</b> = The properties linked to the variation</li><li>variationProperties</b> = The properties linked to the variation</li><li>variationBarcodes</b> = The barcode linked to the variation and the saved code</li><li>variationBundleComponents</b> = The bundle components of the variation and their quantities</li><li>variationComponentBundles</b> = The bundles that this variation is a component of</li><li>variationSalesPrices</b> = The sales prices linked to the variation and the saved price</li><li>marketItemNumbers</b> = The market ident number of the variation</li><li>variationCategories</b> = The categories linked to the variation</li><li>variationClients</b> = The clients (stores) for which the variation is activated</li><li>variationMarkets</b> = The markets for which the variation is activated </li><li>variationDefaultCategory</b> = The default category of the variation</li><li>variationSuppliers</b> = The supplier data associated with the variation</li><li>variationWarehouses</b> = The warehouse data associated with the variation</li><li>images</b> = The images linked to the variation</li><li>itemImages</b> = The images linked to the item</li><li>variationAttributeValues</b> = The attribute values of the variation</li><li>variationSkus</b> = The SKU data associated with the variation</li><li>variationAdditionalSkus</b> = The additional SKU data associated with the variation</li><li>unit</b> = The unit assigned to the variation</li><li>parent</b> = The main variation of the variation. Value is null if this variation is the item's main variation.</li><li>item</b> = The item of the variation</li><li>stock</b> = The stock data of the variation</li></ul> For example, specifying the parameters variationCategories and variationDefaultCategory will include the default category and all other categories the variations are linked to. More than one parameter should be separated by commas.
         $lang = "de"; // string | The <a href='https://developers.plentymarkets.com/rest-doc/introduction#countries' target='_blank'>language</a> of the variation information.
         $page = 0; // int | Limits the results to a specific page. The page number must be specified.
         $items_per_page = 50; // int | Limits the number of results listed per page to a specific number. The number of variations to be listed per page must be specified.
@@ -196,7 +245,7 @@ class BSPlentyService
         try {
             $resultVariation = $apiInstance->restItemsItemIdVariationsGet($item_id, $with, $lang, $page, $items_per_page, $is_main, $is_active, $barcode, $number_exact, $number_fuzzy, $is_bundle, $supplier_number, $manufacturer_id, $updated_between, $created_between, $related_updated_between);
         } catch (Exception $e) {
-            echo 'Exception when calling ItemApi->restItemsItemIdGet: ', $e->getMessage(), PHP_EOL;
+            throw new Exception('Exception when calling ItemApi->restItemsItemIdGet: ' . $e->getMessage());
         }
 
         return $resultVariation;
@@ -207,7 +256,7 @@ class BSPlentyService
 // Configure OAuth2 access token for authorization: oAuth2
         $config = Configuration::getDefaultConfiguration()->authenticated();
 
-        $apiInstance = new ItemApi(
+        $itemApiInstance = new ItemApi(
             new Client(),
             $config
         );
@@ -217,39 +266,61 @@ class BSPlentyService
         $result = $this->getItemById($article_id);
         $resultVariation = $this->getItemVariationsById($article_id);
 
-        try {
-            $resultImage = $apiInstance->restItemsIdImagesGet($article_id, null);
-        } catch (Exception $e) {
-            throw new Exception('Exception when calling ItemApi->restItemsIdVariationsVariationIdVariationImagesGet: ' . $e->getMessage());
-        }
+//        try {
+//            $resultImage = $itemApiInstance->restItemsIdImagesGet($article_id, null);
+//        } catch (Exception $e) {
+//            throw new Exception('Exception when calling ItemApi->restItemsIdImagesGet: ' . $e->getMessage());
+//        }
 
-        try {
-            $resultPrice = $apiInstance->restItemsIdVariationsVariationIdVariationSalesPricesGet($article_id, $variation_id);
-//            print_r($result);
+//        try {
+//            $resultPrice = $itemApiInstance->restItemsIdVariationsVariationIdVariationSalesPricesGet($article_id, $variation_id);
+////            print_r($result);
+//
+//        } catch (Exception $e) {
+//            throw new Exception('Exception when calling ItemApi->restItemsIdVariationsVariationIdVariationSalesPricesGet: ' . $e->getMessage());
+//        }
 
-        } catch (Exception $e) {
-            throw new Exception('Exception when calling ItemApi->restItemsIdVariationsVariationIdVariationSalesPricesGet: ' . $e->getMessage());
-        }
+//        try {
+//            $resultStock = $itemApiInstance->restItemsIdVariationsVariationIdStockGet($article_id, $variation_id, 0);
+////            print_r($result);
+//
+//            $defaultWarehouseId = $this->getDefaultWarehouseId();
+//            $resultStock = array_filter($resultStock, function ($e) use (&$defaultWarehouseId, &$variation_id) {
+//                return $e->warehouseId == $defaultWarehouseId && $e->variationId == $variation_id;
+//            });
+//        } catch (Exception $e) {
+//            throw new Exception('Exception when calling ItemApi->restItemsIdVariationsVariationIdStockGet: ' . $e->getMessage());
+//        }
 
 
         $item = array();
         $item['article_id'] = $article_id;
         $item['variant_id'] = $variation_id;
 
-        $item['code'] = array_values(array_filter(
+
+        $resultVariation = array_values(array_filter(
             $resultVariation->entries,
             function ($e) use (&$variation_id) {
                 return $e->id == $variation_id;
-//                return $e->id > 0;
             }
-        ))[0]->number;
+        ))[0];
+
+        $resultVariationStock = array_values(array_filter(
+            $resultVariation->stock,
+            function ($e) use (&$variation_id) {
+                return $e->variationId == $variation_id;
+            }
+        ))[0];
+
+        $item['code'] = $resultVariation->number;
         $item['name'] = $result->getName();
         $item['name_botanic'] = $result->getNameBotanic();
         $item['label_text'] = $result->getLabelText();
         $item['description_short'] = $result->getDescription();
-        $item['price'] = $resultPrice[0]->price;
-        if (count($resultImage) > 0) {
-            $item['picurl'] = $resultImage[0]->url;
+        $item['price'] = $resultVariation->variationSalesPrices[0]->price;
+        $item['stock'] = $resultVariationStock->physicalStock;
+        if (count($resultVariation->itemImages) > 0) {
+            $item['picurl'] = $resultVariation->itemImages[0]->url;
         } else {
             $item['picurl'] = "";
         }
@@ -280,4 +351,129 @@ class BSPlentyService
         throw new Exception("adding items not implemented");
 
     }
+
+    /**
+     * @param $article_id
+     * @param $variation_id
+     * @param $quantity
+     * @return object
+     * @throws Exception
+     */
+    public function bookIncommingStock($article_id, $variation_id, $quantity)
+    {
+        $config = Configuration::getDefaultConfiguration()->authenticated();
+
+        $itemApiInstance = new ItemApi(
+            new Client(),
+            $config
+        );
+
+        $now = new DateTime();
+//        $now->sub(new DateInterval('PT12H'));
+        $now = (string)$now->format(DateTime::W3C);
+
+
+        $body = (object)[
+            "warehouseId" => $this->getDefaultWarehouseId(),
+            "deliveredAt" => $now,
+            "currency" => "EUR",
+
+            "quantity" => $quantity,
+//    The ID of the reason. The following IDs are available:
+//
+//    101: Incoming items
+//    102: Booked in by stocktaking
+//    104: Rebooked into stock because no production errors were found
+//    106: Maculation canceled
+//    107: Packing error, items are re-booked
+//    109: Incoming items (logistics)
+//    115: Incoming items (second choice)
+//    116: Booked in by correction
+//    117: Unpacked item
+//    180: Incoming items (purchase order)
+//    181: Incoming items (warehousing)
+            "reasonId" => 101];
+
+
+        $resultStock = $itemApiInstance->restItemsIdVariationsVariationIdStockBookIncomingItemsPut($article_id, $variation_id, 0, $body);
+
+
+        $defaultWarehouseId = $this->getDefaultWarehouseId();
+        $resultStock = array_filter($resultStock, function ($e) use (&$defaultWarehouseId, &$variation_id) {
+            return $e->warehouseId == $defaultWarehouseId && $e->variationId == $variation_id;
+        });
+
+        return (object)["article_id" => $article_id, "variation_id" => $variation_id, "stock" => array_values($resultStock)[0]->physicalStock];
+
+
+    }
+
+//
+//    public function correctStock($article_id, $variation_id, $new_quantity)
+//    {
+//
+//        $config = Configuration::getDefaultConfiguration()->authenticated();
+//
+//        $itemApiInstance = new ItemApi(
+//            new Client(),
+//            $config
+//        );
+//        $page = 0;
+//        $items_per_page = 50;
+//        $id = 0;
+//
+//        $resultStorageLocation = $itemApiInstance->restItemsIdVariationsVariationIdStockStorageLocationsGet($article_id, $variation_id, $page, $items_per_page, $id);
+//
+//        $resultStorageLocationId = array_values(array_filter(
+//            $resultStorageLocation->entries,
+//            function ($e) use (&$variation_id) {
+//                return $e->variationId == $variation_id && $e->storageLocationId > 0;
+//            }
+//        ));
+//        if (count($resultStorageLocationId) > 1) {
+//            throw new Exception("Item with id " . $article_id . " and variation id " . $variation_id . " has more than one storage location");
+//        }
+//        $resultStorageLocationId = $resultStorageLocationId[0]->storageLocationId;
+//
+//        $body = (object)[
+//            "warehouseId" => $this->getDefaultWarehouseId(),
+//            "storageLocationId" => $resultStorageLocationId,
+//
+//            "quantity" => $new_quantity,
+////            The reason for correction. The following reasons are available:
+////
+////            301: Stock correction
+////            302: Stock correction by stocktaking
+////            304: Stock correction because of manufacturer error
+////            305: Stock correction because of unusable paper
+////            306: Stock correction because of packing error
+////            307: Stock correction because of damage
+////            309: Stock correction (internal offset)
+////            317: Stock correction because of BBD
+////            318: Stock correction because of shipping items to FBA
+////            319: Stock correction because of shipping items to fulfillment service provider
+////            320: Stock correction because of sample for interested parties
+////            321: Stock correction because of sample for customers
+////            322: Stock correction because of sample
+////            323: Stock correction because quality models are booked in
+////            324: Stock correction because quality models are booked out
+////            325: Stock correction because of gift
+////            326: Stock correction because of malfunction (without return)
+////            327: Stock correction because of loss
+////            328: Stock correction because of unpack
+//            "reasonId" => 301];
+//
+//
+//        $resultStock = $itemApiInstance->restItemsIdVariationsVariationIdStockCorrectionPut($article_id, $variation_id, 0, $body);
+//
+//
+//        $defaultWarehouseId = $this->getDefaultWarehouseId();
+//        $resultStock = array_filter($resultStock, function ($e) use (&$defaultWarehouseId, &$variation_id) {
+//            return $e->warehouseId == $defaultWarehouseId && $e->variationId == $variation_id;
+//        });
+//
+//        return (object)["article_id" => $article_id, "variation_id" => $variation_id, "stock" => array_values($resultStock)[0]->physicalStock];
+//
+//
+//    }
 }

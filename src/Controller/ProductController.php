@@ -73,7 +73,7 @@ class ProductController extends AbstractController
         $pdf->write1DBarcode($item->variant_id, 'EAN8', 1, 8, 30, 10, 0.5, $style, 'T');
         $pdf->Text(2, 17, $item->code . ' - ' . $item->article_id, false, false, true, 0, 1);
         $pdf->SetFont('helvetica', '', 7);
-        $strings = $this->split_words($item->description_short);
+        $strings = $this->split_words($item->label_text);
         $line = 0;
         foreach ($strings as $s) {
             $pdf->Text(30, 7 + $line, $s, false, false, true, 0, 1);
@@ -158,7 +158,7 @@ class ProductController extends AbstractController
     public function printAction(\App\Entity\Item $item, $quantity, $width, $height)
     {
         $printTempDir = $_SERVER['DOCUMENT_ROOT'] . "/publicprint/";
-        if (!is_dir($printTempDir )) {
+        if (!is_dir($printTempDir)) {
             mkdir($printTempDir, 0777, true);
         }
 
@@ -198,6 +198,41 @@ class ProductController extends AbstractController
             'data' => $data
         ));
     }
+
+    /**
+     * @Route("/item/addstock", name="add_stock")
+     */
+    public function addStock(Request $request, BSPlentyService $plentyService)
+    {
+        $article_id = (int)$request->get('article_id');
+        $variation_id = (int)$request->get('variant_id');
+        $quantity = (int)$request->get('quantity');
+
+        $resultStock = $plentyService->bookIncommingStock($article_id, $variation_id, $quantity);
+
+        $response = new Response(json_encode($resultStock));
+        $response->headers->set('Content-Type', 'application/json');
+
+        return $response;
+    }
+
+    /**
+     * @Route("/item/removestock", name="remove_stock")
+     */
+    public function removeStock(Request $request, BSPlentyService $plentyService)
+    {
+        $article_id = (int)$request->get('article_id');
+        $variation_id = (int)$request->get('variant_id');
+        $quantity = (int)$request->get('quantity');
+
+        $resultStock = $plentyService->correctStock($article_id, $variation_id, $quantity);
+
+        $response = new Response(json_encode($resultStock));
+        $response->headers->set('Content-Type', 'application/json');
+
+        return $response;
+    }
+
 
 
 }

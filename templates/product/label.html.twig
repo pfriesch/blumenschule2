@@ -78,8 +78,8 @@
                             <input class="form-control col" type="text" id="search" name="search">
                         </div>
                         <button class="btn btn-success col-2" type="button" id="search_btn">
-                           Suche
-                            <span class="spinner-border spinner-border-sm" id="search_spinner" ole="status" ></span>
+                            Suche
+                            <span class="spinner-border spinner-border-sm" id="search_spinner" ole="status"></span>
                         </button>
                     </div>
 
@@ -123,24 +123,34 @@
 
                     </div>
                 </div>
+
+
                 <div class="form-group row printA6">
 
-                    <label for="description" class="col-2 col-form-label">Beschreibung</label>
+                    <div class="col-2 col-form-label">
+                        <label for="description">Beschreibung</label>
+                        <small class="form-text text-muted">free3 / Feld 3</small>
+
+                    </div>
                     <div class="col">
                     <textarea class="form-control" id="description"
                               name="labelform[description]" readonly> </textarea>
                     </div>
                 </div>
                 <div class="form-group row printLabel">
+                    <div class="col-2 col-form-label">
+                        <label for="descriptionShort">Etikettentext</label>
+                        <small class="form-text text-muted">free1 / Feld 1</small>
 
-                    <label for="descriptionShort" class="col-2 col-form-label">Etikettentext</label>
+                    </div>
+
                     <div class="col-10">
                         {#                    <textarea class="form-control" style="width: 400px;height: 200px;" id="descriptionShort"#}
                         <textarea class="form-control" id="descriptionShort"
                                   name="labelform[descriptionShort]" readonly> </textarea>
                         <label for="available"> noch verfügbare zeichen auf dem Etikett</label>
 
-                        <input class="form-control" type="text" id="available"  readonly>
+                        <input class="form-control" type="text" id="available" readonly>
                     </div>
                 </div>
                 <div class="form-group printLabel">
@@ -158,17 +168,38 @@
                     Artikel Bearbeiten
                 </a>
                 <img src="/assets/images/200px.jpg" class="article_pic img-thumbnail">
+
+                <div class="form-group row printLabel m-2">
+
+                    <label for="articleStock" class="col-3 col-form-label">Akt. Bestand </label>
+                    {#                    <div class="col-3">#}
+                    <input class="stockDisplayNormal form-control col-3" type="text" id="articleStock" name="labelform[articleStock]"
+                           readonly>
+
+                    {#                    </div>#}
+                </div>
+
+
                 <div class="form-group">
-                    <div class="row">
+                    <div class="row m-3">
                         <label class="printLabel col-3" for="amount"> Anzahl</label>
                         <input class="form-control printLabel col-3" type="text" id="amount" name="labelform[amount]"
                                placeholder="Anzahl" value="1">
                     </div>
-                    <div class="row">
 
-                        <a class=" btn btn-success btn-primary  printLabel" id="create_label">Etikett erstellen</a>
-                        <a class=" btn btn-success btn-primary  printA6" id="addDinA6">zu DinA6 hinzufügen</a>
+
+                </div>
+
+                <div class="form-group row">
+                    <div class="row m-3">
+
+                        <a class="btn btn-success  printLabel m-1" id="create_label">Etikett erstellen</a>
+                        <a class="btn btn-secondary  printLabel m-1" id="create_label_with_stock">Etikett erstellen &
+                            <br>
+                            Bestand buchen</a>
+                        <a class="btn btn-success printA6 m-1" id="addDinA6">zu DinA6 hinzufügen</a>
                     </div>
+
                 </div>
             </div>
 
@@ -176,17 +207,23 @@
 
     </form>
     <div class="row">
-        <div class="col-md-8 pdf-print printLabel labelOutput">
+        <div class="col-8 pdf-print printLabel labelOutput">
 
             <object class="PdfOut" data="/publicprint/label.pdf" type="application/pdf" width="100%"
                     height="180px"></object>
 
 
         </div>
+        <div class="col-4">
+            <a class="btn btn-primary m-1 printLabel" id="add_stock">Bestand buchen</a>
+            <small class="form-text text-muted printLabel">Bei Fehlclick kann der Bestand über Plentimarkets korregiert werden.</small>
+
+            {#            <a class="btn btn-danger m-1" id="remove_stock">Bestand entfernen</a>#}
+        </div>
     </div>
 
     <div class="row">
-        <div class="col-md-8 printA6">
+        <div class="col-8 printA6">
 
 
             <h3>DinA6 Druck Auswahl</h3>

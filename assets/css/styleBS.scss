@@ -151,7 +151,8 @@ div.auto_code {
 #edit_article_btn {
   margin: 20px;
 }
-#descriptionShort{
+
+#descriptionShort {
   width: 100%;
   height: 100px;
 }
@@ -163,4 +164,11 @@ div.auto_code {
 
 #available {
   width: 50px;
+}
+
+.stockDisplayNormal {
+}
+
+.stockDisplayFlash {
+  background-color: cornflowerblue !important;
 }

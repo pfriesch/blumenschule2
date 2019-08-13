@@ -29,10 +29,13 @@ namespace App\Service\plentymarketsAPI\Api;
 
 use App\Service\plentymarketsAPI\Model\Plenty\Modules\Item\Item\ItemPaginated;
 use App\Service\plentymarketsAPI\Model\Plenty\Modules\Item\ItemImage\ItemImage;
-use App\Service\plentymarketsAPI\Model\Plenty\Modules\Item\SalesPrice\SalesPrice;
 use App\Service\plentymarketsAPI\Model\Plenty\Modules\Item\Variation\VariationPaginated;
 use App\Service\plentymarketsAPI\Model\Plenty\Modules\Item\VariationImage\VariationImage;
 use App\Service\plentymarketsAPI\Model\Plenty\Modules\Item\VariationSalesPrice\VariationSalesPrice;
+use App\Service\plentymarketsAPI\Model\Plenty\Modules\Item\VariationStock\StockStorageLocationPaginated;
+use App\Service\plentymarketsAPI\Model\Plenty\Modules\Item\VariationStock\VariationStock;
+use App\Service\plentymarketsAPI\Model\Plenty\Modules\StockManagement\Warehouse\Management\StorageLocation;
+use App\Service\plentymarketsAPI\Model\Plenty\Modules\StockManagement\Warehouse\Management\StorageLocationPaginated;
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
 use GuzzleHttp\Exception\RequestException;
@@ -713,100 +716,6 @@ class ItemApi
     }
 
     /**
-     * Operation restItemsGetAsync
-     *
-     * Search item
-     *
-     * @param string $with Includes the specified variation information in the results. The following parameters are availabel: itemProperties, itemCrossSelling, variations, itemImages, itemShippingProfiles, ebayTitles (optional)
-     * @param string $lang The &lt;a href&#x3D;&#x27;https://developers.plentymarkets.com/rest-doc/introduction#countries&#x27; target&#x3D;&#x27;_blank&#x27;&gt;language&lt;/a&gt; of the variation information. (optional)
-     * @param int $page Limits the results to a specific page. The page number must be specified. (optional)
-     * @param int $items_per_page Limits the number of results listed per page to a specific number. The number of variations to be listed per page must be specified. (optional)
-     * @param string $name Filter restricts the list of results to items with the specified item name. An item name must be specified. (optional)
-     * @param string $manufacturer_id Filter restricts the list of results to items with the specified manufacturerId. (optional)
-     * @param int $tag_id Filter restricts the list of results to items with the specified tagId. More than one ID should be separated by commas. (optional)
-     * @param int $flag_one Filter restricts the list of results to items with the specified flagOne. (optional)
-     * @param int $flag_two Filter restricts the list of results to items with the specified flagTwo. (optional)
-     * @param string $updated_between Filter restricts the list of results to items updated during the specified period. The end date (to) is optional. If no end date is specified, items updated between the start date (from) and the present will be listed. The dates can be specified as unix timestamps or in the ISO 8601 date format. Start date and optional end date are separated by a comma. For example, .../items?updatedBetween&#x3D;1451606400,1456790400 will list items updated between 2016-01-01 and 2016-03-01. .../items?updatedBetween&#x3D;1451606400 will list items updated since 2016-01-01. The PHP function strtotime is also supported. (optional)
-     * @param string $variation_updated_between Filter restricts the list of results to items with variations that were updated during the specified period. The end date (to) is optional. If no end date is specified, items with variations updated between the start date (from) and the present will be listed. The dates can be specified as unix timestamps or in the ISO 8601 date format. Start date and optional end date are separated by a comma. For example, .../items?updatedBetween&#x3D;1451606400,1456790400 will list items with variations that were updated between 2016-01-01 and 2016-03-01. .../items?updatedBetween&#x3D;1451606400 will list items with variations that were updated since 2016-01-01. The PHP function strtotime is also supported. (optional)
-     * @param string $variation_related_updated_between Filter restricts the list of results to items with variations for which related information was updated during the specified period. Related information is defined as information linked to the variation, i.e. barcodes, categories, images, markets, clients (stores), prices, suppliers, warehouses and the default category. See variationUpdatedBetween for supported formats. (optional)
-     *
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     * @throws \InvalidArgumentException
-     */
-    public function restItemsGetAsync($with = null, $lang = null, $page = null, $items_per_page = null, $name = null, $manufacturer_id = null, $tag_id = null, $flag_one = null, $flag_two = null, $updated_between = null, $variation_updated_between = null, $variation_related_updated_between = null)
-    {
-        return $this->restItemsGetAsyncWithHttpInfo($with, $lang, $page, $items_per_page, $name, $manufacturer_id, $tag_id, $flag_one, $flag_two, $updated_between, $variation_updated_between, $variation_related_updated_between)
-            ->then(
-                function ($response) {
-                    return $response[0];
-                }
-            );
-    }
-
-    /**
-     * Operation restItemsGetAsyncWithHttpInfo
-     *
-     * Search item
-     *
-     * @param string $with Includes the specified variation information in the results. The following parameters are availabel: itemProperties, itemCrossSelling, variations, itemImages, itemShippingProfiles, ebayTitles (optional)
-     * @param string $lang The &lt;a href&#x3D;&#x27;https://developers.plentymarkets.com/rest-doc/introduction#countries&#x27; target&#x3D;&#x27;_blank&#x27;&gt;language&lt;/a&gt; of the variation information. (optional)
-     * @param int $page Limits the results to a specific page. The page number must be specified. (optional)
-     * @param int $items_per_page Limits the number of results listed per page to a specific number. The number of variations to be listed per page must be specified. (optional)
-     * @param string $name Filter restricts the list of results to items with the specified item name. An item name must be specified. (optional)
-     * @param string $manufacturer_id Filter restricts the list of results to items with the specified manufacturerId. (optional)
-     * @param int $tag_id Filter restricts the list of results to items with the specified tagId. More than one ID should be separated by commas. (optional)
-     * @param int $flag_one Filter restricts the list of results to items with the specified flagOne. (optional)
-     * @param int $flag_two Filter restricts the list of results to items with the specified flagTwo. (optional)
-     * @param string $updated_between Filter restricts the list of results to items updated during the specified period. The end date (to) is optional. If no end date is specified, items updated between the start date (from) and the present will be listed. The dates can be specified as unix timestamps or in the ISO 8601 date format. Start date and optional end date are separated by a comma. For example, .../items?updatedBetween&#x3D;1451606400,1456790400 will list items updated between 2016-01-01 and 2016-03-01. .../items?updatedBetween&#x3D;1451606400 will list items updated since 2016-01-01. The PHP function strtotime is also supported. (optional)
-     * @param string $variation_updated_between Filter restricts the list of results to items with variations that were updated during the specified period. The end date (to) is optional. If no end date is specified, items with variations updated between the start date (from) and the present will be listed. The dates can be specified as unix timestamps or in the ISO 8601 date format. Start date and optional end date are separated by a comma. For example, .../items?updatedBetween&#x3D;1451606400,1456790400 will list items with variations that were updated between 2016-01-01 and 2016-03-01. .../items?updatedBetween&#x3D;1451606400 will list items with variations that were updated since 2016-01-01. The PHP function strtotime is also supported. (optional)
-     * @param string $variation_related_updated_between Filter restricts the list of results to items with variations for which related information was updated during the specified period. Related information is defined as information linked to the variation, i.e. barcodes, categories, images, markets, clients (stores), prices, suppliers, warehouses and the default category. See variationUpdatedBetween for supported formats. (optional)
-     *
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     * @throws \InvalidArgumentException
-     */
-    public function restItemsGetAsyncWithHttpInfo($with = null, $lang = null, $page = null, $items_per_page = null, $name = null, $manufacturer_id = null, $tag_id = null, $flag_one = null, $flag_two = null, $updated_between = null, $variation_updated_between = null, $variation_related_updated_between = null)
-    {
-        $returnType = ItemPaginated::class;
-        $request = $this->restItemsGetRequest($with, $lang, $page, $items_per_page, $name, $manufacturer_id, $tag_id, $flag_one, $flag_two, $updated_between, $variation_updated_between, $variation_related_updated_between);
-
-        return $this->client
-            ->sendAsync($request, $this->createHttpClientOption())
-            ->then(
-                function ($response) use ($returnType) {
-                    $responseBody = $response->getBody();
-                    if ($returnType === '\SplFileObject') {
-                        $content = $responseBody; //stream goes to serializer
-                    } else {
-                        $content = $responseBody->getContents();
-                        if ($returnType !== 'string') {
-                            $content = json_decode($content);
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, $returnType, []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                },
-                function ($exception) {
-                    $response = $exception->getResponse();
-                    $statusCode = $response->getStatusCode();
-                    throw new ApiException(
-                        sprintf(
-                            '[%d] Error connecting to the API (%s)',
-                            $statusCode,
-                            $exception->getRequest()->getUri()
-                        ),
-                        $statusCode,
-                        $response->getHeaders(),
-                        $response->getBody()
-                    );
-                }
-            );
-    }
-
-    /**
      * Create request for operation 'restItemsGet'
      *
      * @param string $with Includes the specified variation information in the results. The following parameters are availabel: itemProperties, itemCrossSelling, variations, itemImages, itemShippingProfiles, ebayTitles (optional)
@@ -1049,80 +958,6 @@ class ItemApi
     }
 
     /**
-     * Operation restItemsIdVariationsVariationIdVariationSalesPricesGetAsync
-     *
-     * List sales prices of a variation
-     *
-     * @param int $id (required)
-     * @param int $variation_id (required)
-     *
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     * @throws \InvalidArgumentException
-     */
-    public function restItemsIdVariationsVariationIdVariationSalesPricesGetAsync($id, $variation_id)
-    {
-        return $this->restItemsIdVariationsVariationIdVariationSalesPricesGetAsyncWithHttpInfo($id, $variation_id)
-            ->then(
-                function ($response) {
-                    return $response[0];
-                }
-            );
-    }
-
-    /**
-     * Operation restItemsIdVariationsVariationIdVariationSalesPricesGetAsyncWithHttpInfo
-     *
-     * List sales prices of a variation
-     *
-     * @param int $id (required)
-     * @param int $variation_id (required)
-     *
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     * @throws \InvalidArgumentException
-     */
-    public function restItemsIdVariationsVariationIdVariationSalesPricesGetAsyncWithHttpInfo($id, $variation_id)
-    {
-        $returnType = VariationSalesPrice::class;
-        $request = $this->restItemsIdVariationsVariationIdVariationSalesPricesGetRequest($id, $variation_id);
-
-        return $this->client
-            ->sendAsync($request, $this->createHttpClientOption())
-            ->then(
-                function ($response) use ($returnType) {
-                    $responseBody = $response->getBody();
-                    if ($returnType === '\SplFileObject') {
-                        $content = $responseBody; //stream goes to serializer
-                    } else {
-                        $content = $responseBody->getContents();
-                        if ($returnType !== 'string') {
-                            $content = json_decode($content);
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, $returnType, []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                },
-                function ($exception) {
-                    $response = $exception->getResponse();
-                    $statusCode = $response->getStatusCode();
-                    throw new ApiException(
-                        sprintf(
-                            '[%d] Error connecting to the API (%s)',
-                            $statusCode,
-                            $exception->getRequest()->getUri()
-                        ),
-                        $statusCode,
-                        $response->getHeaders(),
-                        $response->getBody()
-                    );
-                }
-            );
-    }
-
-    /**
      * Create request for operation 'restItemsIdVariationsVariationIdVariationSalesPricesGet'
      *
      * @param int $id (required)
@@ -1334,82 +1169,6 @@ class ItemApi
             }
             throw $e;
         }
-    }
-
-    /**
-     * Operation restItemsIdVariationsVariationIdVariationImagesGetAsync
-     *
-     * List image links of a variation
-     *
-     * @param int $id (required)
-     * @param int $variation_id (required)
-     * @param string $updated_at Filter restricts the list of results to variation images updated after the specified date. The date can be specified as unix timestamps or in the ISO 8601 date format. The PHP function strtotime is also supported. (optional)
-     *
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     * @throws \InvalidArgumentException
-     */
-    public function restItemsIdVariationsVariationIdVariationImagesGetAsync($id, $variation_id, $updated_at = null)
-    {
-        return $this->restItemsIdVariationsVariationIdVariationImagesGetAsyncWithHttpInfo($id, $variation_id, $updated_at)
-            ->then(
-                function ($response) {
-                    return $response[0];
-                }
-            );
-    }
-
-    /**
-     * Operation restItemsIdVariationsVariationIdVariationImagesGetAsyncWithHttpInfo
-     *
-     * List image links of a variation
-     *
-     * @param int $id (required)
-     * @param int $variation_id (required)
-     * @param string $updated_at Filter restricts the list of results to variation images updated after the specified date. The date can be specified as unix timestamps or in the ISO 8601 date format. The PHP function strtotime is also supported. (optional)
-     *
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     * @throws \InvalidArgumentException
-     */
-    public function restItemsIdVariationsVariationIdVariationImagesGetAsyncWithHttpInfo($id, $variation_id, $updated_at = null)
-    {
-        $returnType = VariationImage::class;
-        $request = $this->restItemsIdVariationsVariationIdVariationImagesGetRequest($id, $variation_id, $updated_at);
-
-        return $this->client
-            ->sendAsync($request, $this->createHttpClientOption())
-            ->then(
-                function ($response) use ($returnType) {
-                    $responseBody = $response->getBody();
-                    if ($returnType === '\SplFileObject') {
-                        $content = $responseBody; //stream goes to serializer
-                    } else {
-                        $content = $responseBody->getContents();
-                        if ($returnType !== 'string') {
-                            $content = json_decode($content);
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, $returnType, []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                },
-                function ($exception) {
-                    $response = $exception->getResponse();
-                    $statusCode = $response->getStatusCode();
-                    throw new ApiException(
-                        sprintf(
-                            '[%d] Error connecting to the API (%s)',
-                            $statusCode,
-                            $exception->getRequest()->getUri()
-                        ),
-                        $statusCode,
-                        $response->getHeaders(),
-                        $response->getBody()
-                    );
-                }
-            );
     }
 
     /**
@@ -1630,80 +1389,6 @@ class ItemApi
     }
 
     /**
-     * Operation restItemsIdImagesGetAsync
-     *
-     * List images of an item
-     *
-     * @param int $id (required)
-     * @param string $updated_at Filter restricts the list of results to items updated after the specified date. The date can be specified as unix timestamps or in the ISO 8601 date format. The PHP function strtotime is also supported. (optional)
-     *
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     * @throws \InvalidArgumentException
-     */
-    public function restItemsIdImagesGetAsync($id, $updated_at = null)
-    {
-        return $this->restItemsIdImagesGetAsyncWithHttpInfo($id, $updated_at)
-            ->then(
-                function ($response) {
-                    return $response[0];
-                }
-            );
-    }
-
-    /**
-     * Operation restItemsIdImagesGetAsyncWithHttpInfo
-     *
-     * List images of an item
-     *
-     * @param int $id (required)
-     * @param string $updated_at Filter restricts the list of results to items updated after the specified date. The date can be specified as unix timestamps or in the ISO 8601 date format. The PHP function strtotime is also supported. (optional)
-     *
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     * @throws \InvalidArgumentException
-     */
-    public function restItemsIdImagesGetAsyncWithHttpInfo($id, $updated_at = null)
-    {
-        $returnType = ItemImage::class;
-        $request = $this->restItemsIdImagesGetRequest($id, $updated_at);
-
-        return $this->client
-            ->sendAsync($request, $this->createHttpClientOption())
-            ->then(
-                function ($response) use ($returnType) {
-                    $responseBody = $response->getBody();
-                    if ($returnType === '\SplFileObject') {
-                        $content = $responseBody; //stream goes to serializer
-                    } else {
-                        $content = $responseBody->getContents();
-                        if ($returnType !== 'string') {
-                            $content = json_decode($content);
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, $returnType, []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                },
-                function ($exception) {
-                    $response = $exception->getResponse();
-                    $statusCode = $response->getStatusCode();
-                    throw new ApiException(
-                        sprintf(
-                            '[%d] Error connecting to the API (%s)',
-                            $statusCode,
-                            $exception->getRequest()->getUri()
-                        ),
-                        $statusCode,
-                        $response->getHeaders(),
-                        $response->getBody()
-                    );
-                }
-            );
-    }
-
-    /**
      * Create request for operation 'restItemsIdImagesGet'
      *
      * @param int $id (required)
@@ -1812,6 +1497,960 @@ class ItemApi
 
 
     /**
+     * Operation restItemsIdVariationsVariationIdStockGet
+     *
+     * List stock of a variation per warehouse
+     *
+     * @param int $item_id The ID of the item (required)
+     * @param int $variation_id The ID of the variation (required)
+     * @param int $id id (required)
+     * @param int $columns The properties to be loaded (optional)
+     *
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationStockModelsVariationStock[]
+     * @throws \InvalidArgumentException
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
+     */
+    public function restItemsIdVariationsVariationIdStockGet($item_id, $variation_id, $id, $columns = null)
+    {
+        list($response) = $this->restItemsIdVariationsVariationIdStockGetWithHttpInfo($item_id, $variation_id, $id, $columns);
+        return $response;
+    }
+
+    /**
+     * Operation restItemsIdVariationsVariationIdStockGetWithHttpInfo
+     *
+     * List stock of a variation per warehouse
+     *
+     * @param int $item_id The ID of the item (required)
+     * @param int $variation_id The ID of the variation (required)
+     * @param int $id (required)
+     * @param int $columns The properties to be loaded (optional)
+     *
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationStockModelsVariationStock[], HTTP status code, HTTP response headers (array of strings)
+     * @throws \InvalidArgumentException
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
+     */
+    public function restItemsIdVariationsVariationIdStockGetWithHttpInfo($item_id, $variation_id, $id, $columns = null)
+    {
+        $returnType = VariationStock::class;
+        $request = $this->restItemsIdVariationsVariationIdStockGetRequest($item_id, $variation_id, $id, $columns);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? $e->getResponse()->getBody()->getContents() : null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    $response->getBody()
+                );
+            }
+
+            $responseBody = $response->getBody();
+            if ($returnType === '\SplFileObject') {
+                $content = $responseBody; //stream goes to serializer
+            } else {
+                $content = $responseBody->getContents();
+                if (!in_array($returnType, ['string', 'integer', 'bool'])) {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationStockModelsVariationStock[]',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Create request for operation 'restItemsIdVariationsVariationIdStockGet'
+     *
+     * @param int $item_id The ID of the item (required)
+     * @param int $variation_id The ID of the variation (required)
+     * @param int $id (required)
+     * @param int $columns The properties to be loaded (optional)
+     *
+     * @return \GuzzleHttp\Psr7\Request
+     * @throws \InvalidArgumentException
+     */
+    protected function restItemsIdVariationsVariationIdStockGetRequest($item_id, $variation_id, $id, $columns = null)
+    {
+        // verify the required parameter 'item_id' is set
+        if ($item_id === null || (is_array($item_id) && count($item_id) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $item_id when calling restItemsIdVariationsVariationIdStockGet'
+            );
+        }
+        // verify the required parameter 'variation_id' is set
+        if ($variation_id === null || (is_array($variation_id) && count($variation_id) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $variation_id when calling restItemsIdVariationsVariationIdStockGet'
+            );
+        }
+        // verify the required parameter 'id' is set
+        if ($id === null || (is_array($id) && count($id) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $id when calling restItemsIdVariationsVariationIdStockGet'
+            );
+        }
+
+        $resourcePath = '/rest/items/{id}/variations/{variationId}/stock';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        if ($item_id !== null) {
+            $queryParams['itemId'] = ObjectSerializer::toQueryValue($item_id);
+        }
+        // query params
+        if ($columns !== null) {
+            $queryParams['columns'] = ObjectSerializer::toQueryValue($columns);
+        }
+
+        // path params
+        if ($variation_id !== null) {
+            $resourcePath = str_replace(
+                '{' . 'variationId' . '}',
+                ObjectSerializer::toPathValue($variation_id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                '{' . 'id' . '}',
+                ObjectSerializer::toPathValue($id),
+                $resourcePath
+            );
+        }
+
+        // body params
+        $_tempBody = null;
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            // $_tempBody is the method argument, if present
+            $httpBody = $_tempBody;
+            // \stdClass has no __toString(), so we should encode it manually
+            if ($httpBody instanceof \stdClass && $headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($httpBody);
+            }
+        } elseif (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $multipartContents[] = [
+                        'name' => $formParamName,
+                        'contents' => $formParamValue
+                    ];
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = \GuzzleHttp\Psr7\build_query($formParams);
+            }
+        }
+
+        // this endpoint requires OAuth (access token)
+        if ($this->config->getAccessToken() !== null) {
+            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $query = \GuzzleHttp\Psr7\build_query($queryParams);
+        return new Request(
+            'GET',
+            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+
+    /**
+     * Operation restItemsIdVariationsVariationIdStockStorageLocationsGet
+     *
+     * List stock of a variation per storage locations
+     *
+     * @param int $item_id The ID of the item (required)
+     * @param int $variation_id The ID of the variation (required)
+     * @param int $page The requested page (required)
+     * @param int $items_per_page The number of items per page (required)
+     * @param int $id id (required)
+     * @param int $columns The properties to be loaded (optional)
+     *
+     * @return object
+     * @throws \InvalidArgumentException
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
+     */
+    public function restItemsIdVariationsVariationIdStockStorageLocationsGet($item_id, $variation_id, $page, $items_per_page, $id, $columns = null)
+    {
+        list($response) = $this->restItemsIdVariationsVariationIdStockStorageLocationsGetWithHttpInfo($item_id, $variation_id, $page, $items_per_page, $id, $columns);
+        return $response;
+    }
+
+    /**
+     * Operation restItemsIdVariationsVariationIdStockStorageLocationsGetWithHttpInfo
+     *
+     * List stock of a variation per storage locations
+     *
+     * @param int $item_id The ID of the item (required)
+     * @param int $variation_id The ID of the variation (required)
+     * @param int $page The requested page (required)
+     * @param int $items_per_page The number of items per page (required)
+     * @param int $id (required)
+     * @param int $columns The properties to be loaded (optional)
+     *
+     * @return array of object, HTTP status code, HTTP response headers (array of strings)
+     * @throws \InvalidArgumentException
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
+     */
+    public function restItemsIdVariationsVariationIdStockStorageLocationsGetWithHttpInfo($item_id, $variation_id, $page, $items_per_page, $id, $columns = null)
+    {
+        $returnType = StockStorageLocationPaginated::class;
+        $request = $this->restItemsIdVariationsVariationIdStockStorageLocationsGetRequest($item_id, $variation_id, $page, $items_per_page, $id, $columns);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? $e->getResponse()->getBody()->getContents() : null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    $response->getBody()
+                );
+            }
+
+            $responseBody = $response->getBody();
+            if ($returnType === '\SplFileObject') {
+                $content = $responseBody; //stream goes to serializer
+            } else {
+                $content = $responseBody->getContents();
+                if (!in_array($returnType, ['string', 'integer', 'bool'])) {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        'object',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation restItemsIdVariationsVariationIdStockBookIncomingItemsPut
+     *
+     * Book incoming stock
+     *
+     * @param int $item_id The ID of the item (required)
+     * @param int $variation_id The ID of the variation (required)
+     * @param int $id id (required)
+     * @param object $body body (optional)
+     *
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationStockModelsVariationStock[]
+     * @throws \InvalidArgumentException
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
+     */
+    public function restItemsIdVariationsVariationIdStockBookIncomingItemsPut($item_id, $variation_id, $id, $body = null)
+    {
+        list($response) = $this->restItemsIdVariationsVariationIdStockBookIncomingItemsPutWithHttpInfo($item_id, $variation_id, $id, $body);
+        return $response;
+    }
+
+    /**
+     * Operation restItemsIdVariationsVariationIdStockBookIncomingItemsPutWithHttpInfo
+     *
+     * Book incoming stock
+     *
+     * @param int $item_id The ID of the item (required)
+     * @param int $variation_id The ID of the variation (required)
+     * @param int $id (required)
+     * @param object $body (optional)
+     *
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationStockModelsVariationStock[], HTTP status code, HTTP response headers (array of strings)
+     * @throws \InvalidArgumentException
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
+     */
+    public function restItemsIdVariationsVariationIdStockBookIncomingItemsPutWithHttpInfo($item_id, $variation_id, $id, $body = null)
+    {
+        $returnType = VariationStock::class;
+        $request = $this->restItemsIdVariationsVariationIdStockBookIncomingItemsPutRequest($item_id, $variation_id, $id, $body);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? $e->getResponse()->getBody()->getContents() : null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    $response->getBody()
+                );
+            }
+
+            $responseBody = $response->getBody();
+            if ($returnType === '\SplFileObject') {
+                $content = $responseBody; //stream goes to serializer
+            } else {
+                $content = $responseBody->getContents();
+                if (!in_array($returnType, ['string', 'integer', 'bool'])) {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationStockModelsVariationStock[]',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Create request for operation 'restItemsIdVariationsVariationIdStockBookIncomingItemsPut'
+     *
+     * @param int $item_id The ID of the item (required)
+     * @param int $variation_id The ID of the variation (required)
+     * @param int $id (required)
+     * @param object $body (optional)
+     *
+     * @return \GuzzleHttp\Psr7\Request
+     * @throws \InvalidArgumentException
+     */
+    protected function restItemsIdVariationsVariationIdStockBookIncomingItemsPutRequest($item_id, $variation_id, $id, $body = null)
+    {
+        // verify the required parameter 'item_id' is set
+        if ($item_id === null || (is_array($item_id) && count($item_id) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $item_id when calling restItemsIdVariationsVariationIdStockBookIncomingItemsPut'
+            );
+        }
+        // verify the required parameter 'variation_id' is set
+        if ($variation_id === null || (is_array($variation_id) && count($variation_id) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $variation_id when calling restItemsIdVariationsVariationIdStockBookIncomingItemsPut'
+            );
+        }
+        // verify the required parameter 'id' is set
+        if ($id === null || (is_array($id) && count($id) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $id when calling restItemsIdVariationsVariationIdStockBookIncomingItemsPut'
+            );
+        }
+
+        $resourcePath = '/rest/items/{id}/variations/{variationId}/stock/bookIncomingItems';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        if ($item_id !== null) {
+            $queryParams['itemId'] = ObjectSerializer::toQueryValue($item_id);
+        }
+
+        // path params
+        if ($variation_id !== null) {
+            $resourcePath = str_replace(
+                '{' . 'variationId' . '}',
+                ObjectSerializer::toPathValue($variation_id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                '{' . 'id' . '}',
+                ObjectSerializer::toPathValue($id),
+                $resourcePath
+            );
+        }
+
+        // body params
+        $_tempBody = null;
+        if (isset($body)) {
+            $_tempBody = $body;
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*'],
+                ['application/json']
+            );
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            // $_tempBody is the method argument, if present
+            $httpBody = $_tempBody;
+            // \stdClass has no __toString(), so we should encode it manually
+            if ($httpBody instanceof \stdClass && $headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($httpBody);
+            }
+        } elseif (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $multipartContents[] = [
+                        'name' => $formParamName,
+                        'contents' => $formParamValue
+                    ];
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = \GuzzleHttp\Psr7\build_query($formParams);
+            }
+        }
+
+        // this endpoint requires OAuth (access token)
+        if ($this->config->getAccessToken() !== null) {
+            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $query = \GuzzleHttp\Psr7\build_query($queryParams);
+        return new Request(
+            'PUT',
+            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+
+    /**
+     * Operation restItemsIdVariationsVariationIdStockCorrectionPut
+     *
+     * Correct stock
+     *
+     * @param int $item_id The ID of the item (required)
+     * @param int $variation_id The ID of the variation (required)
+     * @param int $id id (required)
+     * @param object $body body (optional)
+     *
+     * @return \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationStockModelsVariationStock[]
+     * @throws \InvalidArgumentException
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
+     */
+    public function restItemsIdVariationsVariationIdStockCorrectionPut($item_id, $variation_id, $id, $body = null)
+    {
+        list($response) = $this->restItemsIdVariationsVariationIdStockCorrectionPutWithHttpInfo($item_id, $variation_id, $id, $body);
+        return $response;
+    }
+
+    /**
+     * Operation restItemsIdVariationsVariationIdStockCorrectionPutWithHttpInfo
+     *
+     * Correct stock
+     *
+     * @param int $item_id The ID of the item (required)
+     * @param int $variation_id The ID of the variation (required)
+     * @param int $id (required)
+     * @param object $body (optional)
+     *
+     * @return array of \BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationStockModelsVariationStock[], HTTP status code, HTTP response headers (array of strings)
+     * @throws \InvalidArgumentException
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
+     */
+    public function restItemsIdVariationsVariationIdStockCorrectionPutWithHttpInfo($item_id, $variation_id, $id, $body = null)
+    {
+        $returnType = VariationStock::class;
+        $request = $this->restItemsIdVariationsVariationIdStockCorrectionPutRequest($item_id, $variation_id, $id, $body);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? $e->getResponse()->getBody()->getContents() : null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    $response->getBody()
+                );
+            }
+
+            $responseBody = $response->getBody();
+            if ($returnType === '\SplFileObject') {
+                $content = $responseBody; //stream goes to serializer
+            } else {
+                $content = $responseBody->getContents();
+                if (!in_array($returnType, ['string', 'integer', 'bool'])) {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\BSApp\Service\plentymarketsAPI\Model\PlentyModulesItemVariationStockModelsVariationStock[]',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Create request for operation 'restItemsIdVariationsVariationIdStockCorrectionPut'
+     *
+     * @param int $item_id The ID of the item (required)
+     * @param int $variation_id The ID of the variation (required)
+     * @param int $id (required)
+     * @param object $body (optional)
+     *
+     * @return \GuzzleHttp\Psr7\Request
+     * @throws \InvalidArgumentException
+     */
+    protected function restItemsIdVariationsVariationIdStockCorrectionPutRequest($item_id, $variation_id, $id, $body = null)
+    {
+        // verify the required parameter 'item_id' is set
+        if ($item_id === null || (is_array($item_id) && count($item_id) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $item_id when calling restItemsIdVariationsVariationIdStockCorrectionPut'
+            );
+        }
+        // verify the required parameter 'variation_id' is set
+        if ($variation_id === null || (is_array($variation_id) && count($variation_id) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $variation_id when calling restItemsIdVariationsVariationIdStockCorrectionPut'
+            );
+        }
+        // verify the required parameter 'id' is set
+        if ($id === null || (is_array($id) && count($id) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $id when calling restItemsIdVariationsVariationIdStockCorrectionPut'
+            );
+        }
+
+        $resourcePath = '/rest/items/{id}/variations/{variationId}/stock/correction';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        if ($item_id !== null) {
+            $queryParams['itemId'] = ObjectSerializer::toQueryValue($item_id);
+        }
+
+        // path params
+        if ($variation_id !== null) {
+            $resourcePath = str_replace(
+                '{' . 'variationId' . '}',
+                ObjectSerializer::toPathValue($variation_id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                '{' . 'id' . '}',
+                ObjectSerializer::toPathValue($id),
+                $resourcePath
+            );
+        }
+
+        // body params
+        $_tempBody = null;
+        if (isset($body)) {
+            $_tempBody = $body;
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*'],
+                ['application/json']
+            );
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            // $_tempBody is the method argument, if present
+            $httpBody = $_tempBody;
+            // \stdClass has no __toString(), so we should encode it manually
+            if ($httpBody instanceof \stdClass && $headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($httpBody);
+            }
+        } elseif (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $multipartContents[] = [
+                        'name' => $formParamName,
+                        'contents' => $formParamValue
+                    ];
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = \GuzzleHttp\Psr7\build_query($formParams);
+            }
+        }
+
+        // this endpoint requires OAuth (access token)
+        if ($this->config->getAccessToken() !== null) {
+            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $query = \GuzzleHttp\Psr7\build_query($queryParams);
+        return new Request(
+            'PUT',
+            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+
+
+    /**
+     * Create request for operation 'restItemsIdVariationsVariationIdStockStorageLocationsGet'
+     *
+     * @param int $item_id The ID of the item (required)
+     * @param int $variation_id The ID of the variation (required)
+     * @param int $page The requested page (required)
+     * @param int $items_per_page The number of items per page (required)
+     * @param int $id (required)
+     * @param int $columns The properties to be loaded (optional)
+     *
+     * @return \GuzzleHttp\Psr7\Request
+     * @throws \InvalidArgumentException
+     */
+    protected function restItemsIdVariationsVariationIdStockStorageLocationsGetRequest($item_id, $variation_id, $page, $items_per_page, $id, $columns = null)
+    {
+        // verify the required parameter 'item_id' is set
+        if ($item_id === null || (is_array($item_id) && count($item_id) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $item_id when calling restItemsIdVariationsVariationIdStockStorageLocationsGet'
+            );
+        }
+        // verify the required parameter 'variation_id' is set
+        if ($variation_id === null || (is_array($variation_id) && count($variation_id) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $variation_id when calling restItemsIdVariationsVariationIdStockStorageLocationsGet'
+            );
+        }
+        // verify the required parameter 'page' is set
+        if ($page === null || (is_array($page) && count($page) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $page when calling restItemsIdVariationsVariationIdStockStorageLocationsGet'
+            );
+        }
+        // verify the required parameter 'items_per_page' is set
+        if ($items_per_page === null || (is_array($items_per_page) && count($items_per_page) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $items_per_page when calling restItemsIdVariationsVariationIdStockStorageLocationsGet'
+            );
+        }
+        // verify the required parameter 'id' is set
+        if ($id === null || (is_array($id) && count($id) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $id when calling restItemsIdVariationsVariationIdStockStorageLocationsGet'
+            );
+        }
+
+        $resourcePath = '/rest/items/{id}/variations/{variationId}/stock/storageLocations';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        if ($item_id !== null) {
+            $queryParams['itemId'] = ObjectSerializer::toQueryValue($item_id);
+        }
+        // query params
+        if ($page !== null) {
+            $queryParams['page'] = ObjectSerializer::toQueryValue($page);
+        }
+        // query params
+        if ($items_per_page !== null) {
+            $queryParams['itemsPerPage'] = ObjectSerializer::toQueryValue($items_per_page);
+        }
+        // query params
+        if ($columns !== null) {
+            $queryParams['columns'] = ObjectSerializer::toQueryValue($columns);
+        }
+
+        // path params
+        if ($variation_id !== null) {
+            $resourcePath = str_replace(
+                '{' . 'variationId' . '}',
+                ObjectSerializer::toPathValue($variation_id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                '{' . 'id' . '}',
+                ObjectSerializer::toPathValue($id),
+                $resourcePath
+            );
+        }
+
+        // body params
+        $_tempBody = null;
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            // $_tempBody is the method argument, if present
+            $httpBody = $_tempBody;
+            // \stdClass has no __toString(), so we should encode it manually
+            if ($httpBody instanceof \stdClass && $headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($httpBody);
+            }
+        } elseif (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $multipartContents[] = [
+                        'name' => $formParamName,
+                        'contents' => $formParamValue
+                    ];
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = \GuzzleHttp\Psr7\build_query($formParams);
+            }
+        }
+
+        // this endpoint requires OAuth (access token)
+        if ($this->config->getAccessToken() !== null) {
+            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $query = \GuzzleHttp\Psr7\build_query($queryParams);
+        return new Request(
+            'GET',
+            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+
+
+    /**
      * Create http client option
      *
      * @return array of http client options
@@ -1829,4 +2468,6 @@ class ItemApi
 
         return $options;
     }
+
+
 }
