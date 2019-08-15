@@ -67,13 +67,13 @@
     <form role="form">
         <div class="row">
 
-            <div class="col-8">
+            <div class="col">
 
                 {#                <h3>Etikettendruck</h3>#}
                 <div class="form-group label-search-bar">
                     <div class="row">
 
-                        <label for="name" class="col-2 col-form-label">Suche</label>
+                        <label for="name" class="col-2 col-form-label"><b>Suche</b></label>
                         <div class="col">
                             <input class="form-control col" type="text" id="search" name="search">
                         </div>
@@ -87,39 +87,45 @@
 
 
                 <div class="form-group row">
-                    <label for="name" class="col-2 col-form-label">Name</label>
+                    <label for="name" class="col-2 col-form-label"><b>Name</b></label>
                     <div class="col">
-                        <input class="form-control" type="text" id="name" name="labelform[name]" readonly>
+                        <input class="form-control" type="text" id="name" name="labelform[name]"
+                               value="{{ data.name | default("") }}"
+                               readonly>
                     </div>
                 </div>
                 <div class="form-group row ">
-                    <label for="name_botanic" class="col-2 col-form-label">Botanisch</label>
+                    <label for="name_botanic" class="col-2 col-form-label"><b>Botanisch</b></label>
                     <div class="col">
                         <input class="form-control" type="text" id="name_botanic" name="labelform[name_botanic]"
+                               value="{{ data.name_botanic | default("") }}"
                                readonly>
                     </div>
                 </div>
                 <div class="form-group row">
 
-                    <label for="articlecode" class="col-2 col-form-label">Code</label>
+                    <label for="articlecode" class="col-2 col-form-label"><b>Code</b></label>
                     <div class="col">
-                        <input class="form-control" type="text" id="articlecode" name="labelform[articlecode]" readonly>
+                        <input class="form-control" type="text" id="articlecode" name="labelform[articlecode]"
+                               value="{{ data.code | default("") }}" readonly>
                     </div>
                 </div>
                 <div class="form-group row">
 
-                    <label for="articleid" class="col-2 col-form-label">ArtikelID </label>
+                    <label for="articleid" class="col-2 col-form-label"><b>ArtikelID</b> </label>
                     <div class="col">
-                        <input class="form-control" type="text" id="articleid" name="labelform[articleid]" readonly>
+                        <input class="form-control" type="text" id="articleid" name="labelform[articleid]"
+                               value="{{ data.articleid | default("") }}" readonly>
 
                     </div>
                 </div>
 
                 <div class="form-group row">
 
-                    <label for="variantid" class="col-2 col-form-label">VariationID </label>
+                    <label for="variantid" class="col-2 col-form-label"><b>VariationID</b> </label>
                     <div class="col">
-                        <input class="form-control" type="text" id="variantid" name="labelform[variantid]" readonly>
+                        <input class="form-control" type="text" id="variantid" name="labelform[variantid]"
+                               value="{{ data.variantid | default("") }}" readonly>
 
                     </div>
                 </div>
@@ -128,18 +134,24 @@
                 <div class="form-group row printA6">
 
                     <div class="col-2 col-form-label">
-                        <label for="description">Beschreibung</label>
+                        <label for="description"><b>Beschreibung</b></label>
                         <small class="form-text text-muted">free3 / Feld 3</small>
 
                     </div>
                     <div class="col">
                     <textarea class="form-control" id="description"
-                              name="labelform[description]" readonly> </textarea>
+                              name="labelform[description]"
+                              readonly>  {{ data.description_short  | default("") }}</textarea>
+                        <label for="availableDinA6"> noch verfügbare zeichen auf dem Etikett</label>
+
+                        <input class="form-control" type="text" id="availableDinA6" readonly>
                     </div>
+
                 </div>
+
                 <div class="form-group row printLabel">
                     <div class="col-2 col-form-label">
-                        <label for="descriptionShort">Etikettentext</label>
+                        <label for="descriptionShort"><b>Etikettentext</b></label>
                         <small class="form-text text-muted">free1 / Feld 1</small>
 
                     </div>
@@ -147,7 +159,8 @@
                     <div class="col-10">
                         {#                    <textarea class="form-control" style="width: 400px;height: 200px;" id="descriptionShort"#}
                         <textarea class="form-control" id="descriptionShort"
-                                  name="labelform[descriptionShort]" readonly> </textarea>
+                                  name="labelform[descriptionShort]"
+                                  readonly>{{ data.label_text  | default("") }} </textarea>
                         <label for="available"> noch verfügbare zeichen auf dem Etikett</label>
 
                         <input class="form-control" type="text" id="available" readonly>
@@ -162,64 +175,114 @@
             </div>
 
 
-            <div class="col-4">
-                <a class=" btn btn-info btn-default" href="" target="_blank" rel="noopener noreferrer"
+            <div class="col-2">
+                <a class=" btn btn-info btn-default"
+                   href="{{ "https://plentymarkets-cloud-de.com/11541?uiAction=item_detail&itemId=" ~ data.article_id | default("") }}"
+                   target="_blank" rel="noopener noreferrer"
                    id="edit_article_btn">
                     Artikel Bearbeiten
                 </a>
-                <img src="/assets/images/200px.jpg" class="article_pic img-thumbnail">
+                <img src="{{ data.picurl | default("/assets/images/200px.jpg") }}" class="article_pic img-thumbnail">
 
                 <div class="form-group row printLabel m-2">
 
-                    <label for="articleStock" class="col-3 col-form-label">Akt. Bestand </label>
-                    {#                    <div class="col-3">#}
-                    <input class="stockDisplayNormal form-control col-3" type="text" id="articleStock" name="labelform[articleStock]"
-                           readonly>
+
+                    <label class="printLabel col" for="amount"> <b>Anzahl</b></label>
+                    <input class="form-control printLabel col" type="text" id="amount" name="labelform[amount]"
+                           placeholder="Anzahl" value="1">
+
+
+                    {#                                        <label for="articleStock" class="col col-form-label">Akt. Bestand </label>#}
+                    {#                    #}{#                    <div class="col-3">#}
+                    {#                    <input class="stockDisplayNormal form-control col" type="text" id="articleStock"#}
+                    {#                           name="labelform[articleStock]" value="{{ data.stock | default("") }}"#}
+                    {#                           readonly>#}
 
                     {#                    </div>#}
                 </div>
 
 
-                <div class="form-group">
-                    <div class="row m-3">
-                        <label class="printLabel col-3" for="amount"> Anzahl</label>
-                        <input class="form-control printLabel col-3" type="text" id="amount" name="labelform[amount]"
-                               placeholder="Anzahl" value="1">
-                    </div>
+                <div class="row m-2">
 
-
+                    <a class="btn btn-success  printLabel m-1" id="create_label">Etikett erstellen</a>
+                    <a class="btn btn-secondary  printLabel m-1" id="create_label_with_stock">Etikett erstellen &
+                        <br>
+                        Bestand buchen</a>
+                    <a class="btn btn-success printA6 m-1" id="addDinA6">zu DinA6 hinzufügen</a>
                 </div>
 
-                <div class="form-group row">
-                    <div class="row m-3">
-
-                        <a class="btn btn-success  printLabel m-1" id="create_label">Etikett erstellen</a>
-                        <a class="btn btn-secondary  printLabel m-1" id="create_label_with_stock">Etikett erstellen &
-                            <br>
-                            Bestand buchen</a>
-                        <a class="btn btn-success printA6 m-1" id="addDinA6">zu DinA6 hinzufügen</a>
-                    </div>
-
-                </div>
             </div>
 
+            <div class="col-3">
+                <div class="row printLabel m-2">
+
+                    {#                        <label class="btn btn-secondary">#}
+                    {#                            <input type="radio" name="options" id="option2" autocomplete="off"> Radio#}
+                    {#                        </label>#}
+                    {#                        <label class="btn btn-secondary">#}
+                    {#                            <input type="radio" name="options" id="option3" autocomplete="off"> Radio#}
+                    {#                        </label>#}
+
+                    {#                    <div class="col-5">#}
+                    <div class="btn-group-vertical btn-group-toggle" data-toggle="buttons">
+
+                        {% for storageLocation in storageLocations %}
+                            <div class="input-group ">
+                                <div class="input-group-prepend">
+                                    <div id="labelBtnStorageLocation_{{ storageLocation["id"] }}" class="input-group-text storageLocationsButtons {% if data is defined and data.stock['storageLocationId'] == storageLocation["id"] %}storageLocationActive{% endif %}">
+                                        <b>{{ storageLocation["label"] }}</b></div>
+                                </div>
+                                <input type="text"
+                                       name="btnStorageLocation_{{ storageLocation["id"] }}"
+                                       id="btnStorageLocation_{{ storageLocation["id"] }}"
+                                       class="form-control {% if data is defined and data.stock['storageLocationId'] == storageLocation["id"] %}storageLocationActive{% endif %}"
+                                       aria-label="Input group example"
+                                       aria-describedby="btnGroupAddon"
+                                       value="{% if data is defined and data.stock['storageLocationId'] == storageLocation["id"] %}{{ data.stock['quantity'] }}{% endif %}"
+                                       readonly>
+                            </div>
+
+
+                            {#                                <label class="btn btn-secondary storageLocationsButtons {% if data.stock['storageLocationId'] == storageLocation["id"] %}active{% endif %}">#}
+                            {#                                    <input type="radio" name="options"#}
+                            {#                                           autocomplete="off"> {{ storageLocation["label"] }}#}
+                            {#                                </label>#}
+                        {% endfor %}
+                    </div>
+
+                    {#                    </div>#}
+
+                    {#                    <div class="col-5">#}
+                    {#                        {% for storageLocation in storageLocations %}#}
+                    {#                            <input type="text" class=" storageLocationsAmount"#}
+                    {#                                   value="{% if data.stock['storageLocationId'] == storageLocation["id"] %}{{ data.stock['quantity'] }}{% endif %}"#}
+                    {#                                   readonly>#}
+                    {#                        {% endfor %}#}
+                    {#                    </div>#}
+
+                </div>
+
+                <div class="row m-2">
+                    <a class="btn btn-primary m-1 printLabel" id="add_stock">Bestand <br>buchen</a>
+                    <a class="btn btn-danger m-1 printLabel" id="remove_stock">Bestand<br> entfernen</a>
+                </div>
+
+{#                <a class="btn btn-danger m-1 " id="test_btn">TEST</a>#}
+
+
+            </div>
         </div>
 
     </form>
     <div class="row">
         <div class="col-8 pdf-print printLabel labelOutput">
 
-            <object class="PdfOut" data="/publicprint/label.pdf" type="application/pdf" width="100%"
+            <object class="PdfOut" data="{{ urlPDF }}" type="application/pdf" width="100%"
                     height="180px"></object>
 
 
         </div>
-        <div class="col-4">
-            <a class="btn btn-primary m-1 printLabel" id="add_stock">Bestand buchen</a>
-            <small class="form-text text-muted printLabel">Bei Fehlclick kann der Bestand über Plentimarkets korregiert werden.</small>
 
-            {#            <a class="btn btn-danger m-1" id="remove_stock">Bestand entfernen</a>#}
-        </div>
     </div>
 
     <div class="row">

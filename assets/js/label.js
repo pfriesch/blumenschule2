@@ -5,7 +5,50 @@ const autocomplete = require("jquery-ui/ui/widgets/autocomplete");
 const effect = require("jquery-ui/ui/effects/effect-transfer");
 
 
+var getCurrentStorageLocationId = function () {
+    return $("input.storageLocationActive").attr("name").split("_")[1];
+};
+
+var getCurrentStockQuantity = function () {
+    return $("input.storageLocationActive").val();
+};
+
+
+var setCurrentStorageLocation = function (storageLocationId, quantity) {
+
+    $("[name^='btnStorageLocation']").removeClass("storageLocationActive");
+    $("[id^='labelBtnStorageLocation']").removeClass("storageLocationActive");
+
+    $("#btnStorageLocation_" + storageLocationId).addClass("storageLocationActive");
+    $("#labelBtnStorageLocation_" + storageLocationId).addClass("storageLocationActive");
+
+    $("#btnStorageLocation_" + storageLocationId).val(quantity);
+
+};
+
+var storageUpdateFlashRed = function () {
+
+    $(".storageLocationActive").switchClass("storageLocationActive", "stockDisplayFlashRed", 100);
+    $(".storageLocationActive").switchClass("stockDisplayFlashRed", "storageLocationActive", 500);
+
+};
+
+
+var storageUpdateFlashGreen = function () {
+
+
+    $(".storageLocationActive").switchClass("storageLocationActive", "stockDisplayFlashGreen", 100);
+    $(".storageLocationActive").switchClass("stockDisplayFlashGreen", "storageLocationActive", 500);
+};
+
 $(document).ready(function () {
+
+    // $("#test_btn").click(function (event) {
+    //     storageUpdateFlashGreen();
+    //     storageUpdateFlashRed();
+    // });
+
+
     var A6Index = 0;
     $('.printA6').hide();
     $('.printLabel').show();
@@ -19,13 +62,12 @@ $(document).ready(function () {
         // delay: 0,
         source: function (request, response) {
             $.ajax({
-                url: "/product/sjson/" + request.term,
+                url: "/item/search/" + request.term,
                 dataType: "json",
 
                 success: function (data) {
                     $('#search_printLabelspinner').hide();
                     response($.map(data, function (item) {
-
                         return {
                             label: item.name + ' ' + item.name_botanic + ' ' + item.code,
                             name: item.name,
@@ -64,11 +106,31 @@ $(document).ready(function () {
     };
 
 
-    // $('form.LabelForm').submit(function (event) {
-    //     event.preventDefault();
-    //
+    $("[name^='btnStorageLocation']").on("click", function () {
+        //Change the storage location of an item
+        $old_storage_location = getCurrentStorageLocationId();
+        $new_storage_location = this.id.split("_")[1];
+        // alert($old_storage_location + " " + $new_storage_location);
 
-    // });
+        if ($old_storage_location != $new_storage_location) {
+            $data = {
+                article_id: $('#articleid ').val(),
+                variant_id: $('#variantid ').val(),
+                new_quantity: getCurrentStockQuantity(),
+                old_storage_location: $old_storage_location,
+                new_storage_location: $new_storage_location
+            };
+
+            $.getJSON({
+                url: "/item/changeStorageLocation",
+                // dataType: "json",
+                data: $data,
+                success: function (data) {
+                    alert(data);
+                }
+            });
+        }
+    });
 
 
     $('#search_btn').click(function (event) {
@@ -170,31 +232,33 @@ $(document).ready(function () {
 
     });
 
-    // $('#remove_stock').click(function (event) {
-    //     event.preventDefault();
-    //     $data = {
-    //         article_id: $('#articleid ').val(),
-    //         variant_id: $('#variantid ').val(),
-    //         quantity: $('#articleStock').val() - $('#amount').val()
-    //     };
-    //     $.post({
-    //         url: "/item/removestock",
-    //         dataType: "json",
-    //         data: $data,
-    //         success: function (data) {
-    //             if ($('#articleid ').val() != data.article_id || $('#variantid ').val() != data.variation_id) {
-    //                 //    TODO alert
-    //                 console.error("data mismatch" + data + " " + $('#articleid ').val() + " " + $('#variantid ').val())
-    //             }
-    //             $('#articleStock').val(data.stock);
-    //             $('#articleStock').switchClass("stockDisplayNormal", "stockDisplayFlash", 100);
-    //             $('#articleStock').switchClass("stockDisplayFlash", "stockDisplayNormal", 500);
-    //         }
-    //     });
-    // });
+    $('#remove_stock').click(function (event) {
+        event.preventDefault();
+        $data = {
+            article_id: $('#articleid ').val(),
+            variant_id: $('#variantid ').val(),
+            new_quantity: getCurrentStockQuantity() - $('#amount').val()
+        };
+        alert($data.new_quantity);
+        $.getJSON({
+            url: "/item/removestock",
+            // dataType: "json",
+            data: $data,
+            success: function (data) {
+                alert(data);
+                if ($('#articleid ').val() != data.article_id || $('#variantid ').val() != data.variation_id) {
+                    alert("data mismatch" + data.article_id + " " + $('#articleid ').val() + " " + data.variation_id + " " + $('#variantid ').val())
+                }
+                setCurrentStorageLocation(data.stock.storageLocationId, data.stock.quantity);
+                storageUpdateFlashRed();
 
-    $('#descriptionShort').keypress(countChars);
-    countChars();
+            }
+        });
+    });
+
+    $('#descriptionShort').keypress(countCharsLabel);
+    countCharsLabel();
+    countCharsDinA6();
 });
 
 var addStock = function () {
@@ -209,18 +273,25 @@ var addStock = function () {
         data: $data,
         success: function (data) {
             if ($('#articleid ').val() != data.article_id || $('#variantid ').val() != data.variation_id) {
-                //    TODO alert
-                console.error("data mismatch" + data + " " + $('#articleid ').val() + " " + $('#variantid ').val())
+                alert("data mismatch" + data + " " + $('#articleid ').val() + " " + $('#variantid ').val())
             }
-            $('#articleStock').val(data.stock);
-            $('#articleStock').switchClass("stockDisplayNormal", "stockDisplayFlash", 100);
-            $('#articleStock').switchClass("stockDisplayFlash", "stockDisplayNormal", 500);
+            setCurrentStorageLocation(data.stock.storageLocationId, data.stock.quantity);
+            storageUpdateFlashGreen();
         }
     });
 };
+var countCharsDinA6 = function () {
+    var text = $('#description ').val();
+    const max_chars = 730;
 
+    const remaining = max_chars - text.length;
+    console.log(remaining);
+    $('#availableDinA6').val(remaining);
+    if (remaining < 0) $('#availableDinA6').css("color", "red");
+    else $('#availableDinA6').css("color", "green");
+};
 
-var countChars = function () {
+var countCharsLabel = function () {
 
     var text = $('#descriptionShort ').val();
 
@@ -257,11 +328,17 @@ var createPdf = function (data) {
     $('.row').fadeTo('fast', 0.4);
     $('.loading').show();
     // if (data.article_id) {
-    $.getJSON('/product/getitem', {
-        article_id: data.article_id,
-        variant_id: data.variant_id,
-        quantity: $('#amount').val()
-    }).done(function (data) {
+
+
+    // history.pushState({},"/item/" + $('#articleid ').value + "/variant/" + $('#variantid ').value + "/quantity/" + $('#amount').value);
+
+    //
+    // article_id: $('#articleid ').val(),
+    //     variant_id: $('#variantid ').val(),
+    //     quantity: $('#amount').val()
+
+    $.getJSON("/item/" + data.article_id + "/variant/" + data.variant_id + "/quantity/" + $('#amount').val(), {}).done(function (data) {
+        history.pushState({}, document.title, "/item/" + data.article_id + "/variant/" + data.variant_id + "/quantity/" + $('#amount').val());
         $('#name ').val(data.name);
         $('#name_botanic ').val(data.name_botanic);
         $('#description ').val(data.description_short);
@@ -269,10 +346,12 @@ var createPdf = function (data) {
         $('#articlecode ').val(data.code);
         $('#articleid ').val(data.article_id);
         $('#variantid ').val(data.variant_id);
-        $('#articleStock ').val(data.stock);
+        $('#arcreatePdfticleStock ').val(data.stock);
         $('#picurl').val(data.picurl);
         $('#edit_article_btn').attr("href", "https://plentymarkets-cloud-de.com/11541?uiAction=item_detail&itemId=" + data.article_id);
 
+
+        setCurrentStorageLocation(data.stock.storageLocationId, data.stock.quantity);
 
         $('.article_pic').attr('src', data.picurl);
         $('.loading').hide();
@@ -283,7 +362,8 @@ var createPdf = function (data) {
         //reload pdf field
         $Pdfout.attr('data', $Pdfout.attr('data'));
 
-        countChars();
+        countCharsLabel();
+        countCharsDinA6();
 
         //TODO figure out why the visibility of the description fields changes
 

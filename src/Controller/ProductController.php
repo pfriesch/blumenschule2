@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Service\plentymarketsAPI\BSPlentyService;
+use phpDocumentor\Reflection\Types\Integer;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Knp\Component\Pager\PaginatorInterface;
@@ -21,17 +22,20 @@ use Symfony\Component\HttpFoundation\Response;
 class ProductController extends AbstractController
 {
 
-    private $limit = 50;
+//    private $limit = 50;
 
     /**
      * Matches / exactly
      * @Route("/", name="label_index")
      */
-    public function indexAction()
+    public function indexAction(BSPlentyService $plentyService)
     {
 
         return $this->render('product/label.html.twig', array(
-            'urlPDF' => "/print.pdf",
+            'urlPDF' => "/publicprint/label.pdf",
+            'storageLocations' => $plentyService->getStorageLocations()
+//            'data' => (object)[]
+
         ));
 
 
@@ -116,7 +120,7 @@ class ProductController extends AbstractController
     }
 
     /**
-     * @Route("/product/sjson/{search}", name="search_json")
+     * @Route("/item/search/{search}", name="search")
      */
     public function searchAction($search, BSPlentyService $plentyService)
     {
@@ -132,26 +136,40 @@ class ProductController extends AbstractController
     }
 
     /**
-     * @Route("/product/getitem", name="get_item")
+     * @Route("/item/{article_id}/variant/{variation_id}/quantity/{quantity}", name="get_item")
      */
-    public function getItemVariationAction(Request $request, BSPlentyService $plentyService)
+    public function getItemVariationAction($article_id, $variation_id, $quantity, Request $request, BSPlentyService $plentyService)
     {
 
-        $article_id = (int)$request->get('article_id');
-        $variation_id = (int)$request->get('variant_id');
-        $quantity = (int)$request->get('quantity');
+        $article_id = (int)$article_id;
+        $variation_id = (int)$variation_id;
+        $quantity = (int)$quantity;
+
+        $is_json_request = (bool)strpos($request->headers->get('accept'), "json");
 
         $item = $plentyService->getItemByVariantenNr($article_id, $variation_id);
 
-        if ($quantity > 0) {
-            $this->printAction(new \App\Entity\Item($item), $quantity, 98, 25);
+        if ($quantity <= 0) {
+            throw new Exception("Quantity can't be lower than 1");
+        }
+        $this->printAction(new \App\Entity\Item($item), $quantity, 98, 25);
+
+        if ($is_json_request) {
+            $response = new Response(json_encode($item));
+            $response->headers->set('Content-Type', 'application/json');
+
+            return $response;
+        } else {
+            $item['articleid'] = $article_id;
+            $item['variantid'] = $variation_id;
+
+            return $this->render('product/label.html.twig', array(
+                'urlPDF' => "/publicprint/label.pdf",
+                'storageLocations' => $plentyService->getStorageLocations(),
+                'data' => $item
+            ));
         }
 
-
-        $response = new Response(json_encode($item));
-        $response->headers->set('Content-Type', 'application/json');
-
-        return $response;
 
     }
 
@@ -221,18 +239,58 @@ class ProductController extends AbstractController
      */
     public function removeStock(Request $request, BSPlentyService $plentyService)
     {
+
         $article_id = (int)$request->get('article_id');
         $variation_id = (int)$request->get('variant_id');
-        $quantity = (int)$request->get('quantity');
+        $new_quantity = (int)$request->get('new_quantity');
 
-        $resultStock = $plentyService->correctStock($article_id, $variation_id, $quantity);
+        if ($new_quantity <= 0) {
+            throw new \Exception("The given quantity is 0 or lower");
+        }
 
-        $response = new Response(json_encode($resultStock));
+        $resultVariationStock = $plentyService->getItemByVariantenNrStorageLocationStock($article_id, $variation_id);
+
+
+        $resultStock = $plentyService->correctStock($article_id, $variation_id, $new_quantity, $resultVariationStock['storageLocationId']);
+
+        $result = [];
+        $result['article_id'] = $article_id;
+        $result['variation_id'] = $variation_id;
+        $result['stock'] = $resultStock;
+
+        $response = new Response(json_encode($result));
         $response->headers->set('Content-Type', 'application/json');
 
         return $response;
     }
 
+//    /**
+//     * @Route("/storageLocationsList", name="list_storage_locations")
+//     */
+//    public function listStorageLocations(Request $request, BSPlentyService $plentyService)
+//    {
+//        $result = $plentyService->getAllStorageLocations();
+//        $response = new Response(json_encode($result));
+//        $response->headers->set('Content-Type', 'application/json');
+//
+//        return $response;
+//    }
 
+    /**
+     * @Route("/item/changeStorageLocation", name="change_storage_location")
+     */
+    public function changeStorageLocation(Request $request, BSPlentyService $plentyService)
+    {
+        $article_id = (int)$request->get('article_id');
+        $variation_id = (int)$request->get('variant_id');
+        $new_quantity = (int)$request->get('new_quantity');
+        $old_storage_location = (int)$request->get('old_storage_location');
+        $new_storage_location = (int)$request->get('new_storage_location');
+        $result_double_stock = $plentyService->correctStock($article_id, $variation_id, $new_quantity, $new_storage_location);
+        $result_fixed_stock = $plentyService->correctStock($article_id, $variation_id, 0, $old_storage_location);
+        $response = new Response(json_encode($result_fixed_stock));
+        $response->headers->set('Content-Type', 'application/json');
 
+        return $response;
+    }
 }

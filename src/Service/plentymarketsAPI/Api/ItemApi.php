@@ -2075,8 +2075,37 @@ class ItemApi
      * @throws \InvalidArgumentException
      * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
      */
-    public function restItemsIdVariationsVariationIdStockCorrectionPut($item_id, $variation_id, $id, $body = null)
+    public function restItemsIdVariationsVariationIdStockCorrectionPut($item_id, $variation_id, $warehouseId, $storageLocationId, $new_quantity)
     {
+        $id = 0;
+        $body = (object)[
+            "warehouseId" => $warehouseId,
+            "storageLocationId" => $storageLocationId,
+
+            "quantity" => $new_quantity,
+//            The reason for correction. The following reasons are available:
+//
+//            301: Stock correction
+//            302: Stock correction by stocktaking
+//            304: Stock correction because of manufacturer error
+//            305: Stock correction because of unusable paper
+//            306: Stock correction because of packing error
+//            307: Stock correction because of damage
+//            309: Stock correction (internal offset)
+//            317: Stock correction because of BBD
+//            318: Stock correction because of shipping items to FBA
+//            319: Stock correction because of shipping items to fulfillment service provider
+//            320: Stock correction because of sample for interested parties
+//            321: Stock correction because of sample for customers
+//            322: Stock correction because of sample
+//            323: Stock correction because quality models are booked in
+//            324: Stock correction because quality models are booked out
+//            325: Stock correction because of gift
+//            326: Stock correction because of malfunction (without return)
+//            327: Stock correction because of loss
+//            328: Stock correction because of unpack
+            "reasonId" => 301];
+
         list($response) = $this->restItemsIdVariationsVariationIdStockCorrectionPutWithHttpInfo($item_id, $variation_id, $id, $body);
         return $response;
     }
@@ -2292,7 +2321,6 @@ class ItemApi
     }
 
 
-
     /**
      * Create request for operation 'restItemsIdVariationsVariationIdStockStorageLocationsGet'
      *
@@ -2447,7 +2475,6 @@ class ItemApi
             $httpBody
         );
     }
-
 
 
     /**

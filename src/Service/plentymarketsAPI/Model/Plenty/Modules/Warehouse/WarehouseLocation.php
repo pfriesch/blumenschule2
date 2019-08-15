@@ -55,7 +55,7 @@ class WarehouseLocation
 
     /**
      *  The notes of the warehouse location
-     * @var string
+     * @var string|null
      */
     public $notes;
 
