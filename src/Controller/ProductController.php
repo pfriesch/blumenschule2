@@ -22,8 +22,6 @@ use Symfony\Component\HttpFoundation\Response;
 class ProductController extends AbstractController
 {
 
-//    private $limit = 50;
-
     /**
      * Matches / exactly
      * @Route("/", name="label_index")
@@ -31,12 +29,9 @@ class ProductController extends AbstractController
     public function indexAction(BSPlentyService $plentyService)
     {
 
-        return $this->render('product/label.html.twig', array(
-            'urlPDF' => "/publicprint/label.pdf",
-            'storageLocations' => $plentyService->getStorageLocations()
-//            'data' => (object)[]
-
-        ));
+        return $this->render('index.html.twig', [
+            'controller_name' => 'ReactTestController',
+        ]);
 
 
     }
@@ -49,7 +44,7 @@ class ProductController extends AbstractController
 
         $pdf->SetFont('helvetica', 'B', 11);
         //$pdf->Write(1,$item->getName(),'',false,'L',1);
-        //$pdf->Cell(2, 6, $item->getName(),1,1);
+        //$pdf->Cell(2, 6, $item->getName(),1.0,1);
         $pdf->Text(0, 0, $item->name, false, false, true, 0, 1);
         $pdf->SetFont('helvetica', 'B', 8);
         $pdf->Text(32, 4, $item->name_botanic, false, false, true, 0, 1);
@@ -119,6 +114,24 @@ class ProductController extends AbstractController
         return $lines;
     }
 
+
+    /**
+     * @Route("/api/item/search/{search}", name="search_json")
+     */
+    public function searchActionJson($search, BSPlentyService $plentyService)
+    {
+        $result = $plentyService->searchItemsByName($search);
+
+
+        $response = new Response(json_encode(($result->asLabelFormData())));
+        $response->headers->set('Content-Type', 'application/json');
+
+        return $response;
+
+
+    }
+
+
     /**
      * @Route("/item/search/{search}", name="search")
      */
@@ -135,43 +148,33 @@ class ProductController extends AbstractController
 
     }
 
+
     /**
-     * @Route("/item/{article_id}/variant/{variation_id}/quantity/{quantity}", name="get_item")
+     * @Route("/api/item/{article_id}/variant/{variation_id}/quantity/{quantity}", name="get_item_json", format="json")
      */
-    public function getItemVariationAction($article_id, $variation_id, $quantity, Request $request, BSPlentyService $plentyService)
+    public function getItemVariationActionJson($article_id, $variation_id, $quantity, Request $request, BSPlentyService $plentyService)
     {
 
         $article_id = (int)$article_id;
         $variation_id = (int)$variation_id;
         $quantity = (int)$quantity;
 
-        $is_json_request = (bool)strpos($request->headers->get('accept'), "json");
-
-        $item = $plentyService->getItemByVariantenNr($article_id, $variation_id);
+        [$item, $notification] = $plentyService->getItemByVariantenNr($article_id, $variation_id);
 
         if ($quantity <= 0) {
             throw new Exception("Quantity can't be lower than 1");
         }
         $this->printAction(new \App\Entity\Item($item), $quantity, 98, 25);
 
-        if ($is_json_request) {
-            $response = new Response(json_encode($item));
-            $response->headers->set('Content-Type', 'application/json');
+        $response = new Response(json_encode($item));
+        $response->headers->set('Content-Type', 'application/json');
+        $response->headers->set('X-notification', $notification);
 
-            return $response;
-        } else {
-            $item['articleid'] = $article_id;
-            $item['variantid'] = $variation_id;
-
-            return $this->render('product/label.html.twig', array(
-                'urlPDF' => "/publicprint/label.pdf",
-                'storageLocations' => $plentyService->getStorageLocations(),
-                'data' => $item
-            ));
-        }
+        return $response;
 
 
     }
+
 
     public function printAction(\App\Entity\Item $item, $quantity, $width, $height)
     {
@@ -195,27 +198,32 @@ class ProductController extends AbstractController
         //$pdf->Output("print/".$entity->getArticleNo().".pdf", 'F');
         $tcpdf->Output($printTempDir . "label.pdf", 'F');
 
-        return $this->render('product/print.html.twig', array(
-            'urlPDF' => "/publicprint/label.pdf",
-        ));
+//        return $this->render('product/print.html.twig', array(
+//            'urlPDF' => "/publicprint/label.pdf",
+//        ));
 
 
     }
+
 
     /**
-     * @Route("/product/printA6", name="print_A6")
+     * @Route("/api/item/addstock", name="add_stock")
      */
-    public function printA6Action(Request $request)
+    public function addStockJson(Request $request, BSPlentyService $plentyService)
     {
+        $article_id = (int)$request->get('article_id');
+        $variation_id = (int)$request->get('variant_id');
+        $quantity = (int)$request->get('quantity');
 
+        [$resultStock, $notification] = $plentyService->bookIncommingStock($article_id, $variation_id, $quantity);
 
-        $data = $request->request->get('A6Label');
+        $response = new Response(json_encode($resultStock));
+        $response->headers->set('Content-Type', 'application/json');
+        $response->headers->set('X-notification', $notification);
 
-        return $this->render('product/printA6.html.twig', array(
-
-            'data' => $data
-        ));
+        return $response;
     }
+
 
     /**
      * @Route("/item/addstock", name="add_stock")
@@ -226,10 +234,11 @@ class ProductController extends AbstractController
         $variation_id = (int)$request->get('variant_id');
         $quantity = (int)$request->get('quantity');
 
-        $resultStock = $plentyService->bookIncommingStock($article_id, $variation_id, $quantity);
+        [$resultStock, $notification] = $plentyService->bookIncommingStock($article_id, $variation_id, $quantity);
 
         $response = new Response(json_encode($resultStock));
         $response->headers->set('Content-Type', 'application/json');
+        $response->headers->set('X-notification', $notification);
 
         return $response;
     }
@@ -248,10 +257,10 @@ class ProductController extends AbstractController
             throw new \Exception("The given quantity is 0 or lower");
         }
 
-        $resultVariationStock = $plentyService->getItemByVariantenNrStorageLocationStock($article_id, $variation_id);
+        [$resultVariationStock, $notification] = $plentyService->getItemByVariantenNrStorageLocationStock($article_id, $variation_id);
 
 
-        $resultStock = $plentyService->correctStock($article_id, $variation_id, $new_quantity, $resultVariationStock['storageLocationId']);
+        [$resultStock, $notification2] = $plentyService->correctStock($article_id, $variation_id, $new_quantity, $resultVariationStock['storageLocationId']);
 
         $result = [];
         $result['article_id'] = $article_id;
@@ -260,6 +269,7 @@ class ProductController extends AbstractController
 
         $response = new Response(json_encode($result));
         $response->headers->set('Content-Type', 'application/json');
+        $response->headers->set('X-notification', $notification . $notification2);
 
         return $response;
     }
@@ -286,11 +296,29 @@ class ProductController extends AbstractController
         $new_quantity = (int)$request->get('new_quantity');
         $old_storage_location = (int)$request->get('old_storage_location');
         $new_storage_location = (int)$request->get('new_storage_location');
-        $result_double_stock = $plentyService->correctStock($article_id, $variation_id, $new_quantity, $new_storage_location);
-        $result_fixed_stock = $plentyService->correctStock($article_id, $variation_id, 0, $old_storage_location);
+        [$result_double_stock, $notification] = $plentyService->correctStock($article_id, $variation_id, $new_quantity, $new_storage_location);
+        [$result_fixed_stock, $notification2] = $plentyService->correctStock($article_id, $variation_id, 0, $old_storage_location);
         $response = new Response(json_encode($result_fixed_stock));
         $response->headers->set('Content-Type', 'application/json');
+        $response->headers->set('X-notification', $notification . $notification2);
 
         return $response;
+    }
+
+    /**
+     * @Route("/api/image_cors_proxy",name="corsProxy")
+     */
+    public function corsProxy(Request $request)
+    {
+        $img_url = $request->get('img_url');
+//        $image = imagecreatefromstring(file_get_contents($img_url));
+        $image = file_get_contents($img_url);
+
+        $response = new Response($image);
+
+        $response->headers->set('Content-Type', 'image/jpg');
+        return $response;
+
+
     }
 }

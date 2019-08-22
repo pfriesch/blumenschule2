@@ -1,0 +1,112 @@
+@import "~bootstrap/scss/bootstrap";
+
+body {
+
+  background: url('/assets/images/background.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+
+  -moz-background-size: cover;
+
+  -o-background-size: cover;
+
+  background-size: cover;
+
+
+}
+
+.spinner-overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 998; /* Sit on top */
+
+}
+
+.search-bar {
+  margin: 15px;
+}
+
+.item-display {
+  margin-bottom: 0px;
+
+}
+
+.stock-input-label {
+  width: 130px;
+}
+
+.stock-input {
+  margin-bottom: 0px;
+  font-weight: bold;
+
+
+}
+
+.various-buttons {
+  margin: 5px;
+  color: black;
+}
+
+.labeltext-field {
+  height: 150px;
+}
+
+.remaining-chars {
+  width: 80px;
+}
+
+.amount {
+  width: 100%;
+}
+
+.label-text {
+  min-height: 150px;
+}
+
+.main-container {
+
+
+  border-radius: 4px;
+  background: rgba(200, 200, 200, 0.9);
+}
+
+.dinA6-iframe {
+  visibility: hidden;
+  width: 1px;
+  height: 1px;
+  -ms-zoom: 0.75;
+  -moz-transform: scale(0.75);
+  -moz-transform-origin: 0 0;
+  -o-transform: scale(0.75);
+  -o-transform-origin: 0 0;
+  -webkit-transform: scale(0.75);
+  -webkit-transform-origin: 0 0;
+}
+
+
+.spinner-overlay-spinner {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 999; /* Sit on top */
+  transform: scale(2);
+}
+
+
+.a6-print-item {
+  background-color: #FFFFFF;
+  border: 1px solid #CCCCCC;
+  border-radius: 4px 4px 4px 4px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+  color: #555555;
+  padding: 6px 12px;
+  margin-bottom: 10px;
+
+}
+
+.a6-print-item-pic {
+  width: 15%;
+
+  float: right;
+
+}

@@ -1,0 +1,24 @@
+.search-results-div {
+  position: absolute; /* Stay in place */
+  z-index: 1000; /* Sit on top */
+  background-color: white;
+  border: 1px solid #999;
+  max-height: 60vh;
+  max-width: 60vw;
+  white-space: nowrap;
+  margin-top: -15px;
+  margin-left: 15px;
+
+  overflow-y: auto;
+}
+
+.modal-search {
+  height: 100vh;
+  width: 100vw;
+  top: 0px;
+  left: 0px;
+  background: rgba(200, 200, 200, 0.2);
+  z-index: 3; /* Sit on top */
+  position: fixed;
+}
+

@@ -4,9 +4,7 @@
 namespace App\Service\plentymarketsAPI;
 
 use App\Service\plentymarketsAPI\Api\ItemApi;
-use App\Service\plentymarketsAPI\Api\OrderApi;
 
-use App\Service\plentymarketsAPI\Api\WarehouseApi;
 use App\Service\plentymarketsAPI\Model\Plenty\Modules\Item\Item\Item;
 use DateTime;
 use Exception;
@@ -22,33 +20,33 @@ use GuzzleHttp\Client;
 class BSPlentyService
 {
 
-    private $defaultWarehouseId = null;
+    /**
+     * @var Configuration
+     */
+    private $config;
 
-//    private $defaultStorageLocations = null;
+    public function __construct(Configuration $config)
+    {
+        $this->config = $config;
+    }
 
+    public function getStorageLocationMap()
+    {
+        //     No need to fetch the storage locations all the time since they won't change anytime soon
+        $storageLocationMap = [
+            42 => "Laden",
+            43 => "Haus-1",
+            44 => "Haus-3",
+            45 => "Staudenbeet1",
+            46 => "Block1",
+            47 => "Sonstige1",
+        ];
+        return $storageLocationMap;
+    }
 
     public function getStorageLocations()
     {
-
-//
-//    $config = Configuration::getDefaultConfiguration()->authenticated();
-//    $warehouseApiInstance = new WarehouseApi(
-//        new Client(),
-//        $config
-//    );
-//
-//    try {
-//        $storageLocations = $warehouseApiInstance->restWarehousesWarehouseIdLocationsGet($this->getDefaultWarehouseId());
-//    } catch (ApiException $e) {
-//        throw new Exception("Exception: " . $e);
-//    }
-//
-//    return array_map(function ($e) {
-//        return ["id" => $e->id, "label" => $e->label];
-//    }, $storageLocations->entries);
-
-
-//     No need to fetch the storage locations all the time since they won't change anytime soon
+        //     No need to fetch the storage locations all the time since they won't change anytime soon
         $storageLocations = [
             ["id" => 42, "label" => "Laden"],
             ["id" => 43, "label" => "Haus-1"],
@@ -60,127 +58,20 @@ class BSPlentyService
         return $storageLocations;
     }
 
+    public function getStorageLocationIds()
+    {
+        //     No need to fetch the storage locations all the time since they won't change anytime soon
+        $storageLocationIds = [42, 43, 44, 45, 46, 47];
+        return $storageLocationIds;
+    }
+
 
     private function getDefaultWarehouseId()
     {
-
-        if ($this->defaultWarehouseId == null) {
-
-
-//        $config = Configuration::getDefaultConfiguration()->authenticated();
-//
-//        $stockApiInstance = new StockManagementApi(
-//            new Client(),
-//            $config
-//        );
-//        try {
-//            $warehouses = $stockApiInstance->restStockmanagementWarehousesGet();
-//            if ($warehouses[0]->name != "Blumenschule"){
-//                throw new Exception("Default warehouse wrong!");
-//
-//            }
-//            $this->defaultWarehouseId = $warehouses[0]->id;
-//        } catch (Exception $e) {
-//            throw new Exception('Exception when calling $stockApiInstance->restStockmanagementWarehousesGet: ' . $e->getMessage());
-//        }
-
-//
-//        try {
-//            $this->defaultStorageLocations = $stockApiInstance->restStockmanagementWarehousesWarehouseIdManagementRacksRackIdShelvesShelfIdStorageLocationsGet($this->defaultWarehouseId);
-//        } catch (Exception $e) {
-//            throw new Exception('Exception when calling $stockApiInstance->restStockmanagementWarehousesWarehouseIdManagementRacksRackIdShelvesShelfIdStorageLocationsGet: ' . $e->getMessage());
-////        }
-
-
-//        Looked up manually and shouldn't change, otherwise use code above
-            $this->defaultWarehouseId = 11;
-        }
-        return $this->defaultWarehouseId;
-
-
+        //   No need to fetch the warehouse, since it should not change.
+        return 11;
     }
 
-//    public function doGetOrdersWithState($state)
-//    {
-//
-//
-//// Configure OAuth2 access token for authorization: oAuth2
-//        $config = Configuration::getDefaultConfiguration()->authenticated();
-//
-//        $apiInstance = new OrderApi(
-//            new Client(),
-//            $config
-//        );
-//        $order_type = null; // string | Filter that restricts the search result to orders of specific order types. The id of the order types must be specified. Several order types can be entered seperated by commas. @see order model typeId
-//        $contact_id = null; // int | Filter that restricts the search result to orders of one order contact. The id of the contact must be specified.
-//        $referrer_id = null; // double | Filter that restricts the search result to orders from one order referrer. The id of the order referrer must be specified.
-//        $shipping_profile_id = null; // int | Filter that restricts the search result to orders with a specific shipping profile. The id of shipping profile must be specified.
-//        $owner_user_id = null; // int | Filter that restricts the search result to orders of one owner. The user id of the owner must be specified.
-//        $warehouse_id = null; // int | Filter that restricts the search result to orders with a specific main warehouse. The id of the warehouse must be specified.
-//        $is_ebay_plus = null; // bool | Filter that restricts the search result to orders with ebay plus.
-//        $included_variation = null; // int | Filter that restricts the search result to orders with a certain variation. The id of the variation must be specified.
-//        $included_item = null; // int | Filter that restricts the search result to orders with a certain item. The id of the item must be specified.
-//        $order_ids = null; // string[] | Filter that restricts the search result to orders. To list several orders the orders must be separated by comma.
-//        $country_id = null; // int | Filter that restricts the search result to orders of one country. The id of the country must be specified.
-//        $order_item_name = null; // string | Filter that restricts the search results to orders with a certain item name. The name of the item must be specified.
-//        $variation_number = null; // int | Filter that restricts the search results to orders with a specific variation number. The number of the variation must be specified.
-//        $sender_contact = null; // int | Filter that restricts the search results to orders with a specific sender of the type contact. The id of the sender must be specified.
-//        $sender_warehouse = null; // int | Filter that restricts the search results to orders with a specific sender of the type warehouse. The id of the sender must be specified.
-//        $receiver_contact = null; // int | Filter that restricts the search results to orders with a specific receiver of the type contact. The id of the receiver must be specified.
-//        $receiver_warehouse = null; // int | Filter that restricts the search results to orders with a specific receiver of the type warehouse. The id of the receiver must be specified.
-//        $external_order_id = null; // string | Filter that restricts the search result to an external order id. The external order id must be specified.
-//        $client_id = null; // int | Filter that restricts the search result to order from one client. The id of the client must be specified.
-//        $payment_status = null; // string | Filter that restricts the search result to order with a specific payment status. Valid values are unpaid,partlyPaid,fullyPaid,overpaid. One value must be specified.
-//        $updated_at_from = null; // string | Filter that restricts the search result to orders that were last updated on the specified date. The date has to be in the W3C format, e.g. '2016-10-24T13:33:23+02:00'.
-//        $updated_at_to = null; // string | Filter that restricts the search result to orders that were last updated within a specified period of time. This filter can be used alone or can be combined with the UpdatedAtFrom filter. The date has to be in the W3C format, e.g. '2016-10-24T13:33:23+02:00'.
-//        $created_at_from = null; // string | Filter that restricts the search result to orders that were created on the specified date. The date has to be in the W3C format, e.g. '2016-10-24T13:33:23+02:00'.
-//        $created_at_to = null; // string | Filter that restricts the search result to orders that were created within a certain period of time. This filter can be used alone or can be combined with the CreatedAtFrom filter. The date has to be in the W3C format, e.g. '2016-10-24T13:33:23+02:00'.
-//        $paid_at_from = null; // string | Filter that restricts the search result to orders that received a payment on the specified date. The date has to be in the W3C format, e.g. '2016-10-24T13:33:23+02:00'.
-//        $paid_at_to = null; // string | Filter that restricts the search result to orders that received a payment within a certain period of time. This filter can be used alone or can be combined with the paidAtFrom filter. The date has to be in the W3C format, e.g. '2016-10-24T13:33:23+02:00'.
-//        $outgoing_items_booked_at_from = null; // string | Filter that restricts the search result to orders where the outgoing items were booked on the specified date. The date has to be in the W3C format, e.g. '2016-10-24T13:33:23+02:00'.
-//        $outgoing_items_booked_at_to = null; // string | Filter that restricts the search result to orders where the outgoing items were booked within a specified period of time. The date has to be in the W3C format, e.g. '2016-10-24T13:33:23+02:00'.
-//        $status_from = null; // double | Filter that restricts the search result to orders in a specific order status. The value of the order status must be specified.
-//        $status_to = null; // double | Filter that restricts the search result to orders within a range of order statuses. This filter can be used alone or can be combined with the statusFrom filter. The value of the order status must be specified.
-//        $has_document = null; // string | Filter that restricts the search result to orders which hold the given document type. Valid values are <i>multi_invoice</i>, <i>multi_credit_note</i>, <i>success_confirmation</i>, <i>return_note</i>, <i>pickup_delivery</i>, <i>repair_bill</i>, <i>dunning_letter</i>, <i>offer</i>, <i>order_confirmation</i>, <i>credit_note</i>, <i>correction_document</i>, <i>delivery_note</i>, <i>invoice</i>, <i>invoice_external</i>, <i>receipt</i>
-//        $has_document_number = null; // string | Filter that restricts the search result to orders which hold documents with given number.
-//        $page = null; // int | The page to get. The default page that will be returned is page 1.
-//        $items_per_page = null; // int | The number of orders to be displayed per page. The default number of orders per page is 50.
-//        $with = null; // string[] | Load additional relations for an order. Currently possible are:     <ul>     <li>'addresses' = The address objects that are associated with the order.</li>     <li>'relations' = The order relation reference instances that are associated with the order. These instances contain information such as the the reference type, the ID of the reference and the relation itself.</li>     <li>'comments' = The order comments.</li>     <li>'location' = The accounting location of the order.</li>     <li>'payments' = The payments that are associated with the order.</li>     <li>'documents' = The documents that are associated with the order.</li>     <li>'contactSender' = The associated contact for the contact-sender relation.</li>     <li>'contactReceiver' = The associated contact for the contact-receiver relation.</li>     <li>'warehouseSender' = The associated warehouse for the warehouse-sender relation.</li>     <li>'warehouseReceiver' = The associated warehouse for the warehouse-receiver relation.</li>     <li>'orderItems.variation' = The variation that is associated with the order item.</li>     <li>'orderItems.giftCardCodes' = The gift card codes that are associated with the order item.</li>     <li>'orderItems.transactions' = The transactions that are associated with the order item.</li>     <li>'orderItems.serialNumbers' = The serial numbers that are associated with the order item.</li>     <li>'orderItems.variationBarcodes' = The barcodes that are associated with variation of the order item.</li>     <li>'orderItems.comments' = The comments that are associated with the order item.</li>     <li>'originOrderReferences' = The references to other orders, e.g. returns or credit notes, associated with this order.</li>     <li><b>deprecated</b> 'orderItems.warehouseLocations' = The warehouse locations that are associated with the order item.</li>     </ul>     Example: <code>?with[]=addresses&with[]=orderItems.variation</code>
-//
-//
-//        $status_from = $state;
-////        $status_from = 0; // TODO remove
-//        $status_to = $state;
-////        $with = [ 'contactSender', 'contactReceiver', 'orderItems.variation', 'orderItems.transactions', 'orderItems.serialNumbers',
-////            'orderItems.variationBarcodes', 'orderItems.comments' . 'originOrderReferences'];
-//        $with = ['addresses'];
-//
-//        try {
-//            $result = $apiInstance->restOrdersGet($order_type, $contact_id, $referrer_id, $shipping_profile_id, $owner_user_id, $warehouse_id, $is_ebay_plus, $included_variation, $included_item, $order_ids, $country_id, $order_item_name, $variation_number, $sender_contact, $sender_warehouse, $receiver_contact, $receiver_warehouse, $external_order_id, $client_id, $payment_status, $updated_at_from, $updated_at_to, $created_at_from, $created_at_to, $paid_at_from, $paid_at_to, $outgoing_items_booked_at_from, $outgoing_items_booked_at_to, $status_from, $status_to, $has_document, $has_document_number, $page, $items_per_page, $with);
-////            print_r($result);
-//        } catch (Exception $e) {
-//            echo 'Exception when calling OrderApi->restOrdersGet: ', $e->getMessage(), PHP_EOL;
-//        }
-//
-//        return $result;
-//    }
-//
-//    public function doSetOrderStatus($rOrder, $state)
-//    {
-//        throw new Exception("setting order status not implemented");
-//    }
-//
-//    public function doGetOrdersInvoiceDocumentURLs($orderID)
-//    {
-//        throw new Exception("doGetOrdersInvoiceDocumentURLs not yet implemented");
-//
-//    }
-//
-//    public function doGetCustomers(array $array)
-//    {
-//        throw new Exception("doGetOrdersInvoiceDocumentURLs not yet implemented");
-//
-//    }
 
     /**
      * @param $name
@@ -189,7 +80,7 @@ class BSPlentyService
     public function searchItemsByName($search_name)
     {
 
-        $config = Configuration::getDefaultConfiguration()->authenticated();
+        $config = $this->config->authenticated();
         $apiInstance = new ItemApi(
             new Client(),
             $config
@@ -215,7 +106,6 @@ class BSPlentyService
             echo 'Exception when calling ItemApi->restItemsGet: ', $e->getMessage(), PHP_EOL;
         }
 
-//        TODO add stock to search display?
         return $result;
     }
 
@@ -227,7 +117,7 @@ class BSPlentyService
     public function getItemById($item_id)
     {
 // Configure OAuth2 access token for authorization: oAuth2
-        $config = Configuration::getDefaultConfiguration()->authenticated();
+        $config = $this->config->authenticated();
 
         $apiInstance = new ItemApi(
             new Client(),
@@ -240,17 +130,15 @@ class BSPlentyService
         try {
             $result = $apiInstance->restItemsItemIdGet($item_id, $lang);
         } catch (Exception $e) {
-            echo 'Exception when calling ItemApi->restItemsItemIdGet: ', $e->getMessage(), PHP_EOL;
+            throw new Exception('Exception when calling ItemApi->restItemsItemIdGet: ' . $e->getMessage());
         }
-
-
         return $result;
 
     }
 
     public function getItemVariationsById($item_id)
     {
-        $config = Configuration::getDefaultConfiguration()->authenticated();
+        $config = $this->config->authenticated();
 
         $apiInstance = new ItemApi(
             new Client(),
@@ -283,9 +171,9 @@ class BSPlentyService
         return $resultVariation;
     }
 
-    public function getItemByVariantenNrStorageLocationStock($article_id, $variation_id)
+    public function getItemByVariantenNrStorageLocationStock($article_id, $variation_id, $valid = true)
     {
-        $config = Configuration::getDefaultConfiguration()->authenticated();
+        $config = $this->config->authenticated();
 
         $itemApiInstance = new ItemApi(
             new Client(),
@@ -299,14 +187,7 @@ class BSPlentyService
         $resultStorageLocation = $itemApiInstance->restItemsIdVariationsVariationIdStockStorageLocationsGet($article_id, $variation_id, $page, $items_per_page, $id);
 
 
-//        $resultVariationStock = array_values(array_filter(
-//            $resultVariation->stock,
-//            function ($e) use (&$variation_id) {
-//                return $e->variationId == $variation_id;
-//            }
-//        ))[0];
-
-
+        // Map to better to handle representation
         $resultVariationStock = array_values(array_map(
             function ($e) use (&$variation_id) {
                 if ($e->variationId != $variation_id) {
@@ -319,8 +200,35 @@ class BSPlentyService
             }, $resultStorageLocation->entries
         ));
 
-        $allStorageLocations = $this->getStorageLocations();
+        $allStorageLocationIds = $this->getStorageLocationIds();
+
+
+        // Only allow defined storage locations
         $resultVariationStock = array_values(array_filter(
+            $resultVariationStock,
+            function ($e) use (&$allStorageLocationIds) {
+                return in_array($e["storageLocationId"], $allStorageLocationIds);
+            }
+        ));
+
+
+        $allStorageLocations = $this->getStorageLocations();
+
+        //Get Stock location with max quantity
+        $resultVariationStockMaxLocation = array_reduce($resultVariationStock, function ($a, $b) {
+            if ($a) {
+                if ($a["quantity"] > $b["quantity"]) {
+                    return ($a);
+                } else {
+                    return ($b);
+                }
+            } else {
+                return $b;
+            }
+        });
+
+        // Get all storage locations with current stock (greater 0)
+        $resultVariationStockGreaterZero = array_values(array_filter(
             $resultVariationStock,
             function ($e) use (&$allStorageLocations) {
                 foreach ($allStorageLocations as $location) {
@@ -332,19 +240,51 @@ class BSPlentyService
             }
         ));
 
-        if (count($resultVariationStock) > 1) {
-            throw new Exception("Item is in more than one storage location. We do not model this case");
-        } else {
-            $resultVariationStock = $resultVariationStock[0];
+        $notification = "";
+        if ($valid) {
+            if (count($resultVariationStockGreaterZero) > 1) {
+                // Since we only allow one storage location, remove stock the locations with less stock
+
+                //TODO do as batch request
+                $removedSockAtStorageLocationId = [];
+                foreach ($resultVariationStockGreaterZero as $location) {
+                    if ($location["storageLocationId"] != $resultVariationStockMaxLocation["storageLocationId"]) {
+                        $this->correctStock($article_id, $variation_id, 0, $location["storageLocationId"], $valid = false);
+                        array_push($removedSockAtStorageLocationId, $location["storageLocationId"]);
+                    }
+                }
+                //TODO fix this horrible notification hack with retrun and http header
+                $notification = 'Nur ein Lager erlaubt! Bestand in den Lagern: "' . implode(", ", array_map(function ($storageLocationId) {
+                        return $this->getStorageLocationMap()[$storageLocationId];
+
+                    }, $removedSockAtStorageLocationId)) . '" auf Null (0) gesetzt!';
+            } else if (count($resultVariationStockGreaterZero) == 0) {
+
+//            ["id" => 47, "label" => "Sonstige1"],
+                $miscStorageLocationID = 47;
+                $initQuantity = 5;
+
+                $this->correctStock($article_id, $variation_id, $initQuantity, $miscStorageLocationID, $valid = false);
+                $resultVariationStockMaxLocation = [
+                    "storageLocationId" => $miscStorageLocationID,
+                    "quantity" => $initQuantity
+                ];
+
+                //TODO fix this horrible notification hack
+                $notification = "Dieser Artikel hatte noch kein Bestand! Daher wurde er dem Lager \"" .
+                    $this->getStorageLocationMap()[$miscStorageLocationID] .
+                    "\" mit einem Bestand von " . $initQuantity . " hinzugefuegt.";
+            }
         }
-        return $resultVariationStock;
+
+        return [$resultVariationStockMaxLocation, $notification];
     }
 
 
     public function getItemByVariantenNr($article_id, $variation_id)
     {
 // Configure OAuth2 access token for authorization: oAuth2
-        $config = Configuration::getDefaultConfiguration()->authenticated();
+        $config = $this->config->authenticated();
 
         $itemApiInstance = new ItemApi(
             new Client(),
@@ -395,7 +335,7 @@ class BSPlentyService
             }
         ))[0];
 
-        $resultVariationStock = $this->getItemByVariantenNrStorageLocationStock($article_id, $variation_id);
+        [$resultVariationStock, $notification] = $this->getItemByVariantenNrStorageLocationStock($article_id, $variation_id);
 
 
         $item['code'] = $resultVariation->number;
@@ -410,7 +350,7 @@ class BSPlentyService
         } else {
             $item['picurl'] = "";
         }
-        return $item;
+        return [$item, $notification];
 
     }
 
@@ -447,7 +387,7 @@ class BSPlentyService
      */
     public function bookIncommingStock($article_id, $variation_id, $quantity)
     {
-        $config = Configuration::getDefaultConfiguration()->authenticated();
+        $config = $this->config->authenticated();
 
         $itemApiInstance = new ItemApi(
             new Client(),
@@ -458,7 +398,7 @@ class BSPlentyService
 //        $now->sub(new DateInterval('PT12H'));
         $now = (string)$now->format(DateTime::W3C);
 
-        $resultVariationStock = $this->getItemByVariantenNrStorageLocationStock($article_id, $variation_id);
+        [$resultVariationStock, $notification] = $this->getItemByVariantenNrStorageLocationStock($article_id, $variation_id);
 
 
         $body = (object)[
@@ -486,14 +426,14 @@ class BSPlentyService
 
         $resultStock = $itemApiInstance->restItemsIdVariationsVariationIdStockBookIncomingItemsPut($article_id, $variation_id, 0, $body);
 
-        $resultVariationStock = $this->getItemByVariantenNrStorageLocationStock($article_id, $variation_id);
+        [$resultVariationStock, $notification2] = $this->getItemByVariantenNrStorageLocationStock($article_id, $variation_id);
 
         $defaultWarehouseId = $this->getDefaultWarehouseId();
         $resultStock = array_filter($resultStock, function ($e) use (&$defaultWarehouseId, &$variation_id) {
             return $e->warehouseId == $defaultWarehouseId && $e->variationId == $variation_id;
         });
 
-        return (object)["article_id" => $article_id, "variation_id" => $variation_id, "stock" => $resultVariationStock];
+        return [(object)["article_id" => $article_id, "variation_id" => $variation_id, "stock" => $resultVariationStock], $notification . $notification2];
 
 
     }
@@ -503,7 +443,7 @@ class BSPlentyService
 //    public function getStorageLocation($article_id, $variation_id)
 //    {
 //
-//        $config = Configuration::getDefaultConfiguration()->authenticated();
+//        $config = $this->config->authenticated();
 //
 //        $itemApiInstance = new ItemApi(
 //            new Client(),
@@ -518,41 +458,20 @@ class BSPlentyService
 //    }
 
 
-    public function correctStock($article_id, $variation_id, $new_quantity, $storageLocationId)
+    public function correctStock($article_id, $variation_id, $new_quantity, $storageLocationId, $valid = true)
     {
 
-        $config = Configuration::getDefaultConfiguration()->authenticated();
+        $config = $this->config->authenticated();
 
         $itemApiInstance = new ItemApi(
             new Client(),
             $config
         );
-//        $page = 0;
-//        $items_per_page = 50;
-//        $id = 0;
-
-//        $resultStorageLocation = $itemApiInstance->restItemsIdVariationsVariationIdStockStorageLocationsGet($article_id, $variation_id, $page, $items_per_page, $id);
-
-//        $resultStorageLocationId = array_values(array_filter(
-//            $resultStorageLocation->entries,
-//            function ($e) use (&$variation_id) {
-//                return $e->variationId == $variation_id && $e->storageLocationId > 0;
-//            }
-//        ));
-//        if (count($resultStorageLocationId) > 1) {
-//            throw new Exception("Item with id " . $article_id . " and variation id " . $variation_id . " has more than one storage location");
-//        }
-//        $resultStorageLocationId = $resultStorageLocationId[0]->storageLocationId;
-
 
         $resultStock = $itemApiInstance->restItemsIdVariationsVariationIdStockCorrectionPut($article_id, $variation_id, $this->getDefaultWarehouseId(), $storageLocationId, $new_quantity);
 
-
-//        $defaultWarehouseId = $this->getDefaultWarehouseId();
-//        $resultStock = array_filter($resultStock, function ($e) use (&$defaultWarehouseId, &$variation_id) {
-//            return $e->warehouseId == $defaultWarehouseId && $e->variationId == $variation_id;
-//        });
-
-        return $this->getItemByVariantenNrStorageLocationStock($article_id, $variation_id);
+        [$result, $notification] = $this->getItemByVariantenNrStorageLocationStock($article_id, $variation_id, $valid);
+        return [$result, $notification];
     }
+
 }

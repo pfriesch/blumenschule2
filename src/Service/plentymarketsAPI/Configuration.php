@@ -32,6 +32,8 @@ use Exception;
 use GuzzleHttp\Client;
 use InvalidArgumentException;
 use stdClass;
+use Symfony\Component\Cache\Adapter\FilesystemAdapter;
+
 
 /**
  * Configuration Class Doc Comment
@@ -122,28 +124,9 @@ class Configuration
     public function __construct()
     {
 
-        $this->username = $_SERVER['PLENTY_USERNAME'];
-        $this->password = $_SERVER['PLENTY_PASSWORD'];
-        $this->host = $_SERVER['PLENTY_HOST'];
-
         $this->tempFolderPath = sys_get_temp_dir();
     }
 
-    /**
-     * Gets the essential information for debugging
-     *
-     * @return string The report for debugging
-     */
-    public static function toDebugReport()
-    {
-        $report = 'PHP SDK (App\Service\plentymarketsAPI) Debug Report:' . PHP_EOL;
-        $report .= '    OS: ' . php_uname() . PHP_EOL;
-        $report .= '    PHP Version: ' . PHP_VERSION . PHP_EOL;
-        $report .= '    OpenAPI Spec Version: 1.0.0' . PHP_EOL;
-        $report .= '    Temp Folder Path: ' . self::getDefaultConfiguration()->getTempFolderPath() . PHP_EOL;
-
-        return $report;
-    }
 
     /**
      * Gets the temp folder path
@@ -196,13 +179,26 @@ class Configuration
 
     public function authenticated()
     {
-        if ($this->accessToken === '') {
+        // Plentymarkets would have a refresh Token, but the API is not documented and I don't see a reason
+        // why we can't just relog with username and password on an internal tool
+
+//        $this->username = $_SERVER['PLENTY_USERNAME'];
+//        $this->password = $_SERVER['PLENTY_PASSWORD'];
+        $this->host = $_SERVER['PLENTY_HOST'];
+
+        //Stores stuff in plain text on disk
+        $cache = new FilesystemAdapter();
+        // retrieve the cache item
+        $cacheItemAccessToken = $cache->getItem('auth.accessToken');
+        $cacheItemExpiresAtTime = $cache->getItem('auth.expiresAtTime');
+        if (!$cacheItemAccessToken->isHit() || !$cacheItemExpiresAtTime->isHit() || ($cacheItemExpiresAtTime->isHit() && $cacheItemExpiresAtTime->get() <= time())) {
+            // ... item does not exist in the cache
 
             $apiInstance = new AuthenticationApi(
             // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
             // This is optional, `GuzzleHttp\Client` will be used as default.
                 new Client(),
-                Configuration::getDefaultConfiguration()
+                $this
             );
             $body = new stdClass; // object |
             $body->username = $_SERVER['PLENTY_USERNAME'];
@@ -210,14 +206,23 @@ class Configuration
 
             try {
                 $result = $apiInstance->restLoginPost($body);
-                $this->setAccessToken($result->accessToken);
+
+                // assign a value to the item and save it
+                $cacheItemAccessToken->set($result->accessToken);
+                $cache->save($cacheItemAccessToken);
+
+                // Probably not necessary, but we do not want to have a possibility for a race condition.
+                $refreshEarlySeconds = 60;
+
+                // assign a value to the item and save it
+                $cacheItemExpiresAtTime->set(time() + $result->expiresIn - $refreshEarlySeconds);
+                $cache->save($cacheItemExpiresAtTime);
 
             } catch (Exception $e) {
                 echo 'Exception when calling AuthenticationApi->restLoginPost: ', $e->getMessage(), PHP_EOL;
             }
         }
-//        TODO handle when access token becomes invalid (timeout or other reason) -> relog and redo request or do after timeout?
-
+        $this->setAccessToken($cacheItemAccessToken->get());
         return $this;
 
     }
