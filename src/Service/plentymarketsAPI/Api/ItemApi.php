@@ -2478,6 +2478,381 @@ class ItemApi
 
 
     /**
+     * Operation restItemsVariationsGet
+     *
+     * Search variations
+     *
+     * @param string $with Includes the specified variation information in the results. The following parameters are available: &lt;ul&gt;&lt;li&gt;properties&lt;/b&gt; &#x3D; The properties linked to the variation&lt;/li&gt;&lt;li&gt;variationProperties&lt;/b&gt; &#x3D; The properties linked to the variation&lt;/li&gt;&lt;li&gt;variationBarcodes&lt;/b&gt; &#x3D; The barcode linked to the variation and the saved code&lt;/li&gt;&lt;li&gt;variationBundleComponents&lt;/b&gt; &#x3D; The bundle components of the variation and their quantities&lt;/li&gt;&lt;li&gt;variationComponentBundles&lt;/b&gt; &#x3D; The bundles that this variation is a component of&lt;/li&gt;&lt;li&gt;variationSalesPrices&lt;/b&gt; &#x3D; The sales prices linked to the variation and the saved price&lt;/li&gt;&lt;li&gt;marketItemNumbers&lt;/b&gt; &#x3D; The market ident number of the variation&lt;/li&gt;&lt;li&gt;variationCategories&lt;/b&gt; &#x3D; The categories linked to the variation&lt;/li&gt;&lt;li&gt;variationClients&lt;/b&gt; &#x3D; The clients (stores) for which the variation is activated&lt;/li&gt;&lt;li&gt;variationMarkets&lt;/b&gt; &#x3D; The markets for which the variation is activated &lt;/li&gt;&lt;li&gt;variationDefaultCategory&lt;/b&gt; &#x3D; The default category of the variation&lt;/li&gt;&lt;li&gt;variationSuppliers&lt;/b&gt; &#x3D; The supplier data associated with the variation&lt;/li&gt;&lt;li&gt;variationWarehouses&lt;/b&gt; &#x3D; The warehouse data associated with the variation&lt;/li&gt;&lt;li&gt;images&lt;/b&gt; &#x3D; The images linked to the variation&lt;/li&gt;&lt;li&gt;itemImages&lt;/b&gt; &#x3D; The images linked to the item&lt;/li&gt;&lt;li&gt;variationAttributeValues&lt;/b&gt; &#x3D; The attribute values of the variation&lt;/li&gt;&lt;li&gt;variationSkus&lt;/b&gt; &#x3D; The SKU data associated with the variation&lt;/li&gt;&lt;li&gt;variationAdditionalSkus&lt;/b&gt; &#x3D; The additional SKU data associated with the variation&lt;/li&gt;&lt;li&gt;unit&lt;/b&gt; &#x3D; The unit assigned to the variation&lt;/li&gt;&lt;li&gt;parent&lt;/b&gt; &#x3D; The main variation of the variation. Value is null if this variation is the item&#x27;s main variation.&lt;/li&gt;&lt;li&gt;item&lt;/b&gt; &#x3D; The item of the variation&lt;/li&gt;&lt;li&gt;stock&lt;/b&gt; &#x3D; The stock data of the variation&lt;/li&gt;&lt;/ul&gt; For example, specifying the parameters variationCategories and variationDefaultCategory will include the default category and all other categories the variations are linked to. More than one parameter should be separated by commas. (optional)
+     * @param string $lang The &lt;a href&#x3D;&#x27;https://developers.plentymarkets.com/rest-doc/introduction#countries&#x27; target&#x3D;&#x27;_blank&#x27;&gt;language&lt;/a&gt; of the variation information. (optional)
+     * @param int $page Limits the results to a specific page. The page number must be specified. (optional)
+     * @param int $items_per_page Limits the number of results listed per page to a specific number. The number of variations to be listed per page must be specified. (optional)
+     * @param int $id Filter restricts the list of results to variations with the specified variation ID. An variation ID must be specified. More than one ID should be separated by commas. (optional)
+     * @param int $item_id Filter restricts the list of results to variations with the specified item ID. An item ID must be specified. More than one ID should be separated by commas. (optional)
+     * @param int $variation_tag_id Filter restricts the list of results to variations with the specified tag ID. An tag ID must be specified. More than one ID should be separated by commas. (optional)
+     * @param string $item_name Filter restricts the list of results to variations with the specified item name. An item name must be specified. (optional)
+     * @param string $flag_one Filter restricts the list of results to variations of items with the flag one. The flag one must be specified. (optional)
+     * @param string $flag_two Filter restricts the list of results to variations of items with the flag two. The flag two must be specified. (optional)
+     * @param int $store_special Filter restricts the list of results to variations of items with the specified store special. The following values are allowed: 0 (None), 1 (Special offer), 2 (New item), 3(Top item). (optional)
+     * @param int $category_id Filter restricts the list of results to variations with the specified category id (optional)
+     * @param bool $is_main Filter restricts the list of results to variations that are main variations. (optional)
+     * @param bool $is_active Filter restricts the list of results to variations that are active. (optional)
+     * @param string $barcode Filter restricts the list of results to variations with the specified barcode. A barcode must be specified. (optional)
+     * @param string $number_exact Filter restricts the list of results to the variation with the variation number specified. (optional)
+     * @param string $number_fuzzy Filter restricts the list of results to variations with numbers that contain the variation number specified (SQL LIKE operator). For example, if variations with variation numbers 1 to 400 exist in the system, filtering by 12 will list variation numbers 12, 112, 120-129, 212 and 312. (optional)
+     * @param bool $is_bundle Filter restricts the list of results to variations to which variations were added to create a bundle. (optional)
+     * @param int $plenty_id Filter restricts the list of results to variations that are visible in specified clients. Separate more than one client by commas. (optional)
+     * @param int $referrer_id Filter restricts the list of results to variations that are visible in specified markets. Separate more than one referrer by commas. (optional)
+     * @param string $supplier_number Filter restricts the list of results to variations with the specified supplier number. A supplier number must be specified. (optional)
+     * @param string $sku Filter restricts the list of results to variations with the specified SKU. In additional, results can also be restricted to a specific referrer by specifying the referrer ID after a colon. Example: L0R3MIP5UM:104.1 (optional)
+     * @param int $manufacturer_id Filter restricts the list of results to variations with the specified manufacturer ID. (optional)
+     * @param string $updated_between Filter restricts the list of results to variations updated during the specified period. The end date (to) is optional. If no end date is specified, variations updated between the start date (from) and the present will be listed. The dates can be specified as unix timestamps or in the ISO 8601 date format. Start date and optional end date are separated by a comma. For example, .../variations?updatedBetween&#x3D;1451606400,1456790400 will list variations updated between 2016-01-01 and 2016-03-01. .../variations?updatedBetween&#x3D;1451606400 will list variations updated since 2016-01-01. The PHP function strtotime is also supported. (optional)
+     * @param string $created_between Filter restricts the list of results to variations created during the specified period. The end date (to) is optional. If no end date is specified, variations created between the start date (from) and the present will be listed. The dates can be specified as unix timestamps or in the ISO 8601 date format. Start date and optional end date are separated by a comma. For example, .../variations?createdBetween&#x3D;1451606400,1456790400 will list variations created between 2016-01-01 and 2016-03-01. .../variations?createdBetween&#x3D;1451606400 will list variations created since 2016-01-01. The PHP function strtotime is also supported. (optional)
+     * @param string $related_updated_between Filter restricts the list of results to those variations for which related information was updated during the specified period. Related information is defined as information linked to the variation, i.e. barcodes, categories, images, markets, clients (stores), prices, suppliers, warehouses and the default category. See variationUpdatedBetween for supported formats. (optional)
+     * @param string $item_description Filter restricts the list of results to variations with descriptions that contain the specified string. (optional)
+     * @param string $stock_warehouse_id Filter restricts the list of results to variations which have physical stock on the given warehouse. (optional)
+     *
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return object
+     */
+    public function restItemsVariationsGet($with = null, $lang = null, $page = null, $items_per_page = null, $id = null, $item_id = null, $variation_tag_id = null, $item_name = null, $flag_one = null, $flag_two = null, $store_special = null, $category_id = null, $is_main = null, $is_active = null, $barcode = null, $number_exact = null, $number_fuzzy = null, $is_bundle = null, $plenty_id = null, $referrer_id = null, $supplier_number = null, $sku = null, $manufacturer_id = null, $updated_between = null, $created_between = null, $related_updated_between = null, $item_description = null, $stock_warehouse_id = null)
+    {
+        list($response) = $this->restItemsVariationsGetWithHttpInfo($with, $lang, $page, $items_per_page, $id, $item_id, $variation_tag_id, $item_name, $flag_one, $flag_two, $store_special, $category_id, $is_main, $is_active, $barcode, $number_exact, $number_fuzzy, $is_bundle, $plenty_id, $referrer_id, $supplier_number, $sku, $manufacturer_id, $updated_between, $created_between, $related_updated_between, $item_description, $stock_warehouse_id);
+        return $response;
+    }
+
+    /**
+     * Operation restItemsVariationsGetWithHttpInfo
+     *
+     * Search variations
+     *
+     * @param string $with Includes the specified variation information in the results. The following parameters are available: &lt;ul&gt;&lt;li&gt;properties&lt;/b&gt; &#x3D; The properties linked to the variation&lt;/li&gt;&lt;li&gt;variationProperties&lt;/b&gt; &#x3D; The properties linked to the variation&lt;/li&gt;&lt;li&gt;variationBarcodes&lt;/b&gt; &#x3D; The barcode linked to the variation and the saved code&lt;/li&gt;&lt;li&gt;variationBundleComponents&lt;/b&gt; &#x3D; The bundle components of the variation and their quantities&lt;/li&gt;&lt;li&gt;variationComponentBundles&lt;/b&gt; &#x3D; The bundles that this variation is a component of&lt;/li&gt;&lt;li&gt;variationSalesPrices&lt;/b&gt; &#x3D; The sales prices linked to the variation and the saved price&lt;/li&gt;&lt;li&gt;marketItemNumbers&lt;/b&gt; &#x3D; The market ident number of the variation&lt;/li&gt;&lt;li&gt;variationCategories&lt;/b&gt; &#x3D; The categories linked to the variation&lt;/li&gt;&lt;li&gt;variationClients&lt;/b&gt; &#x3D; The clients (stores) for which the variation is activated&lt;/li&gt;&lt;li&gt;variationMarkets&lt;/b&gt; &#x3D; The markets for which the variation is activated &lt;/li&gt;&lt;li&gt;variationDefaultCategory&lt;/b&gt; &#x3D; The default category of the variation&lt;/li&gt;&lt;li&gt;variationSuppliers&lt;/b&gt; &#x3D; The supplier data associated with the variation&lt;/li&gt;&lt;li&gt;variationWarehouses&lt;/b&gt; &#x3D; The warehouse data associated with the variation&lt;/li&gt;&lt;li&gt;images&lt;/b&gt; &#x3D; The images linked to the variation&lt;/li&gt;&lt;li&gt;itemImages&lt;/b&gt; &#x3D; The images linked to the item&lt;/li&gt;&lt;li&gt;variationAttributeValues&lt;/b&gt; &#x3D; The attribute values of the variation&lt;/li&gt;&lt;li&gt;variationSkus&lt;/b&gt; &#x3D; The SKU data associated with the variation&lt;/li&gt;&lt;li&gt;variationAdditionalSkus&lt;/b&gt; &#x3D; The additional SKU data associated with the variation&lt;/li&gt;&lt;li&gt;unit&lt;/b&gt; &#x3D; The unit assigned to the variation&lt;/li&gt;&lt;li&gt;parent&lt;/b&gt; &#x3D; The main variation of the variation. Value is null if this variation is the item&#x27;s main variation.&lt;/li&gt;&lt;li&gt;item&lt;/b&gt; &#x3D; The item of the variation&lt;/li&gt;&lt;li&gt;stock&lt;/b&gt; &#x3D; The stock data of the variation&lt;/li&gt;&lt;/ul&gt; For example, specifying the parameters variationCategories and variationDefaultCategory will include the default category and all other categories the variations are linked to. More than one parameter should be separated by commas. (optional)
+     * @param string $lang The &lt;a href&#x3D;&#x27;https://developers.plentymarkets.com/rest-doc/introduction#countries&#x27; target&#x3D;&#x27;_blank&#x27;&gt;language&lt;/a&gt; of the variation information. (optional)
+     * @param int $page Limits the results to a specific page. The page number must be specified. (optional)
+     * @param int $items_per_page Limits the number of results listed per page to a specific number. The number of variations to be listed per page must be specified. (optional)
+     * @param int $id Filter restricts the list of results to variations with the specified variation ID. An variation ID must be specified. More than one ID should be separated by commas. (optional)
+     * @param int $item_id Filter restricts the list of results to variations with the specified item ID. An item ID must be specified. More than one ID should be separated by commas. (optional)
+     * @param int $variation_tag_id Filter restricts the list of results to variations with the specified tag ID. An tag ID must be specified. More than one ID should be separated by commas. (optional)
+     * @param string $item_name Filter restricts the list of results to variations with the specified item name. An item name must be specified. (optional)
+     * @param string $flag_one Filter restricts the list of results to variations of items with the flag one. The flag one must be specified. (optional)
+     * @param string $flag_two Filter restricts the list of results to variations of items with the flag two. The flag two must be specified. (optional)
+     * @param int $store_special Filter restricts the list of results to variations of items with the specified store special. The following values are allowed: 0 (None), 1 (Special offer), 2 (New item), 3(Top item). (optional)
+     * @param int $category_id Filter restricts the list of results to variations with the specified category id (optional)
+     * @param bool $is_main Filter restricts the list of results to variations that are main variations. (optional)
+     * @param bool $is_active Filter restricts the list of results to variations that are active. (optional)
+     * @param string $barcode Filter restricts the list of results to variations with the specified barcode. A barcode must be specified. (optional)
+     * @param string $number_exact Filter restricts the list of results to the variation with the variation number specified. (optional)
+     * @param string $number_fuzzy Filter restricts the list of results to variations with numbers that contain the variation number specified (SQL LIKE operator). For example, if variations with variation numbers 1 to 400 exist in the system, filtering by 12 will list variation numbers 12, 112, 120-129, 212 and 312. (optional)
+     * @param bool $is_bundle Filter restricts the list of results to variations to which variations were added to create a bundle. (optional)
+     * @param int $plenty_id Filter restricts the list of results to variations that are visible in specified clients. Separate more than one client by commas. (optional)
+     * @param int $referrer_id Filter restricts the list of results to variations that are visible in specified markets. Separate more than one referrer by commas. (optional)
+     * @param string $supplier_number Filter restricts the list of results to variations with the specified supplier number. A supplier number must be specified. (optional)
+     * @param string $sku Filter restricts the list of results to variations with the specified SKU. In additional, results can also be restricted to a specific referrer by specifying the referrer ID after a colon. Example: L0R3MIP5UM:104.1 (optional)
+     * @param int $manufacturer_id Filter restricts the list of results to variations with the specified manufacturer ID. (optional)
+     * @param string $updated_between Filter restricts the list of results to variations updated during the specified period. The end date (to) is optional. If no end date is specified, variations updated between the start date (from) and the present will be listed. The dates can be specified as unix timestamps or in the ISO 8601 date format. Start date and optional end date are separated by a comma. For example, .../variations?updatedBetween&#x3D;1451606400,1456790400 will list variations updated between 2016-01-01 and 2016-03-01. .../variations?updatedBetween&#x3D;1451606400 will list variations updated since 2016-01-01. The PHP function strtotime is also supported. (optional)
+     * @param string $created_between Filter restricts the list of results to variations created during the specified period. The end date (to) is optional. If no end date is specified, variations created between the start date (from) and the present will be listed. The dates can be specified as unix timestamps or in the ISO 8601 date format. Start date and optional end date are separated by a comma. For example, .../variations?createdBetween&#x3D;1451606400,1456790400 will list variations created between 2016-01-01 and 2016-03-01. .../variations?createdBetween&#x3D;1451606400 will list variations created since 2016-01-01. The PHP function strtotime is also supported. (optional)
+     * @param string $related_updated_between Filter restricts the list of results to those variations for which related information was updated during the specified period. Related information is defined as information linked to the variation, i.e. barcodes, categories, images, markets, clients (stores), prices, suppliers, warehouses and the default category. See variationUpdatedBetween for supported formats. (optional)
+     * @param string $item_description Filter restricts the list of results to variations with descriptions that contain the specified string. (optional)
+     * @param string $stock_warehouse_id Filter restricts the list of results to variations which have physical stock on the given warehouse. (optional)
+     *
+     * @throws \BSApp\Service\plentymarketsAPI\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of object, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function restItemsVariationsGetWithHttpInfo($with = null, $lang = null, $page = null, $items_per_page = null, $id = null, $item_id = null, $variation_tag_id = null, $item_name = null, $flag_one = null, $flag_two = null, $store_special = null, $category_id = null, $is_main = null, $is_active = null, $barcode = null, $number_exact = null, $number_fuzzy = null, $is_bundle = null, $plenty_id = null, $referrer_id = null, $supplier_number = null, $sku = null, $manufacturer_id = null, $updated_between = null, $created_between = null, $related_updated_between = null, $item_description = null, $stock_warehouse_id = null)
+    {
+        $returnType = VariationPaginated::class;
+        $request = $this->restItemsVariationsGetRequest($with, $lang, $page, $items_per_page, $id, $item_id, $variation_tag_id, $item_name, $flag_one, $flag_two, $store_special, $category_id, $is_main, $is_active, $barcode, $number_exact, $number_fuzzy, $is_bundle, $plenty_id, $referrer_id, $supplier_number, $sku, $manufacturer_id, $updated_between, $created_between, $related_updated_between, $item_description, $stock_warehouse_id);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? $e->getResponse()->getBody()->getContents() : null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    $response->getBody()
+                );
+            }
+
+            $responseBody = $response->getBody();
+            if ($returnType === '\SplFileObject') {
+                $content = $responseBody; //stream goes to serializer
+            } else {
+                $content = $responseBody->getContents();
+                if (!in_array($returnType, ['string', 'integer', 'bool'])) {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        'object',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Create request for operation 'restItemsVariationsGet'
+     *
+     * @param string $with Includes the specified variation information in the results. The following parameters are available: &lt;ul&gt;&lt;li&gt;properties&lt;/b&gt; &#x3D; The properties linked to the variation&lt;/li&gt;&lt;li&gt;variationProperties&lt;/b&gt; &#x3D; The properties linked to the variation&lt;/li&gt;&lt;li&gt;variationBarcodes&lt;/b&gt; &#x3D; The barcode linked to the variation and the saved code&lt;/li&gt;&lt;li&gt;variationBundleComponents&lt;/b&gt; &#x3D; The bundle components of the variation and their quantities&lt;/li&gt;&lt;li&gt;variationComponentBundles&lt;/b&gt; &#x3D; The bundles that this variation is a component of&lt;/li&gt;&lt;li&gt;variationSalesPrices&lt;/b&gt; &#x3D; The sales prices linked to the variation and the saved price&lt;/li&gt;&lt;li&gt;marketItemNumbers&lt;/b&gt; &#x3D; The market ident number of the variation&lt;/li&gt;&lt;li&gt;variationCategories&lt;/b&gt; &#x3D; The categories linked to the variation&lt;/li&gt;&lt;li&gt;variationClients&lt;/b&gt; &#x3D; The clients (stores) for which the variation is activated&lt;/li&gt;&lt;li&gt;variationMarkets&lt;/b&gt; &#x3D; The markets for which the variation is activated &lt;/li&gt;&lt;li&gt;variationDefaultCategory&lt;/b&gt; &#x3D; The default category of the variation&lt;/li&gt;&lt;li&gt;variationSuppliers&lt;/b&gt; &#x3D; The supplier data associated with the variation&lt;/li&gt;&lt;li&gt;variationWarehouses&lt;/b&gt; &#x3D; The warehouse data associated with the variation&lt;/li&gt;&lt;li&gt;images&lt;/b&gt; &#x3D; The images linked to the variation&lt;/li&gt;&lt;li&gt;itemImages&lt;/b&gt; &#x3D; The images linked to the item&lt;/li&gt;&lt;li&gt;variationAttributeValues&lt;/b&gt; &#x3D; The attribute values of the variation&lt;/li&gt;&lt;li&gt;variationSkus&lt;/b&gt; &#x3D; The SKU data associated with the variation&lt;/li&gt;&lt;li&gt;variationAdditionalSkus&lt;/b&gt; &#x3D; The additional SKU data associated with the variation&lt;/li&gt;&lt;li&gt;unit&lt;/b&gt; &#x3D; The unit assigned to the variation&lt;/li&gt;&lt;li&gt;parent&lt;/b&gt; &#x3D; The main variation of the variation. Value is null if this variation is the item&#x27;s main variation.&lt;/li&gt;&lt;li&gt;item&lt;/b&gt; &#x3D; The item of the variation&lt;/li&gt;&lt;li&gt;stock&lt;/b&gt; &#x3D; The stock data of the variation&lt;/li&gt;&lt;/ul&gt; For example, specifying the parameters variationCategories and variationDefaultCategory will include the default category and all other categories the variations are linked to. More than one parameter should be separated by commas. (optional)
+     * @param string $lang The &lt;a href&#x3D;&#x27;https://developers.plentymarkets.com/rest-doc/introduction#countries&#x27; target&#x3D;&#x27;_blank&#x27;&gt;language&lt;/a&gt; of the variation information. (optional)
+     * @param int $page Limits the results to a specific page. The page number must be specified. (optional)
+     * @param int $items_per_page Limits the number of results listed per page to a specific number. The number of variations to be listed per page must be specified. (optional)
+     * @param int $id Filter restricts the list of results to variations with the specified variation ID. An variation ID must be specified. More than one ID should be separated by commas. (optional)
+     * @param int $item_id Filter restricts the list of results to variations with the specified item ID. An item ID must be specified. More than one ID should be separated by commas. (optional)
+     * @param int $variation_tag_id Filter restricts the list of results to variations with the specified tag ID. An tag ID must be specified. More than one ID should be separated by commas. (optional)
+     * @param string $item_name Filter restricts the list of results to variations with the specified item name. An item name must be specified. (optional)
+     * @param string $flag_one Filter restricts the list of results to variations of items with the flag one. The flag one must be specified. (optional)
+     * @param string $flag_two Filter restricts the list of results to variations of items with the flag two. The flag two must be specified. (optional)
+     * @param int $store_special Filter restricts the list of results to variations of items with the specified store special. The following values are allowed: 0 (None), 1 (Special offer), 2 (New item), 3(Top item). (optional)
+     * @param int $category_id Filter restricts the list of results to variations with the specified category id (optional)
+     * @param bool $is_main Filter restricts the list of results to variations that are main variations. (optional)
+     * @param bool $is_active Filter restricts the list of results to variations that are active. (optional)
+     * @param string $barcode Filter restricts the list of results to variations with the specified barcode. A barcode must be specified. (optional)
+     * @param string $number_exact Filter restricts the list of results to the variation with the variation number specified. (optional)
+     * @param string $number_fuzzy Filter restricts the list of results to variations with numbers that contain the variation number specified (SQL LIKE operator). For example, if variations with variation numbers 1 to 400 exist in the system, filtering by 12 will list variation numbers 12, 112, 120-129, 212 and 312. (optional)
+     * @param bool $is_bundle Filter restricts the list of results to variations to which variations were added to create a bundle. (optional)
+     * @param int $plenty_id Filter restricts the list of results to variations that are visible in specified clients. Separate more than one client by commas. (optional)
+     * @param int $referrer_id Filter restricts the list of results to variations that are visible in specified markets. Separate more than one referrer by commas. (optional)
+     * @param string $supplier_number Filter restricts the list of results to variations with the specified supplier number. A supplier number must be specified. (optional)
+     * @param string $sku Filter restricts the list of results to variations with the specified SKU. In additional, results can also be restricted to a specific referrer by specifying the referrer ID after a colon. Example: L0R3MIP5UM:104.1 (optional)
+     * @param int $manufacturer_id Filter restricts the list of results to variations with the specified manufacturer ID. (optional)
+     * @param string $updated_between Filter restricts the list of results to variations updated during the specified period. The end date (to) is optional. If no end date is specified, variations updated between the start date (from) and the present will be listed. The dates can be specified as unix timestamps or in the ISO 8601 date format. Start date and optional end date are separated by a comma. For example, .../variations?updatedBetween&#x3D;1451606400,1456790400 will list variations updated between 2016-01-01 and 2016-03-01. .../variations?updatedBetween&#x3D;1451606400 will list variations updated since 2016-01-01. The PHP function strtotime is also supported. (optional)
+     * @param string $created_between Filter restricts the list of results to variations created during the specified period. The end date (to) is optional. If no end date is specified, variations created between the start date (from) and the present will be listed. The dates can be specified as unix timestamps or in the ISO 8601 date format. Start date and optional end date are separated by a comma. For example, .../variations?createdBetween&#x3D;1451606400,1456790400 will list variations created between 2016-01-01 and 2016-03-01. .../variations?createdBetween&#x3D;1451606400 will list variations created since 2016-01-01. The PHP function strtotime is also supported. (optional)
+     * @param string $related_updated_between Filter restricts the list of results to those variations for which related information was updated during the specified period. Related information is defined as information linked to the variation, i.e. barcodes, categories, images, markets, clients (stores), prices, suppliers, warehouses and the default category. See variationUpdatedBetween for supported formats. (optional)
+     * @param string $item_description Filter restricts the list of results to variations with descriptions that contain the specified string. (optional)
+     * @param string $stock_warehouse_id Filter restricts the list of results to variations which have physical stock on the given warehouse. (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    protected function restItemsVariationsGetRequest($with = null, $lang = null, $page = null, $items_per_page = null, $id = null, $item_id = null, $variation_tag_id = null, $item_name = null, $flag_one = null, $flag_two = null, $store_special = null, $category_id = null, $is_main = null, $is_active = null, $barcode = null, $number_exact = null, $number_fuzzy = null, $is_bundle = null, $plenty_id = null, $referrer_id = null, $supplier_number = null, $sku = null, $manufacturer_id = null, $updated_between = null, $created_between = null, $related_updated_between = null, $item_description = null, $stock_warehouse_id = null)
+    {
+
+        $resourcePath = '/rest/items/variations';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        if ($with !== null) {
+            $queryParams['with'] = ObjectSerializer::toQueryValue($with);
+        }
+        // query params
+        if ($lang !== null) {
+            $queryParams['lang'] = ObjectSerializer::toQueryValue($lang);
+        }
+        // query params
+        if ($page !== null) {
+            $queryParams['page'] = ObjectSerializer::toQueryValue($page);
+        }
+        // query params
+        if ($items_per_page !== null) {
+            $queryParams['itemsPerPage'] = ObjectSerializer::toQueryValue($items_per_page);
+        }
+        // query params
+        if ($id !== null) {
+            $queryParams['id'] = ObjectSerializer::toQueryValue($id);
+        }
+        // query params
+        if ($item_id !== null) {
+            $queryParams['itemId'] = ObjectSerializer::toQueryValue($item_id);
+        }
+        // query params
+        if ($variation_tag_id !== null) {
+            $queryParams['variationTagId'] = ObjectSerializer::toQueryValue($variation_tag_id);
+        }
+        // query params
+        if ($item_name !== null) {
+            $queryParams['itemName'] = ObjectSerializer::toQueryValue($item_name);
+        }
+        // query params
+        if ($flag_one !== null) {
+            $queryParams['flagOne'] = ObjectSerializer::toQueryValue($flag_one);
+        }
+        // query params
+        if ($flag_two !== null) {
+            $queryParams['flagTwo'] = ObjectSerializer::toQueryValue($flag_two);
+        }
+        // query params
+        if ($store_special !== null) {
+            $queryParams['storeSpecial'] = ObjectSerializer::toQueryValue($store_special);
+        }
+        // query params
+        if ($category_id !== null) {
+            $queryParams['categoryId'] = ObjectSerializer::toQueryValue($category_id);
+        }
+        // query params
+        if ($is_main !== null) {
+            $queryParams['isMain'] = ObjectSerializer::toQueryValue($is_main);
+        }
+        // query params
+        if ($is_active !== null) {
+            $queryParams['isActive'] = ObjectSerializer::toQueryValue($is_active);
+        }
+        // query params
+        if ($barcode !== null) {
+            $queryParams['barcode'] = ObjectSerializer::toQueryValue($barcode);
+        }
+        // query params
+        if ($number_exact !== null) {
+            $queryParams['numberExact'] = ObjectSerializer::toQueryValue($number_exact);
+        }
+        // query params
+        if ($number_fuzzy !== null) {
+            $queryParams['numberFuzzy'] = ObjectSerializer::toQueryValue($number_fuzzy);
+        }
+        // query params
+        if ($is_bundle !== null) {
+            $queryParams['isBundle'] = ObjectSerializer::toQueryValue($is_bundle);
+        }
+        // query params
+        if ($plenty_id !== null) {
+            $queryParams['plentyId'] = ObjectSerializer::toQueryValue($plenty_id);
+        }
+        // query params
+        if ($referrer_id !== null) {
+            $queryParams['referrerId'] = ObjectSerializer::toQueryValue($referrer_id);
+        }
+        // query params
+        if ($supplier_number !== null) {
+            $queryParams['supplierNumber'] = ObjectSerializer::toQueryValue($supplier_number);
+        }
+        // query params
+        if ($sku !== null) {
+            $queryParams['sku'] = ObjectSerializer::toQueryValue($sku);
+        }
+        // query params
+        if ($manufacturer_id !== null) {
+            $queryParams['manufacturerId'] = ObjectSerializer::toQueryValue($manufacturer_id);
+        }
+        // query params
+        if ($updated_between !== null) {
+            $queryParams['updatedBetween'] = ObjectSerializer::toQueryValue($updated_between);
+        }
+        // query params
+        if ($created_between !== null) {
+            $queryParams['createdBetween'] = ObjectSerializer::toQueryValue($created_between);
+        }
+        // query params
+        if ($related_updated_between !== null) {
+            $queryParams['relatedUpdatedBetween'] = ObjectSerializer::toQueryValue($related_updated_between);
+        }
+        // query params
+        if ($item_description !== null) {
+            $queryParams['itemDescription'] = ObjectSerializer::toQueryValue($item_description);
+        }
+        // query params
+        if ($stock_warehouse_id !== null) {
+            $queryParams['stockWarehouseId'] = ObjectSerializer::toQueryValue($stock_warehouse_id);
+        }
+
+
+        // body params
+        $_tempBody = null;
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*'],
+                []
+            );
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            // $_tempBody is the method argument, if present
+            $httpBody = $_tempBody;
+            // \stdClass has no __toString(), so we should encode it manually
+            if ($httpBody instanceof \stdClass && $headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($httpBody);
+            }
+        } elseif (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $multipartContents[] = [
+                        'name' => $formParamName,
+                        'contents' => $formParamValue
+                    ];
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = \GuzzleHttp\Psr7\build_query($formParams);
+            }
+        }
+
+        // this endpoint requires OAuth (access token)
+        if ($this->config->getAccessToken() !== null) {
+            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $query = \GuzzleHttp\Psr7\build_query($queryParams);
+        return new Request(
+            'GET',
+            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+
+
+    /**
      * Create http client option
      *
      * @return array of http client options
