@@ -73,6 +73,42 @@ class BSPlentyService
     }
 
 
+//    /**
+//     * @param $name
+//     * @return Model\Plenty\Modules\Item\Item\ItemPaginated
+//     */
+//    public function searchItemsByName($search_name)
+//    {
+//
+//        $config = $this->config->authenticated();
+//        $apiInstance = new ItemApi(
+//            new Client(),
+//            $config
+//        );
+//
+//        $with = "variations"; // string | Includes the specified variation information in the results. The following parameters are availabel: itemProperties, itemCrossSelling, variations, itemImages, itemShippingProfiles, ebayTitles
+////        $with = null; // string | Includes the specified variation information in the results. The following parameters are availabel: itemProperties, itemCrossSelling, variations, itemImages, itemShippingProfiles, ebayTitles
+//        $lang = "de"; // string | The <a href='https://developers.plentymarkets.com/rest-doc/introduction#countries' target='_blank'>language</a> of the variation information.
+//        $page = 0; // int | Limits the results to a specific page. The page number must be specified.
+//        $items_per_page = 20; // int | Limits the number of results listed per page to a specific number. The number of variations to be listed per page must be specified.
+////        $name = "name_example"; // string | Filter restricts the list of results to items with the specified item name. An item name must be specified.
+//        $manufacturer_id = null; // string | Filter restricts the list of results to items with the specified manufacturerId.
+//        $tag_id = null; // int | Filter restricts the list of results to items with the specified tagId. More than one ID should be separated by commas.
+//        $flag_one = null; // int | Filter restricts the list of results to items with the specified flagOne.
+//        $flag_two = null; // int | Filter restricts the list of results to items with the specified flagTwo.
+//        $updated_between = null; // string | Filter restricts the list of results to items updated during the specified period. The end date (to) is optional. If no end date is specified, items updated between the start date (from) and the present will be listed. The dates can be specified as unix timestamps or in the ISO 8601 date format. Start date and optional end date are separated by a comma. For example, .../items?updatedBetween=1451606400,1456790400 will list items updated between 2016-01-01 and 2016-03-01. .../items?updatedBetween=1451606400 will list items updated since 2016-01-01. The PHP function strtotime is also supported.
+//        $variation_updated_between = null; // string | Filter restricts the list of results to items with variations that were updated during the specified period. The end date (to) is optional. If no end date is specified, items with variations updated between the start date (from) and the present will be listed. The dates can be specified as unix timestamps or in the ISO 8601 date format. Start date and optional end date are separated by a comma. For example, .../items?updatedBetween=1451606400,1456790400 will list items with variations that were updated between 2016-01-01 and 2016-03-01. .../items?updatedBetween=1451606400 will list items with variations that were updated since 2016-01-01. The PHP function strtotime is also supported.
+//        $variation_related_updated_between = null; // string | Filter restricts the list of results to items with variations for which related information was updated during the specified period. Related information is defined as information linked to the variation, i.e. barcodes, categories, images, markets, clients (stores), prices, suppliers, warehouses and the default category. See variationUpdatedBetween for supported formats.
+//
+//        try {
+//            $result = $apiInstance->restItemsGet($with, $lang, $page, $items_per_page, $search_name, $manufacturer_id, $tag_id, $flag_one, $flag_two, $updated_between, $variation_updated_between, $variation_related_updated_between);
+//        } catch (Exception $e) {
+//            echo 'Exception when calling ItemApi->restItemsGet: ', $e->getMessage(), PHP_EOL;
+//        }
+//
+//        return $result;
+//    }
+
     /**
      * @param $name
      * @return Model\Plenty\Modules\Item\Item\ItemPaginated
@@ -86,29 +122,43 @@ class BSPlentyService
             $config
         );
 
-        $with = "variations"; // string | Includes the specified variation information in the results. The following parameters are availabel: itemProperties, itemCrossSelling, variations, itemImages, itemShippingProfiles, ebayTitles
-//        $with = null; // string | Includes the specified variation information in the results. The following parameters are availabel: itemProperties, itemCrossSelling, variations, itemImages, itemShippingProfiles, ebayTitles
-        $lang = "de"; // string | The <a href='https://developers.plentymarkets.com/rest-doc/introduction#countries' target='_blank'>language</a> of the variation information.
-        $page = 0; // int | Limits the results to a specific page. The page number must be specified.
-        $items_per_page = 20; // int | Limits the number of results listed per page to a specific number. The number of variations to be listed per page must be specified.
-//        $name = "name_example"; // string | Filter restricts the list of results to items with the specified item name. An item name must be specified.
-        $manufacturer_id = null; // string | Filter restricts the list of results to items with the specified manufacturerId.
-        $tag_id = null; // int | Filter restricts the list of results to items with the specified tagId. More than one ID should be separated by commas.
-        $flag_one = null; // int | Filter restricts the list of results to items with the specified flagOne.
-        $flag_two = null; // int | Filter restricts the list of results to items with the specified flagTwo.
-        $updated_between = null; // string | Filter restricts the list of results to items updated during the specified period. The end date (to) is optional. If no end date is specified, items updated between the start date (from) and the present will be listed. The dates can be specified as unix timestamps or in the ISO 8601 date format. Start date and optional end date are separated by a comma. For example, .../items?updatedBetween=1451606400,1456790400 will list items updated between 2016-01-01 and 2016-03-01. .../items?updatedBetween=1451606400 will list items updated since 2016-01-01. The PHP function strtotime is also supported.
-        $variation_updated_between = null; // string | Filter restricts the list of results to items with variations that were updated during the specified period. The end date (to) is optional. If no end date is specified, items with variations updated between the start date (from) and the present will be listed. The dates can be specified as unix timestamps or in the ISO 8601 date format. Start date and optional end date are separated by a comma. For example, .../items?updatedBetween=1451606400,1456790400 will list items with variations that were updated between 2016-01-01 and 2016-03-01. .../items?updatedBetween=1451606400 will list items with variations that were updated since 2016-01-01. The PHP function strtotime is also supported.
-        $variation_related_updated_between = null; // string | Filter restricts the list of results to items with variations for which related information was updated during the specified period. Related information is defined as information linked to the variation, i.e. barcodes, categories, images, markets, clients (stores), prices, suppliers, warehouses and the default category. See variationUpdatedBetween for supported formats.
+        $with = "item,parent"; // string | Includes the specified variation information in the results. The following parameters are available: <ul><li>properties</b> = The properties linked to the variation</li><li>variationProperties</b> = The properties linked to the variation</li><li>variationBarcodes</b> = The barcode linked to the variation and the saved code</li><li>variationBundleComponents</b> = The bundle components of the variation and their quantities</li><li>variationComponentBundles</b> = The bundles that this variation is a component of</li><li>variationSalesPrices</b> = The sales prices linked to the variation and the saved price</li><li>marketItemNumbers</b> = The market ident number of the variation</li><li>variationCategories</b> = The categories linked to the variation</li><li>variationClients</b> = The clients (stores) for which the variation is activated</li><li>variationMarkets</b> = The markets for which the variation is activated </li><li>variationDefaultCategory</b> = The default category of the variation</li><li>variationSuppliers</b> = The supplier data associated with the variation</li><li>variationWarehouses</b> = The warehouse data associated with the variation</li><li>images</b> = The images linked to the variation</li><li>itemImages</b> = The images linked to the item</li><li>variationAttributeValues</b> = The attribute values of the variation</li><li>variationSkus</b> = The SKU data associated with the variation</li><li>variationAdditionalSkus</b> = The additional SKU data associated with the variation</li><li>unit</b> = The unit assigned to the variation</li><li>parent</b> = The main variation of the variation. Value is null if this variation is the item's main variation.</li><li>item</b> = The item of the variation</li><li>stock</b> = The stock data of the variation</li></ul> For example, specifying the parameters variationCategories and variationDefaultCategory will include the default category and all other categories the variations are linked to. More than one parameter should be separated by commas.
+        $lang = null; // string | The <a href='https://developers.plentymarkets.com/rest-doc/introduction#countries' target='_blank'>language</a> of the variation information.
+        $page = null; // int | Limits the results to a specific page. The page number must be specified.
+        $items_per_page = null; // int | Limits the number of results listed per page to a specific number. The number of variations to be listed per page must be specified.
+        $id = null; // int | Filter restricts the list of results to variations with the specified variation ID. An variation ID must be specified. More than one ID should be separated by commas.
+        $item_id = null; // int | Filter restricts the list of results to variations with the specified item ID. An item ID must be specified. More than one ID should be separated by commas.
+        $variation_tag_id = null; // int | Filter restricts the list of results to variations with the specified tag ID. An tag ID must be specified. More than one ID should be separated by commas.
+//        $item_name = null; // string | Filter restricts the list of results to variations with the specified item name. An item name must be specified.
+        $flag_one = null; // string | Filter restricts the list of results to variations of items with the flag one. The flag one must be specified.
+        $flag_two = null; // string | Filter restricts the list of results to variations of items with the flag two. The flag two must be specified.
+        $store_special = null; // int | Filter restricts the list of results to variations of items with the specified store special. The following values are allowed: 0 (None), 1 (Special offer), 2 (New item), 3(Top item).
+        $category_id = null; // int | Filter restricts the list of results to variations with the specified category id
+        $is_main = null; // bool | Filter restricts the list of results to variations that are main variations.
+        $is_active = null; // bool | Filter restricts the list of results to variations that are active.
+        $barcode = null; // string | Filter restricts the list of results to variations with the specified barcode. A barcode must be specified.
+        $number_exact = null; // string | Filter restricts the list of results to the variation with the variation number specified.
+        $number_fuzzy = null; // string | Filter restricts the list of results to variations with numbers that contain the variation number specified (SQL LIKE operator). For example, if variations with variation numbers 1 to 400 exist in the system, filtering by 12 will list variation numbers 12, 112, 120-129, 212 and 312.
+        $is_bundle = null; // bool | Filter restricts the list of results to variations to which variations were added to create a bundle.
+        $plenty_id = null; // int | Filter restricts the list of results to variations that are visible in specified clients. Separate more than one client by commas.
+        $referrer_id = null; // int | Filter restricts the list of results to variations that are visible in specified markets. Separate more than one referrer by commas.
+        $supplier_number = null; // string | Filter restricts the list of results to variations with the specified supplier number. A supplier number must be specified.
+        $sku = null; // string | Filter restricts the list of results to variations with the specified SKU. In additional, results can also be restricted to a specific referrer by specifying the referrer ID after a colon. Example: L0R3MIP5UM:104.1
+        $manufacturer_id = null; // int | Filter restricts the list of results to variations with the specified manufacturer ID.
+        $updated_between = null; // string | Filter restricts the list of results to variations updated during the specified period. The end date (to) is optional. If no end date is specified, variations updated between the start date (from) and the present will be listed. The dates can be specified as unix timestamps or in the ISO 8601 date format. Start date and optional end date are separated by a comma. For example, .../variations?updatedBetween=1451606400,1456790400 will list variations updated between 2016-01-01 and 2016-03-01. .../variations?updatedBetween=1451606400 will list variations updated since 2016-01-01. The PHP function strtotime is also supported.
+        $created_between = null; // string | Filter restricts the list of results to variations created during the specified period. The end date (to) is optional. If no end date is specified, variations created between the start date (from) and the present will be listed. The dates can be specified as unix timestamps or in the ISO 8601 date format. Start date and optional end date are separated by a comma. For example, .../variations?createdBetween=1451606400,1456790400 will list variations created between 2016-01-01 and 2016-03-01. .../variations?createdBetween=1451606400 will list variations created since 2016-01-01. The PHP function strtotime is also supported.
+        $related_updated_between = null; // string | Filter restricts the list of results to those variations for which related information was updated during the specified period. Related information is defined as information linked to the variation, i.e. barcodes, categories, images, markets, clients (stores), prices, suppliers, warehouses and the default category. See variationUpdatedBetween for supported formats.
+        $item_description = null; // string | Filter restricts the list of results to variations with descriptions that contain the specified string.
+        $stock_warehouse_id = null; // string | Filter restricts the list of results to variations which have physical stock on the given warehouse.
 
         try {
-            $result = $apiInstance->restItemsGet($with, $lang, $page, $items_per_page, $search_name, $manufacturer_id, $tag_id, $flag_one, $flag_two, $updated_between, $variation_updated_between, $variation_related_updated_between);
+            $result = $apiInstance->restItemsVariationsGet($with, $lang, $page, $items_per_page, $id, $item_id, $variation_tag_id, $search_name, $flag_one, $flag_two, $store_special, $category_id, $is_main, $is_active, $barcode, $number_exact, $number_fuzzy, $is_bundle, $plenty_id, $referrer_id, $supplier_number, $sku, $manufacturer_id, $updated_between, $created_between, $related_updated_between, $item_description, $stock_warehouse_id);
         } catch (Exception $e) {
             echo 'Exception when calling ItemApi->restItemsGet: ', $e->getMessage(), PHP_EOL;
         }
 
         return $result;
     }
-
 
     /**
      * @param $item_id

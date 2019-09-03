@@ -452,6 +452,14 @@ class Variation
      */
     public $itemImages;
 
+
+    /**
+     *
+     * @var \App\Service\plentymarketsAPI\Model\Plenty\Modules\Item\Item\Item|null
+     */
+    public $item;
+
+
     /**
      *
      * @var \App\Service\plentymarketsAPI\Model\Plenty\Modules\Item\VariationSalesPrice\VariationSalesPrice[]|null
