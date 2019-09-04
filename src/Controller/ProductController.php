@@ -305,20 +305,20 @@ class ProductController extends AbstractController
         return $response;
     }
 
-    /**
-     * @Route("/api/image_cors_proxy",name="corsProxy")
-     */
-    public function corsProxy(Request $request)
-    {
-        $img_url = $request->get('img_url');
-//        $image = imagecreatefromstring(file_get_contents($img_url));
-        $image = file_get_contents($img_url);
-
-        $response = new Response($image);
-
-        $response->headers->set('Content-Type', 'image/jpg');
-        return $response;
-
-
-    }
+//    /**
+//     * @Route("/api/image_cors_proxy",name="corsProxy")
+//     */
+//    public function corsProxy(Request $request)
+//    {
+//        $img_url = $request->get('img_url');
+////        $image = imagecreatefromstring(file_get_contents($img_url));
+//        $image = file_get_contents($img_url);
+//
+//        $response = new Response($image);
+//
+//        $response->headers->set('Content-Type', 'image/jpg');
+//        return $response;
+//
+//
+//    }
 }

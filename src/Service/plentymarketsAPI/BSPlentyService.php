@@ -90,7 +90,7 @@ class BSPlentyService
 //        $with = null; // string | Includes the specified variation information in the results. The following parameters are availabel: itemProperties, itemCrossSelling, variations, itemImages, itemShippingProfiles, ebayTitles
         $lang = "de"; // string | The <a href='https://developers.plentymarkets.com/rest-doc/introduction#countries' target='_blank'>language</a> of the variation information.
         $page = 0; // int | Limits the results to a specific page. The page number must be specified.
-        $items_per_page = 20; // int | Limits the number of results listed per page to a specific number. The number of variations to be listed per page must be specified.
+        $items_per_page = 50; // int | Limits the number of results listed per page to a specific number. The number of variations to be listed per page must be specified.
 //        $name = "name_example"; // string | Filter restricts the list of results to items with the specified item name. An item name must be specified.
         $manufacturer_id = null; // string | Filter restricts the list of results to items with the specified manufacturerId.
         $tag_id = null; // int | Filter restricts the list of results to items with the specified tagId. More than one ID should be separated by commas.

@@ -30,19 +30,19 @@ function LabelDisplay(props) {
         return (<div>
             <h1>DinA6 Druck Auswahl</h1>
             {dinA6LabelsDisplay}
+            <Button onClick={
+                () => props.handlePrintA6Queue()
+            } vairant="success">Print</Button>
             <Frame className="dinA6-iframe"
                    id="printA6"
                    name="printA6"
-                   head={<link type='text/css' rel='stylesheet' href='/build/appReactDinA6.css'/>
+                   head={<link type='text/css' rel='stylesheet' href='/printA6.css'/>
                    }
                    initialContent='<!DOCTYPE html><html><head></head><body class="print-body"><div></div></body></html>'
 
             >
                 <DinA6LabelDocument items={props.dinA6LabelQueue}/>
             </Frame>
-            <Button onClick={
-                () => props.handlePrintA6Queue()
-            } vairant="success">Print</Button>
         </div>);
 
     } else {

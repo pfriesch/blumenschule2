@@ -146,6 +146,7 @@ class Search extends React.Component {
                 </InputGroup>
                 {searchResultsComponent}
                 {searchResultsModal}
+                <br/><p><small>Es werden max. 50 Artikel angezeigt. ggf. suche verfeinern!</small></p>
             </Fragment>
         )
     };

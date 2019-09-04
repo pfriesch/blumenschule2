@@ -1,8 +1,6 @@
 import React from 'react'
 import Button from "react-bootstrap/Button";
 
-require('../../../css/printA6.scss');
-
 
 export default function DinA6LabelDocument(props) {
 
