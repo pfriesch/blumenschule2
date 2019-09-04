@@ -36,7 +36,7 @@ function LabelDisplay(props) {
             <Frame className="dinA6-iframe"
                    id="printA6"
                    name="printA6"
-                   head={<link type='text/css' rel='stylesheet' href='/printA6.css'/>
+                   head={<link type='text/css' rel='stylesheet' href='/printA6iframe.css'/>
                    }
                    initialContent='<!DOCTYPE html><html><head></head><body class="print-body"><div></div></body></html>'
 

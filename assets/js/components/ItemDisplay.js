@@ -9,6 +9,7 @@ function TextField(props) {
     let formLabelText;
     let remainingChars;
     let fieldValue;
+    let barcodeCheckbox;
     if (isDinA6Printing) {
         formLabelText = "Beschreibung";
         fieldValue = props.description;
@@ -17,8 +18,12 @@ function TextField(props) {
         formLabelText = "Etikettentext";
         fieldValue = props.labelText;
 
-        remainingChars = countCharsLabel(fieldValue);
+        remainingChars = countCharsLabel(fieldValue, props.withBarcode);
+        barcodeCheckbox = (
+            <Form.Check type="checkbox" checked={props.withBarcode} label={<Form.Label><b>Barcode </b></Form.Label>}
+                        onChange={() => props.toggleBarcode()}/>)
     }
+    let isValidChars = remainingChars > 0;
     return (<div>
         <Form.Group as={Row} controlId="formHorizontalDescription">
             <Form.Label column sm={2}>
@@ -27,8 +32,15 @@ function TextField(props) {
             <Col sm={10}>
                 <Form.Control className="label-text" type="text" placeholder="" as="textarea" value={fieldValue}
                               readOnly/>
-                <Form.Label>noch verfügbare zeichen auf dem Etikett</Form.Label>
-                <Form.Control className="remaining-chars" type="text" value={remainingChars} readOnly/>
+                <Row>
+                    <Col>
+                        <Form.Label>noch verfügbare zeichen auf dem Etikett</Form.Label>
+                        <Form.Control className="remaining-chars" type="text" value={remainingChars}
+                                      isValid={isValidChars}
+                                      isInvalid={!isValidChars} readOnly/>
+                    </Col>
+                    <Col  sm={2}>{barcodeCheckbox}</Col>
+                </Row>
             </Col>
         </Form.Group>
     </div>);
@@ -53,6 +65,7 @@ function ItemDisplay(props) {
 
     const isDinA6Printing = props.isDinA6Printing;
     const {name, name_botanic, code, articleId, variantId, description, labelText, imgURL, stock: {storageLocationId, quantity}} = props.item;
+    const withBarcode = props.withBarcode;
 
     return (
         <Form>
@@ -62,7 +75,7 @@ function ItemDisplay(props) {
             <ItemDisplayElement name="ArtikelID" text={articleId}/>
             <ItemDisplayElement name="VariationId" text={variantId}/>
             <TextField className="labeltext-field" isDinA6Printing={isDinA6Printing} description={description}
-                       labelText={labelText}/>
+                       labelText={labelText} withBarcode={withBarcode} toggleBarcode={props.toggleBarcode}/>
         </Form>
     );
 }
@@ -72,11 +85,16 @@ var countCharsDinA6 = function (text) {
     return max_chars - text.length;
 };
 
-var countCharsLabel = function (text) {
+var countCharsLabel = function (text, withBarcode) {
     const fields = text.split(" ");
     let line = '';
     let lines = 0;
-    const max = 58;
+    let max;
+    if (withBarcode) {
+        max = 56;
+    } else {
+        max = 80;
+    }
     let length = 0;
     for (let i = 0; i < fields.length; i++) {
         length = (line + ' ' + fields[i]).length;

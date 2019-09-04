@@ -24,6 +24,7 @@
 }
 
 .print-h1, .print-h2 {
+  overflow: hidden;
   text-align: right;
   min-height: 10mm;
   margin: 0;

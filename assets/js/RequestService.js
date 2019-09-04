@@ -69,14 +69,15 @@ class RequestService {
         return request
     }
 
-    printItemLabel(item, quantity) {
+    printItemLabel(item, quantity, withBarcode) {
         if (!Number.isInteger(item.articleId) || !Number.isInteger(item.variantId) || !Number.isInteger(quantity)) {
             throw new Error(item);
         }
         this.startLoading();
 
+        //TODO change to POST request, it is ugly now
         const request = $.ajax({
-            url: "/api/item/" + item.articleId + "/variant/" + item.variantId + "/quantity/" + quantity,
+            url: "/api/item/" + item.articleId + "/variant/" + item.variantId + "/quantity/" + quantity + "/barcode/" + withBarcode,
             // dataType: "json",
         });
         request.then((_item, textStatus, xhr) => {
@@ -108,7 +109,7 @@ class RequestService {
 
 
     getItem(articleId, variantId) {
-        const request = this.printItemLabel({articleId: articleId, variantId: variantId}, 1);
+        const request = this.printItemLabel({articleId: articleId, variantId: variantId}, 1, false);
         request.fail((jqXHR, textStatus) => {
             alert(jqXHR.responseJSON.error.code + ": " + jqXHR.responseJSON.error.message + "(" + jqXHR.responseJSON.error.exception[0].message + ")");
         });

@@ -38,6 +38,7 @@ class LabelPrintingPage extends React.Component {
                     quantity: "",
                 }
             },
+            withBarcode: false,
             isDinA6Printing: false,
             isGlobalLoading: false,
             dinA6LabelQueue: [],
@@ -64,6 +65,7 @@ class LabelPrintingPage extends React.Component {
         this.handleSearchResultSetItem = this.handleSearchResultSetItem.bind(this);
         this.handleAddStock = this.handleAddStock.bind(this);
         this.handleRemoveStock = this.handleRemoveStock.bind(this);
+        this.toggleBarcode = this.toggleBarcode.bind(this);
 
         this.requestService = new RequestService(
             () => this.setState({isGlobalLoading: true}),
@@ -209,7 +211,7 @@ class LabelPrintingPage extends React.Component {
             this.setState({
                 labelPdfURL: ""
             });
-            this.requestService.printItemLabel(this.state.item, this.state.amount).done((_item) => {
+            this.requestService.printItemLabel(this.state.item, this.state.amount, this.state.withBarcode).done((_item) => {
 
                 this.setState({
                     item: {
@@ -234,6 +236,10 @@ class LabelPrintingPage extends React.Component {
                 })
             })
         }
+    }
+
+    toggleBarcode() {
+        this.setState({withBarcode: !this.state.withBarcode})
     }
 
     render() {
@@ -264,6 +270,8 @@ class LabelPrintingPage extends React.Component {
                                 setItem={this.handleSearchResultSetItem}
                             />
                             <ItemDisplay
+                                toggleBarcode={this.toggleBarcode}
+                                withBarcode={this.state.withBarcode}
                                 isDinA6Printing={this.state.isDinA6Printing}
                                 item={item}
                             />

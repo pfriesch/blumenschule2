@@ -2,7 +2,7 @@ import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import Button from "react-bootstrap/Button";
 import Image from "react-bootstrap/Image";
-import React from "react";
+import React, {Fragment} from "react";
 import Form from "react-bootstrap/Form";
 
 function MiscDisplay(props) {
@@ -55,6 +55,7 @@ function MiscDisplay(props) {
                         }}
                         variant='secondary'>Etikett erstellen &<br/> Bestand buchen</Button>
                 </Row>
+                <br/><p><small>Sollte das PDF nicht laden, einfach nochmal auf "Etikett erstellen" klicken.</small></p>
             </div>
         )
     }
@@ -91,6 +92,8 @@ function MiscDisplay(props) {
             {editArticleButton}
             <Row><Image className="img-thumbnail" width="200px" src={imgURL} rounded/></Row>
             {addingButtons}
+
+
 
         </Col>
     );
