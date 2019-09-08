@@ -4,6 +4,7 @@ import DinA6LabelDocument from "./pdf/PrintA6";
 import Frame from 'react-frame-component';
 import DisplayDinA6LabelDocument from "./pdf/DisplayA6";
 import Image from "react-bootstrap/Image";
+import Row from "react-bootstrap/Row";
 
 
 function LabelDisplay(props) {
@@ -30,24 +31,31 @@ function LabelDisplay(props) {
         return (<div>
             <h1>DinA6 Druck Auswahl</h1>
             {dinA6LabelsDisplay}
-            <Button onClick={
-                () => props.handlePrintA6Queue()
-            } vairant="success">Print</Button>
-            <Frame className="dinA6-iframe"
-                   id="printA6"
-                   name="printA6"
-                   head={<link type='text/css' rel='stylesheet' href='/printA6iframe.css'/>
-                   }
-                   initialContent='<!DOCTYPE html><html><head></head><body class="print-body"><div></div></body></html>'
+            <Row>
+                <Button
+                    onClick={
+                        () => props.handlePrintA6Queue()
+                    }
+                    vairant="success"
+                >Print</Button>
+            </Row>
+            <Row>
+                <Frame className="dinA6-iframe"
+                       id="printA6"
+                       name="printA6"
+                       head={<link type='text/css' rel='stylesheet' href='/printA6iframe.css'/>
+                       }
+                       initialContent='<!DOCTYPE html><html><head></head><body class="print-body"><div></div></body></html>'
 
-            >
-                <DinA6LabelDocument items={props.dinA6LabelQueue}/>
-            </Frame>
+                >
+                    <DinA6LabelDocument items={props.dinA6LabelQueue}/>
+                </Frame>
+            </Row>
         </div>);
 
     } else {
         return (<div>
-            <object className="PdfOut" data={props.labelPdfURL} type="application/pdf" width="100%"
+            <object className="PdfOut" data={props.labelPdfURL + "?=" + new Date()} type="application/pdf" width="100%"
                     height="180px"/>
         </div>)
     }

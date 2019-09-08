@@ -254,6 +254,9 @@ class LabelPrintingPage extends React.Component {
         const amount = this.state.amount;
         const storageLocations = this.state.storageLocations;
         const stock = this.state.item.stock;
+
+        const switchText = this.state.isDinA6Printing ? "Etiketten Drucken" : "DinA6 Drucken";
+
         return (
             <div>
                 {globalSpinner}
@@ -261,7 +264,7 @@ class LabelPrintingPage extends React.Component {
                     <Navbar bg="light" expand="lg">
                         <Navbar.Brand href="">Etiketten</Navbar.Brand>
                         {/*<Nav.Item onClick={this.switchLabelFormat}>DinA6</Nav.Item>*/}
-                        <Button variant="secondary" onClick={this.switchLabelFormat}>DinA6</Button>
+                        <Button variant="secondary" onClick={this.switchLabelFormat}>{switchText}</Button>
                     </Navbar>
                     <Row>
                         <Col>

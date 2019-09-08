@@ -1,7 +1,6 @@
 /* style sheet for "A4" printing */
 @media print and (width: 21cm) and (height: 29.7cm) {
   @page {
-    //margin: 3cm;
   }
 }
 
@@ -9,16 +8,17 @@
 /* A4 Landscape*/
 @page {
   size: A4 landscape;
-  //margin: 10%;
+
 }
 
 
 .print-body {
   background-color: white;
-  height: 197mm;
+  height: 195mm;
   width: 288mm;
-  margin-left: 1.6cm;
-
+  /*margin-left: 1.6cm;*/
+  /*border: 1px solid darkgray;*/
+  /*background-color: red;*/
   font-family: "Times New Roman", Times, serif;
 
 }
@@ -39,12 +39,13 @@
 .print-block {
   float: left;
   display: inline-block;
-  height: 97mm;
+  height: 90mm;
   width: 135mm;
-  padding: 1mm;
-  margin: 1mm;
+  margin: 4mm;
+  /*margin-left: 8mm;*/
+  /*margin-top: 6mm;*/
   overflow: hidden;
-  border: 1px solid darkgray;
+  /*border: 1px solid darkgray;*/
 
 
 }

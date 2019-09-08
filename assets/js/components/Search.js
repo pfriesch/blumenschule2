@@ -52,37 +52,39 @@ class Search extends React.Component {
     }
 
     triggerSearch() {
-        this.setState({isSearching: true});
-        const request = this.props.requestService.searchItem(this.state.searchText);
+        if (this.state.searchText.length > 0) {
+            this.setState({isSearching: true});
+            const request = this.props.requestService.searchItem(this.state.searchText);
 
-        request.done((items) => {
-            if (items.length > 0) {
+            request.done((items) => {
+                if (items.length > 0) {
+                    this.setState({
+                        searchResultItems: items.map((item) => {
+                            return {
+                                articleId: item.article_id,
+                                variantId: item.variant_id,
+                                code: item.code || "",
+                                name: item.name || "",
+                                name_botanic: item.name_botanic || "",
+                                labelText: item.label_text || "",
+                            }
+                        }),
+                        showSearchResultItems: true,
+                    })
+                } else {
+                    alert("Keinen Artikel gefunden!")
+                }
+            });
+            request.fail((jqXHR, textStatus) => {
+                alert(jqXHR.error.code + ": " + jqXHR.error.message + "(" + jqXHR.error.exception.message + ")");
+            });
+            request.always(() => {
                 this.setState({
-                    searchResultItems: items.map((item) => {
-                        return {
-                            articleId: item.article_id,
-                            variantId: item.variant_id,
-                            code: item.code || "",
-                            name: item.name || "",
-                            name_botanic: item.name_botanic || "",
-                            labelText: item.label_text || "",
-                        }
-                    }),
-                    showSearchResultItems: true,
+                    isSearching: false
                 })
-            } else {
-                alert("Keinen Artikel gefunden!")
-            }
-        });
-        request.fail((jqXHR, textStatus) => {
-            alert(jqXHR.error.code + ": " + jqXHR.error.message + "(" + jqXHR.error.exception.message + ")");
-        });
-        request.always(() => {
-            this.setState({
-                isSearching: false
-            })
-        });
-        return request;
+            });
+            return request;
+        }
     }
 
 
@@ -138,7 +140,7 @@ class Search extends React.Component {
                     <InputGroup.Append>
                         <SpinnerButton
                             variant="success"
-                            onClick={() => this.triggerSearch()}
+                            handleSearchClicked={this.triggerSearch}
                             isLoading={this.state.isSearching}
                             loadingText="Suche"
                             text="Suche"/>

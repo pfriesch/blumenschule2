@@ -353,7 +353,8 @@ class Item
 
     public function getNameBotanic()
     {
-        return $this->free4;
+//        return $this->free4;
+        return $this->texts[0]->name2;
 
 
     }
