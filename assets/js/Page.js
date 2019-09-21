@@ -286,6 +286,7 @@ class LabelPrintingPage extends React.Component {
                                 isDinA6Printing={this.state.isDinA6Printing}
                                 amount={amount}
                                 articleId={this.state.item.articleId}
+                                variationId={this.state.item.variantId}
                                 imgURL={this.state.item.imgURL}
                                 handleAmountChange={this.handleAmountChange}
                                 handleAddtoDinA6Queue={this.handleAddtoDinA6Queue}

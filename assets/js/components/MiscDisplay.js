@@ -69,7 +69,7 @@ function MiscDisplay(props) {
                     variant="info"
                     target="_blank"
                     rel="noopener noreferrer"
-                    href={"https://plentymarkets-cloud-de.com/11541?uiAction=item_detail&itemId=" + props.articleId}>
+                    href={"https://plentymarkets-cloud-de.com/11541?uiAction=item_variation_detail&itemId=" + props.articleId + "&variationId=" + props.variationId}>
                     Artikel bearbeiten
                 </Button>
             </Row>
@@ -92,7 +92,6 @@ function MiscDisplay(props) {
             {editArticleButton}
             <Row><Image className="img-thumbnail" width="200px" src={imgURL} rounded/></Row>
             {addingButtons}
-
 
 
         </Col>

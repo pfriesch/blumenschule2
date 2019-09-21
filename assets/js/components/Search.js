@@ -126,7 +126,9 @@ class Search extends React.Component {
 
                 </div>
             );
-            searchResultsModal = (<div className="modal-search"/>);
+            searchResultsModal = (<div onClick={() => {
+                this.setState({showSearchResultItems: false})
+            }} className="modal-search"/>);
         }
         return (
             <Fragment>
